@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['value1_0',['Value1',['../d6/d57/namespacenpi.html#a3cd4af5a29235ae57197d2fdb1867fc0a7ee5a281b28d7ca1fab06b43d0b7d8ac',1,'npi']]],
-  ['value2_1',['Value2',['../d6/d57/namespacenpi.html#a3cd4af5a29235ae57197d2fdb1867fc0a0fe13ed1638da4d4b1ef316729f3bb32',1,'npi']]],
-  ['value3_2',['Value3',['../d6/d57/namespacenpi.html#a3cd4af5a29235ae57197d2fdb1867fc0a121bcef76aa7694f7d8ef4d381b86dad',1,'npi']]],
-  ['value_5f_3',['value_',['../d4/d55/structnpi_1_1_some_struct.html#a8f5708565bde41b805a048c9fda0f13c',1,'npi::SomeStruct']]],
-  ['viewportfilterinstalled_4',['viewportFilterInstalled',['../dc/d8e/classnpi_1_1_g_u_i.html#a8d8b0fab7c0cced07fa7a96b46bb2844',1,'npi::GUI']]]
+  ['_7elink_0',['~Link',['../df/d94/classnpi_1_1_link.html#ad22b9361d27be658a456e405820be5e5',1,'npi::Link']]],
+  ['_7elinkfromthis_1',['~LinkFromThis',['../d1/d51/classnpi_1_1_link_from_this.html#ae75b7182e1a9d11abdd1ca8aa9e1aa9e',1,'npi::LinkFromThis']]],
+  ['_7elinkhost_2',['~LinkHost',['../dc/d75/classnpi_1_1_link_host.html#a74c58eedbaecb1138a18b63afbaf57a2',1,'npi::LinkHost']]],
+  ['_7elinkweakhost_3',['~LinkWeakHost',['../d5/d88/classnpi_1_1_link_weak_host.html#a62d7390ae25239de5f1b094811796ae2',1,'npi::LinkWeakHost']]],
+  ['_7eobs_4',['~Obs',['../dd/d30/structnpi_1_1_link_host_1_1_obs.html#a9e10cc0715839c20092dfaf4e426870c',1,'npi::LinkHost::Obs']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['checkfunction_0',['checkFunction',['../d6/d57/namespacenpi.html#ae140833a885f19c902533334cf1f090f',1,'npi']]]
+  ['duplicatewithnewlocal_5f_0',['duplicateWithNewLocal_',['../dc/d75/classnpi_1_1_link_host.html#a42487434a7bde00a9d5e7e71e46588f6',1,'npi::LinkHost']]]
 ];

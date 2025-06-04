@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['titlebarfilterinstalled_0',['titleBarFilterInstalled',['../dc/d8e/classnpi_1_1_g_u_i.html#ac67758b0f74e05cc6eb134f3c8518dc6',1,'npi::GUI']]],
-  ['togglepasswordaction_1',['togglePasswordAction',['../dc/d8e/classnpi_1_1_g_u_i.html#afaa5fe340dc3a2c384e1ee15adadd246',1,'npi::GUI']]],
-  ['transparentformousewheel_2',['TransparentForMouseWheel',['../d7/d8c/namespacenpi_1_1props.html#afc40f3392e99f77e4d5aa7d06a398bb2',1,'npi::props']]],
-  ['transparentformousewheelfilterinstalled_3',['transparentForMouseWheelFilterInstalled',['../dc/d8e/classnpi_1_1_g_u_i.html#a33e1dcd2c5882970d1e2c08c273ad153',1,'npi::GUI']]]
+  ['uni_5f_0',['uni_',['../dc/d75/classnpi_1_1_link_host.html#a3cf308c619126e0b7f8bc337c8b049ab',1,'npi::LinkHost']]],
+  ['universal_5f_1',['universal_',['../dc/d75/classnpi_1_1_link_host.html#a197108081077f9b5a7e3c6610b77673c',1,'npi::LinkHost']]],
+  ['usage_2',['Usage',['../dc/d4b/_link_8hpp.html#linkFileUsage',1,'']]]
 ];
