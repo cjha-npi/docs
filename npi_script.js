@@ -4,6 +4,11 @@
 
   const DOC_ROOT = (() => {
     console.log('[DOC_ROOT] window.location.href:', window.location.href);
+    const scripts0 = document.currentScript;
+    if (scripts0)
+      console.log('[DOC_ROOT] Current:', scripts0.src);
+    else
+      console.warn('[DOC_ROOT] Current Script NOT FOUND');
     const scripts1 = document.querySelectorAll('script[src*="awesome_darkmode_toggle.js"]');
     if (scripts1.length)
       console.log('[DOC_ROOT] awesome_darkmode_toggle.js:', scripts1[0].src);
