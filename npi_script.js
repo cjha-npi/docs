@@ -2,6 +2,25 @@
 ; (function () {
   'use strict';
 
+  const DOC_ROOT = (() => {
+    console.log('[DOC_ROOT] window.location.href:', window.location.href);
+    const scripts1 = document.querySelectorAll('script[src*="awesome_darkmode_toggle.js"]');
+    if (scripts1.length)
+      console.log('[DOC_ROOT] awesome_darkmode_toggle.js:', scripts1[0].src);
+    else
+      console.warn('[DOC_ROOT] awesome_darkmode_toggle.js NOT FOUND');
+    const scripts2 = document.querySelectorAll('script[src*="navtreedata.js"]');
+    if (scripts2.length)
+      console.log('[DOC_ROOT] navtreedata.js:', scripts2[0].src);
+    else
+      console.warn('[DOC_ROOT] navtreedata.js NOT FOUND');
+    const scripts3 = document.querySelectorAll('script[src*="npi_script.js"]');
+    if (scripts3.length)
+      console.log('[DOC_ROOT] npi_script.js:', scripts3[0].src);
+    else
+      console.warn('[DOC_ROOT] npi_script.js NOT FOUND');
+  })();
+
   // —————————————————————————————————————————————
   // Debounce
   // —————————————————————————————————————————————
