@@ -29,15 +29,14 @@ $darkmode
 <link href="$relpath^$stylesheet" rel="stylesheet" type="text/css" />
 $extrastylesheet
 
-<!-- npi custom stylesheet -------------------------------------------------------------------------- -->
-
-<link href="$relpath^npi_style.css" rel="stylesheet" type="text/css" />
-
 <!-- ------------------------------------------------------------------------------------------------ -->
 
-<!-- Doxygen Awesome Theme - Dark Mode Toggle ------------------------------------------------------- -->
+<!-- Doxy-Plus Stylesheet -->
+<link href="$relpath^doxy-plus.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="$relpath^awesome_darkmode_toggle.js"></script>
+<!-- Doxygen Awesome Theme - Dark Mode Toggle -->
+
+<script type="text/javascript" src="$relpath^doxygen-awesome-darkmode-toggle.js"></script>
 <script type="text/javascript">
   DoxygenAwesomeDarkModeToggle.init()
 </script>
@@ -51,6 +50,18 @@ $extrastylesheet
 <div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
   <!--END FULL_SIDEBAR-->
 <!--END DISABLE_INDEX-->
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+  <!-- Doxy-Plus Primary Navigation Bar Container -->
+  <div id="dp-pri-nav"></div>
+  <div id="dp-pri-nav-resizer"></div>
+
+  <!-- Doxy-Plus Secondary Navigation Bar Container -->
+  <div id="dp-sec-nav"></div>
+  <div id="dp-sec-nav-resizer"></div>
+
+<!-- ------------------------------------------------------------------------------------------------ -->
 
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 

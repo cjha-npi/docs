@@ -21,19 +21,27 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="awesome.css" rel="stylesheet" type="text/css"/>
-<link href="npi_style.css" rel="stylesheet" type="text/css"/>
-<!-- npi custom stylesheet -------------------------------------------------------------------------- -->
-<link href="npi_style.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxy-plus.css" rel="stylesheet" type="text/css"/>
 <!-- ------------------------------------------------------------------------------------------------ -->
-<!-- Doxygen Awesome Theme - Dark Mode Toggle ------------------------------------------------------- -->
-<script type="text/javascript" src="awesome_darkmode_toggle.js"></script>
+<!-- Doxy-Plus Stylesheet -->
+<link href="doxy-plus.css" rel="stylesheet" type="text/css" />
+<!-- Doxygen Awesome Theme - Dark Mode Toggle -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
 <script type="text/javascript">
   DoxygenAwesomeDarkModeToggle.init()
 </script>
 <!-- ------------------------------------------------------------------------------------------------ -->
 </head>
 <body>
+<!-- ------------------------------------------------------------------------------------------------ -->
+  <!-- Doxy-Plus Primary Navigation Bar Container -->
+  <div id="dp-pri-nav"></div>
+  <div id="dp-pri-nav-resizer"></div>
+  <!-- Doxy-Plus Secondary Navigation Bar Container -->
+  <div id="dp-sec-nav"></div>
+  <div id="dp-sec-nav-resizer"></div>
+<!-- ------------------------------------------------------------------------------------------------ -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -209,11 +217,16 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Jun 5 2025 10:48:07 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Thu Jul 17 2025 17:37:04 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
-<!-- npi custom script ------------------------------------------------------------------------------ -->
-<script type="text/javascript" src="npi_script.js"></script>
+<!-- ------------------------------------------------------------------------------------------------ -->
+<!-- store.js with all plugins include expire and namespace plugins -->
+<script type="text/javascript" src="store.everything.min.js"></script>
+<!-- Storing Generation DateTime for use in doxy-plus.js -->
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Jul 17 2025 17:37:04'; </script>
+<!-- Doxy-Plus Custom JavaScript File -->
+<script type="text/javascript" src="doxy-plus.js"></script>
 <!-- ------------------------------------------------------------------------------------------------ -->
 </body>
 </html>
