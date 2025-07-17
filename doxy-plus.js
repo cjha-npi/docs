@@ -1189,16 +1189,12 @@ File Names: doxy-plus.*
     const ro = new ResizeObserver(entries => {
       for (const { target, contentRect } of entries) {
         if (target === top) {
-          console.log(`TOP: ${contentRect.height}, ${window.innerHeight}`);
           document.documentElement.style.setProperty('--dp-top-height', `${contentRect.height + 1}px`);
         } else if (target === nav) {
-          console.log(`NAV: ${contentRect.width}, ${window.innerHeight}`);
           document.documentElement.style.setProperty('--dp-nav-width', `${contentRect.width}px`);
         } else if (target === btm) {
-          console.log(`BTM: ${contentRect.height}, ${window.innerHeight}`);
           document.documentElement.style.setProperty('--dp-bottom-height', `${contentRect.height + 1}px`);
         } else if (target === cln) {
-          console.log(`Clone: ${contentRect.height}, ${window.innerHeight}`);
           document.documentElement.style.setProperty('--dp-doc-header-height', `${contentRect.height + 1}px`);
         }
       }
