@@ -744,9 +744,3 @@ li.dp-current > .dp-tree-line::before {
   text-decoration: none !important;        /* remove underline if any */
   pointer-events: none !important;         /* prevent any interaction */
 }
-
-#dp-pri-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-node,
-#dp-sec-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-node{
-  color: var(--dp-disbaled-text-color) !important;
-  text-decoration: none !important;        /* remove underline if any */
-}

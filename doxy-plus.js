@@ -130,45 +130,6 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 CONSTANTS
 
-  // #region 🟩 PURGE EXPIRED DATA
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  function purgeExpiredData() {
-
-    // Removes expired stored data on this origin (origin is the url if hosted otherwise
-    // if opened from local disk then all projects share the same local origin in browser).
-
-    const today = new Date().toISOString().slice(0, 10);
-    const lastPurged = localStorage.getItem(KEY__EXPIRED_DATA_PURGE_DATE);
-    if (lastPurged === today) return;
-
-    function purge() {
-      const PRE = '__storejs___storejs_';
-      const SEP = '_expire_mixin_';
-      try {
-        Object.keys(localStorage).forEach(fullKey => {
-          if (fullKey.startsWith(PRE) && fullKey.indexOf(SEP, PRE.length) !== -1) {
-            const [nsName, actualKey] = fullKey.slice(PRE.length).split(SEP, 2);
-            store.namespace(nsName).get(actualKey); // if expired it will remove this key
-          }
-        });
-      }
-      catch (err) {
-        console.warn('Purge Expired Data Error:', err);
-      }
-      localStorage.setItem(KEY__EXPIRED_DATA_PURGE_DATE, today);
-    }
-
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(purge, { timeout: 5000 });
-    } else {
-      setTimeout(purge, 5000);
-    }
-  }
-
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // #endregion 🟥 PURGE EXPIRED DATA
-
   // #region 🟩 GLOBAL VARIABLES
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -679,7 +640,7 @@ File Names: doxy-plus.*
     }, { passive: false });
   }
 
-  function dualNav_init() {
+  function dualNavInit() {
     document.documentElement.style.setProperty('--dp-pri-width', `${_wPri}px`);
     document.documentElement.style.setProperty('--dp-sec-width', `${_wSec}px`);
     dualNavResizer();
@@ -957,6 +918,49 @@ File Names: doxy-plus.*
       }
     }
 
+
+    _priTree.push(['Ind A', null, null]);
+    _priTree.push(['Ind B', null, null]);
+
+    _priTree.push([
+      'Level 0',
+      null,
+      [
+        [  // ← child-array starts here
+          'Level 1',
+          null,
+          [
+            ['Level A', null, null],
+            ['Level B', null, null],
+            ['Level C', null, null],
+            [
+              'Level 2',
+              null,
+              [
+                ['Level x', null, null],
+                [
+                  'Level 3',
+                  null,
+                  [
+                    [
+                      'Level 4',
+                      null,
+                      [
+                        ['Level 5', null, null]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]  // ← end of children of Level 0
+      ]
+    ]);
+
+    _priTree.push(['Ind C', null, null]);
+
+
     _priTreeIndented = isTreeIndented(_priTree);
 
     save(KEY__GEN_DATA, window.DOXY_PLUS_DATE_TIME);
@@ -1175,13 +1179,16 @@ File Names: doxy-plus.*
 
   async function setupResizeObservers() {
 
-    const [top, nav, btm, doc, hed] = await Promise.all([waitFor('#top'), waitFor('#side-nav'), waitFor('#nav-path'), waitFor('#doc-content'), waitFor('#doc-content .header')]);
+    const [top, nav, btm, doc] = await Promise.all([waitFor('#top'), waitFor('#side-nav'), waitFor('#nav-path'), waitFor('#doc-content')]);
 
     let cln = null;
-    if (doc && hed && doc.parentElement) {
-      cln = hed.cloneNode(true);
-      cln.removeAttribute('id');
-      doc.parentElement.insertBefore(cln, doc);
+    if (doc && doc.parentElement) {
+      const header = document.querySelector('#doc-content .header');
+      if (header) {
+        cln = header.cloneNode(true);
+        cln.removeAttribute('id');
+        doc.parentElement.insertBefore(cln, doc);
+      }
     }
 
     if (!top && !nav && !btm && !cln) return;
@@ -1200,10 +1207,10 @@ File Names: doxy-plus.*
       }
     });
 
-    if(top) ro.observe(top);
-    if(nav) ro.observe(nav);
-    if(btm) ro.observe(btm);
-    if(cln) ro.observe(cln);
+    if (top) ro.observe(top);
+    if (nav) ro.observe(nav);
+    if (btm) ro.observe(btm);
+    if (cln) ro.observe(cln);
   }
 
   async function searchResultWindowObserver() {
@@ -1252,218 +1259,319 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function buildTrees() {
+    // Build and render both primary and secondary trees from _priTree and _secTree (if available),
+    // then attach them to their respective containers.
 
+    // Wait for both nav containers to be available in the DOM.
     const [priCon, secCon] = await Promise.all([waitFor('#dp-pri-nav'), waitFor('#dp-sec-nav')]);
     if (!priCon || !secCon) {
-      console.error('Build Trees: Primary or Secondary nav panel is not available');
+      console.error('Build Trees: Primary or Secondary panel is not available');
       return;
     }
 
+    // remove any html value from primary and secondary containers
+    priCon.innerHTML = '';
+    secCon.innerHTML = '';
+
+    // Configuration for primary vs. secondary tree behaviors and state storage.
     const CONFIG = {
-      primary: {
-        data: _priTree,
-        key: KEY__PRI_NAV_EXPANDED_NODES,
-        prefix: 'P:',
-        mainSet: _priExpNodes,
-        defaultOpen: false,
-        setOpen: (id, isOpen) => isOpen ? _priExpNodes.add(id) : _priExpNodes.delete(id),
-        saveDebounced: debounce(() => save(KEY__PRI_NAV_EXPANDED_NODES, Array.from(_priExpNodes)), 500)
+      primary: { // container for primary tree
+        data: _priTree, // primary tree main data source
+        key: KEY__PRI_NAV_EXPANDED_NODES, // key by which expanded nodes in primary tree will be saved
+        prefix: 'P:', // prefix to id that is assigned to all items in a tree
+        mainSet: _priExpNodes, // a set containing ids of all expanded nodes in primary tree
+        defaultOpen: false, // the default expanded state of a node
+        setOpen: (id, isOpen) => isOpen ? _priExpNodes.add(id) : _priExpNodes.delete(id), // function to set expanded state of a node
+        saveDebounced: debounce(() => save(KEY__PRI_NAV_EXPANDED_NODES, Array.from(_priExpNodes)), 500) // function to save changed expanded node set
       },
-      secondary: {
-        data: _secTree,
-        key: HTML_NAME,
-        prefix: 'S:',
-        mainSet: _secColNodes,
-        defaultOpen: true,
-        setOpen: (id, isOpen) => isOpen ? _secColNodes.delete(id) : _secColNodes.add(id),
-        saveDebounced: debounce(() => save(HTML_NAME, Array.from(_secColNodes)), 500)
+      secondary: { // container for secondary tree
+        data: _secTree, // secondary tree main data source
+        key: HTML_NAME, // the current html page name without the html ending, this is used as a key to store collapsed node data
+        prefix: 'S:', // prefix to id that is assigned to all items in a tree
+        mainSet: _secColNodes, // a set conatining ids of all collapsed nodes in secondary tree
+        defaultOpen: true, // the default expanded state of a node
+        setOpen: (id, isOpen) => isOpen ? _secColNodes.delete(id) : _secColNodes.add(id), // function to set expanded state of a node
+        saveDebounced: debounce(() => save(HTML_NAME, Array.from(_secColNodes)), 500) // function to save changed collapsed node set
       }
     };
 
+    // Build a UL/LI DOM tree for either 'primary' or 'secondary'.
     function build(kind = 'primary') {
 
       // verifying
       if (!CONFIG[kind]) {
-        console.error(`Build Trees - Build: "${kind}" is not a valid parameter. Returning.`);
+        console.error(`Build Trees - Build: "${kind}" is not a valid parameter.`);
         return document.createDocumentFragment();
       }
 
+      // get the correct config object
       const cfg = CONFIG[kind];
+
+      // verifying that tree is array and has some entries in it
       const tree = cfg.data;
       if (!Array.isArray(tree) || tree.length === 0) {
         console.log(`Build Trees - Build: "${kind}" data empty or invalid. Returning.`);
         return document.createDocumentFragment();
       }
 
-      // clear out any prior state
+      // clear out any prior state for expanded/collapsed nodes
       cfg.mainSet.clear();
 
-      // load previous state in a separate set
+      // load previous expanded/collapsed nodes state in a separate set
       let prvAry = [];
       const rawAry = load(cfg.key, []);
       if (Array.isArray(rawAry)) prvAry = rawAry;
       else console.warn(`Expected array for "${cfg.key}", got:`, rawAry);
       const prvSet = new Set(prvAry);
 
-      const rootUl = document.createElement('ul');
-      rootUl.classList.add('dp-tree-list');
-      rootUl.setAttribute('role', 'tree');
+      // Create root <ul> as the tree container.
+      const rootUl = document.createElement('ul'); // a <ul> is a list, this will have items
+      rootUl.classList.add('dp-tree-list'); // this name will be used in rhis and doxy-plus.css file to target the list
+      rootUl.setAttribute('role', 'tree'); // assign the role as a tree to this <ul>
       rootUl.setAttribute('tabindex', '0');  // for keyboard nav
 
       // stack for iterative build
       const stack = [{ branch: tree, parentUl: rootUl, level: [] }];
 
+      // continue building while there are entries in the stack
       while (stack.length) {
+
+        // pop the top of the stack to build it
         const { branch, parentUl, level } = stack.pop();
         const fragment = document.createDocumentFragment();
 
         branch.forEach(([name, path, kids], idx) => {
 
-          const li = document.createElement('li');
-          li.classList.add('dp-tree-item');
-          li.setAttribute('role', 'treeitem');
+          // Create the item <li> for this item
+          const li = document.createElement('li'); // individual items
+          li.classList.add('dp-tree-item'); // this name will be used to grab the item in this and doxy-plus.css file
+          li.setAttribute('role', 'treeitem'); // assign the role as tree item
 
-          // compute ID
-          const thisLevel = [...level, idx];
-          const fileBase = (typeof path === 'string' && path.length > 0) ? (kind === 'primary' ? path.split('/').pop().replace(/\..*$/, '') : path) : null;
-          const id = `${cfg.prefix}${thisLevel.join('.')}.${fileBase}`;
-          li.setAttribute('dp-item-id', id);
+          // compute ID, each item has its unique id, this is so that it can be stored and so we can keep information of expanded/collapsed nodes
+          const thisLevel = [...level, idx]; // generating the level value, this should generate something like 1.2.0
+          const fileBase = (typeof path === 'string' && path.length > 0) ? (kind === 'primary' ? path.split('/').pop().replace(/\..*$/, '') : path) : null; // assigning file base
+          const id = `${cfg.prefix}${thisLevel.join('.')}.${fileBase}`; // this for form an id of form e.g. P:1.2.0.file_name
+          li.setAttribute('dp-item-id', id); // set the id
 
-          // line container
-          const line = document.createElement('div');
-          line.classList.add('dp-tree-line');
+          // line container. This contains expand/collapse node and the link items.
+          // This is made like this so that by targeting the dp-tree-line in doxy-plus.css file we target the base of the node and link.
+          // We cannot target the li (dp-tree-item) because if this li has children then targeting dp-tree-item will also target those.
+          const line = document.createElement('div'); // div class for the line
+          line.classList.add('dp-tree-line');  // this name will be used to grab item -> line in this and doxy-plus.css file
 
-          // toggle button
-          const node = document.createElement('button');
-          node.classList.add('dp-tree-node');
-          node.setAttribute('aria-expanded', 'false');
-          node.setAttribute('type', 'button');
+          // toggle button. This button forms the expand/collapse node button. All items have it but only the ones that have children have it enabled
+          // and visible, this way the left padding of all items remain the same.
+          const node = document.createElement('button'); // button class for the node
+          node.classList.add('dp-tree-node'); // this name will be used to grab item -> line -> node in this and doxy-plus.css file
+          node.setAttribute('aria-expanded', 'false'); // this is for screen readers
+          node.setAttribute('type', 'button'); // assign the type as button
 
-          // link
-          const link = document.createElement('a');
-          link.classList.add('dp-tree-link');
+          // link. This creates a clickable hyperlink that has a text.
+          const link = document.createElement('a'); // creating a hyperlink class
+          link.classList.add('dp-tree-link'); // this name will be used to grab item -> line -> link in this and doxy-plus.css file
+
+          // primary tree need the DOC_ROOT to correctly open its links, since these are html files and requies full reload of tab.
+          // secondary trees contains on-page links and so does not require any additional prefix or suffix.
           const href = (typeof path === 'string' && path.length > 0) ? (kind === 'primary' ? DOC_ROOT + path : path) : null;
-
-          if (href) {
+          if (href) { // only assign if there is a value for the link
             link.href = href;
-          } else {
-            li.classList.add('dp-tree-no-href');
-            link.removeAttribute('href');
-            link.setAttribute('aria-disabled', 'true');
-            link.setAttribute('tabindex', '-1');
+          } else { // if link is not available (can happen for empty node that is there just for its children)
+            li.classList.add('dp-tree-no-href'); // add a class to the parent item so that it can be identified in this and doxy-plus.css file
+            link.removeAttribute('href'); // remove the href attribute so that clicking on it does nothing
+            link.setAttribute('aria-disabled', 'true'); // for screen readers
+            link.setAttribute('tabindex', '-1'); // no tab index so that it cannot be reached by keyboard navigation
           }
-          link.textContent = name;
+          link.textContent = name; // assign the name, this will be displayed on screen
 
+          // Get the current opened state of the node. For primary tree the default state is closed while for secondary tree it is opened.
+          // For primary tree the stored set contains expanded nodes and for secondary tree stored set contains collapsed nodes.
+          // So, if the stored set (i.e. prvSet) contains the id then it's open state is opposite of the default opened state for that tree.
           const isOpen = prvSet.has(id) ? !cfg.defaultOpen : cfg.defaultOpen;
+
+          // assigning the text value for the node, this is what will be displayed.
+          // '○' and '●' are choosen because it appears correctly on Windows and Android browsers (many other options do not appear correctly)
           node.textContent = isOpen ? '○' : '●';
 
+          // Attach node and link to line, node and link can be accessed as line -> node and line -> link
           line.append(node, link);
+
+          // Attach line to item <li>, it can now be accessed as item -> line
           li.appendChild(line);
 
-          // children?
+          // If the item has children then it will have its own branch
           if (Array.isArray(kids) && kids.length) {
-            li.classList.add('dp-has-children');
-            // decide open state
-            node.setAttribute('aria-expanded', String(isOpen));
-            if (isOpen) li.classList.add('dp-node-open');
-            cfg.setOpen(id, isOpen);
 
-            // child UL
+            // add a class to the item <li> so that it can be identified in this and doxy-plus.css that this item has children
+            li.classList.add('dp-has-children');
+
+            // Add the open state to the item <li>
+            node.setAttribute('aria-expanded', String(isOpen)); // for screen readers
+            if (isOpen) li.classList.add('dp-node-open'); // add a class if its open so that it can be identified in this and doxy-plus.css files
+            cfg.setOpen(id, isOpen); // set the open value in its set, the set will be saved later after building is complete
+
+            // Create child list <ul>
             const childUl = document.createElement('ul');
-            childUl.classList.add('dp-tree-list');
-            childUl.setAttribute('role', 'group');
-            li.appendChild(childUl);
+            childUl.classList.add('dp-tree-list'); // add the class name so that it can be identified in this and doxy-plus.css files
+            childUl.setAttribute('role', 'group'); // set the role as group because it is a branch of a tree
+            li.appendChild(childUl); // append the list to the item <li> as its child
 
             // push children for processing
             stack.push({ branch: kids, parentUl: childUl, level: thisLevel });
           }
           else {
-            node.style.visibility = 'hidden'; // makes it invisible and non-interactive but keeps the space
+            // If the item <li> has no child, then make the node hidden.
+            // Hiding the node makes it non-interactive and invisible while reserving its space, this way all items are spaced correctly
+            node.style.visibility = 'hidden';
           }
 
+          // append the item <li> to its parent list <ul> fragment
           fragment.appendChild(li);
         });
 
         parentUl.appendChild(fragment);
       }
 
-      // save initial state
-      cfg.saveDebounced();
-      return rootUl;
+      cfg.saveDebounced(); // save initial state of expanded/collapsed nodes
+      return rootUl; // return the built list <ul>
     }
 
+    // Set the current item <li> for primary and secondary trees
     function setCurrentTreeItem(container, kind = 'primary') {
+      // This function is called after the trees are built and placed in their respective containers
 
       // verifying
       if (!container || !CONFIG[kind]) {
-        console.error(`Set Current Tree Item: Invalid parameter. Returning.`);
+        console.error(`Build Trees - Set Current Tree Item: Invalid parameter. Returning.`);
         return;
       }
 
+      // get the correct config object
       const cfg = CONFIG[kind];
 
-      // clear previous
+      // clear previous current item
       const prev = container.querySelector('.dp-current');
       if (prev) prev.classList.remove('dp-current');
 
-      // find new target
+      // Find new target. If the kind is primary we use the base url otherwise we use the on-page link (hash)
       const target = kind === 'primary' ? window.location.href.split('#')[0] : window.location.hash;
-      if (!target) return;
+      if (!target) return; // if target cannot be found then return (can happen if has has become invalid in the new build)
 
+      // Search for the item that has the target link
       for (const link of container.querySelectorAll('.dp-tree-link[href]')) {
+
+        // If the link's href attribute matches the target then we have the correct link.
+        // Note: for a link that has a hash href e.g. #abc, if we do link.href it will give current url + href
+        // i.e. some.com/proj/file.html#abc and if we do link.getAttribute('href') then it will give only #abc
+        // For a link that has full url (primary tree) both link.href and link.getAttribute('href') will return
+        // the same value
         if (link.getAttribute('href') === target) {
-          const item = link.closest('.dp-tree-item');
-          item.classList.add('dp-current');
-          item.classList.add('dp-visited');
+
+          const item = link.closest('.dp-tree-item'); // find the parent item, since the relationship is item -> line -> link
+          item.classList.add('dp-current'); // adding current class for identification in this and doxy-plus.css files
+          item.classList.add('dp-visited'); // adding visited class for identifiaction in this and doxy-plus.css files
 
           // expand ancestors
-          let parent = item.parentElement.closest('.dp-tree-item');
+          let parent = item.parentElement.closest('.dp-tree-item'); // find the parent item of the current item
           while (parent) {
+            // keep expanding parent item as long as it is valid
             parent.classList.add('dp-node-open');
+
+            // change the node text to reflect expanded state
             const btn = parent.querySelector(':scope > .dp-tree-line > .dp-tree-node');
             if (btn) {
               btn.textContent = '○';
               btn.setAttribute('aria-expanded', 'true');
             }
+
+            // get the id so that its expanded state can be saved
             const id = parent.getAttribute('dp-item-id');
             cfg.setOpen(id, true);
+
+            // recurse over its parent
             parent = parent.parentElement.closest('.dp-tree-item');
           }
 
+          // scroll into view this item, "block: 'nearest'" will make sure it is in view vertically but will not
+          // reposition if it is already in view. We do not scroll into view horizontally because horizontal
+          // scroll is disabled, instead we use ellipsis to show that the text is longer than horizontal width.
           item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+          // break the loop since we have found the item
           break;
         }
       }
 
+      // save the expanded/collapsed state
       cfg.saveDebounced();
     }
 
     function clickHandler(evt) {
-      if (evt.target.matches('.dp-tree-node')) { // toggle nodes
+      // Handles the click event for a node or link in a item <li>
+      // evt is the event. The click handler is attached to the top
+      // level tree and so we have to figure out exactly where in 
+      // the list the user has clicked. For that we use the option
+      // evt.target.matches(...)
+
+      if (evt.target.matches('.dp-tree-node')) {
+        // If the target where click happened has the dp-tree-node class then it means
+        // the user clicked on a expand/collapse node. For a node that is hidden i.e.
+        // for an item which does not have a child, this will not match since the node
+        // itself is hidden.
+
+        // find the parent item <li> since the relationship is item -> line -> node
         const li = evt.target.closest('.dp-tree-item');
+
+        // if the parent item <li> is not found or if it doesn't have a child then return
         if (!li || !li.classList.contains('dp-has-children')) return;
+
+        // get the id of the item <li> so that we can store its changed state of expand/collapse node
         const id = li.getAttribute('dp-item-id');
+
+        // toggle the dp-node-open class on the item <li> this will flip its state and return the new value as a boolean
         const isOpen = li.classList.toggle('dp-node-open');
+
+        // set the correct text on the node given is expand/collapse (or open/close) state
         evt.target.textContent = isOpen ? '○' : '●';
+
+        // add the string for screen-readers
         evt.target.setAttribute('aria-expanded', String(isOpen));
+
+        // get the correct config, since the id for primary tree config starts with "P:" and
+        // for secondary tree config starts with "S:", we can determine the correct config from
+        // the id
         const cfg = id.startsWith('P:') ? CONFIG.primary : CONFIG.secondary;
+
+        // store the new expand/collapse (or open/close) state for the item <li>
         cfg.setOpen(id, isOpen);
+
+        // call the save function so that new expand/collapse state is stored immediately
         cfg.saveDebounced();
       }
-      else if (evt.target.matches('.dp-tree-link[href]')) { // mark visited
+      else if (evt.target.matches('.dp-tree-link[href]')) {
+        // If the target matches a link which has an href value (so empty link objects with no href
+        // will not match) then it means uswer clicked on a link object. Since the link object is of
+        // type hyperlink and has a href, the browser will automatically redirect. However, we are
+        // storing the visited state for an item <li> so we update that here.
         evt.target.closest('.dp-tree-item').classList.add('dp-visited');
       }
     }
 
     function getVisibleSecTreeItems() {
+      // Returns the currently visible items with non-empty links in the secondary container.
+      // This will not include any children whose parent item is not expanded.
+
+      // create an array that will store the list of items that are currently visible
       const result = [];
 
       function walk(ul) {
+        // Walk the given list <ul> in order to grab all visible items
+
+        // select all item which is identified by dp-tree-item class
         for (const li of ul.querySelectorAll(':scope > li.dp-tree-item')) {
           // grab the immediate link, if it exists
           const link = li.querySelector(':scope > .dp-tree-line > .dp-tree-link[href]:not([aria-disabled])');
           if (link) {
-            result.push(li);
+            result.push(li); // if the link exists and is not empty then add this item <li> to the results list
           }
           // recurse only into open branches
           if (li.classList.contains('dp-has-children') && li.classList.contains('dp-node-open')) {
@@ -1478,68 +1586,154 @@ File Names: doxy-plus.*
         walk(topUl);
       }
 
+      // return the result array
       return result;
     }
 
     function keyHandler(evt) {
+      // Handles the key events such as arrow keys. This only is attached to secondary tree container.
+      // Not having this for primary tree is because primary tree contains url's, clicking on any item
+      // in primary tree will lead to full page loads and full execution of all files including this file.
+      // As a reult when a primary tree link is clicked everything is reloaded and determining if last
+      // click was on primary tree because more difficult.
+
+      // focusables is the current list of all visible items in the secondary container
       const focusables = getVisibleSecTreeItems();
+
+      // if focusables is not an array or if its length is just 0 or 1 then don't do anything
+      // because there is no need for keyboard navigation in such case.
       if (!Array.isArray(focusables) || focusables.length < 2) return;
+
+      // get the index of the current item in the focusables list
       const idx = focusables.indexOf(secCon.querySelector('.dp-current'));
+
+      // if there is no current item then return because we will not be able to determine up or down items
       if (idx === -1) return;
+
+      // get the config for the secondary tree
       const cfg = CONFIG.secondary;
+
+      // based on key we do different things
       switch (evt.key) {
         case 'ArrowDown': {
+          // Arrow Down key -> we move to item below that is visible, if there are no item below then we do nothing
+
+          // so that the default action does not happen and the event is not forwarded to the container, if forwarded
+          // then the container itself will scroll.
           evt.preventDefault();
+
+          // next index, if next index is valid then simulate a click on its link object which can be obtained using line -> link
           const nIdx = idx + 1;
           if (nIdx < focusables.length) focusables[nIdx].querySelector('.dp-tree-line > .dp-tree-link').click();
           break;
         }
         case 'ArrowUp': {
+          // Arrow Up key -> we move to item above that is visible, if there are no item above then we do nothing
+
+          // so that the default action does not happen and the event is not forwarded to the container, if forwarded
+          // then the container itself will scroll.
           evt.preventDefault();
+
+          // previous index, if previous index is valid then simulate a click on its link object which can be obtained using line -> link
           const nIdx = idx - 1;
           if (nIdx >= 0) focusables[nIdx].querySelector('.dp-tree-line > .dp-tree-link').click();
           break;
         }
         case 'ArrowRight': {
+          // Right Arrow Key -> This will expand the current item if it has children and it is not expanded.
+
+          // prevent default to stop the event propagating to the parent container
           evt.preventDefault();
+
+          // get the hasChildren, open state and node object
           const hasChildren = focusables[idx].classList.contains('dp-has-children');
           const isOpen = focusables[idx].classList.contains('dp-node-open');
           const node = focusables[idx].querySelector(':scope > .dp-tree-line > .dp-tree-node');
+
+          // if it has children, the node object is valid and the item is not open then we open it
           if (hasChildren && node && !isOpen) {
+            // get the id of the item so that its expanded state can be saved
             const id = focusables[idx].getAttribute('dp-item-id');
+
+            // add the dp-node-open class to the item <li> so that it can be identified as open in this and doxy-plus.css files
             focusables[idx].classList.add('dp-node-open');
+
+            // change the node's text to reflect its opened state
             node.textContent = '○';
+
+            // set the correct string for screen readers
             node.setAttribute('aria-expanded', 'true');
+
+            // set the opened state for the tree in its expand/collapse set
             cfg.setOpen(id, true);
+
+            // save the expand/collapse set
             cfg.saveDebounced();
           }
           break;
         }
         case 'ArrowLeft': {
+          // Arrow Left key -> we collapse the current item if it has children and is open, other wise we collapse
+          // its parent item, if it exists.
+
+          // prevent default to stop the event propagating to the parent container
           evt.preventDefault();
+
+          // For the current item, check if it has children, is open and get its node and parent
           const hasChildren = focusables[idx].classList.contains('dp-has-children');
           const isOpen = focusables[idx].classList.contains('dp-node-open');
           const parLi = focusables[idx].parentElement.parentElement;
           const node = focusables[idx].querySelector(':scope > .dp-tree-line > .dp-tree-node');
+
+          // if the item has children, and its node object is valid and it is expanded/open then we collapse it
           if (hasChildren && node && isOpen) {
+            // get the id of the item so that its collapsed state can be saved
             const id = focusables[idx].getAttribute('dp-item-id');
+
+            // remove the dp-node-open class from the item <li> so that it can be identified as collapsed in this and doxy-plus.css files
             focusables[idx].classList.remove('dp-node-open');
+
+            // change the node's text to reflect its collapsed state
             node.textContent = '●';
+
+            // set the correct string for screen readers
             node.setAttribute('aria-expanded', 'false');
+
+            // set the collapsed state for the tree in its expand/collapse set
             cfg.setOpen(id, false);
+
+            // save the expand/collapse set
             cfg.saveDebounced();
           }
           else if (parLi) {
+            // If the item does not have children or is not expanded/open but has a parent item then we collapse its parent item
+
+            // For the parent item we check if it has children, it is open and has a valid node object
             const parHasChildren = parLi.classList.contains('dp-has-children');
             const parIsOpen = parLi.classList.contains('dp-node-open');
             const parNode = parLi.querySelector(':scope > .dp-tree-line > .dp-tree-node');
+
+            // if the parent item has children, and its node object is valid and it is expanded/open then we collapse it
             if (parHasChildren && parNode && parIsOpen) {
+              // get the id of the parent item so that its collapsed state can be saved
               const id = parLi.getAttribute('dp-item-id');
+
+              // remove the dp-node-open class from the parent item <li> so that it can be identified as collapsed in this and doxy-plus.css files
               parLi.classList.remove('dp-node-open');
+
+              // change the parent item's node text to reflect its collapsed state
               parNode.textContent = '●';
+
+              // set the correct string for screen readers
               parNode.setAttribute('aria-expanded', 'false');
+
+              // set the collapsed state for the tree in its expand/collapse set
               cfg.setOpen(id, false);
+
+              // save the expand/collapse set
               cfg.saveDebounced();
+
+              // get the link object for the parent item so that we can navigate to it
               const link = parLi.querySelector(':scope > .dp-tree-line > .dp-tree-link');
               if (typeof link.href === 'string' && link.href.length > 0) {
                 window.location.href = link.href;
@@ -1549,50 +1743,70 @@ File Names: doxy-plus.*
           break;
         }
         case 'Home': {
+          // Home key -> Got to the first item in the list
+
+          // prevent default to stop the event propagating to the parent container
           evt.preventDefault();
-          const link = focusables[0].querySelector(':scope > .dp-tree-line > .dp-tree-link');
-          if (typeof link.href === 'string' && link.href.length > 0) {
-            window.location.href = link.href;
-          }
+
+          // simulate a click on the first item in the focusables list
+          focusables[0].querySelector('.dp-tree-line > .dp-tree-link').click();
           break;
         }
-        case 'Home': {
+        case 'End': {
+          // End key -> Got to the last item in the list
+
+          // prevent default to stop the event propagating to the parent container
           evt.preventDefault();
-          const link = focusables[focusables.length - 1].querySelector(':scope > .dp-tree-line > .dp-tree-link');
-          if (typeof link.href === 'string' && link.href.length > 0) {
-            window.location.href = link.href;
-          }
+
+          // simulate a click on the last item in the focusables list
+          focusables[focusables.length - 1].querySelector('.dp-tree-line > .dp-tree-link').click();
           break;
         }
       }
     }
 
-
-
+    // We remove the indentation of sub-items in a tree if the tree only has 2 levels and if
+    // all items in the top levels have child items and if all child items have no children of
+    // their own. This way since all child items has no children their node will be invisible
+    // providing them an indentation and since all top level items have children, they will have
+    // nodes and so will be easily disntinguished from child items and there will be no top level
+    // item without a node. If the primary tree has indentation or not is determined when building
+    // the primary tree, since the tree is saved and not build each time we also save its indentation
+    // value and load it with the tree.
+    // If the tree is indented add dp-indented-tree clas to its container so that it can be identified in this and doxy-plus.css files
     if (_priTreeIndented) priCon.classList.add('dp-indented-tree');
-    priCon.innerHTML = '';
-    const priTreeRoot = build('primary');
-    priCon.appendChild(priTreeRoot);
-    setCurrentTreeItem(priCon, 'primary');
-    priTreeRoot.addEventListener('click', clickHandler);
+    const priTreeRoot = build('primary'); // build the tree ul->li structure
+    priCon.appendChild(priTreeRoot); // add the built tree to the container
+    setCurrentTreeItem(priCon, 'primary'); // set the current item for the primary tree
+    priTreeRoot.addEventListener('click', clickHandler); // install the click listner
 
+    // only proceed if the secondary is available, this tree is only available in a class or struct page
     if (_secTree.length > 0) {
-      if (isTreeIndented(_secTree)) secCon.classList.add('dp-indented-tree');
-      secCon.innerHTML = '';
-      const secTreeRoot = build('secondary');
-      secCon.appendChild(secTreeRoot);
-      setCurrentTreeItem(secCon, 'secondary');
-      secTreeRoot.addEventListener('click', clickHandler);
+      if (isTreeIndented(_secTree)) secCon.classList.add('dp-indented-tree'); // check if secondary tree should be indented, if yes add dp-indented-tree class to container
+      const secTreeRoot = build('secondary'); // build the tree ul->li structure
+      secCon.appendChild(secTreeRoot); // add the built tree to the container
+      setCurrentTreeItem(secCon, 'secondary'); // set the current item for the secondary tree
+      secTreeRoot.addEventListener('click', clickHandler); // install the click listner
 
+      // install the hash changed listner for the secondary tree, so that it updates the current item
+      // on hash change. This way whenever hash is changed by clicking a link in secondary tree or
+      // in the default side-nav of doxygen the current item in secondary tree is always up to date.
       window.addEventListener('hashchange', () => { setCurrentTreeItem(secCon, 'secondary'); });
 
-      let secConActive = false;
+      // We check if the last portion clicked was the secondary tree, so that we can react to key
+      // down events on secondary tree
+      let secConActive = false; // by default the last portion clicked is not on secondary tree
       document.addEventListener('mousedown', evt => {
+        // in the mouse down event on the entire page, we see get the point where mouse was clicked
+        // and if it is over secondary container then we set secondary tree as active so that we
+        // can react to key down events
         const hit = document.elementFromPoint(evt.clientX, evt.clientY);
         if (hit.closest('#dp-sec-nav')) secConActive = true;
         else secConActive = false;
       }, true);
 
+      // listening to key down events, inside the event we check if secondary tree is active, and then react
+      // to only a given set of keyboard keys by sending the event to our keyHandler function above
       document.addEventListener('keydown', evt => {
         if (secConActive) {
           if (!['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(evt.key)) return;
@@ -1609,17 +1823,26 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function displayDefTree(groupFormat = true) {
+    // Generate and display the default Doxygen NAVTREE.
+    // Use grouped view when groupFormat is true; otherwise, use table view.
+
+    // generating the default Doxygen NAVTREE
     const defTree = await genDefTree();
+
+    // If the tree has entries, render in the selected format
     if (Array.isArray(defTree) && defTree.length > 0) {
       if (groupFormat) {
+        // Render NAVTREE in grouped format
         printTreeGroupFormat(defTree);
       }
       else {
+        // Render NAVTREE in table format
         printTreeTableFormat(defTree);
       }
     }
     else {
-      console.log('Default Tree is EMPTY');
+      // Log an error if the default NAVTREE is EMPTY
+      console.error('Default Doxygen NAVTREE Tree is EMPTY');
     }
   }
 
@@ -1630,47 +1853,66 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function displayMissedHtmlPages() {
+    // Display any HTML pages present in the default Doxygen NAVTREE but missing from the Doxy-Plus primary tree.
 
+    // Build a set of all HTML pages seen in the primary tree (_priTree).
     const seenHtml = new Set();
     if (Array.isArray(_priTree) && _priTree.length > 0) {
       (function markSeen(tree) {
+        // Return if tree is empty or not an array
         if (!Array.isArray(tree) || tree.length === 0) return;
         for (const [, href, kids] of tree) {
-          if (typeof href === 'string' && IS_HTML_END.test(href) && !seenHtml.has(href)) seenHtml.add(href);
-          if (Array.isArray(kids)) markSeen(kids);
+          if (typeof href === 'string' && IS_HTML_END.test(href) && !seenHtml.has(href)) {
+            // Add HTML links to the seenHtml set
+            seenHtml.add(href);
+          }
+          if (Array.isArray(kids)) markSeen(kids); // Recurse into child nodes
         }
       })(_priTree);
     }
 
+    // Generate the default Doxygen NAVTREE for comparison
     const defTree = await genDefTree();
+
+    // If default tree is valid, compare and collect any missing pages
     if (Array.isArray(defTree) && defTree.length > 0) {
       const collected = new Set();
       let missedPages = [];
+
       (function collect(tree, parName = '') {
+        // Return if tree is empty or not an array
         if (!Array.isArray(tree) || tree.length === 0) return;
+
         for (const [name, href, kids] of tree) {
+          // Build full name path using arrows for nesting
           const fullName = parName === '' ? name : parName + " → " + name;
+
           if (typeof href === 'string') {
+            // Strip on-page-link/fragment-identifiers from links
             const link = href.replace(/(\.html)#.*$/, '$1');
+            // If link is HTML, unseen, and not already collected, record it
             if (IS_HTML_END.test(link) && !seenHtml.has(link) && !collected.has(link)) {
               collected.add(link);
               missedPages.push({ Name: fullName, Link: link });
             }
           }
-          if (Array.isArray(kids)) {
-            collect(kids, fullName);
-          }
+
+          // Recurse into child nodes
+          if (Array.isArray(kids)) collect(kids, fullName);
         }
       })(defTree);
 
       if (missedPages.length > 0) {
+        // Display a table of missed pages in the console
         console.table(missedPages);
       }
       else {
+        // Inform that there are no missing HTML pages
         console.log('Missed HTML Pages list is EMPTY');
       }
     }
     else {
+      // Log an error if the default NAVTREE could not be retrieved
       console.error('Unable to get Default NAVTREE');
     }
   }
@@ -1678,10 +1920,64 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 DISPLAY MISSED HTML PAGES
 
+  // #region 🟩 PURGE EXPIRED DATA
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  function purgeExpiredData() {
+    // Purges expired data stored by store.js for this origin, runs at most once per day.
+
+    // Purges data for the entire origin. Origin is the url if hosted otherwise
+    // if opened from local disk then all projects share the same local origin in browser
+
+    // Determine today's date in YYYY-MM-DD format.
+    const today = new Date().toISOString().slice(0, 10);
+
+    // Get last purge date to avoid multiple purges in one day.
+    const lastPurged = localStorage.getItem(KEY__EXPIRED_DATA_PURGE_DATE);
+    if (lastPurged === today) return;
+
+    // Actual purge logic: iterates all keys and removes expired entries.
+    function purge() {
+      const PRE = '__storejs___storejs_'; // Prefix used by store.js for localStorage keys
+      const SEP = '_expire_mixin_';       // Separator indicating expiry metadata
+
+      try {
+        Object.keys(localStorage).forEach(fullKey => {
+          // Only process keys matching the expiry pattern
+          if (fullKey.startsWith(PRE) && fullKey.indexOf(SEP, PRE.length) !== -1) {
+            // Extract namespace and actual key
+            const [nsName, actualKey] = fullKey.slice(PRE.length).split(SEP, 2);
+            // Accessing the key via store.js will remove it if expired
+            store.namespace(nsName).get(actualKey);
+          }
+        });
+      } catch (err) {
+        // Log any errors encountered during purge
+        console.warn('Purge Expired Data Error:', err);
+      }
+
+      // Record today's date as the last purge time
+      localStorage.setItem(KEY__EXPIRED_DATA_PURGE_DATE, today);
+    }
+
+    // Schedule the purge during an idle period if available, otherwise use a timeout
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(purge, { timeout: 5000 });
+    } else {
+      setTimeout(purge, 5000);
+    }
+  }
+
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // #endregion 🟥 PURGE EXPIRED DATA
+
   // #region 🟩 CONSOLE OBJECT
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   const consoleObject = Object.create(null); // main object
+
+  // ⚠️ In this section comments are provided as console.log values because it should also be displayed in console
 
   Object.defineProperty(consoleObject, 'project_root', { // Project Root Location
     get() {
@@ -1921,6 +2217,7 @@ File Names: doxy-plus.*
   });
 
   Object.defineProperty(consoleObject, 'info', { // Info
+    // Defines a info property that can be called in browser console
     get() {
       console.group('● Doxy Plus Debug Information:');
 
@@ -1960,8 +2257,10 @@ File Names: doxy-plus.*
     configurable: true
   });
 
-  // Assign "dp" as the object for window so that it can be used as debug handler in console
-  // window.dp = Object.create(null); // if set below else will be executed. This is just for example
+  // Assign "dp" as the object for window so that it can be used as debug handler in console,
+  // if "dp" is not available then we use "debugDoxyPlus". This can be used in browser console
+  // to call the above attached properties.
+  // window.dp = Object.create(null); // if set below else will be executed, this is just to
   if (window.dp !== undefined) {
     console.log('● Full Reload: "dp" already defined - "debugDoxyPlus" is the console debug handler');
     window.debugDoxyPlus = consoleObject;
@@ -1980,19 +2279,26 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function docOnReady() {
-    searchbarTweak();
-    sidebarToggleButton();
-    sideNavTweak();
-    dualNav_init();
-    await genPriTree();
-    checkReload();
-    await genSecTree();
-    setupResizeObservers();
-    searchResultWindowObserver();
-    buildTrees();
-    purgeExpiredData();
+    // Runs when the DOM is available, much earlier than window.addEventListener('load').
+    // Maintain this sequence of calls; order is crucial for correct behavior.
+    searchbarTweak();               // Sets search selector text instead of a magnifying-glass icon.
+    sidebarToggleButton();          // Adds the sidebar-toggle button next to the search bar.
+    sideNavTweak();                 // Removes default top entry and updates expand/collapse toggle.
+    dualNavInit();                  // Initializes dual nav panes and attaches the resize handler.
+    await genPriTree();             // Generates the primary tree from the default Doxygen NAVTREE.
+    checkReload();                  // Redirects the URL if necessary; primary tree must be ready first.
+    await genSecTree();             // Generates the secondary tree for class or struct pages.
+    setupResizeObservers();         // Observes element size changes per values in doxy-plus.css.
+    searchResultWindowObserver();   // Matches search-result window’s position/width to the search bar.
+    buildTrees();                   // Builds the display trees for primary and secondary panes.
+    purgeExpiredData();             // Removes any expired stored data for this origin.
   }
 
+
+  // Fires as soon as the browser has parsed the HTML and built the DOM (Document Object Model) tree — before images, 
+  // stylesheets, iframes, etc., have all finished loading.
+  // ⚠️ Fires much earlier than 'window.addEventListener('load', function ()...'
+  // ⚠️ Guranteed that 'docOnReady()' will fire once DOM has been prased and is available 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', docOnReady);
   } else {
@@ -2001,6 +2307,20 @@ File Names: doxy-plus.*
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 DOCUMENT LOADING CALLS
+
+  // #region 🟩 WINDOW ON LOAD CALL
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  /*
+  window.addEventListener('load', function () {
+    // Fires after the entire page is “loaded” — HTML parsed and all external resources (images, styles, frames, fonts,
+    // scripts, etc.) have finished downloading.
+    // ⚠️ Always happens later than DOMContentLoaded.
+  });
+  */
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // #endregion 🟥 WINDOW ON LOAD CALL
 
 
 })(jQuery);
