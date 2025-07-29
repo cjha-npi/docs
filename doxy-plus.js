@@ -2126,6 +2126,13 @@ File Names: doxy-plus.*
 
   // ⚠️ In this section comments are provided as console.log values because it should also be displayed in console
 
+  Object.defineProperty(consoleObject, 'last_update', { // Last Update Date-Time
+    get() {
+      console.log(`Updated On: ${window.DOXY_PLUS_DATE_TIME}`);
+    },
+    configurable: true
+  });
+
   Object.defineProperty(consoleObject, 'project_root', { // Project Root Location
     get() {
       console.log(`${DOC_ROOT}\n\nIf the project is hosted on GitHub, the root is the origin URL plus the repository name; otherwise, it defaults to the local folder path on disk.`);
@@ -2369,6 +2376,8 @@ File Names: doxy-plus.*
       console.group('● Doxy Plus Debug Information:');
 
       console.log(`● ${_consoleObjectName}.info\n\nThis information ouput`);
+
+      console.log(`● ${_consoleObjectName}.last_update\n\nThe Date-Time of the current update.`);
 
       console.log(`● ${_consoleObjectName}.project_root\n\nProject root location: If the project is hosted on GitHub, the root is the origin URL plus the repository name; otherwise, it defaults to the local folder path on disk.`);
 
