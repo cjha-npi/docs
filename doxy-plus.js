@@ -13,28 +13,28 @@ File Names: doxy-plus.*
   // #region 🟩 CONSTANTS
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  // Storage Key: Origin Specific, stored directly in browser's localStorage without store.js
+  // Key for storing the last purge date of expired data (origin-specific; saved directly in localStorage)
   const KEY__EXPIRED_DATA_PURGE_DATE = 'expired_data_purge_date';
 
-  // Storage Keys: These keys are project specific
-  const KEY__PREV_URL = 'prev_url'; // previous url key, used for restoring on startup
-  const KEY__DUAL_NAV = 'dual_nav'; // dual nav enabled state key
-  const KEY__PRI_WIDTH = 'pri_width'; // width of primary pane of dual nav
-  const KEY__SEC_WIDTH = 'sec_width'; // width of secondary pane of dual nav
-  const KEY__GEN_DATA = 'gen_data'; // doxygen generation data
-  const KEY__PRI_TREE = 'pri_tree'; // dual nav primary tree
-  const KEY__PRI_TREE_INDENTED = 'pri_tree_indented'; // dual nav primary tree indentation
-  const KEY__PRI_NAV_EXPANDED_NODES = 'pri_nav_expanded_nodes'; // primary tree expanded nodes, to re-expanded on revisit
+  // Project-specific keys (stored via store.js under each project's namespace)
+  const KEY__PREV_URL = 'prev_url'; // URL to restore on startup
+  const KEY__DUAL_NAV = 'dual_nav'; // Dual-nav enabled/disabled state
+  const KEY__PRI_WIDTH = 'pri_width'; // Width of the primary nav pane
+  const KEY__SEC_WIDTH = 'sec_width'; // Width of the secondary nav pane
+  const KEY__GEN_DATA = 'gen_data'; // Doxygen generation metadata
+  const KEY__PRI_TREE = 'pri_tree'; // Serialized primary tree structure for dual nav
+  const KEY__PRI_TREE_INDENTED = 'pri_tree_indented'; // Boolean flag for primary tree indentation
+  const KEY__PRI_NAV_EXPANDED_NODES = 'pri_nav_expanded_nodes'; // Array of expanded node IDs in primary tree
 
 
-  // Constant Values
-  const ICON_SIDE_NAV = 'doxy-plus-side-nav.png'; // name for the icon that shows the side nav symbol
-  const ICON_DUAL_NAV = 'doxy-plus-dual-nav.png'; // name for the icon that shows the dual nav symbol
-  const MIN_W = 25; // minimum width of either primary or secondary nav panes in dual nav configuration
-  const GUTTER_W = 100; // right side gutter width in dual nav configuration
-  const TIME_TO_LIVE = 30 * 24 * 60 * 60 * 1000; // 30 days, time for a storage variable to be considered stale. 7 * 24 * 60 * 60 * 1000 == 7 Days, 30 * 24 * 60 * 60 * 1000 == 30 Days
-  const IS_HTML_END = /\.(?:xhtml|html)$/i; // case-insensitive check for a string ending in either .xhtml or .html
-  const TIMEOUT_MS = 2000; // time milliseconds till timeout while waiting for an element in DOM
+  // Constants
+  const ICON_SIDE_NAV = 'doxy-plus-side-nav.png'; // Filename for the side-nav icon
+  const ICON_DUAL_NAV = 'doxy-plus-dual-nav.png'; // Filename for the dual-nav icon
+  const MIN_W = 25; // Minimum width (px) of either nav pane in dual-nav
+  const GUTTER_W = 100; // Gutter width (px) on right side in dual-nav
+  const TIME_TO_LIVE = 30 * 24 * 60 * 60 * 1000; // Time (ms) until stored data is considered stale (30 days). 7 * 24 * 60 * 60 * 1000 == 7 Days, 30 * 24 * 60 * 60 * 1000 == 30 Days
+  const IS_HTML_END = /\.(?:xhtml|html)$/i; // Regex to test for strings ending in .xhtml or .html (case-insensitive)
+  const TIMEOUT_MS = 2000; // Timeout duration (ms) when waiting for a DOM element
 
   const DOC_ROOT = (() => {
     // Determine the base path (DOC_ROOT) of the current documentation site.
@@ -92,8 +92,7 @@ File Names: doxy-plus.*
   })();
 
   const PROJ_NAMESPACE = (() => {
-    // project's namespace, this is almost same as DOC_ROOT except it is formatted to serve as
-    // a namespace string
+    // project's namespace, this is almost same as DOC_ROOT except it is formatted to serve as a namespace string
 
     // 1) Strip any trailing slashes
     let raw = DOC_ROOT.replace(/\/+$/, '');
@@ -133,25 +132,25 @@ File Names: doxy-plus.*
   // #region 🟩 GLOBAL VARIABLES
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  // numbers
-  let _wPri = loadNum(KEY__PRI_WIDTH, 250); // width of primary pane of dual nav
-  let _wSec = loadNum(KEY__SEC_WIDTH, 250); // width of secondary pane of dual nav
+  // Numeric values
+  let _wPri = loadNum(KEY__PRI_WIDTH, 250); // Primary pane width in dual-nav (px)
+  let _wSec = loadNum(KEY__SEC_WIDTH, 250); // Secondary pane width in dual-nav (px)
 
-  // strings
-  let _consoleObjectName = ''; // name by which some of the functions here can be run on browser's console
-  let _secTreeRemarks = ''; // secondary tree generation remarks
+  // String values
+  let _consoleObjectName = ''; // Name of the global console object for invoking functions
+  let _secTreeRemarks = ''; // Remarks or notes from secondary tree generation
 
-  // booleans
-  let _dualNav = load(KEY__DUAL_NAV, true); // dual nav enabled state
-  let _priTreeIndented = false; // primary tree indentation
+  // Boolean flags
+  let _dualNav = load(KEY__DUAL_NAV, true); // Whether dual-nav is enabled
+  let _priTreeIndented = false; // Whether the primary tree is indented
 
-  // arrays and sets
-  const _priTree = []; // primary tree of dual nav
-  const _secTree = []; // secondary tree of dual nav
-  const _priExpNodes = new Set(); // expanded nodes of primary tree
-  const _secColNodes = new Set(); // collapsed nodes of secondary tree
+  // Tree data structures
+  const _priTree = []; // Data for primary navigation tree
+  const _secTree = []; // Data for secondary navigation tree
+  const _priExpNodes = new Set(); // IDs of expanded nodes in the primary tree
+  const _secColNodes = new Set(); // IDs of collapsed nodes in the secondary tree
 
-  // saving so that expiry time will be updated
+  // Save initial settings to refresh their expiration timers
   save(KEY__DUAL_NAV, _dualNav);
   save(KEY__PRI_WIDTH, _wPri);
   save(KEY__SEC_WIDTH, _wSec);
@@ -188,16 +187,25 @@ File Names: doxy-plus.*
   }
 
   function debounce(fn, ms = 50) {
-    // A way to “coalesce” a rapid burst of events into a single call after things have settled down.
+    // Return a debounced version of fn:
+    // fn will only be invoked after ms milliseconds have passed without a new call.
+    // This is a way to “coalesce” a rapid burst of events into a single call after things have settled down.
+
     let debounceId, idleId, fallbackId;
+
     return (...args) => {
+      // Cancel any pending debounce timer or idle callback before scheduling a new one
       clearTimeout(debounceId); // cancel the pending debounce
       if (idleId) cancelIdleCallback(idleId); // cancel any pending idle callback
       clearTimeout(fallbackId); // cancel any pending fallback timer
+
+      // Schedule fn to run after the specified delay
       debounceId = setTimeout(() => {
         if ('requestIdleCallback' in window) {
+          // If supported, run fn when the browser is idle (with a timeout)
           idleId = requestIdleCallback(() => fn(...args), { timeout: 200 });
         } else {
+          // Otherwise, fallback to a zero-delay timeout
           fallbackId = setTimeout(() => fn(...args), 0); // fallback into a zero-delay timeout
         }
       }, ms);
@@ -287,21 +295,45 @@ File Names: doxy-plus.*
   }
 
   function isTreeIndented(tree) {
-    // Checks whether a tree uses indentation. A valid tree item must have three entries—name, path, and kids. Indentation normally indicates sub-levels by adding extra left padding. However, when a tree has only two levels and each top-level item has sub-items and those sub-items have no further children, the top-level entries display expand/collapse buttons while the sub-items do not, and so we don't need indentation, saving space and improving readability. Although both primary and secondary trees meet this criterion and can omit indentation, this function prevents accidentally removing indentation when it’s needed.
+
+    // Determine whether the tree should use indentation.
+    // Assumes each entry in the tree has three parts: name, path and kids
+    // Returns true if indentation is needed, false if it can be omitted.
+
+    // Indentation means having extra padding for sub-levels. However,
+    // when a tree has only two levels and each top-level item has
+    // sub-items and those sub-items have no further children, the 
+    // top-level entries display expand/collapse buttons while the 
+    // sub-items do not, and so we don't need indentation, saving 
+    // space and improving readability. Although both primary and 
+    // secondary trees meet this criterion and can omit indentation, 
+    // this function prevents accidentally removing indentation when it’s needed.
+
+    // Empty or invalid tree: default to using indentation.
     if (!Array.isArray(tree) || tree.length === 0) {
       return true;
     }
+
+    // Check each top-level entry in the tree.
     for (let ii = 0; ii < tree.length; ++ii) {
       const kids = tree[ii][2];
+
       if (Array.isArray(kids) && kids.length > 0) {
+        // If any child has its own children, we need indentation.
         for (let jj = 0; jj < kids.length; ++jj) {
           if (kids[jj][2] != null) return true;
         }
+        // Found a two-level branch with children but no grandchildren;
+        // continue checking other branches.
       }
       else {
+        // A top-level item without children means tree must be indented.
         return true;
       }
     }
+
+    // All branches are exactly two levels deep with no grandchildren:
+    // indentation can be safely omitted.
     return false;
   }
 
@@ -313,12 +345,15 @@ File Names: doxy-plus.*
 
   async function searchbarTweak() {
 
-    // Tweaks the search bar’s selector text to reflect the current search context. By default, the selector shows only a magnifying-glass icon; this function replaces it with the appropriate text label.
+    // Tweaks the search bar’s selector text to reflect the current search context.
+    // By default, the selector shows only a magnifying-glass icon; this function
+    // replaces it with the appropriate text label.
 
     async function update() {
-      // Updates selector text by changing the '--dp-search-field' which is picked up by doxy-plus.css and applied
+      // Sync the '--dp-search-field' CSS variable based on the current search category.
 
       const start = performance.now();
+      // Wait for searchBox and indexSectionLabels to be available (timeout after TIMEOUT_MS).
       while (!window.searchBox || !window.indexSectionLabels) {
         const elapsed = performance.now() - start;
         if (elapsed > TIMEOUT_MS) {
@@ -328,14 +363,15 @@ File Names: doxy-plus.*
         //console.log(`Searchbar Tweak - Update: Waiting for "window.searchBox" and/or "window.indexSectionLabels" after ${elapsed} ms...`);
         await new Promise(requestAnimationFrame);
       }
+
+      // Determine label (fall back to 'All') and update CSS variable.
       const label = window.indexSectionLabels[window.searchBox.searchIndex] || 'All';
-      const root = document.documentElement;
-      root.style.setProperty('--dp-search-field', `"${label}:"`);
+      document.documentElement.style.setProperty('--dp-search-field', `"${label}:"`);
       //console.log(`Searchbar Tweak - Update: SUCCESS "Search ${label}"`);
     }
 
+    // Ensure window.searchBox.OnSelectItem exists before hooking into it.
     if (!window.searchBox || !window.searchBox.OnSelectItem) {
-      // wait till required parts are available
       const startTimeOnSelectItem = performance.now();
       while (!window.searchBox || !window.searchBox.OnSelectItem) {
         const elapsed = performance.now() - startTimeOnSelectItem;
@@ -348,8 +384,8 @@ File Names: doxy-plus.*
       }
     }
 
+    // Override OnSelectItem to call update() whenever the user selects a different category from dropdown.
     if (window.searchBox && window.searchBox.OnSelectItem && typeof window.searchBox.OnSelectItem === 'function') {
-      // Connect so that update is called when user changes the selector from search dropdown
       const orig = window.searchBox.OnSelectItem;
       window.searchBox.OnSelectItem = function (id) {
         const ret = orig.call(this, id);
@@ -372,34 +408,53 @@ File Names: doxy-plus.*
 
   async function sidebarToggleButton() {
 
-    // This functions adds a sidebar toggle button on the right of the dark/light theme button added by the Doxygen Awesome theme. Since on every resize Doxygen removes and rebuilds the searchbar, which leads to rebuilding of dark/light theme button of Doxygen Awesome theme, we have to do the same with out button. When the button is clicked the value toggles between dual nav on or off. When dual nav is on, we set the 'dp-dual-nav-active' as true and it is picked up by doxy-plus.css file and changes are applied using css. When dual nav if off, we remove the 'dp-dual-nav-active' attribute and again the doxy-plus.css applies the correct layout.
+    // This functions adds a sidebar toggle button on the right of the dark/light 
+    // theme button added by the Doxygen Awesome theme. Since on every resize 
+    // Doxygen removes and rebuilds the searchbar, which leads to rebuilding of 
+    // dark/light theme button of Doxygen Awesome theme, we have to do the same 
+    // with our button. When the button is clicked the value toggles between 
+    // dual nav on or off. When dual nav is on, we set the 'dp-dual-nav-active' 
+    // as true and it is picked up by doxy-plus.css file and changes are applied 
+    // using css. When dual nav if off, we remove the 'dp-dual-nav-active' 
+    // attribute and again the doxy-plus.css applies the correct layout.
 
+    // Apply or remove the dp-dual-nav-active attribute based on _dualNav state
     function setCssVariable() { // updates doxy-plus.css attribute
       if (_dualNav) document.body.setAttribute('dp-dual-nav-active', 'true');
       else document.body.removeAttribute('dp-dual-nav-active');
       //console.log('Sidebar Toggle Button: Set CSS Variable');
     }
-    setCssVariable(); // run once in the beginning
+    setCssVariable(); // initialize attribute on load
+
+    // Re-insert or update the toggle button when Doxygen rebuilds the search bar
+    const mo = new MutationObserver(setup);
 
     async function setup() {
-      const itemSearchBox = await waitFor('#searchBoxPos2');
 
+      // Wait for the desktop search box container
+      const itemSearchBox = await waitFor('#searchBoxPos2');
       if (!itemSearchBox) {
         console.error(`Sidebar Toggle Button - Setup: wait for "searchBoxPos2" timed out, not found`);
         return;
       }
 
-      mo.disconnect();
+      mo.disconnect(); // prevent handling our own DOM changes
+
+      // Only show toggle on desktop widths (>=768px)
       const winWidth = window.innerWidth || document.documentElement.clientWidth;
       if (winWidth >= 768) {
+
+        // Try to find an existing toggle button
         let btn = itemSearchBox.querySelector('.dp-sidebar-toggle-btn');
         if (btn) {
+          // Move existing button to end of the search box and update its icon
           itemSearchBox.appendChild(btn);
           const icon = btn.querySelector("img");
           icon.src = DOC_ROOT + (_dualNav ? ICON_DUAL_NAV : ICON_SIDE_NAV);
           //console.log('Sidebar Toggle Button - Setup: Reposition');
         }
         else {
+          // Create a new toggle button and icon
           btn = document.createElement('a');
           btn.className = 'dp-sidebar-toggle-btn';
           btn.href = '#';
@@ -412,6 +467,7 @@ File Names: doxy-plus.*
           img.src = DOC_ROOT + (_dualNav ? ICON_DUAL_NAV : ICON_SIDE_NAV);
           btn.appendChild(img);
 
+          // Toggle _dualNav state and update layout on click
           btn.addEventListener('click', evt => {
             evt.preventDefault();
             _dualNav = !_dualNav;
@@ -428,9 +484,11 @@ File Names: doxy-plus.*
       //else {
       //  console.log('Sidebar Toggle Button - Setup: Width < 768');
       //}
+
+      // Observe the search box for childList changes (Doxygen rebuilds on resize)
       mo.observe(itemSearchBox, { childList: true });
     }
-    const mo = new MutationObserver(setup);
+
     setup();
     //console.log('Sidebar Toggle Button: SUCCESS');
   }
@@ -443,28 +501,40 @@ File Names: doxy-plus.*
 
   async function sideNavTweak() {
 
-    // We have to wait for the two parts and we do it simultaneously by using 'await Promise.all...'
+    // Removes the top single entry in the side-nav, making all
+    // its children (e.g. Namespaces, Classes, etc.) as the top
+    // level items.
+    // CHange the ►/▼ icons for ●/○ everywhere in side-nav.
+
+    // Wait for the side-nav container and its first list item in the nav tree to appear.
+    // We do it simultaneously by using 'await Promise.all...'
     const sideNavPromise = waitFor('#side-nav');
     const firstLiPromise = waitFor('#side-nav #nav-tree-contents ul > li, #side-nav #nav-tree ul > li');
     const [sideNav, firstLi] = await Promise.all([sideNavPromise, firstLiPromise]);
 
+    // Abort if the side-nav element is not found.
     if (!sideNav) {
       console.error('Side Nav Tweak: wait for "#side-nav" timeed out, not found');
       return;
     }
 
+    // Abort if there is no list item to work with.
     if (!firstLi) {
       console.error('Side Nav Tweak: wait for "#side-nav #nav-tree-contents ul > li, #side-nav #nav-tree ul > li" timed out, not found');
       return;
     }
 
-    const sideNavTreeUl = firstLi.parentElement; // now we know the UL exists and has at least one LI
+    // now we know the UL exists and has at least one LI
+    const sideNavTreeUl = firstLi.parentElement; // Get the UL that holds the tree items.
 
-    // Bump all childs of the top level item to the top lebvel then remove the original top level
-    // item which will be empty now. This is done because the default navigation tree generated by
-    // Doxygen has only one top top level item (usually called "Main Page") and its children are
-    // items like "Namespaces", "Concepts", "Classes", etc. Having only one top level item seems
-    // useless, so I remove it and have all its child as top level items.
+    // Bump all children of the top level item to the top level 
+    // then remove the original top level item which will be 
+    // empty now. This is done because the default navigation 
+    // tree generated by Doxygen has only one top level item 
+    // (usually called "Main Page") and its children are items 
+    // like "Namespaces", "Concepts", "Classes", etc. Having 
+    // only one top level item seems useless, so I remove it 
+    // and have all its child as top level items.
     // ⚠️ NOTE: If in future the top level item is needed then just comment out the below part.
     const nested = firstLi.querySelector('ul');
     if (nested) {
@@ -475,22 +545,26 @@ File Names: doxy-plus.*
     firstLi.remove();
 
 
-    // This function swaps ►/▼ for ●/○ everywhere. By default Doxygen does not populate all
-    // childs in the nav tree, only when a node is expanded that its children are shown. What below
-    // section does is to listen to when the side-nav is changed i.e. a node is expanded/collapsed
-    // then swaps ►/▼ for ●/○. This way the icons for expand/collapse is always ●/○.
+    // This function swaps ►/▼ for ●/○ everywhere. By default 
+    // Doxygen does not populate all childs in the nav tree, 
+    // only when a node is expanded that its children are shown. 
+    // What below section does is to listen to when the side-nav 
+    // is changed i.e. a node is expanded/collapsed then swaps ►/▼ 
+    // for ●/○. This way the icons for expand/collapse is always ●/○.
     function replaceArrows() {
       mo.disconnect();
       sideNav.querySelectorAll('span.arrow').forEach(span => {
         const t = span.textContent.trim();
-        if (t === '►') span.textContent = '\u25CF\uFE0F';
-        else if (t === '▼') span.textContent = '\u25CB\uFE0F';
+        if (t === '►') span.textContent = '\u25CF\uFE0F'; // ●
+        else if (t === '▼') span.textContent = '\u25CB\uFE0F'; // ○
       });
       //console.log('Side Nav Tweak - Replace Arrows: SUCCESS');
-      mo.observe(sideNav, { childList: true, subtree: true });
+      mo.observe(sideNav, { childList: true, subtree: true }); // resume observing
     }
+
+    // Observe the side-nav subtree for any DOM changes to keep arrows updated.
     const mo = new MutationObserver(replaceArrows);
-    replaceArrows(); // replace arrows initially
+    replaceArrows(); // perform initial replacement
 
     //console.log('Side Nav Tweak: SUCCESS');
   }
@@ -502,34 +576,54 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   function setDualPriNavWidth(w) {
+    // Update the primary pane width if it has changed,
+    // Save the new value, and update the CSS custom property.
     if (w !== _wPri) {
-      _wPri = w;
-      save(KEY__PRI_WIDTH, w);
-      document.documentElement.style.setProperty('--dp-pri-width', `${w}px`);
+      _wPri = w; // Update internal state
+      save(KEY__PRI_WIDTH, w); // Save to storage
+      document.documentElement.style.setProperty('--dp-pri-width', `${w}px`); // Update CSS variable
     }
   }
 
   function setDualSecNavWidth(w) {
+    // Update the secondary pane width if it has changed,
+    // Save the new value, and update the CSS custom property.
     if (w !== _wSec) {
-      _wSec = w;
-      save(KEY__SEC_WIDTH, w);
-      document.documentElement.style.setProperty('--dp-sec-width', `${w}px`);
+      _wSec = w; // Update internal state
+      save(KEY__SEC_WIDTH, w); // Save to storage
+      document.documentElement.style.setProperty('--dp-sec-width', `${w}px`); // Update CSS variable
     }
   }
 
   function checkDualNavLayout(nPri = _wPri, nSec = _wSec) {
+    // Check and adjust the widths of the primary and secondary navigation panes
+    // so they fit within the available viewport space:
+    // 1. Only applies on desktop viewports (width >= 768px).
+    // 2. Computes the maximum combined width as window width minus gutter.
+    // 3. If both panes are active (_secTree non-empty):
+    //    a. If their sum exceeds the max, scale them proportionally.
+    //    b. Enforce minimum widths for each pane (MIN_W).
+    // 4. If only the primary pane is active, cap its width to the maximum.
+    // 5. Applies the final widths via setDualPriNavWidth and setDualSecNavWidth.
+    // For narrower viewports (< 768px), no adjustments are made.
+
+    // Only adjust layout on desktop widths (>= 768px)
     const wWin = window.innerWidth;
     if (wWin > 767) {
+      // Compute available width for both panes (window width minus gutter)
       const maxTotal = wWin - GUTTER_W;
+
       if (_secTree.length > 0) {
+        // Dual-nav mode: both primary and secondary panes are shown
         const total = nPri + nSec;
+
         if (total > maxTotal) {
-          // compute proportional sizes
+          // Panes exceed available space: compute proportional sizes
           const ratio = nPri / total;
           let nPri = Math.floor(maxTotal * ratio);
           let nSec = maxTotal - nPri;
 
-          // enforce minimum on either one
+          // Enforce minimum width for each pane
           if (nPri < MIN_W) {
             nPri = MIN_W;
             nSec = maxTotal - nPri;
@@ -539,10 +633,13 @@ File Names: doxy-plus.*
             nPri = maxTotal - nSec;
           }
         }
+
+        // Apply the (possibly adjusted) widths
         setDualPriNavWidth(nPri);
         setDualSecNavWidth(nSec);
       }
       else {
+        // Single-pane mode: only primary nav is used
         if (nPri > maxTotal) {
           nPri = maxTotal;
         }
@@ -553,25 +650,33 @@ File Names: doxy-plus.*
   }
 
   function dualNavResizer(resizerId, getW) {
+    // Initialize drag-to-resize behavior for dual-nav panes.
+    // If called without an ID, sets up both primary and secondary resizers.
+    // When dragging, adjusts pane widths while enforcing min/max constraints
+    // and calls checkDualNavLayout to apply proportional adjustments.
 
-    // no args? wire both and return
+    // No specific resizer ID: wire both primary and secondary resizers
     if (!resizerId) {
       dualNavResizer('dp-pri-nav-resizer', () => _wPri);
       dualNavResizer('dp-sec-nav-resizer', () => _wSec);
       return;
     }
 
+    // Calculate maximum combined width available for both panes
     const maxTotal = () => window.innerWidth - GUTTER_W;
     const resizer = document.getElementById(resizerId);
     let startX = 0, startW = 0, raf = null;
 
+    // Handle pointer move: compute new width for the active pane
     function onMove(ev) {
       ev.preventDefault();
       if (raf) return;
       raf = requestAnimationFrame(() => {
         let newW = startW + (ev.clientX - startX);
         if (resizerId === 'dp-sec-nav-resizer') {
+          // Resizing secondary pane
           if (newW < MIN_W) {
+            // Enforce minimum width, shift overflow to primary pane
             const over = MIN_W - newW;
             const secNew = MIN_W;
             const priNew = Math.max(MIN_W, _wPri - over);
@@ -582,6 +687,7 @@ File Names: doxy-plus.*
             }
           }
           else {
+            // Cap secondary width to remaining space
             if (newW > (maxTotal() - _wPri))
               newW = maxTotal() - _wPri;
             if (newW != _wSec) {
@@ -590,7 +696,9 @@ File Names: doxy-plus.*
           }
         }
         else {
+          // Resizing primary pane
           if (_secTree.length > 0) {
+            // Both panes shown: adjust both panes proportionally
             newW = Math.max(MIN_W, Math.min(maxTotal() - MIN_W, newW));
             if (newW != _wPri) {
               let newSec = _wSec;
@@ -609,6 +717,7 @@ File Names: doxy-plus.*
             }
           }
           else {
+            // Single-pane: only enforce primary width limits
             newW = Math.max(MIN_W, Math.min(maxTotal(), newW));
             if (newW != _wPri) {
               checkDualNavLayout(newW, _wSec);
@@ -619,6 +728,7 @@ File Names: doxy-plus.*
       });
     }
 
+    // End drag: remove cursor style and listeners
     function onUp(evtUp) {
       evtUp.preventDefault();
       document.body.style.cursor = '';
@@ -628,6 +738,7 @@ File Names: doxy-plus.*
       document.removeEventListener('pointercancel', onUp);
     }
 
+    // Attach pointerdown to start drag-resize
     resizer.addEventListener('pointerdown', evtDown => {
       evtDown.preventDefault();
       //resizer.setPointerCapture(evtDown.pointerId);
@@ -641,9 +752,16 @@ File Names: doxy-plus.*
   }
 
   function dualNavInit() {
+    // Initialize dual-navigation layout
+
+    // Apply saved pane widths to CSS variables.
     document.documentElement.style.setProperty('--dp-pri-width', `${_wPri}px`);
     document.documentElement.style.setProperty('--dp-sec-width', `${_wSec}px`);
+
+    // Set up drag-resize handlers for both nav panes.
     dualNavResizer();
+
+    // Recalculate layout on window resize.
     window.addEventListener('resize', () => { checkDualNavLayout(); });
   }
 
@@ -654,8 +772,14 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function genDefTree() {
+    // Generate a deep clone of the default Doxygen NAVTREE:
+    // 1. Wait until window.NAVTREE[0][2] is defined and non-empty (timeout after TIMEOUT_MS).
+    // 2. Recursively clone the tree structure into a new array.
+    // 3. Dynamically load any external JS files for deferred child nodes.
+    // 4. Recursively attach those loaded children.
+    // 5. Return the fully expanded tree array, or null on timeout.
 
-    // wait until NAVTREE[0][2] exists and is a non-empty array
+    // Wait for NAVTREE[0][2]
     const start = performance.now();
     while (
       !window.NAVTREE ||
@@ -674,6 +798,7 @@ File Names: doxy-plus.*
       await new Promise(requestAnimationFrame);
     }
 
+    // Makes a deep copy of [name, href, kids] tuples for tree
     function cloneTree(tree) {
       return tree.map(([name, href, kids]) => {
         const clonedKids = Array.isArray(kids) ? cloneTree(kids) : kids;
@@ -681,6 +806,7 @@ File Names: doxy-plus.*
       });
     }
 
+    // Inserts a <script> tag to load a JS file and resolves when loaded
     function loadScript(relUrl) {
       return new Promise((res, rej) => {
         const fullUrl = new URL(relUrl, DOC_ROOT).href; // build an absolute URL from a relative path and a base root.
@@ -691,11 +817,13 @@ File Names: doxy-plus.*
       });
     }
 
+    // Walks the cloned tree, loads deferred children, and replaces string refs
     function loadChildren(tree) {
       const promises = [];
       tree.forEach(node => {
         const c = node[2];
         if (typeof c === 'string') {
+          // c is a script base name: load it then replace node[2] with the loaded array
           promises.push(
             loadScript(c + '.js')
               .then(() => {
@@ -707,13 +835,14 @@ File Names: doxy-plus.*
               .catch(() => { node[2] = []; })
           );
         } else if (Array.isArray(c)) {
+          // Already an array: recurse
           promises.push(loadChildren(c));
         }
       });
       return Promise.all(promises);
     }
 
-    // clone the default tree, load children, and return it
+    // Perform clone, load all children, then return the result
     const defTree = cloneTree(window.NAVTREE[0][2]);
     await loadChildren(defTree);
     //console.log('Gen Def Tree: SUCCESS');
@@ -727,23 +856,32 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function genPriTree() {
+    // Build or reload the primary navigation tree (_priTree) for Doxy-Plus:
+    // 1. Clear existing _priTree but keep the array reference.
+    // 2. If the Doxygen generation timestamp matches the last saved, load cached tree and indentation flag.
+    // 3. Otherwise, generate a fresh tree by:
+    //    a. Fetching the complete default NAVTREE via genDefTree().
+    //    b. Locating key sections (Namespaces, Globals, Concepts, Classes, Files).
+    //    c. Flattening and pruning each section into [label, href, null] entries.
+    //    d. Appending these sections to _priTree in a logical order.
+    // 4. Save the new tree and indentation flag back to storage for future reuse.
 
-    // setting the two array's lengths as 0 so that it is reinitialized
-    // while maintaining previous links
+    // Reset _priTree while retaining its reference (i.e. previous links)
+    // done by setting its length to 0
     _priTree.length = 0;
 
-    // read the previous stored doxygen time (returns null if nothing was stored)
+    // Read the previous stored doxygen time (returns null if nothing was stored)
     const prvDoxyTime = load(KEY__GEN_DATA);
 
-    // read the stored arrays if current time is same as previous time
+    // Attempt to load from cache if the generation timestamp hasn't changed
     if (prvDoxyTime != null && prvDoxyTime === window.DOXY_PLUS_DATE_TIME) {
       const priTree = load(KEY__PRI_TREE);
       if (priTree != null && Array.isArray(priTree) && priTree.length > 0) {
-        // assign the primary tree
+        // Restore cached tree and indentation state
         _priTree.push(...priTree);
         _priTreeIndented = load(KEY__PRI_TREE_INDENTED, false);
 
-        // saving so that expiry time is updated
+        // Saving so that expiry timestamp is updated to a new value
         save(KEY__GEN_DATA, window.DOXY_PLUS_DATE_TIME);
         save(KEY__PRI_TREE, _priTree);
         save(KEY__PRI_TREE_INDENTED, _priTreeIndented);
@@ -755,11 +893,11 @@ File Names: doxy-plus.*
       }
     }
 
-    // flatAndPrune(tree, sep = '', filters = [])
-    // Flattens a nested [name, path, kids] tree into a flat array of [prefixedName, path, null] entries.
-    // Drops any node whose path contains “#”.
-    // If `filters` is non-empty, only keeps nodes whose filename starts with one of the filter strings.
-    // Returns null if no nodes survive.
+    // Flattens a nested [name, path, kids] tree into a flat 
+    // array of [prefixedName, path, null] entries. Drops any 
+    // node whose path contains “#”. If `filters` is non-empty, 
+    // only keeps nodes whose filename starts with one of the 
+    // filter strings. Returns null if no nodes survive.
     function flatAndPrune(tree, sep = '', filters = []) {
 
       const result = [];
@@ -793,6 +931,7 @@ File Names: doxy-plus.*
       return result;
     }
 
+    // Traverse a cloned default tree by a sequence of section names
     function findNodeByNameList(tree, ...nameList) {
       if (!Array.isArray(tree) || nameList.length === 0) return null;
       let level = tree;
@@ -805,13 +944,14 @@ File Names: doxy-plus.*
       return node;
     }
 
-    // get the default NAVTREE
+    // Obtain the full default Doxygen NAVTREE
     const defTree = await genDefTree();
     if (!Array.isArray(defTree) || defTree.length === 0) {
       console.warn('Gen Pri Tree: Default tree returned by "genDefTree" is either not an array or is empty');
       return;
     }
 
+    // Process the Namespaces -> Namespace List
     const nsListNode = findNodeByNameList(defTree, 'Namespaces', 'Namespace List');
     if (nsListNode) {
       const [, href, kids] = nsListNode;
@@ -823,6 +963,7 @@ File Names: doxy-plus.*
       }
     }
 
+    // Process the Namespaces -> Namespace Members
     const nsMemNode = findNodeByNameList(defTree, 'Namespaces', 'Namespace Members');
     if (nsMemNode) {
       const [, href, kids] = nsMemNode;
@@ -847,6 +988,7 @@ File Names: doxy-plus.*
       }
     }
 
+    // Process Concepts
     const conceptsNode = findNodeByNameList(defTree, 'Concepts');
     if (conceptsNode) {
       const [, href, kids] = conceptsNode;
@@ -856,6 +998,8 @@ File Names: doxy-plus.*
       }
     }
 
+    // Process Classes -> Class List. If there are classes added then it sets
+    // classListInserted flag to true.
     let classListInserted = false;
     const classListNode = findNodeByNameList(defTree, 'Classes', 'Class List');
     if (classListNode) {
@@ -867,7 +1011,10 @@ File Names: doxy-plus.*
       }
     }
 
+    // If Classes are added then add 'Class Hierarchy' and 'Class Index' pages
     if (classListInserted) {
+
+      // Adding 'Class Hierarchy' page to Classes Node
       const classHierarchyNode = findNodeByNameList(defTree, 'Classes', 'Class Hierarchy');
       if (classHierarchyNode) {
         const [, href, kids] = classHierarchyNode;
@@ -876,6 +1023,7 @@ File Names: doxy-plus.*
         }
       }
 
+      // Adding 'Class Index' page to Classes Node
       const classIndexNode = findNodeByNameList(defTree, 'Classes', 'Class Index');
       if (classIndexNode) {
         const [, href, kids] = classIndexNode;
@@ -885,6 +1033,7 @@ File Names: doxy-plus.*
       }
     }
 
+    // Process Classes -> Class Members
     const classMembersNode = findNodeByNameList(defTree, 'Classes', 'Class Members');
     if (classMembersNode) {
       const [, href, kids] = classMembersNode;
@@ -909,6 +1058,7 @@ File Names: doxy-plus.*
       }
     }
 
+    // Process Files -> Files List
     const filesNode = findNodeByNameList(defTree, 'Files', 'File List');
     if (filesNode) {
       const [, href, kids] = filesNode;
@@ -918,51 +1068,10 @@ File Names: doxy-plus.*
       }
     }
 
-
-    _priTree.push(['Ind A', null, null]);
-    _priTree.push(['Ind B', null, null]);
-
-    _priTree.push([
-      'Level 0',
-      null,
-      [
-        [  // ← child-array starts here
-          'Level 1',
-          null,
-          [
-            ['Level A', null, null],
-            ['Level B', null, null],
-            ['Level C', null, null],
-            [
-              'Level 2',
-              null,
-              [
-                ['Level x', null, null],
-                [
-                  'Level 3',
-                  null,
-                  [
-                    [
-                      'Level 4',
-                      null,
-                      [
-                        ['Level 5', null, null]
-                      ]
-                    ]
-                  ]
-                ]
-              ]
-            ]
-          ]
-        ]  // ← end of children of Level 0
-      ]
-    ]);
-
-    _priTree.push(['Ind C', null, null]);
-
-
+    // Compute whether indentation is needed
     _priTreeIndented = isTreeIndented(_priTree);
 
+    // Save the new data
     save(KEY__GEN_DATA, window.DOXY_PLUS_DATE_TIME);
     save(KEY__PRI_TREE, _priTree);
     save(KEY__PRI_TREE_INDENTED, _priTreeIndented);
@@ -977,22 +1086,38 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function genSecTree() {
+    // Build the secondary navigation tree (_secTree) for member declarations on class/struct pages:
+    // 1. Reset _secTree and remarks.
+    // 2. If the current page isn’t a class or struct, note and exit.
+    // 3. Wait for the main content container to appear.
+    // 4. Select all member declaration tables.
+    // 5. For each table:
+    //    a. Determine the group header text and anchor href.
+    //    b. Scan each row for unique member links, skipping documentation cells.
+    //    c. Format the signature text for consistency.
+    //    d. Collect [name, href, null] entries.
+    // 6. Push non-empty groups into _secTree.
+    // 7. If any groups were added, activate the secondary nav and record success; otherwise record no-members.
 
+    // Clear previous tree and remarks
     _secTree.length = 0;
     _secTreeRemarks = '';
 
+    // Only proceed on class/struct pages
     if (!IS_CLASS_OR_STRUCT_PAGE) {
       _secTreeRemarks = 'Not a Class or Struct Page';
       //console.log('Gen Sec Tree: Not a Class or Struct Page');
       return;
     }
 
+    // Wait for the main content container
     const contents = await waitFor('div.contents, div.content, main');
     if (!contents) {
       console.error('Gen Sec Tree: wait for "div.contents, div.content, main" timed out, not found');
       return;
     }
 
+    // Locate all member declaration tables
     const tables = Array.from(contents.querySelectorAll("table.memberdecls"));
     if (tables.length === 0) {
       _secTreeRemarks = 'Empty "table.memberdecls" element array';
@@ -1000,12 +1125,14 @@ File Names: doxy-plus.*
       return;
     }
 
+    // Helper: clean up C++ style signatures
     function formatSignature(text) {
       if (typeof text !== 'string') return text;
 
       return text
         // Remove space before *, &, &&
         .replace(/\s+([*&]{1,2})/g, '$1')
+
         // Ensure space after *, &, &&
         .replace(/([*&]{1,2})(?!\s)/g, '$1 ')
 
@@ -1041,19 +1168,21 @@ File Names: doxy-plus.*
         .trim();
     }
 
+    // Process each member table
     const headers = Array.from(contents.querySelectorAll("h2.groupheader"));
     tables.forEach((table, idx) => {
       const grpSigs = [];
       const seenName = new Set();
       const seenHref = new Set();
 
+      // Determine header text and anchor
       const headName = headers[idx]?.textContent.trim() || `Members ${idx + 1}`;
-
       const headerEl = headers[idx];
       const anchorEl = headerEl.querySelector("a[id], a[name]");
       const anchorId = anchorEl?.getAttribute("id") || anchorEl?.getAttribute("name") || null;
       const headHref = anchorId ? `#${anchorId}` : null;
 
+      // Extract unique member links and format them
       table.querySelectorAll("a[href^='#']").forEach(a => {
         if (a.closest("div.memdoc") || a.closest("td.mdescRight")) return;
 
@@ -1088,11 +1217,13 @@ File Names: doxy-plus.*
         grpSigs.push([leafName, leafHref, null]);
       });
 
+      // Add this group if it has entries
       if (grpSigs.length > 0) {
         _secTree.push([headName, headHref, grpSigs]);
       }
     });
 
+    // Activate nav or record empty result
     if (_secTree.length > 0) {
       document.body.setAttribute('dp-sec-nav-active', 'true');
       _secTreeRemarks = 'Successfully generated member signatures';
@@ -1111,22 +1242,17 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   function checkReload() {
+    // Check for a saved URL and redirect to it if it matches an entry in the primary tree on a fresh load.
 
-    // Guard #1: only on a truly “fresh” tab
+    // Guard #1: only proceed on a truly fresh tab (not after reload/back/forward)
     const isFresh = (sessionStorage.getItem('is_fresh') !== 'true');
     sessionStorage.setItem('is_fresh', 'true');
-    if (!isFresh) {
-      //console.log('Check Reload: Not Fresh');
-      return;
-    }
+    if (!isFresh) return; // Not a fresh load: skip redirect check
 
-    // Guard #2: we must have a populated tree
-    if (!Array.isArray(_priTree) || !_priTree.length) {
-      //console.log('Check Reload: _PriTree EMPTY');
-      return;
-    }
+    // Guard #2: primary tree data must be available
+    if (!Array.isArray(_priTree) || !_priTree.length) return; // No tree data: skip redirect
 
-    // Guard #3: skip reload/back/forward
+    // Guard #3: only on standard navigation (ignore reloads and history traversals)
     let navType = 'navigate';
     const [navEntry] = performance.getEntriesByType('navigation');
     if (navEntry) {
@@ -1135,29 +1261,23 @@ File Names: doxy-plus.*
       // fallback for older browsers (deprecated API)
       navType = performance.navigation.type === 1 ? 'reload' : 'navigate';
     }
-    if (navType !== 'navigate') return;
+    if (navType !== 'navigate') return; // Reload or back/forward: skip redirect
 
     // Guard #4: storedUrl must exist and start with DOC_ROOT
     const storedUrl = load(KEY__PREV_URL);
-    if (!storedUrl || !storedUrl.startsWith(DOC_ROOT)) {
-      //console.log(`Check Reload: Store URL ${storedUrl}`);
-      return;
-    }
+    if (!storedUrl || !storedUrl.startsWith(DOC_ROOT)) return; // Missing or external URL: skip redirect
 
-    // Guard #5: only run on your actual landing page
+    // Guard #5: only run on landing page (root or index.html)
     const { pathname } = new URL(window.location.href);
     const isLanding = pathname.endsWith('/') || pathname.endsWith('/index.html');
-    if (!isLanding) {
-      //console.log(`Check Reload: Landing Page ${pathname}`);
-      return;
-    }
+    if (!isLanding) return; // Not on landing page: skip redirect
 
-    // Finally: walk the tree and redirect
+    // Traverse the tree to find a matching HTML page in the stored URL
     const stack = [..._priTree];
     while (stack.length) {
       const [, href, kids] = stack.pop();
       if (typeof href === 'string' && IS_HTML_END.test(href) && storedUrl.includes(href)) {
-        window.location.assign(storedUrl);
+        window.location.assign(storedUrl); // Redirect on first match
         return;  // stop after first match
       }
       if (Array.isArray(kids) && kids.length) {
@@ -1166,7 +1286,7 @@ File Names: doxy-plus.*
     }
   }
 
-  // Keep our “previous URL” up to date
+  // Keep the “previous URL” up to date for future reload checks
   window.addEventListener('beforeunload', () => {
     save(KEY__PREV_URL, window.location.href);
   });
@@ -1178,9 +1298,14 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function setupResizeObservers() {
+    // Clones the header of the doc-content section and attaches it above it so that scrolling the doc-content
+    // does not make its header disappear (the default behaviour).
+    // Looks for the size changes in the required elements and updates those values in the doxy-plus.css file
 
+    // Wait for all required elements: top bar, side-nav, breadcrumb/nav-path, and doc-content.
     const [top, nav, btm, doc] = await Promise.all([waitFor('#top'), waitFor('#side-nav'), waitFor('#nav-path'), waitFor('#doc-content')]);
 
+    // Clone the header inside #doc-content and insert it above so it stays visible on scroll.
     let cln = null;
     if (doc && doc.parentElement) {
       const header = document.querySelector('#doc-content .header');
@@ -1191,22 +1316,26 @@ File Names: doxy-plus.*
       }
     }
 
+    // If none of the observed elements exist (including the cloned header), do nothing.
     if (!top && !nav && !btm && !cln) return;
 
+    // Single ResizeObserver to update CSS vars when these elements resize.
     const ro = new ResizeObserver(entries => {
       for (const { target, contentRect } of entries) {
         if (target === top) {
-          document.documentElement.style.setProperty('--dp-top-height', `${contentRect.height + 1}px`);
+          document.documentElement.style.setProperty('--dp-top-height', `${contentRect.height + 1}px`); // Update top bar height (+1px for border).
         } else if (target === nav) {
-          document.documentElement.style.setProperty('--dp-nav-width', `${contentRect.width}px`);
+          document.documentElement.style.setProperty('--dp-nav-width', `${contentRect.width}px`); // Update side-nav width.
         } else if (target === btm) {
-          document.documentElement.style.setProperty('--dp-bottom-height', `${contentRect.height + 1}px`);
+          document.documentElement.style.setProperty('--dp-bottom-height', `${contentRect.height + 1}px`); // Update nav-path (breadcrumb) height (+1px for border).
         } else if (target === cln) {
-          document.documentElement.style.setProperty('--dp-doc-header-height', `${contentRect.height + 1}px`);
+          document.documentElement.style.setProperty('--dp-doc-header-height', `${contentRect.height + 1}px`); // Update cloned doc-content header height (+1px for border).
         }
       }
     });
 
+    // start observing, this will trigger the first update soon after and will automatically
+    // update the values, so no need to fire it once in the beginning manually.
     if (top) ro.observe(top);
     if (nav) ro.observe(nav);
     if (btm) ro.observe(btm);
@@ -1214,6 +1343,9 @@ File Names: doxy-plus.*
   }
 
   async function searchResultWindowObserver() {
+    // Syncs the search results window position and width to match the search bar when shown.
+
+    // Wait for the search results window element (always in DOM but hidden until a search runs).
     const sWin = await waitFor('#MSearchResultsWindow');
     if (!sWin) {
       console.error('Search Result Window Observer: wait for "#MSearchResultsWindow" timed out, not found');
@@ -1221,34 +1353,49 @@ File Names: doxy-plus.*
     }
 
     async function syncSize() {
+      // Align the search results window's left position and width to the active search box.
+
+      // Choose which search box container is active:
+      // 'searchBoxPos1' for mobile (<768px) and 'searchBoxPos2' for desktop (>=768px).
       const parentId = window.innerWidth < 768 ? 'searchBoxPos1' : 'searchBoxPos2';
+
+      // Get the search box element inside that container.
       const sBox = await waitFor(`#${parentId} #MSearchBox`);
       if (!sBox) return;
+
+      // Measure the search box's left offset and width.
       const { left, width } = sBox.getBoundingClientRect();
+
+      // Apply the measured left and width to the persistent search results window.
       sWin.style.setProperty('left', `${left}px`, 'important');
       sWin.style.setProperty('width', `${width}px`, 'important');
       //console.log(`Search Result Window Observer - Sync Size: Set size X=${left}px & W=${width}px`);
     }
 
+    // Track whether the results window is currently displayed,
+    // so we only sync once when it opens.
     let isDisplayed = getComputedStyle(sWin).display === 'block';
 
+    // Observe style changes on the search results window to detect show/hide.
     const mo = new MutationObserver(records => {
       // only look for transitions into display:block
       for (const rec of records) {
+        // Only handle style attribute mutations.
         if (rec.attributeName !== 'style') continue;
         const nowDisplay = getComputedStyle(sWin).display === 'block';
         if (!isDisplayed && nowDisplay) {
-          // just opened
+          // Window just shown: sync size.
           isDisplayed = true;
           syncSize();
         } else if (isDisplayed && !nowDisplay) {
-          // just closed
+          // Window just hidden: update state.
           isDisplayed = false;
         }
         // otherwise ignore
       }
     });
 
+    // Begin observing style mutations on the search results window.
     mo.observe(sWin, { attributes: true, attributeFilter: ['style'] });
   }
 

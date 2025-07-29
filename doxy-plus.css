@@ -3,28 +3,32 @@ Prefix: dp-
 File Names: doxy-plus.*
 */
 
+/* Variable names starting with --dp- are Doxy-Plus variables */
+
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* CUSTOM ORIGINAL VALUES */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
 :root {
-  --dp-border-radius: 6px;
-  --dp-search-field: "All:";
+  --dp-border-radius: 6px; /* Border radius for search box and the two buttons next to it */
+  --dp-search-field: "All:"; /* Search field selection label text, replaces the default magnifier icon */
 
-  --dp-pri-width: 0px;
-  --dp-sec-width: 0px;
-  --dp-nav-width: 0px;
+  --dp-pri-width: 0px; /* Width of the primary nav pane in dual-nav mode */
+  --dp-sec-width: 0px; /* Width of the secondary nav pane in dual-nav mode */
+  --dp-nav-width: 0px; /* Width of the default doxygen side-nav */
 
-  --dp-top-height: 0px;
-  --dp-bottom-height: 0px;
-  --dp-doc-header-height: 0px;
+  --dp-top-height: 0px; /* Height of the top header including its bottom border */
+  --dp-bottom-height: 0px; /* Height of the footer including its top border */
+  --dp-doc-header-height: 0px; /* Height of the doc-content header including its bottom border */
 
-  --dp-doc-margin-left: var(--dp-nav-width); /* default */
+  --dp-doc-margin-left: var(--dp-nav-width); /* Margin on the left of doc-content for sidebars, defaults to side-nav width */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* CUSTOM AND MODIFIED VALUES */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* Modified and Original values for default html */
 html {
   --page-background-color: rgb(255, 255, 255) !important;
   --separator-color: rgb(230, 230, 230) !important;
@@ -44,6 +48,7 @@ html {
   --memtitle-font-size: 16px !important;
 }
 
+/* Font sizes for mobile view */
 @media screen and (max-width: 767px) {
   html {
     --page-font-size: 13px !important;
@@ -55,6 +60,7 @@ html {
   }
 }
 
+/* Different values for dark mode in html */
 html.dark-mode {
   --page-background-color: rgb(13, 17, 23) !important;
   --separator-color: rgb(25, 30, 40) !important;
@@ -90,14 +96,19 @@ body {
 /* DOC MARGIN LEFT */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* Override if only primary pane of dual-nav is active */
 body[dp-dual-nav-active="true"] {
-  --dp-doc-margin-left: var(--dp-pri-width); /* override if only primary nav */
+  --dp-doc-margin-left: var(--dp-pri-width);
 }
 
+/* Override if both primary pane and secondary pane of dual-nav are active */
 body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] {
-  --dp-doc-margin-left: calc(var(--dp-pri-width) + var(--dp-sec-width)); /* override if dual */
+  --dp-doc-margin-left: calc(var(--dp-pri-width) + var(--dp-sec-width));
 }
 
+/* If dual-nav is not active then left margin falls back to side-nav width assigned when '--dp-doc-margin-left' was declared in :root{...} */
+
+/* Zero left margin for mobile view */
 @media screen and (max-width: 767px) {
   body {
     --dp-doc-margin-left: 0px !important; /* force zero for small screens */
@@ -170,19 +181,23 @@ div.contents .toc,
 /* HEADER AND FOOTER CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* Combined section of Project Name + Project Brief on top left next to Project Logo */
 #projectalign {
   padding: 0px !important;
   padding-left: 3px !important;
 }
 
+/* Combined section of Project Logo + Project Name + Project Brief on top left */
 #titlearea {
   padding: 5px !important;
 }
 
+/* Project Name of top left next to Project Logo */
 #projectname {
   padding-bottom: 0px !important;
 }
 
+/* Project Brief description just below Project Name on top left next to Project Logo */
 #projectbrief {
   line-height: 13px;
   font-size: 12px !important;
@@ -190,10 +205,18 @@ div.contents .toc,
   font-style: italic !important;
 }
 
+/* 
+  Top Header: Title Area + Main Nav + Search Bar Area
+  It already has a bottom border, we reassign to change its color 
+*/
 #top {
   border-bottom: 1px solid var(--dp-highlight-color);
 }
 
+/* 
+  Bottom Footer
+  It already has a top border, we reassign to change its color 
+*/
 #nav-path > ul {
   border-top: 1px solid var(--dp-highlight-color);
 }
@@ -202,7 +225,7 @@ div.contents .toc,
 /* MAIN-NAV AND SEARCH CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* change padding on main-nav */
+/* Change padding on main-nav */
 #main-nav {
   padding-top: 5px !important;
   padding-bottom: 5px !important;
@@ -210,74 +233,112 @@ div.contents .toc,
   padding-right: 5px !important;
 }
 
-/* for smaller screen we remove top padding */
+/* For smaller screen we remove top padding */
 @media screen and (max-width: 943px) {
   #main-nav {
     padding-top: 0px !important;
   }
 }
 
-/* search box looks like a rounded square after this */
+/* Changing appearence of Search Box */
 #MSearchBox {
   border-radius: var(--dp-border-radius) !important;
   border: none !important;
   background: var(--dp-button-color) !important;
 }
 
-/* change the color on hover for search box */
+/* Change the color on hover for search box */
 #MSearchBox:hover {
   background: var(--dp-button-hover-color) !important;
 }
 
-/* for larger screen width when seachBoxPos2 is visible */
+/* 
+  Doxygen uses two search boxes for responsive design:
+    - #searchBoxPos1: active when screen width is less than 768px (mobile view)
+    - #searchBoxPos2: active when screen width is 768px or more (desktop view)
+
+  On desktop, #searchBoxPos2 is positioned with the main navigation
+  and header buttons, laid out horizontally. 
+  We modify #searchBoxPos2 and the search box inside it to achieve
+  improved alignment and spacing in the header.
+
+  Note: Keep these selectors updated if Doxygen template changes.
+*/
 @media screen and (min-width: 768px) {
-  /* turn the UL into a flex container */
+  /* 
+    #main-menu contains main-nav items and #searchBoxPos2.
+    We convert the UL into a flex container to enable a horizontal layout.
+  */
   #main-menu {
     display: flex !important;
-    flex-wrap: nowrap;
-    align-items: center;
+    flex-wrap: nowrap; /* Prevents menu items from wrapping onto new lines */
+    align-items: center; /* Vertically aligns children */
   }
 
-  /* clear out the old floats */
+  /* Remove floats from menu items to avoid layout conflicts with flex. */
   #main-menu > li {
     float: none !important;
   }
 
-  /* make the search-LI a flex container AND the one that fills the gap */
+  /*
+    Make #searchBoxPos2 (the LI) a flex container.
+    This element will expand to fill remaining space in #main-menu,
+    ensuring the search box is right-aligned with other header buttons.
+  */
   #searchBoxPos2 {
     display: flex !important;
-    flex: 1 1 auto !important; /* this LI takes up remaining space */
+    flex: 1 1 auto !important; /* Fills leftover space */
     align-items: center; /* vertically center its children */
-    justify-content: flex-end !important;
+    justify-content: flex-end !important; /* Align its children to the right */
   }
 
-  /* now only the MSearchBox inside that LI grows */
+  /*
+    Only #MSearchBox inside #searchBoxPos2 should expand to fill available width.
+    All other elements (like buttons/icons) retain their intrinsic size.
+    max-width sets a reasonable upper limit for readability.
+  */
   #searchBoxPos2 > #MSearchBox {
-    flex: 1 1 auto !important; /* fill all free space inside the LI */
-    min-width: 0; /* allow it to shrink if needed */
+    flex: 1 1 auto !important; /* Fill all free space inside the LI */
+    min-width: 0; /* Allows shrinking if necessary */
     box-sizing: border-box;
-    max-width: 400px !important;
+    max-width: 400px !important; /* Prevents search box from growing too wide */
   }
 
-  /* keep the other two child elements at their intrinsic size */
+  /* 
+    Ensure all other children of #searchBoxPos2 keep their original size.
+    (Prevents, for example, buttons from stretching.)
+  */
   #searchBoxPos2 > *:not(#MSearchBox) {
     flex: 0 0 auto !important;
   }
 
-  /* ensure the input itself uses all of its parent’s width */
+  /*
+    Make sure the <input> field inside #MSearchBox always fills 100% width
+    of its container, preventing overflow or awkward gaps.
+  */
   #searchBoxPos2 #MSearchBox input {
     width: 100% !important;
     box-sizing: border-box;
   }
 }
 
-/* make the search box itself use flex container */
+/*
+  The following applies to both search boxes (mobile and desktop):
+
+  #MSearchBox is the container for the entire search bar.
+  Set it as a flex container to align and size its child elements.
+*/
 #MSearchBox {
   display: flex;
-  align-items: stretch; /* make children fill its height */
+  align-items: stretch; /* Make children fill the container height */
 }
 
-/* search box is divided into left (icon + text) and right (close button) */
+/* 
+  The search box contains two main sections:
+    - .left  : icon + text input
+    - .right : close ("x") button
+  These styles reset vertical alignment and spacing.
+*/
 #MSearchBox span.left,
 #MSearchBox span.right {
   height: 100% !important;
@@ -287,32 +348,46 @@ div.contents .toc,
   width: auto !important;
 }
 
-/* LEFT SIDE (icon + input) */
+/* 
+  LEFT SIDE: contains the magnifier icon (or custom icon) and input field.
+  Make .left a flex container so icon and input are vertically centered.
+  Allow .left to grow and shrink as needed, but not overflow the header.
+  The max-width calculation accounts for: 3px gap + 16px icon + 5px margin-right.
+*/
 #MSearchBox > .left {
   display: flex;
-  align-items: center; /* center icon & input vertically */
-  flex: 1 1 auto; /* allow this span to grow/shrink */
-  min-width: 0; /* allow its child (the input) to shrink below content-size */
-  max-width: calc(100% - 24px); /* 16px wide icon, 5px margin on right of it and we leave 3px space before */
+  align-items: center; /* Vertically center icon and input */
+  flex: 1 1 auto; /* Allow span to grow/shrink */
+  min-width: 0; /* Allows input to shrink if needed */
+  max-width: calc(100% - 24px); /* 24px = 3px gap + 16px icon + 5px margin-right; Prevents overflow; adjust if layout changes */
 }
 
-/* the input flexes to fill the .left span */
+/*
+  Make the input field fill its flex parent (.left), growing or shrinking as needed.
+  width: auto prevents browser defaults from conflicting with flex sizing.
+*/
 #MSearchField {
-  flex: 1 1 auto; /* grow & shrink */
-  min-width: 0; /* prevent overflowing its flex container */
-  height: 100%; /* match the box height */
-  box-sizing: border-box; /* include any padding/border in that height/width */
-  width: auto; /* override any UA default */
+  flex: 1 1 auto; /* Input grows and shrinks with parent */
+  min-width: 0; /* Prevents overflow */
+  height: 100%; /* Match parent's height */
+  box-sizing: border-box; /* Include padding/border in height/width */
+  width: auto; /* Override UA default */
 }
 
-/* RIGHT SIDE (close button) stays just as big as its contents */
+/*
+  RIGHT SIDE: contains the close button ("x").
+  Keep .right only as big as its content.
+*/
 #MSearchBox > .right {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
 }
 
-/* make the close-<img> fill its parent’s height */
+/*
+  Make the close button image always square and fill its parent vertically.
+  (If using an SVG instead, update width/height as needed.)
+*/
 #MSearchCloseImg {
   width: 16px !important;
   height: 16px !important;
@@ -320,7 +395,11 @@ div.contents .toc,
   padding: 0px !important;
 }
 
-/* remove the magnifier icon and we add text using ::before and ::after */
+/*
+  #MSearchSelect is the dropdown for choosing the search scope or context.
+  Remove the default magnifier icon; instead, display custom content using ::before/::after.
+  (Requires CSS variable --dp-search-field for dynamic label text.)
+*/
 #MSearchSelect {
   color: var(--dp-search-select-text-color) !important;
   display: inline-flex;
@@ -333,16 +412,22 @@ div.contents .toc,
   align-items: center !important;
   margin-left: 0.35em !important;
   margin-right: 0.25em !important;
-  line-height: 1.2 !important;
+  line-height: 1.2 !important; /* Slightly increased for better alignment */
 }
 
-/* add drop down indicator using ::before */
+/* 
+  Add a dropdown indicator (▼) before the search selector text.
+  Change the symbol for a different icon.
+*/
 #MSearchSelect::before {
   content: "▼";
   font-size: 0.7em;
 }
 
-/* add text using ::after */
+/*
+  Add the current search context or field label after the dropdown indicator.
+  The label text is provided via CSS variable --dp-search-field.
+*/
 #MSearchSelect::after {
   content: var(--dp-search-field);
   font-size: 0.9em;
@@ -352,96 +437,150 @@ div.contents .toc,
 /* DARK MODE TOGGLE BUTTON CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* 
+  Styles for the dark mode toggle button in Doxygen Awesome theme.
+
+  - Uses custom CSS variables for border radius and colors,
+    allowing for easy theme customization and consistency.
+  - Ensures button looks rounded and uses the correct background color,
+    including on hover.
+
+  Note: doxygen-awesome-dark-mode-toggle is a custom element, 
+  not a class or ID selector.
+*/
+
 doxygen-awesome-dark-mode-toggle {
-  border-radius: var(--dp-border-radius) !important;
-  background-color: var(--dp-button-color) !important;
+  border-radius: var(--dp-border-radius) !important; /* Rounded corners for the toggle button */
+  background-color: var(--dp-button-color) !important; /* Button background (normal state) */
 }
 
 doxygen-awesome-dark-mode-toggle:hover {
-  background: var(--dp-button-hover-color) !important;
+  background: var(--dp-button-hover-color) !important; /* Background color on hover */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DUAL SIDEBAR BUTTON CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* 
+  Styles for the sidebar toggle button (.dp-sidebar-toggle-btn) 
+  placed inside #searchBoxPos2 in the main navigation.
+
+  - Ensures button is sized and aligned to match the searchbar and navigation.
+  - Uses CSS variables for easy customization (spacing, height, colors, border radius).
+  - Designed to blend with other controls and respond visually on hover.
+*/
+
 #main-nav #searchBoxPos2 .dp-sidebar-toggle-btn {
-  display: inline-flex; /* same as their flex container */
-  margin-left: 5px !important; /* same left‐gap (replace by var(--spacing-small) if needed) */
-  padding: 0; /* no extra padding */
-  width: var(--searchbar-height) !important; /* 24px (by default) */
-  height: var(--searchbar-height) !important; /* 24px */
-  background: var(--dp-button-color);
-  border: none;
-  border-radius: var(--dp-border-radius) !important; /* make it a perfect circle */
-  vertical-align: middle;
-  text-align: center;
-  line-height: var(--searchbar-height);
-  font-size: 22px; /* same font‐size baseline */
-  align-items: center; /* center the <img> vertically */
-  justify-content: center; /* center horizontally */
-  user-select: none;
-  cursor: pointer;
+  display: inline-flex; /* Use flex for easy centering of content */
+  margin-left: 5px !important; /* Horizontal gap to previous element */
+  padding: 0; /* Remove default button padding */
+  width: var(--searchbar-height) !important; /* Width: Default 24px */
+  height: var(--searchbar-height) !important; /* Height: Default 24px */
+  background: var(--dp-button-color); /* Main button background */
+  border: none; /* Remove default border */
+  border-radius: var(--dp-border-radius) !important; /* Make the button rounded rectangle */
+  vertical-align: middle; /* Align with other inline elements */
+  text-align: center; /* Center text/icon horizontally */
+  line-height: var(--searchbar-height); /* Vertically align text/icon (fallback) */
+  font-size: 22px; /* Match font size with other icons/buttons */
+  align-items: center; /* Center <img> vertically inside the flex container */
+  justify-content: center; /* Center <img> horizontally */
+  user-select: none; /* Prevent accidental text selection */
+  cursor: pointer; /* Show pointer on hover for better UX */
 }
 
+/* Change background on hover to indicate interactivity. */
 #main-nav #searchBoxPos2 .dp-sidebar-toggle-btn:hover {
   background: var(--dp-button-hover-color) !important;
 }
 
+/*
+  Ensure the icon image inside the button is well-proportioned and never overflows.
+  - 60% of 24px = ~14px, so icon remains visually balanced within the button.
+  - Adjust max-width/max-height if the design changes button size.
+*/
 #main-nav #searchBoxPos2 .dp-sidebar-toggle-btn > img {
-  max-width: 60%; /* adjust as needed so the PNG isn’t too large */
-  max-height: 60%; /* 60% of 24px ≈ 14px tall/wide */
-  object-fit: contain;
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain; /* Maintain aspect ratio and fit inside button */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DOC HEADER CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* desktop mode header, > means direct child */
+/* 
+  In Doxy-Plus.js, we clone the header from #doc-content and insert it as a container 
+  *before* #doc-content, making it a direct child of <body>. 
+
+  - So, 'body > .header' refers to the cloned header (used for desktop layout).
+  - '#doc-content > .header' refers to the original header inside #doc-content (used for mobile).
+  - '>' means "direct child" selector in CSS.
+*/
+
+/* 
+  DESKTOP: Styles for the cloned header as a direct child of body.
+  This is the sticky header shown in desktop mode.
+*/
 body > .header {
   display: block;
   top: var(--dp-top-height) !important;
   margin-left: var(--dp-doc-margin-left);
 }
 
-/* mobile mode header */
+/* 
+  MOBILE: Hide the original header inside #doc-content on desktop.
+  (Mobile version of header is shown only in mobile layout.)
+*/
 #doc-content > .header {
   display: none !important;
 }
 
-/* desktop mode header font size */
+/* DESKTOP: Large font size for desktop header titles.*/
 body > .header > .headertitle > .title {
   font-size: 225% !important;
 }
 
-/* mobile mode header font size */
+/* MOBILE: Smaller font size for mobile header titles. */
 #doc-content > .header > .headertitle > .title {
   font-size: 150% !important;
 }
 
-/* since there is no > after body this means it is not only for direct child of body */
-/* applies to all headers inside body, no matter how deep they are */
-/* changing the background and border of the whole header area */
+/* 
+  Note: No '>' after body here, so this applies to all .header elements 
+  anywhere within <body>, regardless of depth.
+
+  - Sets the background color and border for header area on both desktop and mobile.
+*/
 body .header {
   border-bottom: 1px solid var(--dp-highlight-color);
   background-color: var(--page-background-color) !important;
   background-image: linear-gradient(var(--dp-highlight-color-light), var(--dp-highlight-color-light));
 }
 
-/* change padding and margin of header title */
+/* 
+  Sets padding and removes extra margins for header title,
+  making the title visually balanced and tight.
+*/
 body .header > .headertitle > .title {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
   padding: 5px 16px !important;
 }
 
-/* change margin of links available above header title */
+/* Removes top margin for summary/links above header title for a tighter header block. */
 body .header > .summary {
   margin-top: 0px !important;
 }
 
-/* on mobile view change the toggle the display for the two headers */
+/* 
+  MEDIA QUERY: On mobile (<768px), toggle visibility of headers:
+    - Hide the desktop (cloned) header.
+    - Show the original header inside #doc-content.
+
+  This ensures the correct header appears based on screen size.
+*/
 @media screen and (max-width: 767px) {
   body > .header {
     display: none !important;
@@ -455,14 +594,26 @@ body .header > .summary {
 /* DOC CONTENT CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* doc-content size and margin for desktop view */
+/* 
+  Set #doc-content position and size for DESKTOP view.
+
+  - top: Position below the sticky header (top + doc-header heights).
+  - height: Fill remaining viewport height minus top header and bottom bar.
+  - margin-left: Leave space for sidebar or nav (defined by --dp-doc-margin-left).
+*/
 #doc-content {
   top: calc(var(--dp-top-height) + var(--dp-doc-header-height)) !important;
   height: calc(100vh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height)) !important;
   margin-left: var(--dp-doc-margin-left) !important;
 }
 
-/* doc-content size and margin for mobile view */
+/*
+  Set #doc-content position and size for MOBILE view (width ≤ 767px).
+
+  - top: Only account for the main top bar (not desktop header).
+  - height: Fill viewport minus top and bottom bars.
+  - margin-left: Remove left margin so content spans full width.
+*/
 @media screen and (max-width: 767px) {
   #doc-content {
     top: var(--dp-top-height) !important;
@@ -475,9 +626,19 @@ body .header > .summary {
 /* SIDE NAV CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Change the height of items and set minimum width in side navigation bar */
+/*
+  Set size and minimum width for the side navigation bar in desktop view.
+
+  - --tree-item-height: Custom height for each tree item (default 1.3rem, replacing 30px/2rem).
+  - top/height: Fit the sidebar between header and footer, using CSS variables for adaptive sizing.
+  - min-width: Ensure navigation is touch-friendly (at least 50px wide).
+  - background/border: Match theme and provide visual separation.
+
+  NOTE: By default the right-sde border is provided using '.ui-resizable-handle.ui-resizable-e' which
+  we remove afterwards and so we add our own border directly to side-nav.
+*/
 #side-nav {
-  --tree-item-height: 1.3rem; /* Height of individual items (default is 30px which is around 2rem) */
+  --tree-item-height: 1.3rem; /* Custom height of individual items (default is 30px which is around 2rem) */
   top: var(--dp-top-height) !important;
   height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height)) !important;
   min-width: 50px !important; /* Set minimum width of navigation bar so that it behaves better on touch screens */
@@ -485,42 +646,57 @@ body .header > .summary {
   border-right: 1px solid var(--dp-highlight-color) !important;
 }
 
-/* removes the default right side border */
+/*
+  Removes the default right-side border (box-shadow) on resizable handles
+  for a cleaner look if sidebar resizing is enabled.
+*/
 .ui-resizable-handle.ui-resizable-e {
   box-shadow: none !important;
 }
-#nav-tree{
+
+/* Set navigation tree width using theme variable for consistency. */
+#nav-tree {
   width: var(--dp-nav-width) !important;
 }
 
-/* Change the navigation tree arrow type, arrow is changed to circle in the javascript file */
+/*
+  Style the expand/collapse arrow in the navigation tree.
+  - Arrow style is changed to a circle via doxy-plus.js javascript file.
+  - Font size and padding align the icon visually.
+  - opacity: 1 ensures the icon is always visible (removes fade on hover).
+*/
 #side-nav #nav-tree-contents span.arrow {
   font-size: 1.2rem !important;
   padding-bottom: 0.2em !important;
   visibility: visible !important;
-  /* By default opacity is changing based on hover, to make it always visible change opacity to 1 */
-  opacity: 1 !important;
+  opacity: 1 !important; /* By default opacity is changing based on hover, to make it always visible we change it to 1 */
 }
 
-/* Gets rid of the small blue bar on the very left of the selected and/or current item in tree */
+/*
+  Remove the small blue bar (pseudo-element) that appears at the left edge
+  of selected or current items in the tree.
+*/
 #side-nav #nav-tree-contents .item.selected::after,
 #side-nav #nav-tree-contents .item.current::after {
-  /* The small blue bar is added as 'after' element and so remove it here */
-  content: none !important;
+  content: none !important; /* The blue bar is rendered via ::after, so hide it */
 }
 
-/* Undo any special changes to the selected and/or current item */
+/*
+  Undo bold, shadow, and forced color for selected/current navigation items.
+  - Makes their style more neutral to fit with the custom theme.
+*/
 #side-nav #nav-tree-contents .item.selected *,
 #side-nav #nav-tree-contents .item.current * {
-  /* By default selected item has bold font so revert it */
-  font-weight: normal !important;
-  /* No text shadow looks better in current theme */
-  text-shadow: none !important;
-  /* Change the color to whatever is the default for the parent */
-  color: inherit !important;
+  font-weight: normal !important; /* Remove default bolding */
+  text-shadow: none !important; /* Remove text shadow for a flatter look */
+  color: inherit !important; /* Use parent color (removes highlight) */
 }
 
-/* Apply custom changes to selected and/or current item */
+/*
+  Custom styling for selected or current items in the navigation tree.
+  - Adds spacing, background, and border for emphasis.
+  - margin-left/padding-left align with other items.
+*/
 #side-nav #nav-tree-contents .item.selected,
 #side-nav #nav-tree-contents .item.current {
   margin-top: 4px;
@@ -535,20 +711,26 @@ body .header > .summary {
   padding-left: 5px !important;
 }
 
-/* This moves the expand/collapse icon 10px to left, since we removed the top item in the 
-head_script.js file it is necessary to move all items a bit to the left. This also moves text. */
+/*
+  Move the expand/collapse icon (and text) 10px to the left for all items.
+  - Necessary because a top-level item was removed via JS (doxy-plus.js).
+  - Negative margin shifts the tree inward for better alignment.
+  - Also moves the text to the left.
+*/
 #side-nav #nav-tree-contents .item > a {
-  /* -10px will move the left margin more towards left */
-  margin-left: -10px !important;
+  margin-left: -10px !important; /* Moves content left */
 }
 
-/* This moves the expand/collapse icon 15px to left for the selected item, since we removed 
-the top item in the head_script.js file it is necessary to move all items a bit to the left. 
-And since we moved the margin 5px to right above we have to move the icon 5px to left here
-so that it aligns with all other items. This also moves the text along. */
+/*
+  For selected/current items, move the icon (and text) 15px to the left
+  for better visual alignment. Since padding-left: 5px is added above for
+  current/selected items, a further 5px left shift keeps everything lined 
+  up with non-selected items. So, this means -10px (for every item) + (-5px(
+  for current/selected item)) i.e. -15px left margin.
+  This also moves the text. 
+*/
 #side-nav #nav-tree-contents .item.selected > a,
 #side-nav #nav-tree-contents .item.selected > a {
-  /* -15px will move the left margin more towards left */
   margin-left: -15px !important;
 }
 
@@ -556,23 +738,38 @@ so that it aligns with all other items. This also moves the text along. */
 Because of how Doxygen makes the items we have to apply the same rule as above but now to the
 label which is the displayed text. But applying to label will also move the label of items that
 has expand collapse icons, but we already moved their labels when we moved the icon so now we
-have to exclude them.*/
+have to exclude them.
+
+  For leaf nodes (items without expand/collapse icon/link), shift the label left.
+  - :not(:has(> a)) targets items that have no direct <a> child (no arrow/icon).
+  - Negative margin keeps the labels aligned with the rest of the tree.
+  - Note: This will also affect labels of expandable items, but they've
+    already been moved above, so visually everything stays in sync.
+*/
 #side-nav #nav-tree-contents .item:not(:has(> a)) > .label {
-  /* -10px will move the left margin more towards left */
-  margin-left: -10px !important;
+  margin-left: -10px !important; /* -10px will move the left margin more towards left */
 }
 
-/* Same as above but just for the selected item because we have to move it 15 px to left */
+/*
+  Same as above, but for selected/current leaf items, shift label 15px left.
+  - This keeps alignment visually consistent with icon-bearing selected items.
+*/
 #side-nav #nav-tree-contents .item.selected:not(:has(> a)) > .label,
 #side-nav #nav-tree-contents .item.current:not(:has(> a)) > .label {
-  /* -15px will move the left margin more towards left */
-  margin-left: -15px !important;
+  margin-left: -15px !important; /* -15px will move the left margin more towards left */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DUAL NAV CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/*
+  Primary and secondary navigation bars on the left.
+  - Fixed positioning below the top bar.
+  - Height calculated to fit between top and bottom bars.
+  - No list style, always vertical, with hidden horizontal overflow.
+  - Z-index ensures correct stacking order (primary nav above secondary).
+*/
 #dp-pri-nav,
 #dp-sec-nav {
   position: fixed;
@@ -585,18 +782,27 @@ have to exclude them.*/
   overflow-y: auto;
 }
 
+/* Primary navigation (furthest left). Highest z-index among nav bars. */
 #dp-pri-nav {
   z-index: 9992;
   left: 0px;
   width: var(--dp-pri-width);
 }
 
+/* Secondary navigation (immediately right of primary). */
 #dp-sec-nav {
   z-index: 9991;
   left: var(--dp-pri-width);
   width: var(--dp-sec-width);
 }
 
+/*
+  Resizer handles between nav panes and between nav/content.
+  - Fixed width (5px), expands to 20px on coarse pointer devices for touch-friendliness.
+  - No background by default (can be styled for visual feedback if desired).
+  - Highest z-index so it sits above nav bars.
+  - 'touch-action: none' allows for custom drag behavior.
+*/
 #dp-pri-nav-resizer,
 #dp-sec-nav-resizer {
   touch-action: none;
@@ -609,14 +815,18 @@ have to exclude them.*/
   z-index: 9993;
 }
 
-#dp-pri-nav-resizer{
+#dp-pri-nav-resizer {
   left: calc(var(--dp-pri-width) - 2px);
 }
 
-#dp-sec-nav-resizer{
+#dp-sec-nav-resizer {
   left: calc(var(--dp-pri-width) + var(--dp-sec-width) - 2px);
 }
 
+/* 
+  On touch devices, make resizer handles much larger (20px), 
+  and center them visually (margin-left: -10px).
+*/
 @media (pointer: coarse) {
   #dp-pri-nav-resizer,
   #dp-sec-nav-resizer {
@@ -625,17 +835,26 @@ have to exclude them.*/
   }
 }
 
+/* Remove extra padding from navigation <ul> containers for a compact look. */
 #dp-pri-nav > ul,
 #dp-sec-nav > ul {
   padding-left: 0.4em;
   padding-top: 0.7em;
 }
 
+/* 
+  Indented tree: for nested lists, add left margin for each level.
+  NOTE: '.dp-indented-tree' is assigned in doxy-plus.js file.
+*/
 #dp-pri-nav.dp-indented-tree ul ul,
 #dp-sec-nav.dp-indented-tree ul ul {
   margin-left: 1.15em;
 }
 
+/*
+  Hide children by default for expandable/collapsible nodes.
+  - Only shown when parent has .dp-node-open.
+*/
 li.dp-has-children > ul {
   display: none;
 }
@@ -644,6 +863,7 @@ li.dp-has-children.dp-node-open > ul {
   display: block;
 }
 
+/* Main tree list: removes default list style, removes padding/margin. */
 .dp-tree-list {
   display: block;
   list-style: none;
@@ -651,15 +871,24 @@ li.dp-has-children.dp-node-open > ul {
   margin: 0px;
 }
 
+/*
+  Each tree item: relative for positioning children (e.g., highlight backgrounds).
+  Negative margin reduces vertical gap between items.
+*/
 .dp-tree-item {
   position: relative;
   margin-block: -3px;
 }
 
+/* Add a bit of vertical spacing between expandable nodes (not the last child). */
 li.dp-has-children:not(:last-child) {
   margin-bottom: 2px;
 }
 
+/*
+  Each tree row: flex layout for icon + text alignment.
+  overflow: hidden ensures long text or icons don’t break the row.
+*/
 .dp-tree-line {
   display: flex;
   align-items: center;
@@ -667,6 +896,12 @@ li.dp-has-children:not(:last-child) {
   background: transparent;
 }
 
+/*
+  Tree "expand/collapse" button:
+  - Always inline, 1em square, centered.
+  - Font size: 1.5em for visibility.
+  - No border/background.
+*/
 .dp-tree-node {
   flex: 0 0 auto; /* keep button its intrinsic size */
   cursor: pointer;
@@ -681,6 +916,12 @@ li.dp-has-children:not(:last-child) {
   padding: 0;
 }
 
+/*
+  Tree link (navigable node label):
+  - Grows to fill available space.
+  - Prevents overflow (shows ellipsis for long names).
+  - No background for seamless look.
+*/
 .dp-tree-link {
   flex: 1 1 auto; /* take the rest of the space */
   min-width: 0; /* allow it to shrink past its content size */
@@ -690,27 +931,36 @@ li.dp-has-children:not(:last-child) {
   background: transparent;
 }
 
+/* Primary/secondary nav links: normal font/color (unless visited/selected/etc). */
 #dp-pri-nav .dp-tree-link,
 #dp-sec-nav .dp-tree-link {
   color: var(--page-foreground-color) !important;
   font-weight: normal;
 }
 
+/* Parent links: slightly larger and bolder for section headings. */
 li.dp-has-children > .dp-tree-line > .dp-tree-link {
   font-size: 1.1em !important;
   font-weight: 500 !important;
 }
 
+/* Leaf (non-parent) links: monospace font, slightly smaller. */
 #dp-pri-nav li:not(.dp-has-children) > .dp-tree-line > .dp-tree-link,
 #dp-sec-nav li:not(.dp-has-children) > .dp-tree-line > .dp-tree-link {
   font-family: var(--font-family-monospace);
   font-size: 0.9em;
 }
 
+/* Visited links in secondary nav get a different color (but not for current/active). */
 #dp-sec-nav li.dp-visited:not(.dp-current) > .dp-tree-line > .dp-tree-link {
   color: var(--dp-visited-text-color) !important;
 }
 
+/*
+  Current item: highlighted background, top/bottom borders, and a bit of spacing.
+  - ::before extends the highlight background to the left edge (beyond LI).
+  - z-index ensures highlight is beneath text/icons.
+*/
 li.dp-current > .dp-tree-line {
   margin-top: 4px;
   margin-bottom: 4px;
@@ -737,10 +987,11 @@ li.dp-current > .dp-tree-line::before {
   pointer-events: none; /* don’t block clicks/scrolls */
 }
 
+/* Disabled (no href) links: gray, not clickable, not underlined, no pointer. */
 #dp-pri-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-link,
-#dp-sec-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-link{
+#dp-sec-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-link {
   color: var(--dp-disbaled-text-color) !important;
-  cursor: default !important;              /* no pointer */
-  text-decoration: none !important;        /* remove underline if any */
-  pointer-events: none !important;         /* prevent any interaction */
+  cursor: default !important; /* no pointer */
+  text-decoration: none !important; /* remove underline if any */
+  pointer-events: none !important; /* prevent any interaction */
 }
