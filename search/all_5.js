@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['heightnoresize_0',['HeightNoResize',['../d7/d8c/namespacenpi_1_1props.html#abd41bd99211cf0fa9c00b394e6141769',1,'npi::props']]]
+  ['get_5f_0',['get_',['../df/d94/classnpi_1_1_link.html#ae203b61846ab71e431c98c3aaaf3a3a5',1,'npi::Link::get_()'],['../dc/d75/classnpi_1_1_link_host.html#a6cd9c1bd41b58506f19e67a257f84043',1,'npi::LinkHost::get_()']]]
 ];

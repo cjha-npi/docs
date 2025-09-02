@@ -931,6 +931,34 @@ File Names: doxy-plus.*
       return result;
     }
 
+    // Mutates: rewrites "anonymous_namespace" -> "anon" in-place, at every depth.
+    function renameAnonInPlace(tree) {
+      if (!Array.isArray(tree)) return;
+
+      const stack = [tree];
+      while (stack.length) {
+        const arr = stack.pop();
+        for (let i = 0; i < arr.length; ++i) {
+          const node = arr[i];
+          if (!Array.isArray(node) || node.length < 3) continue;
+
+          // node = [name, href, kids]
+          if (node[0] != null) {
+            // Replace anywhere in the name
+            node[0] = String(node[0]).replace(/anonymous_namespace/g, 'anon');
+            // If you prefer replaceAll and target supports it:
+            // node[0] = String(node[0]).replaceAll('anonymous_namespace', 'anon');
+          }
+
+          const kids = node[2];
+          if (Array.isArray(kids) && kids.length) {
+            stack.push(kids); // continue traversal
+          }
+        }
+      }
+    }
+
+
     // Traverse a cloned default tree by a sequence of section names
     function findNodeByNameList(tree, ...nameList) {
       if (!Array.isArray(tree) || nameList.length === 0) return null;
@@ -958,6 +986,7 @@ File Names: doxy-plus.*
       if (typeof href === 'string' && IS_HTML_END.test(href) && Array.isArray(kids)) {
         const list = flatAndPrune(kids, '::', ['namespace']);
         if (list.length > 0) {
+          renameAnonInPlace(list);
           _priTree.push(['Namespaces', href, list]);
         }
       }

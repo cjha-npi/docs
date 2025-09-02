@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['concepts_2ehpp_0',['Concepts.hpp',['../d9/db9/_concepts_8hpp.html',1,'']]]
+  ['appdata_2ecpp_0',['AppData.cpp',['../df/dc2/_app_data_8cpp.html',1,'']]],
+  ['appdata_2eh_1',['AppData.h',['../dd/d87/_app_data_8h.html',1,'']]]
 ];
