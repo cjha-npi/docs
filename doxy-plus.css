@@ -44,7 +44,7 @@ html {
   --navigation-font-size: 13px !important;
   --toc-font-size: 13px !important;
   --code-font-size: 12px !important; /* affects code, fragment */
-  --title-font-size: 16px !important;
+  --title-font-size: 18px !important;
   --memtitle-font-size: 16px !important;
 }
 
@@ -182,20 +182,34 @@ div.contents .toc,
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /* Combined section of Project Name + Project Brief on top left next to Project Logo */
+/*
 #projectalign {
   padding: 0px !important;
   padding-left: 3px !important;
 }
+*/
 
 /* Combined section of Project Logo + Project Name + Project Brief on top left */
 #titlearea {
-  padding: 5px !important;
+  padding: 7px 22px 7px 7px !important;
+}
+
+/* Right-side border only appears when main nav is on the right */
+@media screen and (min-width: 975px) {
+  #titlearea {
+    background:
+    linear-gradient(var(--dp-highlight-color), var(--dp-highlight-color))
+    right 0 top 10px / 1px calc(100% - 20px) no-repeat;
+    background-origin: border-box;  /* anchor at the outer edge */
+  }
 }
 
 /* Project Name of top left next to Project Logo */
+/*
 #projectname {
   padding-bottom: 0px !important;
 }
+*/
 
 /* Project Brief description just below Project Name on top left next to Project Logo */
 #projectbrief {
@@ -226,15 +240,17 @@ div.contents .toc,
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /* Change padding on main-nav */
+/*
 #main-nav {
   padding-top: 5px !important;
   padding-bottom: 5px !important;
   padding-left: 5px !important;
   padding-right: 5px !important;
 }
+*/
 
 /* For smaller screen we remove top padding */
-@media screen and (max-width: 943px) {
+@media screen and (max-width: 974px) {
   #main-nav {
     padding-top: 0px !important;
   }
@@ -877,7 +893,7 @@ li.dp-has-children.dp-node-open > ul {
 */
 .dp-tree-item {
   position: relative;
-  margin-block: -3px;
+  margin-block: -2px;
 }
 
 /* Add a bit of vertical spacing between expandable nodes (not the last child). */
@@ -942,13 +958,17 @@ li.dp-has-children:not(:last-child) {
 li.dp-has-children > .dp-tree-line > .dp-tree-link {
   font-size: 1.1em !important;
   font-weight: 500 !important;
+  margin-bottom: 4px;
+  text-decoration: underline;
+  text-decoration-thickness: 0px;
+  text-underline-offset: 4px;
 }
 
 /* Leaf (non-parent) links: monospace font, slightly smaller. */
 #dp-pri-nav li:not(.dp-has-children) > .dp-tree-line > .dp-tree-link,
 #dp-sec-nav li:not(.dp-has-children) > .dp-tree-line > .dp-tree-link {
   font-family: var(--font-family-monospace);
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 /* Visited links in secondary nav get a different color (but not for current/active). */
