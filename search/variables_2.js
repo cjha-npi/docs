@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['iconname_0',['IconName',['../d7/d8c/namespacenpi_1_1props.html#a0845df52c77a29d706cb3dedd1033ecd',1,'npi::props']]],
-  ['iconnoresize_1',['IconNoResize',['../d7/d8c/namespacenpi_1_1props.html#aa79a931caf7d7986f0bfa5459b0e032f',1,'npi::props']]],
-  ['icononname_2',['IconOnName',['../d7/d8c/namespacenpi_1_1props.html#ab12191576cbc6b1933ae6c6dc0542e81',1,'npi::props']]],
-  ['itemwidget_3',['ItemWidget',['../d7/d8c/namespacenpi_1_1props.html#ac9b9f745cf94522a482e0cc0908b84d5',1,'npi::props']]]
+  ['obj_5f_0',['obj_',['../dc/d75/classnpi_1_1_link_host.html#a2ef0fdbe8b408dca6860c5b70eec2f0a',1,'npi::LinkHost']]],
+  ['orgdomain_1',['orgDomain',['../d5/db7/namespacenpi_1_1iden.html#ae508dfd1dd9d099151c0537fe187d519',1,'npi::iden']]],
+  ['orgfolder_2',['orgFolder',['../d5/db7/namespacenpi_1_1iden.html#af08e3341c5e63db8185c846b94afb664',1,'npi::iden']]],
+  ['orgname_3',['orgName',['../d5/db7/namespacenpi_1_1iden.html#a8482211242222586e0311deaa1b3d4bd',1,'npi::iden']]]
 ];

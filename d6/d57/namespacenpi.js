@@ -1,33 +1,28 @@
 var namespacenpi =
 [
-    [ "anonymous_namespace{AppData.cpp}", "da/d6e/namespacenpi_1_1anonymous__namespace_02_app_data_8cpp_03.html", [
-      [ "fromSv", "da/d6e/namespacenpi_1_1anonymous__namespace_02_app_data_8cpp_03.html#a54814839e8a7be6d23b6a005deeb3034", null ]
+    [ "def", "d4/dd7/namespacenpi_1_1def.html", null ],
+    [ "dirs", "d4/d05/namespacenpi_1_1dirs.html", [
+      [ "appProgramData", "d4/d05/namespacenpi_1_1dirs.html#a995f1853ad353d2104ecee46574da02f", null ],
+      [ "appPublicDocuments", "d4/d05/namespacenpi_1_1dirs.html#a43bd89532c9719d97a50bd4fd4599061", null ],
+      [ "orgProgramData", "d4/d05/namespacenpi_1_1dirs.html#ab78f964184c19045b87bf64e23ef655c", null ],
+      [ "orgPublicDocuments", "d4/d05/namespacenpi_1_1dirs.html#a8aaec031d452e5cd4690128e7e87cd38", null ]
     ] ],
-    [ "props", "d7/d8c/namespacenpi_1_1props.html", [
-      [ "someFunction", "d7/d8c/namespacenpi_1_1props.html#abb25960ed65b6d1577fe71d8e70f393a", null ],
-      [ "HeightNoResize", "d7/d8c/namespacenpi_1_1props.html#abd41bd99211cf0fa9c00b394e6141769", null ],
-      [ "IconName", "d7/d8c/namespacenpi_1_1props.html#a0845df52c77a29d706cb3dedd1033ecd", null ],
-      [ "IconNoResize", "d7/d8c/namespacenpi_1_1props.html#aa79a931caf7d7986f0bfa5459b0e032f", null ],
-      [ "IconOnName", "d7/d8c/namespacenpi_1_1props.html#ab12191576cbc6b1933ae6c6dc0542e81", null ],
-      [ "ItemWidget", "d7/d8c/namespacenpi_1_1props.html#ac9b9f745cf94522a482e0cc0908b84d5", null ],
-      [ "PasswordLineEdit", "d7/d8c/namespacenpi_1_1props.html#a18ed332ea6e109e34143dda2e8e71200", null ],
-      [ "PushButtonWidthNoChange", "d7/d8c/namespacenpi_1_1props.html#ab13958617c854237e8af0364e67aa477", null ],
-      [ "TransparentForMouseWheel", "d7/d8c/namespacenpi_1_1props.html#afc40f3392e99f77e4d5aa7d06a398bb2", null ]
+    [ "files", "d6/d5c/namespacenpi_1_1files.html", [
+      [ "settings", "d6/d5c/namespacenpi_1_1files.html#ad4b9118dd8d53f8dd8a107603a79b7c4", null ]
     ] ],
+    [ "iden", "d5/db7/namespacenpi_1_1iden.html", [
+      [ "appFolder", "d5/db7/namespacenpi_1_1iden.html#a7a598f4aca956846282e8147418c14ba", null ],
+      [ "appName", "d5/db7/namespacenpi_1_1iden.html#a7d06ca4c73a9e8dff243f5075023d970", null ],
+      [ "appVersion", "d5/db7/namespacenpi_1_1iden.html#a724cec622da2cf81e93820cc18f7c217", null ],
+      [ "orgDomain", "d5/db7/namespacenpi_1_1iden.html#ae508dfd1dd9d099151c0537fe187d519", null ],
+      [ "orgFolder", "d5/db7/namespacenpi_1_1iden.html#af08e3341c5e63db8185c846b94afb664", null ],
+      [ "orgName", "d5/db7/namespacenpi_1_1iden.html#a8482211242222586e0311deaa1b3d4bd", null ]
+    ] ],
+    [ "util", "d9/db6/namespacenpi_1_1util.html", null ],
     [ "Link", "df/d94/classnpi_1_1_link.html", "df/d94/classnpi_1_1_link" ],
     [ "LinkFromThis", "d1/d51/classnpi_1_1_link_from_this.html", "d1/d51/classnpi_1_1_link_from_this" ],
     [ "LinkHost", "dc/d75/classnpi_1_1_link_host.html", "dc/d75/classnpi_1_1_link_host" ],
     [ "LinkWeakHost", "d5/d88/classnpi_1_1_link_weak_host.html", "d5/d88/classnpi_1_1_link_weak_host" ],
     [ "PolymorphicallyRelated", "d1/d7e/conceptnpi_1_1_polymorphically_related.html", null ],
-    [ "SupportsSharedFromThis", "de/d1c/conceptnpi_1_1_supports_shared_from_this.html", null ],
-    [ "appProgramDataPath", "d6/d57/namespacenpi.html#af1390bd2da9bd616d17154f8d2e61302", null ],
-    [ "appPublicDocumentsPath", "d6/d57/namespacenpi.html#a2b8e2b2059e7533583301d2d457e0e97", null ],
-    [ "orgProgramDataPath", "d6/d57/namespacenpi.html#a8864fe3a8a58f7f6d5e50b47c56da695", null ],
-    [ "orgPublicDocumentsPath", "d6/d57/namespacenpi.html#ad2943204765d07f9383306932537e1d1", null ],
-    [ "appFolder", "d6/d57/namespacenpi.html#aaaded5ca81c848a4c35616d9d30586bf", null ],
-    [ "appName", "d6/d57/namespacenpi.html#acf23875c36b121ae64d605dc6751921d", null ],
-    [ "appVersion", "d6/d57/namespacenpi.html#ab6f73fcc53fd488b4f6706e0e856d083", null ],
-    [ "orgDomain", "d6/d57/namespacenpi.html#a921495e46e2945a3a333efe0a63192ea", null ],
-    [ "orgFolder", "d6/d57/namespacenpi.html#a899473c5006539289830d6891176ccbd", null ],
-    [ "orgName", "d6/d57/namespacenpi.html#a6806c8c909fd921b4f6c061d429ce1f6", null ]
+    [ "SupportsSharedFromThis", "de/d1c/conceptnpi_1_1_supports_shared_from_this.html", null ]
 ];

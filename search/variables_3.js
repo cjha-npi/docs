@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loc_5f_0',['loc_',['../dc/d75/classnpi_1_1_link_host.html#a6c3d4257a6136f68260f58bcc50a7d6e',1,'npi::LinkHost']]]
+  ['ptr_5f_0',['ptr_',['../df/d94/classnpi_1_1_link.html#abf7eecf9a1ce30a7a4362f578e4a7f1b',1,'npi::Link::ptr_'],['../dd/d30/structnpi_1_1_link_host_1_1_obs.html#adaee74147df4c7a2f96c3b066fb0ef96',1,'npi::LinkHost::Obs::ptr_']]]
 ];

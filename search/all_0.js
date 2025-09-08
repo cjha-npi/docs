@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['appdata_2ecpp_0',['AppData.cpp',['../df/dc2/_app_data_8cpp.html',1,'']]],
-  ['appdata_2eh_1',['AppData.h',['../dd/d87/_app_data_8h.html',1,'']]],
-  ['appfolder_2',['appFolder',['../d6/d57/namespacenpi.html#aaaded5ca81c848a4c35616d9d30586bf',1,'npi']]],
-  ['appname_3',['appName',['../d6/d57/namespacenpi.html#acf23875c36b121ae64d605dc6751921d',1,'npi']]],
-  ['appprogramdatapath_4',['appProgramDataPath',['../d6/d57/namespacenpi.html#af1390bd2da9bd616d17154f8d2e61302',1,'npi']]],
-  ['apppublicdocumentspath_5',['appPublicDocumentsPath',['../d6/d57/namespacenpi.html#a2b8e2b2059e7533583301d2d457e0e97',1,'npi']]],
-  ['appversion_6',['appVersion',['../d6/d57/namespacenpi.html#ab6f73fcc53fd488b4f6706e0e856d083',1,'npi']]],
-  ['assign_5f_7',['assign_',['../df/d94/classnpi_1_1_link.html#a49ef453c2ae07faa7affc879993e4427',1,'npi::Link::assign_()'],['../dc/d75/classnpi_1_1_link_host.html#a59021c0af01b28c7a549c8ce16ef0368',1,'npi::LinkHost::assign_()']]]
+  ['appfolder_0',['appFolder',['../d5/db7/namespacenpi_1_1iden.html#a7a598f4aca956846282e8147418c14ba',1,'npi::iden']]],
+  ['appname_1',['appName',['../d5/db7/namespacenpi_1_1iden.html#a7d06ca4c73a9e8dff243f5075023d970',1,'npi::iden']]],
+  ['appprogramdata_2',['appProgramData',['../d4/d05/namespacenpi_1_1dirs.html#a995f1853ad353d2104ecee46574da02f',1,'npi::dirs']]],
+  ['apppublicdocuments_3',['appPublicDocuments',['../d4/d05/namespacenpi_1_1dirs.html#a43bd89532c9719d97a50bd4fd4599061',1,'npi::dirs']]],
+  ['appversion_4',['appVersion',['../d5/db7/namespacenpi_1_1iden.html#a724cec622da2cf81e93820cc18f7c217',1,'npi::iden']]],
+  ['assign_5f_5',['assign_',['../df/d94/classnpi_1_1_link.html#a49ef453c2ae07faa7affc879993e4427',1,'npi::Link::assign_()'],['../dc/d75/classnpi_1_1_link_host.html#a59021c0af01b28c7a549c8ce16ef0368',1,'npi::LinkHost::assign_()']]]
 ];
