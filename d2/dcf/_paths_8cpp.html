@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Def.hpp File Reference</title>
+<title>Main Project: Paths.cpp File Reference</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -93,7 +93,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d8/d87/_def_8hpp.html','../../'); initResizable(true); });
+$(function(){initNavTree('d2/dcf/_paths_8cpp.html','../../'); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -120,58 +120,94 @@ $(function(){initNavTree('d8/d87/_def_8hpp.html','../../'); initResizable(true);
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">Def.hpp File Reference</div></div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Paths.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Shipped defaults and limits for the application.  
+<p>Definitions for file/folder paths used in the application.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;QString&gt;</code><br />
-</div>
-<p><a href="../../d8/d87/_def_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+<div class="textblock"><code>#include &quot;npi/Paths.h&quot;</code><br />
+<code>#include &lt;QDir&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;shlobj.h&gt;</code><br />
+<code>#include &lt;knownfolders.h&gt;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd7/namespacenpi_1_1def.html">npi::def</a></td></tr>
-<tr class="memdesc:d4/dd7/namespacenpi_1_1def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for shipped defaults and operational limits. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db4/namespaceanonymous__namespace_02_paths_8cpp_03.html">anonymous_namespace{Paths.cpp}</a></td></tr>
+<tr class="memdesc:d1/db4/namespaceanonymous__namespace_02_paths_8cpp_03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows-specific routine for resolving paths. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
-<tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primary namespace for the application. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9f918755b601cf4bffca775992e6fb90" id="r_a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f918755b601cf4bffca775992e6fb90">NOMINMAX</a></td></tr>
+<tr class="separator:a9f918755b601cf4bffca775992e6fb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bef5d85e3dcd73eef56ad39ffc84a9" id="r_ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">WIN32_LEAN_AND_MEAN</a></td></tr>
+<tr class="separator:ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3cabac5687ce313387d56592bf45b1c9" id="r_a3cabac5687ce313387d56592bf45b1c9"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db4/namespaceanonymous__namespace_02_paths_8cpp_03.html#a3cabac5687ce313387d56592bf45b1c9">anonymous_namespace{Paths.cpp}::knownFolderPathWin</a> (REFKNOWNFOLDERID id) noexcept</td></tr>
+<tr class="memdesc:a3cabac5687ce313387d56592bf45b1c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a Windows Known Folder absolute path as a QString.  <br /></td></tr>
+<tr class="separator:a3cabac5687ce313387d56592bf45b1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Shipped defaults and limits for the application. </p>
-<p>This header defines compile-time defaults and operational limits that the application uses when no user or environment override is provided.</p>
-<dl class="section user"><dt>Scope</dt><dd><ul>
-<li>Tunable shipped defaults (filenames, sub-dirs, colors, timeouts).</li>
-<li>Operational limits (max sizes, retry caps, rotation counts).</li>
-<li>Format/encoding defaults (CSV delimiter, default charset).</li>
-<li>Values are constant at runtime but may be changed per build.</li>
+<div class="textblock"><p>Definitions for file/folder paths used in the application. </p>
+<p>This source file defines functions declared in <code><a class="el" href="../../d9/d7b/_paths_8h.html" title="Public API for file/folder paths used in the application.">Paths.h</a></code> that return various file and folder paths used in the application. The paths are primarily in two locations:</p><ul>
+<li><code>C:\ProgramData</code> For application's internal data (e.g., settings, temp files).</li>
+<li><p class="startli"><code>C:\Users\Public\Documents</code> For user-accessible files (e.g., logs, user data).</p>
+<dl class="section user"><dt></dt><dd>The functions are organized into namespaces for clarity:<ul>
+<li><code><a class="el" href="../../d4/d05/namespacenpi_1_1dirs.html" title="Namespace for directory paths used by the application.">npi::dirs</a></code> For directories.</li>
+<li><code><a class="el" href="../../d6/d5c/namespacenpi_1_1files.html" title="Namespace for file paths used by the application.">npi::files</a></code> For files.</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Out of scope</dt><dd><ul>
-<li>Product identity (names, version, domains, GUIDs). See <code><a class="el" href="../../d5/db7/namespacenpi_1_1iden.html" title="Namespace for immutable product identity.">npi::iden</a></code>.</li>
-<li>Computed or environment-derived values (resolved paths, locale).</li>
-<li>Secrets or machine-specific data.</li>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>Functions in <code><a class="el" href="../../d4/d05/namespacenpi_1_1dirs.html" title="Namespace for directory paths used by the application.">npi::dirs</a></code> ensure the directories exist, creating them if necessary.</li>
+<li>Functions in <code><a class="el" href="../../d6/d5c/namespacenpi_1_1files.html" title="Namespace for file paths used by the application.">npi::files</a></code> return file paths without creating the files.</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Override / resolution order</dt><dd>The application should resolve settings using a clear precedence. A common pattern is: 1) Runtime config (e.g., QSettings, user config files) 2) Command line switches 3) Environment variables 4) Build-time defines (e.g., -DNPI_MAX_FILE_BYTES=...) 5) Shipped defaults in this header (<a class="el" href="../../d4/dd7/namespacenpi_1_1def.html" title="Namespace for shipped defaults and operational limits.">npi::def</a>)</dd></dl>
-<dl class="section user"><dt>Thread-safety</dt><dd>All symbols here are constants and are safe to read from any thread.</dd></dl>
-<dl class="section user"><dt>Build integration</dt><dd><ul>
-<li>Optionally expose selected defaults as compile definitions to allow per-build tuning without editing this file.</li>
-<li>Consider documenting any changed defaults in release notes.</li>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="../../d9/d7b/_paths_8h.html" title="Public API for file/folder paths used in the application.">Paths.h</a></code> for declarations and usage notes. </dd></dl>
+</li>
 </ul>
-</dd></dl>
-<dl class="section user"><dt>Compatibility notes</dt><dd>Changing defaults can affect user expectations and on-disk layout (e.g., subfolder names). Treat such changes as user-visible.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="../../d5/db7/namespacenpi_1_1iden.html" title="Namespace for immutable product identity.">npi::iden</a></code> for immutable product identity. </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a9f918755b601cf4bffca775992e6fb90" name="a9f918755b601cf4bffca775992e6fb90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f918755b601cf4bffca775992e6fb90">&#9670;&#160;</a></span>NOMINMAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NOMINMAX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7bef5d85e3dcd73eef56ad39ffc84a9" name="ac7bef5d85e3dcd73eef56ad39ffc84a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">&#9670;&#160;</a></span>WIN32_LEAN_AND_MEAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIN32_LEAN_AND_MEAN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d8/d87/_def_8hpp.html">Def.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../d2/dcf/_paths_8cpp.html">Paths.cpp</a></li>
     <li class="footer">Generated on Mon Sep 8 2025 10:39:58 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>

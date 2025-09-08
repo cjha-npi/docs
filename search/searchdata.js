@@ -1,13 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "acdeghilmnoprstuw~",
+  0: "acdeghiklmnoprstuw~",
   1: "lo",
-  2: "n",
+  2: "an",
   3: "cdilpu",
-  4: "adegiloprsuw~",
+  4: "adegikloprsuw~",
   5: "alopsuw",
   6: "los",
-  7: "n"
+  7: "nw",
+  8: "n"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "related",
-  7: "concepts"
+  7: "defines",
+  8: "concepts"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "Functions",
   5: "Variables",
   6: "Friends",
-  7: "Concepts"
+  7: "Macros",
+  8: "Concepts"
 };
 

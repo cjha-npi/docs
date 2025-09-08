@@ -135,10 +135,11 @@ $(function(){initNavTree('d9/d7b/_paths_8h.html','../../'); initResizable(true);
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
+<tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primary namespace for the application. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d05/namespacenpi_1_1dirs.html">npi::dirs</a></td></tr>
 <tr class="memdesc:d4/d05/namespacenpi_1_1dirs"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for directory paths used by the application. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5c/namespacenpi_1_1files.html">npi::files</a></td></tr>
 <tr class="memdesc:d6/d5c/namespacenpi_1_1files"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for file paths used by the application. <br /></td></tr>
@@ -185,7 +186,7 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>Each function performs its work once, caches the absolute path in a function-local static, and returns the cached value on subsequent calls. If resolution or creation fails, an empty <code>QString</code> is returned.</dd></dl>
-<p>The corresponding implementations (in Paths.cpp) prefer the Windows Known Folders API (SHGetKnownFolderPath for FOLDERID_ProgramData / FOLDERID_PublicDocuments) and fall back to environment variables when needed.</p>
+<p>The corresponding implementations (in <a class="el" href="../../d2/dcf/_paths_8cpp.html" title="Definitions for file/folder paths used in the application.">Paths.cpp</a>) prefer the Windows Known Folders API (SHGetKnownFolderPath for FOLDERID_ProgramData / FOLDERID_PublicDocuments) and fall back to environment variables when needed.</p>
 <dl class="section note"><dt>Note</dt><dd><ul>
 <li>These APIs are Windows-only. On non-Windows builds they return an empty QString.</li>
 <li>No UI, no termination: call sites decide how to handle empty results (e.g., fail-fast at startup).</li>
@@ -227,14 +228,14 @@ Testing Tips</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d7b/_paths_8h.html">Paths.h</a></li>
-    <li class="footer">Generated on Mon Sep 8 2025 09:03:47 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Mon Sep 8 2025 10:39:58 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Sep 8 2025 09:03:47'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Mon Sep 8 2025 10:39:58'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

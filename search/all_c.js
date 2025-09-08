@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['reset_5f_0',['reset_',['../df/d94/classnpi_1_1_link.html#a329e7fd67678235b025d74256bd56f23',1,'npi::Link::reset_()'],['../dc/d75/classnpi_1_1_link_host.html#a8621c5f37a5de093341d6dc2f683b31a',1,'npi::LinkHost::reset_()'],['../d5/d88/classnpi_1_1_link_weak_host.html#a77b86023ba4c43e358d5ff9cd5509d90',1,'npi::LinkWeakHost::reset_()']]]
+  ['paths_2ecpp_0',['Paths.cpp',['../d2/dcf/_paths_8cpp.html',1,'']]],
+  ['paths_2eh_1',['Paths.h',['../d9/d7b/_paths_8h.html',1,'']]],
+  ['ptr_5f_2',['ptr_',['../df/d94/classnpi_1_1_link.html#abf7eecf9a1ce30a7a4362f578e4a7f1b',1,'npi::Link::ptr_'],['../dd/d30/structnpi_1_1_link_host_1_1_obs.html#adaee74147df4c7a2f96c3b066fb0ef96',1,'npi::LinkHost::Obs::ptr_']]],
+  ['pureshared_5f_3',['pureShared_',['../dc/d75/classnpi_1_1_link_host.html#a3d3c2633d241905194a05c6e15b046db',1,'npi::LinkHost']]]
 ];
