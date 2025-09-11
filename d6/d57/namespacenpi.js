@@ -1,22 +1,22 @@
 var namespacenpi =
 [
-    [ "def", "d4/dd7/namespacenpi_1_1def.html", null ],
-    [ "dirs", "d4/d05/namespacenpi_1_1dirs.html", [
-      [ "appProgramData", "d4/d05/namespacenpi_1_1dirs.html#a995f1853ad353d2104ecee46574da02f", null ],
-      [ "appPublicDocuments", "d4/d05/namespacenpi_1_1dirs.html#a43bd89532c9719d97a50bd4fd4599061", null ],
-      [ "orgProgramData", "d4/d05/namespacenpi_1_1dirs.html#ab78f964184c19045b87bf64e23ef655c", null ],
-      [ "orgPublicDocuments", "d4/d05/namespacenpi_1_1dirs.html#a8aaec031d452e5cd4690128e7e87cd38", null ]
+    [ "defs", "dc/d50/namespacenpi_1_1defs.html", null ],
+    [ "meta", "d6/d93/namespacenpi_1_1meta.html", [
+      [ "appDirName", "d6/d93/namespacenpi_1_1meta.html#afe014aef048b74092e0f13084cc84b79", null ],
+      [ "appDisplayName", "d6/d93/namespacenpi_1_1meta.html#a8cd8b0093ae525e07fc24852aa54494f", null ],
+      [ "appName", "d6/d93/namespacenpi_1_1meta.html#a07bc007a845924eb725e6c21ebf57fd5", null ],
+      [ "appVersion", "d6/d93/namespacenpi_1_1meta.html#a071686d4c1fc02a0a3c7340c264a63a8", null ],
+      [ "mainSettingsFileName", "d6/d93/namespacenpi_1_1meta.html#aa862700693b838526302eb8e5d83525a", null ],
+      [ "orgDirName", "d6/d93/namespacenpi_1_1meta.html#ab8aa497c798dcf3f8ef2bc300416ad6c", null ],
+      [ "orgDisplayName", "d6/d93/namespacenpi_1_1meta.html#aa8d0e8398bbfb3632975d51ef06fa834", null ],
+      [ "orgDomain", "d6/d93/namespacenpi_1_1meta.html#a5a7d8f131676ad7234d0d735ebff7d88", null ]
     ] ],
-    [ "files", "d6/d5c/namespacenpi_1_1files.html", [
-      [ "settings", "d6/d5c/namespacenpi_1_1files.html#ad4b9118dd8d53f8dd8a107603a79b7c4", null ]
-    ] ],
-    [ "iden", "d5/db7/namespacenpi_1_1iden.html", [
-      [ "appFolder", "d5/db7/namespacenpi_1_1iden.html#a7a598f4aca956846282e8147418c14ba", null ],
-      [ "appName", "d5/db7/namespacenpi_1_1iden.html#a7d06ca4c73a9e8dff243f5075023d970", null ],
-      [ "appVersion", "d5/db7/namespacenpi_1_1iden.html#a724cec622da2cf81e93820cc18f7c217", null ],
-      [ "orgDomain", "d5/db7/namespacenpi_1_1iden.html#ae508dfd1dd9d099151c0537fe187d519", null ],
-      [ "orgFolder", "d5/db7/namespacenpi_1_1iden.html#af08e3341c5e63db8185c846b94afb664", null ],
-      [ "orgName", "d5/db7/namespacenpi_1_1iden.html#a8482211242222586e0311deaa1b3d4bd", null ]
+    [ "path", "db/d31/namespacenpi_1_1path.html", [
+      [ "appProgramDataDir", "db/d31/namespacenpi_1_1path.html#a8f4ab1ce5e08d98bc91bb593824f3168", null ],
+      [ "appPublicDocumentsDir", "db/d31/namespacenpi_1_1path.html#a525da5317dc570768cb369200a8e7b79", null ],
+      [ "mainSettingsFile", "db/d31/namespacenpi_1_1path.html#a91f4ac35dc9c5024b98e89d434733479", null ],
+      [ "orgProgramDataDir", "db/d31/namespacenpi_1_1path.html#a58938465d27ef99ef4f01fdcbf8f914a", null ],
+      [ "orgPublicDocumentsDir", "db/d31/namespacenpi_1_1path.html#a144b3b658dceb0af8118ef4aaff78d3e", null ]
     ] ],
     [ "util", "d9/db6/namespacenpi_1_1util.html", null ],
     [ "Link", "df/d94/classnpi_1_1_link.html", "df/d94/classnpi_1_1_link" ],

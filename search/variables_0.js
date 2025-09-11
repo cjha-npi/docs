@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['appfolder_0',['appFolder',['../d5/db7/namespacenpi_1_1iden.html#a7a598f4aca956846282e8147418c14ba',1,'npi::iden']]],
-  ['appname_1',['appName',['../d5/db7/namespacenpi_1_1iden.html#a7d06ca4c73a9e8dff243f5075023d970',1,'npi::iden']]],
-  ['appversion_2',['appVersion',['../d5/db7/namespacenpi_1_1iden.html#a724cec622da2cf81e93820cc18f7c217',1,'npi::iden']]]
+  ['appdirname_0',['appDirName',['../d6/d93/namespacenpi_1_1meta.html#afe014aef048b74092e0f13084cc84b79',1,'npi::meta']]],
+  ['appdisplayname_1',['appDisplayName',['../d6/d93/namespacenpi_1_1meta.html#a8cd8b0093ae525e07fc24852aa54494f',1,'npi::meta']]],
+  ['appname_2',['appName',['../d6/d93/namespacenpi_1_1meta.html#a07bc007a845924eb725e6c21ebf57fd5',1,'npi::meta']]],
+  ['appversion_3',['appVersion',['../d6/d93/namespacenpi_1_1meta.html#a071686d4c1fc02a0a3c7340c264a63a8',1,'npi::meta']]]
 ];

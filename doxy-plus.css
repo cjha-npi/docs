@@ -10,8 +10,10 @@ File Names: doxy-plus.*
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 :root {
-  --dp-border-radius: 6px; /* Border radius for search box and the two buttons next to it */
   --dp-search-field: "All:"; /* Search field selection label text, replaces the default magnifier icon */
+
+  --dp-sep: 5px;
+  --dp-border-radius: 6px; /* Border radius for search box and the two buttons next to it */
 
   --dp-pri-width: 0px; /* Width of the primary nav pane in dual-nav mode */
   --dp-sec-width: 0px; /* Width of the secondary nav pane in dual-nav mode */
@@ -21,25 +23,14 @@ File Names: doxy-plus.*
   --dp-bottom-height: 0px; /* Height of the footer including its top border */
   --dp-doc-header-height: 0px; /* Height of the doc-content header including its bottom border */
 
-  --dp-doc-margin-left: var(--dp-nav-width); /* Margin on the left of doc-content for sidebars, defaults to side-nav width */
+  --dp-doc-margin-left: calc(var(--dp-nav-width) + (2 * var(--dp-sep))); /* Margin on the left of doc-content for sidebars, defaults to side-nav width */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* CUSTOM AND MODIFIED VALUES */
+/* FONT VALUES */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Modified and Original values for default html */
 html {
-  --page-background-color: rgb(255, 255, 255) !important;
-  --separator-color: rgb(230, 230, 230) !important;
-  --dp-button-color: rgb(240, 240, 240);
-  --dp-button-hover-color: rgb(230, 230, 230);
-  --dp-highlight-color: rgba(20, 110, 210, 0.3);
-  --dp-highlight-color-light: rgba(20, 110, 210, 0.1);
-  --dp-visited-text-color: rgb(150, 0, 150);
-  --dp-search-select-text-color: rgb(80, 120, 160);
-  --dp-disbaled-text-color: rgb(120, 120, 120);
-
   --page-font-size: 13px !important;
   --navigation-font-size: 13px !important;
   --toc-font-size: 13px !important;
@@ -60,16 +51,45 @@ html {
   }
 }
 
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* COLOR VALUES */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/* Modified and Original values for default html */
+html {
+  --page-background-color: rgb(210, 210, 210) !important;
+  --separator-color: rgb(210, 210, 210) !important;
+  --code-background: rgb(235, 240, 245) !important;
+  --fragment-background: rgb(235, 240, 245) !important;
+
+  --dp-page-color: rgb(255, 255, 255);
+  --dp-top-sep-color: rgb(180, 180, 180);
+  --dp-scrollbar-color: rgb(160, 200, 240);
+  --dp-btn-color: rgb(225, 230, 240);
+  --dp-btn-hover-color: rgb(235, 240, 250);
+  --dp-current-item-color: rgb(180, 220, 255);
+  --dp-current-item-mark-color: rgb(50, 100, 210);
+  --dp-visited-text-color: rgb(150, 0, 150);
+  --dp-search-select-text-color: rgb(80, 120, 160);
+  --dp-disbaled-text-color: rgb(120, 120, 120);
+}
+
 /* Different values for dark mode in html */
 html.dark-mode {
   --page-background-color: rgb(13, 17, 23) !important;
-  --separator-color: rgb(25, 30, 40) !important;
-  --code-background: rgb(25, 30, 40) !important;
-  --tablehead-background: rgb(25, 30, 40) !important;
-  --blockquote-background: rgb(25, 30, 40) !important;
-  --fragment-background: rgb(25, 30, 40) !important;
-  --dp-button-color: rgb(25, 30, 40);
-  --dp-button-hover-color: rgb(40, 45, 55);
+  --separator-color: rgb(45, 45, 45) !important;
+  --code-background: rgb(35, 40, 45) !important;
+  --tablehead-background: rgb(35, 40, 50) !important;
+  --blockquote-background: rgb(35, 40, 50) !important;
+  --fragment-background: rgb(40, 45, 55) !important;
+
+  --dp-page-color: rgb(30, 35, 45);
+  --dp-top-sep-color: rgb(100, 100, 100);
+  --dp-scrollbar-color: rgb(30, 70, 110);
+  --dp-btn-color: rgb(13, 17, 23);
+  --dp-btn-hover-color: rgb(50, 55, 65);
+  --dp-current-item-color: rgb(50, 55, 70);
+  --dp-current-item-mark-color: rgb(70, 120, 230);
   --dp-visited-text-color: rgb(250, 100, 250);
   --dp-search-select-text-color: rgb(120, 160, 200);
   --dp-disbaled-text-color: rgb(120, 120, 120);
@@ -98,12 +118,12 @@ body {
 
 /* Override if only primary pane of dual-nav is active */
 body[dp-dual-nav-active="true"] {
-  --dp-doc-margin-left: var(--dp-pri-width);
+  --dp-doc-margin-left: calc(var(--dp-pri-width) + (2 * var(--dp-sep)));
 }
 
 /* Override if both primary pane and secondary pane of dual-nav are active */
 body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] {
-  --dp-doc-margin-left: calc(var(--dp-pri-width) + var(--dp-sec-width));
+  --dp-doc-margin-left: calc(var(--dp-pri-width) + var(--dp-sec-width) + (3 * var(--dp-sep)));
 }
 
 /* If dual-nav is not active then left margin falls back to side-nav width assigned when '--dp-doc-margin-left' was declared in :root{...} */
@@ -111,7 +131,7 @@ body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] {
 /* Zero left margin for mobile view */
 @media screen and (max-width: 767px) {
   body {
-    --dp-doc-margin-left: 0px !important; /* force zero for small screens */
+    --dp-doc-margin-left: var(--dp-sep) !important; /* force small margin for small screens */
   }
 }
 
@@ -126,7 +146,9 @@ body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] {
 
 /* Default: hide both dual nav panels */
 #dp-pri-nav,
-#dp-sec-nav {
+#dp-sec-nav,
+#dp-sec-nav-resizer,
+#dp-sec-nav-resizer {
   display: none;
 }
 
@@ -134,16 +156,20 @@ body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] {
 body[dp-dual-nav-active="true"] #side-nav {
   display: none;
 }
-body[dp-dual-nav-active="true"] #dp-pri-nav {
+body[dp-dual-nav-active="true"] #dp-pri-nav,
+body[dp-dual-nav-active="true"] #dp-pri-nav-resizer {
   display: block;
 }
-body[dp-dual-nav-active="true"] #dp-sec-nav {
+body[dp-dual-nav-active="true"] #dp-sec-nav,
+body[dp-dual-nav-active="true"] #dp-sec-nav-resizer {
   display: none;
 }
 
 /* Condition: dual-nav + sec-nav active → show both pri and sec */
 body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-pri-nav,
-body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-sec-nav {
+body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-sec-nav,
+body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-pri-nav-resizer,
+body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-sec-nav-resizer {
   display: block;
 }
 
@@ -151,7 +177,9 @@ body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-sec-nav {
 @media screen and (max-width: 767px) {
   #side-nav,
   #dp-pri-nav,
-  #dp-sec-nav {
+  #dp-sec-nav,
+  #dp-sec-nav-resizer,
+  #dp-sec-nav-resizer {
     display: none !important;
   }
 }
@@ -174,7 +202,7 @@ div.contents .toc,
 .contents .dotgraph,
 .contents .tabs-overview-container {
   scrollbar-width: thin !important;
-  scrollbar-color: var(--dp-highlight-color) var(--page-background-color) !important;
+  scrollbar-color: var(--dp-scrollbar-color) transparent !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -189,18 +217,24 @@ div.contents .toc,
 }
 */
 
+/* Top Header: Title Area + Main Nav + Search Bar Area */
+#top {
+  background-color: var(--dp-page-color) !important;
+  margin: var(--dp-sep) !important;
+  border-radius: var(--dp-border-radius) !important;
+  border: none !important;
+}
+
 /* Combined section of Project Logo + Project Name + Project Brief on top left */
 #titlearea {
   padding: 7px 22px 7px 7px !important;
 }
 
 /* Right-side border only appears when main nav is on the right */
-@media screen and (min-width: 975px) {
+@media screen and (min-width: 985px) {
   #titlearea {
-    background:
-    linear-gradient(var(--dp-highlight-color), var(--dp-highlight-color))
-    right 0 top 10px / 1px calc(100% - 20px) no-repeat;
-    background-origin: border-box;  /* anchor at the outer edge */
+    background: linear-gradient(var(--dp-top-sep-color), var(--dp-top-sep-color)) right 0 top 10px / 1px calc(100% - 20px) no-repeat;
+    background-origin: border-box; /* anchor at the outer edge */
   }
 }
 
@@ -220,19 +254,19 @@ div.contents .toc,
 }
 
 /* 
-  Top Header: Title Area + Main Nav + Search Bar Area
-  It already has a bottom border, we reassign to change its color 
-*/
-#top {
-  border-bottom: 1px solid var(--dp-highlight-color);
-}
-
-/* 
   Bottom Footer
   It already has a top border, we reassign to change its color 
 */
 #nav-path > ul {
-  border-top: 1px solid var(--dp-highlight-color);
+  background-color: var(--dp-page-color) !important;
+  margin: var(--dp-sep) !important;
+  border-radius: var(--dp-border-radius) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#nav-path .navelem::after {
+  --page-background-color: var(--dp-page-color) !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -250,7 +284,7 @@ div.contents .toc,
 */
 
 /* For smaller screen we remove top padding */
-@media screen and (max-width: 974px) {
+@media screen and (max-width: 984px) {
   #main-nav {
     padding-top: 0px !important;
   }
@@ -260,12 +294,12 @@ div.contents .toc,
 #MSearchBox {
   border-radius: var(--dp-border-radius) !important;
   border: none !important;
-  background: var(--dp-button-color) !important;
+  background: var(--dp-btn-color) !important;
 }
 
 /* Change the color on hover for search box */
 #MSearchBox:hover {
-  background: var(--dp-button-hover-color) !important;
+  background: var(--dp-btn-hover-color) !important;
 }
 
 /* 
@@ -467,11 +501,11 @@ div.contents .toc,
 
 doxygen-awesome-dark-mode-toggle {
   border-radius: var(--dp-border-radius) !important; /* Rounded corners for the toggle button */
-  background-color: var(--dp-button-color) !important; /* Button background (normal state) */
+  background-color: var(--dp-btn-color) !important; /* Button background (normal state) */
 }
 
 doxygen-awesome-dark-mode-toggle:hover {
-  background: var(--dp-button-hover-color) !important; /* Background color on hover */
+  background: var(--dp-btn-hover-color) !important; /* Background color on hover */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -493,7 +527,7 @@ doxygen-awesome-dark-mode-toggle:hover {
   padding: 0; /* Remove default button padding */
   width: var(--searchbar-height) !important; /* Width: Default 24px */
   height: var(--searchbar-height) !important; /* Height: Default 24px */
-  background: var(--dp-button-color); /* Main button background */
+  background: var(--dp-btn-color); /* Main button background */
   border: none; /* Remove default border */
   border-radius: var(--dp-border-radius) !important; /* Make the button rounded rectangle */
   vertical-align: middle; /* Align with other inline elements */
@@ -508,7 +542,7 @@ doxygen-awesome-dark-mode-toggle:hover {
 
 /* Change background on hover to indicate interactivity. */
 #main-nav #searchBoxPos2 .dp-sidebar-toggle-btn:hover {
-  background: var(--dp-button-hover-color) !important;
+  background: var(--dp-btn-hover-color) !important;
 }
 
 /*
@@ -536,13 +570,26 @@ doxygen-awesome-dark-mode-toggle:hover {
 */
 
 /* 
+  Note: No '>' after body here, so this applies to all .header elements 
+  anywhere within <body>, regardless of depth.
+
+  - Sets the background color and border for header area on both desktop and mobile.
+*/
+body .header {
+  border-bottom: 2px solid var(--separator-color) !important;
+  margin-left: var(--dp-doc-margin-left) !important;
+  margin-right: 5px !important;
+  background-color: var(--dp-page-color) !important;
+  border-top-left-radius: var(--dp-border-radius) !important;
+  border-top-right-radius: var(--dp-border-radius) !important;
+}
+
+/* 
   DESKTOP: Styles for the cloned header as a direct child of body.
   This is the sticky header shown in desktop mode.
 */
 body > .header {
-  display: block;
-  top: var(--dp-top-height) !important;
-  margin-left: var(--dp-doc-margin-left);
+  display: block !important;
 }
 
 /* 
@@ -561,18 +608,6 @@ body > .header > .headertitle > .title {
 /* MOBILE: Smaller font size for mobile header titles. */
 #doc-content > .header > .headertitle > .title {
   font-size: 150% !important;
-}
-
-/* 
-  Note: No '>' after body here, so this applies to all .header elements 
-  anywhere within <body>, regardless of depth.
-
-  - Sets the background color and border for header area on both desktop and mobile.
-*/
-body .header {
-  border-bottom: 1px solid var(--dp-highlight-color);
-  background-color: var(--page-background-color) !important;
-  background-image: linear-gradient(var(--dp-highlight-color-light), var(--dp-highlight-color-light));
 }
 
 /* 
@@ -618,9 +653,18 @@ body .header > .summary {
   - margin-left: Leave space for sidebar or nav (defined by --dp-doc-margin-left).
 */
 #doc-content {
-  top: calc(var(--dp-top-height) + var(--dp-doc-header-height)) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height)) !important;
+  --page-background-color: var(--dp-page-color) !important;
+  background-color: var(--dp-page-color) !important;
   margin-left: var(--dp-doc-margin-left) !important;
+  margin-right: 5px;
+  border-bottom-left-radius: var(--dp-border-radius) !important;
+  border-bottom-right-radius: var(--dp-border-radius) !important;
+  height: calc(100vh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - 2px) !important;
+}
+
+body[dp-doc-header-invisible="true"] #doc-content {
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  border-radius: var(--dp-border-radius) !important;
 }
 
 /*
@@ -632,9 +676,9 @@ body .header > .summary {
 */
 @media screen and (max-width: 767px) {
   #doc-content {
-    top: var(--dp-top-height) !important;
-    height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height)) !important;
-    margin-left: 0px !important;
+    border-top-left-radius: var(--dp-border-radius) !important;
+    border-top-right-radius: var(--dp-border-radius) !important;
+    height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   }
 }
 
@@ -654,25 +698,36 @@ body .header > .summary {
   we remove afterwards and so we add our own border directly to side-nav.
 */
 #side-nav {
+  background-color: var(--page-background-color) !important;
+  left: var(--dp-sep);
+  top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   --tree-item-height: 1.3rem; /* Custom height of individual items (default is 30px which is around 2rem) */
-  top: var(--dp-top-height) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height)) !important;
   min-width: 50px !important; /* Set minimum width of navigation bar so that it behaves better on touch screens */
-  background: var(--page-background-color) !important;
-  border-right: 1px solid var(--dp-highlight-color) !important;
+  padding-right: var(--dp-sep) !important;
+  border-radius: var(--dp-border-radius);
+  border: none !important;
+}
+
+/* Set navigation tree width using theme variable for consistency. */
+#nav-tree {
+  background-color: var(--dp-page-color) !important;
+  top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  border-radius: var(--dp-border-radius);
+  border: none !important;
+  padding-top: 4px !important;
+  padding-left: var(--dp-sep) !important;
+  padding-right: var(--dp-sep) !important;
 }
 
 /*
   Removes the default right-side border (box-shadow) on resizable handles
   for a cleaner look if sidebar resizing is enabled.
 */
-.ui-resizable-handle.ui-resizable-e {
+#side-nav .ui-resizable-handle.ui-resizable-e {
   box-shadow: none !important;
-}
-
-/* Set navigation tree width using theme variable for consistency. */
-#nav-tree {
-  width: var(--dp-nav-width) !important;
+  width: 5px !important;
 }
 
 /*
@@ -694,7 +749,16 @@ body .header > .summary {
 */
 #side-nav #nav-tree-contents .item.selected::after,
 #side-nav #nav-tree-contents .item.current::after {
-  content: none !important; /* The blue bar is rendered via ::after, so hide it */
+  /*content: none !important;*/ /* The blue bar is rendered via ::after, so hide it */
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 1px;
+  right: calc(100% - 5px);
+  background: var(--dp-current-item-mark-color);
+  border-radius: 2px !important;
+  pointer-events: none; /* don’t block clicks/scrolls */
 }
 
 /*
@@ -720,11 +784,10 @@ body .header > .summary {
   padding-top: 3px;
   padding-bottom: 4px;
   color: var(--page-foreground-color) !important;
-  background-color: var(--dp-highlight-color-light);
-  border-top: 1px solid var(--dp-highlight-color);
-  border-bottom: 1px solid var(--dp-highlight-color);
-  margin-left: 0px !important;
+  background-color: var(--dp-current-item-color);
   padding-left: 5px !important;
+  margin-right: 0px;
+  border-radius: var(--dp-border-radius) !important;
 }
 
 /*
@@ -789,10 +852,12 @@ have to exclude them.
 #dp-pri-nav,
 #dp-sec-nav {
   position: fixed;
-  top: var(--dp-top-height) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height)) !important;
+  top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   list-style: none;
-  border-right: 1px solid var(--dp-highlight-color);
+  border: none;
+  background-color: var(--dp-page-color) !important;
+  border-radius: var(--dp-border-radius);
   white-space: nowrap;
   overflow-x: hidden;
   overflow-y: auto;
@@ -801,14 +866,14 @@ have to exclude them.
 /* Primary navigation (furthest left). Highest z-index among nav bars. */
 #dp-pri-nav {
   z-index: 9992;
-  left: 0px;
+  left: var(--dp-sep);
   width: var(--dp-pri-width);
 }
 
 /* Secondary navigation (immediately right of primary). */
 #dp-sec-nav {
   z-index: 9991;
-  left: var(--dp-pri-width);
+  left: calc(var(--dp-pri-width) + (2 * var(--dp-sep)));
   width: var(--dp-sec-width);
 }
 
@@ -823,8 +888,8 @@ have to exclude them.
 #dp-sec-nav-resizer {
   touch-action: none;
   position: fixed;
-  top: var(--dp-top-height) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height)) !important;
+  top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   width: 5px;
   background: none;
   cursor: ew-resize;
@@ -832,11 +897,11 @@ have to exclude them.
 }
 
 #dp-pri-nav-resizer {
-  left: calc(var(--dp-pri-width) - 2px);
+  left: calc(var(--dp-pri-width) + var(--dp-sep));
 }
 
 #dp-sec-nav-resizer {
-  left: calc(var(--dp-pri-width) + var(--dp-sec-width) - 2px);
+  left: calc(var(--dp-pri-width) + var(--dp-sec-width) + (2 * var(--dp-sep)));
 }
 
 /* 
@@ -854,8 +919,10 @@ have to exclude them.
 /* Remove extra padding from navigation <ul> containers for a compact look. */
 #dp-pri-nav > ul,
 #dp-sec-nav > ul {
-  padding-left: 0.4em;
-  padding-top: 0.7em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 /* 
@@ -910,6 +977,8 @@ li.dp-has-children:not(:last-child) {
   align-items: center;
   overflow: hidden; /* clip any flex children that overflow */
   background: transparent;
+  padding-left: 5px;
+  padding-right: 10px;
 }
 
 /*
@@ -945,6 +1014,7 @@ li.dp-has-children:not(:last-child) {
   overflow: hidden;
   text-overflow: ellipsis;
   background: transparent;
+  padding-left: 3px;
 }
 
 /* Primary/secondary nav links: normal font/color (unless visited/selected/etc). */
@@ -988,22 +1058,19 @@ li.dp-current > .dp-tree-line {
   padding-bottom: 4px;
   position: relative;
   overflow: visible;
+  background-color: var(--dp-current-item-color);
+  border-radius: var(--dp-border-radius);
 }
 
 li.dp-current > .dp-tree-line::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-
-  /* reach 9,999px beyond both edges of the LI’s box */
-  left: -9999px;
-  right: 0px;
-
-  background: var(--dp-highlight-color-light);
-  border-top: 1px solid var(--dp-highlight-color);
-  border-bottom: 1px solid var(--dp-highlight-color);
-  z-index: -1; /* behind your line/node/link */
+  top: 4px;
+  bottom: 4px;
+  left: 1px;
+  right: calc(100% - 5px);
+  background: var(--dp-current-item-mark-color);
+  border-radius: var(--dp-border-radius);
   pointer-events: none; /* don’t block clicks/scrolls */
 }
 

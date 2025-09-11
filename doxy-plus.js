@@ -979,14 +979,74 @@ File Names: doxy-plus.*
       return;
     }
 
+    /**
+ * Extracts anonymous-namespace entries from a flat [label, href, null] list,
+ * renames them as:
+ *   "anonymous_namespace{file.cpp}"                -> "file.cpp"
+ *   "npi::anonymous_namespace{file.cpp}"           -> "file.cpp npi::"
+ *   "npi::util::anonymous_namespace{file.cpp}"     -> "file.cpp npi::util::"
+ * Removes the extracted entries from the original list and returns a new
+ * array sorted case-insensitively by the pretty label.
+ *
+ * @param {Array<[string, string, null]>} list - Flat namespace items (mutated).
+ * @returns {Array<[string, string, null]>} - Pretty, sorted anonymous items.
+ */
+    function siphonAnonymousNamespaces(list) {
+      const out = [];
+      if (!Array.isArray(list) || list.length === 0) return out;
+
+      const reAnon = /anonymous_namespace\{([^}]+)\}$/;
+
+      for (let i = list.length - 1; i >= 0; --i) {
+        const item = list[i];
+        if (!Array.isArray(item) || item.length < 2) continue;
+
+        const label = String(item[0] ?? "");
+        const href = item[1];
+
+        const m = reAnon.exec(label);
+        if (!m) continue;
+
+        const file = m[1];
+        const prefix = label.slice(0, m.index); // may be empty or end with "::"
+        const pretty = prefix ? (file + " (" + prefix + ")") : file;
+
+        out.push([pretty, href, null]);
+        list.splice(i, 1); // remove in place
+      }
+
+      out.sort((a, b) => {
+        const A = String(a[0]).toLowerCase();
+        const B = String(b[0]).toLowerCase();
+        if (A < B) return -1;
+        if (A > B) return 1;
+        // Optional tie-breaker by href keeps order deterministic
+        const aHref = String(a[1] ?? "");
+        const bHref = String(b[1] ?? "");
+        if (aHref < bHref) return -1;
+        if (aHref > bHref) return 1;
+        return 0;
+      });
+
+      return out;
+    }
+
     // Process the Namespaces -> Namespace List
     const nsListNode = findNodeByNameList(defTree, 'Namespaces', 'Namespace List');
     if (nsListNode) {
       const [, href, kids] = nsListNode;
       if (typeof href === 'string' && IS_HTML_END.test(href) && Array.isArray(kids)) {
         const list = flatAndPrune(kids, '::', ['namespace']);
+        const anon = siphonAnonymousNamespaces(list);
+
+        if(anon.length > 0){
+          list.push(['-- ANONYMOUS --', null, null]);
+          for(let ii = 0; ii < anon.length; ++ii){
+            list.push([anon[ii][0], anon[ii][1], anon[ii][2]]);
+          }
+        }
+
         if (list.length > 0) {
-          renameAnonInPlace(list);
           _priTree.push(['Namespaces', href, list]);
         }
       }
@@ -1096,6 +1156,78 @@ File Names: doxy-plus.*
         _priTree.push(['Files', href, list]);
       }
     }
+
+    // Process File -> File Members
+    const filesMembersNode = findNodeByNameList(defTree, 'Files', 'File Members');
+    if (filesMembersNode) {
+      const [, href, kids] = filesMembersNode;
+      if (Array.isArray(kids) && kids.length > 0) {
+        let temp = flatAndPrune(kids, '::');
+        if (temp.length > 0) {
+          let idx = -1;
+          for (let ii = 0; ii < temp.length; ++ii) {
+            if (temp[ii][0] === 'All') {
+              idx = ii;
+              break;
+            }
+          }
+          if (idx > -1) {
+            let tempHref = temp[idx][1];
+            temp.splice(idx, 1);
+            if (typeof tempHref === 'string' && IS_HTML_END.test(tempHref) && temp.length > 0) {
+              _priTree.push(['File Members', tempHref, temp]);
+            }
+          }
+        }
+      }
+    }
+
+
+    // Enable below to add dummy items to the primary tree to see how it works
+    // with more than 2 level deep tree structure.
+    /*
+    _priTree.push(['Ind A Bla bla bla bla bla bla bla', null, null]);
+    _priTree.push(['Ind B Bla bla bla bla bla bla bla', null, null]);
+
+    _priTree.push([
+      'Level 0',
+      null,
+      [
+        [  // ← child-array starts here
+          'Level 1 Bla bla bla bla bla bla bla',
+          null,
+          [
+            ['Level A Bla bla bla bla bla bla bla', null, null],
+            ['Level B Bla bla bla bla bla bla bla', null, null],
+            ['Level C Bla bla bla bla bla bla bla', null, null],
+            [
+              'Level 2 Bla bla bla bla bla bla bla',
+              null,
+              [
+                ['Level x Bla bla bla bla bla bla bla', null, null],
+                [
+                  'Level 3 Bla bla bla bla bla bla bla',
+                  null,
+                  [
+                    [
+                      'Level 4 Bla bla bla bla bla bla bla',
+                      null,
+                      [
+                        ['Level 5 Bla bla bla bla bla bla bla', null, null]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]  // ← end of children of Level 0
+      ]
+    ]);
+
+    _priTree.push(['Ind C Bla bla bla bla bla bla bla', null, null]);
+    */
+
 
     // Compute whether indentation is needed
     _priTreeIndented = isTreeIndented(_priTree);
@@ -1345,6 +1477,9 @@ File Names: doxy-plus.*
       }
     }
 
+    if (!cln) document.body.setAttribute('dp-doc-header-invisible', 'true');
+    else document.body.removeAttribute('dp-doc-header-invisible');
+
     // If none of the observed elements exist (including the cloned header), do nothing.
     if (!top && !nav && !btm && !cln) return;
 
@@ -1352,13 +1487,13 @@ File Names: doxy-plus.*
     const ro = new ResizeObserver(entries => {
       for (const { target, contentRect } of entries) {
         if (target === top) {
-          document.documentElement.style.setProperty('--dp-top-height', `${contentRect.height + 1}px`); // Update top bar height (+1px for border).
+          document.documentElement.style.setProperty('--dp-top-height', `${contentRect.height}px`); // Update top bar height (+1px for border).
         } else if (target === nav) {
           document.documentElement.style.setProperty('--dp-nav-width', `${contentRect.width}px`); // Update side-nav width.
         } else if (target === btm) {
-          document.documentElement.style.setProperty('--dp-bottom-height', `${contentRect.height + 1}px`); // Update nav-path (breadcrumb) height (+1px for border).
+          document.documentElement.style.setProperty('--dp-bottom-height', `${contentRect.height}px`); // Update nav-path (breadcrumb) height (+1px for border).
         } else if (target === cln) {
-          document.documentElement.style.setProperty('--dp-doc-header-height', `${contentRect.height + 1}px`); // Update cloned doc-content header height (+1px for border).
+          document.documentElement.style.setProperty('--dp-doc-header-height', `${contentRect.height}px`); // Update cloned doc-content header height (+1px for border).
         }
       }
     });

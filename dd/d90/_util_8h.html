@@ -125,10 +125,9 @@ $(function(){initNavTree('dd/d90/_util_8h.html','../../'); initResizable(true); 
 </div><!--header-->
 <div class="contents">
 
-<p>Common utility helpers used across the application.  
+<p>Main container file of <code><a class="el" href="../../d9/db6/namespacenpi_1_1util.html" title="Namespace for small, reusable utility functions.">npi::util</a></code> namespace.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;npi/Iden.hpp&quot;</code><br />
-<code>#include &quot;npi/Def.hpp&quot;</code><br />
+<div class="textblock"><code>#include &quot;npi/Meta.hpp&quot;</code><br />
 </div>
 <p><a href="../../dd/d90/_util_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -142,43 +141,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Common utility helpers used across the application. </p>
-<p>This header declares small, reusable helper functions. Keep utilities focused, side effect free when possible, and independent of global state. Prefer thin, well-named helpers over large frameworks.</p>
-<dl class="section user"><dt>Scope</dt><dd><ul>
-<li>String helpers (e.g., trim, case-insensitive compare, hex encode).</li>
-<li>Filesystem helpers (safe path join, temp file naming, existence checks).</li>
-<li>Time and numeric helpers (duration parsing, clamping, unit conversions).</li>
-<li>OS/Win32 shims where needed, wrapped with clear error handling.</li>
-</ul>
-</dd></dl>
-<dl class="section user"><dt>Design guidelines</dt><dd><ul>
-<li>Prefer view types for inputs: QStringView / QAnyStringView.</li>
-<li>Return owning types for outputs where appropriate: QString / QByteArray.</li>
-<li>Keep headers light: include only what the declarations need.</li>
-<li>Inline only trivial helpers; put non-trivial code in <code>Util.cpp</code>.</li>
-</ul>
-</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>No hidden static state. All functions must be thread-safe.</dd></dl>
-<dl class="section user"><dt>Error handling</dt><dd><ul>
-<li>Return bool with out-parameter, or return optional-like results.</li>
-<li>Do not log inside generic helpers; let callers decide how to report.</li>
-</ul>
-</dd></dl>
-<dl class="section user"><dt>Organization</dt><dd><ul>
-<li>If this file grows, split by domain under inc/npi/util/ (e.g., Str.hpp, Fs.hpp, Win.hpp) and keep this header as a small facade.</li>
-</ul>
-</dd></dl>
-<dl class="section user"><dt>Naming</dt><dd><ul>
-<li>Free functions and non-member symbols do not use a trailing underscore (project convention). Reserve the trailing underscore for class members.</li>
-</ul>
-</dd></dl>
-<dl class="section user"><dt>Dependencies</dt><dd><ul>
-<li>Prefer Qt for app-facing utilities; keep pure algorithmic helpers free of Qt and place them in a separate header if needed.</li>
-</ul>
-</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>Util.cpp</code> for definitions. </dd>
-<dd>
-<code><a class="el" href="../../d5/db7/namespacenpi_1_1iden.html" title="Namespace for immutable product identity.">npi::iden</a></code> and <code><a class="el" href="../../d4/dd7/namespacenpi_1_1def.html" title="Namespace for shipped defaults and operational limits.">npi::def</a></code> for identity and defaults used by utilities. </dd></dl>
+<div class="textblock"><p>Main container file of <code><a class="el" href="../../d9/db6/namespacenpi_1_1util.html" title="Namespace for small, reusable utility functions.">npi::util</a></code> namespace. </p>
+<p>This header declares small, reusable helper functions. Keep utilities focused, side effect free when possible, and independent of global state. Prefer thin, well-named helpers over large frameworks. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
@@ -186,14 +150,14 @@ Namespaces</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d90/_util_8h.html">Util.h</a></li>
-    <li class="footer">Generated on Mon Sep 8 2025 10:39:58 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Thu Sep 11 2025 13:30:42 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Sep 8 2025 10:39:58'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Sep 11 2025 13:30:42'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
