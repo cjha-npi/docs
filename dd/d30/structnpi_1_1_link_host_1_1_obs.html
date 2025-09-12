@@ -127,7 +127,7 @@ $(function(){initNavTree('dd/d30/structnpi_1_1_link_host_1_1_obs.html','../../')
 </div><!--header-->
 <div class="contents">
 
-<p>Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects.  
+<p>Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="Test-1 A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -159,13 +159,13 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct npi::LinkHost&lt; T &gt;::Obs</div><p>Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects. </p>
+struct npi::LinkHost&lt; T &gt;::Obs</div><p>Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="Test-1 A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects. </p>
 <dl class="section note"><dt>Note</dt><dd><ul>
 <li>Holds a <code>std::shared_ptr&lt;std::atomic&lt;void*&gt;&gt;</code> to ensure thread-safe access to a type-erased pointer.</li>
-<li>Type-erased pointer is used instead of actual object pointer to allow for easy casting and polymorphic relations. To obtain the actual pointer, the <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects have to use <code>static_cast&lt;T*&gt;</code> which is done in <code><a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a>&lt;T&gt;::<a class="el" href="../../dc/d75/classnpi_1_1_link_host.html#a6cd9c1bd41b58506f19e67a257f84043" title="Retrieve the raw pointer to the hosted object.">get_()</a></code>.</li>
+<li>Type-erased pointer is used instead of actual object pointer to allow for easy casting and polymorphic relations. To obtain the actual pointer, the <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="Test-1 A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects have to use <code>static_cast&lt;T*&gt;</code> which is done in <code><a class="el" href="../../df/d94/classnpi_1_1_link.html" title="Test-1 A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a>&lt;T&gt;::<a class="el" href="../../dc/d75/classnpi_1_1_link_host.html#a6cd9c1bd41b58506f19e67a257f84043" title="Retrieve the raw pointer to the hosted object.">get_()</a></code>.</li>
 </ul>
 </dd></dl>
-<p>This struct object holds the type-erased pointer to the object. In its destructor the pointer is set to nullptr using <code>std::memory_order_release</code> to ensure thread-safe access. Since the object of this struct is stored as a <code>std::shared_ptr&lt;<a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html" title="Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of th...">Obs</a>&gt;</code>, once the last reference to <code>std::shared_ptr&lt;<a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html" title="Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of th...">Obs</a>&gt;</code> is destroyed, the destructor will be called and the object in the <code>std::atomic&lt;void*&gt;</code> will be replaced with nullptr. This allows the <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects to check if the object can still be dereferenced or not. </p>
+<p>This struct object holds the type-erased pointer to the object. In its destructor the pointer is set to nullptr using <code>std::memory_order_release</code> to ensure thread-safe access. Since the object of this struct is stored as a <code>std::shared_ptr&lt;<a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html" title="Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of th...">Obs</a>&gt;</code>, once the last reference to <code>std::shared_ptr&lt;<a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html" title="Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of th...">Obs</a>&gt;</code> is destroyed, the destructor will be called and the object in the <code>std::atomic&lt;void*&gt;</code> will be replaced with nullptr. This allows the <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="Test-1 A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects to check if the object can still be dereferenced or not. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad915210ad3a1b8054708ac3f4c24b2bc" name="ad915210ad3a1b8054708ac3f4c24b2bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad915210ad3a1b8054708ac3f4c24b2bc">&#9670;&#160;</a></span>Obs() <span class="overload">[1/3]</span></h2>
@@ -378,14 +378,14 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></li><li class="navelem"><a class="el" href="../../dc/d75/classnpi_1_1_link_host.html">LinkHost</a></li><li class="navelem"><a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html">Obs</a></li>
-    <li class="footer">Generated on Fri Sep 12 2025 10:22:09 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Fri Sep 12 2025 11:15:31 for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Sep 12 2025 10:22:09'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Fri Sep 12 2025 11:15:31'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

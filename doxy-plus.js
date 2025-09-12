@@ -1728,6 +1728,7 @@ File Names: doxy-plus.*
           // toggle button. This button forms the expand/collapse node button. All items have it but only the ones that have children have it enabled
           // and visible, this way the left padding of all items remain the same.
           const node = document.createElement('button'); // button class for the node
+          node.classList.add("disclosure-icon");
           node.classList.add('dp-tree-node'); // this name will be used to grab item -> line -> node in this and doxy-plus.css file
           node.setAttribute('aria-expanded', 'false'); // this is for screen readers
           node.setAttribute('type', 'button'); // assign the type as button
@@ -1756,7 +1757,7 @@ File Names: doxy-plus.*
 
           // assigning the text value for the node, this is what will be displayed.
           // '○' and '●' are choosen because it appears correctly on Windows and Android browsers (many other options do not appear correctly)
-          node.textContent = isOpen ? '⮟' : '⮞';
+          node.textContent = isOpen ? "\u2B9F" : "\u2B9E";
 
           // Attach node and link to line, node and link can be accessed as line -> node and line -> link
           line.append(node, link);

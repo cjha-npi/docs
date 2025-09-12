@@ -3,6 +3,25 @@ Prefix: dp-
 File Names: doxy-plus.*
 */
 
+@font-face {
+  font-family: "noto-2b9";
+  src: url("/fonts/noto-2b9.woff2") format("woff2"),
+       url("/fonts/noto-2b9.woff") format("woff");
+  font-display: swap;
+  unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
+}
+
+.disclosure-icon {
+  font-family: "noto-2b9", system-ui, "Segoe UI Symbol", "Apple Symbols", sans-serif;
+  line-height: 1;
+  display: inline-block;
+  width: 1em;            /* consistent box for alignment */
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+
 /* Variable names starting with --dp- are Doxy-Plus variables */
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
