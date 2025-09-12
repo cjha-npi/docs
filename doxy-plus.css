@@ -907,6 +907,7 @@ have to exclude them.
   background: none;
   cursor: ew-resize;
   z-index: 9993;
+  background-color: rgba(0,100,0,0.1) !important;
 }
 
 #dp-pri-nav-resizer {
