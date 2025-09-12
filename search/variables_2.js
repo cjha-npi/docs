@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['mainsettingsfilename_0',['mainSettingsFileName',['../d6/d93/namespacenpi_1_1meta.html#aa862700693b838526302eb8e5d83525a',1,'npi::meta']]]
+  ['obj_5f_0',['obj_',['../dc/d75/classnpi_1_1_link_host.html#a2ef0fdbe8b408dca6860c5b70eec2f0a',1,'npi::LinkHost']]],
+  ['orgdirname_1',['orgDirName',['../dc/dba/namespacenpi_1_1app.html#a786b074c596617d18abb1957f26d3156',1,'npi::app']]],
+  ['orgdomain_2',['orgDomain',['../dc/dba/namespacenpi_1_1app.html#a306977cd103a3449007db1e926e213e8',1,'npi::app']]],
+  ['orgname_3',['orgName',['../dc/dba/namespacenpi_1_1app.html#adc67984091da507784ab70eca8975491',1,'npi::app']]]
 ];

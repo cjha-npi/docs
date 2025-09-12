@@ -67,6 +67,7 @@ html {
   --dp-scrollbar-color: rgb(160, 200, 240);
   --dp-btn-color: rgb(225, 230, 240);
   --dp-btn-hover-color: rgb(235, 240, 250);
+  --dp-item-hover-color: rgba(180,220,225,0.5);
   --dp-current-item-color: rgb(180, 220, 255);
   --dp-current-item-mark-color: rgb(50, 100, 210);
   --dp-visited-text-color: rgb(150, 0, 150);
@@ -88,6 +89,7 @@ html.dark-mode {
   --dp-scrollbar-color: rgb(30, 70, 110);
   --dp-btn-color: rgb(13, 17, 23);
   --dp-btn-hover-color: rgb(50, 55, 65);
+  --dp-item-hover-color: rgba(50,55,70,0.3);
   --dp-current-item-color: rgb(50, 55, 70);
   --dp-current-item-mark-color: rgb(70, 120, 230);
   --dp-visited-text-color: rgb(250, 100, 250);
@@ -919,10 +921,10 @@ have to exclude them.
 /* Remove extra padding from navigation <ul> containers for a compact look. */
 #dp-pri-nav > ul,
 #dp-sec-nav > ul {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
 }
 
 /* 
@@ -938,16 +940,19 @@ have to exclude them.
   Hide children by default for expandable/collapsible nodes.
   - Only shown when parent has .dp-node-open.
 */
-li.dp-has-children > ul {
+#dp-pri-nav li.dp-has-children > ul,
+#dp-sec-nav li.dp-has-children > ul {
   display: none;
 }
 
-li.dp-has-children.dp-node-open > ul {
+#dp-pri-nav li.dp-has-children.dp-node-open > ul,
+#dp-sec-nav li.dp-has-children.dp-node-open > ul {
   display: block;
 }
 
 /* Main tree list: removes default list style, removes padding/margin. */
-.dp-tree-list {
+#dp-pri-nav .dp-tree-list,
+#dp-sec-nav .dp-tree-list {
   display: block;
   list-style: none;
   padding: 0px;
@@ -958,13 +963,15 @@ li.dp-has-children.dp-node-open > ul {
   Each tree item: relative for positioning children (e.g., highlight backgrounds).
   Negative margin reduces vertical gap between items.
 */
-.dp-tree-item {
+#dp-pri-nav .dp-tree-item,
+#dp-sec-nav .dp-tree-item {
   position: relative;
   margin-block: -2px;
 }
 
 /* Add a bit of vertical spacing between expandable nodes (not the last child). */
-li.dp-has-children:not(:last-child) {
+#dp-pri-nav li.dp-has-children:not(:last-child),
+#dp-sec-nav li.dp-has-children:not(:last-child) {
   margin-bottom: 2px;
 }
 
@@ -972,7 +979,8 @@ li.dp-has-children:not(:last-child) {
   Each tree row: flex layout for icon + text alignment.
   overflow: hidden ensures long text or icons don’t break the row.
 */
-.dp-tree-line {
+#dp-pri-nav .dp-tree-line,
+#dp-sec-nav .dp-tree-line {
   display: flex;
   align-items: center;
   overflow: hidden; /* clip any flex children that overflow */
@@ -987,7 +995,8 @@ li.dp-has-children:not(:last-child) {
   - Font size: 1.5em for visibility.
   - No border/background.
 */
-.dp-tree-node {
+#dp-pri-nav .dp-tree-node,
+#dp-sec-nav .dp-tree-node {
   flex: 0 0 auto; /* keep button its intrinsic size */
   cursor: pointer;
   border: none;
@@ -1007,7 +1016,8 @@ li.dp-has-children:not(:last-child) {
   - Prevents overflow (shows ellipsis for long names).
   - No background for seamless look.
 */
-.dp-tree-link {
+#dp-pri-nav .dp-tree-link,
+#dp-sec-nav .dp-tree-link {
   flex: 1 1 auto; /* take the rest of the space */
   min-width: 0; /* allow it to shrink past its content size */
   white-space: nowrap;
@@ -1025,7 +1035,8 @@ li.dp-has-children:not(:last-child) {
 }
 
 /* Parent links: slightly larger and bolder for section headings. */
-li.dp-has-children > .dp-tree-line > .dp-tree-link {
+#dp-pri-nav li.dp-has-children > .dp-tree-line > .dp-tree-link,
+#dp-sec-nav li.dp-has-children > .dp-tree-line > .dp-tree-link {
   font-size: 1.1em !important;
   font-weight: 500 !important;
   margin-bottom: 4px;
@@ -1051,7 +1062,8 @@ li.dp-has-children > .dp-tree-line > .dp-tree-link {
   - ::before extends the highlight background to the left edge (beyond LI).
   - z-index ensures highlight is beneath text/icons.
 */
-li.dp-current > .dp-tree-line {
+#dp-pri-nav li.dp-current > .dp-tree-line,
+#dp-sec-nav li.dp-current > .dp-tree-line {
   margin-top: 4px;
   margin-bottom: 4px;
   padding-top: 3px;
@@ -1062,7 +1074,8 @@ li.dp-current > .dp-tree-line {
   border-radius: var(--dp-border-radius);
 }
 
-li.dp-current > .dp-tree-line::before {
+#dp-pri-nav li.dp-current > .dp-tree-line::before,
+#dp-sec-nav li.dp-current > .dp-tree-line::before {
   content: "";
   position: absolute;
   top: 4px;
@@ -1081,4 +1094,10 @@ li.dp-current > .dp-tree-line::before {
   cursor: default !important; /* no pointer */
   text-decoration: none !important; /* remove underline if any */
   pointer-events: none !important; /* prevent any interaction */
+}
+
+#dp-pri-nav li:not(.dp-current):not(.dp-tree-no-href) > .dp-tree-line:hover,
+#dp-sec-nav li:not(.dp-current):not(.dp-tree-no-href) > .dp-tree-line:hover{
+  background-color: var(--dp-item-hover-color) !important;
+  border-radius: var(--dp-border-radius);
 }

@@ -1,14 +1,15 @@
 var indexSectionsWithContent =
 {
-  0: "acdegiklmnoprsuw~",
+  0: "acdegiklmnoprstuw~",
   1: "lo",
   2: "an",
-  3: "cdlmpu",
-  4: "adegiklmoprsuw~",
-  5: "almopsuw",
+  3: "acl",
+  4: "adegikloprsuw~",
+  5: "alopstuw",
   6: "los",
   7: "nw",
-  8: "n"
+  8: "adn",
+  9: "n"
 };
 
 var indexSectionNames =
@@ -21,7 +22,8 @@ var indexSectionNames =
   5: "variables",
   6: "related",
   7: "defines",
-  8: "concepts"
+  8: "groups",
+  9: "concepts"
 };
 
 var indexSectionLabels =
@@ -34,6 +36,7 @@ var indexSectionLabels =
   5: "Variables",
   6: "Friends",
   7: "Macros",
-  8: "Concepts"
+  8: "Modules",
+  9: "Concepts"
 };
 

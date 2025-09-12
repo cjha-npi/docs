@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['knownfolderpathwin_0',['knownFolderPathWin',['../db/d2f/namespaceanonymous__namespace_02_path_8cpp_03.html#aba2b4a256a54e701250ff5359805a3b5',1,'anonymous_namespace{Path.cpp}']]]
+  ['knownfolderpathwin_0',['knownFolderPathWin',['../da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03.html#a5bca34d4144e402dfa63ba6588cfa0c3',1,'anonymous_namespace{AppUtil.cpp}']]]
 ];

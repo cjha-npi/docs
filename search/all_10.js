@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['_7elink_0',['~Link',['../df/d94/classnpi_1_1_link.html#ad22b9361d27be658a456e405820be5e5',1,'npi::Link']]],
-  ['_7elinkfromthis_1',['~LinkFromThis',['../d1/d51/classnpi_1_1_link_from_this.html#ae75b7182e1a9d11abdd1ca8aa9e1aa9e',1,'npi::LinkFromThis']]],
-  ['_7elinkhost_2',['~LinkHost',['../dc/d75/classnpi_1_1_link_host.html#a74c58eedbaecb1138a18b63afbaf57a2',1,'npi::LinkHost']]],
-  ['_7elinkweakhost_3',['~LinkWeakHost',['../d5/d88/classnpi_1_1_link_weak_host.html#a62d7390ae25239de5f1b094811796ae2',1,'npi::LinkWeakHost']]],
-  ['_7eobs_4',['~Obs',['../dd/d30/structnpi_1_1_link_host_1_1_obs.html#a9e10cc0715839c20092dfaf4e426870c',1,'npi::LinkHost::Obs']]]
+  ['weakhost_5f_0',['weakHost_',['../dc/d75/classnpi_1_1_link_host.html#a0d65a215e2d2d7d1b96c156e41418ad0',1,'npi::LinkHost']]],
+  ['weakloc_5f_1',['weakLoc_',['../d5/d88/classnpi_1_1_link_weak_host.html#a33e88a8ccbd91d26392b972635a7b1fa',1,'npi::LinkWeakHost']]],
+  ['weakobj_5f_2',['weakObj_',['../d5/d88/classnpi_1_1_link_weak_host.html#af6022b57d832f921515571b2244ec3cd',1,'npi::LinkWeakHost']]],
+  ['weakuni_5f_3',['weakUni_',['../d5/d88/classnpi_1_1_link_weak_host.html#a1faa5f51ebf96fc8c846926ebf4293c0',1,'npi::LinkWeakHost::weakUni_'],['../d1/d51/classnpi_1_1_link_from_this.html#a3deba1b7929e577995d9ae0db2d76d68',1,'npi::LinkFromThis::weakUni_']]],
+  ['win32_5flean_5fand_5fmean_4',['WIN32_LEAN_AND_MEAN',['../d1/d8b/_app_util_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'AppUtil.cpp']]]
 ];

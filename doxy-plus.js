@@ -931,6 +931,7 @@ File Names: doxy-plus.*
       return result;
     }
 
+    /*
     // Mutates: rewrites "anonymous_namespace" -> "anon" in-place, at every depth.
     function renameAnonInPlace(tree) {
       if (!Array.isArray(tree)) return;
@@ -957,6 +958,7 @@ File Names: doxy-plus.*
         }
       }
     }
+    */
 
 
     // Traverse a cloned default tree by a sequence of section names
@@ -980,17 +982,17 @@ File Names: doxy-plus.*
     }
 
     /**
- * Extracts anonymous-namespace entries from a flat [label, href, null] list,
- * renames them as:
- *   "anonymous_namespace{file.cpp}"                -> "file.cpp"
- *   "npi::anonymous_namespace{file.cpp}"           -> "file.cpp npi::"
- *   "npi::util::anonymous_namespace{file.cpp}"     -> "file.cpp npi::util::"
- * Removes the extracted entries from the original list and returns a new
- * array sorted case-insensitively by the pretty label.
- *
- * @param {Array<[string, string, null]>} list - Flat namespace items (mutated).
- * @returns {Array<[string, string, null]>} - Pretty, sorted anonymous items.
- */
+     * Extracts anonymous-namespace entries from a flat [label, href, null] list,
+     * renames them as:
+     *   "anonymous_namespace{file.cpp}"                -> "file.cpp"
+     *   "npi::anonymous_namespace{file.cpp}"           -> "file.cpp npi::"
+     *   "npi::util::anonymous_namespace{file.cpp}"     -> "file.cpp npi::util::"
+     * Removes the extracted entries from the original list and returns a new
+     * array sorted case-insensitively by the pretty label.
+     *
+     * @param {Array<[string, string, null]>} list - Flat namespace items (mutated).
+     * @returns {Array<[string, string, null]>} - Pretty, sorted anonymous items.
+     */
     function siphonAnonymousNamespaces(list) {
       const out = [];
       if (!Array.isArray(list) || list.length === 0) return out;
@@ -1039,9 +1041,9 @@ File Names: doxy-plus.*
         const list = flatAndPrune(kids, '::', ['namespace']);
         const anon = siphonAnonymousNamespaces(list);
 
-        if(anon.length > 0){
+        if (anon.length > 0) {
           list.push(['-- ANONYMOUS --', null, null]);
-          for(let ii = 0; ii < anon.length; ++ii){
+          for (let ii = 0; ii < anon.length; ++ii) {
             list.push([anon[ii][0], anon[ii][1], anon[ii][2]]);
           }
         }
@@ -1246,155 +1248,208 @@ File Names: doxy-plus.*
   // #region 🟩 GEN SEC TREE
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+
+  // Drop-in replacement: builds "Page Sections" first (flat H2–H6), then member groups.
   async function genSecTree() {
-    // Build the secondary navigation tree (_secTree) for member declarations on class/struct pages:
-    // 1. Reset _secTree and remarks.
-    // 2. If the current page isn’t a class or struct, note and exit.
-    // 3. Wait for the main content container to appear.
-    // 4. Select all member declaration tables.
-    // 5. For each table:
-    //    a. Determine the group header text and anchor href.
-    //    b. Scan each row for unique member links, skipping documentation cells.
-    //    c. Format the signature text for consistency.
-    //    d. Collect [name, href, null] entries.
-    // 6. Push non-empty groups into _secTree.
-    // 7. If any groups were added, activate the secondary nav and record success; otherwise record no-members.
-
-    // Clear previous tree and remarks
+    // ==============================
+    // Reset
+    // ==============================
     _secTree.length = 0;
-    _secTreeRemarks = '';
+    _secTreeRemarks = "";
 
-    // Only proceed on class/struct pages
-    if (!IS_CLASS_OR_STRUCT_PAGE) {
-      _secTreeRemarks = 'Not a Class or Struct Page';
-      //console.log('Gen Sec Tree: Not a Class or Struct Page');
-      return;
+    // ==============================
+    // Utilities
+    // ==============================
+    function formatSignature(text) {
+      if (typeof text !== "string") return text;
+      return text
+        // Remove space before *, &, &&
+        .replace(/\s+([*&]{1,2})/g, "$1")
+        // Ensure space after *, &, &&
+        .replace(/([*&]{1,2})(?!\s)/g, "$1 ")
+        // Remove spaces inside <...>
+        .replace(/<\s+/g, "<")
+        .replace(/\s+>/g, ">")
+        .replace(/\s+<\s+/g, "<")
+        .replace(/\s+>\s+/g, ">")
+        // Remove space before commas, ensure one after
+        .replace(/\s+,/g, ",")
+        .replace(/,(?!\s)/g, ", ")
+        // Remove space after ( and before )
+        .replace(/\(\s+/g, "(")
+        .replace(/\s+\)/g, ")")
+        // Remove space before (
+        .replace(/\s+\(/g, "(")
+        // Add space before and after = in special cases
+        .replace(/\s*=\s*(default|delete|0)/g, " = $1")
+        // Collapse multiple spaces
+        .replace(/\s{2,}/g, " ")
+        // Strip leading "}" and trailing "{"
+        .replace(/^\}+\s*/, "")
+        .replace(/\s*\{+$/, "")
+        .trim();
     }
 
-    // Wait for the main content container
-    const contents = await waitFor('div.contents, div.content, main');
+    const seenGlobalIds = new Set();
+    function slugify(text) {
+      return (text || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .replace(/-{2,}/g, "-")
+        .slice(0, 80) || "section";
+    }
+
+    function ensureHeadingId(h) {
+      // Prefer existing id on heading
+      let id = h.getAttribute("id");
+      // Or an inner anchor id/name
+      if (!id) {
+        const a = h.querySelector("a[id], a[name]");
+        id = a?.getAttribute("id") || a?.getAttribute("name") || null;
+      }
+      // Create if missing
+      if (!id) {
+        const base = slugify(h.textContent || "section");
+        let unique = base, n = 2;
+        while (seenGlobalIds.has(unique) || document.getElementById(unique)) {
+          unique = base + "-" + n++;
+        }
+        id = unique;
+        h.setAttribute("id", id);
+      }
+      seenGlobalIds.add(id);
+      return id;
+    }
+
+    function isVisible(el) {
+      if (!el) return false;
+      const rects = el.getClientRects();
+      if ((el.offsetWidth || el.offsetHeight || rects.length) === 0) return false;
+      const cs = window.getComputedStyle(el);
+      if (cs.visibility === "hidden" || cs.display === "none") return false;
+      return true;
+    }
+
+    function ensureTopAnchor(container) {
+      // Use existing common ids if present
+      if (document.getElementById("top")) return "#top";
+      if (document.getElementById("page-top")) return "#page-top";
+      // Create a sentinel at the top of the content container
+      const top = document.createElement("div");
+      top.id = "page-top";
+      top.style.position = "relative";
+      top.style.width = "0";
+      top.style.height = "0";
+      container.prepend(top);
+      return "#page-top";
+    }
+
+    // ==============================
+    // Content root
+    // ==============================
+    const contents = await waitFor("div.contents, div.content, main");
     if (!contents) {
       console.error('Gen Sec Tree: wait for "div.contents, div.content, main" timed out, not found');
       return;
     }
 
-    // Locate all member declaration tables
-    const tables = Array.from(contents.querySelectorAll("table.memberdecls"));
-    if (tables.length === 0) {
-      _secTreeRemarks = 'Empty "table.memberdecls" element array';
-      //console.log('Gen Sec Tree: Empty "table.memberdecls" element array');
-      return;
-    }
+    // ==============================
+    // "Page Sections" (flat H2–H6), only if at least one exists
+    // ==============================
+    (function buildPageSections() {
+      const heads = Array.from(contents.querySelectorAll("h2, h3, h4, h5, h6"))
+        .filter(h => {
+          const txt = (h.textContent || "").replace(/\s+/g, " ").trim();
+          return !!txt && isVisible(h);
+        });
 
-    // Helper: clean up C++ style signatures
-    function formatSignature(text) {
-      if (typeof text !== 'string') return text;
+      if (heads.length === 0) return; // Do not include "Page Sections" at all
 
-      return text
-        // Remove space before *, &, &&
-        .replace(/\s+([*&]{1,2})/g, '$1')
-
-        // Ensure space after *, &, &&
-        .replace(/([*&]{1,2})(?!\s)/g, '$1 ')
-
-        // Remove spaces inside <...>
-        .replace(/<\s+/g, '<')
-        .replace(/\s+>/g, '>')
-        .replace(/\s+<\s+/g, '<')
-        .replace(/\s+>\s+/g, '>')
-
-        // Remove space before commas, ensure one after
-        .replace(/\s+,/g, ',')
-        .replace(/,(?!\s)/g, ', ')
-
-        // Remove space after ( and before )
-        .replace(/\(\s+/g, '(')
-        .replace(/\s+\)/g, ')')
-
-        // ❗ Remove space before (
-        .replace(/\s+\(/g, '(')
-
-        // Add space before and after = in special cases
-        .replace(/\s*=\s*(default|delete|0)/g, ' = $1')
-
-        // Collapse multiple spaces and trim
-        .replace(/\s{2,}/g, ' ')
-
-        // leading “}”
-        .replace(/^\}+\s*/, '')
-
-        // trailing “{”
-        .replace(/\s*\{+$/, '')
-
-        .trim();
-    }
-
-    // Process each member table
-    const headers = Array.from(contents.querySelectorAll("h2.groupheader"));
-    tables.forEach((table, idx) => {
-      const grpSigs = [];
-      const seenName = new Set();
+      const items = [];
       const seenHref = new Set();
 
-      // Determine header text and anchor
-      const headName = headers[idx]?.textContent.trim() || `Members ${idx + 1}`;
-      const headerEl = headers[idx];
-      const anchorEl = headerEl.querySelector("a[id], a[name]");
-      const anchorId = anchorEl?.getAttribute("id") || anchorEl?.getAttribute("name") || null;
-      const headHref = anchorId ? `#${anchorId}` : null;
-
-      // Extract unique member links and format them
-      table.querySelectorAll("a[href^='#']").forEach(a => {
-        if (a.closest("div.memdoc") || a.closest("td.mdescRight")) return;
-
-        const leafHref = a.getAttribute("href");
-        if (seenHref.has(leafHref)) {
-          return;
+      heads.forEach(h => {
+        const id = ensureHeadingId(h);
+        const href = "#" + id;
+        const label = (h.textContent || "").replace(/\s+/g, " ").trim();
+        if (!seenHref.has(href)) {
+          seenHref.add(href);
+          items.push([label, href, null]);
         }
-
-        const row = a.closest("tr");
-        if (!row) {
-          return;
-        }
-        const tds = row.querySelectorAll("td");
-        if (tds.length < 2) {
-          return;
-        }
-
-        const lftText = tds[0].innerText.replace(/\s+/g, ' ').trim();
-        const ritText = tds[1].innerText.replace(/\s+/g, ' ').trim();
-        let leafNameTemp = `${lftText} ${ritText}`.trim();
-        let leafName = formatSignature(leafNameTemp);
-        if (leafName.startsWith('enum')) {
-          leafName = leafName.replace(/\s*\{[\s\S]*\}/, '').trim();
-        }
-        if (seenName.has(leafName)) {
-          return;
-        }
-
-        seenHref.add(leafHref);
-        seenName.add(leafName);
-
-        grpSigs.push([leafName, leafHref, null]);
       });
 
-      // Add this group if it has entries
-      if (grpSigs.length > 0) {
-        _secTree.push([headName, headHref, grpSigs]);
+      if (items.length > 0) {
+        const topHref = ensureTopAnchor(contents);
+        _secTree.push(["Page Sections", topHref, items]);
       }
-    });
+    })();
 
-    // Activate nav or record empty result
+    // ==============================
+    // Member groups (original logic), appended after "Page Sections"
+    // ==============================
+    (function buildMemberGroups() {
+      const tables = Array.from(contents.querySelectorAll("table.memberdecls"));
+      if (tables.length === 0) return;
+
+      const headers = Array.from(contents.querySelectorAll("h2.groupheader"));
+
+      tables.forEach((table, idx) => {
+        const grpSigs = [];
+        const seenName = new Set();
+        const seenHref = new Set();
+
+        const headerEl = headers[idx];
+        const headName = headerEl?.textContent?.trim() || "Members " + (idx + 1);
+        const anchorEl = headerEl?.querySelector("a[id], a[name]");
+        const anchorId = anchorEl?.getAttribute("id") || anchorEl?.getAttribute("name") || null;
+        const headHref = anchorId ? "#" + anchorId : null;
+
+        table.querySelectorAll("a[href^='#']").forEach(a => {
+          if (a.closest("div.memdoc") || a.closest("td.mdescRight")) return;
+
+          const leafHref = a.getAttribute("href");
+          if (!leafHref || seenHref.has(leafHref)) return;
+
+          const row = a.closest("tr");
+          if (!row) return;
+
+          const tds = row.querySelectorAll("td");
+          if (tds.length < 2) return;
+
+          const lftText = tds[0].innerText.replace(/\s+/g, " ").trim();
+          const ritText = tds[1].innerText.replace(/\s+/g, " ").trim();
+
+          let leafName = formatSignature((lftText + " " + ritText).trim());
+          if (leafName.startsWith("enum")) {
+            leafName = leafName.replace(/\s*\{[\s\S]*\}/, "").trim();
+          }
+
+          if (seenName.has(leafName)) return;
+
+          seenHref.add(leafHref);
+          seenName.add(leafName);
+          grpSigs.push([leafName, leafHref, null]);
+        });
+
+        if (grpSigs.length > 0) {
+          _secTree.push([headName, headHref, grpSigs]);
+        }
+      });
+    })();
+
+    // ==============================
+    // Finalize
+    // ==============================
     if (_secTree.length > 0) {
-      document.body.setAttribute('dp-sec-nav-active', 'true');
-      _secTreeRemarks = 'Successfully generated member signatures';
-      //console.log('Gen Sec Tree: Successfully generated member signatures');
-    }
-    else {
-      _secTreeRemarks = 'No member signature found';
-      //console.log('Gen Sec Tree: No member signature found');
+      document.body.setAttribute("dp-sec-nav-active", "true");
+      _secTreeRemarks = "Secondary navigation generated";
+    } else {
+      _secTreeRemarks = "No headings or members found";
     }
   }
+
+
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 GEN SEC TREE
@@ -1701,7 +1756,7 @@ File Names: doxy-plus.*
 
           // assigning the text value for the node, this is what will be displayed.
           // '○' and '●' are choosen because it appears correctly on Windows and Android browsers (many other options do not appear correctly)
-          node.textContent = isOpen ? '○' : '●';
+          node.textContent = isOpen ? '⮟' : '⮞';
 
           // Attach node and link to line, node and link can be accessed as line -> node and line -> link
           line.append(node, link);
@@ -1790,7 +1845,7 @@ File Names: doxy-plus.*
             // change the node text to reflect expanded state
             const btn = parent.querySelector(':scope > .dp-tree-line > .dp-tree-node');
             if (btn) {
-              btn.textContent = '○';
+              btn.textContent = '⮟';
               btn.setAttribute('aria-expanded', 'true');
             }
 
@@ -1842,7 +1897,7 @@ File Names: doxy-plus.*
         const isOpen = li.classList.toggle('dp-node-open');
 
         // set the correct text on the node given is expand/collapse (or open/close) state
-        evt.target.textContent = isOpen ? '○' : '●';
+        evt.target.textContent = isOpen ? '⮟' : '⮞';
 
         // add the string for screen-readers
         evt.target.setAttribute('aria-expanded', String(isOpen));
@@ -1970,7 +2025,7 @@ File Names: doxy-plus.*
             focusables[idx].classList.add('dp-node-open');
 
             // change the node's text to reflect its opened state
-            node.textContent = '○';
+            node.textContent = '📂';
 
             // set the correct string for screen readers
             node.setAttribute('aria-expanded', 'true');
@@ -2033,7 +2088,7 @@ File Names: doxy-plus.*
               parLi.classList.remove('dp-node-open');
 
               // change the parent item's node text to reflect its collapsed state
-              parNode.textContent = '●';
+              parNode.textContent = '📁';
 
               // set the correct string for screen readers
               parNode.setAttribute('aria-expanded', 'false');
