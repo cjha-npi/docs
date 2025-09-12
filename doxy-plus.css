@@ -118,6 +118,12 @@ body {
 }
 */
 
+html, body {
+  height: auto;              /* don’t lock to 100%/100vh if not needed */
+  overflow-y: auto;          /* root actually scrolls */
+  overscroll-behavior-y: auto !important;  /* don’t block browser gestures */
+}
+
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DOC MARGIN LEFT */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
