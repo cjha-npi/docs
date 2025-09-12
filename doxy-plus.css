@@ -662,10 +662,12 @@ body .header > .summary {
   border-bottom-left-radius: var(--dp-border-radius) !important;
   border-bottom-right-radius: var(--dp-border-radius) !important;
   height: calc(100vh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - 2px) !important;
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - 2px) !important;
 }
 
 body[dp-doc-header-invisible="true"] #doc-content {
   height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   border-radius: var(--dp-border-radius) !important;
 }
 
@@ -681,6 +683,7 @@ body[dp-doc-header-invisible="true"] #doc-content {
     border-top-left-radius: var(--dp-border-radius) !important;
     border-top-right-radius: var(--dp-border-radius) !important;
     height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+    height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   }
 }
 
@@ -704,6 +707,7 @@ body[dp-doc-header-invisible="true"] #doc-content {
   left: var(--dp-sep);
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
   height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   --tree-item-height: 1.3rem; /* Custom height of individual items (default is 30px which is around 2rem) */
   min-width: 50px !important; /* Set minimum width of navigation bar so that it behaves better on touch screens */
   padding-right: var(--dp-sep) !important;
@@ -716,6 +720,7 @@ body[dp-doc-header-invisible="true"] #doc-content {
   background-color: var(--dp-page-color) !important;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
   height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   border-radius: var(--dp-border-radius);
   border: none !important;
   padding-top: 4px !important;
@@ -856,6 +861,7 @@ have to exclude them.
   position: fixed;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
   height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  height: calc(100ddvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   list-style: none;
   border: none;
   background-color: var(--dp-page-color) !important;
@@ -891,6 +897,7 @@ have to exclude them.
   touch-action: none;
   position: fixed;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   width: 5px;
   background: none;
