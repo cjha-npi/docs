@@ -102,17 +102,21 @@ html.dark-mode {
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /* Change the values so that on non-common display sizes it appears correctly */
+/*
 html,
 body {
   min-height: -webkit-fill-available;
   overflow-x: hidden;
   overflow-y: hidden;
 }
+*/
 
 /* Nudge the width if necessary (again for non-common display sizes) */
+/*
 #content {
   width: calc(100% + 1px) !important;
 }
+*/
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DOC MARGIN LEFT */
@@ -860,8 +864,8 @@ have to exclude them.
 #dp-sec-nav {
   position: fixed;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  height: calc(100ddvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   list-style: none;
   border: none;
   background-color: var(--dp-page-color) !important;
