@@ -925,8 +925,8 @@ have to exclude them.
 @media (pointer: coarse) {
   #dp-pri-nav-resizer,
   #dp-sec-nav-resizer {
-    width: 20px !important;
-    margin-left: -10px !important;
+    width: 35px !important;
+    margin-left: -15px !important;
   }
 }
 
