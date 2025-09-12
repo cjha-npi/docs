@@ -1729,6 +1729,7 @@ File Names: doxy-plus.*
           // and visible, this way the left padding of all items remain the same.
           const node = document.createElement('button'); // button class for the node
           node.classList.add("disclosure-icon");
+          node.setAttribute("aria-hidden", "true");
           node.classList.add('dp-tree-node'); // this name will be used to grab item -> line -> node in this and doxy-plus.css file
           node.setAttribute('aria-expanded', 'false'); // this is for screen readers
           node.setAttribute('type', 'button'); // assign the type as button
