@@ -855,7 +855,7 @@ have to exclude them.
 #dp-sec-nav {
   position: fixed;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   list-style: none;
   border: none;
   background-color: var(--dp-page-color) !important;
@@ -891,7 +891,7 @@ have to exclude them.
   touch-action: none;
   position: fixed;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
   width: 5px;
   background: none;
   cursor: ew-resize;
