@@ -5,7 +5,9 @@ File Names: doxy-plus.*
 
 @font-face{
   font-family: "noto-2b9";
-  src: url("noto-2b9.woff2") format("woff2");
+  src:
+    url("noto-2b9.woff2") format("woff2"),
+    url("NotoSansSymbols2-Regular.ttf") format("truetype"); /* optional fallback */
   font-display: swap;
   unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
 }
@@ -70,17 +72,17 @@ html {
   --fragment-background: rgb(235, 240, 245) !important;
 
   --dp-page-color: rgb(255, 255, 255);
-  --dp-top-sep-color: rgb(180, 180, 180);
+  --dp-sep-color: rgb(180, 180, 180);
   --dp-scrollbar-color: rgb(160, 200, 240);
   --dp-btn-color: rgb(225, 230, 240);
   --dp-btn-hover-color: rgb(235, 240, 250);
-  --dp-item-hover-color: rgba(180,220,225,0.5);
+  --dp-item-hover-color: rgba(180,200,225,0.5);
   --dp-current-item-color: rgb(180, 220, 255);
   --dp-current-item-mark-color: rgb(50, 100, 210);
-  --dp-visited-text-color: rgb(150, 0, 150);
+  --dp-visited-text-color: (200, 50, 200);
   --dp-search-select-text-color: rgb(80, 120, 160);
   --dp-disbaled-text-color: rgb(120, 120, 120);
-  --dp-child-item-font-weight: 500;
+  --dp-child-item-font-weight: 600;
 }
 
 /* Different values for dark mode in html */
@@ -93,7 +95,7 @@ html.dark-mode {
   --fragment-background: rgb(40, 45, 55) !important;
 
   --dp-page-color: rgb(25, 30, 35);
-  --dp-top-sep-color: rgb(100, 100, 100);
+  --dp-sep-color: rgb(100, 100, 100);
   --dp-scrollbar-color: rgb(30, 70, 110);
   --dp-btn-color: rgb(13, 17, 23);
   --dp-btn-hover-color: rgb(50, 55, 65);
@@ -254,7 +256,7 @@ div.contents .toc,
 /* Right-side border only appears when main nav is on the right */
 @media screen and (min-width: 985px) {
   #titlearea {
-    background: linear-gradient(var(--dp-top-sep-color), var(--dp-top-sep-color)) right 0 top 10px / 1px calc(100% - 20px) no-repeat;
+    background: linear-gradient(var(--dp-sep-color), var(--dp-sep-color)) right 0 top 10px / 1px calc(100% - 20px) no-repeat;
     background-origin: border-box; /* anchor at the outer edge */
   }
 }
@@ -767,8 +769,16 @@ h1, h2, h3, h4, h5{
   - opacity: 1 ensures the icon is always visible (removes fade on hover).
 */
 #side-nav #nav-tree-contents span.arrow {
-  font-size: 1.2rem !important;
-  padding-bottom: 0.2em !important;
+  align-items: center;
+  justify-content: center;
+  width: 0.9em;
+  height: 0.9em;
+  line-height: 1;
+  font-family: "noto-2b9", system-ui, "Segoe UI Symbol", "Apple Symbols", "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;    /* safe no-op on non-WebKit */
+  text-rendering: auto;                   /* 'geometricPrecision' hurts text */
+  font-size: 0.9rem !important;
+  padding-bottom: 0.3em !important;
   visibility: visible !important;
   opacity: 1 !important; /* By default opacity is changing based on hover, to make it always visible we change it to 1 */
 }
@@ -1026,19 +1036,34 @@ have to exclude them.
   - No border/background.
 */
 #dp-pri-nav .dp-tree-node,
-#dp-sec-nav .dp-tree-node {
-  flex: 0 0 auto; /* keep button its intrinsic size */
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  font-size: 1.1em;
-  display: inline-block;
-  text-align: center;
-  text-rendering: geometricPrecision;
+#dp-sec-nav .dp-tree-node{
+  /* Layout */
+  display: inline-flex;              /* precise centering */
+  align-items: center;
+  justify-content: center;
+  width: 1.1em;
+  height: 1.1em;
   line-height: 1;
-  width: 1em;
-  height: 1em;
+
+  /* Look */
+  background: transparent;
+  border: 0;
+  color: inherit;                    /* follows surrounding text color */
+
+  /* Typography: use your embedded Noto subset first */
+  font-family: "noto-2b9", system-ui, "Segoe UI Symbol", "Apple Symbols", "Noto Sans", sans-serif;
+  font-size: 1em;                    /* scale with surrounding text */
+  letter-spacing: 0;
+
+  /* Interaction */
+  cursor: pointer;
   padding: 0;
+
+  /* Polish */
+  vertical-align: -0.125em;          /* optical baseline align in text rows */
+  transition: color .14s ease, transform .14s ease, opacity .14s ease;
+  -webkit-font-smoothing: antialiased;    /* safe no-op on non-WebKit */
+  text-rendering: auto;                   /* 'geometricPrecision' hurts text */
 }
 
 /*
@@ -1070,6 +1095,8 @@ have to exclude them.
 #dp-sec-nav li.dp-has-children > .dp-tree-line > .dp-tree-link {
   font-size: 1em !important;
   font-weight: 500 !important;
+  border-bottom: 1px solid var(--page-foreground-color);
+  border-color: var(--dp-sep-color)
 }
 
 /* Leaf (non-parent) links: monospace font, slightly smaller. */
@@ -1100,6 +1127,12 @@ have to exclude them.
   overflow: visible;
   background-color: var(--dp-current-item-color);
   border-radius: var(--dp-border-radius);
+}
+
+#dp-pri-nav li.dp-current.dp-has-children > .dp-tree-line,
+#dp-sec-nav li.dp-current.dp-has-children > .dp-tree-line {
+  padding-top: 3px;
+  padding-bottom: 7px;
 }
 
 #dp-pri-nav li.dp-current > .dp-tree-line::before,

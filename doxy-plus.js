@@ -555,8 +555,8 @@ File Names: doxy-plus.*
       mo.disconnect();
       sideNav.querySelectorAll('span.arrow').forEach(span => {
         const t = span.textContent.trim();
-        if (t === '►') span.textContent = '\u25CF\uFE0F'; // ●
-        else if (t === '▼') span.textContent = '\u25CB\uFE0F'; // ○
+        if (t === '►') span.textContent = "\u2B9E"; // ●
+        else if (t === '▼') span.textContent = "\u2B9F"; // ○
       });
       //console.log('Side Nav Tweak - Replace Arrows: SUCCESS');
       mo.observe(sideNav, { childList: true, subtree: true }); // resume observing
