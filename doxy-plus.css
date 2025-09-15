@@ -5,7 +5,7 @@ File Names: doxy-plus.*
 
 @font-face{
   font-family: "noto-2b9";
-  src: url("NotoSansSymbols2-Regular.ttf") format("truetype");
+  src: url("noto-2b9.woff2") format("woff2");
   font-display: swap;
   unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
 }
@@ -80,6 +80,7 @@ html {
   --dp-visited-text-color: rgb(150, 0, 150);
   --dp-search-select-text-color: rgb(80, 120, 160);
   --dp-disbaled-text-color: rgb(120, 120, 120);
+  --dp-child-item-font-weight: 500;
 }
 
 /* Different values for dark mode in html */
@@ -102,6 +103,7 @@ html.dark-mode {
   --dp-visited-text-color: rgb(250, 100, 250);
   --dp-search-select-text-color: rgb(120, 160, 200);
   --dp-disbaled-text-color: rgb(120, 120, 120);
+  --dp-child-item-font-weight: 400;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1013,7 +1015,7 @@ have to exclude them.
   align-items: center;
   overflow: hidden; /* clip any flex children that overflow */
   background: transparent;
-  padding-left: 10px;
+  padding-left: 8px;
   padding-right: 10px;
 }
 
@@ -1073,8 +1075,9 @@ have to exclude them.
 /* Leaf (non-parent) links: monospace font, slightly smaller. */
 #dp-pri-nav li:not(.dp-has-children) > .dp-tree-line > .dp-tree-link,
 #dp-sec-nav li:not(.dp-has-children) > .dp-tree-line > .dp-tree-link {
+  font-size: 0.9em !important;
   font-family: var(--font-family-monospace);
-  font-size: 0.95em;
+  font-weight: var(--dp-child-item-font-weight);
 }
 
 /* Visited links in secondary nav get a different color (but not for current/active). */
