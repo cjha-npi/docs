@@ -773,6 +773,7 @@ h1, h2, h3, h4, h5{
   -webkit-font-smoothing: antialiased;    /* safe no-op on non-WebKit */
   text-rendering: auto;
   font-size: 0.8rem !important;
+  padding-bottom: 3px;
   opacity: 1 !important; /* By default opacity is changing based on hover, to make it always visible we change it to 1 */
 }
 
@@ -787,7 +788,7 @@ h1, h2, h3, h4, h5{
   position: absolute;
   top: 4px;
   bottom: 4px;
-  left: 1px;
+  left: 2px;
   right: calc(100% - 5px);
   background: var(--dp-current-item-mark-color);
   border-radius: 2px !important;
@@ -815,7 +816,7 @@ h1, h2, h3, h4, h5{
   margin-top: 4px;
   margin-bottom: 4px;
   padding-top: 3px;
-  padding-bottom: 1px;
+  padding-bottom: 2px;
   color: var(--page-foreground-color) !important;
   background-color: var(--dp-current-item-color);
   padding-left: 5px !important;
@@ -1134,10 +1135,10 @@ have to exclude them.
   position: absolute;
   top: 5px;
   bottom: 5px;
-  left: 1px;
-  right: calc(100% - 5px);
+  left: 2px;
+  right: calc(100% - 6px);
   background: var(--dp-current-item-mark-color);
-  border-radius: var(--dp-border-radius);
+  border-radius: 2px;
   pointer-events: none; /* don’t block clicks/scrolls */
 }
 
