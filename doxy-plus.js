@@ -1249,205 +1249,416 @@ File Names: doxy-plus.*
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-  // Drop-in replacement: builds "Page Sections" first (flat H2–H6), then member groups.
   async function genSecTree() {
-    // ==============================
-    // Reset
-    // ==============================
+    // Build the secondary navigation tree (_secTree) for member declarations on class/struct pages:
+    // 1. Reset _secTree and remarks.
+    // 2. If the current page isn’t a class or struct, note and exit.
+    // 3. Wait for the main content container to appear.
+    // 4. Select all member declaration tables.
+    // 5. For each table:
+    //    a. Determine the group header text and anchor href.
+    //    b. Scan each row for unique member links, skipping documentation cells.
+    //    c. Format the signature text for consistency.
+    //    d. Collect [name, href, null] entries.
+    // 6. Push non-empty groups into _secTree.
+    // 7. If any groups were added, activate the secondary nav and record success; otherwise record no-members.
+
+    // Clear previous tree and remarks
     _secTree.length = 0;
-    _secTreeRemarks = "";
+    _secTreeRemarks = '';
 
-    // ==============================
-    // Utilities
-    // ==============================
-    function formatSignature(text) {
-      if (typeof text !== "string") return text;
-      return text
-        // Remove space before *, &, &&
-        .replace(/\s+([*&]{1,2})/g, "$1")
-        // Ensure space after *, &, &&
-        .replace(/([*&]{1,2})(?!\s)/g, "$1 ")
-        // Remove spaces inside <...>
-        .replace(/<\s+/g, "<")
-        .replace(/\s+>/g, ">")
-        .replace(/\s+<\s+/g, "<")
-        .replace(/\s+>\s+/g, ">")
-        // Remove space before commas, ensure one after
-        .replace(/\s+,/g, ",")
-        .replace(/,(?!\s)/g, ", ")
-        // Remove space after ( and before )
-        .replace(/\(\s+/g, "(")
-        .replace(/\s+\)/g, ")")
-        // Remove space before (
-        .replace(/\s+\(/g, "(")
-        // Add space before and after = in special cases
-        .replace(/\s*=\s*(default|delete|0)/g, " = $1")
-        // Collapse multiple spaces
-        .replace(/\s{2,}/g, " ")
-        // Strip leading "}" and trailing "{"
-        .replace(/^\}+\s*/, "")
-        .replace(/\s*\{+$/, "")
-        .trim();
-    }
-
-    const seenGlobalIds = new Set();
-    function slugify(text) {
-      return (text || "")
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "")
-        .replace(/-{2,}/g, "-")
-        .slice(0, 80) || "section";
-    }
-
-    function ensureHeadingId(h) {
-      // Prefer existing id on heading
-      let id = h.getAttribute("id");
-      // Or an inner anchor id/name
-      if (!id) {
-        const a = h.querySelector("a[id], a[name]");
-        id = a?.getAttribute("id") || a?.getAttribute("name") || null;
-      }
-      // Create if missing
-      if (!id) {
-        const base = slugify(h.textContent || "section");
-        let unique = base, n = 2;
-        while (seenGlobalIds.has(unique) || document.getElementById(unique)) {
-          unique = base + "-" + n++;
-        }
-        id = unique;
-        h.setAttribute("id", id);
-      }
-      seenGlobalIds.add(id);
-      return id;
-    }
-
-    function isVisible(el) {
-      if (!el) return false;
-      const rects = el.getClientRects();
-      if ((el.offsetWidth || el.offsetHeight || rects.length) === 0) return false;
-      const cs = window.getComputedStyle(el);
-      if (cs.visibility === "hidden" || cs.display === "none") return false;
-      return true;
-    }
-
-    function ensureTopAnchor(container) {
-      // Use existing common ids if present
-      if (document.getElementById("top")) return "#top";
-      if (document.getElementById("page-top")) return "#page-top";
-      // Create a sentinel at the top of the content container
-      const top = document.createElement("div");
-      top.id = "page-top";
-      top.style.position = "relative";
-      top.style.width = "0";
-      top.style.height = "0";
-      container.prepend(top);
-      return "#page-top";
-    }
-
-    // ==============================
-    // Content root
-    // ==============================
-    const contents = await waitFor("div.contents, div.content, main");
+    // Wait for the main content container
+    const contents = await waitFor('div.contents, div.content, main');
     if (!contents) {
       console.error('Gen Sec Tree: wait for "div.contents, div.content, main" timed out, not found');
       return;
     }
 
-    // ==============================
-    // "Page Sections" (flat H2–H6), only if at least one exists
-    // ==============================
-    (function buildPageSections() {
-      const heads = Array.from(contents.querySelectorAll("h2, h3, h4, h5, h6"))
-        .filter(h => {
-          const txt = (h.textContent || "").replace(/\s+/g, " ").trim();
-          return !!txt && isVisible(h);
-        });
+    // Locate all member declaration tables
+    const tables = Array.from(contents.querySelectorAll("table.memberdecls"));
+    if (tables.length === 0) {
+      _secTreeRemarks = 'Empty "table.memberdecls" element array';
+      //console.log('Gen Sec Tree: Empty "table.memberdecls" element array');
+      return;
+    }
 
-      if (heads.length === 0) return; // Do not include "Page Sections" at all
+    // Helper: clean up C++ style signatures
+    function formatSignature(text) {
+      if (typeof text !== 'string') return text;
 
-      const items = [];
-      const seenHref = new Set();
+      return text
+        // Remove space before *, &, &&
+        .replace(/\s+([*&]{1,2})/g, '$1')
 
-      heads.forEach(h => {
-        const id = ensureHeadingId(h);
-        const href = "#" + id;
-        const label = (h.textContent || "").replace(/\s+/g, " ").trim();
-        if (!seenHref.has(href)) {
-          seenHref.add(href);
-          items.push([label, href, null]);
-        }
-      });
+        // Ensure space after *, &, &&
+        .replace(/([*&]{1,2})(?!\s)/g, '$1 ')
 
-      if (items.length > 0) {
-        const topHref = ensureTopAnchor(contents);
-        _secTree.push(["Page Sections", topHref, items]);
+        // Remove spaces inside <...>
+        .replace(/<\s+/g, '<')
+        .replace(/\s+>/g, '>')
+        .replace(/\s+<\s+/g, '<')
+        .replace(/\s+>\s+/g, '>')
+
+        // Remove space before commas, ensure one after
+        .replace(/\s+,/g, ',')
+        .replace(/,(?!\s)/g, ', ')
+
+        // Remove space after ( and before )
+        .replace(/\(\s+/g, '(')
+        .replace(/\s+\)/g, ')')
+
+        // ❗ Remove space before (
+        .replace(/\s+\(/g, '(')
+
+        // Add space before and after = in special cases
+        .replace(/\s*=\s*(default|delete|0)/g, ' = $1')
+
+        // Collapse multiple spaces and trim
+        .replace(/\s{2,}/g, ' ')
+
+        // leading “}”
+        .replace(/^\}+\s*/, '')
+
+        // trailing “{”
+        .replace(/\s*\{+$/, '')
+
+        .trim();
+    }
+
+
+    /*
+    // Returns all h2.groupheader entries as [name, href, null],
+    // creating a unique alias anchor for each (never using the canonical hash).
+    function getGroupHeadersWithAliases(contents) {
+      const out = [];
+      const usedLocal = new Set(); // avoid duplicates within this run
+
+      function slugify(text) {
+        return (text || "")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "")
+          .replace(/-{2,}/g, "-")
+          .slice(0, 80) || "section";
       }
-    })();
 
-    // ==============================
-    // Member groups (original logic), appended after "Page Sections"
-    // ==============================
-    (function buildMemberGroups() {
-      const tables = Array.from(contents.querySelectorAll("table.memberdecls"));
-      if (tables.length === 0) return;
+      function findCanonicalAnchorEl(h) {
+        // 1) Anchor inside heading
+        let a = h.querySelector("a[id], a[name]");
+        if (a) return a;
+
+        // 2) Anchor immediately before heading (common in Doxygen)
+        let prev = h.previousElementSibling;
+        for (let steps = 0; prev && steps < 3; ++steps, prev = prev.previousElementSibling) {
+          if (prev.matches?.("a[id], a[name]")) return prev;
+          const inner = prev.querySelector?.("a[id], a[name]");
+          if (inner) return inner;
+        }
+
+        // 3) No explicit anchor; use the heading itself as insertion point
+        return h;
+      }
+
+      function ensureAliasBefore(insertBeforeEl, baseId) {
+        // Prefer 'sec-' + canonical id when available; else 'sec-' + slug(label)
+        let aliasId = "sec-" + baseId;
+        // Ensure uniqueness vs DOM and this run
+        let n = 2;
+        while (document.getElementById(aliasId) || usedLocal.has(aliasId)) {
+          aliasId = "sec-" + baseId + "-" + n++;
+        }
+        // If an exact alias already exists at the insertion point, reuse it
+        const existing = document.getElementById(aliasId);
+        if (existing) return aliasId;
+
+        // Insert zero-footprint alias right before the canonical anchor/heading
+        const alias = document.createElement("span");
+        alias.id = aliasId;
+        alias.style.position = "relative";
+        alias.style.width = "0";
+        alias.style.height = "0";
+
+        const parent = insertBeforeEl.parentNode;
+        if (parent) parent.insertBefore(alias, insertBeforeEl);
+
+        usedLocal.add(aliasId);
+        return aliasId;
+      }
 
       const headers = Array.from(contents.querySelectorAll("h2.groupheader"));
+      for (const h of headers) {
+        const label = (h.textContent || "").replace(/\s+/g, " ").trim();
+        if (!label) continue;
 
-      tables.forEach((table, idx) => {
-        const grpSigs = [];
-        const seenName = new Set();
-        const seenHref = new Set();
+        // Determine a stable base for alias id:
+        // - If there is a canonical anchor with id|name -> use that token
+        // - Else fall back to slug(label)
+        const anchorEl = findCanonicalAnchorEl(h);
+        const canonicalId =
+          (anchorEl.getAttribute && (anchorEl.getAttribute("id") || anchorEl.getAttribute("name"))) ||
+          h.getAttribute("id") ||
+          slugify(label);
 
-        const headerEl = headers[idx];
-        const headName = headerEl?.textContent?.trim() || "Members " + (idx + 1);
-        const anchorEl = headerEl?.querySelector("a[id], a[name]");
-        const anchorId = anchorEl?.getAttribute("id") || anchorEl?.getAttribute("name") || null;
-        const headHref = anchorId ? "#" + anchorId : null;
+        const aliasId = ensureAliasBefore(anchorEl, canonicalId);
+        out.push([label, "#" + aliasId, null]);
+      }
 
-        table.querySelectorAll("a[href^='#']").forEach(a => {
-          if (a.closest("div.memdoc") || a.closest("td.mdescRight")) return;
+      return out;
+    }
+      */
 
-          const leafHref = a.getAttribute("href");
-          if (!leafHref || seenHref.has(leafHref)) return;
 
-          const row = a.closest("tr");
-          if (!row) return;
+    
+    // Returns all h2.groupheader entries as [name, href, null], assigning a NEW,
+    // unique, DP-prefixed anchor to each header (never reusing Doxygen’s own).
+    // Anchor/href format: #dp-<slug-of-label>. If a collision is detected, suffix -2, -3, ...
+    function getGroupHeadersWithDpAnchors(contents) {
+      const out = [];
+      const used = new Set();
 
-          const tds = row.querySelectorAll("td");
-          if (tds.length < 2) return;
+      // Preload any existing dp- ids in the document to avoid collisions
+      document.querySelectorAll('[id^="dp-"]').forEach(el => used.add(el.id));
 
-          const lftText = tds[0].innerText.replace(/\s+/g, " ").trim();
-          const ritText = tds[1].innerText.replace(/\s+/g, " ").trim();
+      function slugify(text) {
+        return (text || "")
+          .toLowerCase()
+          .normalize("NFKD").replace(/[\u0300-\u036f]/g, "") // strip accents
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "")
+          .replace(/-{2,}/g, "-")
+          .slice(0, 80) || "section";
+      }
 
-          let leafName = formatSignature((lftText + " " + ritText).trim());
-          if (leafName.startsWith("enum")) {
-            leafName = leafName.replace(/\s*\{[\s\S]*\}/, "").trim();
-          }
-
-          if (seenName.has(leafName)) return;
-
-          seenHref.add(leafHref);
-          seenName.add(leafName);
-          grpSigs.push([leafName, leafHref, null]);
-        });
-
-        if (grpSigs.length > 0) {
-          _secTree.push([headName, headHref, grpSigs]);
+      function uniqueId(base) {
+        let id = base;
+        let n = 2;
+        while (used.has(id) || document.getElementById(id)) {
+          id = base + "-" + n++;
         }
-      });
-    })();
+        used.add(id);
+        return id;
+      }
 
-    // ==============================
-    // Finalize
-    // ==============================
+      const headers = Array.from(contents.querySelectorAll("h2.groupheader"));
+      for (const h of headers) {
+        const label = (h.textContent || "").replace(/\s+/g, " ").trim();
+        if (!label) continue;
+
+        const base = "dp-" + slugify(label);
+        const id = uniqueId(base);
+
+        // Insert a zero-footprint, block-level anchor *immediately before* the header
+        const anchor = document.createElement("div");
+        anchor.id = id;
+        anchor.style.display = "block";
+        anchor.style.height = "0";
+        anchor.style.margin = "0";
+        anchor.style.padding = "0";
+        anchor.style.border = "0";
+        anchor.style.fontSize = "0";
+        anchor.style.lineHeight = "0";
+        anchor.style.overflow = "hidden";
+
+        const parent = h.parentNode;
+        if (parent) parent.insertBefore(anchor, h);
+
+        out.push([label, "#" + id, null]);
+      }
+
+      return out;
+    }
+
+
+
+
+    /*
+    // Inside-anchor version that does not disturb Doxygen's own anchor placement.
+    // Places a zero-footprint, absolutely positioned DP anchor at the top-left of each <h2.groupheader>.
+    function getGroupHeadersWithDpAnchors(contents) {
+      const out = [];
+      const used = new Set();
+
+      // Avoid collisions with any existing dp- ids
+      document.querySelectorAll('[id^="dp-"]').forEach(el => used.add(el.id));
+
+      function slugify(text) {
+        return (text || "")
+          .toLowerCase()
+          .normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "")
+          .replace(/-{2,}/g, "-")
+          .slice(0, 80) || "section";
+      }
+
+      function uniqueId(base) {
+        let id = base, n = 2;
+        while (used.has(id) || document.getElementById(id)) {
+          id = base + "-" + n++;
+        }
+        used.add(id);
+        return id;
+      }
+
+      const headers = Array.from(contents.querySelectorAll("h2.groupheader"));
+      for (const h of headers) {
+        const label = (h.textContent || "").replace(/\s+/g, " ").trim();
+        if (!label) continue;
+
+        // Make <h2> the containing block if it is static-positioned
+        const cs = window.getComputedStyle(h);
+        if (cs.position === "static") {
+          h.style.position = "relative"; // no visual shift; enables absolute children to anchor to this h2
+        }
+
+        const id = uniqueId("dp-" + slugify(label));
+
+        // Absolutely positioned, zero-footprint anchor inside the <h2>
+        const anchor = document.createElement("span");
+        anchor.id = id;
+        anchor.setAttribute("aria-hidden", "true");
+        anchor.style.position = "absolute";
+        anchor.style.top = "0";
+        anchor.style.left = "0";
+        anchor.style.width = "0";
+        anchor.style.height = "0";
+        anchor.style.margin = "0";
+        anchor.style.padding = "0";
+        anchor.style.border = "0";
+        anchor.style.overflow = "hidden";
+        anchor.style.lineHeight = "0";
+        anchor.style.fontSize = "0";
+
+        // Put it at the start of the heading without affecting inline layout
+        if (h.firstChild) h.insertBefore(anchor, h.firstChild);
+        else h.appendChild(anchor);
+
+        out.push([label, "#" + id, null]);
+      }
+
+      return out;
+    }
+    */
+
+
+
+
+
+    function ensureContainerTopAnchor(container) {
+      let top = container.querySelector('#dp-container-top');
+      if (!top) {
+        top = document.createElement('span');
+        top.id = 'dp-container-top';
+        // zero footprint; inserts at absolute start of the container
+        top.style.position = 'relative';
+        top.style.width = '0';
+        top.style.height = '0';
+        container.prepend(top);
+      }
+      return '#dp-container-top';
+    }
+
+
+
+
+    const groups = getGroupHeadersWithDpAnchors(contents);
+    groups.forEach(([name, href, kids]) => {
+      console.log(name, '->', href, '->', kids);
+    });
+    if (groups.length > 0) {
+      const docContent = await waitFor('#doc-content');
+      const topHref = ensureContainerTopAnchor(docContent);
+      _secTree.push(['Page Sections', topHref, groups]);
+    }
+
+
+
+    /*
+    Array.from(contents.querySelectorAll("h2, h3, h4, h5, h6")).forEach(h => {
+      const ael = h.querySelector("a[id], a[name]");
+      const aid = ael?.getAttribute("id") || ael?.getAttribute("name") || null;
+      const ahref = aid ? `#${aid}` : null;
+      const alabel = (h.textContent || "").replace(/\s+/g, " ").trim();
+      console.log(alabel, '--->', ahref);
+    });
+    */
+
+
+    console.log('-----------------------------------------------');
+
+
+    // Process each member table
+    const headers = Array.from(contents.querySelectorAll("h2.groupheader"));
+    tables.forEach((table, idx) => {
+      const grpSigs = [];
+      const seenName = new Set();
+      const seenHref = new Set();
+
+      // Determine header text and anchor
+      const headName = headers[idx]?.textContent.trim() || `Members ${idx + 1}`;
+      const headerEl = headers[idx];
+      const anchorEl = headerEl.querySelector("a[id], a[name]");
+      const anchorId = anchorEl?.getAttribute("id") || anchorEl?.getAttribute("name") || null;
+      const headHref = anchorId ? `#${anchorId}` : null;
+
+      // Extract unique member links and format them
+      table.querySelectorAll("a[href^='#']").forEach(a => {
+        if (a.closest("div.memdoc") || a.closest("td.mdescRight")) return;
+
+        const leafHref = a.getAttribute("href");
+        if (seenHref.has(leafHref)) {
+          return;
+        }
+
+        const row = a.closest("tr");
+        if (!row) {
+          return;
+        }
+        const tds = row.querySelectorAll("td");
+        if (tds.length < 2) {
+          return;
+        }
+
+        const lftText = tds[0].innerText.replace(/\s+/g, ' ').trim();
+        const ritText = tds[1].innerText.replace(/\s+/g, ' ').trim();
+        let leafNameTemp = `${lftText} ${ritText}`.trim();
+        let leafName = formatSignature(leafNameTemp);
+        if (leafName.startsWith('enum')) {
+          leafName = leafName.replace(/\s*\{[\s\S]*\}/, '').trim();
+        }
+        if (seenName.has(leafName)) {
+          return;
+        }
+
+        seenHref.add(leafHref);
+        seenName.add(leafName);
+
+        grpSigs.push([leafName, leafHref, null]);
+      });
+
+      console.log(headName, '--->', headHref);
+
+      // Add this group if it has entries
+      if (grpSigs.length > 0) {
+        _secTree.push([headName, headHref, grpSigs]);
+      }
+    });
+
+    // Activate nav or record empty result
     if (_secTree.length > 0) {
-      document.body.setAttribute("dp-sec-nav-active", "true");
-      _secTreeRemarks = "Secondary navigation generated";
-    } else {
-      _secTreeRemarks = "No headings or members found";
+      document.body.setAttribute('dp-sec-nav-active', 'true');
+      _secTreeRemarks = 'Successfully generated member signatures';
+      //console.log('Gen Sec Tree: Successfully generated member signatures');
+    }
+    else {
+      _secTreeRemarks = 'No member signature found';
+      //console.log('Gen Sec Tree: No member signature found');
     }
   }
+
+
+
+
 
 
 
@@ -1729,6 +1940,7 @@ File Names: doxy-plus.*
           // and visible, this way the left padding of all items remain the same.
           const node = document.createElement('button'); // button class for the node
           node.classList.add('dp-tree-node'); // this name will be used to grab item -> line -> node in this and doxy-plus.css file
+          node.style.fontFamily = '"noto-2b9", system-ui, sans-serif';
           node.setAttribute('aria-expanded', 'false'); // this is for screen readers
           node.setAttribute('type', 'button'); // assign the type as button
 
@@ -1756,7 +1968,7 @@ File Names: doxy-plus.*
 
           // assigning the text value for the node, this is what will be displayed.
           // '○' and '●' are choosen because it appears correctly on Windows and Android browsers (many other options do not appear correctly)
-          node.textContent = isOpen ? "○" : "●";
+          node.textContent = isOpen ? "\u2B9F" : "\u2B9E";
 
           // Attach node and link to line, node and link can be accessed as line -> node and line -> link
           line.append(node, link);
@@ -1845,7 +2057,7 @@ File Names: doxy-plus.*
             // change the node text to reflect expanded state
             const btn = parent.querySelector(':scope > .dp-tree-line > .dp-tree-node');
             if (btn) {
-              btn.textContent = '⮟';
+              btn.textContent = "\u2B9F";
               btn.setAttribute('aria-expanded', 'true');
             }
 
@@ -1897,7 +2109,7 @@ File Names: doxy-plus.*
         const isOpen = li.classList.toggle('dp-node-open');
 
         // set the correct text on the node given is expand/collapse (or open/close) state
-        evt.target.textContent = isOpen ? '⮟' : '⮞';
+        evt.target.textContent = isOpen ? "\u2B9F" : "\u2B9E";
 
         // add the string for screen-readers
         evt.target.setAttribute('aria-expanded', String(isOpen));
@@ -2025,7 +2237,7 @@ File Names: doxy-plus.*
             focusables[idx].classList.add('dp-node-open');
 
             // change the node's text to reflect its opened state
-            node.textContent = '📂';
+            node.textContent = '○';
 
             // set the correct string for screen readers
             node.setAttribute('aria-expanded', 'true');
@@ -2088,7 +2300,7 @@ File Names: doxy-plus.*
               parLi.classList.remove('dp-node-open');
 
               // change the parent item's node text to reflect its collapsed state
-              parNode.textContent = '📁';
+              parNode.textContent = '●';
 
               // set the correct string for screen readers
               parNode.setAttribute('aria-expanded', 'false');

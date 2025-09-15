@@ -3,6 +3,13 @@ Prefix: dp-
 File Names: doxy-plus.*
 */
 
+@font-face{
+  font-family: "noto-2b9";
+  src: url("NotoSansSymbols2-Regular.ttf") format("truetype");
+  font-display: swap;
+  unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
+}
+
 /* Variable names starting with --dp- are Doxy-Plus variables */
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -190,7 +197,7 @@ body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-sec-nav-resizer {
   #side-nav,
   #dp-pri-nav,
   #dp-sec-nav,
-  #dp-sec-nav-resizer,
+  #dp-pri-nav-resizer,
   #dp-sec-nav-resizer {
     display: none !important;
   }
@@ -681,6 +688,10 @@ body[dp-doc-header-invisible="true"] #doc-content {
   border-radius: var(--dp-border-radius) !important;
 }
 
+h1, h2, h3, h4, h5{
+  margin-top: 0.5em !important;
+}
+
 /*
   Set #doc-content position and size for MOBILE view (width ≤ 767px).
 
@@ -897,7 +908,7 @@ have to exclude them.
 
 /*
   Resizer handles between nav panes and between nav/content.
-  - Fixed width (5px), expands to 20px on coarse pointer devices for touch-friendliness.
+  - Fixed width (5px), expands to 35px on coarse pointer devices for touch-friendliness.
   - No background by default (can be styled for visual feedback if desired).
   - Highest z-index so it sits above nav bars.
   - 'touch-action: none' allows for custom drag behavior.
@@ -913,7 +924,6 @@ have to exclude them.
   background: none;
   cursor: ew-resize;
   z-index: 9993;
-  background-color: rgba(0,100,0,0.1) !important;
 }
 
 #dp-pri-nav-resizer {
@@ -925,8 +935,8 @@ have to exclude them.
 }
 
 /* 
-  On touch devices, make resizer handles much larger (20px), 
-  and center them visually (margin-left: -10px).
+  On touch devices, make resizer handles much larger (35px), 
+  and center them visually (margin-left: -15px).
 */
 @media (pointer: coarse) {
   #dp-pri-nav-resizer,
@@ -1019,13 +1029,14 @@ have to exclude them.
   cursor: pointer;
   border: none;
   background: transparent;
-  font-size: 1.5em;
+  font-size: 1.1em;
   display: inline-block;
   text-align: center;
   line-height: 1;
   width: 1em;
   height: 1em;
   padding: 0;
+  margin-bottom: 2px;
 }
 
 /*
@@ -1055,12 +1066,9 @@ have to exclude them.
 /* Parent links: slightly larger and bolder for section headings. */
 #dp-pri-nav li.dp-has-children > .dp-tree-line > .dp-tree-link,
 #dp-sec-nav li.dp-has-children > .dp-tree-line > .dp-tree-link {
-  font-size: 1.1em !important;
+  font-size: 1em !important;
   font-weight: 500 !important;
-  margin-bottom: 4px;
-  text-decoration: underline;
-  text-decoration-thickness: 0px;
-  text-underline-offset: 4px;
+  margin-bottom: 2px;
 }
 
 /* Leaf (non-parent) links: monospace font, slightly smaller. */
