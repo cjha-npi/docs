@@ -996,13 +996,13 @@ have to exclude them.
 #dp-pri-nav .dp-tree-item,
 #dp-sec-nav .dp-tree-item {
   position: relative;
-  margin-block: -2px;
+  /*margin-block: -2px;*/
 }
 
 /* Add a bit of vertical spacing between expandable nodes (not the last child). */
 #dp-pri-nav li.dp-has-children:not(:last-child),
 #dp-sec-nav li.dp-has-children:not(:last-child) {
-  margin-bottom: 2px;
+  /*margin-bottom: 2px;*/
 }
 
 /*
