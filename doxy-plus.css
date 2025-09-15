@@ -769,17 +769,10 @@ h1, h2, h3, h4, h5{
   - opacity: 1 ensures the icon is always visible (removes fade on hover).
 */
 #side-nav #nav-tree-contents span.arrow {
-  align-items: center;
-  justify-content: center;
-  width: 0.9em;
-  height: 0.9em;
-  line-height: 1;
   font-family: "noto-2b9", system-ui, "Segoe UI Symbol", "Apple Symbols", "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;    /* safe no-op on non-WebKit */
-  text-rendering: auto;                   /* 'geometricPrecision' hurts text */
-  font-size: 0.9rem !important;
-  padding-bottom: 0.3em !important;
-  visibility: visible !important;
+  text-rendering: auto;
+  font-size: 0.8rem !important;
   opacity: 1 !important; /* By default opacity is changing based on hover, to make it always visible we change it to 1 */
 }
 
@@ -822,7 +815,7 @@ h1, h2, h3, h4, h5{
   margin-top: 4px;
   margin-bottom: 4px;
   padding-top: 3px;
-  padding-bottom: 4px;
+  padding-bottom: 1px;
   color: var(--page-foreground-color) !important;
   background-color: var(--dp-current-item-color);
   padding-left: 5px !important;
