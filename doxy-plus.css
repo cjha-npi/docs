@@ -32,6 +32,8 @@ File Names: doxy-plus.*
   --dp-bottom-height: 0px; /* Height of the footer including its top border */
   --dp-doc-header-height: 0px; /* Height of the doc-content header including its bottom border */
 
+  --dp-doc-header-border: 2px;
+
   --dp-doc-margin-left: calc(var(--dp-nav-width) + (2 * var(--dp-sep))); /* Margin on the left of doc-content for sidebars, defaults to side-nav width */
 }
 
@@ -79,9 +81,9 @@ html {
   --dp-item-hover-color: rgba(180,200,225,0.5);
   --dp-current-item-color: rgb(180, 220, 255);
   --dp-current-item-mark-color: rgb(50, 100, 210);
-  --dp-visited-text-color: (200, 50, 200);
+  --dp-visited-text-color: rgb(200, 50, 200);
   --dp-search-select-text-color: rgb(80, 120, 160);
-  --dp-disbaled-text-color: rgb(120, 120, 120);
+  --dp-disabled-text-color: rgb(120, 120, 120);
   --dp-child-item-font-weight: 600;
 }
 
@@ -104,7 +106,7 @@ html.dark-mode {
   --dp-current-item-mark-color: rgb(70, 120, 230);
   --dp-visited-text-color: rgb(250, 100, 250);
   --dp-search-select-text-color: rgb(120, 160, 200);
-  --dp-disbaled-text-color: rgb(120, 120, 120);
+  --dp-disabled-text-color: rgb(120, 120, 120);
   --dp-child-item-font-weight: 400;
 }
 
@@ -112,27 +114,15 @@ html.dark-mode {
 /* ADJUST FOR NON-COMMON DISPLAYS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Change the values so that on non-common display sizes it appears correctly */
-/*
-html,
-body {
-  min-height: -webkit-fill-available;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-*/
-
-/* Nudge the width if necessary (again for non-common display sizes) */
-/*
-#content {
-  width: calc(100% + 1px) !important;
-}
-*/
-
 html, body {
-  height: auto;              /* don’t lock to 100%/100vh if not needed */
-  overflow-y: auto;          /* root actually scrolls */
-  overscroll-behavior-y: auto !important;  /* don’t block browser gestures */
+  /* Ensure the page can scroll => enables pull-to-refresh */
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: auto !important;
+
+  /* Fill the screen without fighting mobile toolbars */
+  min-height: 100vh;   /* fallback for older engines */
+  min-height: 100dvh;  /* or 100dvh if you prefer dynamic growth */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -170,7 +160,7 @@ body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] {
 /* Default: hide both dual nav panels */
 #dp-pri-nav,
 #dp-sec-nav,
-#dp-sec-nav-resizer,
+#dp-pri-nav-resizer,
 #dp-sec-nav-resizer {
   display: none;
 }
@@ -254,7 +244,7 @@ div.contents .toc,
 }
 
 /* Right-side border only appears when main nav is on the right */
-@media screen and (min-width: 985px) {
+@media screen and (min-width: 1045px) {
   #titlearea {
     background: linear-gradient(var(--dp-sep-color), var(--dp-sep-color)) right 0 top 10px / 1px calc(100% - 20px) no-repeat;
     background-origin: border-box; /* anchor at the outer edge */
@@ -307,7 +297,7 @@ div.contents .toc,
 */
 
 /* For smaller screen we remove top padding */
-@media screen and (max-width: 984px) {
+@media screen and (max-width: 1044px) {
   #main-nav {
     padding-top: 0px !important;
   }
@@ -599,7 +589,7 @@ doxygen-awesome-dark-mode-toggle:hover {
   - Sets the background color and border for header area on both desktop and mobile.
 */
 body .header {
-  border-bottom: 2px solid var(--separator-color) !important;
+  border-bottom: var(--dp-doc-header-border) solid var(--separator-color) !important;
   margin-left: var(--dp-doc-margin-left) !important;
   margin-right: 5px !important;
   background-color: var(--dp-page-color) !important;
@@ -682,8 +672,8 @@ body .header > .summary {
   margin-right: 5px;
   border-bottom-left-radius: var(--dp-border-radius) !important;
   border-bottom-right-radius: var(--dp-border-radius) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - 2px) !important;
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - 2px) !important;
+  height: calc(100vh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - var(--dp-doc-header-border)) !important;
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - var(--dp-doc-header-border)) !important;
 }
 
 body[dp-doc-header-invisible="true"] #doc-content {
@@ -729,37 +719,58 @@ h1, h2, h3, h4, h5{
 */
 #side-nav {
   background-color: var(--page-background-color) !important;
-  left: var(--dp-sep);
+  left: var(--dp-sep) !important;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  --tree-item-height: 1.3rem; /* Custom height of individual items (default is 30px which is around 2rem) */
+
+  /* Height: See top of this page for description of height calculation */
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important; /* for use in newer browsers */
+
+  --tree-item-height: 1.3rem !important; /* Custom height of individual items (default is 30px which is around 2rem) */
   min-width: 50px !important; /* Set minimum width of navigation bar so that it behaves better on touch screens */
-  padding-right: var(--dp-sep) !important;
-  border-radius: var(--dp-border-radius);
+
+  padding-right: var(--dp-sep) !important; /* reserves the space for the resizer */
+  border-radius: var(--dp-border-radius) !important;
   border: none !important;
 }
 
-/* Set navigation tree width using theme variable for consistency. */
+/*
+  The '#nav-tree' is a child of '#side-nav' and contains the '#nav-tree-contents'.
+  - 'background-color' is set to our page color. This way the side nav has the same
+    appearence as dual nav panes.
+*/
 #nav-tree {
   background-color: var(--dp-page-color) !important;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  border-radius: var(--dp-border-radius);
+
+  /* Height: See top of this page for description of height calculation */
+  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important; /* for use in newer browsers */
+
+  border-radius: var(--dp-border-radius) !important;
   border: none !important;
-  padding-top: 4px !important;
   padding-left: var(--dp-sep) !important;
   padding-right: var(--dp-sep) !important;
 }
 
 /*
-  Removes the default right-side border (box-shadow) on resizable handles
-  for a cleaner look if sidebar resizing is enabled.
+  The top padding is applied to '#nav-tree-contents' and not to '#nav-tree' because
+  it if applied to '#nav-tree' it shifts the pane downwards making its bottom right
+  corner appear without any corner radous.
+*/
+#nav-tree-contents{
+  padding-top: 4px !important;
+}
+
+/*
+  - Remove the default right-side border (box-shadow) on resizable handles
+    because we are using the separation between panes as the resize handle.
+  - Set the width to '--dp-sep' because this is the size of the separators
+    between panes
 */
 #side-nav .ui-resizable-handle.ui-resizable-e {
   box-shadow: none !important;
-  width: 5px !important;
+  width: var(--dp-sep) !important;
 }
 
 /*
@@ -816,7 +827,7 @@ h1, h2, h3, h4, h5{
   margin-top: 4px;
   margin-bottom: 4px;
   padding-top: 3px;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   color: var(--page-foreground-color) !important;
   background-color: var(--dp-current-item-color);
   padding-left: 5px !important;
@@ -921,7 +932,7 @@ have to exclude them.
 */
 #dp-pri-nav-resizer,
 #dp-sec-nav-resizer {
-  touch-action: none;
+  touch-action: pan-y;   /* was: none */
   position: fixed;
   top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
   height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
@@ -1032,7 +1043,8 @@ have to exclude them.
 #dp-pri-nav .dp-tree-node,
 #dp-sec-nav .dp-tree-node{
   /* Layout */
-  display: inline-flex;              /* precise centering */
+  flex: 0 0 auto;
+  display: inline-flex; 
   align-items: center;
   justify-content: center;
   width: 1.1em;
@@ -1055,7 +1067,6 @@ have to exclude them.
 
   /* Polish */
   vertical-align: -0.125em;          /* optical baseline align in text rows */
-  transition: color .14s ease, transform .14s ease, opacity .14s ease;
   -webkit-font-smoothing: antialiased;    /* safe no-op on non-WebKit */
   text-rendering: auto;                   /* 'geometricPrecision' hurts text */
 }
@@ -1145,7 +1156,7 @@ have to exclude them.
 /* Disabled (no href) links: gray, not clickable, not underlined, no pointer. */
 #dp-pri-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-link,
 #dp-sec-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-link {
-  color: var(--dp-disbaled-text-color) !important;
+  color: var(--dp-disabled-text-color) !important;
   cursor: default !important; /* no pointer */
   text-decoration: none !important; /* remove underline if any */
   pointer-events: none !important; /* prevent any interaction */

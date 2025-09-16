@@ -558,7 +558,7 @@ File Names: doxy-plus.*
         if (t === '►') span.textContent = "\u2B9E"; // ●
         else if (t === '▼') span.textContent = "\u2B9F"; // ○
       });
-      //console.log('Side Nav Tweak - Replace Arrows: SUCCESS');
+      console.log('Side Nav Tweak - Replace Arrows: SUCCESS');
       mo.observe(sideNav, { childList: true, subtree: true }); // resume observing
     }
 
