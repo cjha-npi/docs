@@ -1,7 +1,7 @@
 <map id="AppUtil.h" name="AppUtil.h">
-<area shape="rect" id="Node000001" title="App directory accessors for Windows (npi::app)." alt="" coords="84,5,152,30"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,78,121,103"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,32,82,70,77,67,107,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="145,78,203,103"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,29,159,67,155,70,125,32"/>
+<area shape="rect" id="Node000001" title="App directory accessors for Windows (npi::app)." alt="" coords="84,5,160,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,124,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,34,86,69,82,66,110,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="148,80,213,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,31,163,66,159,69,130,34"/>
 </map>
