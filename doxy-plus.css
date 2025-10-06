@@ -800,7 +800,7 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
 /* Styling both headers (only one is visible at any time) */
 body .header {
   background-color: var(--dp-pane-color) !important;
-  border-bottom: var(--dp-doc-header-border) solid var(--separator-color) !important;
+  border-bottom: var(--dp-doc-header-border) solid var(--page-background-color) !important;
 }
 
 /*
@@ -969,6 +969,7 @@ h1, h2, h3, h4, h5 {
   min-width: var(--dp-min-width) !important;
   background-color: var(--dp-pane-color) !important;
   border-left-width: var(--dp-doc-header-border) !important;
+  border-left-color: var(--page-background-color) !important;
   margin-right: var(--dp-sep) !important;
   border-bottom-right-radius: var(--dp-border-radius) !important;
 }
