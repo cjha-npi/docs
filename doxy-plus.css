@@ -919,6 +919,17 @@ h1, h2, h3, h4, h5 {
 }
 
 /*
+  Removes the default bottom border that spans the entire width of the #doc-content
+  from the section headers and instead add a better bottom border which is more
+  prominent and spans just the width of the contents and not the entire width of the
+  #doc-header element.
+*/
+td h2.groupheader, h2.groupheader{
+  box-shadow: none !important;
+  border-bottom: 2px solid;
+}
+
+/*
   MOBILE VIEW (width <= 767px):
   - Set border radius for all four corners.
   - Set the height correctly.
