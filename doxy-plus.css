@@ -1168,8 +1168,8 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (pointer: coarse) {
-  #dp-pri-nav-resizer,
-  #dp-sec-nav-resizer {
+  #dp-root-pane-resizer,
+  #dp-leaf-pane-resizer {
     width: 35px !important;
     margin-left: -15px !important;
   }
