@@ -267,7 +267,7 @@
 
   let _dualNav = load(KEY__DUAL_NAV, true);
   let _rootPaneWidth = loadNum(KEY__ROOT_PANE_WIDTH, 200);
-  let _leafPaneWidth = loadNum(KEY__LEAF_PANE_WIDTH, 300);
+  let _leafPaneWidth = loadNum(KEY__LEAF_PANE_WIDTH, 400);
 
   // Save initial settings to refresh their expiration timers
   save(KEY__DUAL_NAV, _dualNav);

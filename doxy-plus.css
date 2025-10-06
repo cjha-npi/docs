@@ -997,8 +997,7 @@ td h2.groupheader, h2.groupheader{
 #page-nav {
   min-width: var(--dp-min-width) !important;
   background-color: var(--dp-pane-color) !important;
-  border-left-width: var(--dp-doc-header-border) !important;
-  border-left-color: var(--separator-color) !important;
+  border-left: 1px dotted var(--separator-color) !important;
   margin-right: var(--dp-sep) !important;
   border-bottom-right-radius: var(--dp-border-radius) !important;
 }
