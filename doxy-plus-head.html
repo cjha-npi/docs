@@ -1,4 +1,4 @@
-<!-- HTML header for doxygen 1.12.0-->
+<!-- HTML header for doxygen 1.14.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="$langISO">
 <head>
@@ -12,11 +12,38 @@
 <link rel="icon" href="$relpath^$projecticon" type="image/x-icon" />
 <!--END PROJECT_ICON-->
 <link href="$relpath^tabs.css" rel="stylesheet" type="text/css"/>
-<!--BEGIN DISABLE_INDEX-->
-  <!--BEGIN FULL_SIDEBAR-->
+<!--BEGIN FULL_SIDEBAR-->
 <script type="text/javascript">var page_layout=1;</script>
-  <!--END FULL_SIDEBAR-->
-<!--END DISABLE_INDEX-->
+<!--END FULL_SIDEBAR-->
+
+<!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
+
+<!-- This script provides the default widths of side-nav and page-nav on very first load -->
+<script>
+(function () {
+  var SIDE_NAV_KEY = 'doxygen_width';
+  var SIDE_NAV_DEF_PX = 200;
+  try {
+    if (localStorage.getItem(SIDE_NAV_KEY) === null) {
+      localStorage.setItem(SIDE_NAV_KEY, String(SIDE_NAV_DEF_PX));
+    }
+  } catch (e) {}
+
+  var PAGE_NAV_KEY = 'doxygen_pagenav';
+  var PAGE_NAV_DEF_PX = 150;
+  try {
+    if (localStorage.getItem(PAGE_NAV_KEY) === null) {
+      localStorage.setItem(PAGE_NAV_KEY, String(PAGE_NAV_DEF_PX));
+    }
+  } catch (e) {}
+})();
+</script>
+
+<!-- This patch is to fix the error message that comes by default doxygen when page-nav is visible -->
+<script type="text/javascript" src="$relpath^passive-patch.js"></script>
+
+<!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
+
 <script type="text/javascript" src="$relpath^jquery.js"></script>
 <script type="text/javascript" src="$relpath^dynsections.js"></script>
 <!--BEGIN COPY_CLIPBOARD-->
@@ -45,21 +72,19 @@ $extrastylesheet
 
 </head>
 <body>
-<!--BEGIN DISABLE_INDEX-->
-  <!--BEGIN FULL_SIDEBAR-->
+<!--BEGIN FULL_SIDEBAR-->
 <div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
-  <!--END FULL_SIDEBAR-->
-<!--END DISABLE_INDEX-->
+<!--END FULL_SIDEBAR-->
 
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
 
-  <!-- Doxy-Plus Primary Navigation Bar Container -->
-  <div id="dp-pri-nav"></div>
-  <div id="dp-pri-nav-resizer"></div>
+  <!-- Doxy-Plus Root Navigation Container -->
+  <div id="dp-root-pane" class="dp-nav-pane"></div>
+  <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
 
-  <!-- Doxy-Plus Secondary Navigation Bar Container -->
-  <div id="dp-sec-nav"></div>
-  <div id="dp-sec-nav-resizer"></div>
+  <!-- Doxy-Plus Leaf Navigation Container -->
+  <div id="dp-leaf-pane" class="dp-nav-pane"></div>
+  <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
 
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
 

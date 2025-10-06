@@ -9,7 +9,8 @@ var indexSectionsWithContent =
   6: "los",
   7: "nw",
   8: "adn",
-  9: "n"
+  9: "dimou",
+  10: "ps"
 };
 
 var indexSectionNames =
@@ -23,7 +24,8 @@ var indexSectionNames =
   6: "related",
   7: "defines",
   8: "groups",
-  9: "concepts"
+  9: "pages",
+  10: "concepts"
 };
 
 var indexSectionLabels =
@@ -37,6 +39,7 @@ var indexSectionLabels =
   6: "Friends",
   7: "Macros",
   8: "Modules",
-  9: "Concepts"
+  9: "Pages",
+  10: "Concepts"
 };
 

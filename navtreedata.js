@@ -58,8 +58,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"df/d94/classnpi_1_1_link.html#a6ca86b92040321c72196dc0929af933e"
+"df/d94/classnpi_1_1_link.html#aaf61bab6d0dd4c11669a554a173e2994"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

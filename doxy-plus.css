@@ -1,51 +1,47 @@
-/*
-Prefix: dp-
-File Names: doxy-plus.*
-*/
+/* doxy-plus.css */
 
-@font-face{
+/* Variable names starting with --dp- are Doxy-Plus variables */
+
+/*━━━HEIGHT CALCULATION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  svh = small viewport height (URL/bottom bars shown) → footer won’t get pushed off.
+  dvh = dynamic viewport height (updates as bars hide/show) → can resize on scroll.
+
+  WARNING: DO NOT USE 'svh'. When 'svh' is used the height of the panes will be the
+  maximum height of the contents and if the contents height is smaller than the height
+  available then the panes will shrink in size.
+
+  We put height calculation with 'vh' first and then with 'dvh'. This makes the first
+  one as the fallback height. Older browsers that do not support the newer 'dvh' will
+  ignore the second height and use the first one, while newer browsers that support
+  the 'dvh' height will use the second one.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* CUSTOM FONT FOR EXPAND/COLLAPSE ICONS ONLY */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/*
+ - NotoSansSymbols2-Regular.ttf is the fallback for older browsers
+ - Only collapse icon (U+2B9E i.e. ⮞) is used, in expanded state, it
+   is rotated by 90 degrees.
+*/
+@font-face {
   font-family: "noto-2b9";
-  src:
-    url("noto-2b9.woff2") format("woff2"),
-    url("NotoSansSymbols2-Regular.ttf") format("truetype"); /* optional fallback */
+  src: url("NotoSansSymbols2-Regular.woff2") format("woff2"), url("NotoSansSymbols2-Regular.ttf") format("truetype"); /* .ttf is optional fallback */
   font-display: swap;
   unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
 }
 
-/* Variable names starting with --dp- are Doxy-Plus variables */
-
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* CUSTOM ORIGINAL VALUES */
+/* CUSTOMIZING IN-BUILT FONT VALUES */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-:root {
-  --dp-search-field: "All:"; /* Search field selection label text, replaces the default magnifier icon */
-
-  --dp-sep: 5px;
-  --dp-border-radius: 6px; /* Border radius for search box and the two buttons next to it */
-
-  --dp-pri-width: 0px; /* Width of the primary nav pane in dual-nav mode */
-  --dp-sec-width: 0px; /* Width of the secondary nav pane in dual-nav mode */
-  --dp-nav-width: 0px; /* Width of the default doxygen side-nav */
-
-  --dp-top-height: 0px; /* Height of the top header including its bottom border */
-  --dp-bottom-height: 0px; /* Height of the footer including its top border */
-  --dp-doc-header-height: 0px; /* Height of the doc-content header including its bottom border */
-
-  --dp-doc-header-border: 2px;
-
-  --dp-doc-margin-left: calc(var(--dp-nav-width) + (2 * var(--dp-sep))); /* Margin on the left of doc-content for sidebars, defaults to side-nav width */
-}
-
-/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* FONT VALUES */
-/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-
+/* Font sizes for desktop view */
 html {
   --page-font-size: 13px !important;
   --navigation-font-size: 13px !important;
   --toc-font-size: 13px !important;
-  --code-font-size: 12px !important; /* affects code, fragment */
+  --code-font-size: 12px !important;
   --title-font-size: 18px !important;
   --memtitle-font-size: 16px !important;
 }
@@ -56,87 +52,158 @@ html {
     --page-font-size: 13px !important;
     --navigation-font-size: 13px !important;
     --toc-font-size: 13px !important;
-    --code-font-size: 12px !important; /* affects code, fragment */
+    --code-font-size: 12px !important;
     --title-font-size: 16px !important;
     --memtitle-font-size: 16px !important;
   }
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* CUSTOM ORIGINAL VALUES */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+:root {
+  /* 
+    Search field selection label text, replaces the default magnifier icon.
+    This is set through the doxy-plus.js file.
+  */
+  --dp-search-field: "All:";
+
+  /* Font size and line height for root and leaf pane items */
+  --dp-item-font-size: 12px;
+  --dp-item-line-height: 20px;
+
+  /* Font size for collapse icon in root, leaf panes and side nav */
+  --dp-exp-col-icon-font-size: 13px;
+
+  /* Font size and line height for page nav */
+  --dp-page-nav-font-size: 11px;
+  --dp-page-nav-line-height: 18px;
+
+  /* Common separation value, mainly between panes */
+  --dp-sep: 5px;
+
+  /* Minimum width of resizable navs and panes */
+  --dp-min-width: 50px;
+
+  /* Common border radius for panes and everything else */
+  --dp-border-radius: 6px;
+
+  /* Width of various navigation panes. Root and Leaf are doxy-plus nav panes */
+  --dp-side-nav-width: 0px;
+  --dp-root-pane-width: 0px;
+  --dp-leaf-pane-width: 0px;
+
+  /* Height (including any borders) for header and footer */
+  --dp-header-height: 0px;
+  --dp-footer-height: 0px;
+
+  /* doc-content header's height and bottom border*/
+  --dp-doc-header-height: 0px;
+  --dp-doc-header-border: 2px;
+
+  /*
+    Main document area starting Y-Pos and Height.
+    The calculation with 'dvh' is later so that it overrides the calculation with
+    'vh'. Newer browsers have the 'dvh' while older ones only have 'vh'. See the
+    section 'HEIGHT CALCULATION' at the top for detailed understanding.
+  */
+  --dp-main-y: calc(var(--dp-header-height) + (2 * var(--dp-sep)));
+  --dp-main-h: calc(100vh - var(--dp-header-height) - var(--dp-footer-height) - (4 * var(--dp-sep)));
+  --dp-main-h: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height) - (4 * var(--dp-sep)));
+
+  /* Margin on the left of doc-content for sidebars. By default it is for side-nav. */
+  --dp-doc-margin-left: calc(var(--dp-side-nav-width) + (2 * var(--dp-sep)));
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* COLOR VALUES */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Modified and Original values for default html */
+/* LIGHT MODE */
 html {
-  --page-background-color: rgb(210, 210, 210) !important;
-  --separator-color: rgb(210, 210, 210) !important;
-  --code-background: rgb(235, 240, 245) !important;
+  /* Default colors defined by Doxygen or Doxygen Awesome */
+  --page-background-color: rgb(210, 210, 210) !important; /* forms the separator between panes*/
+  --separator-color: rgb(200, 200, 200) !important;
+  --code-background: rgb(225, 230, 235) !important;
   --fragment-background: rgb(235, 240, 245) !important;
 
-  --dp-page-color: rgb(255, 255, 255);
-  --dp-sep-color: rgb(180, 180, 180);
-  --dp-scrollbar-color: rgb(160, 200, 240);
-  --dp-btn-color: rgb(225, 230, 240);
-  --dp-btn-hover-color: rgb(235, 240, 250);
-  --dp-item-hover-color: rgba(180,200,225,0.5);
-  --dp-current-item-color: rgb(180, 220, 255);
-  --dp-current-item-mark-color: rgb(50, 100, 210);
-  --dp-visited-text-color: rgb(200, 50, 200);
-  --dp-search-select-text-color: rgb(80, 120, 160);
-  --dp-disabled-text-color: rgb(120, 120, 120);
-  --dp-child-item-font-weight: 600;
+  /* Doxy-Plus Colors */
+  --dp-pane-color: rgb(255, 255, 255); /* used as background for all panes */
+  --dp-mark-color: rgb(20, 120, 200); /* used to mark current item */
+  --dp-inpt-color: var(--page-background-color); /* search input box background */
+  --dp-line-color: var(--separator-color); /* used as special lines by doxy-plus */
+  --dp-item-color: var(--page-background-color); /* current item background */
+  --dp-item-hover-color: rgb(from var(--dp-item-color) r g b / 0.8); /* background of a hovered item */
+  --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
+  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* button icons on top right */
+  --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */
+  --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
+  --dp-text-visited-color: rgb(200, 50, 200); /* visited entry in root and leaf panes */
+  --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
+  --dp-text-search-select-color: var(--dp-mark-color); /* search select text color */
+  --dp-text-page-nav-section-color: rgb(200, 100, 0); /* section entries in page nav */
+  --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
+  --dp-item-font-weight: 500; /* font weight for root and leaf panes */
 }
 
-/* Different values for dark mode in html */
+/* DARK MODE */
 html.dark-mode {
-  --page-background-color: rgb(13, 17, 23) !important;
-  --separator-color: rgb(45, 45, 45) !important;
-  --code-background: rgb(35, 40, 45) !important;
+  /* Default colors defined by Doxygen or Doxygen Awesome */
+  --page-background-color: rgb(10, 10, 10) !important; /* forms the separator between panes*/
+  --separator-color: rgb(65, 70, 75) !important;
+  --code-background: rgb(25, 25, 25) !important;
   --tablehead-background: rgb(35, 40, 50) !important;
   --blockquote-background: rgb(35, 40, 50) !important;
   --fragment-background: rgb(40, 45, 55) !important;
 
-  --dp-page-color: rgb(25, 30, 35);
-  --dp-sep-color: rgb(100, 100, 100);
-  --dp-scrollbar-color: rgb(30, 70, 110);
-  --dp-btn-color: rgb(13, 17, 23);
-  --dp-btn-hover-color: rgb(50, 55, 65);
-  --dp-item-hover-color: rgba(50,55,70,0.3);
-  --dp-current-item-color: rgb(50, 55, 60);
-  --dp-current-item-mark-color: rgb(70, 120, 230);
-  --dp-visited-text-color: rgb(250, 100, 250);
-  --dp-search-select-text-color: rgb(120, 160, 200);
-  --dp-disabled-text-color: rgb(120, 120, 120);
-  --dp-child-item-font-weight: 400;
+  /* Doxy-Plus Colors */
+  --dp-pane-color: rgb(30, 35, 40); /* used as background for all panes */
+  --dp-mark-color: rgb(20, 120, 220); /* used to mark current item */
+  --dp-inpt-color: var(--page-background-color); /* search input box background */
+  --dp-line-color: var(--separator-color); /* used as special lines by doxy-plus */
+  --dp-item-color: var(--page-background-color); /* current item background */
+  --dp-item-hover-color: rgb(from var(--dp-item-color) r g b / 0.8); /* background of a hovered item */
+  --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
+  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* button icons on top right */
+  --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */
+  --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
+  --dp-text-visited-color: rgb(250, 100, 250); /* visited entry in root and leaf panes */
+  --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
+  --dp-text-search-select-color: var(--dp-mark-color); /* search select text color */
+  --dp-text-page-nav-section-color: rgb(240, 120, 0); /* section entries in page nav */
+  --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
+  --dp-item-font-weight: 400; /* font weight for root and leaf panes */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* ADJUST FOR NON-COMMON DISPLAYS */
+/* HTML + Body settings */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-html, body {
+html,
+body {
   /* Ensure the page can scroll => enables pull-to-refresh */
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior-y: auto !important;
 
-  /* Fill the screen without fighting mobile toolbars */
-  min-height: 100vh;   /* fallback for older engines */
-  min-height: 100dvh;  /* or 100dvh if you prefer dynamic growth */
+  /* Height: See top of this page for detailed description */
+  min-height: 100vh; /* fallback for old browsers */
+  min-height: 100dvh; /* for use in new browsers */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DOC MARGIN LEFT */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Override if only primary pane of dual-nav is active */
-body[dp-dual-nav-active="true"] {
-  --dp-doc-margin-left: calc(var(--dp-pri-width) + (2 * var(--dp-sep)));
+/* Override if only root pane of dual-nav is active */
+body[data-dp-dual-nav-active] {
+  --dp-doc-margin-left: calc(var(--dp-root-pane-width) + (2 * var(--dp-sep)));
 }
 
-/* Override if both primary pane and secondary pane of dual-nav are active */
-body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] {
-  --dp-doc-margin-left: calc(var(--dp-pri-width) + var(--dp-sec-width) + (3 * var(--dp-sep)));
+/* Override if both root pane and leaf pane of dual-nav are active */
+body[data-dp-dual-nav-active][data-dp-leaf-nav-active] {
+  --dp-doc-margin-left: calc(var(--dp-root-pane-width) + var(--dp-leaf-pane-width) + (3 * var(--dp-sep)));
 }
 
 /* If dual-nav is not active then left margin falls back to side-nav width assigned when '--dp-doc-margin-left' was declared in :root{...} */
@@ -149,50 +216,40 @@ body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] {
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* SIDE AND DUAL NAV VISIBILITIES */
+/* NAV VISIBILITIES */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Default: make side-nav visible */
-#side-nav {
-  display: block;
-}
-
-/* Default: hide both dual nav panels */
-#dp-pri-nav,
-#dp-sec-nav,
-#dp-pri-nav-resizer,
-#dp-sec-nav-resizer {
+/* default hides both root and leaf pane */
+#dp-root-pane,
+#dp-leaf-pane,
+#dp-root-pane-resizer,
+#dp-leaf-pane-resizer {
   display: none;
 }
 
-/* Condition: dual-nav active → hide side, show primary */
-body[dp-dual-nav-active="true"] #side-nav {
-  display: none;
-}
-body[dp-dual-nav-active="true"] #dp-pri-nav,
-body[dp-dual-nav-active="true"] #dp-pri-nav-resizer {
-  display: block;
-}
-body[dp-dual-nav-active="true"] #dp-sec-nav,
-body[dp-dual-nav-active="true"] #dp-sec-nav-resizer {
-  display: none;
+/* we only change the display state when in desktop view */
+@media screen and (min-width: 768px) {
+  body[data-dp-dual-nav-active] #side-nav {
+    display: none;
+  }
+
+  body[data-dp-dual-nav-active] #dp-root-pane,
+  body[data-dp-dual-nav-active] #dp-root-pane-resizer {
+    display: block;
+  }
+
+  body[data-dp-dual-nav-active][data-dp-leaf-nav-active] #dp-leaf-pane,
+  body[data-dp-dual-nav-active][data-dp-leaf-nav-active] #dp-leaf-pane-resizer {
+    display: block;
+  }
 }
 
-/* Condition: dual-nav + sec-nav active → show both pri and sec */
-body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-pri-nav,
-body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-sec-nav,
-body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-pri-nav-resizer,
-body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-sec-nav-resizer {
-  display: block;
-}
-
-/* Always hide everything on small screens */
+/* mobile view hides root and leaf panes */
 @media screen and (max-width: 767px) {
-  #side-nav,
-  #dp-pri-nav,
-  #dp-sec-nav,
-  #dp-pri-nav-resizer,
-  #dp-sec-nav-resizer {
+  #dp-root-pane,
+  #dp-leaf-pane,
+  #dp-root-pane-resizer,
+  #dp-leaf-pane-resizer {
     display: none !important;
   }
 }
@@ -201,38 +258,34 @@ body[dp-dual-nav-active="true"][dp-sec-nav-active="true"] #dp-sec-nav-resizer {
 /* SCROLL BAR CUSTOMIZATION */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-#doc-content,
-#dp-pri-nav,
-#dp-sec-nav,
-#nav-tree,
-div.fragment,
-pre.fragment,
-div.memproto,
-.contents center,
-.contents .center,
-.contents table:not(.memberdecls):not(.mlabels):not(.fieldtable):not(.memname) tbody,
-div.contents .toc,
-.contents .dotgraph,
-.contents .tabs-overview-container {
-  scrollbar-width: thin !important;
-  scrollbar-color: var(--dp-scrollbar-color) transparent !important;
+/* Global (modern browsers) */
+* {
+  scrollbar-width: thin !important; /* Chrome 121+, Edge 121+, Firefox */
+  scrollbar-color: var(--dp-scrollbar-color) transparent !important; /* Chrome 121+, Edge 121+, Firefox */
+}
+
+/* Back-compat for older Chromium/WebKit */
+@supports not (scrollbar-width: thin) {
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--dp-scrollbar-color);
+    border-radius: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* HEADER AND FOOTER CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Combined section of Project Name + Project Brief on top left next to Project Logo */
-/*
-#projectalign {
-  padding: 0px !important;
-  padding-left: 3px !important;
-}
-*/
-
-/* Top Header: Title Area + Main Nav + Search Bar Area */
+/* Full Header: Title Area + Main Nav + Search Bar Area */
 #top {
-  background-color: var(--dp-page-color) !important;
+  background-color: var(--dp-pane-color) !important;
   margin: var(--dp-sep) !important;
   border-radius: var(--dp-border-radius) !important;
   border: none !important;
@@ -243,22 +296,7 @@ div.contents .toc,
   padding: 7px 22px 7px 7px !important;
 }
 
-/* Right-side border only appears when main nav is on the right */
-@media screen and (min-width: 1045px) {
-  #titlearea {
-    background: linear-gradient(var(--dp-sep-color), var(--dp-sep-color)) right 0 top 10px / 1px calc(100% - 20px) no-repeat;
-    background-origin: border-box; /* anchor at the outer edge */
-  }
-}
-
-/* Project Name of top left next to Project Logo */
-/*
-#projectname {
-  padding-bottom: 0px !important;
-}
-*/
-
-/* Project Brief description just below Project Name on top left next to Project Logo */
+/* Project Brief description just below Project Name on top left, next to Project Logo */
 #projectbrief {
   line-height: 13px;
   font-size: 12px !important;
@@ -266,53 +304,46 @@ div.contents .toc,
   font-style: italic !important;
 }
 
-/* 
-  Bottom Footer
-  It already has a top border, we reassign to change its color 
-*/
+/* Right-side border only appears when main nav is on the right */
+body:not([data-dp-main-nav-below-title]) #titlearea {
+  background: linear-gradient(var(--dp-line-color), var(--dp-line-color)) right 0 top 10px / 1px calc(100% - 20px) no-repeat;
+  background-origin: border-box; /* anchor at the outer edge */
+}
+
+/* Footer: Style similarly to header */
 #nav-path > ul {
-  background-color: var(--dp-page-color) !important;
+  background-color: var(--dp-pane-color) !important;
   margin: var(--dp-sep) !important;
   border-radius: var(--dp-border-radius) !important;
   border: none !important;
   box-shadow: none !important;
 }
 
+/* Changing the separator color for bottom footer */
 #nav-path .navelem::after {
-  --page-background-color: var(--dp-page-color) !important;
+  --page-background-color: var(--dp-pane-color) !important;
+  box-shadow: 4px -4px 0px 0px var(--dp-footer-link-separation-color) !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* MAIN-NAV AND SEARCH CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Change padding on main-nav */
 /*
-#main-nav {
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
-}
+  Depending on the main-nav width (its content dependent) and the total
+  window width available, the main-nav can be pushed to be below the title.
+  In such a case we remove the top padding of the main-nav since the title
+   bottom padding serves as a separator space.
 */
-
-/* For smaller screen we remove top padding */
-@media screen and (max-width: 1044px) {
-  #main-nav {
-    padding-top: 0px !important;
-  }
+body[data-dp-main-nav-below-title] #main-nav {
+  padding-top: 0px !important;
 }
 
 /* Changing appearence of Search Box */
 #MSearchBox {
   border-radius: var(--dp-border-radius) !important;
   border: none !important;
-  background: var(--dp-btn-color) !important;
-}
-
-/* Change the color on hover for search box */
-#MSearchBox:hover {
-  background: var(--dp-btn-hover-color) !important;
+  background: var(--dp-inpt-color) !important;
 }
 
 /* 
@@ -425,100 +456,110 @@ div.contents .toc,
   max-width: calc(100% - 24px); /* 24px = 3px gap + 16px icon + 5px margin-right; Prevents overflow; adjust if layout changes */
 }
 
-/*
-  Make the input field fill its flex parent (.left), growing or shrinking as needed.
-  width: auto prevents browser defaults from conflicting with flex sizing.
-*/
-#MSearchField {
-  flex: 1 1 auto; /* Input grows and shrinks with parent */
-  min-width: 0; /* Prevents overflow */
-  height: 100%; /* Match parent's height */
-  box-sizing: border-box; /* Include padding/border in height/width */
-  width: auto; /* Override UA default */
-}
-
-/*
-  RIGHT SIDE: contains the close button ("x").
-  Keep .right only as big as its content.
-*/
+/* customizing right side close icon */
 #MSearchBox > .right {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
 }
 
-/*
-  Make the close button image always square and fill its parent vertically.
-  (If using an SVG instead, update width/height as needed.)
-*/
-#MSearchCloseImg {
-  width: 16px !important;
-  height: 16px !important;
-  display: block;
-  padding: 0px !important;
+#MSearchClose {
+  width: 20px !important;
+  height: 20px !important;
+}
+#MSearchCloseImg.close-icon {
+  background-color: transparent !important;
+  align-items: center;
+  left: 3px;
+  top: -2px;
 }
 
-/*
-  #MSearchSelect is the dropdown for choosing the search scope or context.
-  Remove the default magnifier icon; instead, display custom content using ::before/::after.
-  (Requires CSS variable --dp-search-field for dynamic label text.)
-*/
+#MSearchCloseImg.close-icon::before {
+  background-color: var(--dp-seach-clear-icon-color) !important;
+  width: 14px;
+  height: 2px;
+}
+
+#MSearchCloseImg.close-icon::after {
+  background-color: var(--dp-seach-clear-icon-color) !important;
+  width: 14px;
+  height: 2px;
+}
+
+/* customizing left side search select */
+
+#MSearchSelect > .search-icon-dropdown {
+  display: none !important;
+}
+
 #MSearchSelect {
-  color: var(--dp-search-select-text-color) !important;
-  display: inline-flex;
-  box-sizing: border-box;
+  display: inline-flex !important;
+  align-items: center !important;
   width: auto !important;
   height: 100% !important;
-  text-indent: 0 !important;
-  background: none !important;
-  font-weight: 500 !important;
-  align-items: center !important;
-  margin-left: 0.35em !important;
-  margin-right: 0.25em !important;
-  line-height: 1.2 !important; /* Slightly increased for better alignment */
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-left: 5px !important;
+  top: 0px !important;
+  left: 0px !important;
+  color: var(--dp-text-search-select-color) !important;
 }
 
-/* 
-  Add a dropdown indicator (▼) before the search selector text.
-  Change the symbol for a different icon.
-*/
-#MSearchSelect::before {
-  content: "▼";
-  font-size: 0.7em;
+#MSearchSelect.search-icon::before {
+  all: unset !important;
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+  content: "▼" !important;
+  font-size: 0.8em !important;
 }
 
-/*
-  Add the current search context or field label after the dropdown indicator.
-  The label text is provided via CSS variable --dp-search-field.
-*/
-#MSearchSelect::after {
-  content: var(--dp-search-field);
-  font-size: 0.9em;
+#MSearchSelect.search-icon::after {
+  all: unset !important;
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+  content: var(--dp-search-field) !important;
+  margin-left: 2px !important;
+}
+
+#MSearchField {
+  box-sizing: border-box;
+  position: static !important;
+  transform: none !important;
+  height: auto !important;
+  padding: 0px !important;
+  margin: 0 !important;
+  margin-left: 3px !important;
+  top: 0px !important;
+  left: 0px !important;
+  line-height: 1.2 !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DARK MODE TOGGLE BUTTON CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* 
-  Styles for the dark mode toggle button in Doxygen Awesome theme.
-
-  - Uses custom CSS variables for border radius and colors,
-    allowing for easy theme customization and consistency.
-  - Ensures button looks rounded and uses the correct background color,
-    including on hover.
-
-  Note: doxygen-awesome-dark-mode-toggle is a custom element, 
-  not a class or ID selector.
-*/
-
 doxygen-awesome-dark-mode-toggle {
-  border-radius: var(--dp-border-radius) !important; /* Rounded corners for the toggle button */
-  background-color: var(--dp-btn-color) !important; /* Button background (normal state) */
+  border-radius: var(--dp-border-radius) !important;
+  background-color: transparent !important;
 }
 
-doxygen-awesome-dark-mode-toggle:hover {
-  background: var(--dp-btn-hover-color) !important; /* Background color on hover */
+doxygen-awesome-dark-mode-toggle > svg {
+  fill: var(--dp-icon-color) !important;
+  width: 80%;
+  height: 80%;
+}
+
+doxygen-awesome-dark-mode-toggle:hover > svg {
+  fill: var(--dp-icon-hover-color) !important;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  doxygen-awesome-dark-mode-toggle,
+  doxygen-awesome-dark-mode-toggle > svg {
+    transition: none;
+  }
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -534,39 +575,197 @@ doxygen-awesome-dark-mode-toggle:hover {
   - Designed to blend with other controls and respond visually on hover.
 */
 
-#main-nav #searchBoxPos2 .dp-sidebar-toggle-btn {
-  display: inline-flex; /* Use flex for easy centering of content */
-  margin-left: 5px !important; /* Horizontal gap to previous element */
-  padding: 0; /* Remove default button padding */
-  width: var(--searchbar-height) !important; /* Width: Default 24px */
-  height: var(--searchbar-height) !important; /* Height: Default 24px */
-  background: var(--dp-btn-color); /* Main button background */
-  border: none; /* Remove default border */
-  border-radius: var(--dp-border-radius) !important; /* Make the button rounded rectangle */
-  vertical-align: middle; /* Align with other inline elements */
-  text-align: center; /* Center text/icon horizontally */
-  line-height: var(--searchbar-height); /* Vertically align text/icon (fallback) */
-  font-size: 22px; /* Match font size with other icons/buttons */
-  align-items: center; /* Center <img> vertically inside the flex container */
-  justify-content: center; /* Center <img> horizontally */
-  user-select: none; /* Prevent accidental text selection */
-  cursor: pointer; /* Show pointer on hover for better UX */
+#dp-sidebar-toggle-btn {
+  display: grid;
+  place-items: center;
+  margin-left: 5px !important;
+  padding: 0;
+  width: var(--searchbar-height) !important;
+  height: var(--searchbar-height) !important;
+  background: transparent;
+  color: var(--dp-icon-color);
+  border: none;
+  border-radius: var(--dp-border-radius) !important;
+  line-height: 1;
+  font-size: 22px;
+  user-select: none;
+  cursor: pointer;
 }
 
-/* Change background on hover to indicate interactivity. */
-#main-nav #searchBoxPos2 .dp-sidebar-toggle-btn:hover {
-  background: var(--dp-btn-hover-color) !important;
+#dp-sidebar-toggle-btn > svg {
+  width: 80%;
+  height: 80%;
 }
+#dp-sidebar-toggle-btn:hover > svg {
+  color: var(--dp-icon-hover-color);
+  width: 90%;
+  height: 90%;
+}
+#dp-sidebar-toggle-btn:active > svg {
+  width: 50%;
+  height: 50%;
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  #dp-sidebar-toggle-btn,
+  #dp-sidebar-toggle-btn > svg {
+    transition: none;
+  }
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* SIDE NAV CUSTOMIZATIONS */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /*
-  Ensure the icon image inside the button is well-proportioned and never overflows.
-  - 60% of 24px = ~14px, so icon remains visually balanced within the button.
-  - Adjust max-width/max-height if the design changes button size.
+  The '#side-nav' contains the '#nav-tree' and the resizer as well.
+  - 'background-color' set to '--page-background-color'. This color is the border around panes.
+    Since the '#side-nav' also contains the resizer and the resizer is the separator between
+    the panes, we set the background of the '#side-nav' to the background of the pane
+    separators and then set the background of '#nav-tree' to our pane color. This way we have
+    the appearence of the default side-nav similar to our dual navs.
+  - '--tree-item-height': Custom height for each tree item (default 1.3rem, replacing 30px/2rem).
+  - min-width: Ensure navigation is touch-friendly (at least 50px wide).
+  - background/border: Match theme and provide visual separation.
+
+  NOTE: By default the right-sde border is provided using '.ui-resizable-handle.ui-resizable-e' which
+  we restyle as well.
 */
-#main-nav #searchBoxPos2 .dp-sidebar-toggle-btn > img {
-  max-width: 60%;
-  max-height: 60%;
-  object-fit: contain; /* Maintain aspect ratio and fit inside button */
+#side-nav {
+  background-color: var(--page-background-color) !important;
+  left: var(--dp-sep) !important;
+  height: var(--dp-main-h) !important;
+  --tree-item-height: 1.3rem !important;
+  min-width: var(--dp-min-width) !important;
+  padding-right: var(--dp-sep) !important;
+  border-radius: var(--dp-border-radius) !important;
+  border: none !important;
+}
+
+#nav-tree {
+  background-color: var(--dp-pane-color) !important;
+  height: var(--dp-main-h) !important;
+  border-radius: var(--dp-border-radius) !important;
+  border: none !important;
+  padding-left: var(--dp-sep) !important;
+  padding-right: var(--dp-sep) !important;
+}
+
+/* Provides padding for the top of the content */
+#nav-tree-contents {
+  padding-top: 8px !important;
+}
+
+/* re-styling default resizer */
+#side-nav .ui-resizable-handle.ui-resizable-e {
+  transition: unset !important;
+  box-shadow: none !important;
+  width: var(--dp-sep) !important;
+  background-color: transparent !important;
+  opacity: 1;
+}
+
+/* removing the default resize icon since our cursor serves its purpose */
+#side-nav .ui-resizable-handle.ui-resizable-e::after {
+  display: none !important;
+}
+
+/* 
+  Expand/collapse icon, make it visible all the time.
+  By default it is only visible on hover.
+*/
+#side-nav #nav-tree-contents span.arrow {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 
+  For some reason the first child of any ul never shows the
+  expand/collapse icon by default, we change that here.
+*/
+#nav-tree ul li:first-child > div > a {
+  opacity: 1 !important;
+  pointer-events: unset !important;
+}
+
+/* 
+  Change the expand/collapse arrow. The left margin provides space
+  for marker of the currently selected item.
+*/
+#side-nav .item .arrow {
+  margin-left: 10px;
+  font-size: 0 !important; /* hides any ► text node */
+  position: relative; /* so we can place our icon if needed */
+  background: transparent;
+}
+
+/* removing the default arrowhead and its rotation */
+#side-nav .item .arrow .arrowhead {
+  width: 0px !important;
+  border: none !important;
+  transform: rotate(0deg);
+  display: inline-block;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+/* assigning a new arrow head expand/collapse icon */
+#side-nav .item .arrow .arrowhead::before {
+  font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif;
+  content: "\2B9E";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  display: inline-block;
+  font-size: var(--dp-exp-col-icon-font-size);
+  color: var(--page-foreground-color);
+  transition: transform 0.25s ease;
+}
+
+/* rotate collapsed icon by 90 degrees to make it open, this creates animation. */
+#side-nav .item .arrow .arrowhead.opened::before {
+  transform: rotate(90deg);
+}
+
+/* remove default settings for current or selected item */
+#side-nav #nav-tree-contents .item.selected *,
+#side-nav #nav-tree-contents .item.current * {
+  font-weight: normal !important; /* Remove default bolding */
+  text-shadow: none !important; /* Remove text shadow for a flatter look */
+  color: inherit !important; /* Use parent color (removes highlight) */
+}
+
+/* apply our settings for current and selected item */
+#side-nav #nav-tree-contents .item.selected,
+#side-nav #nav-tree-contents .item.current {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: var(--page-foreground-color) !important;
+  background-color: var(--dp-item-color);
+  margin-right: 0px;
+  border-radius: var(--dp-border-radius) !important;
+}
+
+/* change the background on hover */
+#side-nav #nav-tree-contents .item:hover {
+  background-color: var(--dp-item-hover-color);
+  border-radius: var(--dp-border-radius) !important;
+}
+
+/* create a small line on the left as marker for current/selected item */
+#side-nav #nav-tree-contents .item.selected::after,
+#side-nav #nav-tree-contents .item.current::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 5px;
+  bottom: 5px;
+  width: 4px;
+  background: var(--dp-mark-color);
+  border-radius: 2px;
+  pointer-events: none;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -574,72 +773,71 @@ doxygen-awesome-dark-mode-toggle:hover {
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /* 
-  In Doxy-Plus.js, we clone the header from #doc-content and insert it as a container 
-  *before* #doc-content, making it a direct child of <body>. 
+  In Doxy-Plus.js, we clone the header from #doc-content and insert the clone before 
+  #container, making it a direct child of <body>. The original header which
+  which is the child of '#doc-content' is left untouched.
+  
+  DESKTOP VIEW (width > 767px): We hide the original '#doc-content > .header' and show
+  our cloned 'body > .header'. This way, in desktop view the header becomes sticky and
+  does not scroll with scrolling of the main conetnt.
 
-  - So, 'body > .header' refers to the cloned header (used for desktop layout).
-  - '#doc-content > .header' refers to the original header inside #doc-content (used for mobile).
-  - '>' means "direct child" selector in CSS.
+  MOBILE VIEW (width < 767px): We hide our cloned 'body > .header' and show the original
+  '#doc-content > .header'. This way the header is a part of the scrolling main content
+  and scrolls with it, giving users extra height to view the content in mobile view.
+
+  - 'body .header' => Both headers
+  - 'body > .header' => Desktop view header
+  - '#doc-content > .header' => Mobile view header
+
+  NOTE: the selector '>' means "direct child" selector in CSS. So, when we do 'body > .header' then
+  it will only apply to 'header' which is a direct child of <body>. If we do not use the '>' selector
+  and do 'body .header' then this will apply to any header which is inside the body i.e. child, grand child,
+  great grand child,...
+  So, 'body .header' will apply to cloned header (because it is direct child of <body>) as well as original
+  header, because original header is a child of '#doc-content' and '#doc-content' is a child of <body>.
 */
 
-/* 
-  Note: No '>' after body here, so this applies to all .header elements 
-  anywhere within <body>, regardless of depth.
-
-  - Sets the background color and border for header area on both desktop and mobile.
-*/
+/* Styling both headers (only one is visible at any time) */
 body .header {
+  background-color: var(--dp-pane-color) !important;
   border-bottom: var(--dp-doc-header-border) solid var(--separator-color) !important;
+}
+
+/*
+  Customizing the cloned header.
+*/
+body > .header {
+  display: block !important;
   margin-left: var(--dp-doc-margin-left) !important;
-  margin-right: 5px !important;
-  background-color: var(--dp-page-color) !important;
+  margin-right: var(--dp-sep) !important;
   border-top-left-radius: var(--dp-border-radius) !important;
   border-top-right-radius: var(--dp-border-radius) !important;
 }
 
-/* 
-  DESKTOP: Styles for the cloned header as a direct child of body.
-  This is the sticky header shown in desktop mode.
-*/
-body > .header {
-  display: block !important;
-}
-
-/* 
-  MOBILE: Hide the original header inside #doc-content on desktop.
-  (Mobile version of header is shown only in mobile layout.)
-*/
+/* by default the original header is hidden */
 #doc-content > .header {
   display: none !important;
 }
 
-/* DESKTOP: Large font size for desktop header titles.*/
+/* changing text size and alignment of cloned header */
 body > .header > .headertitle > .title {
   font-size: 225% !important;
+  text-align: center;
 }
 
-/* MOBILE: Smaller font size for mobile header titles. */
+/* changing text size of original header */
 #doc-content > .header > .headertitle > .title {
   font-size: 150% !important;
 }
 
-/* 
-  Sets padding and removes extra margins for header title,
-  making the title visually balanced and tight.
-*/
+/* changing margins to make both headers smaller in height*/
 body .header > .headertitle > .title {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-  padding: 5px 16px !important;
-}
-
-/* Removes top margin for summary/links above header title for a tighter header block. */
-body .header > .summary {
-  margin-top: 0px !important;
 }
 
 /* 
-  MEDIA QUERY: On mobile (<768px), toggle visibility of headers:
+  MOBILE VIEW (width <= 767px): Toggle visibility of headers:
     - Hide the desktop (cloned) header.
     - Show the original header inside #doc-content.
 
@@ -658,303 +856,316 @@ body .header > .summary {
 /* DOC CONTENT CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* 
-  Set #doc-content position and size for DESKTOP view.
-
-  - top: Position below the sticky header (top + doc-header heights).
-  - height: Fill remaining viewport height minus top header and bottom bar.
-  - margin-left: Leave space for sidebar or nav (defined by --dp-doc-margin-left).
-*/
 #doc-content {
-  --page-background-color: var(--dp-page-color) !important;
-  background-color: var(--dp-page-color) !important;
+  /*
+    Background Color: We need to assign our page color to '--page-background-color'
+    variable as well as the background color here. Most parts of the doc-content
+    uses the variable '--page-background-color' for background color but some small
+    boxes here and there does not use this variable. So, by assigning the same background
+    color to both we get a uniform custom background color for doc-conetnt.
+  */
+  --page-background-color: var(--dp-pane-color) !important; /* Override the page color variable just for doc-content */
+  background-color: var(--dp-pane-color) !important; /* Set the background color because some parts use a different variable */
+
+  /* deafult: we set left margin only */
   margin-left: var(--dp-doc-margin-left) !important;
-  margin-right: 5px;
+
+  /* minimum width */
+  min-width: var(--dp-min-width) !important;
+
+  /* 
+    Height: See top of this page for description of height calculation.
+    By default the cloned header is shown whos height is not included in
+    the height of the #doc-content and so we subtract its height and its
+    bottom border.
+  */
+  height: calc(100vh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height) - (4 * var(--dp-sep)) - var(--dp-doc-header-border)) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height) - (4 * var(--dp-sep)) - var(--dp-doc-header-border)) !important; /* for use in newer browsers */
+
+  /*
+    By default we only set the bottom left corner radius.
+    Top left and right corner radius is set on the cloned
+    header and bottom right on the #page-nav.
+  */
   border-bottom-left-radius: var(--dp-border-radius) !important;
+}
+
+/*
+  When a page does not have a doc-content header then calculate the
+  height differently and set the top left and right corner radius.
+*/
+body[data-dp-doc-header-not-available] #doc-content {
+  height: var(--dp-main-h);
+  border-top-left-radius: var(--dp-border-radius) !important;
+  border-top-right-radius: var(--dp-border-radius) !important;
+}
+
+/*
+  When #page-nav is not available on a page then we set the
+  bottom right radius as well and also the right side margin.
+*/
+body[data-dp-page-nav-not-available] #doc-content {
+  margin-right: var(--dp-sep);
   border-bottom-right-radius: var(--dp-border-radius) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - var(--dp-doc-header-border)) !important;
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-doc-header-height) - var(--dp-bottom-height) - (4 * var(--dp-sep)) - var(--dp-doc-header-border)) !important;
 }
 
-body[dp-doc-header-invisible="true"] #doc-content {
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  border-radius: var(--dp-border-radius) !important;
-}
-
-h1, h2, h3, h4, h5{
+/*
+  The h* is the headings inside the doc-content. For some reason the top margin
+  for all these are different, although, it all looks the same. That's why we
+  are overriding it here to make all of it have same size top margin.
+*/
+h1, h2, h3, h4, h5 {
   margin-top: 0.5em !important;
 }
 
 /*
-  Set #doc-content position and size for MOBILE view (width ≤ 767px).
-
-  - top: Only account for the main top bar (not desktop header).
-  - height: Fill viewport minus top and bottom bars.
-  - margin-left: Remove left margin so content spans full width.
+  MOBILE VIEW (width <= 767px):
+  - Set border radius for all four corners.
+  - Set the height correctly.
 */
 @media screen and (max-width: 767px) {
   #doc-content {
-    border-top-left-radius: var(--dp-border-radius) !important;
-    border-top-right-radius: var(--dp-border-radius) !important;
-    height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-    height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+    margin-right: var(--dp-sep);
+    height: var(--dp-main-h) !important;
+    border-radius: var(--dp-border-radius) !important;
   }
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* SIDE NAV CUSTOMIZATIONS */
+/* PAGE NAV CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /*
-  Set size and minimum width for the side navigation bar in desktop view.
-
-  - --tree-item-height: Custom height for each tree item (default 1.3rem, replacing 30px/2rem).
-  - top/height: Fit the sidebar between header and footer, using CSS variables for adaptive sizing.
-  - min-width: Ensure navigation is touch-friendly (at least 50px wide).
-  - background/border: Match theme and provide visual separation.
-
-  NOTE: By default the right-sde border is provided using '.ui-resizable-handle.ui-resizable-e' which
-  we remove afterwards and so we add our own border directly to side-nav.
+  The #doc-content and #page-nav are in a column wise grid inside #container.
+  We make the #doc-content take any and all available width.
 */
-#side-nav {
-  background-color: var(--page-background-color) !important;
-  left: var(--dp-sep) !important;
-  top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
+#container {
+  grid-template-columns: minmax(0, 1fr) max-content !important;
+}
 
-  /* Height: See top of this page for description of height calculation */
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important; /* fallback for older browsers */
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important; /* for use in newer browsers */
+/* resize handle of #page-nav */
+#page-nav-resize-handle {
+  transition: unset !important;
+  width: 7px !important;
+  margin-left: -4px;
+  background-color: transparent !important;
+}
 
-  --tree-item-height: 1.3rem !important; /* Custom height of individual items (default is 30px which is around 2rem) */
-  min-width: 50px !important; /* Set minimum width of navigation bar so that it behaves better on touch screens */
+/* remove the icon that is drawn since we rely on curosr */
+#page-nav-resize-handle::after {
+  display: none !important;
+}
 
-  padding-right: var(--dp-sep) !important; /* reserves the space for the resizer */
-  border-radius: var(--dp-border-radius) !important;
-  border: none !important;
+/* change width of resize handle in mobile view */
+@media (pointer: coarse) {
+  #page-nav-resize-handle {
+    width: 37px !important;
+    margin-left: -20px !important;
+  }
+}
+
+/* page-nav customizations */
+#page-nav {
+  min-width: var(--dp-min-width) !important;
+  background-color: var(--dp-pane-color) !important;
+  border-left-width: var(--dp-doc-header-border) !important;
+  margin-right: var(--dp-sep) !important;
+  border-bottom-right-radius: var(--dp-border-radius) !important;
+}
+
+
+#page-nav-contents {
+  top: 0px !important;
+  overflow: auto;
+}
+
+#page-nav-contents ul.page-outline {
+  padding: 5px;
+}
+
+/* change individual items inside #page-nav */
+#page-nav #page-nav-contents .item {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 3px;
+}
+
+#page-nav #page-nav-contents .item span {
+  flex: 0 0 auto;
+  width: 8px !important;
+}
+
+#page-nav #page-nav-contents .item a {
+  flex: 1 1 auto;
+}
+
+#page-nav #page-nav-contents a {
+  min-width: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+#page-nav #page-nav-contents a:hover,
+#page-nav #page-nav-contents a:focus-visible {
+  white-space: normal; /* allow wrapping */
+  overflow-wrap: anywhere; /* break long tokens (URLs, hashes) */
+  word-break: normal; /* keep dictionary words intact when possible */
+  hyphens: auto; /* needs lang="en" (or your language) */
+}
+
+#page-nav-contents ul.page-outline li {
+  background: var(--dp-pane-color);
+}
+
+/* change the text and sizes of individual items inside #page-nav */
+#page-nav-contents ul.page-outline li a {
+  --page-secondary-foreground-color: var(--page-foreground-color) !important;
+  --primary-color: var(--page-foreground-color) !important;
+  font-family: var(--font-family-monospace);
+  font-size: var(--dp-page-nav-font-size) !important;
+  font-weight: unset !important;
+  line-height: var(--dp-page-nav-line-height) !important;
+}
+
+/* 
+  #page-nav adds .vis for items that are currently in view in the
+  #doc-content. We render these items like selected items in #sidde-nav
+  and root and leaf panes.
+*/
+#page-nav-contents li.vis {
+  background-color: var(--dp-item-color) !important;
+}
+
+/* remove the default left bar drawn for .vis items */
+#page-nav-contents li.vis::after {
+  content: none !important; /* prevents the pseudo-element from existing */
+  display: none; /* harmless redundancy */
+}
+
+/* 
+  In #page section name ids starts with 'nav-header-'. We make it sticky so
+  that it is always visible if there are any items in that section currently
+  visible in the #doc-content.
+*/
+#page-nav-contents li[id^="nav-header-"] {
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 /*
-  The '#nav-tree' is a child of '#side-nav' and contains the '#nav-tree-contents'.
-  - 'background-color' is set to our page color. This way the side nav has the same
-    appearence as dual nav panes.
+  By default the padding on the left is 16px, this is too much, so we
+  change it to 8px;
 */
-#nav-tree {
-  background-color: var(--dp-page-color) !important;
-  top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
-
-  /* Height: See top of this page for description of height calculation */
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important; /* fallback for older browsers */
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important; /* for use in newer browsers */
-
-  border-radius: var(--dp-border-radius) !important;
-  border: none !important;
-  padding-left: var(--dp-sep) !important;
-  padding-right: var(--dp-sep) !important;
+#page-nav-contents li[id^="nav-"] > .item > span {
+  padding-left: 8px !important;
 }
 
 /*
-  The top padding is applied to '#nav-tree-contents' and not to '#nav-tree' because
-  it if applied to '#nav-tree' it shifts the pane downwards making its bottom right
-  corner appear without any corner radous.
+  Since normal item in #page-nav has ids starting with 'nav-' and section
+  headers have ids starting with 'nav-header-'. When we target the normal
+  ones (just above) and change its left padding, it also affects the left
+  padding of section headers, we here we change it back to 0px.
 */
-#nav-tree-contents{
-  padding-top: 4px !important;
+#page-nav-contents li[id^="nav-header-"] > .item > span {
+  padding-left: 0px !important;
 }
 
 /*
-  - Remove the default right-side border (box-shadow) on resizable handles
-    because we are using the separation between panes as the resize handle.
-  - Set the width to '--dp-sep' because this is the size of the separators
-    between panes
+  To make section headers appear differently we apply different text color
+  and different font weight for section header items.
 */
-#side-nav .ui-resizable-handle.ui-resizable-e {
-  box-shadow: none !important;
-  width: var(--dp-sep) !important;
+#page-nav-contents ul.page-outline li[id^="nav-header-"] a {
+  font-weight: 600 !important;
+  color: var(--dp-text-page-nav-section-color) !important;
+  --primary-color: var(--dp-text-page-nav-section-color) !important;
 }
 
 /*
-  Style the expand/collapse arrow in the navigation tree.
-  - Arrow style is changed to a circle via doxy-plus.js javascript file.
-  - Font size and padding align the icon visually.
-  - opacity: 1 ensures the icon is always visible (removes fade on hover).
+  Since multiple items can have .vis class in #page-nav we want it to look
+  like all items are part of the same group. So that is why we apply the border
+  radius and paddings to the first and the last item only.
 */
-#side-nav #nav-tree-contents span.arrow {
-  font-family: "noto-2b9", system-ui, "Segoe UI Symbol", "Apple Symbols", "Noto Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;    /* safe no-op on non-WebKit */
-  text-rendering: auto;
-  font-size: 0.8rem !important;
-  padding-bottom: 3px;
-  opacity: 1 !important; /* By default opacity is changing based on hover, to make it always visible we change it to 1 */
-}
 
-/*
-  Remove the small blue bar (pseudo-element) that appears at the left edge
-  of selected or current items in the tree.
-*/
-#side-nav #nav-tree-contents .item.selected::after,
-#side-nav #nav-tree-contents .item.current::after {
-  /*content: none !important;*/ /* The blue bar is rendered via ::after, so hide it */
-  content: "";
-  position: absolute;
-  top: 4px;
-  bottom: 4px;
-  left: 2px;
-  right: calc(100% - 5px);
-  background: var(--dp-current-item-mark-color);
-  border-radius: 2px !important;
-  pointer-events: none; /* don’t block clicks/scrolls */
-}
-
-/*
-  Undo bold, shadow, and forced color for selected/current navigation items.
-  - Makes their style more neutral to fit with the custom theme.
-*/
-#side-nav #nav-tree-contents .item.selected *,
-#side-nav #nav-tree-contents .item.current * {
-  font-weight: normal !important; /* Remove default bolding */
-  text-shadow: none !important; /* Remove text shadow for a flatter look */
-  color: inherit !important; /* Use parent color (removes highlight) */
-}
-
-/*
-  Custom styling for selected or current items in the navigation tree.
-  - Adds spacing, background, and border for emphasis.
-  - margin-left/padding-left align with other items.
-*/
-#side-nav #nav-tree-contents .item.selected,
-#side-nav #nav-tree-contents .item.current {
-  margin-top: 4px;
-  margin-bottom: 4px;
+/* padding and border radius for the first item that has .vis class */
+#page-nav-contents li.vis:nth-child(1 of li.vis) {
   padding-top: 3px;
+  border-top-left-radius: var(--dp-border-radius);
+  border-top-right-radius: var(--dp-border-radius);
+}
+
+/* padding and border radius for the last item that has .vis class */
+#page-nav-contents li.vis:nth-last-child(1 of li.vis) {
   padding-bottom: 3px;
-  color: var(--page-foreground-color) !important;
-  background-color: var(--dp-current-item-color);
-  padding-left: 5px !important;
-  margin-right: 0px;
-  border-radius: var(--dp-border-radius) !important;
+  border-bottom-left-radius: var(--dp-border-radius);
+  border-bottom-right-radius: var(--dp-border-radius);
 }
 
 /*
-  Move the expand/collapse icon (and text) 10px to the left for all items.
-  - Necessary because a top-level item was removed via JS (doxy-plus.js).
-  - Negative margin shifts the tree inward for better alignment.
-  - Also moves the text to the left.
+  The last item in #page-nav is a members link which takes you to a different
+  html page. We render this item differently.
 */
-#side-nav #nav-tree-contents .item > a {
-  margin-left: -10px !important; /* Moves content left */
-}
-
-/*
-  For selected/current items, move the icon (and text) 15px to the left
-  for better visual alignment. Since padding-left: 5px is added above for
-  current/selected items, a further 5px left shift keeps everything lined 
-  up with non-selected items. So, this means -10px (for every item) + (-5px(
-  for current/selected item)) i.e. -15px left margin.
-  This also moves the text. 
-*/
-#side-nav #nav-tree-contents .item.selected > a,
-#side-nav #nav-tree-contents .item.selected > a {
-  margin-left: -15px !important;
-}
-
-/* For items that are a leaf node, there are no icons and so the above two rules do not apply.
-Because of how Doxygen makes the items we have to apply the same rule as above but now to the
-label which is the displayed text. But applying to label will also move the label of items that
-has expand collapse icons, but we already moved their labels when we moved the icon so now we
-have to exclude them.
-
-  For leaf nodes (items without expand/collapse icon/link), shift the label left.
-  - :not(:has(> a)) targets items that have no direct <a> child (no arrow/icon).
-  - Negative margin keeps the labels aligned with the rest of the tree.
-  - Note: This will also affect labels of expandable items, but they've
-    already been moved above, so visually everything stays in sync.
-*/
-#side-nav #nav-tree-contents .item:not(:has(> a)) > .label {
-  margin-left: -10px !important; /* -10px will move the left margin more towards left */
-}
-
-/*
-  Same as above, but for selected/current leaf items, shift label 15px left.
-  - This keeps alignment visually consistent with icon-bearing selected items.
-*/
-#side-nav #nav-tree-contents .item.selected:not(:has(> a)) > .label,
-#side-nav #nav-tree-contents .item.current:not(:has(> a)) > .label {
-  margin-left: -15px !important; /* -15px will move the left margin more towards left */
+#page-nav-contents ul.page-outline li:has(> div.item > a[href$="-members.html"]) a {
+  font-weight: 600 !important;
+  --primary-color: unset !important;
+  color: var(--primary-color) !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DUAL NAV CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/*
-  Primary and secondary navigation bars on the left.
-  - Fixed positioning below the top bar.
-  - Height calculated to fit between top and bottom bars.
-  - No list style, always vertical, with hidden horizontal overflow.
-  - Z-index ensures correct stacking order (primary nav above secondary).
-*/
-#dp-pri-nav,
-#dp-sec-nav {
+#dp-root-pane,
+#dp-leaf-pane {
   position: fixed;
-  top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
+  top: var(--dp-main-y);
+  height: var(--dp-main-h);
   list-style: none;
   border: none;
-  background-color: var(--dp-page-color) !important;
+  background-color: var(--dp-pane-color) !important;
   border-radius: var(--dp-border-radius);
   white-space: nowrap;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-/* Primary navigation (furthest left). Highest z-index among nav bars. */
-#dp-pri-nav {
+#dp-root-pane {
   z-index: 9992;
   left: var(--dp-sep);
-  width: var(--dp-pri-width);
+  width: var(--dp-root-pane-width);
 }
 
-/* Secondary navigation (immediately right of primary). */
-#dp-sec-nav {
+#dp-leaf-pane {
   z-index: 9991;
-  left: calc(var(--dp-pri-width) + (2 * var(--dp-sep)));
-  width: var(--dp-sec-width);
+  left: calc(var(--dp-root-pane-width) + (2 * var(--dp-sep)));
+  width: var(--dp-leaf-pane-width);
 }
 
-/*
-  Resizer handles between nav panes and between nav/content.
-  - Fixed width (5px), expands to 35px on coarse pointer devices for touch-friendliness.
-  - No background by default (can be styled for visual feedback if desired).
-  - Highest z-index so it sits above nav bars.
-  - 'touch-action: none' allows for custom drag behavior.
-*/
-#dp-pri-nav-resizer,
-#dp-sec-nav-resizer {
-  touch-action: pan-y;   /* was: none */
+#dp-root-pane-resizer,
+#dp-leaf-pane-resizer {
+  touch-action: none;
   position: fixed;
-  top: calc(var(--dp-top-height) + (2 * var(--dp-sep))) !important;
-  height: calc(100vh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  height: calc(100dvh - var(--dp-top-height) - var(--dp-bottom-height) - (4 * var(--dp-sep))) !important;
-  width: 5px;
+  top: var(--dp-main-y);
+  height: var(--dp-main-h);
+  width: var(--dp-sep);
   background: none;
   cursor: ew-resize;
+  cursor: col-resize;
   z-index: 9993;
 }
 
-#dp-pri-nav-resizer {
-  left: calc(var(--dp-pri-width) + var(--dp-sep));
+#dp-root-pane-resizer {
+  left: calc(var(--dp-root-pane-width) + var(--dp-sep));
 }
 
-#dp-sec-nav-resizer {
-  left: calc(var(--dp-pri-width) + var(--dp-sec-width) + (2 * var(--dp-sep)));
+#dp-leaf-pane-resizer {
+  left: calc(var(--dp-root-pane-width) + var(--dp-leaf-pane-width) + (2 * var(--dp-sep)));
 }
 
-/* 
-  On touch devices, make resizer handles much larger (35px), 
-  and center them visually (margin-left: -15px).
-*/
 @media (pointer: coarse) {
   #dp-pri-nav-resizer,
   #dp-sec-nav-resizer {
@@ -963,207 +1174,134 @@ have to exclude them.
   }
 }
 
-/* Remove extra padding from navigation <ul> containers for a compact look. */
-#dp-pri-nav > ul,
-#dp-sec-nav > ul {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
+.dp-tree-list,
+.dp-tree-item,
+.dp-tree-line,
+.dp-tree-node,
+.dp-tree-link {
+  -webkit-appearance: none;
+  appearance: none;
+  list-style: none;
+  box-shadow: none;
+  background: none;
+  text-decoration: none;
+  text-align: left;
+  font-size: var(--dp-item-font-size);
+  line-height: var(--dp-item-line-height);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-inline-size: 0;
 }
 
-/* 
-  Indented tree: for nested lists, add left margin for each level.
-  NOTE: '.dp-indented-tree' is assigned in doxy-plus.js file.
-*/
-#dp-pri-nav.dp-indented-tree ul ul,
-#dp-sec-nav.dp-indented-tree ul ul {
-  margin-left: 1.15em;
+#dp-root-pane > ul,
+#dp-leaf-pane > ul {
+  padding: 8px 5px;
 }
 
-/*
-  Hide children by default for expandable/collapsible nodes.
-  - Only shown when parent has .dp-node-open.
-*/
-#dp-pri-nav li.dp-has-children > ul,
-#dp-sec-nav li.dp-has-children > ul {
+#dp-root-pane.dp-pane-has-indented-tree ul ul,
+#dp-root-pane.dp-pane-has-indented-tree ul ul {
+  margin-left: var(--dp-item-line-height);
+}
+
+li.dp-tree-item--has-children > ul {
   display: none;
 }
 
-#dp-pri-nav li.dp-has-children.dp-node-open > ul,
-#dp-sec-nav li.dp-has-children.dp-node-open > ul {
+li.dp-tree-item--has-children.dp-tree-item--node-open > ul {
   display: block;
 }
 
-/* Main tree list: removes default list style, removes padding/margin. */
-#dp-pri-nav .dp-tree-list,
-#dp-sec-nav .dp-tree-list {
-  display: block;
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-/*
-  Each tree item: relative for positioning children (e.g., highlight backgrounds).
-  Negative margin reduces vertical gap between items.
-*/
-#dp-pri-nav .dp-tree-item,
-#dp-sec-nav .dp-tree-item {
-  position: relative;
-  /*margin-block: -2px;*/
-}
-
-/* Add a bit of vertical spacing between expandable nodes (not the last child). */
-#dp-pri-nav li.dp-has-children:not(:last-child),
-#dp-sec-nav li.dp-has-children:not(:last-child) {
-  /*margin-bottom: 2px;*/
-}
-
-/*
-  Each tree row: flex layout for icon + text alignment.
-  overflow: hidden ensures long text or icons don’t break the row.
-*/
-#dp-pri-nav .dp-tree-line,
-#dp-sec-nav .dp-tree-line {
+.dp-tree-line {
   display: flex;
+  position: relative;
   align-items: center;
-  overflow: hidden; /* clip any flex children that overflow */
-  background: transparent;
-  padding-left: 8px;
-  padding-right: 10px;
-}
-
-/*
-  Tree "expand/collapse" button:
-  - Always inline, 1em square, centered.
-  - Font size: 1.5em for visibility.
-  - No border/background.
-*/
-#dp-pri-nav .dp-tree-node,
-#dp-sec-nav .dp-tree-node{
-  /* Layout */
-  flex: 0 0 auto;
-  display: inline-flex; 
-  align-items: center;
-  justify-content: center;
-  width: 1.1em;
-  height: 1.1em;
-  line-height: 1;
-
-  /* Look */
-  background: transparent;
-  border: 0;
-  color: inherit;                    /* follows surrounding text color */
-
-  /* Typography: use your embedded Noto subset first */
-  font-family: "noto-2b9", system-ui, "Segoe UI Symbol", "Apple Symbols", "Noto Sans", sans-serif;
-  font-size: 1em;                    /* scale with surrounding text */
-  letter-spacing: 0;
-
-  /* Interaction */
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: var(--dp-border-radius);
+  color: var(--page-foreground-color);
   cursor: pointer;
-  padding: 0;
-
-  /* Polish */
-  vertical-align: -0.125em;          /* optical baseline align in text rows */
-  -webkit-font-smoothing: antialiased;    /* safe no-op on non-WebKit */
-  text-rendering: auto;                   /* 'geometricPrecision' hurts text */
+}
+li.dp-tree-item--disabled .dp-tree-line {
+  color: var(--dp-text-disabled-color);
+  cursor: default;
+}
+li.dp-tree-item--visited:not(.dp-tree-item--current) .dp-tree-line {
+  color: var(--dp-text-visited-color);
+}
+li:not(.dp-tree-item--disabled) .dp-tree-line:hover {
+  background: var(--dp-item-hover-color);
+}
+li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background: var(--dp-item-color);
+}
+li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 5px;
+  bottom: 5px;
+  width: 4px;
+  background: var(--dp-mark-color);
+  border-radius: 2px;
+  pointer-events: none;
 }
 
-/*
-  Tree link (navigable node label):
-  - Grows to fill available space.
-  - Prevents overflow (shows ellipsis for long names).
-  - No background for seamless look.
-*/
-#dp-pri-nav .dp-tree-link,
-#dp-sec-nav .dp-tree-link {
-  flex: 1 1 auto; /* take the rest of the space */
-  min-width: 0; /* allow it to shrink past its content size */
+.dp-tree-node {
+  flex: 0 0 auto;
+  font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif;
+  font-size: var(--dp-exp-col-icon-font-size);
+  width: var(--dp-item-line-height);
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  transition: transform 0.25s ease;
+}
+li:not(.dp-tree-item--has-children) .dp-tree-node {
+  visibility: hidden;
+}
+li.dp-tree-item--node-open > .dp-tree-line > .dp-tree-node {
+  transform: rotate(90deg);
+}
+
+#dp-root-pane .dp-tree-link,
+#dp-leaf-pane .dp-tree-link {
+  flex: 0 1 auto;
+  font-family: var(--font-family-monospace) !important;
+  font-weight: var(--dp-item-font-weight) !important;
+  color: inherit !important;
+  cursor: inherit !important;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background: transparent;
-  padding-left: 3px;
 }
 
-/* Primary/secondary nav links: normal font/color (unless visited/selected/etc). */
-#dp-pri-nav .dp-tree-link,
-#dp-sec-nav .dp-tree-link {
-  color: var(--page-foreground-color) !important;
-  font-weight: normal;
+#dp-root-pane .dp-tree-link:hover,
+#dp-leaf-pane .dp-tree-link:hover {
+  text-decoration: none !important;
 }
 
-/* Parent links: slightly larger and bolder for section headings. */
-#dp-pri-nav li.dp-has-children > .dp-tree-line > .dp-tree-link,
-#dp-sec-nav li.dp-has-children > .dp-tree-line > .dp-tree-link {
-  font-size: 1em !important;
-  font-weight: 500 !important;
-  border-bottom: 1px solid var(--page-foreground-color);
-  border-color: var(--dp-sep-color)
+#dp-root-pane li.dp-tree-item--has-children > .dp-tree-line > .dp-tree-link,
+#dp-leaf-pane li.dp-tree-item--has-children > .dp-tree-line > .dp-tree-link{
+  font-family: var(--font-family) !important;
 }
 
-/* Leaf (non-parent) links: monospace font, slightly smaller. */
-#dp-pri-nav li:not(.dp-has-children) > .dp-tree-line > .dp-tree-link,
-#dp-sec-nav li:not(.dp-has-children) > .dp-tree-line > .dp-tree-link {
-  font-size: 0.9em !important;
-  font-family: var(--font-family-monospace);
-  font-weight: var(--dp-child-item-font-weight);
-}
-
-/* Visited links in secondary nav get a different color (but not for current/active). */
-#dp-sec-nav li.dp-visited:not(.dp-current) > .dp-tree-line > .dp-tree-link {
-  color: var(--dp-visited-text-color) !important;
-}
-
-/*
-  Current item: highlighted background, top/bottom borders, and a bit of spacing.
-  - ::before extends the highlight background to the left edge (beyond LI).
-  - z-index ensures highlight is beneath text/icons.
-*/
-#dp-pri-nav li.dp-current > .dp-tree-line,
-#dp-sec-nav li.dp-current > .dp-tree-line {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  position: relative;
-  overflow: visible;
-  background-color: var(--dp-current-item-color);
-  border-radius: var(--dp-border-radius);
-}
-
-#dp-pri-nav li.dp-current.dp-has-children > .dp-tree-line,
-#dp-sec-nav li.dp-current.dp-has-children > .dp-tree-line {
-  padding-top: 3px;
-  padding-bottom: 7px;
-}
-
-#dp-pri-nav li.dp-current > .dp-tree-line::before,
-#dp-sec-nav li.dp-current > .dp-tree-line::before {
+li.dp-tree-item--has-children > .dp-tree-line::after {
   content: "";
-  position: absolute;
-  top: 5px;
-  bottom: 5px;
-  left: 2px;
-  right: calc(100% - 6px);
-  background: var(--dp-current-item-mark-color);
-  border-radius: 2px;
-  pointer-events: none; /* don’t block clicks/scrolls */
-}
-
-/* Disabled (no href) links: gray, not clickable, not underlined, no pointer. */
-#dp-pri-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-link,
-#dp-sec-nav li.dp-tree-no-href > .dp-tree-line > .dp-tree-link {
-  color: var(--dp-disabled-text-color) !important;
-  cursor: default !important; /* no pointer */
-  text-decoration: none !important; /* remove underline if any */
-  pointer-events: none !important; /* prevent any interaction */
-}
-
-#dp-pri-nav li:not(.dp-current):not(.dp-tree-no-href) > .dp-tree-line:hover,
-#dp-sec-nav li:not(.dp-current):not(.dp-tree-no-href) > .dp-tree-line:hover{
-  background-color: var(--dp-item-hover-color) !important;
-  border-radius: var(--dp-border-radius);
+  display: block;
+  flex: 1 1 auto; /* take remaining space */
+  margin-top: 2px;
+  align-self: center;
+  height: 1px; /* visual thickness */
+  /* draw transparent gap then the line, without consuming layout space */
+  background: linear-gradient(to right, transparent var(--dp-sep), var(--dp-line-color) var(--dp-sep), var(--dp-line-color) 100%);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100% 1px;
+  pointer-events: none;
 }
