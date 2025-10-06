@@ -100,7 +100,7 @@ html {
 
   /* doc-content header's height and bottom border*/
   --dp-doc-header-height: 0px;
-  --dp-doc-header-border: 2px;
+  --dp-doc-header-border: 1px;
 
   /*
     Main document area starting Y-Pos and Height.
@@ -800,7 +800,7 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
 /* Styling both headers (only one is visible at any time) */
 body .header {
   background-color: var(--dp-pane-color) !important;
-  border-bottom: var(--dp-doc-header-border) solid var(--page-background-color) !important;
+  border-bottom: var(--dp-doc-header-border) solid var(--separator-color) !important;
 }
 
 /*
@@ -980,7 +980,7 @@ td h2.groupheader, h2.groupheader{
   min-width: var(--dp-min-width) !important;
   background-color: var(--dp-pane-color) !important;
   border-left-width: var(--dp-doc-header-border) !important;
-  border-left-color: var(--page-background-color) !important;
+  border-left-color: var(--separator-color) !important;
   margin-right: var(--dp-sep) !important;
   border-bottom-right-radius: var(--dp-border-radius) !important;
 }
