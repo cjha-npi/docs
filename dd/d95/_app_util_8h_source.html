@@ -145,26 +145,18 @@ $(function(){initNavTree('dd/d95/_app_util_8h_source.html','../../',''); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/dba/namespacenpi_1_1app.html">npi::app</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../dc/dba/namespacenpi_1_1app.html#a0d0416789c724d7be6f541f758828e4e">   26</a></span>  <span class="keyword">inline</span> QString <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a0d0416789c724d7be6f541f758828e4e">toQStringL1</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>(&amp;ary)[N]) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static_assert</span>(N &gt; 0, <span class="stringliteral">&quot;empty literal?&quot;</span>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">return</span> QString::fromLatin1(ary, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(N - 1)); <span class="comment">// drop trailing &#39;\0&#39;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  }</div>
-</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  [[nodiscard]] <span class="keyword">const</span> QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir</a>() noexcept; <span class="comment">// C:\ProgramData\[orgFolder]</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  [[nodiscard]] const QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir</a>() noexcept; <span class="comment">// C:\Users\Public\Documents\[orgFolder]</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  [[nodiscard]] const QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir</a>() noexcept; <span class="comment">// C:\ProgramData\[orgFolder]\[appFolder]</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  [[nodiscard]] const QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir</a>() noexcept; <span class="comment">// C:\Users\Public\Documents\[orgFolder]\[appFolder]</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  [[nodiscard]] const QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a723a01872a6ddb63e5bec52939f8c021">settingsMainFile</a>() noexcept; <span class="comment">// C:\ProgramData\[orgFolder]\[appFolder]\settings.ini</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  [[nodiscard]] <span class="keyword">const</span> QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir</a>() noexcept; <span class="comment">// C:\ProgramData\[orgFolder]</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  [[nodiscard]] const QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir</a>() noexcept; <span class="comment">// C:\Users\Public\Documents\[orgFolder]</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  [[nodiscard]] const QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir</a>() noexcept; <span class="comment">// C:\ProgramData\[orgFolder]\[appFolder]</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  [[nodiscard]] const QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir</a>() noexcept; <span class="comment">// C:\Users\Public\Documents\[orgFolder]\[appFolder]</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  [[nodiscard]] const QString&amp; <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a723a01872a6ddb63e5bec52939f8c021">settingsMainFile</a>() noexcept; <span class="comment">// C:\ProgramData\[orgFolder]\[appFolder]\settings.ini</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
 <div class="ttc" id="anamespacenpi_1_1app_html"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html">npi::app</a></div><div class="ttdoc">Application metadata and constants.</div></div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a0d0416789c724d7be6f541f758828e4e"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a0d0416789c724d7be6f541f758828e4e">npi::app::toQStringL1</a></div><div class="ttdeci">QString toQStringL1(const char(&amp;ary)[N])</div><div class="ttdoc">Convert a string literal to QString using fromLatin1.</div><div class="ttdef"><b>Definition</b> AppUtil.h:26</div></div>
 <div class="ttc" id="anamespacenpi_1_1app_html_a30836be8b9337a64733a6e05594b23c8"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a></div><div class="ttdeci">const QString &amp; orgProgramDataDir() noexcept</div><div class="ttdoc">Absolute path to C:\ProgramData\[orgFolder].</div><div class="ttdef"><b>Definition</b> AppUtil.cpp:72</div></div>
 <div class="ttc" id="anamespacenpi_1_1app_html_a40a2a28831f2f410c995f0657baf6544"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a></div><div class="ttdeci">const QString &amp; appProgramDataDir() noexcept</div><div class="ttdoc">Absolute path to C:\ProgramData\[orgFolder]\[appFolder].</div><div class="ttdef"><b>Definition</b> AppUtil.cpp:124</div></div>
 <div class="ttc" id="anamespacenpi_1_1app_html_a723a01872a6ddb63e5bec52939f8c021"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a723a01872a6ddb63e5bec52939f8c021">npi::app::settingsMainFile</a></div><div class="ttdeci">const QString &amp; settingsMainFile() noexcept</div><div class="ttdoc">Absolute path of application&#39;s main settings.ini at C:\ProgramData\[orgFolder]\[appFolder]\.</div><div class="ttdef"><b>Definition</b> AppUtil.cpp:150</div></div>
@@ -185,7 +177,7 @@ $(function(){initNavTree('dd/d95/_app_util_8h_source.html','../../',''); });
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Oct 6 2025 17:28:36'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Mon Oct 6 2025 22:50:33'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
