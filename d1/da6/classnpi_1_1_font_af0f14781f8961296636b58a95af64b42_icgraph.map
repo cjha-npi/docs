@@ -1,0 +1,9 @@
+<map id="npi::Font::Font" name="npi::Font::Font">
+<area shape="rect" id="Node000001" title="Default constructor." alt="" coords="291,55,432,80"/>
+<area shape="rect" id="Node000002" href="$d1/da6/classnpi_1_1_font.html#a8fe490f75baba6a42d3ec2af23cafdf0" title="Set absolute point size (overrides default+relative when &gt; 0)." alt="" coords="5,5,243,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,56,242,45,188,34,189,28,243,40,294,50"/>
+<area shape="rect" id="Node000003" href="$d1/da6/classnpi_1_1_font.html#a3cb8298120f9fab1c2cb1d377f8903bc" title="Set relative point size delta (applied to the default size)." alt="" coords="5,55,243,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="283,70,242,70,242,65,283,65"/>
+<area shape="rect" id="Node000004" href="$d1/da6/classnpi_1_1_font.html#af6003e1e7178e7eac811cf402e949a2c" title="Set style." alt="" coords="33,104,215,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="294,85,243,95,189,107,188,101,242,90,293,79"/>
+</map>

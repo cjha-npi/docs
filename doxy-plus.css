@@ -63,57 +63,37 @@ html {
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 :root {
-  /* 
-    Search field selection label text, replaces the default magnifier icon.
-    This is set through the doxy-plus.js file.
-  */
+  --dp-sep: 6px;
+  --dp-min-width: 50px;
+  --dp-border-width: 6px;
   --dp-search-field: "All:";
+  --dp-border-radius-s: 4px;
+  --dp-border-radius-l: 8px;
 
-  /* Font size and line height for root and leaf pane items */
-  --dp-item-font-size: 12px;
-  --dp-item-line-height: 20px;
+  --dp-side-nav-icon-font-size: 13px;
 
-  /* Font size for collapse icon in root, leaf panes and side nav */
-  --dp-exp-col-icon-font-size: 13px;
-
-  /* Font size and line height for page nav */
   --dp-page-nav-font-size: 11px;
   --dp-page-nav-line-height: 18px;
 
-  /* Common separation value, mainly between panes */
-  --dp-sep: 5px;
+  --dp-root-item-font-size: 13px;
+  --dp-root-icon-font-size: 13px;
+  --dp-root-item-line-height: 22px;
 
-  /* Minimum width of resizable navs and panes */
-  --dp-min-width: 50px;
+  --dp-leaf-item-font-size: 12px;
+  --dp-leaf-icon-font-size: 13px;
+  --dp-leaf-item-line-height: 20px;
 
-  /* Common border radius for panes and everything else */
-  --dp-border-radius: 6px;
-
-  /* Width of various navigation panes. Root and Leaf are doxy-plus nav panes */
   --dp-side-nav-width: 0px;
   --dp-root-pane-width: 0px;
   --dp-leaf-pane-width: 0px;
 
-  /* Height (including any borders) for header and footer */
   --dp-header-height: 0px;
   --dp-footer-height: 0px;
-
-  /* doc-content header's height and bottom border*/
   --dp-doc-header-height: 0px;
-  --dp-doc-header-border: 1px;
 
-  /*
-    Main document area starting Y-Pos and Height.
-    The calculation with 'dvh' is later so that it overrides the calculation with
-    'vh'. Newer browsers have the 'dvh' while older ones only have 'vh'. See the
-    section 'HEIGHT CALCULATION' at the top for detailed understanding.
-  */
-  --dp-main-y: calc(var(--dp-header-height) + (2 * var(--dp-sep)));
-  --dp-main-h: calc(100vh - var(--dp-header-height) - var(--dp-footer-height) - (4 * var(--dp-sep)));
-  --dp-main-h: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height) - (4 * var(--dp-sep)));
-
-  /* Margin on the left of doc-content for sidebars. By default it is for side-nav. */
-  --dp-doc-margin-left: calc(var(--dp-side-nav-width) + (2 * var(--dp-sep)));
+  /* Side-nav has a default 6px padding on right */
+  --dp-doc-head-margin-left: calc(var(--dp-side-nav-width) + var(--dp-sep) + 6px);
+  --dp-doc-body-margin-left: calc(var(--dp-side-nav-width) + var(--dp-sep) + 6px);
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -123,57 +103,67 @@ html {
 /* LIGHT MODE */
 html {
   /* Default colors defined by Doxygen or Doxygen Awesome */
-  --page-background-color: rgb(210, 210, 210) !important; /* forms the separator between panes*/
+  --page-background-color: rgb(210, 220, 230) !important; /* forms the separator between panes*/
   --separator-color: rgb(200, 200, 200) !important;
   --code-background: rgb(225, 230, 235) !important;
   --fragment-background: rgb(235, 240, 245) !important;
 
-  /* Doxy-Plus Colors */
+  /* Doxy-Plus */
   --dp-pane-color: rgb(255, 255, 255); /* used as background for all panes */
-  --dp-mark-color: rgb(20, 120, 200); /* used to mark current item */
-  --dp-inpt-color: rgb(230,235,240); /* search input box background */
+  --dp-mark-color: rgb(240, 80, 0); /* used to mark current item */
+  --dp-inpt-color: var(--dp-pane-color); /* search input box background */
   --dp-line-color: var(--separator-color); /* used as special lines by doxy-plus */
-  --dp-item-color: var(--page-background-color); /* current item background */
-  --dp-item-hover-color: rgb(from var(--dp-item-color) r g b / 0.8); /* background of a hovered item */
   --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
-  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* button icons on top right */
-  --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */
+  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
+  --dp-scrollbar-color: rgb(160, 175, 190); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-text-visited-color: rgb(200, 50, 200); /* visited entry in root and leaf panes */
   --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
   --dp-text-search-select-color: var(--dp-mark-color); /* search select text color */
-  --dp-text-page-nav-section-color: rgb(200, 100, 0); /* section entries in page nav */
-  --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
-  --dp-item-font-weight: 500; /* font weight for root and leaf panes */
+  --dp-text-page-nav-section-color: var(--dp-mark-color); /* section entries in page nav */
+  --dp-footer-link-separation-color: var(--dp-scrollbar-color); /* separator of links in footer */
+
+  --dp-page-nav-vis-color: var(--page-background-color);
+  --dp-leaf-item-color: var(--page-background-color);
+  --dp-leaf-item-hover-color: rgb(from var(--page-background-color) r g b / 0.8);
+  --dp-root-item-hover-color: rgb(from var(--dp-pane-color) r g b / 0.8);
+
+  --dp-root-item-font-weight: 500;
+  --dp-leaf-item-font-weight: 500;
 }
 
 /* DARK MODE */
 html.dark-mode {
   /* Default colors defined by Doxygen or Doxygen Awesome */
-  --page-background-color: rgb(10, 10, 10) !important; /* forms the separator between panes*/
+  --page-background-color: rgb(10, 15, 20) !important; /* forms the separator between panes*/
   --separator-color: rgb(65, 70, 75) !important;
   --code-background: rgb(25, 25, 25) !important;
   --tablehead-background: rgb(35, 40, 50) !important;
   --blockquote-background: rgb(35, 40, 50) !important;
   --fragment-background: rgb(40, 45, 55) !important;
 
-  /* Doxy-Plus Colors */
-  --dp-pane-color: rgb(30, 35, 40); /* used as background for all panes */
-  --dp-mark-color: rgb(20, 120, 220); /* used to mark current item */
-  --dp-inpt-color: rgb(20,25,30); /* search input box background */
+  /* Doxy-Plus */
+  --dp-pane-color: rgb(25, 30, 35); /* used as background for all panes */
+  --dp-mark-color: rgb(240, 80, 0); /* used to mark current item */
+  --dp-inpt-color: var(--dp-pane-color); /* search input box background */
   --dp-line-color: var(--separator-color); /* used as special lines by doxy-plus */
-  --dp-item-color: var(--page-background-color); /* current item background */
-  --dp-item-hover-color: rgb(from var(--dp-item-color) r g b / 0.8); /* background of a hovered item */
   --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
-  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* button icons on top right */
+  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
   --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-text-visited-color: rgb(250, 100, 250); /* visited entry in root and leaf panes */
   --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
   --dp-text-search-select-color: var(--dp-mark-color); /* search select text color */
-  --dp-text-page-nav-section-color: rgb(240, 120, 0); /* section entries in page nav */
+  --dp-text-page-nav-section-color: var(--dp-mark-color); /* section entries in page nav */
   --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
-  --dp-item-font-weight: 400; /* font weight for root and leaf panes */
+
+  --dp-page-nav-vis-color: var(--page-background-color);
+  --dp-leaf-item-color: var(--page-background-color);
+  --dp-leaf-item-hover-color: rgb(from var(--page-background-color) r g b / 0.8);
+  --dp-root-item-hover-color: rgb(from var(--dp-pane-color) r g b / 0.8);
+
+  --dp-root-item-font-weight: 400;
+  --dp-leaf-item-font-weight: 400;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -185,11 +175,11 @@ html.dark-mode {
   but for some reason the top border is with different color. So, here
   I am reverting it back to separator color.
 */
-tr.heading        + tr[class^='memitem'] td.memTemplParams,
-tr.heading        + tr td.ititle,
-tr.groupHeader    + tr[class^='memitem'] td.memTemplParams,
-tr.groupHeader    + tr td.ititle,
-tr.inherit_header + tr[class^='memitem'] td.memTemplParams{
+tr.heading + tr[class^="memitem"] td.memTemplParams,
+tr.heading + tr td.ititle,
+tr.groupHeader + tr[class^="memitem"] td.memTemplParams,
+tr.groupHeader + tr td.ititle,
+tr.inherit_header + tr[class^="memitem"] td.memTemplParams {
   border-top-color: var(--separator-color);
 }
 
@@ -215,20 +205,28 @@ body {
 
 /* Override if only root pane of dual-nav is active */
 body[data-dp-dual-nav-active] {
-  --dp-doc-margin-left: calc(var(--dp-root-pane-width) + (2 * var(--dp-sep)));
+  --dp-doc-head-margin-left: calc(var(--dp-root-pane-width) + var(--dp-sep));
+  --dp-doc-body-margin-left: calc(var(--dp-root-pane-width) + var(--dp-sep));
 }
 
 /* Override if both root pane and leaf pane of dual-nav are active */
-body[data-dp-dual-nav-active][data-dp-leaf-nav-active] {
-  --dp-doc-margin-left: calc(var(--dp-root-pane-width) + var(--dp-leaf-pane-width) + (3 * var(--dp-sep)));
+body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane] {
+  --dp-doc-body-margin-left: calc(var(--dp-root-pane-width) + var(--dp-leaf-pane-width) + var(--dp-sep));
 }
 
-/* If dual-nav is not active then left margin falls back to side-nav width assigned when '--dp-doc-margin-left' was declared in :root{...} */
+@media screen and (max-width: 1500px){
+  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane][data-dp-auto-hide-lists]{
+    --dp-doc-body-margin-left: calc(var(--dp-root-pane-width) + var(--dp-sep));
+  }
+}
+
+/* If dual-nav is not active then left margin falls back to side-nav width assigned when variables were declared in :root{...} */
 
 /* Zero left margin for mobile view */
 @media screen and (max-width: 767px) {
   body {
-    --dp-doc-margin-left: var(--dp-sep) !important; /* force small margin for small screens */
+    --dp-doc-head-margin-left: var(--dp-sep) !important; /* force small margin for small screens */
+    --dp-doc-body-margin-left: var(--dp-sep) !important;
   }
 }
 
@@ -255,9 +253,26 @@ body[data-dp-dual-nav-active][data-dp-leaf-nav-active] {
     display: block;
   }
 
-  body[data-dp-dual-nav-active][data-dp-leaf-nav-active] #dp-leaf-pane,
-  body[data-dp-dual-nav-active][data-dp-leaf-nav-active] #dp-leaf-pane-resizer {
+  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane] #dp-leaf-pane,
+  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane] #dp-leaf-pane-resizer {
     display: block;
+  }
+
+  body:not([data-dp-show-page-nav]) #page-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1500px){
+  body[data-dp-auto-hide-lists] #dp-leaf-pane,
+  body[data-dp-auto-hide-lists] #dp-leaf-pane-resizer {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  body[data-dp-auto-hide-lists] #page-nav {
+    display: none !important;
   }
 }
 
@@ -302,9 +317,7 @@ body[data-dp-dual-nav-active][data-dp-leaf-nav-active] {
 
 /* Full Header: Title Area + Main Nav + Search Bar Area */
 #top {
-  background-color: var(--dp-pane-color) !important;
-  margin: var(--dp-sep) !important;
-  border-radius: var(--dp-border-radius) !important;
+  background-color: var(--page-background-color) !important;
   border: none !important;
 }
 
@@ -329,17 +342,24 @@ body:not([data-dp-main-nav-below-title]) #titlearea {
 
 /* Footer: Style similarly to header */
 #nav-path > ul {
-  background-color: var(--dp-pane-color) !important;
-  margin: var(--dp-sep) !important;
-  border-radius: var(--dp-border-radius) !important;
+  background-color: var(--page-background-color) !important;
   border: none !important;
   box-shadow: none !important;
 }
 
 /* Changing the separator color for bottom footer */
 #nav-path .navelem::after {
-  --page-background-color: var(--dp-pane-color) !important;
-  box-shadow: 4px -4px 0px 0px var(--dp-footer-link-separation-color) !important;
+  box-shadow: none !important;
+  transform: unset !important;
+  display: inline-block;
+  padding-left: 5px;
+  width: 30px !important;
+  text-align: center;
+  font-family: var(--font-family-monospace) !important;
+  content: ">" !important;
+  font-size: 20px !important;
+  color: var(--dp-footer-link-separation-color);
+  background-color: transparent !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -358,7 +378,7 @@ body[data-dp-main-nav-below-title] #main-nav {
 
 /* Changing appearence of Search Box */
 #MSearchBox {
-  border-radius: var(--dp-border-radius) !important;
+  border-radius: var(--dp-border-radius-s) !important;
   border: none !important;
   background: var(--dp-inpt-color) !important;
 }
@@ -556,7 +576,6 @@ body[data-dp-main-nav-below-title] #main-nav {
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 doxygen-awesome-dark-mode-toggle {
-  border-radius: var(--dp-border-radius) !important;
   background-color: transparent !important;
 }
 
@@ -580,7 +599,7 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* DUAL SIDEBAR BUTTON CUSTOMIZATIONS */
+/* OPTIONS BUTTON CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /* 
@@ -592,7 +611,7 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
   - Designed to blend with other controls and respond visually on hover.
 */
 
-#dp-sidebar-toggle-btn {
+#dp-options-btn {
   display: grid;
   place-items: center;
   margin-left: 5px !important;
@@ -602,31 +621,30 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
   background: transparent;
   color: var(--dp-icon-color);
   border: none;
-  border-radius: var(--dp-border-radius) !important;
   line-height: 1;
   font-size: 22px;
   user-select: none;
   cursor: pointer;
 }
 
-#dp-sidebar-toggle-btn > svg {
+#dp-options-btn > svg {
   width: 80%;
   height: 80%;
 }
-#dp-sidebar-toggle-btn:hover > svg {
+#dp-options-btn:hover > svg {
   color: var(--dp-icon-hover-color);
   width: 90%;
   height: 90%;
 }
-#dp-sidebar-toggle-btn:active > svg {
+#dp-options-btn:active > svg {
   width: 50%;
   height: 50%;
 }
 
 /* Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  #dp-sidebar-toggle-btn,
-  #dp-sidebar-toggle-btn > svg {
+  #dp-options-btn,
+  #dp-options-btn > svg {
     transition: none;
   }
 }
@@ -652,24 +670,21 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
 #side-nav {
   background-color: var(--page-background-color) !important;
   left: var(--dp-sep) !important;
-  height: var(--dp-main-h) !important;
+  height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
   --tree-item-height: 1.3rem !important;
-  min-width: var(--dp-min-width) !important;
-  padding-right: var(--dp-sep) !important;
-  border-radius: var(--dp-border-radius) !important;
   border: none !important;
 }
 
 #nav-tree {
-  background-color: var(--dp-pane-color) !important;
-  height: var(--dp-main-h) !important;
-  border-radius: var(--dp-border-radius) !important;
+  background-color: var(--page-background-color) !important;
+  height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
   border: none !important;
   padding-left: var(--dp-sep) !important;
   padding-right: var(--dp-sep) !important;
 }
 
-/* Provides padding for the top of the content */
 #nav-tree-contents {
   padding-top: 8px !important;
 }
@@ -698,10 +713,10 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
 }
 
 /* 
-  For some reason the first child of any ul never shows the
-  expand/collapse icon by default, we change that here.
+  Doxygen Awesome disables the toggle icon for the
+  Main Project top level item, re-enable it.
 */
-#nav-tree ul li:first-child > div > a {
+#nav-tree-contents > ul > li:first-child > div > a {
   opacity: 1 !important;
   pointer-events: unset !important;
 }
@@ -734,7 +749,7 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
   display: inline-block;
-  font-size: var(--dp-exp-col-icon-font-size);
+  font-size: var(--dp-side-nav-icon-font-size);
   color: var(--page-foreground-color);
   transition: transform 0.25s ease;
 }
@@ -760,15 +775,15 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
   padding-top: 3px;
   padding-bottom: 3px;
   color: var(--page-foreground-color) !important;
-  background-color: var(--dp-item-color);
+  background-color: var(--dp-pane-color);
   margin-right: 0px;
-  border-radius: var(--dp-border-radius) !important;
+  border-radius: var(--dp-border-radius-s) !important;
 }
 
 /* change the background on hover */
 #side-nav #nav-tree-contents .item:hover {
-  background-color: var(--dp-item-hover-color);
-  border-radius: var(--dp-border-radius) !important;
+  background-color: var(--dp-root-item-hover-color);
+  border-radius: var(--dp-border-radius-s) !important;
 }
 
 /* create a small line on the left as marker for current/selected item */
@@ -776,9 +791,9 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
 #side-nav #nav-tree-contents .item.current::after {
   content: "";
   position: absolute;
-  left: 2px;
-  top: 5px;
-  bottom: 5px;
+  left: 3px;
+  top: 3px;
+  bottom: 3px;
   width: 4px;
   background: var(--dp-mark-color);
   border-radius: 2px;
@@ -817,7 +832,7 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
 /* Styling both headers (only one is visible at any time) */
 body .header {
   background-color: var(--dp-pane-color) !important;
-  border-bottom: var(--dp-doc-header-border) solid var(--separator-color) !important;
+  border: none !important;
 }
 
 /*
@@ -825,10 +840,10 @@ body .header {
 */
 body > .header {
   display: block !important;
-  margin-left: var(--dp-doc-margin-left) !important;
+  margin-left: var(--dp-doc-head-margin-left);
   margin-right: var(--dp-sep) !important;
-  border-top-left-radius: var(--dp-border-radius) !important;
-  border-top-right-radius: var(--dp-border-radius) !important;
+  border-top-left-radius: var(--dp-border-radius-l) !important;
+  border-top-right-radius: var(--dp-border-radius-l) !important;
 }
 
 /* by default the original header is hidden */
@@ -836,21 +851,21 @@ body > .header {
   display: none !important;
 }
 
+/* changing margins to make both headers smaller in height*/
+body .header > .headertitle > .title {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
 /* changing text size and alignment of cloned header */
 body > .header > .headertitle > .title {
-  font-size: 225% !important;
+  font-size: 175% !important;
   text-align: center;
 }
 
 /* changing text size of original header */
 #doc-content > .header > .headertitle > .title {
   font-size: 150% !important;
-}
-
-/* changing margins to make both headers smaller in height*/
-body .header > .headertitle > .title {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
 }
 
 /* 
@@ -870,6 +885,38 @@ body .header > .headertitle > .title {
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* CONTAINER CUSTOMIZATIONS */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/*
+  The #doc-content and #page-nav are in a column wise grid inside #container.
+  We make the #doc-content take any and all available width. Changing widths
+  and borders, etc. of #page-nav makes it work in weird way so we adjust those
+  changes in container to achieve the same look.
+*/
+#container {
+  grid-template-columns: minmax(0, 1fr) max-content !important;
+  margin-right: var(--dp-sep);
+  border-right: var(--dp-border-width) solid var(--dp-pane-color);
+  border-top-right-radius: var(--dp-border-radius-l);
+  border-bottom-right-radius: var(--dp-border-radius-l);
+}
+
+@media screen and (min-width: 768px) {
+  body[data-dp-doc-header-available] #container {
+    border-top-right-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #container {
+    border-right: 0px solid var(--dp-pane-color);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* DOC CONTENT CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
@@ -884,46 +931,25 @@ body .header > .headertitle > .title {
   --page-background-color: var(--dp-pane-color) !important; /* Override the page color variable just for doc-content */
   background-color: var(--dp-pane-color) !important; /* Set the background color because some parts use a different variable */
 
+  /* Makes it include border and padding inside the box */
+  box-sizing: border-box;
+
   /* deafult: we set left margin only */
-  margin-left: var(--dp-doc-margin-left) !important;
+  margin-left: var(--dp-doc-body-margin-left) !important;
 
   /* minimum width */
   min-width: var(--dp-min-width) !important;
 
-  /* 
-    Height: See top of this page for description of height calculation.
-    By default the cloned header is shown whos height is not included in
-    the height of the #doc-content and so we subtract its height and its
-    bottom border.
-  */
-  height: calc(100vh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height) - (4 * var(--dp-sep)) - var(--dp-doc-header-border)) !important; /* fallback for older browsers */
-  height: calc(100dvh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height) - (4 * var(--dp-sep)) - var(--dp-doc-header-border)) !important; /* for use in newer browsers */
+  height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
 
-  /*
-    By default we only set the bottom left corner radius.
-    Top left and right corner radius is set on the cloned
-    header and bottom right on the #page-nav.
-  */
-  border-bottom-left-radius: var(--dp-border-radius) !important;
-}
+  border-top: var(--dp-border-width) solid var(--dp-pane-color);
+  border-left: var(--dp-border-width) solid var(--dp-pane-color);
+  border-bottom: var(--dp-border-width) solid var(--dp-pane-color);
+  /* right border is provided by the #container */
 
-/*
-  When a page does not have a doc-content header then calculate the
-  height differently and set the top left and right corner radius.
-*/
-body[data-dp-doc-header-not-available] #doc-content {
-  height: var(--dp-main-h);
-  border-top-left-radius: var(--dp-border-radius) !important;
-  border-top-right-radius: var(--dp-border-radius) !important;
-}
-
-/*
-  When #page-nav is not available on a page then we set the
-  bottom right radius as well and also the right side margin.
-*/
-body[data-dp-page-nav-not-available] #doc-content {
-  margin-right: var(--dp-sep);
-  border-bottom-right-radius: var(--dp-border-radius) !important;
+  border-top-left-radius: var(--dp-border-radius-l);
+  border-bottom-left-radius: var(--dp-border-radius-l);
 }
 
 /*
@@ -931,7 +957,11 @@ body[data-dp-page-nav-not-available] #doc-content {
   for all these are different, although, it all looks the same. That's why we
   are overriding it here to make all of it have same size top margin.
 */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin-top: 0.5em !important;
 }
 
@@ -941,22 +971,40 @@ h1, h2, h3, h4, h5 {
   prominent and spans just the width of the contents and not the entire width of the
   #doc-header element.
 */
-td h2.groupheader, h2.groupheader{
+td h2.groupheader,
+h2.groupheader {
   box-shadow: none !important;
   border-bottom: 2px solid;
   font-weight: 500;
 }
 
-/*
-  MOBILE VIEW (width <= 767px):
-  - Set border radius for all four corners.
-  - Set the height correctly.
-*/
+@media screen and (min-width: 768px) {
+  body[data-dp-doc-header-available] #doc-content {
+    height: calc(100vh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
+    height: calc(100dvh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
+
+    border-top: 0px solid var(--dp-pane-color);
+    border-top-left-radius: 0px;
+  }
+
+  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane] #doc-content {
+    border-left: 0px solid var(--dp-pane-color);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 1500px){
+  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane][data-dp-auto-hide-lists] #doc-content {
+    border-left: var(--dp-border-width) solid var(--dp-pane-color);
+    border-bottom-left-radius: var(--dp-border-radius-l);
+  }
+}
+
 @media screen and (max-width: 767px) {
   #doc-content {
-    margin-right: var(--dp-sep);
-    height: var(--dp-main-h) !important;
-    border-radius: var(--dp-border-radius) !important;
+    border: 0px solid var(--dp-pane-color);
+    border-radius: var(--dp-border-radius-s);
   }
 }
 
@@ -964,25 +1012,18 @@ td h2.groupheader, h2.groupheader{
 /* PAGE NAV CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/*
-  The #doc-content and #page-nav are in a column wise grid inside #container.
-  We make the #doc-content take any and all available width.
-*/
-#container {
-  grid-template-columns: minmax(0, 1fr) max-content !important;
-}
-
 /* resize handle of #page-nav */
 #page-nav-resize-handle {
   transition: unset !important;
-  width: 7px !important;
-  margin-left: -4px;
   background-color: transparent !important;
+  opacity: 1 !important;
 }
 
 /* remove the icon that is drawn since we rely on curosr */
 #page-nav-resize-handle::after {
-  display: none !important;
+  display: block !important;
+  opacity: 1 !important;
+  border-right-width: 0 !important;
 }
 
 /* change width of resize handle in mobile view */
@@ -995,21 +1036,24 @@ td h2.groupheader, h2.groupheader{
 
 /* page-nav customizations */
 #page-nav {
-  min-width: var(--dp-min-width) !important;
   background-color: var(--dp-pane-color) !important;
-  border-left: 1px dotted var(--separator-color) !important;
-  margin-right: var(--dp-sep) !important;
-  border-bottom-right-radius: var(--dp-border-radius) !important;
+  border-color: var(--dp-pane-color);
+  border-bottom: var(--dp-border-width) solid var(--dp-pane-color);
 }
 
+body:not([data-dp-doc-header-available]) #page-nav {
+  border-top: var(--dp-border-width) solid var(--dp-pane-color);
+}
 
 #page-nav-contents {
   top: 0px !important;
   overflow: auto;
+  background-color: var(--dp-pane-color);
 }
 
 #page-nav-contents ul.page-outline {
-  padding: 5px;
+  padding-right: 8px;
+  padding-left: 6px;
 }
 
 /* change individual items inside #page-nav */
@@ -1060,13 +1104,17 @@ td h2.groupheader, h2.groupheader{
   line-height: var(--dp-page-nav-line-height) !important;
 }
 
+#page-nav-contents ul.page-outline li a:hover {
+  text-decoration: none;
+}
+
 /* 
   #page-nav adds .vis for items that are currently in view in the
   #doc-content. We render these items like selected items in #sidde-nav
   and root and leaf panes.
 */
 #page-nav-contents li.vis {
-  background-color: var(--dp-item-color) !important;
+  background-color: var(--dp-page-nav-vis-color) !important;
 }
 
 /* remove the default left bar drawn for .vis items */
@@ -1123,15 +1171,15 @@ td h2.groupheader, h2.groupheader{
 /* padding and border radius for the first item that has .vis class */
 #page-nav-contents li.vis:nth-child(1 of li.vis) {
   padding-top: 3px;
-  border-top-left-radius: var(--dp-border-radius);
-  border-top-right-radius: var(--dp-border-radius);
+  border-top-left-radius: var(--dp-border-radius-s);
+  border-top-right-radius: var(--dp-border-radius-s);
 }
 
 /* padding and border radius for the last item that has .vis class */
 #page-nav-contents li.vis:nth-last-child(1 of li.vis) {
   padding-bottom: 3px;
-  border-bottom-left-radius: var(--dp-border-radius);
-  border-bottom-right-radius: var(--dp-border-radius);
+  border-bottom-left-radius: var(--dp-border-radius-s);
+  border-bottom-right-radius: var(--dp-border-radius-s);
 }
 
 /*
@@ -1145,60 +1193,32 @@ td h2.groupheader, h2.groupheader{
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* DUAL NAV CUSTOMIZATIONS */
+/* ROOT + LEAF PANE COMMON */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-#dp-root-pane,
-#dp-leaf-pane {
+.dp-nav-pane {
+  min-width: 100px;
+}
+
+.dp-nav-pane,
+.dp-nav-pane-resizer {
+  box-sizing: border-box;
   position: fixed;
-  top: var(--dp-main-y);
-  height: var(--dp-main-h);
   list-style: none;
   border: none;
-  background-color: var(--dp-pane-color) !important;
-  border-radius: var(--dp-border-radius);
-  white-space: nowrap;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
-#dp-root-pane {
-  z-index: 9992;
-  left: var(--dp-sep);
-  width: var(--dp-root-pane-width);
-}
-
-#dp-leaf-pane {
-  z-index: 9991;
-  left: calc(var(--dp-root-pane-width) + (2 * var(--dp-sep)));
-  width: var(--dp-leaf-pane-width);
-}
-
-#dp-root-pane-resizer,
-#dp-leaf-pane-resizer {
+.dp-nav-pane-resizer {
   touch-action: none;
-  position: fixed;
-  top: var(--dp-main-y);
-  height: var(--dp-main-h);
+  z-index: 9993;
   width: var(--dp-sep);
-  background: none;
   cursor: ew-resize;
   cursor: col-resize;
-  z-index: 9993;
-}
-
-#dp-root-pane-resizer {
-  left: calc(var(--dp-root-pane-width) + var(--dp-sep));
-}
-
-#dp-leaf-pane-resizer {
-  left: calc(var(--dp-root-pane-width) + var(--dp-leaf-pane-width) + (2 * var(--dp-sep)));
 }
 
 @media (pointer: coarse) {
-  #dp-root-pane-resizer,
-  #dp-leaf-pane-resizer {
-    width: 35px !important;
+  .dp-nav-pane-resizer {
+    width: 36px !important;
     margin-left: -15px !important;
   }
 }
@@ -1215,22 +1235,10 @@ td h2.groupheader, h2.groupheader{
   background: none;
   text-decoration: none;
   text-align: left;
-  font-size: var(--dp-item-font-size);
-  line-height: var(--dp-item-line-height);
   padding: 0;
   margin: 0;
   border: 0;
   min-inline-size: 0;
-}
-
-#dp-root-pane > ul,
-#dp-leaf-pane > ul {
-  padding: 8px 5px;
-}
-
-#dp-root-pane.dp-pane-has-indented-tree ul ul,
-#dp-root-pane.dp-pane-has-indented-tree ul ul {
-  margin-left: var(--dp-item-line-height);
 }
 
 li.dp-tree-item--has-children > ul {
@@ -1247,7 +1255,7 @@ li.dp-tree-item--has-children.dp-tree-item--node-open > ul {
   align-items: center;
   padding-left: 5px;
   padding-right: 5px;
-  border-radius: var(--dp-border-radius);
+  border-radius: var(--dp-border-radius-s);
   color: var(--page-foreground-color);
   cursor: pointer;
 }
@@ -1258,22 +1266,18 @@ li.dp-tree-item--disabled .dp-tree-line {
 li.dp-tree-item--visited:not(.dp-tree-item--current) .dp-tree-line {
   color: var(--dp-text-visited-color);
 }
-li:not(.dp-tree-item--disabled) .dp-tree-line:hover {
-  background: var(--dp-item-hover-color);
-}
 li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
   margin-top: 3px;
   margin-bottom: 3px;
   padding-top: 3px;
   padding-bottom: 3px;
-  background: var(--dp-item-color);
 }
 li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::before {
   content: "";
   position: absolute;
-  left: 2px;
-  top: 5px;
-  bottom: 5px;
+  left: 3px;
+  top: 3px;
+  bottom: 3px;
   width: 4px;
   background: var(--dp-mark-color);
   border-radius: 2px;
@@ -1283,8 +1287,6 @@ li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::before {
 .dp-tree-node {
   flex: 0 0 auto;
   font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif;
-  font-size: var(--dp-exp-col-icon-font-size);
-  width: var(--dp-item-line-height);
   text-align: center;
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
@@ -1295,29 +1297,6 @@ li:not(.dp-tree-item--has-children) .dp-tree-node {
 }
 li.dp-tree-item--node-open > .dp-tree-line > .dp-tree-node {
   transform: rotate(90deg);
-}
-
-#dp-root-pane .dp-tree-link,
-#dp-leaf-pane .dp-tree-link {
-  flex: 0 1 auto;
-  font-family: var(--font-family-monospace) !important;
-  font-weight: var(--dp-item-font-weight) !important;
-  color: inherit !important;
-  cursor: inherit !important;
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#dp-root-pane .dp-tree-link:hover,
-#dp-leaf-pane .dp-tree-link:hover {
-  text-decoration: none !important;
-}
-
-#dp-root-pane li.dp-tree-item--has-children > .dp-tree-line > .dp-tree-link,
-#dp-leaf-pane li.dp-tree-item--has-children > .dp-tree-line > .dp-tree-link{
-  font-family: var(--font-family) !important;
 }
 
 li.dp-tree-item--has-children > .dp-tree-line::after {
@@ -1333,4 +1312,325 @@ li.dp-tree-item--has-children > .dp-tree-line::after {
   background-position: left center;
   background-size: 100% 1px;
   pointer-events: none;
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* ROOT PANE */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+#dp-root-pane {
+  z-index: 9991;
+  top: calc(var(--dp-header-height) + 10px);
+  left: var(--dp-sep);
+  width: var(--dp-root-pane-width);
+  height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height) - 20px) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height) - 20px) !important; /* for use in newer browsers */
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  direction: rtl;
+}
+
+#dp-root-pane-resizer {
+  top: calc(var(--dp-header-height) + 10px);
+  left: calc(var(--dp-root-pane-width) + (var(--dp-sep) / 2));
+  height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height) - 20px) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height) - 20px) !important; /* for use in newer browsers */
+}
+
+#dp-root-pane .dp-tree-list,
+#dp-root-pane .dp-tree-item,
+#dp-root-pane .dp-tree-line,
+#dp-root-pane .dp-tree-node,
+#dp-root-pane .dp-tree-link {
+  font-size: var(--dp-root-item-font-size);
+  line-height: var(--dp-root-item-line-height);
+}
+
+#dp-root-pane > ul {
+  padding: 8px 3px;
+  direction: ltr;
+}
+
+#dp-root-pane.dp-pane-has-indented-tree ul ul {
+  margin-left: var(--dp-root-item-line-height);
+}
+
+#dp-root-pane li:not(.dp-tree-item--disabled) .dp-tree-line:hover {
+  background: var(--dp-root-item-hover-color);
+}
+#dp-root-pane li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
+  background: var(--dp-pane-color);
+  padding-right: 0px !important;
+  margin-right: calc(-1 * var(--dp-sep));
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+#dp-root-pane li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::after {
+  content: "";
+  position: absolute;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 8px; /* 2 * radius (r=4px) */
+  height: calc(100% + 8px);
+  right: -1px;
+  background: inherit;
+  mask: radial-gradient(circle 4px at 0% 0%, transparent 90%, #000 100%), radial-gradient(circle 4px at 0% 100%, #000 90%, transparent 100%);
+  mask-composite: subtract;
+}
+
+#dp-root-pane .dp-tree-node {
+  font-size: var(--dp-root-icon-font-size);
+  width: var(--dp-root-item-line-height);
+}
+
+#dp-root-pane .dp-tree-link {
+  flex: 0 1 auto;
+  font-family: var(--font-family-monospace) !important;
+  font-weight: var(--dp-root-item-font-weight) !important;
+  color: inherit !important;
+  cursor: inherit !important;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#dp-root-pane .dp-tree-link:hover {
+  text-decoration: none !important;
+}
+
+#dp-root-pane li.dp-tree-item--has-children > .dp-tree-line > .dp-tree-link {
+  font-family: var(--font-family) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.03em;
+  font-kerning: normal;
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* LEAF PANE */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+#dp-leaf-pane {
+  z-index: 9991;
+  top: var(--dp-header-height);
+  left: calc(var(--dp-sep) + var(--dp-root-pane-width));
+  width: var(--dp-leaf-pane-width);
+  height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
+  background-color: var(--dp-pane-color);
+  overflow: hidden;
+  height: 100%;
+  min-height: 0;
+  border-top: var(--dp-border-width) solid var(--dp-pane-color);
+  border-left: var(--dp-border-width) solid var(--dp-pane-color);
+  border-bottom: var(--dp-border-width) solid var(--dp-pane-color);
+  border-top-left-radius: var(--dp-border-radius-l);
+  border-bottom-left-radius: var(--dp-border-radius-l);
+}
+
+#dp-leaf-pane-resizer {
+  top: var(--dp-header-height);
+  left: calc(var(--dp-sep) + var(--dp-root-pane-width) + var(--dp-leaf-pane-width) - (var(--dp-sep) / 2) - var(--dp-border-width));
+  height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
+}
+
+body[data-dp-doc-header-available] #dp-leaf-pane {
+  top: calc(var(--dp-header-height) + var(--dp-doc-header-height));
+  height: calc(100vh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
+  border-top: 0px solid var(--dp-pane-color);
+  border-top-left-radius: 0px;
+}
+
+body[data-dp-doc-header-available] #dp-leaf-pane-resizer {
+  top: calc(var(--dp-header-height) + var(--dp-doc-header-height));
+  height: calc(100vh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
+  height: calc(100dvh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
+}
+
+/* Background layer (fills the pane and provides the inset) */
+#dp-leaf-bg {
+  box-sizing: border-box;
+  width: auto;
+  height: calc(100% - (2 * var(--dp-sep)));
+  margin: var(--dp-sep);
+  padding: var(--dp-sep);
+  padding-left: 0px;
+  background: var(--dp-pane-color);
+  border-radius: var(--dp-border-radius-l);
+  min-height: 0;
+  box-shadow: 0px 0px 5px 3px var(--page-background-color);
+}
+
+html.dark-mode {
+  #dp-leaf-bg {
+    box-shadow: 0px 0px 3px 0px var(--page-background-color);
+  }
+}
+
+#dp-leaf-ul {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  list-style: none;
+}
+
+#dp-leaf-pane .dp-tree-list,
+#dp-leaf-pane .dp-tree-item,
+#dp-leaf-pane .dp-tree-line,
+#dp-leaf-pane .dp-tree-node,
+#dp-leaf-pane .dp-tree-link {
+  font-size: var(--dp-leaf-item-font-size);
+  line-height: var(--dp-leaf-item-line-height);
+}
+
+#dp-leaf-ul > ul {
+  padding: 5px 5px;
+  padding-right: 1px;
+}
+
+#dp-leaf-ul.dp-pane-has-indented-tree ul ul {
+  margin-left: var(--dp-leaf-item-line-height);
+}
+
+#dp-leaf-ul li:not(.dp-tree-item--disabled) .dp-tree-line:hover {
+  background: var(--dp-leaf-item-hover-color);
+}
+#dp-leaf-ul li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
+  background: var(--dp-leaf-item-color);
+}
+
+#dp-leaf-ul li.dp-tree-item--has-children:not(:first-child) > .dp-tree-line{
+  margin-top: 15px;
+}
+
+#dp-leaf-ul .dp-tree-node {
+  font-size: var(--dp-leaf-icon-font-size);
+  width: var(--dp-leaf-item-line-height);
+}
+
+#dp-leaf-ul .dp-tree-link {
+  flex: 0 1 auto;
+  font-family: var(--font-family-monospace) !important;
+  font-weight: var(--dp-leaf-item-font-weight) !important;
+  color: inherit !important;
+  cursor: inherit !important;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#dp-leaf-ul .dp-tree-link:hover {
+  text-decoration: none !important;
+}
+
+#dp-leaf-ul li.dp-tree-item--has-children > .dp-tree-line > .dp-tree-link {
+  font-family: var(--font-family) !important;
+  font-size: calc(var(--dp-leaf-item-font-size) + 0.05em);
+  font-weight: 600 !important;
+  letter-spacing: 0.03em;
+  font-kerning: normal;
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* OPTIONS DIALOG CUSTOMIZATION */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/* ---------- Backdrop ---------- */
+#dp-opt-backdrop {
+  position: fixed;
+  inset: 0;
+  display: none;                 /* toggled via [data-open] */
+  align-items: center;           /* centered fallback */
+  justify-content: center;       /* centered fallback */
+  background: rgba(0,0,0,0.75);  /* dimmed background */
+  z-index: 2147483000;
+}
+#dp-opt-backdrop[data-dp-opt-win-open] { display: flex; }
+
+/* Blur page while open (do not blur the backdrop) */
+body.dp-opt-backdrop-blur > :not(#dp-opt-backdrop) { filter: blur(4px); }
+
+#dp-opt-backdrop #dp-opt-modal,
+#dp-opt-backdrop #dp-opt-modal * {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* ---------- Modal panel ---------- */
+#dp-opt-modal {
+  box-sizing: border-box;
+  background: var(--page-background-color);
+  color: var(--page-foreground-color);
+  border-radius: var(--dp-border-radius-l);
+  box-shadow: 0 0px 10px 0px var(--dp-mark-color);
+  padding: 10px;
+  outline: none;
+
+  display: inline-block;         /* allow shrink-to-content */
+  width: max-content;            /* tight width based on content */
+  max-width: calc(100vw - 32px); /* clamp on small screens */
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+
+  /* centered fallback */
+  position: relative;
+  --dp-opt-top: 50%;
+  --dp-opt-left: 50%;
+  left: var(--dp-opt-left);
+  top: var(--dp-opt-top);
+  transform: translate(-50%, -50%);
+}
+
+/* Anchor mode (when aligning to #dp-options-btn) */
+#dp-opt-modal.dp-opt-win-at-anchor {
+  position: fixed;   /* absolute to viewport for exact px placement */
+  transform: none;   /* JS sets left/top directly */
+}
+
+/* ---------- Layout ---------- */
+#dp-opt-form {
+  display: grid;
+  gap: 4px;
+  inline-size: max-content;       /* prevent 100% stretch */
+}
+.dp-opt-row {
+  display: grid;
+  gap: 6px;
+  inline-size: max-content;
+}
+
+/* Labels provide a consistent hit target */
+.dp-opt-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Disabled label text helper */
+.dp-opt-disabled { color: var(--dp-text-disabled-color); }
+
+/* ---------- Inputs ---------- */
+/* Checkbox: native look with accent-color */
+#dp-opt-modal input[type="checkbox"] {
+  accent-color: var(--dp-mark-color);
+}
+#dp-opt-modal input[type="checkbox"]:disabled {
+  accent-color: var(--dp-text-disabled-color);
+}
+
+/* ---------- Print ---------- */
+@media print {
+  #dp-opt-backdrop { display: none !important; }
 }

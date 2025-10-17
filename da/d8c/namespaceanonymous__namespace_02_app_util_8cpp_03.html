@@ -61,7 +61,11 @@
   <div id="dp-root-pane" class="dp-nav-pane"></div>
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
-  <div id="dp-leaf-pane" class="dp-nav-pane"></div>
+  <div id="dp-leaf-pane" class="dp-nav-pane">
+    <div id="dp-leaf-bg">
+    <div id="dp-leaf-ul"></div>
+    </div>
+  </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -71,7 +75,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;1</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -198,6 +202,24 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>SHGetKnownFolderPath, FOLDERID_ProgramData, FOLDERID_PublicDocuments </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00060">60</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                           {</div>
+<div class="line"><span class="lineno">   61</span>    PWSTR p = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keyword">const</span> HRESULT hr = SHGetKnownFolderPath(<span class="keywordtype">id</span>, KF_FLAG_DEFAULT, <span class="keyword">nullptr</span>, &amp;p);</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">if</span>(FAILED(hr) || !p)</div>
+<div class="line"><span class="lineno">   64</span>      <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">   65</span>    QString out = QString::fromWCharArray(p);</div>
+<div class="line"><span class="lineno">   66</span>    CoTaskMemFree(p);</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> out;</div>
+<div class="line"><span class="lineno">   68</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir()</a>, and <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03_a5bca34d4144e402dfa63ba6588cfa0c3_icgraph.svg" width="100%" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -222,7 +244,7 @@ Functions</h2></td></tr>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Oct 6 2025 22:50:33'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 16 2025 13:09:58'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

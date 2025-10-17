@@ -61,7 +61,11 @@
   <div id="dp-root-pane" class="dp-nav-pane"></div>
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
-  <div id="dp-leaf-pane" class="dp-nav-pane"></div>
+  <div id="dp-leaf-pane" class="dp-nav-pane">
+    <div id="dp-leaf-bg">
+    <div id="dp-leaf-ul"></div>
+    </div>
+  </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -71,7 +75,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;1</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -138,15 +142,15 @@ $(function(){initNavTree('d1/d51/classnpi_1_1_link_from_this.html','../../','d5/
 </div><!--header-->
 <div class="contents">
 
-<p>Enables objects that inherits from this class to produce a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> object referencing themselves if the object is wrapped in a <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>.  
+<p>Enables objects that inherits from this class to produce a Link object referencing themselves if the object is wrapped in a LinkHost.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for npi::LinkFromThis&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d23/classnpi_1_1_link_from_this__coll__graph.svg" width="192" height="251"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d23/classnpi_1_1_link_from_this__coll__graph.svg" width="208" height="163"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,47 +160,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9232cac3ba9c19048accd3248442791a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default copy constructor.  <br /></td></tr>
 <tr class="memitem:aa7f7a0a8bcec930c42afd7151c2abf2a" id="r_aa7f7a0a8bcec930c42afd7151c2abf2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7f7a0a8bcec930c42afd7151c2abf2a">LinkFromThis</a> (<a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a> &amp;&amp;other) noexcept=default</td></tr>
 <tr class="memdesc:aa7f7a0a8bcec930c42afd7151c2abf2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default move constructor.  <br /></td></tr>
+<tr class="memitem:ae75b7182e1a9d11abdd1ca8aa9e1aa9e" id="r_ae75b7182e1a9d11abdd1ca8aa9e1aa9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae75b7182e1a9d11abdd1ca8aa9e1aa9e">~LinkFromThis</a> () noexcept=default</td></tr>
+<tr class="memdesc:ae75b7182e1a9d11abdd1ca8aa9e1aa9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <br /></td></tr>
+<tr class="memitem:adf1dd7b3be795b4bd7d03dc2b3a15a31" id="r_adf1dd7b3be795b4bd7d03dc2b3a15a31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf1dd7b3be795b4bd7d03dc2b3a15a31">isLinkFromThisAvailable_</a> () const noexcept</td></tr>
+<tr class="memdesc:adf1dd7b3be795b4bd7d03dc2b3a15a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a Link can be obtained from this object i.e. if the object is wrapped in a LinkHost.  <br /></td></tr>
+<tr class="memitem:a54645a540c21a4c01ba695594f4f9eaa" id="r_a54645a540c21a4c01ba695594f4f9eaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d94/classnpi_1_1_link.html">Link</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54645a540c21a4c01ba695594f4f9eaa">linkFromThis_</a> () const noexcept</td></tr>
+<tr class="memdesc:a54645a540c21a4c01ba695594f4f9eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Link to this object if still alive and is wrapped in a LinkHost.  <br /></td></tr>
 <tr class="memitem:a123e725e537fee1e71b9d97af98104bd" id="r_a123e725e537fee1e71b9d97af98104bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123e725e537fee1e71b9d97af98104bd">operator=</a> (const <a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a> &amp;other) noexcept=default</td></tr>
 <tr class="memdesc:a123e725e537fee1e71b9d97af98104bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default copy assignment operator.  <br /></td></tr>
 <tr class="memitem:ac3dc4e2cb6c07866f2c85a9ae0844b0d" id="r_ac3dc4e2cb6c07866f2c85a9ae0844b0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3dc4e2cb6c07866f2c85a9ae0844b0d">operator=</a> (<a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a> &amp;&amp;other) noexcept=default</td></tr>
 <tr class="memdesc:ac3dc4e2cb6c07866f2c85a9ae0844b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default move assignment operator.  <br /></td></tr>
-<tr class="memitem:ae75b7182e1a9d11abdd1ca8aa9e1aa9e" id="r_ae75b7182e1a9d11abdd1ca8aa9e1aa9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae75b7182e1a9d11abdd1ca8aa9e1aa9e">~LinkFromThis</a> () noexcept=default</td></tr>
-<tr class="memdesc:ae75b7182e1a9d11abdd1ca8aa9e1aa9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <br /></td></tr>
-<tr class="memitem:a54645a540c21a4c01ba695594f4f9eaa" id="r_a54645a540c21a4c01ba695594f4f9eaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d94/classnpi_1_1_link.html">Link</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54645a540c21a4c01ba695594f4f9eaa">linkFromThis_</a> () const noexcept</td></tr>
-<tr class="memdesc:a54645a540c21a4c01ba695594f4f9eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> to this object if still alive and is wrapped in a <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>.  <br /></td></tr>
-<tr class="memitem:adf1dd7b3be795b4bd7d03dc2b3a15a31" id="r_adf1dd7b3be795b4bd7d03dc2b3a15a31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf1dd7b3be795b4bd7d03dc2b3a15a31">isLinkFromThisAvailable_</a> () const noexcept</td></tr>
-<tr class="memdesc:adf1dd7b3be795b4bd7d03dc2b3a15a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> can be obtained from this object i.e. if the object is wrapped in a <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>.  <br /></td></tr>
 <tr class="memitem:a68161836b9be75447dc771bd04fd50b2" id="r_a68161836b9be75447dc771bd04fd50b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68161836b9be75447dc771bd04fd50b2">swap_</a> (<a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a> &amp;other) noexcept</td></tr>
 <tr class="memdesc:a68161836b9be75447dc771bd04fd50b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member swap function.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a3deba1b7929e577995d9ae0db2d76d68" id="r_a3deba1b7929e577995d9ae0db2d76d68"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; typename <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html">LinkHost</a>&lt; T &gt;::Obs &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a></td></tr>
-<tr class="memdesc:a3deba1b7929e577995d9ae0db2d76d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak pointer to the uni_ in <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>.  <br /></td></tr>
+<tr class="memdesc:a3deba1b7929e577995d9ae0db2d76d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak pointer to the uni_ in LinkHost.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:aaf61bab6d0dd4c11669a554a173e2994" id="r_aaf61bab6d0dd4c11669a554a173e2994"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:aaf61bab6d0dd4c11669a554a173e2994 template"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf61bab6d0dd4c11669a554a173e2994">LinkHost</a></td></tr>
-<tr class="memdesc:aaf61bab6d0dd4c11669a554a173e2994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friend declarations of <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a> class.  <br /></td></tr>
+<tr class="memdesc:aaf61bab6d0dd4c11669a554a173e2994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friend declarations of LinkHost class.  <br /></td></tr>
 <tr class="memitem:ada683c2f744acba8c866c44ff6066613" id="r_ada683c2f744acba8c866c44ff6066613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada683c2f744acba8c866c44ff6066613">swap</a> (<a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a> &amp;a, <a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a> &amp;b) noexcept</td></tr>
-<tr class="memdesc:ada683c2f744acba8c866c44ff6066613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friend swap to exchange two <a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html" title="Enables objects that inherits from this class to produce a Link object referencing themselves if the ...">LinkFromThis</a> instances.  <br /></td></tr>
+<tr class="memdesc:ada683c2f744acba8c866c44ff6066613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friend swap to exchange two LinkFromThis instances.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class npi::LinkFromThis&lt; T &gt;</div><p>Enables objects that inherits from this class to produce a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> object referencing themselves if the object is wrapped in a <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>. </p>
+class npi::LinkFromThis&lt; T &gt;</div><p>Enables objects that inherits from this class to produce a Link object referencing themselves if the object is wrapped in a LinkHost. </p>
 <ul>
-<li>Behaves like a std::enable_shared_from_this but for <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>.</li>
-<li>Stores a weak reference to the universal observer in the <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>.</li>
-<li>Provides a way to obtain a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> object to itself using the universal observer if the <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a> object is still alive.</li>
+<li>Behaves like a std::enable_shared_from_this but for LinkHost.</li>
+<li>Stores a weak reference to the universal observer in the LinkHost.</li>
+<li>Provides a way to obtain a Link object to itself using the universal observer if the LinkHost object is still alive.</li>
 </ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the object being wrapped in <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a> and supporting enable-from-this semantics.</td></tr>
+    <tr><td class="paramname">T</td><td>The type of the object being wrapped in LinkHost and supporting enable-from-this semantics.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This class only holds a weak reference to the universal observer in the <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>. This means that as long as any <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a> object is alive, the <a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html" title="Enables objects that inherits from this class to produce a Link object referencing themselves if the ...">LinkFromThis</a> object will be able to create a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> object to itself and that <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> object will be valid as long as the <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a> object is alive.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This class only holds a weak reference to the universal observer in the LinkHost. This means that as long as any LinkHost object is alive, the LinkFromThis object will be able to create a Link object to itself and that Link object will be valid as long as the LinkHost object is alive.</dd></dl>
 <dl class="section user"><dt>Example of using LinkFromThis:</dt><dd><div class="fragment"><div class="line"><span class="keyword">struct </span>MyClass : <a class="code hl_function" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis</a>&lt;MyClass&gt; {</div>
 <div class="line">  <span class="keywordtype">void</span> hello() {}</div>
 <div class="line">};</div>
@@ -205,8 +209,10 @@ class npi::LinkFromThis&lt; T &gt;</div><p>Enables objects that inherits from th
 <div class="line"><span class="keyword">auto</span> link = host.universal_()-&gt;linkFromThis_();</div>
 <div class="line"><span class="keywordflow">if</span>(link) link-&gt;hello();</div>
 <div class="ttc" id="aclassnpi_1_1_link_from_this_html_a6984c92e995d89b5b377bbe7866863ef"><div class="ttname"><a href="#a6984c92e995d89b5b377bbe7866863ef">npi::LinkFromThis::LinkFromThis</a></div><div class="ttdeci">LinkFromThis() noexcept=default</div><div class="ttdoc">Default constructor.</div></div>
-<div class="ttc" id="aclassnpi_1_1_link_from_this_html_aaf61bab6d0dd4c11669a554a173e2994"><div class="ttname"><a href="#aaf61bab6d0dd4c11669a554a173e2994">npi::LinkFromThis::LinkHost</a></div><div class="ttdeci">friend class LinkHost</div><div class="ttdoc">Friend declarations of LinkHost class.</div><div class="ttdef"><b>Definition</b> Link.hpp:1158</div></div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html_aaf61bab6d0dd4c11669a554a173e2994"><div class="ttname"><a href="#aaf61bab6d0dd4c11669a554a173e2994">npi::LinkFromThis::LinkHost</a></div><div class="ttdeci">friend class LinkHost</div><div class="ttdoc">Friend declarations of LinkHost class.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01158">Link.hpp:1158</a></div></div>
 </div><!-- fragment --> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01107">1107</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6984c92e995d89b5b377bbe7866863ef" name="a6984c92e995d89b5b377bbe7866863ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6984c92e995d89b5b377bbe7866863ef">&#9670;&#160;</a></span>LinkFromThis() <span class="overload">[1/3]</span></h2>
@@ -234,6 +240,13 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
+
+<p class="reference">Referenced by <a class="el" href="#a9232cac3ba9c19048accd3248442791a">LinkFromThis()</a>, <a class="el" href="#aa7f7a0a8bcec930c42afd7151c2abf2a">LinkFromThis()</a>, <a class="el" href="#ae75b7182e1a9d11abdd1ca8aa9e1aa9e">~LinkFromThis()</a>, <a class="el" href="#a123e725e537fee1e71b9d97af98104bd">operator=()</a>, <a class="el" href="#ac3dc4e2cb6c07866f2c85a9ae0844b0d">operator=()</a>, <a class="el" href="#ada683c2f744acba8c866c44ff6066613">swap</a>, and <a class="el" href="#a68161836b9be75447dc771bd04fd50b2">swap_()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_a6984c92e995d89b5b377bbe7866863ef_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 
 </div>
 </div>
@@ -264,6 +277,13 @@ template&lt;typename T&gt; </div>
 
 <p>Default copy constructor. </p>
 
+<p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_a9232cac3ba9c19048accd3248442791a_cgraph.svg" width="502" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="aa7f7a0a8bcec930c42afd7151c2abf2a" name="aa7f7a0a8bcec930c42afd7151c2abf2a"></a>
@@ -292,6 +312,13 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Default move constructor. </p>
+
+<p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_aa7f7a0a8bcec930c42afd7151c2abf2a_cgraph.svg" width="502" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -322,6 +349,13 @@ template&lt;typename T&gt; </div>
 
 <p>Default destructor. </p>
 
+<p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_ae75b7182e1a9d11abdd1ca8aa9e1aa9e_cgraph.svg" width="510" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -350,8 +384,14 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Check whether a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> can be obtained from this object i.e. if the object is wrapped in a <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the universal observer has not expired and the object is wrapped in a <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>. </dd></dl>
+<p>Check whether a Link can be obtained from this object i.e. if the object is wrapped in a LinkHost. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the universal observer has not expired and the object is wrapped in a LinkHost. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01138">1138</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1138</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.expired() == <span class="keyword">false</span>; }</div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html_a3deba1b7929e577995d9ae0db2d76d68"><div class="ttname"><a href="#a3deba1b7929e577995d9ae0db2d76d68">npi::LinkFromThis::weakUni_</a></div><div class="ttdeci">std::weak_ptr&lt; typename LinkHost&lt; T &gt;::Obs &gt; weakUni_</div><div class="ttdoc">Weak pointer to the uni_ in LinkHost.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01161">Link.hpp:1161</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.</p>
 
 </div>
 </div>
@@ -380,9 +420,31 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Create a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> to this object if still alive and is wrapped in a <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A valid <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> if the universal observer exists, otherwise an empty <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a>.</dd></dl>
-<p>Attempts to lock the weak universal observer and returns a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> pointing to the stored ptr. </p>
+<p>Create a Link to this object if still alive and is wrapped in a LinkHost. </p>
+<dl class="section return"><dt>Returns</dt><dd>A valid Link if the universal observer exists, otherwise an empty Link.</dd></dl>
+<p>Attempts to lock the weak universal observer and returns a Link pointing to the stored ptr. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01130">1130</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1130</span>                                           {</div>
+<div class="line"><span class="lineno"> 1131</span>      <span class="keywordflow">if</span>(<span class="keyword">auto</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">uni</a> = <a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.lock())</div>
+<div class="line"><span class="lineno"> 1132</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">Link&lt;T&gt;</a>{<a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">uni</a>-&gt;ptr_};</div>
+<div class="line"><span class="lineno"> 1133</span>      <span class="keywordflow">return</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">Link&lt;T&gt;</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><span class="lineno"> 1134</span>    }</div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html"><div class="ttname"><a href="../../d1/d51/classnpi_1_1_link_from_this.html">npi::LinkFromThis</a></div><div class="ttdoc">Enables objects that inherits from this class to produce a Link object referencing themselves if the ...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01107">Link.hpp:1107</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a54645a540c21a4c01ba695594f4f9eaa">linkFromThis_()</a>, and <a class="el" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a54645a540c21a4c01ba695594f4f9eaa">linkFromThis_()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_a54645a540c21a4c01ba695594f4f9eaa_cgraph.svg" width="288" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_a54645a540c21a4c01ba695594f4f9eaa_icgraph.svg" width="288" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -413,6 +475,13 @@ template&lt;typename T&gt; </div>
 
 <p>Default copy assignment operator. </p>
 
+<p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_a123e725e537fee1e71b9d97af98104bd_cgraph.svg" width="478" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="ac3dc4e2cb6c07866f2c85a9ae0844b0d" name="ac3dc4e2cb6c07866f2c85a9ae0844b0d"></a>
@@ -441,6 +510,13 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Default move assignment operator. </p>
+
+<p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_ac3dc4e2cb6c07866f2c85a9ae0844b0d_cgraph.svg" width="478" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -472,10 +548,24 @@ template&lt;typename T&gt; </div>
 <p>Member swap function. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>The <a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html" title="Enables objects that inherits from this class to produce a Link object referencing themselves if the ...">LinkFromThis</a> object to swap with. </td></tr>
+    <tr><td class="paramname">other</td><td>The LinkFromThis object to swap with. </td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01150">1150</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1150</span>                                             {</div>
+<div class="line"><span class="lineno"> 1151</span>      <span class="keyword">using </span><a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">std::swap</a>;</div>
+<div class="line"><span class="lineno"> 1152</span>      <a class="code hl_friend" href="#ada683c2f744acba8c866c44ff6066613">swap</a>(*<span class="keyword">this</span>, <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">other</a>);</div>
+<div class="line"><span class="lineno"> 1153</span>    }</div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html_ada683c2f744acba8c866c44ff6066613"><div class="ttname"><a href="#ada683c2f744acba8c866c44ff6066613">npi::LinkFromThis::swap</a></div><div class="ttdeci">friend void swap(LinkFromThis &amp;a, LinkFromThis &amp;b) noexcept</div><div class="ttdoc">Friend swap to exchange two LinkFromThis instances.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01143">Link.hpp:1143</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>, and <a class="el" href="#ada683c2f744acba8c866c44ff6066613">swap</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d51/classnpi_1_1_link_from_this_a68161836b9be75447dc771bd04fd50b2_cgraph.svg" width="100%" height="361"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 
 </div>
 </div>
@@ -504,7 +594,13 @@ template&lt;typename U&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Friend declarations of <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a> class. </p>
+<p>Friend declarations of LinkHost class. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01158">1158</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="#aaf61bab6d0dd4c11669a554a173e2994">LinkHost</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#aaf61bab6d0dd4c11669a554a173e2994">LinkHost</a>.</p>
 
 </div>
 </div>
@@ -537,14 +633,24 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Friend swap to exchange two <a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html" title="Enables objects that inherits from this class to produce a Link object referencing themselves if the ...">LinkFromThis</a> instances. </p>
+<p>Friend swap to exchange two LinkFromThis instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>First <a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html" title="Enables objects that inherits from this class to produce a Link object referencing themselves if the ...">LinkFromThis</a> object. </td></tr>
-    <tr><td class="paramname">b</td><td>Second <a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html" title="Enables objects that inherits from this class to produce a Link object referencing themselves if the ...">LinkFromThis</a> object. </td></tr>
+    <tr><td class="paramname">a</td><td>First LinkFromThis object. </td></tr>
+    <tr><td class="paramname">b</td><td>Second LinkFromThis object. </td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01143">1143</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1143</span>                                                                {</div>
+<div class="line"><span class="lineno"> 1144</span>      <span class="keyword">using </span><a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">std::swap</a>;</div>
+<div class="line"><span class="lineno"> 1145</span>      <a class="code hl_friend" href="#ada683c2f744acba8c866c44ff6066613">swap</a>(<a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">a</a>.<a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>, <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">b</a>.<a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>);</div>
+<div class="line"><span class="lineno"> 1146</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>, and <a class="el" href="#ada683c2f744acba8c866c44ff6066613">swap</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#ada683c2f744acba8c866c44ff6066613">swap</a>, and <a class="el" href="#a68161836b9be75447dc771bd04fd50b2">swap_()</a>.</p>
 
 </div>
 </div>
@@ -571,7 +677,11 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Weak pointer to the uni_ in <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>. </p>
+<p>Weak pointer to the uni_ in LinkHost. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01161">1161</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#adf1dd7b3be795b4bd7d03dc2b3a15a31">isLinkFromThisAvailable_()</a>, and <a class="el" href="#a54645a540c21a4c01ba695594f4f9eaa">linkFromThis_()</a>.</p>
 
 </div>
 </div>
@@ -600,7 +710,7 @@ template&lt;typename T&gt; </div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Oct 6 2025 22:50:33'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 16 2025 13:09:58'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

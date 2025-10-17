@@ -1,0 +1,5 @@
+<map id="npi::app::appProgramDataDir" name="npi::app::appProgramDataDir">
+<area shape="rect" id="Node000001" title="Absolute path to C:\ProgramData\[orgFolder]\[appFolder]." alt="" coords="283,5,520,31"/>
+<area shape="rect" id="Node000002" href="$dc/dba/namespacenpi_1_1app.html#a723a01872a6ddb63e5bec52939f8c021" title="Absolute path of application&#39;s main settings.ini at C:\ProgramData\[orgFolder]\[appFolder]\." alt="" coords="5,5,235,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,21,234,21,234,16,275,16"/>
+</map>

@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['reset_5f_0',['reset_',['../df/d94/classnpi_1_1_link.html#a329e7fd67678235b025d74256bd56f23',1,'npi::Link::reset_()'],['../dc/d75/classnpi_1_1_link_host.html#a8621c5f37a5de093341d6dc2f683b31a',1,'npi::LinkHost::reset_()'],['../d5/d88/classnpi_1_1_link_weak_host.html#a77b86023ba4c43e358d5ff9cd5509d90',1,'npi::LinkWeakHost::reset_()']]]
+  ['nominmax_0',['NOMINMAX',['../d1/d8b/_app_util_8cpp.html#a9f918755b601cf4bffca775992e6fb90',1,'NOMINMAX:&#160;AppUtil.cpp'],['../d4/d92/_win_msg_box_8hpp.html#a9f918755b601cf4bffca775992e6fb90',1,'NOMINMAX:&#160;WinMsgBox.hpp']]],
+  ['npi_1',['npi',['../d6/d57/namespacenpi.html',1,'']]],
+  ['npi_3a_3aapp_2',['app',['../dc/dba/namespacenpi_1_1app.html',1,'npi']]],
+  ['npi_3a_3aprops_3',['props',['../d7/d8c/namespacenpi_1_1props.html',1,'npi']]],
+  ['npi_3a_3awin_4',['win',['../d8/d8e/namespacenpi_1_1win.html',1,'npi']]]
 ];

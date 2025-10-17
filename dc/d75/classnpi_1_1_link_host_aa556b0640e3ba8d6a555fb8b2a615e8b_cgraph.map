@@ -1,0 +1,5 @@
+<map id="npi::LinkHost::operator*" name="npi::LinkHost::operator*">
+<area shape="rect" id="Node000001" title="Dereference operator to obtain a reference to the hosted object." alt="" coords="5,5,219,31"/>
+<area shape="rect" id="Node000002" href="$dc/d75/classnpi_1_1_link_host.html#a6cd9c1bd41b58506f19e67a257f84043" title="Retrieve the raw pointer to the hosted object." alt="" coords="267,5,440,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,16,259,16,259,21,218,21"/>
+</map>

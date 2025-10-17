@@ -61,7 +61,11 @@
   <div id="dp-root-pane" class="dp-nav-pane"></div>
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
-  <div id="dp-leaf-pane" class="dp-nav-pane"></div>
+  <div id="dp-leaf-pane" class="dp-nav-pane">
+    <div id="dp-leaf-bg">
+    <div id="dp-leaf-ul"></div>
+    </div>
+  </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -71,7 +75,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;1</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -144,7 +148,7 @@ $(function(){initNavTree('dd/df0/_app_data_8hpp.html','../../',''); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AppData.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d4b/_app_data_8hpp__incl.svg" width="140" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d4b/_app_data_8hpp__incl.svg" width="168" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="../../dd/df0/_app_data_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -158,24 +162,26 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:adc67984091da507784ab70eca8975491" id="r_adc67984091da507784ab70eca8975491"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#adc67984091da507784ab70eca8975491">npi::app::orgName</a> {&quot;npi electronics GmbH&quot;}</td></tr>
-<tr class="memdesc:adc67984091da507784ab70eca8975491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization display name (e.g., used in About dialogs).  <br /></td></tr>
+<tr class="memitem:aa7971e0e3a9b505a07176e5ac7aacbd6" id="r_aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a> {&quot;Log_Test&quot;}</td></tr>
+<tr class="memdesc:aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Folder name used on disk for app-level data (ASCII/safe).  <br /></td></tr>
 <tr class="memitem:ae72448eb4df90eb2813db4202ac81bef" id="r_ae72448eb4df90eb2813db4202ac81bef"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ae72448eb4df90eb2813db4202ac81bef">npi::app::appName</a> {&quot;Log Test&quot;}</td></tr>
 <tr class="memdesc:ae72448eb4df90eb2813db4202ac81bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application display name.  <br /></td></tr>
-<tr class="memitem:a306977cd103a3449007db1e926e213e8" id="r_a306977cd103a3449007db1e926e213e8"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a306977cd103a3449007db1e926e213e8">npi::app::orgDomain</a> {&quot;npielectronic.com&quot;}</td></tr>
-<tr class="memdesc:a306977cd103a3449007db1e926e213e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization internet domain (host-only, no scheme).  <br /></td></tr>
 <tr class="memitem:aebf26d13197e68f0ad3e05d82bb5f31d" id="r_aebf26d13197e68f0ad3e05d82bb5f31d"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aebf26d13197e68f0ad3e05d82bb5f31d">npi::app::appVersion</a> {&quot;0.1.0&quot;}</td></tr>
 <tr class="memdesc:aebf26d13197e68f0ad3e05d82bb5f31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application semantic version string.  <br /></td></tr>
 <tr class="memitem:a786b074c596617d18abb1957f26d3156" id="r_a786b074c596617d18abb1957f26d3156"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a> {&quot;npielectronic&quot;}</td></tr>
 <tr class="memdesc:a786b074c596617d18abb1957f26d3156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Folder name used on disk for organization-level data (ASCII/safe).  <br /></td></tr>
-<tr class="memitem:aa7971e0e3a9b505a07176e5ac7aacbd6" id="r_aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a> {&quot;Log_Test&quot;}</td></tr>
-<tr class="memdesc:aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Folder name used on disk for app-level data (ASCII/safe).  <br /></td></tr>
+<tr class="memitem:a306977cd103a3449007db1e926e213e8" id="r_a306977cd103a3449007db1e926e213e8"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a306977cd103a3449007db1e926e213e8">npi::app::orgDomain</a> {&quot;npielectronic.com&quot;}</td></tr>
+<tr class="memdesc:a306977cd103a3449007db1e926e213e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization internet domain (host-only, no scheme).  <br /></td></tr>
+<tr class="memitem:adc67984091da507784ab70eca8975491" id="r_adc67984091da507784ab70eca8975491"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#adc67984091da507784ab70eca8975491">npi::app::orgName</a> {&quot;npi electronics GmbH&quot;}</td></tr>
+<tr class="memdesc:adc67984091da507784ab70eca8975491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization display name (e.g., used in About dialogs).  <br /></td></tr>
 <tr class="memitem:aacda91d3fcfee509ffdd2fabd44f1339" id="r_aacda91d3fcfee509ffdd2fabd44f1339"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aacda91d3fcfee509ffdd2fabd44f1339">npi::app::settingsFileName</a> {&quot;settings.ini&quot;}</td></tr>
 <tr class="memdesc:aacda91d3fcfee509ffdd2fabd44f1339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main settings file name (ASCII/safe).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Application metadata and constants. </p>
-<p>This header file is the starting point for the namespace <span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html" title="Application metadata and constants.">npi::app</a></span>. </p>
+<p>This header file is the starting point for the namespace <span class="tt">npi::app</span>. </p>
+
+<p class="definition">Definition in file <a class="el" href="../../dd/df0/_app_data_8hpp_source.html">AppData.hpp</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -198,7 +204,7 @@ Variables</h2></td></tr>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Oct 6 2025 22:50:33'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 16 2025 13:09:57'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

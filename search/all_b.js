@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['polymorphicallyrelated_0',['PolymorphicallyRelated',['../d1/d7e/conceptnpi_1_1_polymorphically_related.html',1,'npi']]],
-  ['ptr_5f_1',['ptr_',['../df/d94/classnpi_1_1_link.html#abf7eecf9a1ce30a7a4362f578e4a7f1b',1,'npi::Link::ptr_'],['../dd/d30/structnpi_1_1_link_host_1_1_obs.html#adaee74147df4c7a2f96c3b066fb0ef96',1,'npi::LinkHost::Obs::ptr_']]],
-  ['pureshared_5f_2',['pureShared_',['../dc/d75/classnpi_1_1_link_host.html#a3d3c2633d241905194a05c6e15b046db',1,'npi::LinkHost']]]
+  ['magenta_0',['Magenta',['../d1/da6/classnpi_1_1_font.html#a4c87193712110a0462b9ab9d0d875684ab91cc2c1416fcca942b61c7ac5b1a9ac',1,'npi::Font']]],
+  ['maxdura_5f_1',['MaxDura_',['../d3/dc4/classnpi_1_1_show.html#ab54d91313fb44bce24784f4780a4bf5b',1,'npi::Show']]],
+  ['metadata_2',['Metadata',['../dc/d4b/_link_8hpp.html#linkFileMetadata',1,'']]],
+  ['metrics_5f_3',['metrics_',['../d1/d41/structnpi_1_1_font_1_1_group.html#ab6c8b873d8d769f9411030c9010e9c02',1,'npi::Font::Group']]],
+  ['metricsf_5f_4',['metricsF_',['../d1/d41/structnpi_1_1_font_1_1_group.html#adc5158c802f8dc5fd412d0e36a07f9f4',1,'npi::Font::Group']]],
+  ['mindura_5f_5',['MinDura_',['../d3/dc4/classnpi_1_1_show.html#a6faba3519f1c3e2d1f157e1c994411e2',1,'npi::Show']]],
+  ['msgbox_6',['msgBox',['../d8/d8e/namespacenpi_1_1win.html#a9dbf3396049adeb5a07457a5579dabf7',1,'npi::win']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['weakloc_5f_0',['weakLoc_',['../d5/d88/classnpi_1_1_link_weak_host.html#a33e88a8ccbd91d26392b972635a7b1fa',1,'npi::LinkWeakHost']]],
-  ['weakobj_5f_1',['weakObj_',['../d5/d88/classnpi_1_1_link_weak_host.html#af6022b57d832f921515571b2244ec3cd',1,'npi::LinkWeakHost']]],
-  ['weakuni_5f_2',['weakUni_',['../d5/d88/classnpi_1_1_link_weak_host.html#a1faa5f51ebf96fc8c846926ebf4293c0',1,'npi::LinkWeakHost::weakUni_'],['../d1/d51/classnpi_1_1_link_from_this.html#a3deba1b7929e577995d9ae0db2d76d68',1,'npi::LinkFromThis::weakUni_']]]
+  ['groupbutton_0',['GroupButton',['../d7/d8c/namespacenpi_1_1props.html#a8640cffba980dcc9ef943317abf5137e',1,'npi::props']]],
+  ['groupbuttonsquareleft_1',['GroupButtonSquareLeft',['../d7/d8c/namespacenpi_1_1props.html#a8bbecd378241f5ef830a27625a7fe4a1',1,'npi::props']]],
+  ['groupbuttonsquareright_2',['GroupButtonSquareRight',['../d7/d8c/namespacenpi_1_1props.html#aba0927b47a49e01cfb98c9ff180bd25f',1,'npi::props']]],
+  ['guardedwid_5f_3',['guardedWid_',['../dd/d13/structnpi_1_1_show_1_1_opacity_guard.html#aeb5391d7d00bb57fa24fea9744a19e54',1,'npi::Show::OpacityGuard']]]
 ];

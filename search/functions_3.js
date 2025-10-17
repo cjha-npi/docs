@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['get_5f_0',['get_',['../df/d94/classnpi_1_1_link.html#ae203b61846ab71e431c98c3aaaf3a3a5',1,'npi::Link::get_()'],['../dc/d75/classnpi_1_1_link_host.html#a6cd9c1bd41b58506f19e67a257f84043',1,'npi::LinkHost::get_()']]]
+  ['errormsgbox_0',['errorMsgBox',['../d8/d8e/namespacenpi_1_1win.html#aafb47eb36e449bc98316ec02b0da6b62',1,'npi::win']]],
+  ['expired_5f_1',['expired_',['../d5/d88/classnpi_1_1_link_weak_host.html#aa54105103fd6656c93b4a6a30121fc53',1,'npi::LinkWeakHost']]]
 ];

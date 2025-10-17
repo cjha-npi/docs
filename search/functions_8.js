@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pureshared_5f_0',['pureShared_',['../dc/d75/classnpi_1_1_link_host.html#a3d3c2633d241905194a05c6e15b046db',1,'npi::LinkHost']]]
+  ['knownfolderpathwin_0',['knownFolderPathWin',['../da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03.html#a5bca34d4144e402dfa63ba6588cfa0c3',1,'anonymous_namespace{AppUtil.cpp}']]]
 ];

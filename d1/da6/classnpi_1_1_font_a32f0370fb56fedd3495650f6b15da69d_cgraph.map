@@ -1,0 +1,7 @@
+<map id="npi::Font::appFont_" name="npi::Font::appFont_">
+<area shape="rect" id="Node000001" title="Get a configured QFont for the application font family." alt="" coords="5,5,179,31"/>
+<area shape="rect" id="Node000002" href="$d1/da6/classnpi_1_1_font.html#a7d6a887c003a914648864595d7650f76" title="Get or create the cached Group for the application font family." alt="" coords="227,5,432,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,16,219,16,219,21,178,21"/>
+<area shape="rect" id="Node000003" href="$d1/da6/classnpi_1_1_font.html#a3184648ffb7f095e15b9a5f0c72f1712" title="Compute a hash key from style and size." alt="" coords="480,5,629,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,16,472,16,472,21,432,21"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="npi::LinkHost::weakHost_" name="npi::LinkHost::weakHost_">
+<area shape="rect" id="Node000001" title="Create a LinkWeakHost object i.e. weak reference to LinkHost. Similar to what std::weak_ptr does for ..." alt="" coords="5,29,219,55"/>
+<area shape="rect" id="Node000002" href="$dc/d75/classnpi_1_1_link_host.html#a20cedfa1d9d9b2d5a868a5f48ed004e6" title="Friend declarations of LinkWeakHost class." alt="" coords="267,29,504,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,40,259,40,259,45,218,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="342,32,332,21,336,11,355,5,385,3,413,4,431,9,439,17,436,26,431,24,434,18,428,14,412,10,385,8,356,10,340,15,337,20,346,28"/>
+</map>

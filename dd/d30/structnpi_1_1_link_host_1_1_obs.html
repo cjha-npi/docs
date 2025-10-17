@@ -61,7 +61,11 @@
   <div id="dp-root-pane" class="dp-nav-pane"></div>
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
-  <div id="dp-leaf-pane" class="dp-nav-pane"></div>
+  <div id="dp-leaf-pane" class="dp-nav-pane">
+    <div id="dp-leaf-bg">
+    <div id="dp-leaf-ul"></div>
+    </div>
+  </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -71,7 +75,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;1</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -138,28 +142,28 @@ $(function(){initNavTree('dd/d30/structnpi_1_1_link_host_1_1_obs.html','../../',
 </div><!--header-->
 <div class="contents">
 
-<p>Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects.  
+<p>Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to Link objects.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for npi::LinkHost&lt; T &gt;::Obs:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d6b/structnpi_1_1_link_host_1_1_obs__coll__graph.svg" width="162" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d6b/structnpi_1_1_link_host_1_1_obs__coll__graph.svg" width="216" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad915210ad3a1b8054708ac3f4c24b2bc" id="r_ad915210ad3a1b8054708ac3f4c24b2bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad915210ad3a1b8054708ac3f4c24b2bc">Obs</a> (void *raw)</td></tr>
-<tr class="memdesc:ad915210ad3a1b8054708ac3f4c24b2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize observer with raw pointer.  <br /></td></tr>
 <tr class="memitem:a9378d216ebf300c7a63da22db8824908" id="r_a9378d216ebf300c7a63da22db8824908"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9378d216ebf300c7a63da22db8824908">Obs</a> (const <a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html">Obs</a> &amp;other) noexcept=default</td></tr>
 <tr class="memdesc:a9378d216ebf300c7a63da22db8824908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default copy constructor.  <br /></td></tr>
 <tr class="memitem:a4d2b813a8db8ba38aff97467c2c4100d" id="r_a4d2b813a8db8ba38aff97467c2c4100d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d2b813a8db8ba38aff97467c2c4100d">Obs</a> (<a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html">Obs</a> &amp;&amp;other) noexcept=default</td></tr>
 <tr class="memdesc:a4d2b813a8db8ba38aff97467c2c4100d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default move constructor.  <br /></td></tr>
+<tr class="memitem:ad915210ad3a1b8054708ac3f4c24b2bc" id="r_ad915210ad3a1b8054708ac3f4c24b2bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad915210ad3a1b8054708ac3f4c24b2bc">Obs</a> (void *raw)</td></tr>
+<tr class="memdesc:ad915210ad3a1b8054708ac3f4c24b2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize observer with raw pointer.  <br /></td></tr>
+<tr class="memitem:a9e10cc0715839c20092dfaf4e426870c" id="r_a9e10cc0715839c20092dfaf4e426870c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e10cc0715839c20092dfaf4e426870c">~Obs</a> () noexcept</td></tr>
+<tr class="memdesc:a9e10cc0715839c20092dfaf4e426870c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor sets the internal pointer to nullptr using std::memory_order_release to ensure thread-safe access.  <br /></td></tr>
 <tr class="memitem:ab40b0aa56cabaae5c67b6a1328b6be41" id="r_ab40b0aa56cabaae5c67b6a1328b6be41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html">Obs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab40b0aa56cabaae5c67b6a1328b6be41">operator=</a> (const <a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html">Obs</a> &amp;other) noexcept=default</td></tr>
 <tr class="memdesc:ab40b0aa56cabaae5c67b6a1328b6be41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default copy assignment operator.  <br /></td></tr>
 <tr class="memitem:a181084c86716e2b7b7ded3f8e260ec3c" id="r_a181084c86716e2b7b7ded3f8e260ec3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html">Obs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a181084c86716e2b7b7ded3f8e260ec3c">operator=</a> (<a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html">Obs</a> &amp;&amp;other) noexcept=default</td></tr>
 <tr class="memdesc:a181084c86716e2b7b7ded3f8e260ec3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default move assignment operator.  <br /></td></tr>
-<tr class="memitem:a9e10cc0715839c20092dfaf4e426870c" id="r_a9e10cc0715839c20092dfaf4e426870c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e10cc0715839c20092dfaf4e426870c">~Obs</a> () noexcept</td></tr>
-<tr class="memdesc:a9e10cc0715839c20092dfaf4e426870c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor sets the internal pointer to nullptr using std::memory_order_release to ensure thread-safe access.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -168,13 +172,15 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct npi::LinkHost&lt; T &gt;::Obs</div><p>Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects. </p>
+struct npi::LinkHost&lt; T &gt;::Obs</div><p>Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to Link objects. </p>
 <dl class="section note"><dt>Note</dt><dd><ul>
 <li>Holds a <span class="tt">std::shared_ptr&lt;std::atomic&lt;void*&gt;&gt;</span> to ensure thread-safe access to a type-erased pointer.</li>
-<li>Type-erased pointer is used instead of actual object pointer to allow for easy casting and polymorphic relations. To obtain the actual pointer, the <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects have to use <span class="tt">static_cast&lt;T*&gt;</span> which is done in <span class="tt"><a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a>&lt;T&gt;::<a class="el" href="../../dc/d75/classnpi_1_1_link_host.html#a6cd9c1bd41b58506f19e67a257f84043" title="Retrieve the raw pointer to the hosted object.">get_()</a></span>.</li>
+<li>Type-erased pointer is used instead of actual object pointer to allow for easy casting and polymorphic relations. To obtain the actual pointer, the Link objects have to use <span class="tt">static_cast&lt;T*&gt;</span> which is done in <span class="tt">Link&lt;T&gt;::get_()</span>.</li>
 </ul>
 </dd></dl>
-<p>This struct object holds the type-erased pointer to the object. In its destructor the pointer is set to nullptr using <span class="tt">std::memory_order_release</span> to ensure thread-safe access. Since the object of this struct is stored as a <span class="tt">std::shared_ptr&lt;<a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html" title="Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of th...">Obs</a>&gt;</span>, once the last reference to <span class="tt">std::shared_ptr&lt;<a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html" title="Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of th...">Obs</a>&gt;</span> is destroyed, the destructor will be called and the object in the <span class="tt">std::atomic&lt;void*&gt;</span> will be replaced with nullptr. This allows the <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects to check if the object can still be dereferenced or not. </p>
+<p>This struct object holds the type-erased pointer to the object. In its destructor the pointer is set to nullptr using <span class="tt">std::memory_order_release</span> to ensure thread-safe access. Since the object of this struct is stored as a <span class="tt">std::shared_ptr&lt;Obs&gt;</span>, once the last reference to <span class="tt">std::shared_ptr&lt;Obs&gt;</span> is destroyed, the destructor will be called and the object in the <span class="tt">std::atomic&lt;void*&gt;</span> will be replaced with nullptr. This allows the Link objects to check if the object can still be dereferenced or not. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l00838">838</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad915210ad3a1b8054708ac3f4c24b2bc" name="ad915210ad3a1b8054708ac3f4c24b2bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad915210ad3a1b8054708ac3f4c24b2bc">&#9670;&#160;</a></span>Obs() <span class="overload">[1/3]</span></h2>
@@ -210,6 +216,20 @@ template&lt;typename T&gt; </div>
 </dl>
 <p>Allocates a new atomic wrapper set to <span class="tt">raw</span>. </p>
 
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l00845">845</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  845</span>: <a class="code hl_variable" href="#adaee74147df4c7a2f96c3b066fb0ef96">ptr_</a>{<a class="code hl_class" href="../../dc/d75/classnpi_1_1_link_host.html">std::make_shared&lt;std::atomic&lt;void*&gt;</a>&gt;(<a class="code hl_class" href="../../dc/d75/classnpi_1_1_link_host.html">raw</a>)} {}</div>
+<div class="ttc" id="aclassnpi_1_1_link_host_html"><div class="ttname"><a href="../../dc/d75/classnpi_1_1_link_host.html">npi::LinkHost</a></div><div class="ttdoc">A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l00546">Link.hpp:546</a></div></div>
+<div class="ttc" id="astructnpi_1_1_link_host_1_1_obs_html_adaee74147df4c7a2f96c3b066fb0ef96"><div class="ttname"><a href="#adaee74147df4c7a2f96c3b066fb0ef96">npi::LinkHost::Obs::ptr_</a></div><div class="ttdeci">std::shared_ptr&lt; std::atomic&lt; void * &gt; &gt; ptr_</div><div class="ttdoc">Type-erased pointer to the object being observed.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l00840">Link.hpp:840</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#adaee74147df4c7a2f96c3b066fb0ef96">ptr_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a9378d216ebf300c7a63da22db8824908">Obs()</a>, <a class="el" href="#a4d2b813a8db8ba38aff97467c2c4100d">Obs()</a>, <a class="el" href="#ab40b0aa56cabaae5c67b6a1328b6be41">operator=()</a>, and <a class="el" href="#a181084c86716e2b7b7ded3f8e260ec3c">operator=()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d30/structnpi_1_1_link_host_1_1_obs_ad915210ad3a1b8054708ac3f4c24b2bc_icgraph.svg" width="470" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a9378d216ebf300c7a63da22db8824908" name="a9378d216ebf300c7a63da22db8824908"></a>
@@ -238,6 +258,13 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Default copy constructor. </p>
+
+<p class="reference">References <a class="el" href="#ad915210ad3a1b8054708ac3f4c24b2bc">Obs()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d30/structnpi_1_1_link_host_1_1_obs_a9378d216ebf300c7a63da22db8824908_cgraph.svg" width="470" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -268,6 +295,13 @@ template&lt;typename T&gt; </div>
 
 <p>Default move constructor. </p>
 
+<p class="reference">References <a class="el" href="#ad915210ad3a1b8054708ac3f4c24b2bc">Obs()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d30/structnpi_1_1_link_host_1_1_obs_a4d2b813a8db8ba38aff97467c2c4100d_cgraph.svg" width="470" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a9e10cc0715839c20092dfaf4e426870c" name="a9e10cc0715839c20092dfaf4e426870c"></a>
@@ -296,6 +330,11 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Destructor sets the internal pointer to nullptr using std::memory_order_release to ensure thread-safe access. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l00861">861</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  861</span>{ <a class="code hl_variable" href="#adaee74147df4c7a2f96c3b066fb0ef96">ptr_</a>-&gt;store(<span class="keyword">nullptr</span>, <a class="code hl_class" href="../../dc/d75/classnpi_1_1_link_host.html">std::memory_order_release</a>); }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#adaee74147df4c7a2f96c3b066fb0ef96">ptr_</a>.</p>
 
 </div>
 </div>
@@ -327,6 +366,13 @@ template&lt;typename T&gt; </div>
 
 <p>Default copy assignment operator. </p>
 
+<p class="reference">References <a class="el" href="#ad915210ad3a1b8054708ac3f4c24b2bc">Obs()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d30/structnpi_1_1_link_host_1_1_obs_ab40b0aa56cabaae5c67b6a1328b6be41_cgraph.svg" width="518" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a181084c86716e2b7b7ded3f8e260ec3c" name="a181084c86716e2b7b7ded3f8e260ec3c"></a>
@@ -356,6 +402,13 @@ template&lt;typename T&gt; </div>
 
 <p>Default move assignment operator. </p>
 
+<p class="reference">References <a class="el" href="#ad915210ad3a1b8054708ac3f4c24b2bc">Obs()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d30/structnpi_1_1_link_host_1_1_obs_a181084c86716e2b7b7ded3f8e260ec3c_cgraph.svg" width="518" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -374,6 +427,11 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Type-erased pointer to the object being observed. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l00840">840</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  840</span>{<span class="keyword">nullptr</span>};</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#ad915210ad3a1b8054708ac3f4c24b2bc">Obs()</a>, and <a class="el" href="#a9e10cc0715839c20092dfaf4e426870c">~Obs()</a>.</p>
 
 </div>
 </div>
@@ -402,7 +460,7 @@ template&lt;typename T&gt; </div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Oct 6 2025 22:50:33'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 16 2025 13:09:58'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

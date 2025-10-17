@@ -1,0 +1,9 @@
+<map id="npi::LinkHost::reset_" name="npi::LinkHost::reset_">
+<area shape="rect" id="Node000001" title="Reset the host, releasing the object and invalidating all links." alt="" coords="512,31,701,56"/>
+<area shape="rect" id="Node000002" href="$dc/d75/classnpi_1_1_link_host.html#a59021c0af01b28c7a549c8ce16ef0368" title="Internal helper to assign from another polymorphically related LinkHost object." alt="" coords="267,31,464,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="504,46,464,46,464,41,504,41"/>
+<area shape="rect" id="Node000003" href="$dc/d75/classnpi_1_1_link_host.html#a490ac825e921d673a3a32c94e7058d1d" title="Polymorphic converting copy constructor." alt="" coords="9,5,215,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="258,36,214,31,215,26,259,30"/>
+<area shape="rect" id="Node000004" href="$dc/d75/classnpi_1_1_link_host.html#aa7c182e77bd354c70fb694ac3b1a6d76" title="Polymorphic assignment operator." alt="" coords="5,55,219,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="259,56,219,60,218,55,258,51"/>
+</map>

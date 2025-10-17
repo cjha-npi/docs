@@ -1,0 +1,7 @@
+<map id="npi::LinkHost::operator bool" name="npi::LinkHost::operator bool">
+<area shape="rect" id="Node000001" title="Explicit boolean conversion operator (e.g. if(linkHost){...})." alt="" coords="5,5,251,31"/>
+<area shape="rect" id="Node000002" href="$dc/d75/classnpi_1_1_link_host.html#a61f11562475a5e48d58ddc0e85a956b7" title="Check whether the host owns an object." alt="" coords="299,5,504,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,16,291,16,291,21,250,21"/>
+<area shape="rect" id="Node000003" href="$dc/d75/classnpi_1_1_link_host.html#a6cd9c1bd41b58506f19e67a257f84043" title="Retrieve the raw pointer to the hosted object." alt="" coords="552,5,725,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="504,16,544,16,544,21,504,21"/>
+</map>

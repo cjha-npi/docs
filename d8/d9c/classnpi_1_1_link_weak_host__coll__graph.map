@@ -1,3 +1,7 @@
 <map id="npi::LinkWeakHost&lt; T &gt;" name="npi::LinkWeakHost&lt; T &gt;">
-<area shape="rect" id="Node000001" title="A non&#45;owning weak host that references a LinkHost&#45;managed object and its observers including local ob..." alt="" coords="5,5,157,395"/>
+<area shape="rect" id="Node000001" title="A non&#45;owning weak host that references a LinkHost&#45;managed object and its observers including local ob..." alt="" coords="56,150,253,176"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,20,131,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,51,149,149,145,152,78,54"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="155,5,328,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,69,219,99,201,128,174,153,170,149,197,125,214,96,227,67"/>
 </map>

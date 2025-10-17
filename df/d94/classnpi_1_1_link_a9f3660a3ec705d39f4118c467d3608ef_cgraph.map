@@ -1,0 +1,11 @@
+<map id="npi::Link::Link" name="npi::Link::Link">
+<area shape="rect" id="Node000001" title="Polymorphic non&#45;explicit converting copy constructor." alt="" coords="5,53,147,79"/>
+<area shape="rect" id="Node000002" href="$df/d94/classnpi_1_1_link.html#a25697cc431ea53124dec223f597abf0e" title="Friend declarations of Link class with type as U. This makes any Link class object a friend of any ot..." alt="" coords="408,29,549,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,59,400,44,401,49,147,65"/>
+<area shape="rect" id="Node000003" href="$df/d94/classnpi_1_1_link.html#a49ef453c2ae07faa7affc879993e4427" title="Internal helper to assign from another polymorphically related Link object." alt="" coords="195,79,360,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="147,72,187,77,187,83,146,78"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="446,31,439,21,442,11,456,5,479,3,499,4,512,9,519,16,517,25,512,24,514,18,509,13,498,10,479,8,457,10,446,15,444,21,450,28"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="330,76,418,54,419,59,331,81"/>
+<area shape="rect" id="Node000004" href="$df/d94/classnpi_1_1_link.html#ae203b61846ab71e431c98c3aaaf3a3a5" title="Retrieve a raw pointer to the managed object, if any." alt="" coords="408,79,549,104"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="359,89,400,89,400,94,359,94"/>
+</map>

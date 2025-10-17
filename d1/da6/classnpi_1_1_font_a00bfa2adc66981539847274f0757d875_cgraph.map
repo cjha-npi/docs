@@ -1,0 +1,7 @@
+<map id="npi::Font::fixFont_" name="npi::Font::fixFont_">
+<area shape="rect" id="Node000001" title="Get a configured QFont for the fixed&#45;width font family." alt="" coords="5,5,179,31"/>
+<area shape="rect" id="Node000002" href="$d1/da6/classnpi_1_1_font.html#a38a7d0642e6a93ea010d1e82a3fd7401" title="Get or create the cached Group for the fixed&#45;width font family." alt="" coords="227,5,432,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,16,219,16,219,21,178,21"/>
+<area shape="rect" id="Node000003" href="$d1/da6/classnpi_1_1_font.html#a3184648ffb7f095e15b9a5f0c72f1712" title="Compute a hash key from style and size." alt="" coords="480,5,629,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,16,472,16,472,21,432,21"/>
+</map>

@@ -61,7 +61,11 @@
   <div id="dp-root-pane" class="dp-nav-pane"></div>
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
-  <div id="dp-leaf-pane" class="dp-nav-pane"></div>
+  <div id="dp-leaf-pane" class="dp-nav-pane">
+    <div id="dp-leaf-bg">
+    <div id="dp-leaf-ul"></div>
+    </div>
+  </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -71,7 +75,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;1</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -150,7 +154,7 @@ $(function(){initNavTree('dc/d4b/_link_8hpp.html','../../',''); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Link.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/dc8/_link_8hpp__incl.svg" width="611" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/dc8/_link_8hpp__incl.svg" width="100%" height="438"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="../../dc/d4b/_link_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -159,14 +163,14 @@ Include dependency graph for Link.hpp:</div>
 Classes</h2></td></tr>
 <tr class="memitem:npi_3A_3ALink_3C_20T_20_3E" id="r_npi_3A_3ALink_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d94/classnpi_1_1_link.html">npi::Link&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.  <a href="../../df/d94/classnpi_1_1_link.html#details">More...</a><br /></td></tr>
+<tr class="memitem:npi_3A_3ALinkFromThis_3C_20T_20_3E" id="r_npi_3A_3ALinkFromThis_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">npi::LinkFromThis&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables objects that inherits from this class to produce a Link object referencing themselves if the object is wrapped in a LinkHost.  <a href="../../d1/d51/classnpi_1_1_link_from_this.html#details">More...</a><br /></td></tr>
 <tr class="memitem:npi_3A_3ALinkHost_3C_20T_20_3E" id="r_npi_3A_3ALinkHost_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d75/classnpi_1_1_link_host.html">npi::LinkHost&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruction.  <a href="../../dc/d75/classnpi_1_1_link_host.html#details">More...</a><br /></td></tr>
 <tr class="memitem:npi_3A_3ALinkHost_3C_20T_20_3E_3A_3AObs" id="r_npi_3A_3ALinkHost_3C_20T_20_3E_3A_3AObs"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html">npi::LinkHost&lt; T &gt;::Obs</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> objects.  <a href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inner observer type holding a type-erased pointer to the object. Used to broadcast the lifetime of the main object to Link objects.  <a href="../../dd/d30/structnpi_1_1_link_host_1_1_obs.html#details">More...</a><br /></td></tr>
 <tr class="memitem:npi_3A_3ALinkWeakHost_3C_20T_20_3E" id="r_npi_3A_3ALinkWeakHost_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/classnpi_1_1_link_weak_host.html">npi::LinkWeakHost&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A non-owning weak host that references a LinkHost-managed object and its observers including local observer.  <a href="../../d5/d88/classnpi_1_1_link_weak_host.html#details">More...</a><br /></td></tr>
-<tr class="memitem:npi_3A_3ALinkFromThis_3C_20T_20_3E" id="r_npi_3A_3ALinkFromThis_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">npi::LinkFromThis&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables objects that inherits from this class to produce a <a class="el" href="../../df/d94/classnpi_1_1_link.html" title="A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.">Link</a> object referencing themselves if the object is wrapped in a <a class="el" href="../../dc/d75/classnpi_1_1_link_host.html" title="A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...">LinkHost</a>.  <a href="../../d1/d51/classnpi_1_1_link_from_this.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -235,11 +239,11 @@ Usage</h1>
 <div class="line"><span class="keyword">auto</span> selfHost = <a class="code hl_class" href="../../dc/d75/classnpi_1_1_link_host.html">npi::LinkHost</a>(self);</div>
 <div class="line"><span class="keyword">auto</span> selfLink = self-&gt;linkFromThis_();</div>
 <div class="line"><span class="keywordflow">if</span> (selfLink) selfLink-&gt;hello();</div>
-<div class="ttc" id="aclassnpi_1_1_link_from_this_html"><div class="ttname"><a href="../../d1/d51/classnpi_1_1_link_from_this.html">npi::LinkFromThis</a></div><div class="ttdoc">Enables objects that inherits from this class to produce a Link object referencing themselves if the ...</div><div class="ttdef"><b>Definition</b> Link.hpp:1107</div></div>
-<div class="ttc" id="aclassnpi_1_1_link_host_html"><div class="ttname"><a href="../../dc/d75/classnpi_1_1_link_host.html">npi::LinkHost</a></div><div class="ttdoc">A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...</div><div class="ttdef"><b>Definition</b> Link.hpp:546</div></div>
-<div class="ttc" id="aclassnpi_1_1_link_html"><div class="ttname"><a href="../../df/d94/classnpi_1_1_link.html">npi::Link</a></div><div class="ttdoc">A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.</div><div class="ttdef"><b>Definition</b> Link.hpp:144</div></div>
-<div class="ttc" id="aclassnpi_1_1_link_weak_host_html"><div class="ttname"><a href="../../d5/d88/classnpi_1_1_link_weak_host.html">npi::LinkWeakHost</a></div><div class="ttdoc">A non-owning weak host that references a LinkHost-managed object and its observers including local ob...</div><div class="ttdef"><b>Definition</b> Link.hpp:962</div></div>
-<div class="ttc" id="aclassnpi_1_1_link_weak_host_html_a8872733f5f51cd1ca9074e93c0b34f97"><div class="ttname"><a href="../../d5/d88/classnpi_1_1_link_weak_host.html#a8872733f5f51cd1ca9074e93c0b34f97">npi::LinkWeakHost::lock_</a></div><div class="ttdeci">LinkHost&lt; T &gt; lock_() const noexcept</div><div class="ttdoc">This function attempts to create a new LinkHost object from this LinkWeakHost object if the underlyin...</div><div class="ttdef"><b>Definition</b> Link.hpp:1016</div></div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html"><div class="ttname"><a href="../../d1/d51/classnpi_1_1_link_from_this.html">npi::LinkFromThis</a></div><div class="ttdoc">Enables objects that inherits from this class to produce a Link object referencing themselves if the ...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01107">Link.hpp:1107</a></div></div>
+<div class="ttc" id="aclassnpi_1_1_link_host_html"><div class="ttname"><a href="../../dc/d75/classnpi_1_1_link_host.html">npi::LinkHost</a></div><div class="ttdoc">A thread-safe, owning host that manages an object of type T and notifies linked pointers upon destruc...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l00546">Link.hpp:546</a></div></div>
+<div class="ttc" id="aclassnpi_1_1_link_html"><div class="ttname"><a href="../../df/d94/classnpi_1_1_link.html">npi::Link</a></div><div class="ttdoc">A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l00144">Link.hpp:144</a></div></div>
+<div class="ttc" id="aclassnpi_1_1_link_weak_host_html"><div class="ttname"><a href="../../d5/d88/classnpi_1_1_link_weak_host.html">npi::LinkWeakHost</a></div><div class="ttdoc">A non-owning weak host that references a LinkHost-managed object and its observers including local ob...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l00962">Link.hpp:962</a></div></div>
+<div class="ttc" id="aclassnpi_1_1_link_weak_host_html_a8872733f5f51cd1ca9074e93c0b34f97"><div class="ttname"><a href="../../d5/d88/classnpi_1_1_link_weak_host.html#a8872733f5f51cd1ca9074e93c0b34f97">npi::LinkWeakHost::lock_</a></div><div class="ttdeci">LinkHost&lt; T &gt; lock_() const noexcept</div><div class="ttdoc">This function attempts to create a new LinkHost object from this LinkWeakHost object if the underlyin...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01016">Link.hpp:1016</a></div></div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="linkFileImplementation"></a>
 Implementation Details</h1>
 <p>Internally, <span class="tt">LinkHost&lt;T&gt;</span> holds a <span class="tt">std::shared_ptr&lt;T&gt;</span> that manages the object T. It has a <span class="tt">Obs</span> struct which has a <span class="tt">std::shared_ptr&lt;std::atomic&lt;void*&gt;&gt; ptr_</span> which is used to store a type-erased reference to the object <span class="tt">T</span>. The <span class="tt">Link&lt;T&gt;</span> class holds a <span class="tt">std::shared_ptr&lt;std::atomic&lt;void*&gt;&gt; ptr_</span> which is the same as the <span class="tt">ptr_</span> in the <span class="tt">Obs</span> struct. This way <span class="tt">Obs</span> struct provides a way for <span class="tt">Link</span> objects to access the underlying main object <span class="tt">T</span>. The use of type-erased reference allows for polymorphic behavior. In the destructor of the <span class="tt">Obs</span> struct, the <span class="tt">ptr_</span> is replaced with a null pointer, effectively nullifying all <span class="tt">Link</span> objects that are linked to it. This is done in a thread-safe manner using <span class="tt">std::memory_order_release</span>.</p>
@@ -251,6 +255,8 @@ Implementation Details</h1>
 Metadata</h1>
 <dl class="section author"><dt>Author</dt><dd>Chaitanya Jha </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-04-30 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -273,7 +279,7 @@ Metadata</h1>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Oct 6 2025 22:50:33'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 16 2025 13:09:57'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

@@ -1,0 +1,11 @@
+<map id="npi::win::msgBox" name="npi::win::msgBox">
+<area shape="rect" id="Node000001" title="Show a Windows message box, parented to an optional QWidget." alt="" coords="243,80,392,106"/>
+<area shape="rect" id="Node000002" href="$d8/d8e/namespacenpi_1_1win.html#a6dad9ee35b225c0a7e268e7fe1ec8136" title="Show an error message box and then terminate the process." alt="" coords="5,5,195,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="280,79,194,45,156,34,157,28,196,40,282,74"/>
+<area shape="rect" id="Node000003" href="$d8/d8e/namespacenpi_1_1win.html#aafb47eb36e449bc98316ec02b0da6b62" title="Show an error message box (OK + error icon)." alt="" coords="5,55,195,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,86,194,81,195,76,235,81"/>
+<area shape="rect" id="Node000004" href="$d8/d8e/namespacenpi_1_1win.html#a825c06cad5b1b337a13882a0ecfde0dc" title="Show an information message box (OK + information icon)." alt="" coords="9,104,191,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,105,191,110,190,104,234,99"/>
+<area shape="rect" id="Node000005" href="$d8/d8e/namespacenpi_1_1win.html#a2e98512b244f22a2bee2c1ed3fb8abeb" title="Show a warning message box (OK + warning icon)." alt="" coords="9,153,191,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="282,111,196,145,157,156,155,151,194,140,280,106"/>
+</map>

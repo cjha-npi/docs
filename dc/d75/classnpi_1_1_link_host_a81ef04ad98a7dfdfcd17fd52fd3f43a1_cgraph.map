@@ -1,0 +1,8 @@
+<map id="npi::LinkHost::operator==" name="npi::LinkHost::operator==">
+<area shape="rect" id="Node000001" title="Compare this LinkHost object to a Link object for equality." alt="" coords="5,43,227,68"/>
+<area shape="rect" id="Node000002" href="$dc/d75/classnpi_1_1_link_host.html#a6cd9c1bd41b58506f19e67a257f84043" title="Retrieve the raw pointer to the hosted object." alt="" coords="275,5,448,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,40,268,30,269,35,201,45"/>
+<area shape="rect" id="Node000003" href="$dc/d75/classnpi_1_1_link_host.html#a25697cc431ea53124dec223f597abf0e" title="Friend declarations of Link class." alt="" coords="275,79,448,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,66,267,75,266,80,203,71"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="322,81,313,71,317,61,334,54,361,52,386,54,402,58,410,66,407,75,402,73,405,67,399,63,385,59,361,57,335,59,321,64,318,70,326,77"/>
+</map>

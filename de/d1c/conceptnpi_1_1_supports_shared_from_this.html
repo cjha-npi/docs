@@ -61,7 +61,11 @@
   <div id="dp-root-pane" class="dp-nav-pane"></div>
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
-  <div id="dp-leaf-pane" class="dp-nav-pane"></div>
+  <div id="dp-leaf-pane" class="dp-nav-pane">
+    <div id="dp-leaf-bg">
+    <div id="dp-leaf-ul"></div>
+    </div>
+  </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -71,7 +75,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;1</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -146,7 +150,7 @@ $(function(){initNavTree('de/d1c/conceptnpi_1_1_supports_shared_from_this.html',
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">npi::SupportsSharedFromThis</a> = </div>
 <div class="line">    std::derived_from&lt;T, std::enable_shared_from_this&lt;T&gt;&gt;</div>
-<div class="ttc" id="aconceptnpi_1_1_supports_shared_from_this_html"><div class="ttname"><a href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">npi::SupportsSharedFromThis</a></div><div class="ttdoc">Concept to check if a type supports shared_from_this().</div><div class="ttdef"><b>Definition</b> Concepts.hpp:55</div></div>
+<div class="ttc" id="aconceptnpi_1_1_supports_shared_from_this_html"><div class="ttname"><a href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">npi::SupportsSharedFromThis</a></div><div class="ttdoc">Concept to check if a type supports shared_from_this().</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db9/_concepts_8hpp_source.html#l00055">Concepts.hpp:55</a></div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concept to check if a type supports shared_from_this(). </p>
 <p>Checks if a given type T inherits from <span class="tt">std::enable_shared_from_this&lt;T&gt;</span> so that <span class="tt">shared_from_this()</span> can be safely called on an object of type T.</p>
@@ -154,6 +158,8 @@ $(function(){initNavTree('de/d1c/conceptnpi_1_1_supports_shared_from_this.html',
 <div class="line"><a class="code hl_concept" href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">SupportsSharedFromThis&lt;A&gt;</a>           <span class="comment">// true</span></div>
 <div class="line"><a class="code hl_concept" href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">SupportsSharedFromThis&lt;std::string&gt;</a> <span class="comment">// false</span></div>
 </div><!-- fragment --> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/db9/_concepts_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d9/db9/_concepts_8hpp_source.html">Concepts.hpp</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
@@ -169,7 +175,7 @@ $(function(){initNavTree('de/d1c/conceptnpi_1_1_supports_shared_from_this.html',
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Mon Oct 6 2025 22:50:33'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 16 2025 13:09:58'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

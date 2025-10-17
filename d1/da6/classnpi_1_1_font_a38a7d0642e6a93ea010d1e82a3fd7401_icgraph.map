@@ -1,0 +1,9 @@
+<map id="npi::Font::GetFixGroup_" name="npi::Font::GetFixGroup_">
+<area shape="rect" id="Node000001" title="Get or create the cached Group for the fixed&#45;width font family." alt="" coords="291,55,496,80"/>
+<area shape="rect" id="Node000002" href="$d1/da6/classnpi_1_1_font.html#a00bfa2adc66981539847274f0757d875" title="Get a configured QFont for the fixed&#45;width font family." alt="" coords="37,5,211,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="314,56,194,34,195,28,315,51"/>
+<area shape="rect" id="Node000003" href="$d1/da6/classnpi_1_1_font.html#a44cb4a2fef6e12f2bd74a9ff1ca261ea" title="Get QFontMetrics for the fixed&#45;width font family." alt="" coords="9,55,239,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="283,70,238,70,238,65,283,65"/>
+<area shape="rect" id="Node000004" href="$d1/da6/classnpi_1_1_font.html#abcfc8692498034d2e10e3fa81952a775" title="Get QFontMetricsF for the fixed&#45;width font family." alt="" coords="5,104,243,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="315,84,195,107,194,101,314,79"/>
+</map>

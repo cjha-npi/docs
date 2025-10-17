@@ -1,0 +1,13 @@
+<map id="anonymous_namespace{AppUtil::cpp}::knownFolderPathWin" name="anonymous_namespace{AppUtil::cpp}::knownFolderPathWin">
+<area shape="rect" id="Node000001" title="Retrieve a Windows Known Folder absolute path as a QString." alt="" coords="917,31,1363,56"/>
+<area shape="rect" id="Node000002" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute path to C:\ProgramData\[orgFolder]." alt="" coords="616,5,853,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="927,33,853,28,853,23,927,28"/>
+<area shape="rect" id="Node000005" href="$dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9" title="Absolute path to C:\Users\Public\Documents\[orgFolder]." alt="" coords="600,55,869,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="916,59,869,62,869,57,915,54"/>
+<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute path to C:\ProgramData\[orgFolder]\[appFolder]." alt="" coords="299,5,536,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="608,21,536,21,536,16,608,16"/>
+<area shape="rect" id="Node000004" href="$dc/dba/namespacenpi_1_1app.html#a723a01872a6ddb63e5bec52939f8c021" title="Absolute path of application&#39;s main settings.ini at C:\ProgramData\[orgFolder]\[appFolder]\." alt="" coords="5,5,235,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="291,21,234,21,234,16,291,16"/>
+<area shape="rect" id="Node000006" href="$dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Absolute path to C:\Users\Public\Documents\[orgFolder]\[appFolder]." alt="" coords="283,55,552,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="592,70,552,70,552,65,592,65"/>
+</map>

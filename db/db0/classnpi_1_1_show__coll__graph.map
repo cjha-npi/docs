@@ -1,0 +1,9 @@
+<map id="npi::Show" name="npi::Show">
+<area shape="rect" id="Node000001" title="Helper to display a top&#45;level widget with optional animation and robust on&#45;screen positioning." alt="" coords="179,140,272,165"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,179,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,36,130,74,165,114,202,138,199,142,161,118,125,77,100,39"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="203,5,248,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,39,228,140,223,140,223,39"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="272,5,389,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="332,39,324,78,316,99,303,117,286,132,267,142,264,137,283,128,299,114,311,96,319,76,327,38"/>
+</map>
