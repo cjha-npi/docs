@@ -1,5 +1,5 @@
 <map id="npi::Link&lt; T &gt;" name="npi::Link&lt; T &gt;">
-<area shape="rect" id="Node000001" title="Test 1 A thread&#45;safe, non&#45;owning, auto&#45;nullifying safe pointer to an object of type T." alt="" coords="36,116,169,142"/>
+<area shape="rect" id="Node000001" title="A thread&#45;safe, non&#45;owning, auto&#45;nullifying safe pointer to an object of type T." alt="" coords="36,116,169,142"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,13,51,38"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,44,72,90,93,114,89,118,68,94,36,47"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="75,5,280,46"/>
