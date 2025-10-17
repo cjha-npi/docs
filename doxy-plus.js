@@ -34,7 +34,17 @@
 // be navigated.
 // 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// #endregion 
+// #endregion
+
+// #region ⚠️ WARNING: PAGE-NAV IN MOBILE VIEW
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//
+// When using a touch screen/mobile view width desktop mode, when we resize the side
+// nav the page width shrinks. This is not being done by doxy-plus or Doxygen Awesome
+// theme, but rather this is done directly by Doxygen. I have tested it multiple times.
+// 
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// #endregion
 
 
 // @ts-nocheck - needed, otherwise Visual Studio code 
