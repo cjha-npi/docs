@@ -1027,12 +1027,14 @@ h2.groupheader {
 }
 
 /* change width of resize handle in mobile view */
+/*
 @media (pointer: coarse) {
   #page-nav-resize-handle {
     width: 37px !important;
     margin-left: -20px !important;
   }
 }
+*/
 
 /* page-nav customizations */
 #page-nav {
