@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fixedwidthfontwidget_0',['FixedWidthFontWidget',['../d7/d8c/namespacenpi_1_1props.html#af6716438646628d156111bbb1f8a228d',1,'npi::props']]],
+  ['fixedwidthfontwidget_5f_0',['FixedWidthFontWidget_',['../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd',1,'npi::GuiProps']]],
   ['fixfont_5f_1',['FixFont_',['../d1/da6/classnpi_1_1_font.html#a3cf67970ac383c3d41e7cdc03e8876aa',1,'npi::Font']]],
   ['fixfontmutex_5f_2',['FixFontMutex_',['../d1/da6/classnpi_1_1_font.html#a13b8e9cf7f80c8e4c123da7a89d2517e',1,'npi::Font']]],
   ['fixfontsize_5f_3',['FixFontSize_',['../d1/da6/classnpi_1_1_font.html#a4a44b5a9b306fd1eff1c7954bfa13ac5',1,'npi::Font']]],

@@ -1,0 +1,26 @@
+var structnpi_1_1_gui_props =
+[
+    [ "GuiProps", "d2/dd5/structnpi_1_1_gui_props.html#afa2e70a07d7e0a78501f4e6b66e5c9a5", null ],
+    [ "GuiProps", "d2/dd5/structnpi_1_1_gui_props.html#a50ee63cb434537a13be242f4296e3f54", null ],
+    [ "GuiProps", "d2/dd5/structnpi_1_1_gui_props.html#aefb749c79a1d1044b163b5f3421b0ec7", null ],
+    [ "~GuiProps", "d2/dd5/structnpi_1_1_gui_props.html#a2f6ba273f5c8051e16b0d732e52d5217", null ],
+    [ "operator=", "d2/dd5/structnpi_1_1_gui_props.html#a3e162bbdee834ec98c2b86c482d23570", null ],
+    [ "operator=", "d2/dd5/structnpi_1_1_gui_props.html#a59765ee23256b32b5c677de82d70479d", null ],
+    [ "BackgroundColor_", "d2/dd5/structnpi_1_1_gui_props.html#aa1bd4443ab128b23d24699a94886a350", null ],
+    [ "CancelButton_", "d2/dd5/structnpi_1_1_gui_props.html#a523644c707fd799e502d8bc86f109e5c", null ],
+    [ "ColorDisplayWidget_", "d2/dd5/structnpi_1_1_gui_props.html#ae74d1309276ac331bca44fa5f5e3fa0c", null ],
+    [ "FixedWidthFontWidget_", "d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd", null ],
+    [ "GroupButton_", "d2/dd5/structnpi_1_1_gui_props.html#af83cf9817a4ea77a9b7e5bf18acae8bb", null ],
+    [ "GroupLeftButton_", "d2/dd5/structnpi_1_1_gui_props.html#a16dcc6ba375892b867eaa52672e534db", null ],
+    [ "GroupRightButton_", "d2/dd5/structnpi_1_1_gui_props.html#a89efd24d73da50234ca3d4eb85f10683", null ],
+    [ "HeightNoResize_", "d2/dd5/structnpi_1_1_gui_props.html#aa6f8f442481030db40aac315a168e4d5", null ],
+    [ "IconName_", "d2/dd5/structnpi_1_1_gui_props.html#a6d239e51aac9ac9d78d518c2f469280d", null ],
+    [ "IconNoResize_", "d2/dd5/structnpi_1_1_gui_props.html#af7b417a002cc33a6afd46ff6e2c2b294", null ],
+    [ "IconOnName_", "d2/dd5/structnpi_1_1_gui_props.html#acfce0644564e9b081f380c0027c6c78f", null ],
+    [ "ItemWidget_", "d2/dd5/structnpi_1_1_gui_props.html#a57f1d82c8f7dd55ad27161792e06fd20", null ],
+    [ "OkButton_", "d2/dd5/structnpi_1_1_gui_props.html#acf0e276931a45f120f052f704ceecde4", null ],
+    [ "PasswordLineEdit_", "d2/dd5/structnpi_1_1_gui_props.html#a590eecb87c633e50affada8f65960b88", null ],
+    [ "PushButtonRightIcon_", "d2/dd5/structnpi_1_1_gui_props.html#ae7b02162cc2baa7e6e2ad0b6d132ce85", null ],
+    [ "PushButtonWidthNoChange_", "d2/dd5/structnpi_1_1_gui_props.html#a176697b559023f26fccea3f7ebf04567", null ],
+    [ "TransparentForMouseWheel_", "d2/dd5/structnpi_1_1_gui_props.html#a57e21a040aef9e111756692e2dc32ea5", null ]
+];

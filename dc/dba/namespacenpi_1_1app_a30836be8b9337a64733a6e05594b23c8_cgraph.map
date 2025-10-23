@@ -1,5 +1,7 @@
 <map id="npi::app::orgProgramDataDir" name="npi::app::orgProgramDataDir">
-<area shape="rect" id="Node000001" title="Absolute path to C:\ProgramData\[orgFolder]." alt="" coords="5,20,243,46"/>
-<area shape="rect" id="Node000002" href="$da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03.html#a5bca34d4144e402dfa63ba6588cfa0c3" title="Retrieve a Windows Known Folder absolute path as a QString." alt="" coords="291,5,528,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,30,283,30,283,36,242,36"/>
+<area shape="rect" id="Node000001" title="Absolute organization&#45;level ProgramData path." alt="" coords="5,5,243,31"/>
+<area shape="rect" id="Node000002" href="$d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f" title="Show a fatal error box and terminate the process." alt="" coords="291,5,480,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="243,16,283,16,283,21,243,21"/>
+<area shape="rect" id="Node000003" href="$d8/d8e/namespacenpi_1_1win.html#aa203e14a9085aa2fa437ea050b780b15" title="Show a Windows message box with custom flags." alt="" coords="528,5,677,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="480,16,520,16,520,21,480,21"/>
 </map>

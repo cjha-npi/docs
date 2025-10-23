@@ -142,43 +142,38 @@ $(function(){initNavTree('dc/dba/namespacenpi_1_1app.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Application metadata and constants.  
+<p>Common namespace for application data and utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a40a2a28831f2f410c995f0657baf6544" id="r_a40a2a28831f2f410c995f0657baf6544"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir</a> () noexcept</td></tr>
-<tr class="memdesc:a40a2a28831f2f410c995f0657baf6544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute path to <span class="tt">C:\ProgramData\[orgFolder]\[appFolder]</span>.  <br /></td></tr>
+<tr class="memdesc:a40a2a28831f2f410c995f0657baf6544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute application-level ProgramData path.  <br /></td></tr>
 <tr class="memitem:aff4c7482e4417f59ede04e359548a542" id="r_aff4c7482e4417f59ede04e359548a542"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir</a> () noexcept</td></tr>
-<tr class="memdesc:aff4c7482e4417f59ede04e359548a542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute path to <span class="tt">C:\Users\Public\Documents\[orgFolder]\[appFolder]</span>.  <br /></td></tr>
+<tr class="memdesc:aff4c7482e4417f59ede04e359548a542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute application-level Public/Documents path.  <br /></td></tr>
 <tr class="memitem:a30836be8b9337a64733a6e05594b23c8" id="r_a30836be8b9337a64733a6e05594b23c8"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir</a> () noexcept</td></tr>
-<tr class="memdesc:a30836be8b9337a64733a6e05594b23c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute path to <span class="tt">C:\ProgramData\[orgFolder]</span>.  <br /></td></tr>
+<tr class="memdesc:a30836be8b9337a64733a6e05594b23c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute organization-level ProgramData path.  <br /></td></tr>
 <tr class="memitem:ac0dca24602a75822c6f7fcf63f8781d9" id="r_ac0dca24602a75822c6f7fcf63f8781d9"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir</a> () noexcept</td></tr>
-<tr class="memdesc:ac0dca24602a75822c6f7fcf63f8781d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute path to <span class="tt">C:\Users\Public\Documents\[orgFolder]</span>.  <br /></td></tr>
-<tr class="memitem:a723a01872a6ddb63e5bec52939f8c021" id="r_a723a01872a6ddb63e5bec52939f8c021"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a723a01872a6ddb63e5bec52939f8c021">settingsMainFile</a> () noexcept</td></tr>
-<tr class="memdesc:a723a01872a6ddb63e5bec52939f8c021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute path of application's main <span class="tt">settings.ini</span> at <span class="tt">C:\ProgramData\[orgFolder]\[appFolder]\</span>.  <br /></td></tr>
+<tr class="memdesc:ac0dca24602a75822c6f7fcf63f8781d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute organization-level Public/Documents path.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa7971e0e3a9b505a07176e5ac7aacbd6" id="r_aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">appDirName</a> {&quot;Log_Test&quot;}</td></tr>
-<tr class="memdesc:aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Folder name used on disk for app-level data (ASCII/safe).  <br /></td></tr>
-<tr class="memitem:ae72448eb4df90eb2813db4202ac81bef" id="r_ae72448eb4df90eb2813db4202ac81bef"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a> {&quot;Log Test&quot;}</td></tr>
+<tr class="memitem:aa7971e0e3a9b505a07176e5ac7aacbd6" id="r_aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">appDirName</a> {&quot;D141_Base&quot;}</td></tr>
+<tr class="memdesc:aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application directory name.  <br /></td></tr>
+<tr class="memitem:ae72448eb4df90eb2813db4202ac81bef" id="r_ae72448eb4df90eb2813db4202ac81bef"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a> {&quot;D141_Base&quot;}</td></tr>
 <tr class="memdesc:ae72448eb4df90eb2813db4202ac81bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application display name.  <br /></td></tr>
 <tr class="memitem:aebf26d13197e68f0ad3e05d82bb5f31d" id="r_aebf26d13197e68f0ad3e05d82bb5f31d"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebf26d13197e68f0ad3e05d82bb5f31d">appVersion</a> {&quot;0.1.0&quot;}</td></tr>
-<tr class="memdesc:aebf26d13197e68f0ad3e05d82bb5f31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application semantic version string.  <br /></td></tr>
-<tr class="memitem:a786b074c596617d18abb1957f26d3156" id="r_a786b074c596617d18abb1957f26d3156"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a> {&quot;npielectronic&quot;}</td></tr>
-<tr class="memdesc:a786b074c596617d18abb1957f26d3156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Folder name used on disk for organization-level data (ASCII/safe).  <br /></td></tr>
+<tr class="memdesc:aebf26d13197e68f0ad3e05d82bb5f31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application version string.  <br /></td></tr>
+<tr class="memitem:a786b074c596617d18abb1957f26d3156" id="r_a786b074c596617d18abb1957f26d3156"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a> {&quot;npi_electronic&quot;}</td></tr>
+<tr class="memdesc:a786b074c596617d18abb1957f26d3156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization directory name.  <br /></td></tr>
 <tr class="memitem:a306977cd103a3449007db1e926e213e8" id="r_a306977cd103a3449007db1e926e213e8"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a306977cd103a3449007db1e926e213e8">orgDomain</a> {&quot;npielectronic.com&quot;}</td></tr>
-<tr class="memdesc:a306977cd103a3449007db1e926e213e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization internet domain (host-only, no scheme).  <br /></td></tr>
+<tr class="memdesc:a306977cd103a3449007db1e926e213e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization domain name.  <br /></td></tr>
 <tr class="memitem:adc67984091da507784ab70eca8975491" id="r_adc67984091da507784ab70eca8975491"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc67984091da507784ab70eca8975491">orgName</a> {&quot;npi electronics GmbH&quot;}</td></tr>
-<tr class="memdesc:adc67984091da507784ab70eca8975491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization display name (e.g., used in About dialogs).  <br /></td></tr>
-<tr class="memitem:aacda91d3fcfee509ffdd2fabd44f1339" id="r_aacda91d3fcfee509ffdd2fabd44f1339"><td class="memItemLeft" align="right" valign="top">constexpr QLatin1StringView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacda91d3fcfee509ffdd2fabd44f1339">settingsFileName</a> {&quot;settings.ini&quot;}</td></tr>
-<tr class="memdesc:aacda91d3fcfee509ffdd2fabd44f1339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main settings file name (ASCII/safe).  <br /></td></tr>
+<tr class="memdesc:adc67984091da507784ab70eca8975491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization display name.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Application metadata and constants. </p>
-<p>This namespace contains compile-time constants and identifiers related to the application, such as organization name, application name, version, and directory names.</p>
-<p>These constants are defined as <span class="tt">QLatin1StringView</span> for efficiency and ease of use in various parts of the application, including settings management, logging, and user interface elements. </p>
+<div class="textblock"><p>Common namespace for application data and utilities. </p>
+<p>This namespace contains module-agnostic application-wide identifiers, compile-time defaults, and lightweight utilities. </p><dl class="section note"><dt>Note</dt><dd>Only for cross-cutting code; place domain-specific code in a dedicated child namespace e.g. <span class="tt">npi::log</span> or <span class="tt">npi::net</span>. </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a40a2a28831f2f410c995f0657baf6544" name="a40a2a28831f2f410c995f0657baf6544"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40a2a28831f2f410c995f0657baf6544">&#9670;&#160;</a></span>appProgramDataDir()</h2>
@@ -203,43 +198,62 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Absolute path to <span class="tt">C:\ProgramData\[orgFolder]\[appFolder]</span>. </p>
-<p>This function does not create <span class="tt">C:\ProgramData</span> itself; if it is missing. It only creates the <span class="tt">[orgFolder]</span> and/or <span class="tt">[appFolder]</span> subfolders if not already present. </p><dl class="section return"><dt>Returns</dt><dd>Absolute path on success; empty <span class="tt">QString</span> on failure. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Caller MUST check for empty <span class="tt">QString</span>, if true, treat it as error. </dd></dl>
+<p>Absolute application-level ProgramData path. </p>
+<p>Returns the absolute, normalized path to: [ProgramData]/[OrganizationName]/[ApplicationName] Implementation:</p><ul>
+<li>Obtains the organization-level base from orgProgramDataDir().</li>
+<li>Ensures the application subdirectory exists (creates it; fatal if it fails).</li>
+<li>Canonicalizes when possible; otherwise cleans the absolute path.</li>
+<li>Converts separators to forward slashes; UNC is returned as //server/share/....</li>
+</ul>
+<p>The result is cached in a function-local static and reused on subsequent calls.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to a process-lifetime QString with the absolute path using forward slashes. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The returned reference remains valid for the lifetime of the process. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd><ul>
-<li>Depends on <span class="tt">orgProgramData()</span>. If that fails, this also fails.</li>
-<li>On non-Windows builds this returns empty <span class="tt">QString</span>. </li>
+<li>Windows-only: Paths use forward slashes for Qt friendliness; call QDir::toNativeSeparators(...) before passing to Win32 APIs.</li>
+<li>Multi-Thread: Safe, first-call initialization is thread-safe (C++11). Subsequent calls are lock-free. </li>
 </ul>
 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure to create the directory, a native dialog is shown and the process terminates (no return). </dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="keyword">const</span> QString appPD = <a class="code hl_function" href="#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a>();           <span class="comment">// e.g. C:/ProgramData/npi_electronic/test_app</span></div>
+<div class="line"><span class="keyword">const</span> QString cfg   = QDir(appPD).filePath(<span class="stringliteral">&quot;settings.ini&quot;</span>);</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a40a2a28831f2f410c995f0657baf6544"><div class="ttname"><a href="#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a></div><div class="ttdeci">const QString &amp; appProgramDataDir() noexcept</div><div class="ttdoc">Absolute application-level ProgramData path.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d8e/_app_meta_8cpp_source.html#l00141">AppMeta.cpp:141</a></div></div>
+</div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00125">125</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                  {</div>
-<div class="line"><span class="lineno">  126</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keyword">const</span> QString&amp; orgPath = <a class="code hl_function" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir</a>();</div>
-<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">if</span>(orgPath.isEmpty())</div>
-<div class="line"><span class="lineno">  129</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  130</span>    QDir dir(orgPath);</div>
-<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span>(!dir.mkpath(<a class="code hl_variable" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a>.toString()))</div>
-<div class="line"><span class="lineno">  132</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">return</span> dir.filePath(<a class="code hl_variable" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a>.toString());</div>
-<div class="line"><span class="lineno">  134</span>  }();</div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  136</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a30836be8b9337a64733a6e05594b23c8"><div class="ttname"><a href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a></div><div class="ttdeci">const QString &amp; orgProgramDataDir() noexcept</div><div class="ttdoc">Absolute path to C:\ProgramData\[orgFolder].</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d8b/_app_util_8cpp_source.html#l00072">AppUtil.cpp:72</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1app_html_aa7971e0e3a9b505a07176e5ac7aacbd6"><div class="ttname"><a href="#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a></div><div class="ttdeci">constexpr QLatin1StringView appDirName</div><div class="ttdoc">Folder name used on disk for app-level data (ASCII/safe).</div><div class="ttdef"><b>Definition</b> <a href="../../dd/df0/_app_data_8hpp_source.html#l00044">AppData.hpp:44</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d8e/_app_meta_8cpp_source.html#l00141">141</a> of file <a class="el" href="../../d9/d8e/_app_meta_8cpp_source.html">AppMeta.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>{</div>
+<div class="line"><span class="lineno">  143</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  144</span>    <span class="comment">// Get the organization-level ProgramData directory</span></div>
+<div class="line"><span class="lineno">  145</span>    QDir base{<a class="code hl_function" href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a>()};</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>    <span class="comment">// Ensure [ProgramData]/[OrganizationName]/[ApplicationName] exists</span></div>
+<div class="line"><span class="lineno">  148</span>    <span class="keyword">const</span> QString <a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a> = <a class="code hl_variable" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a>;</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keyword">const</span> QString target = base.filePath(<a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>);</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">if</span>(!base.mkpath(<a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>)) {</div>
+<div class="line"><span class="lineno">  151</span>      <a class="code hl_function" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a>(</div>
+<div class="line"><span class="lineno">  152</span>        <span class="stringliteral">&quot;ABORT: Create Directory Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  153</span>        QString(<span class="stringliteral">&quot;Unable to create required directory &#39;%1&#39;.&quot;</span>)</div>
+<div class="line"><span class="lineno">  154</span>       .arg(QDir::toNativeSeparators(target)));</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>    <span class="comment">// Normalize and return</span></div>
+<div class="line"><span class="lineno">  158</span>    QString out = QFileInfo(target).canonicalFilePath();                           <span class="comment">// absolute + symlinks/junctions resolved</span></div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">if</span>(out.isEmpty()) out = QDir::cleanPath(QFileInfo(target).absoluteFilePath()); <span class="comment">// defensive fallback</span></div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> QDir::fromNativeSeparators(out);                                        <span class="comment">// forward slashes; UNC as //server/share</span></div>
+<div class="line"><span class="lineno">  161</span>  }();</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>  <span class="comment">// Return cached path</span></div>
+<div class="line"><span class="lineno">  164</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  165</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a30836be8b9337a64733a6e05594b23c8"><div class="ttname"><a href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a></div><div class="ttdeci">const QString &amp; orgProgramDataDir() noexcept</div><div class="ttdoc">Absolute organization-level ProgramData path.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d8e/_app_meta_8cpp_source.html#l00029">AppMeta.cpp:29</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_aa7971e0e3a9b505a07176e5ac7aacbd6"><div class="ttname"><a href="#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a></div><div class="ttdeci">constexpr QLatin1StringView appDirName</div><div class="ttdoc">Application directory name.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d8d/_app_meta_8h_source.html#l00040">AppMeta.h:40</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ae72448eb4df90eb2813db4202ac81bef"><div class="ttname"><a href="#ae72448eb4df90eb2813db4202ac81bef">npi::app::appName</a></div><div class="ttdeci">constexpr QLatin1StringView appName</div><div class="ttdoc">Application display name.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d8d/_app_meta_8h_source.html#l00036">AppMeta.h:36</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1win_html_a7eb3918ab23ee7b9bd2d01911ee9913f"><div class="ttname"><a href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a></div><div class="ttdeci">void abortMsgBox(const QString &amp;title, const QString &amp;msg, const HWND h=nullptr) noexcept</div><div class="ttdoc">Show a fatal error box and terminate the process.</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d92/_win_msg_box_8hpp_source.html#l00142">WinMsgBox.hpp:142</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">appDirName</a>, and <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#a723a01872a6ddb63e5bec52939f8c021">settingsMainFile()</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox()</a>, <a class="el" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">appDirName</a>, <a class="el" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>, and <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a40a2a28831f2f410c995f0657baf6544_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a40a2a28831f2f410c995f0657baf6544_icgraph.svg" width="526" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -267,31 +281,55 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Absolute path to <span class="tt">C:\Users\Public\Documents\[orgFolder]\[appFolder]</span>. </p>
-<p>This function does not create <span class="tt">C:\Users\Public\Documents</span> itself; if it is missing. It only creates the <span class="tt">[orgFolder]</span> and/or <span class="tt">[appFolder]</span> subfolders if not already present. </p><dl class="section return"><dt>Returns</dt><dd>Absolute path on success; empty <span class="tt">QString</span> on failure. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Caller MUST check for empty <span class="tt">QString</span>, if true, treat it as error. </dd></dl>
+<p>Absolute application-level Public/Documents path. </p>
+<p>Returns the absolute, normalized path to: [Public]/Documents/[OrganizationName]/[ApplicationName] Implementation:</p><ul>
+<li>Obtains the organization-level base from orgPublicDocumentsDir().</li>
+<li>Ensures the application subdirectory exists (creates it; fatal if it fails).</li>
+<li>Canonicalizes when possible; otherwise cleans the absolute path.</li>
+<li>Converts separators to forward slashes; UNC is returned as //server/share/....</li>
+</ul>
+<p>The result is cached in a function-local static and reused on subsequent calls.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to a process-lifetime QString with the absolute path using forward slashes. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The returned reference remains valid for the lifetime of the process. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd><ul>
-<li>Depends on <span class="tt">orgPublicDocuments()</span>. If that fails, this also fails.</li>
-<li>On non-Windows builds this returns empty <span class="tt">QString</span>. </li>
+<li>Windows-only: Paths use forward slashes for Qt friendliness; call QDir::toNativeSeparators(...) before passing to Win32 APIs.</li>
+<li>Multi-Thread: Safe, first-call initialization is thread-safe (C++11). Subsequent calls are lock-free. </li>
 </ul>
 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure to create the directory, a native dialog is shown and the process terminates (no return). </dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="keyword">const</span> QString appPub = <a class="code hl_function" href="#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a>();      <span class="comment">// e.g. C:/Users/Public/Documents/npi_electronic/Log_Test</span></div>
+<div class="line"><span class="keyword">const</span> QString demo   = QDir(appPub).filePath(<span class="stringliteral">&quot;examples/demo.txt&quot;</span>);</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_aff4c7482e4417f59ede04e359548a542"><div class="ttname"><a href="#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; appPublicDocumentsDir() noexcept</div><div class="ttdoc">Absolute application-level Public/Documents path.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d8e/_app_meta_8cpp_source.html#l00167">AppMeta.cpp:167</a></div></div>
+</div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>                                                      {</div>
-<div class="line"><span class="lineno">  139</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  140</span>    <span class="keyword">const</span> QString&amp; orgPath = <a class="code hl_function" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir</a>();</div>
-<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">if</span>(orgPath.isEmpty())</div>
-<div class="line"><span class="lineno">  142</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  143</span>    QDir dir(orgPath);</div>
-<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">if</span>(!dir.mkpath(<a class="code hl_variable" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a>.toString()))</div>
-<div class="line"><span class="lineno">  145</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> dir.filePath(<a class="code hl_variable" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a>.toString());</div>
-<div class="line"><span class="lineno">  147</span>  }();</div>
-<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  149</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_ac0dca24602a75822c6f7fcf63f8781d9"><div class="ttname"><a href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; orgPublicDocumentsDir() noexcept</div><div class="ttdoc">Absolute path to C:\Users\Public\Documents\[orgFolder].</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d8b/_app_util_8cpp_source.html#l00097">AppUtil.cpp:97</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d8e/_app_meta_8cpp_source.html#l00167">167</a> of file <a class="el" href="../../d9/d8e/_app_meta_8cpp_source.html">AppMeta.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>{</div>
+<div class="line"><span class="lineno">  169</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  170</span>    <span class="comment">// Get the organization-level Public/Documents directory</span></div>
+<div class="line"><span class="lineno">  171</span>    QDir base{<a class="code hl_function" href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a>()};</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>    <span class="comment">// Ensure Public/Documents/[OrganizationName]/[ApplicationName] exists</span></div>
+<div class="line"><span class="lineno">  174</span>    <span class="keyword">const</span> QString <a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a> = <a class="code hl_variable" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">npi::app::appDirName</a>;</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keyword">const</span> QString target = base.filePath(<a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>);</div>
+<div class="line"><span class="lineno">  176</span>    <span class="keywordflow">if</span>(!base.mkpath(<a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>)) {</div>
+<div class="line"><span class="lineno">  177</span>      <a class="code hl_function" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a>(</div>
+<div class="line"><span class="lineno">  178</span>        <span class="stringliteral">&quot;ABORT: Create Directory Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  179</span>        QString(<span class="stringliteral">&quot;Unable to create required directory &#39;%1&#39;.&quot;</span>)</div>
+<div class="line"><span class="lineno">  180</span>       .arg(QDir::toNativeSeparators(target)));</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>    <span class="comment">// Normalize and return</span></div>
+<div class="line"><span class="lineno">  184</span>    QString out = QFileInfo(target).canonicalFilePath();                           <span class="comment">// absolute + symlinks/junctions resolved</span></div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">if</span>(out.isEmpty()) out = QDir::cleanPath(QFileInfo(target).absoluteFilePath()); <span class="comment">// defensive fallback</span></div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">return</span> QDir::fromNativeSeparators(out);                                        <span class="comment">// forward slashes; UNC as //server/share</span></div>
+<div class="line"><span class="lineno">  187</span>  }();</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>  <span class="comment">// Return cached path</span></div>
+<div class="line"><span class="lineno">  190</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  191</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ac0dca24602a75822c6f7fcf63f8781d9"><div class="ttname"><a href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; orgPublicDocumentsDir() noexcept</div><div class="ttdoc">Absolute organization-level Public/Documents path.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d8e/_app_meta_8cpp_source.html#l00085">AppMeta.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">appDirName</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox()</a>, <a class="el" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">appDirName</a>, <a class="el" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -323,50 +361,101 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Absolute path to <span class="tt">C:\ProgramData\[orgFolder]</span>. </p>
-<p>This function does not create <span class="tt">C:\ProgramData</span> itself; if it is missing. It only creates the <span class="tt">[orgFolder]</span> subfolder if not already present. </p><dl class="section return"><dt>Returns</dt><dd>Absolute path on success; empty <span class="tt">QString</span> on failure. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Caller MUST check for empty <span class="tt">QString</span>, if true, treat it as error. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>On non-Windows builds this returns empty <span class="tt">QString</span>. </dd></dl>
+<p>Absolute organization-level ProgramData path. </p>
+<p>Returns the absolute, normalized path to: [ProgramData]/[OrganizationName] Resolution order: 1) Windows API (SHGetKnownFolderPath with FOLDERID_ProgramData) 2) Environment variable fallback: PROGRAMDATA Then:</p><ul>
+<li>Verifies the base folder exists (fatal if missing).</li>
+<li>Ensures the organization subdirectory exists (creates it; fatal if it fails).</li>
+<li>Canonicalizes when possible (resolves junctions/symlinks); otherwise cleans the absolute path.</li>
+<li>Converts separators to forward slashes; UNC is returned as //server/share/....</li>
+</ul>
+<p>The result is cached in a function-local static and reused on subsequent calls.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to a process-lifetime QString with the absolute path using forward slashes. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The returned reference remains valid for the lifetime of the process. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>Windows-only: Paths use forward slashes for Qt friendliness; call QDir::toNativeSeparators(...) before passing to Win32 APIs.</li>
+<li>Multi-Thread: Safe, first-call initialization is thread-safe (C++11). Subsequent calls are lock-free. </li>
+</ul>
+</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure (cannot locate or create the required directory), a native dialog is shown and the process is terminated (no return). </dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="comment">// Build a file path within the org folder (Qt accepts forward slashes)</span></div>
+<div class="line"><span class="keyword">const</span> QString orgDir = <a class="code hl_function" href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a>();          <span class="comment">// e.g. C:/ProgramData/npi_electronic</span></div>
+<div class="line"><span class="keyword">const</span> QString file   = QDir(orgDir).filePath(<span class="stringliteral">&quot;global.log&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// When calling Win32, convert once:</span></div>
+<div class="line"><span class="keyword">const</span> QString native = QDir::toNativeSeparators(orgDir);        <span class="comment">// e.g. C:\ProgramData\npi_electronic</span></div>
+<div class="line"><span class="comment">// CreateDirectoryW(reinterpret_cast&lt;LPCWSTR&gt;(native.utf16()), nullptr);</span></div>
+</div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                                  {</div>
-<div class="line"><span class="lineno">   73</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">   74</span><span class="preprocessor">  #ifdef _WIN32</span></div>
-<div class="line"><span class="lineno">   75</span>    <span class="comment">// 1) Authoritative: ProgramData via Known Folders</span></div>
-<div class="line"><span class="lineno">   76</span>    QString base = knownFolderPathWin(FOLDERID_ProgramData); <span class="comment">// e.g. C:\ProgramData</span></div>
-<div class="line"><span class="lineno">   77</span>    <span class="comment">// 2) Fallback: %PROGRAMDATA%</span></div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span>(base.isEmpty())</div>
-<div class="line"><span class="lineno">   79</span>      base = QString::fromLocal8Bit(qgetenv(<span class="stringliteral">&quot;PROGRAMDATA&quot;</span>));</div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span>(base.isEmpty())</div>
-<div class="line"><span class="lineno">   81</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>    QDir root(base);</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span>(!root.exists())</div>
-<div class="line"><span class="lineno">   85</span>      <span class="keywordflow">return</span> {}; <span class="comment">// don&#39;t invent ProgramData</span></div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">if</span>(!root.mkpath(<a class="code hl_variable" href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a>))</div>
-<div class="line"><span class="lineno">   88</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">return</span> root.filePath(<a class="code hl_variable" href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a>); <span class="comment">// absolute</span></div>
-<div class="line"><span class="lineno">   90</span><span class="preprocessor">  #else</span></div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">   92</span><span class="preprocessor">  #endif</span></div>
-<div class="line"><span class="lineno">   93</span>  }();</div>
-<div class="line"><span class="lineno">   94</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">   95</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a786b074c596617d18abb1957f26d3156"><div class="ttname"><a href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a></div><div class="ttdeci">constexpr QLatin1StringView orgDirName</div><div class="ttdoc">Folder name used on disk for organization-level data (ASCII/safe).</div><div class="ttdef"><b>Definition</b> <a href="../../dd/df0/_app_data_8hpp_source.html#l00043">AppData.hpp:43</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d8e/_app_meta_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../d9/d8e/_app_meta_8cpp_source.html">AppMeta.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
+<div class="line"><span class="lineno">   31</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">   32</span>    <span class="comment">// Determine ProgramData base path</span></div>
+<div class="line"><span class="lineno">   33</span>    QString base;</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    <span class="comment">// Windows API</span></div>
+<div class="line"><span class="lineno">   36</span>    PWSTR p = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keyword">const</span> HRESULT hr = SHGetKnownFolderPath(FOLDERID_ProgramData, KF_FLAG_DEFAULT, <span class="keyword">nullptr</span>, &amp;p);</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span>(SUCCEEDED(hr) &amp;&amp; p) {</div>
+<div class="line"><span class="lineno">   39</span>      base = QString::fromWCharArray(p);</div>
+<div class="line"><span class="lineno">   40</span>      CoTaskMemFree(p);</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    <span class="comment">// Fallback to env</span></div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
+<div class="line"><span class="lineno">   45</span>      <span class="keywordflow">if</span>(<span class="keyword">const</span> QByteArray env = qgetenv(<span class="stringliteral">&quot;PROGRAMDATA&quot;</span>); !env.isEmpty())</div>
+<div class="line"><span class="lineno">   46</span>        base = QString::fromLocal8Bit(env);</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment">// Abort if missing</span></div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
+<div class="line"><span class="lineno">   51</span>      <a class="code hl_function" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a>(</div>
+<div class="line"><span class="lineno">   52</span>        <span class="stringliteral">&quot;ABORT: ProgramData Unavailable&quot;</span>,</div>
+<div class="line"><span class="lineno">   53</span>        <span class="stringliteral">&quot;Unable to determine the ProgramData path.&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>    <span class="comment">// Ensure ProgramData exists</span></div>
+<div class="line"><span class="lineno">   57</span>    QDir root(base);</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span>(!root.exists()) {</div>
+<div class="line"><span class="lineno">   59</span>      <a class="code hl_function" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a>(</div>
+<div class="line"><span class="lineno">   60</span>        <span class="stringliteral">&quot;ABORT: ProgramData Missing&quot;</span>,</div>
+<div class="line"><span class="lineno">   61</span>        QString(<span class="stringliteral">&quot;ProgramData path &#39;%1&#39; does not exist.&quot;</span>)</div>
+<div class="line"><span class="lineno">   62</span>       .arg(QDir::toNativeSeparators(root.absolutePath())));</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment">// Ensure [ProgramData]/[OrganizationName] exists</span></div>
+<div class="line"><span class="lineno">   66</span>    <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="#adc67984091da507784ab70eca8975491">orgName</a> = QString{<a class="code hl_variable" href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a>};</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keyword">const</span> QString target = root.filePath(<a class="code hl_variable" href="#adc67984091da507784ab70eca8975491">orgName</a>);</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span>(!root.mkpath(<a class="code hl_variable" href="#adc67984091da507784ab70eca8975491">orgName</a>)) {</div>
+<div class="line"><span class="lineno">   69</span>      <a class="code hl_function" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a>(</div>
+<div class="line"><span class="lineno">   70</span>        <span class="stringliteral">&quot;ABORT: Create Directory Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">   71</span>        QString(<span class="stringliteral">&quot;Unable to create required directory &#39;%1&#39;.&quot;</span>)</div>
+<div class="line"><span class="lineno">   72</span>       .arg(QDir::toNativeSeparators(target)));</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    <span class="comment">// Normalize and return</span></div>
+<div class="line"><span class="lineno">   76</span>    QString out = QFileInfo(target).canonicalFilePath();                           <span class="comment">// absolute + symlinks/junctions resolved</span></div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span>(out.isEmpty()) out = QDir::cleanPath(QFileInfo(target).absoluteFilePath()); <span class="comment">// defensive fallback</span></div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">return</span> QDir::fromNativeSeparators(out);                                        <span class="comment">// forward slashes; UNC as //server/share</span></div>
+<div class="line"><span class="lineno">   79</span>  }();</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>  <span class="comment">// Return cached path</span></div>
+<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">   83</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a786b074c596617d18abb1957f26d3156"><div class="ttname"><a href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a></div><div class="ttdeci">constexpr QLatin1StringView orgDirName</div><div class="ttdoc">Organization directory name.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d8d/_app_meta_8h_source.html#l00039">AppMeta.h:39</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_adc67984091da507784ab70eca8975491"><div class="ttname"><a href="#adc67984091da507784ab70eca8975491">npi::app::orgName</a></div><div class="ttdeci">constexpr QLatin1StringView orgName</div><div class="ttdoc">Organization display name.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d8d/_app_meta_8h_source.html#l00035">AppMeta.h:35</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03.html#a5bca34d4144e402dfa63ba6588cfa0c3">anonymous_namespace{AppUtil.cpp}::knownFolderPathWin()</a>, and <a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox()</a>, <a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a>, and <a class="el" href="#adc67984091da507784ab70eca8975491">orgName</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_cgraph.svg" width="534" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_icgraph.svg" width="534" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -394,106 +483,94 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Absolute path to <span class="tt">C:\Users\Public\Documents\[orgFolder]</span>. </p>
-<p>This function does not create <span class="tt">C:\Users\Public\Documents</span> itself; if it is missing. It only creates the <span class="tt">[orgFolder]</span> subfolder if not already present. </p><dl class="section return"><dt>Returns</dt><dd>Absolute path on success; empty <span class="tt">QString</span> on failure. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Caller MUST check for empty <span class="tt">QString</span>, if true, treat it as error. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>On non-Windows builds this returns empty <span class="tt">QString</span>. </dd></dl>
+<p>Absolute organization-level Public/Documents path. </p>
+<p>Returns the absolute, normalized path to: [Public]/Documents/[OrganizationName] Resolution order: 1) Windows API (SHGetKnownFolderPath with FOLDERID_PublicDocuments) 2) Environment variable fallback: PUBLIC + "Documents" Then:</p><ul>
+<li>Verifies the base folder exists (fatal if missing).</li>
+<li>Ensures the organization subdirectory exists (creates it; fatal if it fails).</li>
+<li>Canonicalizes when possible; otherwise cleans the absolute path.</li>
+<li>Converts separators to forward slashes; UNC is returned as //server/share/....</li>
+</ul>
+<p>The result is cached in a function-local static and reused on subsequent calls.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to a process-lifetime QString with the absolute path using forward slashes. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The returned reference remains valid for the lifetime of the process. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>Windows-only: Paths use forward slashes for Qt friendliness; call QDir::toNativeSeparators(...) before passing to Win32 APIs.</li>
+<li>Multi-Thread: Safe, first-call initialization is thread-safe (C++11). Subsequent calls are lock-free. </li>
+</ul>
+</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure, a native dialog is shown and the process terminates (no return). </dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="keyword">const</span> QString pubOrg = <a class="code hl_function" href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a>();      <span class="comment">// e.g. C:/Users/Public/Documents/npi_electronic</span></div>
+<div class="line"><span class="keyword">const</span> QString readme = QDir(pubOrg).filePath(<span class="stringliteral">&quot;ReadMe.txt&quot;</span>);</div>
+</div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00097">97</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>{</div>
-<div class="line"><span class="lineno">   99</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  100</span><span class="preprocessor">  #ifdef _WIN32</span></div>
-<div class="line"><span class="lineno">  101</span>    <span class="comment">// 1) Authoritative: Public Documents via Known Folders</span></div>
-<div class="line"><span class="lineno">  102</span>    QString base = knownFolderPathWin(FOLDERID_PublicDocuments); <span class="comment">// e.g. C:\Users\Public\Documents</span></div>
-<div class="line"><span class="lineno">  103</span>    <span class="comment">// 2) Fallback: %PUBLIC%\Documents</span></div>
-<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
-<div class="line"><span class="lineno">  105</span>      <span class="keyword">const</span> QString publicRoot = QString::fromLocal8Bit(qgetenv(<span class="stringliteral">&quot;PUBLIC&quot;</span>)); <span class="comment">// e.g. C:\Users\Public</span></div>
-<div class="line"><span class="lineno">  106</span>      <span class="keywordflow">if</span>(publicRoot.isEmpty())</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  108</span>      base = QDir(publicRoot).filePath(QStringLiteral(<span class="stringliteral">&quot;Documents&quot;</span>));</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>    QDir docs(base);</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span>(!docs.exists())</div>
-<div class="line"><span class="lineno">  113</span>      <span class="keywordflow">return</span> {}; <span class="comment">// don&#39;t invent Public\Documents</span></div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span>(!docs.mkpath(<a class="code hl_variable" href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a>))</div>
-<div class="line"><span class="lineno">  116</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> docs.filePath(<a class="code hl_variable" href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a>);</div>
-<div class="line"><span class="lineno">  118</span><span class="preprocessor">  #else</span></div>
-<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  120</span><span class="preprocessor">  #endif</span></div>
-<div class="line"><span class="lineno">  121</span>  }();</div>
-<div class="line"><span class="lineno">  122</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  123</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d8e/_app_meta_8cpp_source.html#l00085">85</a> of file <a class="el" href="../../d9/d8e/_app_meta_8cpp_source.html">AppMeta.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{</div>
+<div class="line"><span class="lineno">   87</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">// Determine Public/Documents base path</span></div>
+<div class="line"><span class="lineno">   89</span>    QString base;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <span class="comment">// Windows API</span></div>
+<div class="line"><span class="lineno">   92</span>    PWSTR p = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keyword">const</span> HRESULT hr = SHGetKnownFolderPath(FOLDERID_PublicDocuments, KF_FLAG_DEFAULT, <span class="keyword">nullptr</span>, &amp;p);</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span>(SUCCEEDED(hr) &amp;&amp; p) {</div>
+<div class="line"><span class="lineno">   95</span>      base = QString::fromWCharArray(p);</div>
+<div class="line"><span class="lineno">   96</span>      CoTaskMemFree(p);</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    <span class="comment">// Fallback to env</span></div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
+<div class="line"><span class="lineno">  101</span>      <span class="keywordflow">if</span>(<span class="keyword">const</span> QByteArray env = qgetenv(<span class="stringliteral">&quot;PUBLIC&quot;</span>); !env.isEmpty())</div>
+<div class="line"><span class="lineno">  102</span>        base = QDir(QString::fromLocal8Bit(env)).filePath(QStringLiteral(<span class="stringliteral">&quot;Documents&quot;</span>));</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    <span class="comment">// Abort if missing</span></div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
+<div class="line"><span class="lineno">  107</span>      <a class="code hl_function" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a>(</div>
+<div class="line"><span class="lineno">  108</span>        <span class="stringliteral">&quot;ABORT: Public/Documents Unavailable&quot;</span>,</div>
+<div class="line"><span class="lineno">  109</span>        <span class="stringliteral">&quot;Unable to determine the Public/Documents path.&quot;</span>);</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>    <span class="comment">// Ensure Public/Documents exists</span></div>
+<div class="line"><span class="lineno">  113</span>    QDir root(base);</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span>(!root.exists()) {</div>
+<div class="line"><span class="lineno">  115</span>      <a class="code hl_function" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a>(</div>
+<div class="line"><span class="lineno">  116</span>        <span class="stringliteral">&quot;ABORT: Public/Documents Missing&quot;</span>,</div>
+<div class="line"><span class="lineno">  117</span>        QString(<span class="stringliteral">&quot;Public/Documents path &#39;%1&#39; does not exist.&quot;</span>)</div>
+<div class="line"><span class="lineno">  118</span>       .arg(QDir::toNativeSeparators(root.absolutePath())));</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    <span class="comment">// Ensure Public/Documents/[OrganizationName] exists</span></div>
+<div class="line"><span class="lineno">  122</span>    <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="#adc67984091da507784ab70eca8975491">orgName</a> = QString{<a class="code hl_variable" href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a>};</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keyword">const</span> QString target = root.filePath(<a class="code hl_variable" href="#adc67984091da507784ab70eca8975491">orgName</a>);</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span>(!root.mkpath(<a class="code hl_variable" href="#adc67984091da507784ab70eca8975491">orgName</a>)) {</div>
+<div class="line"><span class="lineno">  125</span>      <a class="code hl_function" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a>(</div>
+<div class="line"><span class="lineno">  126</span>        <span class="stringliteral">&quot;ABORT: Create Directory Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  127</span>        QString(<span class="stringliteral">&quot;Unable to create required directory &#39;%1&#39;.&quot;</span>)</div>
+<div class="line"><span class="lineno">  128</span>       .arg(QDir::toNativeSeparators(target)));</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <span class="comment">// Normalize and return</span></div>
+<div class="line"><span class="lineno">  132</span>    QString out = QFileInfo(target).canonicalFilePath();                           <span class="comment">// absolute + symlinks/junctions resolved</span></div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">if</span>(out.isEmpty()) out = QDir::cleanPath(QFileInfo(target).absoluteFilePath()); <span class="comment">// defensive fallback</span></div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">return</span> QDir::fromNativeSeparators(out);                                        <span class="comment">// forward slashes; UNC as //server/share</span></div>
+<div class="line"><span class="lineno">  135</span>  }();</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>  <span class="comment">// Return cached path</span></div>
+<div class="line"><span class="lineno">  138</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  139</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03.html#a5bca34d4144e402dfa63ba6588cfa0c3">anonymous_namespace{AppUtil.cpp}::knownFolderPathWin()</a>, and <a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox()</a>, <a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a>, and <a class="el" href="#adc67984091da507784ab70eca8975491">orgName</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_cgraph.svg" width="566" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_icgraph.svg" width="598" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a723a01872a6ddb63e5bec52939f8c021" name="a723a01872a6ddb63e5bec52939f8c021"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a723a01872a6ddb63e5bec52939f8c021">&#9670;&#160;</a></span>settingsMainFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const QString &amp; npi::app::settingsMainFile </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Absolute path of application's main <span class="tt">settings.ini</span> at <span class="tt">C:\ProgramData\[orgFolder]\[appFolder]\</span>. </p>
-<p>This function does not create <span class="tt">C:\ProgramData</span> itself; if it is missing. It only creates the <span class="tt">[orgFolder]</span> and/or <span class="tt">[appFolder]</span> subfolders if not already present. </p><dl class="section return"><dt>Returns</dt><dd>Absolute path on success; empty <span class="tt">QString</span> on failure. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Caller MUST check for empty <span class="tt">QString</span>, if true, treat it as error. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd><ul>
-<li>This function does not create the <span class="tt">settings.ini</span> file itself.</li>
-<li>Depends on <span class="tt">appProgramData()</span>. If that fails, this also fails.</li>
-<li>On non-Windows builds this returns empty <span class="tt">QString</span>. </li>
-</ul>
-</dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00151">151</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>                                                 {</div>
-<div class="line"><span class="lineno">  152</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  153</span>    <span class="keyword">const</span> QString&amp; dir = <a class="code hl_function" href="#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a>();</div>
-<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">if</span>(dir.isEmpty())</div>
-<div class="line"><span class="lineno">  155</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">return</span> QDir(dir).filePath(<a class="code hl_variable" href="#aacda91d3fcfee509ffdd2fabd44f1339">npi::app::settingsFileName</a>.toString());</div>
-<div class="line"><span class="lineno">  157</span>  }();</div>
-<div class="line"><span class="lineno">  158</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  159</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a40a2a28831f2f410c995f0657baf6544"><div class="ttname"><a href="#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a></div><div class="ttdeci">const QString &amp; appProgramDataDir() noexcept</div><div class="ttdoc">Absolute path to C:\ProgramData\[orgFolder]\[appFolder].</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d8b/_app_util_8cpp_source.html#l00125">AppUtil.cpp:125</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1app_html_aacda91d3fcfee509ffdd2fabd44f1339"><div class="ttname"><a href="#aacda91d3fcfee509ffdd2fabd44f1339">npi::app::settingsFileName</a></div><div class="ttdeci">constexpr QLatin1StringView settingsFileName</div><div class="ttdoc">Main settings file name (ASCII/safe).</div><div class="ttdef"><b>Definition</b> <a href="../../dd/df0/_app_data_8hpp_source.html#l00045">AppData.hpp:45</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir()</a>, and <a class="el" href="#aacda91d3fcfee509ffdd2fabd44f1339">settingsFileName</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a723a01872a6ddb63e5bec52939f8c021_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -509,7 +586,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QLatin1StringView npi::app::appDirName {&quot;Log_Test&quot;}</td>
+          <td class="memname">QLatin1StringView npi::app::appDirName {&quot;D141_Base&quot;}</td>
         </tr>
       </table>
   </td>
@@ -519,10 +596,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Folder name used on disk for app-level data (ASCII/safe). </p>
+<p>Application directory name. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/df0/_app_data_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../dd/df0/_app_data_8hpp_source.html">AppData.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>{<span class="stringliteral">&quot;Log_Test&quot;</span>};           <span class="comment">///&lt; Folder name used on disk for app-level data (ASCII/safe).</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/_app_meta_8h_source.html#l00040">40</a> of file <a class="el" href="../../dd/d8d/_app_meta_8h_source.html">AppMeta.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{<span class="stringliteral">&quot;D141_Base&quot;</span>};         <span class="comment">///&lt; Application directory name</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir()</a>, and <a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir()</a>.</p>
 
@@ -538,7 +615,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QLatin1StringView npi::app::appName {&quot;Log Test&quot;}</td>
+          <td class="memname">QLatin1StringView npi::app::appName {&quot;D141_Base&quot;}</td>
         </tr>
       </table>
   </td>
@@ -550,9 +627,11 @@ Here is the call graph for this function:</div>
 
 <p>Application display name. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/df0/_app_data_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../dd/df0/_app_data_8hpp_source.html">AppData.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>{<span class="stringliteral">&quot;Log Test&quot;</span>};              <span class="comment">///&lt; Application display name.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/_app_meta_8h_source.html#l00036">36</a> of file <a class="el" href="../../dd/d8d/_app_meta_8h_source.html">AppMeta.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>{<span class="stringliteral">&quot;D141_Base&quot;</span>};            <span class="comment">///&lt; Application display name</span></div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir()</a>, and <a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir()</a>.</p>
+
 </div>
 </div>
 <a id="aebf26d13197e68f0ad3e05d82bb5f31d" name="aebf26d13197e68f0ad3e05d82bb5f31d"></a>
@@ -575,10 +654,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Application semantic version string. </p>
+<p>Application version string. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/df0/_app_data_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../dd/df0/_app_data_8hpp_source.html">AppData.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>{<span class="stringliteral">&quot;0.1.0&quot;</span>};              <span class="comment">///&lt; Application semantic version string.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/_app_meta_8h_source.html#l00038">38</a> of file <a class="el" href="../../dd/d8d/_app_meta_8h_source.html">AppMeta.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{<span class="stringliteral">&quot;0.1.0&quot;</span>};             <span class="comment">///&lt; Application version string</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -592,7 +671,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QLatin1StringView npi::app::orgDirName {&quot;npielectronic&quot;}</td>
+          <td class="memname">QLatin1StringView npi::app::orgDirName {&quot;npi_electronic&quot;}</td>
         </tr>
       </table>
   </td>
@@ -602,10 +681,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Folder name used on disk for organization-level data (ASCII/safe). </p>
+<p>Organization directory name. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/df0/_app_data_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../dd/df0/_app_data_8hpp_source.html">AppData.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>{<span class="stringliteral">&quot;npielectronic&quot;</span>};      <span class="comment">///&lt; Folder name used on disk for organization-level data (ASCII/safe).</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/_app_meta_8h_source.html#l00039">39</a> of file <a class="el" href="../../dd/d8d/_app_meta_8h_source.html">AppMeta.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>{<span class="stringliteral">&quot;npi_electronic&quot;</span>};    <span class="comment">///&lt; Organization directory name</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
 
@@ -631,10 +710,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Organization internet domain (host-only, no scheme). </p>
+<p>Organization domain name. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/df0/_app_data_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../dd/df0/_app_data_8hpp_source.html">AppData.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>{<span class="stringliteral">&quot;npielectronic.com&quot;</span>};   <span class="comment">///&lt; Organization internet domain (host-only, no scheme).</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/_app_meta_8h_source.html#l00037">37</a> of file <a class="el" href="../../dd/d8d/_app_meta_8h_source.html">AppMeta.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{<span class="stringliteral">&quot;npielectronic.com&quot;</span>};  <span class="comment">///&lt; Organization domain name</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -658,39 +737,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Organization display name (e.g., used in About dialogs). </p>
+<p>Organization display name. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/df0/_app_data_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../dd/df0/_app_data_8hpp_source.html">AppData.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>{<span class="stringliteral">&quot;npi electronics GmbH&quot;</span>};  <span class="comment">///&lt; Organization display name (e.g., used in About dialogs).</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/_app_meta_8h_source.html#l00035">35</a> of file <a class="el" href="../../dd/d8d/_app_meta_8h_source.html">AppMeta.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{<span class="stringliteral">&quot;npi electronics GmbH&quot;</span>}; <span class="comment">///&lt; Organization display name</span></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="aacda91d3fcfee509ffdd2fabd44f1339" name="aacda91d3fcfee509ffdd2fabd44f1339"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacda91d3fcfee509ffdd2fabd44f1339">&#9670;&#160;</a></span>settingsFileName</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QLatin1StringView npi::app::settingsFileName {&quot;settings.ini&quot;}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Main settings file name (ASCII/safe). </p>
-
-<p class="definition">Definition at line <a class="el" href="../../dd/df0/_app_data_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../dd/df0/_app_data_8hpp_source.html">AppData.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>{<span class="stringliteral">&quot;settings.ini&quot;</span>}; <span class="comment">///&lt; Main settings file name (ASCII/safe).</span></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#a723a01872a6ddb63e5bec52939f8c021">settingsMainFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
 
 </div>
 </div>
@@ -716,7 +768,7 @@ Here is the call graph for this function:</div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Oct 17 2025 10:21:54'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 23 2025 10:03:54'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

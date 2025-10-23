@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['transparentformousewheel_0',['TransparentForMouseWheel',['../d7/d8c/namespacenpi_1_1props.html#afc40f3392e99f77e4d5aa7d06a398bb2',1,'npi::props']]]
+  ['underline_5f_0',['underline_',['../df/dc2/structnpi_1_1_font_1_1_style.html#a30d7849907826a6c6eeee5dcc6547e39',1,'npi::Font::Style']]],
+  ['uni_5f_1',['uni_',['../dc/d75/classnpi_1_1_link_host.html#a3cf308c619126e0b7f8bc337c8b049ab',1,'npi::LinkHost']]],
+  ['universal_5f_2',['universal_',['../dc/d75/classnpi_1_1_link_host.html#a197108081077f9b5a7e3c6610b77673c',1,'npi::LinkHost']]],
+  ['usage_3',['Usage',['../dc/d4b/_link_8hpp.html#linkFileUsage',1,'']]]
 ];

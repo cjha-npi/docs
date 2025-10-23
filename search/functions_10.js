@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['universal_5f_0',['universal_',['../dc/d75/classnpi_1_1_link_host.html#a197108081077f9b5a7e3c6610b77673c',1,'npi::LinkHost']]]
+  ['warnmsgbox_0',['warnMsgBox',['../d8/d8e/namespacenpi_1_1win.html#abfb36eaebc54f2b748681c8d4acf2d57',1,'npi::win']]],
+  ['weakhost_5f_1',['weakHost_',['../dc/d75/classnpi_1_1_link_host.html#a0d65a215e2d2d7d1b96c156e41418ad0',1,'npi::LinkHost']]]
 ];

@@ -142,23 +142,24 @@ $(function(){initNavTree('d6/d57/namespacenpi.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Root namespace for the application.  
+<p>Root namespace for everything from npi electronics GmbH.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:app" id="r_app"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html">app</a></td></tr>
-<tr class="memdesc:dc/dba/namespacenpi_1_1app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application metadata and constants. <br /></td></tr>
-<tr class="memitem:props" id="r_props"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8c/namespacenpi_1_1props.html">props</a></td></tr>
+<tr class="memdesc:dc/dba/namespacenpi_1_1app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common namespace for application data and utilities. <br /></td></tr>
 <tr class="memitem:win" id="r_win"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html">win</a></td></tr>
-<tr class="memdesc:d8/d8e/namespacenpi_1_1win"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows-specific utilities and wrappers. <br /></td></tr>
+<tr class="memdesc:d8/d8e/namespacenpi_1_1win"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows related utilities. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Font" id="r_Font"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da6/classnpi_1_1_font.html">Font</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread-safe font utility with style, sizing, and caching.  <a href="../../d1/da6/classnpi_1_1_font.html#details">More...</a><br /></td></tr>
+<tr class="memitem:GuiProps" id="r_GuiProps"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dd5/structnpi_1_1_gui_props.html">GuiProps</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scope-only container for GUI property keys.  <a href="../../d2/dd5/structnpi_1_1_gui_props.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Link" id="r_Link"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d94/classnpi_1_1_link.html">Link</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread-safe, non-owning, auto-nullifying safe pointer to an object of type T.  <a href="../../df/d94/classnpi_1_1_link.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A non-owning, auto-nullifying pointer-like handle to an object of type T.  <a href="../../df/d94/classnpi_1_1_link.html#details">More...</a><br /></td></tr>
 <tr class="memitem:LinkFromThis" id="r_LinkFromThis"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d51/classnpi_1_1_link_from_this.html">LinkFromThis</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables objects that inherits from this class to produce a Link object referencing themselves if the object is wrapped in a LinkHost.  <a href="../../d1/d51/classnpi_1_1_link_from_this.html#details">More...</a><br /></td></tr>
 <tr class="memitem:LinkHost" id="r_LinkHost"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d75/classnpi_1_1_link_host.html">LinkHost</a></td></tr>
@@ -176,13 +177,8 @@ Concepts</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concept to check if a type supports shared_from_this(). <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Root namespace for the application. </p>
-<p>Contains all public APIs and common types. It includes:</p><ul>
-<li><span class="tt">npi::app</span> module-agnostic identifiers, compile-time defaults, and lightweight utilities.</li>
-<li>Feature-specific child namespaces (e.g., <span class="tt">npi::log</span>), each owning its data, types, and helpers.</li>
-<li>Core application components and classes.</li>
-</ul>
-<p>Use <span class="tt">npi::app</span> for cross-cutting code; place domain-specific code in a dedicated child namespace. </p>
+<div class="textblock"><p>Root namespace for everything from npi electronics GmbH. </p>
+<p>This is the top-level namespace for all code provided by npi electronics GmbH. It contains all libraries, utilities, classes, functions, etc. developed and maintained by npi. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -205,7 +201,7 @@ Concepts</h2></td></tr>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Oct 17 2025 10:21:53'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 23 2025 10:03:52'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

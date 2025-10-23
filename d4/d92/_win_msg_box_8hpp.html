@@ -142,16 +142,17 @@ $(function(){initNavTree('d4/d92/_win_msg_box_8hpp.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Windows message box helpers using the Unicode API.  
+<p>Native Windows message box helpers for emergency or low-level use.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;windows.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;npi/PlatformCheck.hpp&quot;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
 <code>#include &lt;QString&gt;</code><br />
-<code>#include &lt;QWidget&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for WinMsgBox.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d7b/_win_msg_box_8hpp__incl.svg" width="400" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d7b/_win_msg_box_8hpp__incl.svg" width="614" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="../../d4/d92/_win_msg_box_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -159,9 +160,9 @@ Include dependency graph for WinMsgBox.hpp:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:npi" id="r_npi"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
-<tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for the application. <br /></td></tr>
+<tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for everything from npi electronics GmbH. <br /></td></tr>
 <tr class="memitem:npi_3A_3Awin" id="r_npi_3A_3Awin"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html">npi::win</a></td></tr>
-<tr class="memdesc:d8/d8e/namespacenpi_1_1win"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows-specific utilities and wrappers. <br /></td></tr>
+<tr class="memdesc:d8/d8e/namespacenpi_1_1win"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows related utilities. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -170,29 +171,32 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6dad9ee35b225c0a7e268e7fe1ec8136" id="r_a6dad9ee35b225c0a7e268e7fe1ec8136"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a6dad9ee35b225c0a7e268e7fe1ec8136">npi::win::abortMsgBox</a> (const QString &amp;title, const QString &amp;msg, const QWidget *wid=nullptr) noexcept</td></tr>
-<tr class="memdesc:a6dad9ee35b225c0a7e268e7fe1ec8136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show an error message box and then terminate the process.  <br /></td></tr>
-<tr class="memitem:aafb47eb36e449bc98316ec02b0da6b62" id="r_aafb47eb36e449bc98316ec02b0da6b62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#aafb47eb36e449bc98316ec02b0da6b62">npi::win::errorMsgBox</a> (const QString &amp;title, const QString &amp;msg, const QWidget *wid=nullptr) noexcept</td></tr>
-<tr class="memdesc:aafb47eb36e449bc98316ec02b0da6b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show an error message box (OK + error icon).  <br /></td></tr>
-<tr class="memitem:a825c06cad5b1b337a13882a0ecfde0dc" id="r_a825c06cad5b1b337a13882a0ecfde0dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a825c06cad5b1b337a13882a0ecfde0dc">npi::win::infoMsgBox</a> (const QString &amp;title, const QString &amp;msg, const QWidget *wid=nullptr) noexcept</td></tr>
-<tr class="memdesc:a825c06cad5b1b337a13882a0ecfde0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show an information message box (OK + information icon).  <br /></td></tr>
-<tr class="memitem:a9dbf3396049adeb5a07457a5579dabf7" id="r_a9dbf3396049adeb5a07457a5579dabf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a9dbf3396049adeb5a07457a5579dabf7">npi::win::msgBox</a> (const QWidget *wid, const QString &amp;title, const QString &amp;msg, UINT flags) noexcept</td></tr>
-<tr class="memdesc:a9dbf3396049adeb5a07457a5579dabf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a Windows message box, parented to an optional QWidget.  <br /></td></tr>
-<tr class="memitem:a2e98512b244f22a2bee2c1ed3fb8abeb" id="r_a2e98512b244f22a2bee2c1ed3fb8abeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a2e98512b244f22a2bee2c1ed3fb8abeb">npi::win::warnMsgBox</a> (const QString &amp;title, const QString &amp;msg, const QWidget *wid=nullptr) noexcept</td></tr>
-<tr class="memdesc:a2e98512b244f22a2bee2c1ed3fb8abeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a warning message box (OK + warning icon).  <br /></td></tr>
+<tr class="memitem:a7eb3918ab23ee7b9bd2d01911ee9913f" id="r_a7eb3918ab23ee7b9bd2d01911ee9913f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f">npi::win::abortMsgBox</a> (const QString &amp;title, const QString &amp;msg, const HWND h=nullptr) noexcept</td></tr>
+<tr class="memdesc:a7eb3918ab23ee7b9bd2d01911ee9913f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a fatal error box and terminate the process.  <br /></td></tr>
+<tr class="memitem:a639bd096bc4de3946461923b002f80e8" id="r_a639bd096bc4de3946461923b002f80e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#a639bd096bc4de3946461923b002f80e8">npi::win::errorMsgBox</a> (const QString &amp;title, const QString &amp;msg, const HWND h=nullptr) noexcept</td></tr>
+<tr class="memdesc:a639bd096bc4de3946461923b002f80e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show an error message box (OK + error icon).  <br /></td></tr>
+<tr class="memitem:aff5e851b451208adfb11d4e5cb503c69" id="r_aff5e851b451208adfb11d4e5cb503c69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#aff5e851b451208adfb11d4e5cb503c69">npi::win::infoMsgBox</a> (const QString &amp;title, const QString &amp;msg, const HWND h=nullptr) noexcept</td></tr>
+<tr class="memdesc:aff5e851b451208adfb11d4e5cb503c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show an informational message box (OK + information icon).  <br /></td></tr>
+<tr class="memitem:aa203e14a9085aa2fa437ea050b780b15" id="r_aa203e14a9085aa2fa437ea050b780b15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#aa203e14a9085aa2fa437ea050b780b15">npi::win::msgBox</a> (const QString &amp;title, const QString &amp;msg, const HWND h, const UINT flags) noexcept</td></tr>
+<tr class="memdesc:aa203e14a9085aa2fa437ea050b780b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a Windows message box with custom flags.  <br /></td></tr>
+<tr class="memitem:abfb36eaebc54f2b748681c8d4acf2d57" id="r_abfb36eaebc54f2b748681c8d4acf2d57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/namespacenpi_1_1win.html#abfb36eaebc54f2b748681c8d4acf2d57">npi::win::warnMsgBox</a> (const QString &amp;title, const QString &amp;msg, const HWND h=nullptr) noexcept</td></tr>
+<tr class="memdesc:abfb36eaebc54f2b748681c8d4acf2d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a warning message box (OK + warning icon).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Windows message box helpers using the Unicode API. </p>
-<p>This header provides thin, dependency-light helpers around the Win32 MessageBoxW function. They can be called safely even if no Qt GUI infrastructure (QApplication) has been created yet, making them suitable for early-startup, late-shutdown, and fatal-error reporting paths.</p>
-<p>Design goals:</p><ul>
-<li>Always use the Unicode (wide) Windows API to avoid code page issues.</li>
-<li>Keep behavior predictable: choose an appropriate modality when the caller does not specify one, and foreground the dialog when no owner is available to reduce Z-order surprises.</li>
-<li>Overload to accept optional QWidget owner, converting to HWND.</li>
-<li>Avoid throwing exceptions; all functions are noexcept.</li>
+<div class="textblock"><p>Native Windows message box helpers for emergency or low-level use. </p>
+<p>This header provides thin wrappers around MessageBoxW intended for cases where Qt UI may be unavailable or unreachable (e.g., very early startup, very late shutdown, logging failure paths, or when the caller is not on the GUI thread and cannot safely touch QWidget).</p>
+<p>The functions are callable from any thread. When an owner HWND is provided, Windows will place the message box relative to that window. When no owner is provided, the helpers select reasonable defaults for modality and foreground activation to improve visibility.</p>
+<p>Integration guidance:</p><ul>
+<li>Prefer QMessageBox on the GUI thread for normal UX.</li>
+<li>Use these helpers as a fallback when qApp is not available or when touching QWidget is not safe.</li>
 </ul>
-<p>Notes:</p><ul>
-<li>NOMINMAX is defined to prevent macro collisions with std::min/stdmax.</li>
-<li>WIN32_LEAN_AND_MEAN is defined to reduce compile-time overhead. </li>
+<dl class="section warning"><dt>Warning</dt><dd>If the HWND originates from a QWidget, obtain it on the GUI thread (e.g., via winId()) and pass only the raw HWND to these functions.</dd></dl>
+<p>Threading:</p><ul>
+<li>These helpers do not access QWidget or other Qt GUI types.</li>
+<li>Calling MessageBoxW from worker threads is supported by Win32.</li>
+</ul>
+<p>Error handling:</p><ul>
+<li>All functions are declared noexcept; failures inside QString conversions would result in process termination as per noexcept rules. This is acceptable for the intended "last resort" usage. </li>
 </ul>
 
 <p class="definition">Definition in file <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html">WinMsgBox.hpp</a>.</p>
@@ -209,7 +213,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html">WinMsgBox.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html">WinMsgBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -225,7 +229,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html#l00029">29</a> of file <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html">WinMsgBox.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../d4/d92/_win_msg_box_8hpp_source.html">WinMsgBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -251,7 +255,7 @@ Functions</h2></td></tr>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Oct 17 2025 10:21:53'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 23 2025 10:03:52'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

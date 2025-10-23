@@ -180,7 +180,7 @@ $(function(){initNavTree('d9/da6/_font_8hpp_source.html','../../',''); });
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;npi/Props.hpp&quot;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;npi/GuiProps.hpp&quot;</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// ReSharper disable CppUseAuto</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
@@ -341,7 +341,7 @@ $(function(){initNavTree('d9/da6/_font_8hpp_source.html','../../',''); });
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="comment">// Iterate over all widgets in the application.</span></div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> widgets = qApp-&gt;allWidgets(); <span class="keyword">const</span> <span class="keyword">auto</span> widget : widgets) {</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>          <span class="comment">// If the widget uses the fixed-width font, force an update to apply the new font.</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>          <span class="keywordflow">if</span>(QPointer&lt;QWidget&gt; w{widget}; w &amp;&amp; w-&gt;property(<a class="code hl_variable" href="../../d7/d8c/namespacenpi_1_1props.html#af6716438646628d156111bbb1f8a228d">props::FixedWidthFontWidget</a>).toBool()) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>          <span class="keywordflow">if</span>(QPointer&lt;QWidget&gt; w{widget}; w &amp;&amp; w-&gt;property(<a class="code hl_variable" href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">GuiProps::FixedWidthFontWidget_</a>).toBool()) {</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            QMetaObject::invokeMethod(qApp, [w] {</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>              <span class="keywordflow">if</span>(w)</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                w-&gt;update();</div>
@@ -882,8 +882,7 @@ $(function(){initNavTree('d9/da6/_font_8hpp_source.html','../../',''); });
 <div class="ttc" id="aclassnpi_1_1_font_html_af05588e164b4b2f1838c9df350e2796e"><div class="ttname"><a href="../../d1/da6/classnpi_1_1_font.html#af05588e164b4b2f1838c9df350e2796e">npi::Font::style_</a></div><div class="ttdeci">Style style_</div><div class="ttdoc">Style configuration for this Font instance.</div><div class="ttdef"><b>Definition</b> <a href="#l00463">Font.hpp:463</a></div></div>
 <div class="ttc" id="aclassnpi_1_1_font_html_af0f14781f8961296636b58a95af64b42"><div class="ttname"><a href="../../d1/da6/classnpi_1_1_font.html#af0f14781f8961296636b58a95af64b42">npi::Font::Font</a></div><div class="ttdeci">Font()=default</div><div class="ttdoc">Default constructor.</div></div>
 <div class="ttc" id="aclassnpi_1_1_font_html_af6003e1e7178e7eac811cf402e949a2c"><div class="ttname"><a href="../../d1/da6/classnpi_1_1_font.html#af6003e1e7178e7eac811cf402e949a2c">npi::Font::setStyle_</a></div><div class="ttdeci">Font &amp; setStyle_(const Style &amp;style=Style{})</div><div class="ttdoc">Set style.</div><div class="ttdef"><b>Definition</b> <a href="#l00314">Font.hpp:314</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1props_html_af6716438646628d156111bbb1f8a228d"><div class="ttname"><a href="../../d7/d8c/namespacenpi_1_1props.html#af6716438646628d156111bbb1f8a228d">npi::props::FixedWidthFontWidget</a></div><div class="ttdeci">const char *const FixedWidthFontWidget</div><div class="ttdoc">Requests a fixed-width (monospace) font treatment.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d76/_props_8hpp_source.html#l00246">Props.hpp:246</a></div></div>
-<div class="ttc" id="anamespacenpi_html"><div class="ttname"><a href="../../d6/d57/namespacenpi.html">npi</a></div><div class="ttdoc">Root namespace for the application.</div></div>
+<div class="ttc" id="anamespacenpi_html"><div class="ttname"><a href="../../d6/d57/namespacenpi.html">npi</a></div><div class="ttdoc">Root namespace for everything from npi electronics GmbH.</div></div>
 <div class="ttc" id="astructnpi_1_1_font_1_1_group_html"><div class="ttname"><a href="../../d1/d41/structnpi_1_1_font_1_1_group.html">npi::Font::Group</a></div><div class="ttdoc">Cached triplet of QFont and its metrics.</div><div class="ttdef"><b>Definition</b> <a href="#l00477">Font.hpp:477</a></div></div>
 <div class="ttc" id="astructnpi_1_1_font_1_1_group_html_a4f62e94a286f85c697d358cde601bbb2"><div class="ttname"><a href="../../d1/d41/structnpi_1_1_font_1_1_group.html#a4f62e94a286f85c697d358cde601bbb2">npi::Font::Group::Group</a></div><div class="ttdeci">Group(const QFont &amp;font)</div><div class="ttdoc">Constructor that accepts a QFont and initializes its metrics.</div><div class="ttdef"><b>Definition</b> <a href="#l00491">Font.hpp:491</a></div></div>
 <div class="ttc" id="astructnpi_1_1_font_1_1_group_html_a96004baa0fa7835aea120155fef684b5"><div class="ttname"><a href="../../d1/d41/structnpi_1_1_font_1_1_group.html#a96004baa0fa7835aea120155fef684b5">npi::Font::Group::Group</a></div><div class="ttdeci">Group()</div><div class="ttdoc">Default constructor initializes with a default QFont i.e. current application font.</div><div class="ttdef"><b>Definition</b> <a href="#l00485">Font.hpp:485</a></div></div>
@@ -901,6 +900,7 @@ $(function(){initNavTree('d9/da6/_font_8hpp_source.html','../../',''); });
 <div class="ttc" id="astructnpi_1_1_font_1_1_style_html_acedc0020b6769e70e20563a63f261942"><div class="ttname"><a href="../../df/dc2/structnpi_1_1_font_1_1_style.html#acedc0020b6769e70e20563a63f261942">npi::Font::Style::Style</a></div><div class="ttdeci">Style()=default</div><div class="ttdoc">Default constructor.</div></div>
 <div class="ttc" id="astructnpi_1_1_font_1_1_style_html_af4ff81b6d7c80a08d6c7f53e974907d2"><div class="ttname"><a href="../../df/dc2/structnpi_1_1_font_1_1_style.html#af4ff81b6d7c80a08d6c7f53e974907d2">npi::Font::Style::bold_</a></div><div class="ttdeci">bool bold_</div><div class="ttdoc">Whether the font should be bold.</div><div class="ttdef"><b>Definition</b> <a href="#l00084">Font.hpp:84</a></div></div>
 <div class="ttc" id="astructnpi_1_1_font_1_1_style_html_afad9b7b49a82696b55665c59724c8f33"><div class="ttname"><a href="../../df/dc2/structnpi_1_1_font_1_1_style.html#afad9b7b49a82696b55665c59724c8f33">npi::Font::Style::capitalization_</a></div><div class="ttdeci">QFont::Capitalization capitalization_</div><div class="ttdoc">Capitalization mode (default: mixed case).</div><div class="ttdef"><b>Definition</b> <a href="#l00089">Font.hpp:89</a></div></div>
+<div class="ttc" id="astructnpi_1_1_gui_props_html_aafa082d9d7d58ffe909ade3634772bcd"><div class="ttname"><a href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">npi::GuiProps::FixedWidthFontWidget_</a></div><div class="ttdeci">static constexpr char FixedWidthFontWidget_[]</div><div class="ttdoc">Marks a QWidget to use a fixed-width font.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d0e/_gui_props_8hpp_source.html#l00074">GuiProps.hpp:74</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
@@ -916,7 +916,7 @@ $(function(){initNavTree('d9/da6/_font_8hpp_source.html','../../',''); });
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Oct 17 2025 10:21:53'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 23 2025 10:03:52'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

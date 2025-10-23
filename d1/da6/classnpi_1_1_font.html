@@ -1543,7 +1543,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  188</span>        <span class="comment">// Iterate over all widgets in the application.</span></div>
 <div class="line"><span class="lineno">  189</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> widgets = qApp-&gt;allWidgets(); <span class="keyword">const</span> <span class="keyword">auto</span> widget : widgets) {</div>
 <div class="line"><span class="lineno">  190</span>          <span class="comment">// If the widget uses the fixed-width font, force an update to apply the new font.</span></div>
-<div class="line"><span class="lineno">  191</span>          <span class="keywordflow">if</span>(QPointer&lt;QWidget&gt; w{widget}; w &amp;&amp; w-&gt;property(<a class="code hl_variable" href="../../d7/d8c/namespacenpi_1_1props.html#af6716438646628d156111bbb1f8a228d">props::FixedWidthFontWidget</a>).toBool()) {</div>
+<div class="line"><span class="lineno">  191</span>          <span class="keywordflow">if</span>(QPointer&lt;QWidget&gt; w{widget}; w &amp;&amp; w-&gt;property(<a class="code hl_variable" href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">GuiProps::FixedWidthFontWidget_</a>).toBool()) {</div>
 <div class="line"><span class="lineno">  192</span>            QMetaObject::invokeMethod(qApp, [w] {</div>
 <div class="line"><span class="lineno">  193</span>              <span class="keywordflow">if</span>(w)</div>
 <div class="line"><span class="lineno">  194</span>                w-&gt;update();</div>
@@ -1555,9 +1555,9 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  200</span>        <a class="code hl_variable" href="#a13b8e9cf7f80c8e4c123da7a89d2517e">FixFontMutex_</a>.unlock(); <span class="comment">// Unlock if no change.</span></div>
 <div class="line"><span class="lineno">  201</span>      }</div>
 <div class="line"><span class="lineno">  202</span>    }</div>
-<div class="ttc" id="anamespacenpi_1_1props_html_af6716438646628d156111bbb1f8a228d"><div class="ttname"><a href="../../d7/d8c/namespacenpi_1_1props.html#af6716438646628d156111bbb1f8a228d">npi::props::FixedWidthFontWidget</a></div><div class="ttdeci">const char *const FixedWidthFontWidget</div><div class="ttdoc">Requests a fixed-width (monospace) font treatment.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d76/_props_8hpp_source.html#l00246">Props.hpp:246</a></div></div>
+<div class="ttc" id="astructnpi_1_1_gui_props_html_aafa082d9d7d58ffe909ade3634772bcd"><div class="ttname"><a href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">npi::GuiProps::FixedWidthFontWidget_</a></div><div class="ttdeci">static constexpr char FixedWidthFontWidget_[]</div><div class="ttdoc">Marks a QWidget to use a fixed-width font.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d0e/_gui_props_8hpp_source.html#l00074">GuiProps.hpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d7/d8c/namespacenpi_1_1props.html#af6716438646628d156111bbb1f8a228d">npi::props::FixedWidthFontWidget</a>, <a class="el" href="#a3cf67970ac383c3d41e7cdc03e8876aa">FixFont_</a>, <a class="el" href="#a13b8e9cf7f80c8e4c123da7a89d2517e">FixFontMutex_</a>, <a class="el" href="#a4a44b5a9b306fd1eff1c7954bfa13ac5">FixFontSize_</a>, and <a class="el" href="#a71b608028669acfdc502a08a4e8fb736">FixGroupCache_</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">npi::GuiProps::FixedWidthFontWidget_</a>, <a class="el" href="#a3cf67970ac383c3d41e7cdc03e8876aa">FixFont_</a>, <a class="el" href="#a13b8e9cf7f80c8e4c123da7a89d2517e">FixFontMutex_</a>, <a class="el" href="#a4a44b5a9b306fd1eff1c7954bfa13ac5">FixFontSize_</a>, and <a class="el" href="#a71b608028669acfdc502a08a4e8fb736">FixGroupCache_</a>.</p>
 
 </div>
 </div>
@@ -1999,7 +1999,7 @@ Here is the call graph for this function:</div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Oct 17 2025 10:21:53'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 23 2025 10:03:53'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['underline_5f_0',['underline_',['../df/dc2/structnpi_1_1_font_1_1_style.html#a30d7849907826a6c6eeee5dcc6547e39',1,'npi::Font::Style']]],
-  ['uni_5f_1',['uni_',['../dc/d75/classnpi_1_1_link_host.html#a3cf308c619126e0b7f8bc337c8b049ab',1,'npi::LinkHost']]],
-  ['universal_5f_2',['universal_',['../dc/d75/classnpi_1_1_link_host.html#a197108081077f9b5a7e3c6610b77673c',1,'npi::LinkHost']]],
-  ['usage_3',['Usage',['../dc/d4b/_link_8hpp.html#linkFileUsage',1,'']]]
+  ['warnmsgbox_0',['warnMsgBox',['../d8/d8e/namespacenpi_1_1win.html#abfb36eaebc54f2b748681c8d4acf2d57',1,'npi::win']]],
+  ['weakhost_5f_1',['weakHost_',['../dc/d75/classnpi_1_1_link_host.html#a0d65a215e2d2d7d1b96c156e41418ad0',1,'npi::LinkHost']]],
+  ['weakloc_5f_2',['weakLoc_',['../d5/d88/classnpi_1_1_link_weak_host.html#a33e88a8ccbd91d26392b972635a7b1fa',1,'npi::LinkWeakHost']]],
+  ['weakobj_5f_3',['weakObj_',['../d5/d88/classnpi_1_1_link_weak_host.html#af6022b57d832f921515571b2244ec3cd',1,'npi::LinkWeakHost']]],
+  ['weakuni_5f_4',['weakUni_',['../d5/d88/classnpi_1_1_link_weak_host.html#a1faa5f51ebf96fc8c846926ebf4293c0',1,'npi::LinkWeakHost::weakUni_'],['../d1/d51/classnpi_1_1_link_from_this.html#a3deba1b7929e577995d9ae0db2d76d68',1,'npi::LinkFromThis::weakUni_']]],
+  ['widget_5f_5',['widget_',['../d3/dc4/classnpi_1_1_show.html#a83bd5edfd48b38afcfeb91f7632f7c02',1,'npi::Show']]],
+  ['win32_5flean_5fand_5fmean_6',['WIN32_LEAN_AND_MEAN',['../d9/d8e/_app_meta_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;AppMeta.cpp'],['../d4/d92/_win_msg_box_8hpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;WinMsgBox.hpp']]],
+  ['winmsgbox_2ehpp_7',['WinMsgBox.hpp',['../d4/d92/_win_msg_box_8hpp.html',1,'']]]
 ];

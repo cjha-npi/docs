@@ -184,7 +184,7 @@
   save(KEY__LEAF_PANE_WIDTH, _leafPaneWidth);
 
   // Array containing the html pages in this project.
-  const _htmlpages = [];
+  const _htmlPages = [];
 
   // Array containing the default Doxygen hash/href links for
   // the current page. ⚠️ NOTE: The parent nodes in this
@@ -196,12 +196,12 @@
   const _pageLinks = [];
 
   const _sectionMap = new Map();
-  const _htmlPagesExpandedNodes = new Set(); // ids of expanded nodes in _htmlpages
+  const _htmlPagesExpandedNodes = new Set(); // ids of expanded nodes in _htmlPages
   const _pageLinksCollapsedNodes = new Set(); // ids of collapsed nodes in _pageLinks
 
   let _consoleObjectName = ''; // Name of the global console object for invoking functions
   let _pageLinksRemark = ''; // Remarks or notes from page links tree generation
-  let _htmlpagesIndented = false; // Whether the _htmlpages tree is indented
+  let _htmlpagesIndented = false; // Whether the _htmlPages tree is indented
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 GLOBAL VARIABLES
@@ -979,19 +979,19 @@
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   async function genHtmlPages() {
-    // Build or reload the primary navigation tree (_htmlpages) for Doxy-Plus:
-    // 1. Clear existing _htmlpages but keep the array reference.
+    // Build or reload the primary navigation tree (_htmlPages) for Doxy-Plus:
+    // 1. Clear existing _htmlPages but keep the array reference.
     // 2. If the Doxygen generation timestamp matches the last saved, load cached tree and indentation flag.
     // 3. Otherwise, generate a fresh tree by:
     //    a. Fetching the complete default NAVTREE via genDefTree().
     //    b. Locating key sections (Namespaces, Globals, Concepts, Classes, Files).
     //    c. Flattening and pruning each section into [label, href, null] entries.
-    //    d. Appending these sections to _htmlpages in a logical order.
+    //    d. Appending these sections to _htmlPages in a logical order.
     // 4. Save the new tree and indentation flag back to storage for future reuse.
 
-    // Reset _htmlpages while retaining its reference (i.e. previous links)
+    // Reset _htmlPages while retaining its reference (i.e. previous links)
     // done by setting its length to 0
-    _htmlpages.length = 0;
+    _htmlPages.length = 0;
 
     // Read the previous stored doxygen time (returns null if nothing was stored)
     const prvDoxyTime = load(KEY__GEN_DATA);
@@ -1001,12 +1001,12 @@
       const prvHtmlPages = load(KEY__HTML_PAGES);
       if (prvHtmlPages != null && Array.isArray(prvHtmlPages) && prvHtmlPages.length > 0) {
         // Restore cached tree and indentation state
-        _htmlpages.push(...prvHtmlPages);
+        _htmlPages.push(...prvHtmlPages);
         _htmlpagesIndented = load(KEY__HTML_PAGES_TREE_INDENTED, false);
 
         // Saving so that expiry timestamp is updated to a new value
         save(KEY__GEN_DATA, window.DOXY_PLUS_DATE_TIME);
-        save(KEY__HTML_PAGES, _htmlpages);
+        save(KEY__HTML_PAGES, _htmlPages);
         save(KEY__HTML_PAGES_TREE_INDENTED, _htmlpagesIndented);
 
         //(`Gen Pri Tree: Loaded from Session Storage`);
@@ -1135,14 +1135,14 @@
         const anon = siphonAnonymousNamespaces(list);
 
         if (anon.length > 0) {
-          list.push(['-- ANONYMOUS --', null, null]);
+          //list.push(['-- ANONYMOUS --', null, null]);
           for (let ii = 0; ii < anon.length; ++ii) {
             list.push([anon[ii][0], anon[ii][1], anon[ii][2]]);
           }
         }
 
         if (list.length > 0) {
-          _htmlpages.push(['Namespaces', href, list]);
+          _htmlPages.push(['Namespaces', href, list]);
         }
       }
     }
@@ -1165,7 +1165,7 @@
             let tempHref = temp[idx][1];
             temp.splice(idx, 1);
             if (typeof tempHref === 'string' && IS_HTML_END.test(tempHref) && temp.length > 0) {
-              _htmlpages.push(['Globals', tempHref, temp]);
+              _htmlPages.push(['Globals', tempHref, temp]);
             }
           }
         }
@@ -1178,7 +1178,7 @@
       const [, href, kids] = conceptsNode;
       const list = flatAndPrune(kids, '::', ['concept'])
       if (typeof href === 'string' && IS_HTML_END.test(href) && list.length > 0) {
-        _htmlpages.push(['Concepts', href, list]);
+        _htmlPages.push(['Concepts', href, list]);
       }
     }
 
@@ -1191,7 +1191,18 @@
       const list = flatAndPrune(kids, '::', ['class', 'struct'])
       if (typeof href === 'string' && IS_HTML_END.test(href) && list.length > 0) {
         classListInserted = true;
-        _htmlpages.push(['Classes', href, list]);
+        _htmlPages.push(['Classes', href, list]);
+        //_htmlPages.push(['Classes 1', null, [
+        //  ['Empty 1', null, null],
+        //  ['Empty 2', null, null],
+        //  ['Classes 2', null, [
+        //    ['Null 1', null, null],
+        //    ['Classes', href, list],
+        //    ['Null 3', null, null],
+        //    ['Null 4', null, null]
+        //  ]],
+        //  ['Empty 4', null, null]
+        //]]);
       }
     }
 
@@ -1203,7 +1214,7 @@
       if (classHierarchyNode) {
         const [, href, kids] = classHierarchyNode;
         if (typeof href === 'string' && IS_HTML_END.test(href)) {
-          _htmlpages[_htmlpages.length - 1][2].push(['[Hierarchy]', href, null]);
+          _htmlPages[_htmlPages.length - 1][2].push(['[Hierarchy]', href, null]);
         }
       }
 
@@ -1212,7 +1223,7 @@
       if (classIndexNode) {
         const [, href, kids] = classIndexNode;
         if (typeof href === 'string' && IS_HTML_END.test(href)) {
-          _htmlpages[_htmlpages.length - 1][2].push(['[Index]', href, null]);
+          _htmlPages[_htmlPages.length - 1][2].push(['[Index]', href, null]);
         }
       }
     }
@@ -1235,7 +1246,7 @@
             let tempHref = temp[idx][1];
             temp.splice(idx, 1);
             if (typeof tempHref === 'string' && IS_HTML_END.test(tempHref) && temp.length > 0) {
-              _htmlpages.push(['Class Members', tempHref, temp]);
+              _htmlPages.push(['Class Members', tempHref, temp]);
             }
           }
         }
@@ -1248,7 +1259,7 @@
       const [, href, kids] = filesNode;
       const list = flatAndPrune(kids, '/', ['_', 'dir_'])
       if (typeof href === 'string' && IS_HTML_END.test(href) && list.length > 0) {
-        _htmlpages.push(['Files', href, list]);
+        _htmlPages.push(['Files', href, list]);
       }
     }
 
@@ -1270,7 +1281,7 @@
             let tempHref = temp[idx][1];
             temp.splice(idx, 1);
             if (typeof tempHref === 'string' && IS_HTML_END.test(tempHref) && temp.length > 0) {
-              _htmlpages.push(['File Members', tempHref, temp]);
+              _htmlPages.push(['File Members', tempHref, temp]);
             }
           }
         }
@@ -1281,10 +1292,10 @@
     // Enable below to add dummy items to the primary tree to see how it works
     // with more than 2 level deep tree structure.
     /*
-    _htmlpages.push(['Ind A Bla bla bla bla bla bla bla', null, null]);
-    _htmlpages.push(['Ind B Bla bla bla bla bla bla bla', null, null]);
+    _htmlPages.push(['Ind A Bla bla bla bla bla bla bla', null, null]);
+    _htmlPages.push(['Ind B Bla bla bla bla bla bla bla', null, null]);
 
-    _htmlpages.push([
+    _htmlPages.push([
       'Level 0',
       null,
       [
@@ -1320,16 +1331,17 @@
       ]
     ]);
 
-    _htmlpages.push(['Ind C Bla bla bla bla bla bla bla', null, null]);
+    _htmlPages.push(['Ind C Bla bla bla bla bla bla bla', null, null]);
     */
 
 
+
     // Compute whether indentation is needed
-    _htmlpagesIndented = isTreeIndented(_htmlpages);
+    _htmlpagesIndented = isTreeIndented(_htmlPages);
 
     // Save the new data
     save(KEY__GEN_DATA, window.DOXY_PLUS_DATE_TIME);
-    save(KEY__HTML_PAGES, _htmlpages);
+    save(KEY__HTML_PAGES, _htmlPages);
     save(KEY__HTML_PAGES_TREE_INDENTED, _htmlpagesIndented);
 
     //console.log(`Gen Pri Tree: Generated`);
@@ -1506,7 +1518,7 @@
       if (!isFresh) return true; // Not a fresh load: skip redirect check
 
       // Guard #2: html pages tree data must be available
-      if (!Array.isArray(_htmlpages) || !_htmlpages.length) return true; // No tree data: skip redirect
+      if (!Array.isArray(_htmlPages) || !_htmlPages.length) return true; // No tree data: skip redirect
 
       // Guard #3: only on standard navigation (ignore reloads and history traversals)
       let navType = 'navigate';
@@ -1529,7 +1541,7 @@
       if (!isLanding) return true; // Not on landing page: skip redirect
 
       // Traverse the html pages tree to find a matching HTML page in the stored URL
-      const stack = [..._htmlpages];
+      const stack = [..._htmlPages];
       while (stack.length) {
         const [, href, kids] = stack.pop();
         if (typeof href === 'string' && IS_HTML_END.test(href) && storedUrl.includes(href)) {
@@ -1571,6 +1583,19 @@
     if (con && con.parentElement) {
       const header = document.querySelector('#doc-content .header');
       if (header) {
+
+        /* Below code removes the redundent words from the header but does not work reliably */
+        /*
+        const titleEl = header.querySelector('.headertitle > .title');
+        if (titleEl) {
+          const re = /\s+(?:(?:Class|Struct|Union|Interface|Enum(?:eration)?|Namespace|Module|Concept|Package|Group|Directory|File|Page|Example|Guide|Manual|Service|Record|Category|Protocol|Type|Alias|Typedef|Define|Macro|Variable|Function|Member|Property|Signal|Slot)(?:\s+Template)?)\s+(?:Reference|Documentation)\s*$/i;
+          const original = titleEl.textContent || '';
+          const cleaned = original.replace(re, '').replace(/\s{2,}/g, ' ').trim();
+          if (cleaned !== original) titleEl.textContent = cleaned;
+          titleEl.setAttribute('title', cleaned || original);
+        }
+        */
+
         cln = header.cloneNode(true);
         cln.removeAttribute('id');
         con.parentElement.insertBefore(cln, con);
@@ -1696,19 +1721,18 @@
       line: 'dp-tree-line',
       node: 'dp-tree-node',
       link: 'dp-tree-link',
-      itemCurrent: 'dp-tree-item--current',
-      itemVisited: 'dp-tree-item--visited',
-      itemDisabled: 'dp-tree-item--disabled',
-      itemNodeOpen: 'dp-tree-item--node-open',
-      itemHasChildren: 'dp-tree-item--has-children',
-      itemHasUrl: 'dp-tree-item--has-url',
-      itemHasPageSectionId: 'dp-tree-item--has-page-section-id',
+      current: 'dp-tree-item--current',
+      visited: 'dp-tree-item--visited',
+      disabled: 'dp-tree-item--disabled',
+      expanded: 'dp-tree-item--expanded',
+      parent: 'dp-tree-item--parent',
+      section: 'dp-tree-item--section',
     };
 
     // Configurations
     const CONFIG = {
       root_cfg: {
-        data: _htmlpages,
+        data: _htmlPages,
         key: KEY__HTML_PAGES_TREE_EXPANDED_NODES,
         prefix: 'ROOT:',
         mainSet: _htmlPagesExpandedNodes,
@@ -1790,7 +1814,7 @@
 
           // Label
           if (typeof path === 'string' && path.startsWith('dp-')) {
-            li.classList.add(CLS.itemHasPageSectionId);
+            li.classList.add(CLS.section);
             const link = document.createElement('button');
             link.classList.add(CLS.link);
             link.type = 'button';
@@ -1805,12 +1829,11 @@
             link.textContent = name;
             link.title = name; // tooltip
             if (typeof path === 'string' && path.length > 0) {
-              li.classList.add(CLS.itemHasUrl);
               if (kind === 'root_cfg') link.href = DOC_ROOT + path;
               else link.href = path;
             }
             else {
-              li.classList.add(CLS.itemDisabled);
+              li.classList.add(CLS.disabled);
               link.removeAttribute('href');
               link.setAttribute('aria-disabled', 'true');
               link.setAttribute('tabindex', '-1');
@@ -1825,12 +1848,12 @@
           if (Array.isArray(kids) && kids.length) {
 
             // Itentifier for li having children
-            li.classList.add(CLS.itemHasChildren);
+            li.classList.add(CLS.parent);
 
             // Expanded/Collapsed state of item
             const isOpen = prvSet.has(id) ? !cfg.defaultOpen : cfg.defaultOpen;
             node.setAttribute('aria-expanded', String(isOpen));
-            if (isOpen) li.classList.add(CLS.itemNodeOpen);
+            if (isOpen) li.classList.add(CLS.expanded);
             cfg.setOpen(id, isOpen); // writes data for storage when cfg.saveDebounced(); is called
 
             // Child list
@@ -1873,8 +1896,11 @@
       const cfg = CONFIG[kind];
 
       // clear previous current item
-      const prev = container.querySelector(`.${CLS.itemCurrent}`);
-      if (prev) prev.classList.remove(CLS.itemCurrent);
+      const prev = container.querySelector(`.${CLS.current}`);
+      if (prev) {
+        prev.classList.remove(CLS.current);
+        if (kind !== 'root_cfg') prev.classList.add(CLS.visited);
+      }
 
       // Find new target
       const target = kind === 'root_cfg' ? window.location.href.split('#')[0] : window.location.hash;
@@ -1885,14 +1911,14 @@
         if (link.getAttribute('href') === target) {
 
           const item = link.closest(`.${CLS.item}`);
-          item.classList.add(CLS.itemCurrent);
-          item.classList.add(CLS.itemVisited);
+          item.classList.add(CLS.current);
+          item.classList.remove(CLS.visited);
 
           // expand ancestors
           let parent = item.parentElement.closest(`.${CLS.item}`);
           while (parent) {
 
-            parent.classList.add(CLS.itemNodeOpen);
+            parent.classList.add(CLS.expanded);
             const btn = parent.querySelector(`:scope > .${CLS.line} > .${CLS.node}`);
             if (btn) btn.setAttribute('aria-expanded', 'true');
 
@@ -1922,10 +1948,10 @@
       const nodeEl = evt.target.closest(`.${CLS.node}`);
       if (nodeEl) {
         const li = nodeEl.closest(`.${CLS.item}`);
-        if (!li || !li.classList.contains(CLS.itemHasChildren)) return;
+        if (!li || !li.classList.contains(CLS.parent)) return;
 
         const id = li.getAttribute('data-dp-tree-item-id');
-        const isOpen = li.classList.toggle(CLS.itemNodeOpen);
+        const isOpen = li.classList.toggle(CLS.expanded);
         nodeEl.setAttribute('aria-expanded', String(isOpen));
 
         const cfg = id && id.startsWith('ROOT:') ? CONFIG.root_cfg : CONFIG.leaf_cfg;
@@ -1939,16 +1965,13 @@
       if (!line) return;
 
       const li = line.closest(`.${CLS.item}`);
-      if (!li || li.classList.contains(CLS.itemDisabled)) return;
+      if (!li || li.classList.contains(CLS.disabled)) return;
 
       const t = line.querySelector(`.${CLS.link}`);
       if (!t) return;
 
       // 2a) Real link
       if (t.hasAttribute('href') && t.getAttribute('href') !== '#') {
-        const id = li.getAttribute('data-dp-tree-item-id');
-        if (id && id.startsWith('LEAF:'))
-          li.classList.add(CLS.itemVisited);
         t.click();               // let browser navigate
         return;
       }
@@ -1968,9 +1991,9 @@
       const result = [];
       function walk(ul) {
         for (const li of ul.querySelectorAll(`:scope > li.${CLS.item}`)) {
-          if (!li.classList.contains(CLS.itemDisabled))
+          if (!li.classList.contains(CLS.disabled))
             result.push(li);
-          if (li.classList.contains(CLS.itemHasChildren) && li.classList.contains(CLS.itemNodeOpen)) {
+          if (li.classList.contains(CLS.parent) && li.classList.contains(CLS.expanded)) {
             const childUl = li.querySelector(`:scope > ul.${CLS.list}`);
             if (childUl)
               walk(childUl);
@@ -1988,7 +2011,7 @@
 
       const focusables = getVisibleItems(leaf_pane);
       if (!Array.isArray(focusables) || focusables.length < 2) return;
-      const idx = focusables.indexOf(leaf_pane.querySelector(`.${CLS.itemCurrent}`));
+      const idx = focusables.indexOf(leaf_pane.querySelector(`.${CLS.current}`));
 
       // if there is no current item then return because we will not be able to determine up or down items
       if (idx === -1) return;
@@ -2013,13 +2036,13 @@
           evt.preventDefault();
 
           // get the hasChildren, open state and node object
-          const hasChildren = focusables[idx].classList.contains(CLS.itemHasChildren);
-          const isOpen = focusables[idx].classList.contains(CLS.itemNodeOpen);
+          const hasChildren = focusables[idx].classList.contains(CLS.parent);
+          const isOpen = focusables[idx].classList.contains(CLS.expanded);
           const node = focusables[idx].querySelector(`:scope > .${CLS.line} > .${CLS.node}`);
 
           if (hasChildren && node && !isOpen) {
             const id = focusables[idx].getAttribute('data-dp-tree-item-id');
-            focusables[idx].classList.add(CLS.itemNodeOpen);
+            focusables[idx].classList.add(CLS.expanded);
             node.setAttribute('aria-expanded', 'true');
             cfg.setOpen(id, true);
             cfg.saveDebounced();
@@ -2030,26 +2053,26 @@
           evt.preventDefault();
 
           // For the current item, check if it has children, is open and get its node and parent
-          const hasChildren = focusables[idx].classList.contains(CLS.itemHasChildren);
-          const isOpen = focusables[idx].classList.contains(CLS.itemNodeOpen);
+          const hasChildren = focusables[idx].classList.contains(CLS.parent);
+          const isOpen = focusables[idx].classList.contains(CLS.expanded);
           const parLi = focusables[idx].parentElement?.parentElement;
           const node = focusables[idx].querySelector(`:scope > .${CLS.line} > .${CLS.node}`);
 
           if (hasChildren && node && isOpen) {
             const id = focusables[idx].getAttribute('data-dp-tree-item-id');
-            focusables[idx].classList.remove(CLS.itemNodeOpen);
+            focusables[idx].classList.remove(CLS.expanded);
             node.setAttribute('aria-expanded', 'false');
             cfg.setOpen(id, false);
             cfg.saveDebounced();
           }
           else if (parLi && parLi.matches(`.${CLS.item}`)) {
-            const parHasChildren = parLi.classList.contains(CLS.itemHasChildren);
-            const parIsOpen = parLi.classList.contains(CLS.itemNodeOpen);
+            const parHasChildren = parLi.classList.contains(CLS.parent);
+            const parIsOpen = parLi.classList.contains(CLS.expanded);
             const parNode = parLi.querySelector(`:scope > .${CLS.line} > .${CLS.node}`);
 
             if (parHasChildren && parNode && parIsOpen) {
               const id = parLi.getAttribute('data-dp-tree-item-id');
-              parLi.classList.remove(CLS.itemNodeOpen);
+              parLi.classList.remove(CLS.expanded);
               parNode.setAttribute('aria-expanded', 'false');
               cfg.setOpen(id, false);
               cfg.saveDebounced();
@@ -2073,18 +2096,31 @@
       }
     }
 
+    function runAfterLayout(cb) {
+      const fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+      fontsReady.finally(() => {
+        requestAnimationFrame(() => requestAnimationFrame(cb));
+      });
+    }
+
+    function scheduleSetCurrentTreeItem(pane, key) {
+      runAfterLayout(() => setCurrentTreeItem(pane, key));
+    }
+
     if (_htmlpagesIndented) root_pane.classList.add('dp-pane-has-indented-tree');
     const rootTree = build('root_cfg');
     root_pane.appendChild(rootTree);
-    setCurrentTreeItem(root_pane, 'root_cfg');
     rootTree.addEventListener('click', clickHandler);
+    window.addEventListener('pageshow', (e) => { if (e.persisted) { scheduleSetCurrentTreeItem(root_pane, 'root_cfg'); } });
+    window.addEventListener('load', () => { scheduleSetCurrentTreeItem(root_pane, 'root_cfg'); }, { once: true });
 
     if (_pageLinks.length > 0) {
       if (isTreeIndented(_pageLinks)) leaf_pane.classList.add('dp-pane-has-indented-tree');
       const leafTree = build('leaf_cfg');
       leaf_pane.appendChild(leafTree);
-      setCurrentTreeItem(leaf_pane, 'leaf_cfg');
       leafTree.addEventListener('click', clickHandler);
+      window.addEventListener('pageshow', (e) => { if (e.persisted) { scheduleSetCurrentTreeItem(leaf_pane, 'leaf_cfg'); } });
+      window.addEventListener('load', () => { scheduleSetCurrentTreeItem(leaf_pane, 'leaf_cfg'); }, { once: true });
 
       // install the hash changed listner for the secondary tree, so that it updates the current item
       // on hash change. This way whenever hash is changed by clicking a link in secondary tree or
@@ -2154,7 +2190,7 @@
 
     // Build a set of all HTML pages seen in the _htmlPages
     const seenHtml = new Set();
-    if (Array.isArray(_htmlpages) && _htmlpages.length > 0) {
+    if (Array.isArray(_htmlPages) && _htmlPages.length > 0) {
       (function markSeen(tree) {
         // Return if tree is empty or not an array
         if (!Array.isArray(tree) || tree.length === 0) return;
@@ -2165,7 +2201,7 @@
           }
           if (Array.isArray(kids)) markSeen(kids); // Recurse into child nodes
         }
-      })(_htmlpages);
+      })(_htmlPages);
     }
 
     // Generate the default Doxygen NAVTREE for comparison
@@ -2446,8 +2482,8 @@
     get() {
       console.group('● Doxy-Plus HTML Pages Tree');
       console.log(`Displays the modified version of default Doxygen NAVTREE generated by Doxy-Plus in table format. The modified NAVTREE has streamlined, flattened entries and includes all HTML pages from the default NAVTREE—it omits duplicate entries and excludes on-page links (e.g., links to functions and variables within a class). On-page links for classes and structs are generated in the Page Links tree, which you can view using ${_consoleObjectName}.page-links_table_format or ${_consoleObjectName}.page-links_group_format.\n\nTo verify that no HTML pages are missing, use ${_consoleObjectName}.missed_html_pages.`);
-      if (_htmlpages.length > 0) {
-        printTreeTableFormat(_htmlpages);
+      if (_htmlPages.length > 0) {
+        printTreeTableFormat(_htmlPages);
       }
       else {
         console.log('Doxy-Plus HTML Pages Tree is EMPTY');
@@ -2461,8 +2497,8 @@
     get() {
       console.group('● Doxy-Plus HTML Pages Tree');
       console.log(`Displays the modified version of default Doxygen NAVTREE generated by Doxy-Plus in group format. The modified NAVTREE has streamlined, flattened entries and includes all HTML pages from the default NAVTREE—it omits duplicate entries and excludes on-page links (e.g., links to functions and variables within a class). On-page links for classes and structs are generated in the Page Links tree, which you can view using ${_consoleObjectName}.page-links_table_format or ${_consoleObjectName}.page-links_group_format.\n\nTo verify that no HTML pages are missing, use ${_consoleObjectName}.missed_html_pages.`);
-      if (_htmlpages.length > 0) {
-        printTreeGroupFormat(_htmlpages);
+      if (_htmlPages.length > 0) {
+        printTreeGroupFormat(_htmlPages);
       }
       else {
         console.log('Doxy-Plus HTML Pages Tree is EMPTY');

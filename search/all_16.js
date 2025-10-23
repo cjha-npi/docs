@@ -6,5 +6,6 @@ var searchData=
   ['_7elinkweakhost_3',['~LinkWeakHost',['../d5/d88/classnpi_1_1_link_weak_host.html#a62d7390ae25239de5f1b094811796ae2',1,'npi::LinkWeakHost']]],
   ['_7eobs_4',['~Obs',['../dd/d30/structnpi_1_1_link_host_1_1_obs.html#a9e10cc0715839c20092dfaf4e426870c',1,'npi::LinkHost::Obs']]],
   ['_7eopacityguard_5',['~OpacityGuard',['../dd/d13/structnpi_1_1_show_1_1_opacity_guard.html#a0c77517aa7f5341ade84cc8a8929fdbe',1,'npi::Show::OpacityGuard']]],
-  ['_7eshow_6',['~Show',['../d3/dc4/classnpi_1_1_show.html#a1c6decf440eadb260ca989d67bcbb30d',1,'npi::Show']]]
+  ['_7eprops_6',['~Props',['../de/d0b/structnpi_1_1_props.html#a014a206167fd9f9d536df3839d9d7c95',1,'npi::Props']]],
+  ['_7eshow_7',['~Show',['../d3/dc4/classnpi_1_1_show.html#a1c6decf440eadb260ca989d67bcbb30d',1,'npi::Show']]]
 ];

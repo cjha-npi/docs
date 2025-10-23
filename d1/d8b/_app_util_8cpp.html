@@ -142,32 +142,29 @@ $(function(){initNavTree('d1/d8b/_app_util_8cpp.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;npi/AppUtil.h&quot;</code><br />
+<code>#include &quot;npi/AppData.hpp&quot;</code><br />
+<code>#include &quot;npi/WinMsgBox.hpp&quot;</code><br />
 <code>#include &lt;QDir&gt;</code><br />
+<code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;QFileInfo&gt;</code><br />
+<code>#include &lt;QByteArray&gt;</code><br />
 <code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;combaseapi.h&gt;</code><br />
 <code>#include &lt;shlobj.h&gt;</code><br />
 <code>#include &lt;knownfolders.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AppUtil.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/da0/_app_util_8cpp__incl.svg" width="598" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/da0/_app_util_8cpp__incl.svg" width="100%" height="383"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="../../d1/d8b/_app_util_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BAppUtil_2Ecpp_7D" id="r_anonymous_5Fnamespace_7BAppUtil_2Ecpp_7D"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03.html">anonymous_namespace{AppUtil.cpp}</a></td></tr>
-<tr class="memdesc:da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows-specific routine for resolving paths. <br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a9f918755b601cf4bffca775992e6fb90" id="r_a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f918755b601cf4bffca775992e6fb90">NOMINMAX</a></td></tr>
+<tr class="memitem:a8a7c30a576d5706b6c0821834d01cbbc" id="r_a8a7c30a576d5706b6c0821834d01cbbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a7c30a576d5706b6c0821834d01cbbc">STRICT</a></td></tr>
 <tr class="memitem:ac7bef5d85e3dcd73eef56ad39ffc84a9" id="r_ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">WIN32_LEAN_AND_MEAN</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a5bca34d4144e402dfa63ba6588cfa0c3" id="r_a5bca34d4144e402dfa63ba6588cfa0c3"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03.html#a5bca34d4144e402dfa63ba6588cfa0c3">anonymous_namespace{AppUtil.cpp}::knownFolderPathWin</a> (REFKNOWNFOLDERID id) noexcept</td></tr>
-<tr class="memdesc:a5bca34d4144e402dfa63ba6588cfa0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a Windows Known Folder absolute path as a QString.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a9f918755b601cf4bffca775992e6fb90" name="a9f918755b601cf4bffca775992e6fb90"></a>
@@ -182,7 +179,23 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8a7c30a576d5706b6c0821834d01cbbc" name="a8a7c30a576d5706b6c0821834d01cbbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7c30a576d5706b6c0821834d01cbbc">&#9670;&#160;</a></span>STRICT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRICT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +211,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d1/d8b/_app_util_8cpp_source.html">AppUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +237,7 @@ Functions</h2></td></tr>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Oct 17 2025 10:21:53'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Wed Oct 22 2025 09:14:46'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

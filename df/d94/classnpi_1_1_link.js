@@ -1,8 +1,8 @@
 var classnpi_1_1_link =
 [
     [ "Link", "df/d94/classnpi_1_1_link.html#a74d402977f7d2b59da65a1e83fe229aa", null ],
-    [ "Link", "df/d94/classnpi_1_1_link.html#a9add10bd7bc69c0cb80b7f9e93a590f7", null ],
     [ "Link", "df/d94/classnpi_1_1_link.html#a2103e77dc95e940ebcbeeeb0cf7097e8", null ],
+    [ "Link", "df/d94/classnpi_1_1_link.html#a9add10bd7bc69c0cb80b7f9e93a590f7", null ],
     [ "~Link", "df/d94/classnpi_1_1_link.html#ad22b9361d27be658a456e405820be5e5", null ],
     [ "Link", "df/d94/classnpi_1_1_link.html#a9f3660a3ec705d39f4118c467d3608ef", null ],
     [ "Link", "df/d94/classnpi_1_1_link.html#a801d573a709e805a0da310b0b43701ae", null ],
@@ -33,6 +33,5 @@ var classnpi_1_1_link =
     [ "operator==", "df/d94/classnpi_1_1_link.html#a5e6cd955028110891c9771d0945fa155", null ],
     [ "operator==", "df/d94/classnpi_1_1_link.html#ad2b3fe20471dfb61c30bed9130e8e70e", null ],
     [ "swap", "df/d94/classnpi_1_1_link.html#a27a78dec1be7c921c3aac00718bc1422", null ],
-    [ "ptr_", "df/d94/classnpi_1_1_link.html#abf7eecf9a1ce30a7a4362f578e4a7f1b", null ],
-    [ "someValue_", "df/d94/classnpi_1_1_link.html#ad207fa8ceb468541bdde57abb6215e13", null ]
+    [ "ptr_", "df/d94/classnpi_1_1_link.html#abf7eecf9a1ce30a7a4362f578e4a7f1b", null ]
 ];

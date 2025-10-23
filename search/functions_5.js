@@ -17,5 +17,6 @@ var searchData=
   ['getrelativesize_5f_14',['getRelativeSize_',['../d1/da6/classnpi_1_1_font.html#a009f97e5f02eb3d37472888f3b2abde8',1,'npi::Font']]],
   ['getstyle_5f_15',['getStyle_',['../d1/da6/classnpi_1_1_font.html#a5a6a78f0ebfcfa4985eecc92c0280741',1,'npi::Font']]],
   ['getwidget_5f_16',['getWidget_',['../d3/dc4/classnpi_1_1_show.html#af567f7ef2cba0587e8a23357627b4837',1,'npi::Show']]],
-  ['group_17',['Group',['../d1/d41/structnpi_1_1_font_1_1_group.html#a96004baa0fa7835aea120155fef684b5',1,'npi::Font::Group::Group()'],['../d1/d41/structnpi_1_1_font_1_1_group.html#a4f62e94a286f85c697d358cde601bbb2',1,'npi::Font::Group::Group(const QFont &amp;font)']]]
+  ['group_17',['Group',['../d1/d41/structnpi_1_1_font_1_1_group.html#a96004baa0fa7835aea120155fef684b5',1,'npi::Font::Group::Group()'],['../d1/d41/structnpi_1_1_font_1_1_group.html#a4f62e94a286f85c697d358cde601bbb2',1,'npi::Font::Group::Group(const QFont &amp;font)']]],
+  ['guiprops_18',['GuiProps',['../d2/dd5/structnpi_1_1_gui_props.html#afa2e70a07d7e0a78501f4e6b66e5c9a5',1,'npi::GuiProps::GuiProps()=delete'],['../d2/dd5/structnpi_1_1_gui_props.html#a50ee63cb434537a13be242f4296e3f54',1,'npi::GuiProps::GuiProps(GuiProps &amp;&amp;)=delete'],['../d2/dd5/structnpi_1_1_gui_props.html#aefb749c79a1d1044b163b5f3421b0ec7',1,'npi::GuiProps::GuiProps(const GuiProps &amp;)=delete']]]
 ];

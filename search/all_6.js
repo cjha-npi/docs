@@ -19,8 +19,10 @@ var searchData=
   ['getwidget_5f_16',['getWidget_',['../d3/dc4/classnpi_1_1_show.html#af567f7ef2cba0587e8a23357627b4837',1,'npi::Show']]],
   ['green_17',['Green',['../d1/da6/classnpi_1_1_font.html#a4c87193712110a0462b9ab9d0d875684ad382816a3cbeed082c9e216e7392eed1',1,'npi::Font']]],
   ['group_18',['Group',['../d1/d41/structnpi_1_1_font_1_1_group.html',1,'npi::Font::Group'],['../d1/d41/structnpi_1_1_font_1_1_group.html#a96004baa0fa7835aea120155fef684b5',1,'npi::Font::Group::Group()'],['../d1/d41/structnpi_1_1_font_1_1_group.html#a4f62e94a286f85c697d358cde601bbb2',1,'npi::Font::Group::Group(const QFont &amp;font)']]],
-  ['groupbutton_19',['GroupButton',['../d7/d8c/namespacenpi_1_1props.html#a8640cffba980dcc9ef943317abf5137e',1,'npi::props']]],
-  ['groupbuttonsquareleft_20',['GroupButtonSquareLeft',['../d7/d8c/namespacenpi_1_1props.html#a8bbecd378241f5ef830a27625a7fe4a1',1,'npi::props']]],
-  ['groupbuttonsquareright_21',['GroupButtonSquareRight',['../d7/d8c/namespacenpi_1_1props.html#aba0927b47a49e01cfb98c9ff180bd25f',1,'npi::props']]],
-  ['guardedwid_5f_22',['guardedWid_',['../dd/d13/structnpi_1_1_show_1_1_opacity_guard.html#aeb5391d7d00bb57fa24fea9744a19e54',1,'npi::Show::OpacityGuard']]]
+  ['groupbutton_5f_19',['GroupButton_',['../d2/dd5/structnpi_1_1_gui_props.html#af83cf9817a4ea77a9b7e5bf18acae8bb',1,'npi::GuiProps']]],
+  ['groupleftbutton_5f_20',['GroupLeftButton_',['../d2/dd5/structnpi_1_1_gui_props.html#a16dcc6ba375892b867eaa52672e534db',1,'npi::GuiProps']]],
+  ['grouprightbutton_5f_21',['GroupRightButton_',['../d2/dd5/structnpi_1_1_gui_props.html#a89efd24d73da50234ca3d4eb85f10683',1,'npi::GuiProps']]],
+  ['guardedwid_5f_22',['guardedWid_',['../dd/d13/structnpi_1_1_show_1_1_opacity_guard.html#aeb5391d7d00bb57fa24fea9744a19e54',1,'npi::Show::OpacityGuard']]],
+  ['guiprops_23',['GuiProps',['../d2/dd5/structnpi_1_1_gui_props.html',1,'npi::GuiProps'],['../d2/dd5/structnpi_1_1_gui_props.html#afa2e70a07d7e0a78501f4e6b66e5c9a5',1,'npi::GuiProps::GuiProps()=delete'],['../d2/dd5/structnpi_1_1_gui_props.html#a50ee63cb434537a13be242f4296e3f54',1,'npi::GuiProps::GuiProps(GuiProps &amp;&amp;)=delete'],['../d2/dd5/structnpi_1_1_gui_props.html#aefb749c79a1d1044b163b5f3421b0ec7',1,'npi::GuiProps::GuiProps(const GuiProps &amp;)=delete']]],
+  ['guiprops_2ehpp_24',['GuiProps.hpp',['../dc/d0e/_gui_props_8hpp.html',1,'']]]
 ];

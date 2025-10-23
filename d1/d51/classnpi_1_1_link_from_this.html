@@ -209,10 +209,10 @@ class npi::LinkFromThis&lt; T &gt;</div><p>Enables objects that inherits from th
 <div class="line"><span class="keyword">auto</span> link = host.universal_()-&gt;linkFromThis_();</div>
 <div class="line"><span class="keywordflow">if</span>(link) link-&gt;hello();</div>
 <div class="ttc" id="aclassnpi_1_1_link_from_this_html_a6984c92e995d89b5b377bbe7866863ef"><div class="ttname"><a href="#a6984c92e995d89b5b377bbe7866863ef">npi::LinkFromThis::LinkFromThis</a></div><div class="ttdeci">LinkFromThis() noexcept=default</div><div class="ttdoc">Default constructor.</div></div>
-<div class="ttc" id="aclassnpi_1_1_link_from_this_html_aaf61bab6d0dd4c11669a554a173e2994"><div class="ttname"><a href="#aaf61bab6d0dd4c11669a554a173e2994">npi::LinkFromThis::LinkHost</a></div><div class="ttdeci">friend class LinkHost</div><div class="ttdoc">Friend declarations of LinkHost class.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01158">Link.hpp:1158</a></div></div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html_aaf61bab6d0dd4c11669a554a173e2994"><div class="ttname"><a href="#aaf61bab6d0dd4c11669a554a173e2994">npi::LinkFromThis::LinkHost</a></div><div class="ttdeci">friend class LinkHost</div><div class="ttdoc">Friend declarations of LinkHost class.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01224">Link.hpp:1224</a></div></div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01107">1107</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01171">1171</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6984c92e995d89b5b377bbe7866863ef" name="a6984c92e995d89b5b377bbe7866863ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6984c92e995d89b5b377bbe7866863ef">&#9670;&#160;</a></span>LinkFromThis() <span class="overload">[1/3]</span></h2>
@@ -387,9 +387,9 @@ template&lt;typename T&gt; </div>
 <p>Check whether a Link can be obtained from this object i.e. if the object is wrapped in a LinkHost. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the universal observer has not expired and the object is wrapped in a LinkHost. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01138">1138</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1138</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.expired() == <span class="keyword">false</span>; }</div>
-<div class="ttc" id="aclassnpi_1_1_link_from_this_html_a3deba1b7929e577995d9ae0db2d76d68"><div class="ttname"><a href="#a3deba1b7929e577995d9ae0db2d76d68">npi::LinkFromThis::weakUni_</a></div><div class="ttdeci">std::weak_ptr&lt; typename LinkHost&lt; T &gt;::Obs &gt; weakUni_</div><div class="ttdoc">Weak pointer to the uni_ in LinkHost.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01161">Link.hpp:1161</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01203">1203</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1203</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.expired() == <span class="keyword">false</span>; }</div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html_a3deba1b7929e577995d9ae0db2d76d68"><div class="ttname"><a href="#a3deba1b7929e577995d9ae0db2d76d68">npi::LinkFromThis::weakUni_</a></div><div class="ttdeci">std::weak_ptr&lt; typename LinkHost&lt; T &gt;::Obs &gt; weakUni_</div><div class="ttdoc">Weak pointer to the uni_ in LinkHost.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01227">Link.hpp:1227</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.</p>
 
@@ -424,13 +424,13 @@ template&lt;typename T&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>A valid Link if the universal observer exists, otherwise an empty Link.</dd></dl>
 <p>Attempts to lock the weak universal observer and returns a Link pointing to the stored ptr. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01130">1130</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1130</span>                                           {</div>
-<div class="line"><span class="lineno"> 1131</span>      <span class="keywordflow">if</span>(<span class="keyword">auto</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">uni</a> = <a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.lock())</div>
-<div class="line"><span class="lineno"> 1132</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">Link&lt;T&gt;</a>{<a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">uni</a>-&gt;ptr_};</div>
-<div class="line"><span class="lineno"> 1133</span>      <span class="keywordflow">return</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">Link&lt;T&gt;</a>{<span class="keyword">nullptr</span>};</div>
-<div class="line"><span class="lineno"> 1134</span>    }</div>
-<div class="ttc" id="aclassnpi_1_1_link_from_this_html"><div class="ttname"><a href="../../d1/d51/classnpi_1_1_link_from_this.html">npi::LinkFromThis</a></div><div class="ttdoc">Enables objects that inherits from this class to produce a Link object referencing themselves if the ...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01107">Link.hpp:1107</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01194">1194</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1195</span>    {</div>
+<div class="line"><span class="lineno"> 1196</span>      <span class="keywordflow">if</span>(<span class="keyword">auto</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">uni</a> = <a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.lock())</div>
+<div class="line"><span class="lineno"> 1197</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">Link&lt;T&gt;</a>{<a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">uni</a>-&gt;ptr_};</div>
+<div class="line"><span class="lineno"> 1198</span>      <span class="keywordflow">return</span> <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">Link&lt;T&gt;</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><span class="lineno"> 1199</span>    }</div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html"><div class="ttname"><a href="../../d1/d51/classnpi_1_1_link_from_this.html">npi::LinkFromThis</a></div><div class="ttdoc">Enables objects that inherits from this class to produce a Link object referencing themselves if the ...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01171">Link.hpp:1171</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a54645a540c21a4c01ba695594f4f9eaa">linkFromThis_()</a>, and <a class="el" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>.</p>
 
@@ -553,12 +553,12 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01150">1150</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1150</span>                                             {</div>
-<div class="line"><span class="lineno"> 1151</span>      <span class="keyword">using </span><a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">std::swap</a>;</div>
-<div class="line"><span class="lineno"> 1152</span>      <a class="code hl_friend" href="#ada683c2f744acba8c866c44ff6066613">swap</a>(*<span class="keyword">this</span>, <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">other</a>);</div>
-<div class="line"><span class="lineno"> 1153</span>    }</div>
-<div class="ttc" id="aclassnpi_1_1_link_from_this_html_ada683c2f744acba8c866c44ff6066613"><div class="ttname"><a href="#ada683c2f744acba8c866c44ff6066613">npi::LinkFromThis::swap</a></div><div class="ttdeci">friend void swap(LinkFromThis &amp;a, LinkFromThis &amp;b) noexcept</div><div class="ttdoc">Friend swap to exchange two LinkFromThis instances.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01143">Link.hpp:1143</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01216">1216</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1217</span>    {</div>
+<div class="line"><span class="lineno"> 1218</span>      <span class="keyword">using </span><a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">std::swap</a>;</div>
+<div class="line"><span class="lineno"> 1219</span>      <a class="code hl_friend" href="#ada683c2f744acba8c866c44ff6066613">swap</a>(*<span class="keyword">this</span>, <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">other</a>);</div>
+<div class="line"><span class="lineno"> 1220</span>    }</div>
+<div class="ttc" id="aclassnpi_1_1_link_from_this_html_ada683c2f744acba8c866c44ff6066613"><div class="ttname"><a href="#ada683c2f744acba8c866c44ff6066613">npi::LinkFromThis::swap</a></div><div class="ttdeci">friend void swap(LinkFromThis &amp;a, LinkFromThis &amp;b) noexcept</div><div class="ttdoc">Friend swap to exchange two LinkFromThis instances.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d4b/_link_8hpp_source.html#l01208">Link.hpp:1208</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>, and <a class="el" href="#ada683c2f744acba8c866c44ff6066613">swap</a>.</p>
 <div class="dynheader">
@@ -596,7 +596,7 @@ template&lt;typename U&gt; </div>
 
 <p>Friend declarations of LinkHost class. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01158">1158</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01224">1224</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="#aaf61bab6d0dd4c11669a554a173e2994">LinkHost</a>.</p>
 
@@ -642,11 +642,11 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01143">1143</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1143</span>                                                                {</div>
-<div class="line"><span class="lineno"> 1144</span>      <span class="keyword">using </span><a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">std::swap</a>;</div>
-<div class="line"><span class="lineno"> 1145</span>      <a class="code hl_friend" href="#ada683c2f744acba8c866c44ff6066613">swap</a>(<a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">a</a>.<a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>, <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">b</a>.<a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>);</div>
-<div class="line"><span class="lineno"> 1146</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01208">1208</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1209</span>    {</div>
+<div class="line"><span class="lineno"> 1210</span>      <span class="keyword">using </span><a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">std::swap</a>;</div>
+<div class="line"><span class="lineno"> 1211</span>      <a class="code hl_friend" href="#ada683c2f744acba8c866c44ff6066613">swap</a>(<a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">a</a>.<a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>, <a class="code hl_class" href="../../d1/d51/classnpi_1_1_link_from_this.html">b</a>.<a class="code hl_variable" href="#a3deba1b7929e577995d9ae0db2d76d68">weakUni_</a>);</div>
+<div class="line"><span class="lineno"> 1212</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a6984c92e995d89b5b377bbe7866863ef">LinkFromThis()</a>, and <a class="el" href="#ada683c2f744acba8c866c44ff6066613">swap</a>.</p>
 
@@ -679,7 +679,7 @@ template&lt;typename T&gt; </div>
 
 <p>Weak pointer to the uni_ in LinkHost. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01161">1161</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d4b/_link_8hpp_source.html#l01227">1227</a> of file <a class="el" href="../../dc/d4b/_link_8hpp_source.html">Link.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#adf1dd7b3be795b4bd7d03dc2b3a15a31">isLinkFromThisAvailable_()</a>, and <a class="el" href="#a54645a540c21a4c01ba695594f4f9eaa">linkFromThis_()</a>.</p>
 
@@ -710,7 +710,7 @@ template&lt;typename T&gt; </div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Oct 17 2025 10:21:54'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 23 2025 10:03:53'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

@@ -1,7 +1,7 @@
 <map id="AppUtil.h" name="AppUtil.h">
-<area shape="rect" id="Node000001" title="File containing ultilities applicable application&#45;wide." alt="" coords="96,5,189,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,147,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,32,94,75,90,72,130,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="171,79,248,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,29,195,72,191,75,151,32"/>
+<area shape="rect" id="Node000001" title="Application utility functions." alt="" coords="132,5,225,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,195,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,33,120,76,116,72,164,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="219,79,296,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,29,241,72,237,76,190,33"/>
 </map>

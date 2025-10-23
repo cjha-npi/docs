@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['iconname_0',['IconName',['../d7/d8c/namespacenpi_1_1props.html#a0845df52c77a29d706cb3dedd1033ecd',1,'npi::props']]],
-  ['iconnoresize_1',['IconNoResize',['../d7/d8c/namespacenpi_1_1props.html#aa79a931caf7d7986f0bfa5459b0e032f',1,'npi::props']]],
-  ['icononname_2',['IconOnName',['../d7/d8c/namespacenpi_1_1props.html#ab12191576cbc6b1933ae6c6dc0542e81',1,'npi::props']]],
+  ['iconname_5f_0',['IconName_',['../d2/dd5/structnpi_1_1_gui_props.html#a6d239e51aac9ac9d78d518c2f469280d',1,'npi::GuiProps']]],
+  ['iconnoresize_5f_1',['IconNoResize_',['../d2/dd5/structnpi_1_1_gui_props.html#af7b417a002cc33a6afd46ff6e2c2b294',1,'npi::GuiProps']]],
+  ['icononname_5f_2',['IconOnName_',['../d2/dd5/structnpi_1_1_gui_props.html#acfce0644564e9b081f380c0027c6c78f',1,'npi::GuiProps']]],
   ['italic_5f_3',['italic_',['../df/dc2/structnpi_1_1_font_1_1_style.html#a97c9409e5ddea9019242f7056c39cafd',1,'npi::Font::Style']]],
-  ['itemwidget_4',['ItemWidget',['../d7/d8c/namespacenpi_1_1props.html#ac9b9f745cf94522a482e0cc0908b84d5',1,'npi::props']]]
+  ['itemwidget_5f_4',['ItemWidget_',['../d2/dd5/structnpi_1_1_gui_props.html#a57f1d82c8f7dd55ad27161792e06fd20',1,'npi::GuiProps']]]
 ];
