@@ -853,7 +853,7 @@ body > .header {
 }
 
 /* by default the original header is hidden */
-#doc-content > .header {
+#doc-content .header {
   display: none !important;
 }
 
@@ -878,7 +878,7 @@ body .header > .headertitle > .title {
   body > .header {
     display: none !important;
   }
-  #doc-content > .header {
+  #doc-content .header {
     display: block !important;
   }
 }
