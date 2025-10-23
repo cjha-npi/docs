@@ -15,7 +15,7 @@ var searchData=
   ['show_2ehpp_12',['Show.hpp',['../d7/da8/_show_8hpp.html',1,'']]],
   ['strict_13',['STRICT',['../d9/d8e/_app_meta_8cpp.html#a8a7c30a576d5706b6c0821834d01cbbc',1,'AppMeta.cpp']]],
   ['strikeout_5f_14',['strikeout_',['../df/dc2/structnpi_1_1_font_1_1_style.html#a07a23fd4a29e69aa7e25ec2a23807b88',1,'npi::Font::Style']]],
-  ['structure_15',['Project Structure',['../index.html#autotoc_md3',1,'']]],
+  ['structure_15',['Structure',['../E:/Doxy/Main/main/README.md#autotoc_md3',1,'Project Structure'],['../index.html#autotoc_md10',1,'Project Structure']]],
   ['style_16',['Style',['../df/dc2/structnpi_1_1_font_1_1_style.html',1,'npi::Font::Style'],['../df/dc2/structnpi_1_1_font_1_1_style.html#acedc0020b6769e70e20563a63f261942',1,'npi::Font::Style::Style()=default'],['../df/dc2/structnpi_1_1_font_1_1_style.html#ab44f7c5a07929bd997203be1415732ba',1,'npi::Font::Style::Style(const bool bold, const bool italic, const bool underline, const bool overline, const bool strikeout, const QFont::Capitalization capitalization)']]],
   ['style_5f_17',['style_',['../d1/da6/classnpi_1_1_font.html#af05588e164b4b2f1838c9df350e2796e',1,'npi::Font']]],
   ['supportssharedfromthis_18',['SupportsSharedFromThis',['../de/d1c/conceptnpi_1_1_supports_shared_from_this.html',1,'npi']]],
