@@ -330,6 +330,7 @@ body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-le
 /* Combined section of Project Logo + Project Name + Project Brief on top left */
 #titlearea {
   padding: 7px 22px 7px 7px !important;
+  cursor: pointer;
 }
 
 /* Project Brief description just below Project Name on top left, next to Project Logo */

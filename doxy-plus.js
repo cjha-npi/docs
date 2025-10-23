@@ -2616,6 +2616,22 @@
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 CONSOLE OBJECT
 
+  // #region 🟩 TITLE AREA CLICK
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  async function titleAreaClick(){
+    const titleArea = await waitFor('#titlearea');
+    if(!titleArea) return;
+    titleArea.addEventListener('click', function (ev) {
+      if (ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return; // Only left-clicks with no modifier keys
+      if (ev.target.closest('a')) return; // If the user actually clicked an <a> inside, let that link work normally
+      window.location.href = DOC_ROOT + 'index.html'; // keeps history
+    });
+  }
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // #endregion 🟥 TITLE AREA CLICK
+
   // #region 🟩 DOCUMENT LOADING CALLS
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -2632,6 +2648,7 @@
     searchResultWindowObserver();   // Matches search-result window’s position/width to the search bar.
     buildTrees();                   // Builds the display trees for primary and secondary panes.
     purgeExpiredData();             // Removes any expired stored data for this origin.
+    titleAreaClick();               // Redirects to Main Page on click on title area
   }
 
   // Fires as soon as the browser has parsed the HTML and built the DOM (Document Object Model) tree — before images, 
