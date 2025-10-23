@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Main Page</title>
+<title>Main Project: Main Project</title>
 <link rel="icon" href="npi_icon.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -137,10 +137,61 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Main Project Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Main Project </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
+<p>This is the main documentation for the <b>NPI main project structure</b>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Current Components</h1>
+<ul>
+<li><b>App Meta Data</b> — Provides organization and application metadata along with directory path utilities.</li>
+<li><b>Windows Message Box Utility</b> — Lightweight wrapper around the native <span class="tt">MessageBoxW</span> API for displaying system message boxes.</li>
+<li><b>Platform Check Utility</b> — Compile-time guard ensuring Windows-only builds.</li>
+<li><b>Concepts Page</b> — Contains reusable C++20 concepts that enforce design constraints.</li>
+<li><b>GuiProps Struct</b> — Defines Qt property names used by custom <span class="tt">QProxyStyle</span> and widget rendering logic.</li>
+<li><b>Link Classes</b> — Implements a non-owning, auto-nullifying linking mechanism (similar to <span class="tt">QPointer</span> or weak references) for observer-style object tracking.</li>
+<li><b>Font Class</b> — Manages thread-safe font creation and caching for consistent application typography.</li>
+<li><b>Show Class</b> — Provides controlled show/hide animations for Qt widgets with opacity handling and optional timing customization.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Requirements</h1>
+<ul>
+<li><b>OS:</b> Windows 10 or newer (x64)</li>
+<li><b>IDE:</b> Microsoft Visual Studio Community 2022 or later</li>
+<li><b>Framework:</b> Qt 6.8.x (MSVC 64-bit)</li>
+<li><b>Language Standard:</b> C++20</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Project Structure</h1>
+<div class="fragment"><div class="line">inc/ -&gt; Public headers under the npi namespace</div>
+<div class="line">src/ -&gt; Source files</div>
+<div class="line">gui/ -&gt; GUI-related resources</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Coding Conventions</h1>
+<ul>
+<li>All <b>member variables</b> and <b>member functions</b> end with an underscore <span class="tt">_</span>.</li>
+<li><b>Static members</b> and <b>static functions</b> start with a capital letter.</li>
+<li><b>Comments:</b><ul>
+<li>ASCII-only (no Unicode symbols or smart quotes)</li>
+<li>Use <span class="tt">\brief</span> and <span class="tt">\details</span> for Doxygen descriptions</li>
+<li>Use <span class="tt">/** ... */</span> for files, classes, and structs</li>
+<li>Use <span class="tt">///</span> for functions</li>
+<li>Use <span class="tt">///&lt;</span> for single-line member documentation</li>
+<li>No Doxygen comments inside function bodies</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Documentation</h1>
+<p>This project uses <b>Doxygen</b> for code documentation. <br  />
+ If used as the Doxygen main page, ensure the following in the Doxyfile: </p><div class="fragment"><div class="line">USE_MDFILE_AS_MAINPAGE = README.md</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+License</h1>
+<p>All rights reserved by <b>npi electronics GmbH</b>. <br  />
+ Use restricted to internal development and testing purposes. </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -156,7 +207,7 @@ $(function(){initNavTree('index.html','',''); });
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 23 2025 10:03:54'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 23 2025 11:29:37'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
