@@ -2,12 +2,6 @@
 
 /* Variable names starting with --dp- are Doxy-Plus variables */
 
-/*━━━PAGE-NAV IN MOBILE VIEW━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-When using a touch screen/mobile view width desktop mode, when we resize the side
-nav the page width shrinks. This is not being done by doxy-plus or Doxygen Awesome
-theme, but rather this is done directly by Doxygen. I have tested it multiple times.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-
 /*━━━HEIGHT CALCULATION━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   svh = small viewport height (URL/bottom bars shown) → footer won’t get pushed off.
   dvh = dynamic viewport height (updates as bars hide/show) → can resize on scroll.
@@ -83,7 +77,7 @@ html {
 
   --dp-root-item-font-size: 13px;
   --dp-root-icon-font-size: 12px;
-  --dp-root-item-line-height: 22px;
+  --dp-root-item-line-height: 20px;
 
   --dp-leaf-item-font-size: 12px;
   --dp-leaf-icon-font-size: 12px;
@@ -187,6 +181,10 @@ tr.groupHeader + tr[class^="memitem"] td.memTemplParams,
 tr.groupHeader + tr td.ititle,
 tr.inherit_header + tr[class^="memitem"] td.memTemplParams {
   border-top-color: var(--separator-color);
+}
+
+.doxsection{
+  font-size: 20px;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -862,9 +860,6 @@ body > .header {
 body .header > .headertitle > .title {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-  font-family: var(--font-family-monospace) !important;
-  font-weight: unset !important;
-  font-size: 200% !important;
   text-align: center;
 }
 

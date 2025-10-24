@@ -36,16 +36,6 @@
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // #endregion
 
-// #region ⚠️ WARNING: PAGE-NAV IN MOBILE VIEW
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-//
-// When using a touch screen/mobile view width desktop mode, when we resize the side
-// nav the page width shrinks. This is not being done by doxy-plus or Doxygen Awesome
-// theme, but rather this is done directly by Doxygen. I have tested it multiple times.
-// 
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// #endregion
-
 
 // @ts-nocheck - needed, otherwise Visual Studio code 
 // complains that 'store' is not found.
@@ -2619,9 +2609,9 @@
   // #region 🟩 TITLE AREA CLICK
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  async function titleAreaClick(){
+  async function titleAreaClick() {
     const titleArea = await waitFor('#titlearea');
-    if(!titleArea) return;
+    if (!titleArea) return;
     titleArea.addEventListener('click', function (ev) {
       if (ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return; // Only left-clicks with no modifier keys
       if (ev.target.closest('a')) return; // If the user actually clicked an <a> inside, let that link work normally

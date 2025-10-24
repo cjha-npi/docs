@@ -1,4 +1,4 @@
-# Main Project
+# Main Project Documentation
 
 This is the main documentation for the **NPI main project structure**.
 
@@ -22,7 +22,7 @@ This is the main documentation for the **NPI main project structure**.
 
 ## Project Structure
 ```
-inc/ -> Public headers under the npi namespace
+inc/npi/ -> Public headers under the npi namespace
 src/ -> Source files
 gui/ -> GUI-related resources
 ```
@@ -34,7 +34,7 @@ gui/ -> GUI-related resources
 - **Comments:**
   - ASCII-only (no Unicode symbols or smart quotes)
   - Use `\brief` and `\details` for Doxygen descriptions
-  - Use `/** ... */` for files, classes, and structs
+  - Use `/** ... */` for files, classes, structs, etc.
   - Use `///` for functions
   - Use `///<` for single-line member documentation
   - No Doxygen comments inside function bodies
