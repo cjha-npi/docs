@@ -12,13 +12,7 @@ var namespacenpi =
       [ "orgDomain", "dc/dba/namespacenpi_1_1app.html#a306977cd103a3449007db1e926e213e8", null ],
       [ "orgName", "dc/dba/namespacenpi_1_1app.html#adc67984091da507784ab70eca8975491", null ]
     ] ],
-    [ "win", "d8/d8e/namespacenpi_1_1win.html", [
-      [ "abortMsgBox", "d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f", null ],
-      [ "errorMsgBox", "d8/d8e/namespacenpi_1_1win.html#a639bd096bc4de3946461923b002f80e8", null ],
-      [ "infoMsgBox", "d8/d8e/namespacenpi_1_1win.html#aff5e851b451208adfb11d4e5cb503c69", null ],
-      [ "msgBox", "d8/d8e/namespacenpi_1_1win.html#aa203e14a9085aa2fa437ea050b780b15", null ],
-      [ "warnMsgBox", "d8/d8e/namespacenpi_1_1win.html#abfb36eaebc54f2b748681c8d4acf2d57", null ]
-    ] ],
+    [ "win", "d8/d8e/namespacenpi_1_1win.html", "d8/d8e/namespacenpi_1_1win" ],
     [ "Font", "d1/da6/classnpi_1_1_font.html", "d1/da6/classnpi_1_1_font" ],
     [ "GuiProps", "d2/dd5/structnpi_1_1_gui_props.html", "d2/dd5/structnpi_1_1_gui_props" ],
     [ "Link", "df/d94/classnpi_1_1_link.html", "df/d94/classnpi_1_1_link" ],

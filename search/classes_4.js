@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['show_0',['Show',['../d3/dc4/classnpi_1_1_show.html',1,'npi']]],
-  ['style_1',['Style',['../df/dc2/structnpi_1_1_font_1_1_style.html',1,'npi::Font']]]
+  ['obs_0',['Obs',['../dd/d30/structnpi_1_1_link_host_1_1_obs.html',1,'npi::LinkHost']]],
+  ['opacityguard_1',['OpacityGuard',['../dd/d13/structnpi_1_1_show_1_1_opacity_guard.html',1,'npi::Show']]]
 ];

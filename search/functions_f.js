@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['universal_5f_0',['universal_',['../dc/d75/classnpi_1_1_link_host.html#a197108081077f9b5a7e3c6610b77673c',1,'npi::LinkHost']]]
+  ['universal_5f_0',['universal_',['../dc/d75/classnpi_1_1_link_host.html#a197108081077f9b5a7e3c6610b77673c',1,'npi::LinkHost']]],
+  ['unlock_5f_1',['unlock_',['../dd/dd6/classnpi_1_1win_1_1_mutex_locker.html#ad2f63a9b044ac392fa57cc4a9e830c0a',1,'npi::win::MutexLocker']]]
 ];

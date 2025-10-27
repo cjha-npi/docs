@@ -9,5 +9,6 @@ var files_dup =
     [ "Link.hpp", "dc/d4b/_link_8hpp.html", "dc/d4b/_link_8hpp" ],
     [ "PlatformCheck.hpp", "db/dbb/_platform_check_8hpp.html", null ],
     [ "Show.hpp", "d7/da8/_show_8hpp.html", "d7/da8/_show_8hpp" ],
-    [ "WinMsgBox.hpp", "d4/d92/_win_msg_box_8hpp.html", "d4/d92/_win_msg_box_8hpp" ]
+    [ "WinMsgBox.hpp", "d4/d92/_win_msg_box_8hpp.html", "d4/d92/_win_msg_box_8hpp" ],
+    [ "WinMutexLocker.hpp", "d8/d75/_win_mutex_locker_8hpp.html", "d8/d75/_win_mutex_locker_8hpp" ]
 ];
