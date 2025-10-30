@@ -1,0 +1,5 @@
+<map id="npi::RefPtr::operator==" name="npi::RefPtr::operator==">
+<area shape="rect" id="Node000001" title="Compare the stored pointer to a raw pointer." alt="" coords="5,5,211,31"/>
+<area shape="rect" id="Node000002" href="$d2/d0d/classnpi_1_1_ref_ptr.html#a648720bbca1c6b1ebe9e6bd14176e692" title="Retrieve a raw pointer to the managed object, if any." alt="" coords="259,5,416,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,16,251,16,251,21,210,21"/>
+</map>

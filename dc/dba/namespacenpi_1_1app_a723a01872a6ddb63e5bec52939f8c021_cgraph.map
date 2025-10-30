@@ -1,9 +1,0 @@
-<map id="npi::app::settingsMainFile" name="npi::app::settingsMainFile">
-<area shape="rect" id="Node000001" title="Absolute path of application&#39;s main settings.ini at C:\ProgramData\[orgFolder]\[appFolder]\." alt="" coords="5,20,235,46"/>
-<area shape="rect" id="Node000002" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute path to C:\ProgramData\[orgFolder]\[appFolder]." alt="" coords="283,20,520,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,30,275,30,275,36,234,36"/>
-<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute path to C:\ProgramData\[orgFolder]." alt="" coords="568,20,805,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="520,30,560,30,560,36,520,36"/>
-<area shape="rect" id="Node000004" href="$da/d8c/namespaceanonymous__namespace_02_app_util_8cpp_03.html#a5bca34d4144e402dfa63ba6588cfa0c3" title="Retrieve a Windows Known Folder absolute path as a QString." alt="" coords="853,5,1091,61"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="805,30,846,30,846,36,805,36"/>
-</map>

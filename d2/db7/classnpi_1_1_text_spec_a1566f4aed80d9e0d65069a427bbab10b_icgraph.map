@@ -1,0 +1,9 @@
+<map id="npi::TextSpec::TextSpec" name="npi::TextSpec::TextSpec">
+<area shape="rect" id="Node000001" title="Default constructor." alt="" coords="283,78,488,104"/>
+<area shape="rect" id="Node000002" href="$d2/db7/classnpi_1_1_text_spec.html#aaff1726d6ccd6f887a15bf0c5826906c" title="Set absolute point size (overrides default+relative when &gt; 0)." alt="" coords="5,5,235,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,79,202,49,204,43,325,74"/>
+<area shape="rect" id="Node000003" href="$d2/db7/classnpi_1_1_text_spec.html#a2475f96c1c94077e473ef6af6310bf1b" title="Set relative point size delta (applied to the default size)." alt="" coords="5,71,235,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="275,94,234,94,234,88,275,88"/>
+<area shape="rect" id="Node000004" href="$d2/db7/classnpi_1_1_text_spec.html#abc3d153e9b904f006fbe9bca404adf88" title="Set style." alt="" coords="13,136,227,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="318,108,180,138,179,133,317,103"/>
+</map>

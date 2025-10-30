@@ -1,16 +1,17 @@
 var searchData=
 [
-  ['setabsolutesize_5f_0',['setAbsoluteSize_',['../d1/da6/classnpi_1_1_font.html#a8fe490f75baba6a42d3ec2af23cafdf0',1,'npi::Font']]],
-  ['setappfont_5f_1',['SetAppFont_',['../d1/da6/classnpi_1_1_font.html#acf4b85782d1022df8907bdf85f7a0ca5',1,'npi::Font']]],
-  ['setcaller_5f_2',['setCaller_',['../d3/dc4/classnpi_1_1_show.html#a811f1ae90a19624d2144c062ea4d2063',1,'npi::Show']]],
-  ['setcenter_5f_3',['setCenter_',['../d3/dc4/classnpi_1_1_show.html#aec81f95def621f3c3508a623e71f0053',1,'npi::Show']]],
-  ['setduration_5f_4',['setDuration_',['../d3/dc4/classnpi_1_1_show.html#a258c46b902e4762f0003d62fca8d8ed9',1,'npi::Show']]],
-  ['seteasingcurve_5f_5',['setEasingCurve_',['../d3/dc4/classnpi_1_1_show.html#ac4aa6263ce09da73f52541fa7ff58d11',1,'npi::Show']]],
-  ['setfixfont_5f_6',['SetFixFont_',['../d1/da6/classnpi_1_1_font.html#a5c6014943c8849442e9ffeead0f8a24c',1,'npi::Font']]],
-  ['setrelativesize_5f_7',['setRelativeSize_',['../d1/da6/classnpi_1_1_font.html#a3cb8298120f9fab1c2cb1d377f8903bc',1,'npi::Font']]],
-  ['setstyle_5f_8',['setStyle_',['../d1/da6/classnpi_1_1_font.html#af6003e1e7178e7eac811cf402e949a2c',1,'npi::Font']]],
-  ['setwidget_5f_9',['setWidget_',['../d3/dc4/classnpi_1_1_show.html#a29c00dafdca31a0cbd0529b711c2195e',1,'npi::Show']]],
-  ['show_10',['Show',['../d3/dc4/classnpi_1_1_show.html#a85cc6e38a6c4ef0b43c74727a2323706',1,'npi::Show::Show()=default'],['../d3/dc4/classnpi_1_1_show.html#a80fd713a9f4d034658782d1543b824a4',1,'npi::Show::Show(QWidget *widget, QWidget *caller=nullptr, QWidget *center=nullptr)']]],
-  ['style_11',['Style',['../df/dc2/structnpi_1_1_font_1_1_style.html#acedc0020b6769e70e20563a63f261942',1,'npi::Font::Style::Style()=default'],['../df/dc2/structnpi_1_1_font_1_1_style.html#ab44f7c5a07929bd997203be1415732ba',1,'npi::Font::Style::Style(const bool bold, const bool italic, const bool underline, const bool overline, const bool strikeout, const QFont::Capitalization capitalization)']]],
-  ['swap_5f_12',['swap_',['../df/d94/classnpi_1_1_link.html#ab9ca4c8c6c150eb1d5bc0f605b5b9b0a',1,'npi::Link::swap_()'],['../dc/d75/classnpi_1_1_link_host.html#a8b5884c80f082f22913531491898c1bb',1,'npi::LinkHost::swap_()'],['../d5/d88/classnpi_1_1_link_weak_host.html#a6e37b8461b4d58b0da5d7a3268553d0e',1,'npi::LinkWeakHost::swap_()'],['../d1/d51/classnpi_1_1_link_from_this.html#a68161836b9be75447dc771bd04fd50b2',1,'npi::LinkFromThis::swap_()']]]
+  ['setabsolutesize_5f_0',['setAbsoluteSize_',['../d2/db7/classnpi_1_1_text_spec.html#aaff1726d6ccd6f887a15bf0c5826906c',1,'npi::TextSpec']]],
+  ['setappfont_5f_1',['SetAppFont_',['../d2/db7/classnpi_1_1_text_spec.html#a09ed5179c0dfd97c19b4012e63caeffb',1,'npi::TextSpec']]],
+  ['setcaller_5f_2',['setCaller_',['../dd/d55/classnpi_1_1_stage_window.html#ad284de056dd666f02f2f6e6cd62e9440',1,'npi::StageWindow']]],
+  ['setcenter_5f_3',['setCenter_',['../dd/d55/classnpi_1_1_stage_window.html#ab72f949cc428135d23f1f3ffdc29544d',1,'npi::StageWindow']]],
+  ['setduration_5f_4',['setDuration_',['../dd/d55/classnpi_1_1_stage_window.html#a14de829802d71a4a69a709da6e9caf13',1,'npi::StageWindow']]],
+  ['seteasingcurve_5f_5',['setEasingCurve_',['../dd/d55/classnpi_1_1_stage_window.html#a034f3a250a0fad76fc66a2cb7031e05a',1,'npi::StageWindow']]],
+  ['setfixfont_5f_6',['SetFixFont_',['../d2/db7/classnpi_1_1_text_spec.html#a570ca613f6c7b650e69717ff4bdd3652',1,'npi::TextSpec']]],
+  ['setrelativesize_5f_7',['setRelativeSize_',['../d2/db7/classnpi_1_1_text_spec.html#a2475f96c1c94077e473ef6af6310bf1b',1,'npi::TextSpec']]],
+  ['setstyle_5f_8',['setStyle_',['../d2/db7/classnpi_1_1_text_spec.html#abc3d153e9b904f006fbe9bca404adf88',1,'npi::TextSpec']]],
+  ['setwidget_5f_9',['setWidget_',['../dd/d55/classnpi_1_1_stage_window.html#a9ab26c7e9c7ca6511e4cdf014b74fb60',1,'npi::StageWindow']]],
+  ['stagewindow_10',['StageWindow',['../dd/d55/classnpi_1_1_stage_window.html#a9fb785ee31eae71b2660f4b9d0abfcdb',1,'npi::StageWindow::StageWindow()=default'],['../dd/d55/classnpi_1_1_stage_window.html#a0b132d7741b76b2f73a97f9d3d748abb',1,'npi::StageWindow::StageWindow(QWidget *widget, QWidget *caller=nullptr, QWidget *center=nullptr)']]],
+  ['startupfatalmessage_11',['startupFatalMessage',['../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf',1,'npi::app']]],
+  ['style_12',['Style',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#afff1c697e073cdf1953cda184e1f1627',1,'npi::TextSpec::Style::Style()=default'],['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#ac1f559902a1267dd780e9f52eb2465b4',1,'npi::TextSpec::Style::Style(const bool bold, const bool italic, const bool underline, const bool overline, const bool strikeout, const QFont::Capitalization capitalization)']]],
+  ['swap_5f_13',['swap_',['../d2/d0d/classnpi_1_1_ref_ptr.html#af4749452d7c4e7de6a866c8304b02e80',1,'npi::RefPtr::swap_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#ab0a6b68c27f39ccf89e4e53ed16da76d',1,'npi::RefPtrHost::swap_()'],['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#ae81d34352e5c3d462cc3547d23d005b8',1,'npi::RefPtrWeakHost::swap_()'],['../d8/d8d/classnpi_1_1_ref_ptr_from_this.html#abd102a680bbea83ca28f2fa8cc6acee1',1,'npi::RefPtrFromThis::swap_()']]]
 ];

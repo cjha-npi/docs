@@ -1,5 +1,0 @@
-<map id="npi::LinkHost&lt; T &gt;::Obs" name="npi::LinkHost&lt; T &gt;::Obs">
-<area shape="rect" id="Node000001" title="Inner observer type holding a type&#45;erased pointer to the object. Used to broadcast the lifetime of th..." alt="" coords="5,116,211,142"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,211,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,54,111,116,105,116,105,54"/>
-</map>

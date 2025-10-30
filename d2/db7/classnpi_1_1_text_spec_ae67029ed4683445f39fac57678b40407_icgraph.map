@@ -1,0 +1,9 @@
+<map id="npi::TextSpec::GetAppGroup_" name="npi::TextSpec::GetAppGroup_">
+<area shape="rect" id="Node000001" title="Get or create the cached Group for the application font family." alt="" coords="323,55,560,80"/>
+<area shape="rect" id="Node000002" href="$d2/db7/classnpi_1_1_text_spec.html#ad4b0ed692dc864e5a0175cf85eb84910" title="Get a configured QFont for the application font family." alt="" coords="37,5,243,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,56,218,34,219,28,355,51"/>
+<area shape="rect" id="Node000003" href="$d2/db7/classnpi_1_1_text_spec.html#a418b9bcb6a1292054de007257baffb12" title="Get QFontMetrics for the application font family." alt="" coords="9,55,271,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="315,70,271,70,271,65,315,65"/>
+<area shape="rect" id="Node000004" href="$d2/db7/classnpi_1_1_text_spec.html#ac41e847d23c1b85e83027a6f84c47eba" title="Get QFontMetricsF for the application font family." alt="" coords="5,104,275,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="355,84,219,107,218,101,354,79"/>
+</map>

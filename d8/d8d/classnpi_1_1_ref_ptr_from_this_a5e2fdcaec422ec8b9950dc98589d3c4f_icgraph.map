@@ -1,0 +1,19 @@
+<map id="npi::RefPtrFromThis::RefPtrFromThis" name="npi::RefPtrFromThis::RefPtrFromThis">
+<area shape="rect" id="Node000001" title="Default constructor." alt="" coords="448,209,749,234"/>
+<area shape="rect" id="Node000002" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#ac6b15a020ba3c9b45bb9c290cf0450bf" title="Default copy constructor." alt="" coords="227,5,400,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="578,205,503,137,453,97,399,61,372,48,375,43,401,57,456,93,506,133,581,201"/>
+<area shape="rect" id="Node000003" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#aee2ed8499aee2cad2924dbe4727f2748" title="Default move constructor." alt="" coords="227,71,400,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="565,208,399,127,368,114,370,109,401,122,567,203"/>
+<area shape="rect" id="Node000004" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a54f01c02479cfb6a446f9df076791452" title="Default destructor." alt="" coords="227,136,400,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="533,210,399,179,400,173,535,204"/>
+<area shape="rect" id="Node000005" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a9c4f1e219b4a5955faa229ff2ee6ab4d" title="Default copy assignment operator." alt="" coords="227,201,400,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="440,224,400,224,400,219,440,219"/>
+<area shape="rect" id="Node000006" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a8c6b8a2f9208fb505f202d75f5f06068" title="Default move assignment operator." alt="" coords="227,267,400,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="535,239,400,270,399,265,533,234"/>
+<area shape="rect" id="Node000007" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a559269952c68a83e865a2c8a15f8c110" title="Friend swap to exchange two RefPtrFromThis instances." alt="" coords="227,356,400,397"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="569,240,353,358,350,354,566,236"/>
+<area shape="rect" id="Node000008" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#abd102a680bbea83ca28f2fa8cc6acee1" title="Member swap function." alt="" coords="5,385,179,426"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="587,242,559,280,517,328,463,375,433,395,401,411,345,426,287,432,230,431,178,426,179,421,230,426,286,427,344,421,399,406,430,391,460,371,513,325,555,277,583,239"/>
+<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="352,350,350,344,344,339,313,335,292,337,279,342,275,348,277,355,272,357,269,347,276,337,291,331,313,329,346,334,354,341,357,348"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="219,391,179,397,178,392,219,386"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="npi::StageWindow::OpacityGuard" name="npi::StageWindow::OpacityGuard">
+<area shape="rect" id="Node000001" title="Helper for StageWindow class. A RAII guard that restores a widget&#39;s window opacity on scope exit." alt="" coords="29,101,291,127"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,179,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,38,107,57,117,75,143,99,140,103,113,79,102,59,94,40"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="203,5,256,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,40,202,79,177,103,173,99,198,75,220,37"/>
+</map>

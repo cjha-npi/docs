@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['thread_20safety_20model_0',['Thread-safety model',['../dc/d4b/_link_8hpp.html#linkFileThreadSafety',1,'']]]
+  ['usage_0',['Usage',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesUsage',1,'']]]
 ];

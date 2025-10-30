@@ -1,0 +1,27 @@
+<map id="npi::RefPtrHost::get_" name="npi::RefPtrHost::get_">
+<area shape="rect" id="Node000001" title="Retrieve the raw pointer to the hosted object." alt="" coords="600,252,789,278"/>
+<area shape="rect" id="Node000002" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#ae0a638f0e6f5e6a2afdd6a2451dc21a0" title="Internal helper to assign from another polymorphically related RefPtrHost object." alt="" coords="327,55,540,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="681,247,661,213,632,171,595,129,551,94,527,83,529,78,553,89,599,125,636,167,666,210,686,244"/>
+<area shape="rect" id="Node000005" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a0ba9792630f4de6ddc7b7d18cf65e666" title="Check whether the host owns an object." alt="" coords="323,104,544,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="676,248,624,195,589,167,551,143,522,132,524,127,553,138,592,162,628,191,680,244"/>
+<area shape="rect" id="Node000007" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a3202fadd9aa9f466ecc8ae200e0939d4" title="Inequality comparison with a null pointer." alt="" coords="315,153,552,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="665,250,613,221,551,193,512,182,514,176,553,188,616,216,668,245"/>
+<area shape="rect" id="Node000008" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#aaefadbceb6b89dc8d44e4f11ac7678f3" title="Dereference operator to obtain a reference to the hosted object." alt="" coords="319,203,548,228"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="618,253,501,231,502,226,619,248"/>
+<area shape="rect" id="Node000009" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#aa20913cc4c3579bd5b12b6f00e4af103" title="Pointer&#45;like access operator." alt="" coords="315,252,552,278"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="592,268,552,268,552,262,592,262"/>
+<area shape="rect" id="Node000010" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a6f2e6cdb8976c9ec7a54de0e0fee2166" title="Compare this RefPtrHost object to a RefPtr object for equality." alt="" coords="315,301,552,327"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="619,282,502,304,501,299,618,277"/>
+<area shape="rect" id="Node000011" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#aa0990fa292d308f6afd49d4b7dec292c" title="Compare this RefPtrHost object to another RefPtrHost object for equality." alt="" coords="315,351,552,376"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="668,284,616,314,553,342,514,353,512,348,551,337,613,309,665,280"/>
+<area shape="rect" id="Node000012" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#ab21a72707e793ccf30e1295dae353356" title="Compare to raw pointer for equality." alt="" coords="315,400,552,426"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="680,285,628,339,592,367,553,391,524,403,522,398,551,386,589,363,624,335,676,282"/>
+<area shape="rect" id="Node000013" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a068f8403d8f79dbbae4cb714178bf9a2" title="Compare the stored pointer to a null pointer." alt="" coords="315,449,552,475"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="686,286,666,320,636,362,599,405,553,440,529,452,527,447,551,436,595,401,632,359,661,317,681,283"/>
+<area shape="rect" id="Node000003" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a7923e97ede1476b9903c61e7b58badbe" title="Polymorphic converting copy constructor." alt="" coords="17,5,255,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="347,56,213,34,214,28,348,51"/>
+<area shape="rect" id="Node000004" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a3458764adfa3897ca8f73cf4bf53bc7f" title="Polymorphic assignment operator." alt="" coords="21,55,251,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="319,70,250,70,250,65,319,65"/>
+<area shape="rect" id="Node000006" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#af4ef34a478793fce20fa0c4eb5f62908" title="Explicit boolean conversion operator (e.g. if(refPtrHost){...})." alt="" coords="5,104,267,130"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="314,120,266,120,266,114,314,114"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="npi::RefPtr::RefPtr" name="npi::RefPtr::RefPtr">
+<area shape="rect" id="Node000001" title="Polymorphic non&#45;explicit converting copy constructor." alt="" coords="5,53,179,79"/>
+<area shape="rect" id="Node000002" href="$d2/d0d/classnpi_1_1_ref_ptr.html#a161a8052754985bb8024c19c06fd9206" title="Friend declarations of RefPtr class with type as U. This makes any RefPtr class object a friend of an..." alt="" coords="456,29,629,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,59,448,44,448,50,179,64"/>
+<area shape="rect" id="Node000003" href="$d2/d0d/classnpi_1_1_ref_ptr.html#a57c7b67bb988f7040bb2efa535421153" title="Internal helper to assign from another polymorphically related RefPtr object." alt="" coords="227,79,408,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="178,73,219,78,219,83,178,78"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="507,31,498,21,502,11,517,5,543,3,565,4,580,9,587,16,586,25,580,24,582,18,577,13,564,10,543,8,518,10,506,15,503,20,510,28"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="376,76,475,54,476,59,377,81"/>
+<area shape="rect" id="Node000004" href="$d2/d0d/classnpi_1_1_ref_ptr.html#a648720bbca1c6b1ebe9e6bd14176e692" title="Retrieve a raw pointer to the managed object, if any." alt="" coords="464,79,621,104"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="408,89,456,89,456,94,408,94"/>
+</map>

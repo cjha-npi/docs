@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['link_0',['Link',['../df/d94/classnpi_1_1_link.html',1,'npi']]],
-  ['linkfromthis_1',['LinkFromThis',['../d1/d51/classnpi_1_1_link_from_this.html',1,'npi']]],
-  ['linkhost_2',['LinkHost',['../dc/d75/classnpi_1_1_link_host.html',1,'npi']]],
-  ['linkweakhost_3',['LinkWeakHost',['../d5/d88/classnpi_1_1_link_weak_host.html',1,'npi']]]
+  ['obs_0',['Obs',['../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html',1,'npi::RefPtrHost']]],
+  ['opacityguard_1',['OpacityGuard',['../d5/d8d/structnpi_1_1_stage_window_1_1_opacity_guard.html',1,'npi::StageWindow']]],
+  ['orgmetadata_2',['OrgMetaData',['../d8/d1b/structnpi_1_1_org_meta_data.html',1,'npi']]]
 ];

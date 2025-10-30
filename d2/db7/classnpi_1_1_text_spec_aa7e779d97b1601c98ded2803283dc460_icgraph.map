@@ -1,0 +1,19 @@
+<map id="npi::TextSpec::Hash_" name="npi::TextSpec::Hash_">
+<area shape="rect" id="Node000001" title="Compute a hash key from style and size." alt="" coords="608,153,789,179"/>
+<area shape="rect" id="Node000002" href="$d2/db7/classnpi_1_1_text_spec.html#ae67029ed4683445f39fac57678b40407" title="Get or create the cached Group for the application font family." alt="" coords="323,80,560,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="644,154,486,108,488,103,646,149"/>
+<area shape="rect" id="Node000006" href="$d2/db7/classnpi_1_1_text_spec.html#abd759bddccb46ed2bb33efc1bd5ed111" title="Get or create the cached Group for the fixed&#45;width font family." alt="" coords="323,177,560,203"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="600,178,560,182,560,176,600,173"/>
+<area shape="rect" id="Node000003" href="$d2/db7/classnpi_1_1_text_spec.html#ad4b0ed692dc864e5a0175cf85eb84910" title="Get a configured QFont for the application font family." alt="" coords="37,5,243,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="394,80,274,45,221,34,222,28,275,40,396,75"/>
+<area shape="rect" id="Node000004" href="$d2/db7/classnpi_1_1_text_spec.html#a418b9bcb6a1292054de007257baffb12" title="Get QFontMetrics for the application font family." alt="" coords="9,55,271,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="315,85,270,81,271,76,315,80"/>
+<area shape="rect" id="Node000005" href="$d2/db7/classnpi_1_1_text_spec.html#ac41e847d23c1b85e83027a6f84c47eba" title="Get QFontMetricsF for the application font family." alt="" coords="5,104,275,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="315,106,275,109,274,103,314,100"/>
+<area shape="rect" id="Node000007" href="$d2/db7/classnpi_1_1_text_spec.html#a5f2173fd454aa62858566b5b39ea09af" title="Get a configured QFont for the fixed&#45;width font family." alt="" coords="37,153,243,179"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="314,183,242,177,242,172,315,177"/>
+<area shape="rect" id="Node000008" href="$d2/db7/classnpi_1_1_text_spec.html#af19060338032529d0dff1ed9f2d8a486" title="Get QFontMetrics for the fixed&#45;width font family." alt="" coords="9,203,271,228"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="315,203,271,207,270,202,315,198"/>
+<area shape="rect" id="Node000009" href="$d2/db7/classnpi_1_1_text_spec.html#a61ab261dda4601dbd8fe3e967f293e84" title="Get QFontMetricsF for the fixed&#45;width font family." alt="" coords="5,252,275,278"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="396,208,275,243,222,255,221,249,274,238,394,203"/>
+</map>

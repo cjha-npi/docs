@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['loc_5f_0',['loc_',['../dc/d75/classnpi_1_1_link_host.html#a6c3d4257a6136f68260f58bcc50a7d6e',1,'npi::LinkHost']]],
-  ['locked_5f_1',['locked_',['../dd/dd6/classnpi_1_1win_1_1_mutex_locker.html#a81e26d206c280c83cad621e32069b94f',1,'npi::win::MutexLocker']]]
+  ['loc_5f_0',['loc_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a9fc1e37d0c4c27bedb53e003609da598',1,'npi::RefPtrHost']]],
+  ['locked_5f_1',['locked_',['../da/d1f/classnpi_1_1_global_locker.html#a9c9022151e68b6b991be212e24b69c2b',1,'npi::GlobalLocker']]]
 ];

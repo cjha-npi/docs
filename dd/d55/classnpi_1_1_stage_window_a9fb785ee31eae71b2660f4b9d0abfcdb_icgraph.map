@@ -1,0 +1,13 @@
+<map id="npi::StageWindow::StageWindow" name="npi::StageWindow::StageWindow">
+<area shape="rect" id="Node000001" title="Default constructor." alt="" coords="315,104,568,130"/>
+<area shape="rect" id="Node000002" href="$dd/d55/classnpi_1_1_stage_window.html#ad284de056dd666f02f2f6e6cd62e9440" title="Set the caller widget (visual origin for animation)." alt="" coords="13,5,259,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="407,103,343,73,266,45,221,34,222,28,267,40,345,68,409,98"/>
+<area shape="rect" id="Node000003" href="$dd/d55/classnpi_1_1_stage_window.html#ab72f949cc428135d23f1f3ffdc29544d" title="Set the center widget (target for centering)." alt="" coords="13,55,259,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="353,105,215,83,216,78,354,100"/>
+<area shape="rect" id="Node000004" href="$dd/d55/classnpi_1_1_stage_window.html#a14de829802d71a4a69a709da6e9caf13" title="Set animation duration." alt="" coords="5,104,267,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="306,120,266,120,266,114,306,114"/>
+<area shape="rect" id="Node000005" href="$dd/d55/classnpi_1_1_stage_window.html#a034f3a250a0fad76fc66a2cb7031e05a" title="Set easing curve for the animation." alt="" coords="17,154,255,194"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="365,134,245,156,244,151,364,129"/>
+<area shape="rect" id="Node000006" href="$dd/d55/classnpi_1_1_stage_window.html#a9ab26c7e9c7ca6511e4cdf014b74fb60" title="Set the main widget to be shown." alt="" coords="13,219,259,244"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="415,136,349,173,268,209,222,221,220,216,266,204,347,168,412,131"/>
+</map>

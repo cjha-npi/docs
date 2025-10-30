@@ -1,7 +1,10 @@
 <map id="npi::app::orgPublicDocumentsDir" name="npi::app::orgPublicDocumentsDir">
-<area shape="rect" id="Node000001" title="Absolute organization&#45;level Public/Documents path." alt="" coords="5,5,275,31"/>
-<area shape="rect" id="Node000002" href="$d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f" title="Show a fatal error box and terminate the process." alt="" coords="323,5,512,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,16,315,16,315,21,275,21"/>
-<area shape="rect" id="Node000003" href="$d8/d8e/namespacenpi_1_1win.html#aa203e14a9085aa2fa437ea050b780b15" title="Show a Windows message box with custom flags." alt="" coords="560,5,709,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="512,16,552,16,552,21,512,21"/>
+<area shape="rect" id="Node000001" title="Absolute organization&#45;level Public/Documents path." alt="" coords="5,46,275,72"/>
+<area shape="rect" id="Node000002" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="339,5,568,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,44,331,36,331,41,261,49"/>
+<area shape="rect" id="Node000004" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25" title="Create subdirectory under base path." alt="" coords="323,71,584,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="266,69,315,74,315,80,266,74"/>
+<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf" title="Emergency startup fatal error message box." alt="" coords="632,46,885,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="568,35,634,43,633,48,568,41"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="584,75,628,70,628,75,584,80"/>
 </map>

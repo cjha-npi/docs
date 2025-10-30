@@ -1,15 +1,15 @@
 var annotated_dup =
 [
     [ "npi", "d6/d57/namespacenpi.html", [
-      [ "win", "d8/d8e/namespacenpi_1_1win.html", [
-        [ "MutexLocker", "dd/dd6/classnpi_1_1win_1_1_mutex_locker.html", "dd/dd6/classnpi_1_1win_1_1_mutex_locker" ]
-      ] ],
-      [ "Font", "d1/da6/classnpi_1_1_font.html", "d1/da6/classnpi_1_1_font" ],
+      [ "AppMetaData", "d8/d5a/structnpi_1_1_app_meta_data.html", "d8/d5a/structnpi_1_1_app_meta_data" ],
+      [ "GlobalLocker", "da/d1f/classnpi_1_1_global_locker.html", "da/d1f/classnpi_1_1_global_locker" ],
       [ "GuiProps", "d2/dd5/structnpi_1_1_gui_props.html", "d2/dd5/structnpi_1_1_gui_props" ],
-      [ "Link", "df/d94/classnpi_1_1_link.html", "df/d94/classnpi_1_1_link" ],
-      [ "LinkFromThis", "d1/d51/classnpi_1_1_link_from_this.html", "d1/d51/classnpi_1_1_link_from_this" ],
-      [ "LinkHost", "dc/d75/classnpi_1_1_link_host.html", "dc/d75/classnpi_1_1_link_host" ],
-      [ "LinkWeakHost", "d5/d88/classnpi_1_1_link_weak_host.html", "d5/d88/classnpi_1_1_link_weak_host" ],
-      [ "Show", "d3/dc4/classnpi_1_1_show.html", "d3/dc4/classnpi_1_1_show" ]
+      [ "OrgMetaData", "d8/d1b/structnpi_1_1_org_meta_data.html", "d8/d1b/structnpi_1_1_org_meta_data" ],
+      [ "RefPtr", "d2/d0d/classnpi_1_1_ref_ptr.html", "d2/d0d/classnpi_1_1_ref_ptr" ],
+      [ "RefPtrFromThis", "d8/d8d/classnpi_1_1_ref_ptr_from_this.html", "d8/d8d/classnpi_1_1_ref_ptr_from_this" ],
+      [ "RefPtrHost", "d6/d78/classnpi_1_1_ref_ptr_host.html", "d6/d78/classnpi_1_1_ref_ptr_host" ],
+      [ "RefPtrWeakHost", "d2/dad/classnpi_1_1_ref_ptr_weak_host.html", "d2/dad/classnpi_1_1_ref_ptr_weak_host" ],
+      [ "StageWindow", "dd/d55/classnpi_1_1_stage_window.html", "dd/d55/classnpi_1_1_stage_window" ],
+      [ "TextSpec", "d2/db7/classnpi_1_1_text_spec.html", "d2/db7/classnpi_1_1_text_spec" ]
     ] ]
 ];

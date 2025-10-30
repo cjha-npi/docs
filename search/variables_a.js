@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['maxdura_5f_0',['MaxDura_',['../d3/dc4/classnpi_1_1_show.html#ab54d91313fb44bce24784f4780a4bf5b',1,'npi::Show']]],
-  ['metrics_5f_1',['metrics_',['../d1/d41/structnpi_1_1_font_1_1_group.html#ab6c8b873d8d769f9411030c9010e9c02',1,'npi::Font::Group']]],
-  ['metricsf_5f_2',['metricsF_',['../d1/d41/structnpi_1_1_font_1_1_group.html#adc5158c802f8dc5fd412d0e36a07f9f4',1,'npi::Font::Group']]],
-  ['mindura_5f_3',['MinDura_',['../d3/dc4/classnpi_1_1_show.html#a6faba3519f1c3e2d1f157e1c994411e2',1,'npi::Show']]]
+  ['maxdura_5f_0',['MaxDura_',['../dd/d55/classnpi_1_1_stage_window.html#a038e5c28b6402238139bc813b2bfcd02',1,'npi::StageWindow']]],
+  ['metrics_5f_1',['metrics_',['../da/d3b/structnpi_1_1_text_spec_1_1_group.html#a12c3d2f76146ff1c3a44b6e6b2890166',1,'npi::TextSpec::Group']]],
+  ['metricsf_5f_2',['metricsF_',['../da/d3b/structnpi_1_1_text_spec_1_1_group.html#ac4bb39a6a0bc882e51a06ebc0d8074b3',1,'npi::TextSpec::Group']]],
+  ['mindura_5f_3',['MinDura_',['../dd/d55/classnpi_1_1_stage_window.html#a3e2f159ee259e4a38793f471e1822728',1,'npi::StageWindow']]]
 ];

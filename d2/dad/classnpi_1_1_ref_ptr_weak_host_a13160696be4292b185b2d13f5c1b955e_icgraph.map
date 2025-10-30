@@ -1,0 +1,23 @@
+<map id="npi::RefPtrWeakHost::RefPtrWeakHost" name="npi::RefPtrWeakHost::RefPtrWeakHost">
+<area shape="rect" id="Node000001" title="Default constructor." alt="" coords="448,274,749,300"/>
+<area shape="rect" id="Node000002" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a88bc4b160f1076484ef55e81e80ec59e" title="Construct a RefPtrWeakHost from a RefPtrHost." alt="" coords="227,5,400,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="583,269,554,227,512,171,459,113,398,61,376,48,378,44,402,57,463,109,516,168,559,223,587,266"/>
+<area shape="rect" id="Node000003" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#aacc16e56abd2dc628ad49c0690e9a5ef" title="Default copy constructor." alt="" coords="227,71,400,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="578,271,503,202,453,162,399,127,372,114,375,109,401,122,456,158,506,198,581,267"/>
+<area shape="rect" id="Node000004" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#af1e24fdb8fbcabe952611afdd9978969" title="Default move constructor." alt="" coords="227,136,400,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="565,273,399,192,368,179,370,174,401,187,567,268"/>
+<area shape="rect" id="Node000005" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a2b4bdcf6d5331e6f2f91683aeb1956ad" title="Default destructor." alt="" coords="227,201,400,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="533,275,399,244,400,239,535,270"/>
+<area shape="rect" id="Node000006" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a22b2c67001d01ba8dfa46435d9979ac2" title="Assign a RefPtrHost to this RefPtrWeakHost." alt="" coords="227,267,400,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="440,290,400,290,400,284,440,284"/>
+<area shape="rect" id="Node000007" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a97c4f866d02803a02289083aca7c2007" title="Default copy assignment operator." alt="" coords="227,332,400,373"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="535,304,400,335,399,330,533,299"/>
+<area shape="rect" id="Node000008" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a486dc09747b5b31999e6988c768f67b6" title="Default move assignment operator." alt="" coords="227,397,400,438"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="567,306,401,387,370,400,368,395,399,382,565,301"/>
+<area shape="rect" id="Node000009" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#aab9fd309e88746b95c8e16573faf4f39" title="Friend swap to exchange two RefPtrWeakHost instances." alt="" coords="227,487,400,527"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="578,307,502,372,402,452,348,489,345,485,398,448,498,368,575,303"/>
+<area shape="rect" id="Node000010" href="$d2/dad/classnpi_1_1_ref_ptr_weak_host.html#ae81d34352e5c3d462cc3547d23d005b8" title="Member swap function." alt="" coords="5,516,179,557"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="592,308,567,359,527,425,501,459,472,491,438,519,401,541,346,560,287,567,230,566,177,559,178,554,230,561,287,562,345,555,399,537,435,515,468,487,497,455,523,422,562,356,587,306"/>
+<area shape="poly" id="edge9_Node000009_Node000009" title=" " alt="" coords="352,480,350,475,344,470,313,465,292,467,279,472,275,478,277,486,272,488,269,477,276,468,291,462,313,460,346,465,354,471,357,479"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="219,522,179,528,178,522,219,517"/>
+</map>

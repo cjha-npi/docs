@@ -1,7 +1,10 @@
 <map id="npi::app::orgProgramDataDir" name="npi::app::orgProgramDataDir">
-<area shape="rect" id="Node000001" title="Absolute organization&#45;level ProgramData path." alt="" coords="5,5,243,31"/>
-<area shape="rect" id="Node000002" href="$d8/d8e/namespacenpi_1_1win.html#a7eb3918ab23ee7b9bd2d01911ee9913f" title="Show a fatal error box and terminate the process." alt="" coords="291,5,480,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="243,16,283,16,283,21,243,21"/>
-<area shape="rect" id="Node000003" href="$d8/d8e/namespacenpi_1_1win.html#aa203e14a9085aa2fa437ea050b780b15" title="Show a Windows message box with custom flags." alt="" coords="528,5,677,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="480,16,520,16,520,21,480,21"/>
+<area shape="rect" id="Node000001" title="Absolute organization&#45;level ProgramData path." alt="" coords="5,46,243,72"/>
+<area shape="rect" id="Node000002" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="307,5,536,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,44,299,37,299,42,239,49"/>
+<area shape="rect" id="Node000004" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25" title="Create subdirectory under base path." alt="" coords="291,71,552,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,69,283,73,283,79,242,74"/>
+<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf" title="Emergency startup fatal error message box." alt="" coords="600,46,853,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="536,35,602,43,601,48,536,41"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="552,75,596,70,596,75,552,80"/>
 </map>

@@ -1,0 +1,16 @@
+<map id="npi::RefPtrHost::assign_" name="npi::RefPtrHost::assign_">
+<area shape="rect" id="Node000001" title="Internal helper to assign from another polymorphically related RefPtrHost object." alt="" coords="5,82,219,108"/>
+<area shape="rect" id="Node000002" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980" title="Friend declarations of RefPtrHost class with type as U. This makes any RefPtrHost class object a frie..." alt="" coords="584,33,821,59"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,80,189,47,227,30,266,18,316,9,368,4,470,5,564,15,640,29,639,34,563,21,470,11,368,10,317,14,267,23,229,35,192,52,133,85"/>
+<area shape="rect" id="Node000003" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#acb32eb21f8b38a7ff7bc276d994b9e36" title="Retrieve the raw pointer to the hosted object." alt="" coords="307,33,496,59"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="187,80,317,57,318,63,188,85"/>
+<area shape="rect" id="Node000004" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a82cb63d42d8ba5ce3a610f15f7eaf682" title="Check whether two RefPtrHost instances refer to the same object and observers (universal and local)...." alt="" coords="295,82,508,108"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="218,92,287,92,287,98,218,98"/>
+<area shape="rect" id="Node000005" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#ac0de27e1bb5d320daff0aa6fa046847c" title="Friend declarations of RefPtrFromThis class." alt="" coords="267,156,536,181"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="164,105,343,151,342,156,163,111"/>
+<area shape="rect" id="Node000006" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a3fdc3c8197e33eb75b24903aa6ceaa2d" title="Reset the host, releasing the object and invalidating all links." alt="" coords="299,205,504,231"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="130,106,188,148,227,172,268,191,296,201,295,206,266,196,224,177,185,153,127,110"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="655,35,644,25,649,15,669,8,703,6,733,8,752,13,762,21,758,30,753,28,756,22,750,17,732,13,703,12,670,14,652,19,649,24,658,31"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="480,80,616,57,617,63,481,85"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="355,158,345,148,350,137,369,131,401,129,430,131,449,135,458,143,455,153,450,150,453,145,447,140,430,136,401,134,370,136,353,141,350,147,359,154"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="npi::RefPtrHost::weakHost_" name="npi::RefPtrHost::weakHost_">
+<area shape="rect" id="Node000001" title="Create a RefPtrWeakHost object i.e. weak reference to RefPtrHost. Similar to what std::weak_ptr does ..." alt="" coords="5,29,235,55"/>
+<area shape="rect" id="Node000002" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a805c9a614555902a1930ce89ff569c2f" title="Friend declarations of RefPtrWeakHost class." alt="" coords="283,29,552,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,40,275,40,275,45,234,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="370,32,359,21,364,11,384,5,417,3,447,4,466,9,475,17,472,26,467,24,470,18,464,14,446,10,417,8,385,10,368,15,364,20,374,28"/>
+</map>

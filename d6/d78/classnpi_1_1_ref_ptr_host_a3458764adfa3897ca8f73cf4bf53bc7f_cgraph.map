@@ -1,0 +1,19 @@
+<map id="npi::RefPtrHost::operator=" name="npi::RefPtrHost::operator=">
+<area shape="rect" id="Node000001" title="Polymorphic assignment operator." alt="" coords="5,53,235,79"/>
+<area shape="rect" id="Node000002" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980" title="Friend declarations of RefPtrHost class with type as U. This makes any RefPtrHost class object a frie..." alt="" coords="861,29,1099,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,53,381,42,544,33,679,30,813,33,854,34,854,39,813,38,679,36,544,38,382,47,234,58"/>
+<area shape="rect" id="Node000003" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#ae0a638f0e6f5e6a2afdd6a2451dc21a0" title="Internal helper to assign from another polymorphically related RefPtrHost object." alt="" coords="283,104,496,130"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="189,76,314,100,313,105,188,82"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="932,32,921,21,926,11,946,5,980,3,1010,4,1030,9,1039,17,1035,26,1031,24,1034,18,1027,14,1009,10,980,8,947,10,930,15,926,20,936,27"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="421,102,478,82,543,65,623,53,705,45,854,38,854,44,705,50,624,58,545,70,479,87,423,107"/>
+<area shape="rect" id="Node000004" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#acb32eb21f8b38a7ff7bc276d994b9e36" title="Retrieve the raw pointer to the hosted object." alt="" coords="584,80,773,106"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="496,105,576,99,576,104,496,111"/>
+<area shape="rect" id="Node000005" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a82cb63d42d8ba5ce3a610f15f7eaf682" title="Check whether two RefPtrHost instances refer to the same object and observers (universal and local)...." alt="" coords="572,129,785,155"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="496,123,564,129,564,135,496,129"/>
+<area shape="rect" id="Node000006" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#ac0de27e1bb5d320daff0aa6fa046847c" title="Friend declarations of RefPtrFromThis class." alt="" coords="544,203,813,228"/>
+<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="428,127,633,198,632,203,427,132"/>
+<area shape="rect" id="Node000007" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a3fdc3c8197e33eb75b24903aa6ceaa2d" title="Reset the host, releasing the object and invalidating all links." alt="" coords="576,252,781,278"/>
+<area shape="poly" id="edge10_Node000003_Node000007" title=" " alt="" coords="404,128,461,182,501,213,545,238,569,248,568,253,543,243,498,217,457,186,400,131"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="768,127,813,116,886,87,948,56,950,61,889,92,814,121,770,132"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="633,205,622,195,627,184,646,178,679,176,708,178,727,182,735,190,732,200,727,197,730,192,724,187,707,183,679,181,647,183,631,188,627,194,636,201"/>
+</map>

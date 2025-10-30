@@ -1,7 +1,0 @@
-<map id="npi::Font::appFontMetricsF_" name="npi::Font::appFontMetricsF_">
-<area shape="rect" id="Node000001" title="Get QFontMetricsF for the application font family." alt="" coords="5,5,243,31"/>
-<area shape="rect" id="Node000002" href="$d1/da6/classnpi_1_1_font.html#a7d6a887c003a914648864595d7650f76" title="Get or create the cached Group for the application font family." alt="" coords="291,5,496,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,16,283,16,283,21,242,21"/>
-<area shape="rect" id="Node000003" href="$d1/da6/classnpi_1_1_font.html#a3184648ffb7f095e15b9a5f0c72f1712" title="Compute a hash key from style and size." alt="" coords="544,5,693,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="496,16,536,16,536,21,496,21"/>
-</map>

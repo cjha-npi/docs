@@ -1,7 +1,0 @@
-<map id="npi::Link::assign_" name="npi::Link::assign_">
-<area shape="rect" id="Node000001" title="Internal helper to assign from another polymorphically related Link object." alt="" coords="235,31,400,56"/>
-<area shape="rect" id="Node000002" href="$df/d94/classnpi_1_1_link.html#a9f3660a3ec705d39f4118c467d3608ef" title="Polymorphic non&#45;explicit converting copy constructor." alt="" coords="25,5,167,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,36,166,29,167,24,228,31"/>
-<area shape="rect" id="Node000003" href="$df/d94/classnpi_1_1_link.html#acca70340de027d479c207417fcad32dd" title="Polymorphic assignment operator." alt="" coords="5,55,187,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,56,187,60,186,55,227,51"/>
-</map>

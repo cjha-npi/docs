@@ -1,0 +1,9 @@
+<map id="npi::RefPtrFromThis::swap_" name="npi::RefPtrFromThis::swap_">
+<area shape="rect" id="Node000001" title="Member swap function." alt="" coords="5,13,235,38"/>
+<area shape="rect" id="Node000002" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a5e2fdcaec422ec8b9950dc98589d3c4f" title="Default constructor." alt="" coords="504,5,677,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,10,283,7,369,4,456,7,496,10,496,16,456,12,369,9,283,12,235,16"/>
+<area shape="rect" id="Node000003" href="$d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a559269952c68a83e865a2c8a15f8c110" title="Friend swap to exchange two RefPtrFromThis instances." alt="" coords="283,45,456,86"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,36,276,48,275,53,200,41"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="455,47,496,40,497,45,456,53"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="328,46,325,36,332,27,347,21,369,19,402,24,410,30,413,37,408,39,406,33,400,29,369,24,348,26,335,31,331,37,333,45"/>
+</map>

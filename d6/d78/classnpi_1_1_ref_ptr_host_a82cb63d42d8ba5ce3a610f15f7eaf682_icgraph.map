@@ -1,0 +1,9 @@
+<map id="npi::RefPtrHost::isSame_" name="npi::RefPtrHost::isSame_">
+<area shape="rect" id="Node000001" title="Check whether two RefPtrHost instances refer to the same object and observers (universal and local)...." alt="" coords="552,31,765,56"/>
+<area shape="rect" id="Node000002" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#ae0a638f0e6f5e6a2afdd6a2451dc21a0" title="Internal helper to assign from another polymorphically related RefPtrHost object." alt="" coords="291,31,504,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="544,46,504,46,504,41,544,41"/>
+<area shape="rect" id="Node000003" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a7923e97ede1476b9903c61e7b58badbe" title="Polymorphic converting copy constructor." alt="" coords="5,5,243,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="282,36,242,32,243,26,283,30"/>
+<area shape="rect" id="Node000004" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a3458764adfa3897ca8f73cf4bf53bc7f" title="Polymorphic assignment operator." alt="" coords="9,55,239,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="283,56,239,60,238,55,283,51"/>
+</map>

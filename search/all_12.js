@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['underline_5f_0',['underline_',['../df/dc2/structnpi_1_1_font_1_1_style.html#a30d7849907826a6c6eeee5dcc6547e39',1,'npi::Font::Style']]],
-  ['uni_5f_1',['uni_',['../dc/d75/classnpi_1_1_link_host.html#a3cf308c619126e0b7f8bc337c8b049ab',1,'npi::LinkHost']]],
-  ['universal_5f_2',['universal_',['../dc/d75/classnpi_1_1_link_host.html#a197108081077f9b5a7e3c6610b77673c',1,'npi::LinkHost']]],
-  ['unlock_5f_3',['unlock_',['../dd/dd6/classnpi_1_1win_1_1_mutex_locker.html#ad2f63a9b044ac392fa57cc4a9e830c0a',1,'npi::win::MutexLocker']]],
-  ['usage_4',['Usage',['../dc/d4b/_link_8hpp.html#linkFileUsage',1,'']]]
+  ['underline_5f_0',['underline_',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#a7dcca834b67e7c0b49736138e8bae87c',1,'npi::TextSpec::Style']]],
+  ['uni_5f_1',['uni_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#ac47ae6cc3fe5b8f0b89538236dffd568',1,'npi::RefPtrHost']]],
+  ['universal_5f_2',['universal_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a8dcb9818065f7b5d7aca49ec2aab04be',1,'npi::RefPtrHost']]],
+  ['unlock_5f_3',['unlock_',['../da/d1f/classnpi_1_1_global_locker.html#a1e62b8dc3f17d2d1b98957b5dd142a26',1,'npi::GlobalLocker']]],
+  ['usage_4',['Usage',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesUsage',1,'']]]
 ];

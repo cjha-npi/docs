@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['weakloc_5f_0',['weakLoc_',['../d5/d88/classnpi_1_1_link_weak_host.html#a33e88a8ccbd91d26392b972635a7b1fa',1,'npi::LinkWeakHost']]],
-  ['weakobj_5f_1',['weakObj_',['../d5/d88/classnpi_1_1_link_weak_host.html#af6022b57d832f921515571b2244ec3cd',1,'npi::LinkWeakHost']]],
-  ['weakuni_5f_2',['weakUni_',['../d5/d88/classnpi_1_1_link_weak_host.html#a1faa5f51ebf96fc8c846926ebf4293c0',1,'npi::LinkWeakHost::weakUni_'],['../d1/d51/classnpi_1_1_link_from_this.html#a3deba1b7929e577995d9ae0db2d76d68',1,'npi::LinkFromThis::weakUni_']]],
-  ['widget_5f_3',['widget_',['../d3/dc4/classnpi_1_1_show.html#a83bd5edfd48b38afcfeb91f7632f7c02',1,'npi::Show']]]
+  ['underline_5f_0',['underline_',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#a7dcca834b67e7c0b49736138e8bae87c',1,'npi::TextSpec::Style']]],
+  ['uni_5f_1',['uni_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#ac47ae6cc3fe5b8f0b89538236dffd568',1,'npi::RefPtrHost']]]
 ];

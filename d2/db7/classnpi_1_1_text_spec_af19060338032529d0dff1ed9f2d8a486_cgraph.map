@@ -1,0 +1,7 @@
+<map id="npi::TextSpec::fixFontMetrics_" name="npi::TextSpec::fixFontMetrics_">
+<area shape="rect" id="Node000001" title="Get QFontMetrics for the fixed&#45;width font family." alt="" coords="5,5,267,31"/>
+<area shape="rect" id="Node000002" href="$d2/db7/classnpi_1_1_text_spec.html#abd759bddccb46ed2bb33efc1bd5ed111" title="Get or create the cached Group for the fixed&#45;width font family." alt="" coords="315,5,552,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,16,307,16,307,21,267,21"/>
+<area shape="rect" id="Node000003" href="$d2/db7/classnpi_1_1_text_spec.html#aa7e779d97b1601c98ded2803283dc460" title="Compute a hash key from style and size." alt="" coords="600,5,781,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="552,16,592,16,592,21,552,21"/>
+</map>

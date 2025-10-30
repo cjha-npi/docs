@@ -1,0 +1,9 @@
+<map id="npi::TextSpec::GetFixGroup_" name="npi::TextSpec::GetFixGroup_">
+<area shape="rect" id="Node000001" title="Get or create the cached Group for the fixed&#45;width font family." alt="" coords="323,55,560,80"/>
+<area shape="rect" id="Node000002" href="$d2/db7/classnpi_1_1_text_spec.html#a5f2173fd454aa62858566b5b39ea09af" title="Get a configured QFont for the fixed&#45;width font family." alt="" coords="37,5,243,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,56,218,34,219,28,355,51"/>
+<area shape="rect" id="Node000003" href="$d2/db7/classnpi_1_1_text_spec.html#af19060338032529d0dff1ed9f2d8a486" title="Get QFontMetrics for the fixed&#45;width font family." alt="" coords="9,55,271,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="315,70,271,70,271,65,315,65"/>
+<area shape="rect" id="Node000004" href="$d2/db7/classnpi_1_1_text_spec.html#a61ab261dda4601dbd8fe3e967f293e84" title="Get QFontMetricsF for the fixed&#45;width font family." alt="" coords="5,104,275,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="355,84,219,107,218,101,354,79"/>
+</map>

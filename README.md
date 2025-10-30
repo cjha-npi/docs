@@ -4,14 +4,17 @@ This is the main documentation for the **NPI main project structure**.
 
 ## Current Components
 
-- **App Meta Data** — Provides organization and application metadata along with directory path utilities.
-- **Windows Message Box Utility** — Lightweight wrapper around the native `MessageBoxW` API for displaying system message boxes.
 - **Platform Check Utility** — Compile-time guard ensuring Windows-only builds.
+- **OrgMetaData** — Organization metadata container having static constexpr members.
+- **AppMetaData** — Application metadata container having static constexpr members.
+- **startupFatalMessage Utility** — Emergency startup fatal error message box when `QApplication` may not be available.
+- **Meta Paths Utility** — Provides Organization and Application meta paths in ProgramData and Public/Documents directories.
+- **GlobalLocker** — RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.
 - **Concepts Page** — Contains reusable C++20 concepts that enforce design constraints.
 - **GuiProps Struct** — Defines Qt property names used by custom `QProxyStyle` and widget rendering logic.
-- **Link Classes** — Implements a non-owning, auto-nullifying linking mechanism (similar to `QPointer` or weak references) for observer-style object tracking.
-- **Font Class** — Manages thread-safe font creation and caching for consistent application typography.
-- **Show Class** — Provides controlled show/hide animations for Qt widgets with opacity handling and optional timing customization.
+- **StageWindow Class** — Provides controlled show/hide animations for Qt widgets with opacity handling and optional timing customization.
+- **TextSpec Class** — Manages thread-safe font creation and caching for consistent application typography.
+- **RefPtr Classes** — Implements a non-owning, auto-nullifying linking mechanism (similar to `QPointer` + `std::shared_ptr`) for observer-style object tracking.
 
 ## Requirements
 

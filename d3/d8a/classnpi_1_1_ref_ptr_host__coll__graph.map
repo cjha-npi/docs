@@ -1,0 +1,7 @@
+<map id="npi::RefPtrHost&lt; T &gt;" name="npi::RefPtrHost&lt; T &gt;">
+<area shape="rect" id="Node000001" title="A thread&#45;safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct..." alt="" coords="92,135,273,161"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,147,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,43,175,134,171,137,89,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="171,5,408,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,53,195,138,191,134,266,50"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="npi::RefPtr::swap_" name="npi::RefPtr::swap_">
+<area shape="rect" id="Node000001" title="Member swap function." alt="" coords="5,29,171,55"/>
+<area shape="rect" id="Node000002" href="$d2/d0d/classnpi_1_1_ref_ptr.html#a161a8052754985bb8024c19c06fd9206" title="Friend declarations of RefPtr class with type as U. This makes any RefPtr class object a friend of an..." alt="" coords="424,29,597,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,31,219,28,297,25,376,28,416,30,416,35,376,33,297,30,219,33,171,36"/>
+<area shape="rect" id="Node000003" href="$d2/d0d/classnpi_1_1_ref_ptr.html#a7c41e7b8deba52875b45571109c576de" title="Swap the contents of two RefPtr objects." alt="" coords="219,67,376,92"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="160,52,218,63,217,68,159,58"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="476,31,468,21,472,11,486,5,511,3,532,4,546,9,553,16,551,25,546,24,548,18,543,13,531,10,511,8,488,10,476,15,474,21,480,28"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="370,64,428,54,429,59,371,69"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="264,69,256,59,259,49,274,42,297,40,318,42,332,46,339,54,337,62,332,61,334,55,329,51,317,47,297,45,275,47,263,52,261,58,268,65"/>
+</map>

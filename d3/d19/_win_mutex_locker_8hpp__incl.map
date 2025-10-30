@@ -1,9 +1,0 @@
-<map id="WinMutexLocker.hpp" name="WinMutexLocker.hpp">
-<area shape="rect" id="Node000001" title="RAII locker for a Windows named mutex for both inter&#45;process and inter&#45;thread synchronization." alt="" coords="183,5,348,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,195,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,33,135,78,133,73,238,28"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="219,79,312,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,31,268,71,263,71,263,31"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="336,79,413,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="284,29,352,73,349,77,281,33"/>
-</map>

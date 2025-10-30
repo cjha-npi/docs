@@ -1,0 +1,19 @@
+<map id="npi::app::startupFatalMessage" name="npi::app::startupFatalMessage">
+<area shape="rect" id="Node000001" title="Emergency startup fatal error message box." alt="" coords="949,56,1203,82"/>
+<area shape="rect" id="Node000002" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="656,15,885,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="950,58,885,51,885,45,951,53"/>
+<area shape="rect" id="Node000007" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25" title="Create subdirectory under base path." alt="" coords="640,80,901,121"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="946,85,902,90,901,85,945,80"/>
+<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute organization&#45;level ProgramData path." alt="" coords="339,5,576,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="648,31,576,27,576,22,648,26"/>
+<area shape="rect" id="Node000005" href="$dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9" title="Absolute organization&#45;level Public/Documents path." alt="" coords="323,55,592,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="649,51,583,57,583,52,648,45"/>
+<area shape="rect" id="Node000004" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application&#45;level ProgramData path." alt="" coords="21,56,259,82"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="369,35,221,59,220,53,368,30"/>
+<area shape="rect" id="Node000006" href="$dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Absolute application&#45;level Public/Documents path." alt="" coords="5,105,275,131"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="369,84,221,108,220,103,368,79"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="671,81,639,70,615,57,591,45,550,34,552,28,593,40,617,52,641,65,673,76"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="632,105,483,103,322,95,223,84,223,79,323,90,483,98,632,100"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="632,89,578,83,578,78,633,84"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="679,125,592,139,501,145,410,144,247,134,247,128,410,139,501,140,592,134,678,120"/>
+</map>

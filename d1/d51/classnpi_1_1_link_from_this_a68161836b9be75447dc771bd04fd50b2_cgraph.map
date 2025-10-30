@@ -1,9 +1,0 @@
-<map id="npi::LinkFromThis::swap_" name="npi::LinkFromThis::swap_">
-<area shape="rect" id="Node000001" title="Member swap function." alt="" coords="5,13,219,38"/>
-<area shape="rect" id="Node000002" href="$d1/d51/classnpi_1_1_link_from_this.html#a6984c92e995d89b5b377bbe7866863ef" title="Default constructor." alt="" coords="520,5,693,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,14,267,11,369,8,472,11,512,14,512,19,472,16,369,13,267,16,219,19"/>
-<area shape="rect" id="Node000003" href="$d1/d51/classnpi_1_1_link_from_this.html#ada683c2f744acba8c866c44ff6066613" title="Friend swap to exchange two LinkFromThis instances." alt="" coords="267,50,472,76"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,36,273,46,272,52,200,41"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="450,48,512,38,513,43,451,53"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="331,52,322,42,326,32,343,26,369,24,393,25,409,30,416,38,414,46,409,45,411,39,406,34,392,30,369,29,344,31,330,36,328,41,335,49"/>
-</map>

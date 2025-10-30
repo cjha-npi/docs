@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['fixfont_5f_0',['fixFont_',['../d1/da6/classnpi_1_1_font.html#a00bfa2adc66981539847274f0757d875',1,'npi::Font']]],
-  ['fixfontmetrics_5f_1',['fixFontMetrics_',['../d1/da6/classnpi_1_1_font.html#a44cb4a2fef6e12f2bd74a9ff1ca261ea',1,'npi::Font']]],
-  ['fixfontmetricsf_5f_2',['fixFontMetricsF_',['../d1/da6/classnpi_1_1_font.html#abcfc8692498034d2e10e3fa81952a775',1,'npi::Font']]],
-  ['font_3',['Font',['../d1/da6/classnpi_1_1_font.html#af0f14781f8961296636b58a95af64b42',1,'npi::Font::Font()=default'],['../d1/da6/classnpi_1_1_font.html#a76e9ecda5d8f3799ae203ff606e37b5e',1,'npi::Font::Font(const Style &amp;style)'],['../d1/da6/classnpi_1_1_font.html#a20436ef7df20932d6bd51e6f8f69944c',1,'npi::Font::Font(const int absolutePointSize)'],['../d1/da6/classnpi_1_1_font.html#a57a36e38da7a46799db7d21b10a28207',1,'npi::Font::Font(const Style &amp;style, const int absolutePointSize)']]]
+  ['expired_5f_0',['expired_',['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a1742522045ed93d49f6412ba0f3081fd',1,'npi::RefPtrWeakHost']]]
 ];

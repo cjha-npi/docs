@@ -1,0 +1,17 @@
+<map id="npi::TextSpec" name="npi::TextSpec">
+<area shape="rect" id="Node000001" title="Thread&#45;safe font utility with style, sizing, and caching." alt="" coords="683,294,808,320"/>
+<area shape="rect" id="Node000002" href="$d6/de2/structnpi_1_1_text_spec_1_1_style.html" title="Object for styling flags and capitalization mode for fonts." alt="" coords="324,111,505,137"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="513,116,550,118,588,125,626,137,661,155,694,187,718,226,735,264,744,293,739,295,730,266,713,229,690,191,657,160,624,142,587,130,549,124,513,121"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="45,85,99,110"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,97,324,115,324,120,106,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,138,139,164"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="146,146,275,138,323,133,324,139,276,144,147,151"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="392,222,437,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="445,233,542,239,601,248,660,262,695,276,725,292,723,296,693,280,658,267,600,253,541,244,445,238"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="352,294,477,320"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="485,304,683,304,683,310,485,310"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="356,366,473,392"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="481,376,566,370,613,362,658,351,695,335,725,317,728,322,697,340,660,356,614,368,567,375,481,382"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="300,431,529,471"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="537,452,599,441,629,431,658,418,686,396,708,368,737,318,741,321,713,371,689,400,660,422,631,436,600,446,537,457"/>
+</map>

@@ -1,4 +1,23 @@
 var searchData=
 [
-  ['hash_5f_0',['Hash_',['../d1/da6/classnpi_1_1_font.html#a3184648ffb7f095e15b9a5f0c72f1712',1,'npi::Font']]]
+  ['get_5f_0',['get_',['../d2/d0d/classnpi_1_1_ref_ptr.html#a648720bbca1c6b1ebe9e6bd14176e692',1,'npi::RefPtr::get_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#acb32eb21f8b38a7ff7bc276d994b9e36',1,'npi::RefPtrHost::get_()']]],
+  ['getabsolutesize_5f_1',['getAbsoluteSize_',['../d2/db7/classnpi_1_1_text_spec.html#af9acbeace0b958a80e0525a11eef2020',1,'npi::TextSpec']]],
+  ['getappfonteffectivesize_5f_2',['getAppFontEffectiveSize_',['../d2/db7/classnpi_1_1_text_spec.html#ad837b4d3c7e32f59be7dfda5f28e6c6d',1,'npi::TextSpec']]],
+  ['getappgroup_5f_3',['GetAppGroup_',['../d2/db7/classnpi_1_1_text_spec.html#ae67029ed4683445f39fac57678b40407',1,'npi::TextSpec']]],
+  ['getcaller_5f_4',['getCaller_',['../dd/d55/classnpi_1_1_stage_window.html#a9a9c1fe4bff0c192b54e0c0b7d9f6a82',1,'npi::StageWindow']]],
+  ['getcenter_5f_5',['getCenter_',['../dd/d55/classnpi_1_1_stage_window.html#a89d9e55b23bd78290df114907267d8a9',1,'npi::StageWindow']]],
+  ['getcurrentappfont_5f_6',['GetCurrentAppFont_',['../d2/db7/classnpi_1_1_text_spec.html#ab906f77cb099ac0f56c4fc737169cccd',1,'npi::TextSpec']]],
+  ['getcurrentappfontsize_5f_7',['GetCurrentAppFontSize_',['../d2/db7/classnpi_1_1_text_spec.html#a62b52c56a9548339e9fa7cc3c1e33849',1,'npi::TextSpec']]],
+  ['getcurrentfixfont_5f_8',['GetCurrentFixFont_',['../d2/db7/classnpi_1_1_text_spec.html#a6641d4ba944ddfaed6559a6b970146ff',1,'npi::TextSpec']]],
+  ['getcurrentfixfontsize_5f_9',['GetCurrentFixFontSize_',['../d2/db7/classnpi_1_1_text_spec.html#a3a8221db59183612efffdb586cf426a9',1,'npi::TextSpec']]],
+  ['getduration_5f_10',['getDuration_',['../dd/d55/classnpi_1_1_stage_window.html#a552f8a5829a513db58ebe6d6890acc46',1,'npi::StageWindow']]],
+  ['geteasingcurve_5f_11',['getEasingCurve_',['../dd/d55/classnpi_1_1_stage_window.html#acbc7db6b40944831815b50fe3c1dabb9',1,'npi::StageWindow']]],
+  ['getfixfonteffectivesize_5f_12',['getFixFontEffectiveSize_',['../d2/db7/classnpi_1_1_text_spec.html#acf454ba9f8ac4e8d5226cb5e58cbdfa5',1,'npi::TextSpec']]],
+  ['getfixgroup_5f_13',['GetFixGroup_',['../d2/db7/classnpi_1_1_text_spec.html#abd759bddccb46ed2bb33efc1bd5ed111',1,'npi::TextSpec']]],
+  ['getrelativesize_5f_14',['getRelativeSize_',['../d2/db7/classnpi_1_1_text_spec.html#a6834a70707adad3b2f3b210b991a0caf',1,'npi::TextSpec']]],
+  ['getstyle_5f_15',['getStyle_',['../d2/db7/classnpi_1_1_text_spec.html#a481376550e254d3474adc49f26d84557',1,'npi::TextSpec']]],
+  ['getwidget_5f_16',['getWidget_',['../dd/d55/classnpi_1_1_stage_window.html#aa784ad3e2afa59e6259ba68bb40c3891',1,'npi::StageWindow']]],
+  ['globallocker_17',['GlobalLocker',['../da/d1f/classnpi_1_1_global_locker.html#a0a4ba0111c4d12c60e7b988be20d8641',1,'npi::GlobalLocker::GlobalLocker(const QString &amp;name)'],['../da/d1f/classnpi_1_1_global_locker.html#a2e640043c22b167049a4bed9d0127144',1,'npi::GlobalLocker::GlobalLocker(GlobalLocker &amp;&amp;other)=delete'],['../da/d1f/classnpi_1_1_global_locker.html#a0ab90fe7a35a98c43c95d536baaf91b2',1,'npi::GlobalLocker::GlobalLocker(const GlobalLocker &amp;other)=delete']]],
+  ['group_18',['Group',['../da/d3b/structnpi_1_1_text_spec_1_1_group.html#a9ef75b55ec8d59fc34af2f9d008cf0d2',1,'npi::TextSpec::Group::Group()'],['../da/d3b/structnpi_1_1_text_spec_1_1_group.html#a7f8058be4ef0d239b178fbe5f42112ae',1,'npi::TextSpec::Group::Group(const QFont &amp;font)']]],
+  ['guiprops_19',['GuiProps',['../d2/dd5/structnpi_1_1_gui_props.html#afa2e70a07d7e0a78501f4e6b66e5c9a5',1,'npi::GuiProps::GuiProps()=delete'],['../d2/dd5/structnpi_1_1_gui_props.html#a50ee63cb434537a13be242f4296e3f54',1,'npi::GuiProps::GuiProps(GuiProps &amp;&amp;)=delete'],['../d2/dd5/structnpi_1_1_gui_props.html#aefb749c79a1d1044b163b5f3421b0ec7',1,'npi::GuiProps::GuiProps(const GuiProps &amp;)=delete']]]
 ];

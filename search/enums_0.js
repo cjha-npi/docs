@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['color_0',['Color',['../d1/da6/classnpi_1_1_font.html#a4c87193712110a0462b9ab9d0d875684',1,'npi::Font']]]
+  ['color_0',['Color',['../d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8b',1,'npi::TextSpec']]]
 ];

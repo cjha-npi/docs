@@ -1,0 +1,11 @@
+<map id="npi::GlobalLocker::GlobalLocker" name="npi::GlobalLocker::GlobalLocker">
+<area shape="rect" id="Node000001" title="Create or open a session&#45;local named mutex and acquire it." alt="" coords="227,112,496,137"/>
+<area shape="rect" id="Node000002" href="$da/d1f/classnpi_1_1_global_locker.html#a0ab90fe7a35a98c43c95d536baaf91b2" title="Deleted Copy Constructor." alt="" coords="5,5,179,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="317,111,147,48,149,43,319,106"/>
+<area shape="rect" id="Node000003" href="$da/d1f/classnpi_1_1_global_locker.html#a2e640043c22b167049a4bed9d0127144" title="Deleted Move Constructor." alt="" coords="5,71,179,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="249,113,178,104,179,99,250,108"/>
+<area shape="rect" id="Node000004" href="$da/d1f/classnpi_1_1_global_locker.html#ae848280cb08897d1495bc16b3986b718" title="Deleted Copy Assignment." alt="" coords="5,136,179,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="245,141,179,149,178,143,245,135"/>
+<area shape="rect" id="Node000005" href="$da/d1f/classnpi_1_1_global_locker.html#ac0002ff2d39625bca15c1fe4cc6e771a" title="Deleted Move Assignment." alt="" coords="5,201,179,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="318,142,150,204,148,199,317,137"/>
+</map>

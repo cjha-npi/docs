@@ -1,0 +1,7 @@
+<map id="npi::RefPtrHost::operator bool" name="npi::RefPtrHost::operator bool">
+<area shape="rect" id="Node000001" title="Explicit boolean conversion operator (e.g. if(refPtrHost){...})." alt="" coords="5,5,267,31"/>
+<area shape="rect" id="Node000002" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#a0ba9792630f4de6ddc7b7d18cf65e666" title="Check whether the host owns an object." alt="" coords="315,5,536,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,16,307,16,307,21,266,21"/>
+<area shape="rect" id="Node000003" href="$d6/d78/classnpi_1_1_ref_ptr_host.html#acb32eb21f8b38a7ff7bc276d994b9e36" title="Retrieve the raw pointer to the hosted object." alt="" coords="584,5,773,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="536,16,576,16,576,21,536,21"/>
+</map>
