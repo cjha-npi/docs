@@ -149,12 +149,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:a40a2a28831f2f410c995f0657baf6544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute application-level ProgramData path.  <br /></td></tr>
 <tr class="memitem:aff4c7482e4417f59ede04e359548a542" id="r_aff4c7482e4417f59ede04e359548a542"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir</a> () noexcept</td></tr>
 <tr class="memdesc:aff4c7482e4417f59ede04e359548a542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute application-level Public/Documents path.  <br /></td></tr>
+<tr class="memitem:a30b5245afa890e98f19f43c58f29e633" id="r_a30b5245afa890e98f19f43c58f29e633"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30b5245afa890e98f19f43c58f29e633">nativeFatalMessage</a> (const QString &amp;title, const QString &amp;msg) noexcept</td></tr>
+<tr class="memdesc:a30b5245afa890e98f19f43c58f29e633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows native fatal error message box.  <br /></td></tr>
 <tr class="memitem:a30836be8b9337a64733a6e05594b23c8" id="r_a30836be8b9337a64733a6e05594b23c8"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir</a> () noexcept</td></tr>
 <tr class="memdesc:a30836be8b9337a64733a6e05594b23c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute organization-level ProgramData path.  <br /></td></tr>
 <tr class="memitem:ac0dca24602a75822c6f7fcf63f8781d9" id="r_ac0dca24602a75822c6f7fcf63f8781d9"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir</a> () noexcept</td></tr>
 <tr class="memdesc:ac0dca24602a75822c6f7fcf63f8781d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute organization-level Public/Documents path.  <br /></td></tr>
-<tr class="memitem:a9f6fcbf29fc09e84fd4f574b3eae5fdf" id="r_a9f6fcbf29fc09e84fd4f574b3eae5fdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f6fcbf29fc09e84fd4f574b3eae5fdf">startupFatalMessage</a> (const QString &amp;title, const QString &amp;msg) noexcept</td></tr>
-<tr class="memdesc:a9f6fcbf29fc09e84fd4f574b3eae5fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emergency startup fatal error message box.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common namespace for application data and utilities. </p>
@@ -285,6 +285,65 @@ Here is the call graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_aff4c7482e4417f59ede04e359548a542_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a30b5245afa890e98f19f43c58f29e633" name="a30b5245afa890e98f19f43c58f29e633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b5245afa890e98f19f43c58f29e633">&#9670;&#160;</a></span>nativeFatalMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npi::app::nativeFatalMessage </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Windows native fatal error message box. </p>
+<p>This function displays a modal Windows-based message box for use when <span class="tt">QApplication</span> might not be available, e.g., during application startup fatal errors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>The title of the message box, "[AppName] Fatal Error:" is prepended to this. </td></tr>
+    <tr><td class="paramname">msg</td><td>The message to display in the message box. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function does not return; it calls <span class="tt">std::abort()</span> after displaying the message box which leads to abnormal program termination. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9c/_native_fatal_message_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d9/d9c/_native_fatal_message_8hpp_source.html">NativeFatalMessage.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>  {</div>
+<div class="line"><span class="lineno">   46</span>    QString fullTitle = QString::fromLatin1(<a class="code hl_variable" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>) + QStringLiteral(<span class="stringliteral">&quot; Fatal Error&quot;</span>);</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span>(!title.isEmpty())</div>
+<div class="line"><span class="lineno">   48</span>      fullTitle.append(QStringLiteral(<span class="stringliteral">&quot;: &quot;</span>)).append(title);</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keyword">const</span> std::wstring t = fullTitle.toStdWString();</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keyword">const</span> std::wstring m = msg.toStdWString();</div>
+<div class="line"><span class="lineno">   51</span>    ::MessageBoxW(<span class="keyword">nullptr</span>, m.c_str(), t.c_str(), MB_OK | MB_ICONERROR | MB_TOPMOST | MB_SETFOREGROUND);</div>
+<div class="line"><span class="lineno">   52</span>    std::abort();</div>
+<div class="line"><span class="lineno">   53</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47">anonymous_namespace{MetaPaths.cpp}::basePath()</a>, and <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30b5245afa890e98f19f43c58f29e633_icgraph.svg" width="100%" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -433,65 +492,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a9f6fcbf29fc09e84fd4f574b3eae5fdf" name="a9f6fcbf29fc09e84fd4f574b3eae5fdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f6fcbf29fc09e84fd4f574b3eae5fdf">&#9670;&#160;</a></span>startupFatalMessage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void npi::app::startupFatalMessage </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Emergency startup fatal error message box. </p>
-<p>This function displays a modal Windows-based message box for use during application startup fatal errors. Since during startup the QApplication and logging functionality may not yet be initialized, this function uses the Windows API directly to show the message box. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">title</td><td>The title of the message box, "[AppName] Fatal Error:" is prepended to this. </td></tr>
-    <tr><td class="paramname">msg</td><td>The message to display in the message box. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function does not return; it calls <span class="tt">std::abort()</span> after displaying the message box which leads to abnormal program termination. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d4/d6e/_startup_fatal_message_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d4/d6e/_startup_fatal_message_8hpp_source.html">StartupFatalMessage.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>  {</div>
-<div class="line"><span class="lineno">   48</span>    QString fullTitle = QString::fromLatin1(<a class="code hl_variable" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>) + QStringLiteral(<span class="stringliteral">&quot; Fatal Error&quot;</span>);</div>
-<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span>(!title.isEmpty())</div>
-<div class="line"><span class="lineno">   50</span>      fullTitle.append(QStringLiteral(<span class="stringliteral">&quot;: &quot;</span>)).append(title);</div>
-<div class="line"><span class="lineno">   51</span>    <span class="keyword">const</span> std::wstring t = fullTitle.toStdWString();</div>
-<div class="line"><span class="lineno">   52</span>    <span class="keyword">const</span> std::wstring m = msg.toStdWString();</div>
-<div class="line"><span class="lineno">   53</span>    ::MessageBoxW(<span class="keyword">nullptr</span>, m.c_str(), t.c_str(), MB_OK | MB_ICONERROR | MB_TOPMOST | MB_SETFOREGROUND);</div>
-<div class="line"><span class="lineno">   54</span>    std::abort();</div>
-<div class="line"><span class="lineno">   55</span>  }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47">anonymous_namespace{MetaPaths.cpp}::basePath()</a>, and <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a9f6fcbf29fc09e84fd4f574b3eae5fdf_icgraph.svg" width="100%" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -514,7 +514,7 @@ Here is the caller graph for this function:</div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 11:58:08'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 15:16:57'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

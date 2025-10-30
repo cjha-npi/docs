@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: StartupFatalMessage.hpp Source File</title>
+<title>Main Project: NativeFatalMessage.hpp Source File</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -110,7 +110,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('d4/d6e/_startup_fatal_message_8hpp_source.html','../../',''); });
+$(function(){initNavTree('d9/d9c/_native_fatal_message_8hpp_source.html','../../',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -136,14 +136,14 @@ $(function(){initNavTree('d4/d6e/_startup_fatal_message_8hpp_source.html','../..
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">StartupFatalMessage.hpp</div></div>
+  <div class="headertitle"><div class="title">NativeFatalMessage.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/d6e/_startup_fatal_message_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* \file StartupFatalMessage.hpp</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">* \brief File containing startup fatal error message box for emergency use.</span></div>
+<a href="../../d9/d9c/_native_fatal_message_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* \file NativeFatalMessage.hpp</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">* \brief File containing Windows native fatal error message box for emergency use.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">* \details This header defines a function to display a Windows-based</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* message box for use during application startup fatal errors.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">* message box for fatal errors when `QApplication` might not be available.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
@@ -151,10 +151,10 @@ $(function(){initNavTree('d4/d6e/_startup_fatal_message_8hpp_source.html','../..
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;npi/PlatformCheck.hpp&quot;</span> <span class="comment">// Check for Windows target.</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef NOMINMAX</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d4/d6e/_startup_fatal_message_8hpp.html#a9f918755b601cf4bffca775992e6fb90">   13</a></span><span class="preprocessor">  #define NOMINMAX</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d9/d9c/_native_fatal_message_8hpp.html#a9f918755b601cf4bffca775992e6fb90">   13</a></span><span class="preprocessor">  #define NOMINMAX</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifndef WIN32_LEAN_AND_MEAN</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d4/d6e/_startup_fatal_message_8hpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9">   16</a></span><span class="preprocessor">  #define WIN32_LEAN_AND_MEAN</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d9/d9c/_native_fatal_message_8hpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9">   16</a></span><span class="preprocessor">  #define WIN32_LEAN_AND_MEAN</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -174,31 +174,29 @@ $(function(){initNavTree('d4/d6e/_startup_fatal_message_8hpp_source.html','../..
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/dba/namespacenpi_1_1app.html">npi::app</a></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{<span class="comment"></span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">  /// \brief Emergency startup fatal error message box.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">  /// \brief Windows native fatal error message box.</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">  /// \details This function displays a modal Windows-based message box</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">  /// for use during application startup fatal errors. Since during</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">  /// startup the QApplication and logging functionality may not yet</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">  /// be initialized, this function uses the Windows API directly to</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">  /// show the message box.</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">  /// \param title The title of the message box, &quot;[AppName] Fatal Error:&quot; is prepended to this.</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">  /// \param msg The message to display in the message box.</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">  /// \warning This function does not return; it calls `std::abort()` after</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">  /// displaying the message box which leads to abnormal program termination.</span></div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">   46</a></span>  [[noreturn]] <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">startupFatalMessage</a>(<span class="keyword">const</span> QString&amp; title, <span class="keyword">const</span> QString&amp; msg) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    QString fullTitle = QString::fromLatin1(<a class="code hl_variable" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>) + QStringLiteral(<span class="stringliteral">&quot; Fatal Error&quot;</span>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span>(!title.isEmpty())</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      fullTitle.append(QStringLiteral(<span class="stringliteral">&quot;: &quot;</span>)).append(title);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> std::wstring t = fullTitle.toStdWString();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> std::wstring m = msg.toStdWString();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    ::MessageBoxW(<span class="keyword">nullptr</span>, m.c_str(), t.c_str(), MB_OK | MB_ICONERROR | MB_TOPMOST | MB_SETFOREGROUND);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::abort();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">  /// for use when `QApplication` might not be available, e.g.,</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">  /// during application startup fatal errors.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">  /// \param title The title of the message box, &quot;[AppName] Fatal Error:&quot; is prepended to this.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">  /// \param msg The message to display in the message box.</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">  /// \warning This function does not return; it calls `std::abort()` after</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">  /// displaying the message box which leads to abnormal program termination.</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">   44</a></span>  [[noreturn]] <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">nativeFatalMessage</a>(<span class="keyword">const</span> QString&amp; title, <span class="keyword">const</span> QString&amp; msg) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    QString fullTitle = QString::fromLatin1(<a class="code hl_variable" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>) + QStringLiteral(<span class="stringliteral">&quot; Fatal Error&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span>(!title.isEmpty())</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      fullTitle.append(QStringLiteral(<span class="stringliteral">&quot;: &quot;</span>)).append(title);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> std::wstring t = fullTitle.toStdWString();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> std::wstring m = msg.toStdWString();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    ::MessageBoxW(<span class="keyword">nullptr</span>, m.c_str(), t.c_str(), MB_OK | MB_ICONERROR | MB_TOPMOST | MB_SETFOREGROUND);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::abort();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <span class="comment">// namespace npi::app</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace npi::app</span></div>
 <div class="ttc" id="anamespacenpi_1_1app_html"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html">npi::app</a></div><div class="ttdoc">Common namespace for application data and utilities.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00160">MetaPaths.cpp:161</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a9f6fcbf29fc09e84fd4f574b3eae5fdf"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">npi::app::startupFatalMessage</a></div><div class="ttdeci">void startupFatalMessage(const QString &amp;title, const QString &amp;msg) noexcept</div><div class="ttdoc">Emergency startup fatal error message box.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">StartupFatalMessage.hpp:46</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a30b5245afa890e98f19f43c58f29e633"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a></div><div class="ttdeci">void nativeFatalMessage(const QString &amp;title, const QString &amp;msg) noexcept</div><div class="ttdoc">Windows native fatal error message box.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">NativeFatalMessage.hpp:44</a></div></div>
 <div class="ttc" id="astructnpi_1_1_app_meta_data_html_ac0d2d06cd6827abbd4a30043c88429e7"><div class="ttname"><a href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a></div><div class="ttdeci">static constexpr QLatin1StringView Name_</div><div class="ttdoc">Application display name.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d6f/_app_meta_data_8hpp_source.html#l00033">AppMetaData.hpp:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -207,7 +205,7 @@ $(function(){initNavTree('d4/d6e/_startup_fatal_message_8hpp_source.html','../..
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../d4/d6e/_startup_fatal_message_8hpp.html">StartupFatalMessage.hpp</a></li>
+    <li class="navelem"><a href="../../d9/d9c/_native_fatal_message_8hpp.html">NativeFatalMessage.hpp</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>
@@ -215,7 +213,7 @@ $(function(){initNavTree('d4/d6e/_startup_fatal_message_8hpp_source.html','../..
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 11:58:04'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 15:16:56'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

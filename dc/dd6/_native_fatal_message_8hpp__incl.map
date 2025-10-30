@@ -1,5 +1,5 @@
-<map id="StartupFatalMessage.hpp" name="StartupFatalMessage.hpp">
-<area shape="rect" id="Node000001" title="File containing startup fatal error message box for emergency use." alt="" coords="316,5,521,31"/>
+<map id="NativeFatalMessage.hpp" name="NativeFatalMessage.hpp">
+<area shape="rect" id="Node000001" title="File containing Windows native fatal error message box for emergency use." alt="" coords="320,5,517,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,195,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="368,34,160,80,159,75,367,28"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="219,79,312,105"/>

@@ -1,9 +1,9 @@
-<map id="npi::app::startupFatalMessage" name="npi::app::startupFatalMessage">
-<area shape="rect" id="Node000001" title="Emergency startup fatal error message box." alt="" coords="949,56,1203,82"/>
+<map id="npi::app::nativeFatalMessage" name="npi::app::nativeFatalMessage">
+<area shape="rect" id="Node000001" title="Windows native fatal error message box." alt="" coords="949,56,1195,82"/>
 <area shape="rect" id="Node000002" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="656,15,885,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="950,58,885,51,885,45,951,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="948,58,885,51,886,45,948,52"/>
 <area shape="rect" id="Node000007" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25" title="Create subdirectory under base path." alt="" coords="640,80,901,121"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="946,85,902,90,901,85,945,80"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="943,85,901,90,901,84,943,80"/>
 <area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute organization&#45;level ProgramData path." alt="" coords="339,5,576,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="648,31,576,27,576,22,648,26"/>
 <area shape="rect" id="Node000005" href="$dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9" title="Absolute organization&#45;level Public/Documents path." alt="" coords="323,55,592,80"/>

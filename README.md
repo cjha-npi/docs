@@ -7,7 +7,7 @@ This is the main documentation for the **NPI main project structure**.
 - **Platform Check Utility** — Compile-time guard ensuring Windows-only builds.
 - **OrgMetaData** — Organization metadata container having static constexpr members.
 - **AppMetaData** — Application metadata container having static constexpr members.
-- **startupFatalMessage Utility** — Emergency startup fatal error message box when `QApplication` may not be available.
+- **nativeFatalMessage Utility** — Emergency startup fatal error message box when `QApplication` may not be available.
 - **Meta Paths Utility** — Provides Organization and Application meta paths in ProgramData and Public/Documents directories.
 - **GlobalLocker** — RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.
 - **Concepts Page** — Contains reusable C++20 concepts that enforce design constraints.

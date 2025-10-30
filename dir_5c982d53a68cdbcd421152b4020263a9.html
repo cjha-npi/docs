@@ -146,14 +146,17 @@ Main Project Documentation</h1>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 Current Components</h1>
 <ul>
-<li><b>App Meta Data</b> — Provides organization and application metadata along with directory path utilities.</li>
-<li><b>Windows Message Box Utility</b> — Lightweight wrapper around the native <span class="tt">MessageBoxW</span> API for displaying system message boxes.</li>
 <li><b>Platform Check Utility</b> — Compile-time guard ensuring Windows-only builds.</li>
+<li><b>OrgMetaData</b> — Organization metadata container having static constexpr members.</li>
+<li><b>AppMetaData</b> — Application metadata container having static constexpr members.</li>
+<li><b>startupFatalMessage Utility</b> — Emergency startup fatal error message box when <span class="tt">QApplication</span> may not be available.</li>
+<li><b>Meta Paths Utility</b> — Provides Organization and Application meta paths in ProgramData and Public/Documents directories.</li>
+<li><b>GlobalLocker</b> — RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.</li>
 <li><b>Concepts Page</b> — Contains reusable C++20 concepts that enforce design constraints.</li>
 <li><b>GuiProps Struct</b> — Defines Qt property names used by custom <span class="tt">QProxyStyle</span> and widget rendering logic.</li>
-<li><b>Link Classes</b> — Implements a non-owning, auto-nullifying linking mechanism (similar to <span class="tt">QPointer</span> or weak references) for observer-style object tracking.</li>
-<li><b>Font Class</b> — Manages thread-safe font creation and caching for consistent application typography.</li>
-<li><b>Show Class</b> — Provides controlled show/hide animations for Qt widgets with opacity handling and optional timing customization.</li>
+<li><b>StageWindow Class</b> — Provides controlled show/hide animations for Qt widgets with opacity handling and optional timing customization.</li>
+<li><b>TextSpec Class</b> — Manages thread-safe font creation and caching for consistent application typography.</li>
+<li><b>RefPtr Classes</b> — Implements a non-owning, auto-nullifying linking mechanism (similar to <span class="tt">QPointer</span> + <span class="tt">std::shared_ptr</span>) for observer-style object tracking.</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Requirements</h1>
@@ -213,7 +216,7 @@ License</h1>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 11:58:08'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 15:16:57'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

@@ -3,9 +3,9 @@ var namespacenpi =
     [ "app", "dc/dba/namespacenpi_1_1app.html", [
       [ "appProgramDataDir", "dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544", null ],
       [ "appPublicDocumentsDir", "dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542", null ],
+      [ "nativeFatalMessage", "dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633", null ],
       [ "orgProgramDataDir", "dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8", null ],
-      [ "orgPublicDocumentsDir", "dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9", null ],
-      [ "startupFatalMessage", "dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf", null ]
+      [ "orgPublicDocumentsDir", "dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9", null ]
     ] ],
     [ "AppMetaData", "d8/d5a/structnpi_1_1_app_meta_data.html", "d8/d5a/structnpi_1_1_app_meta_data" ],
     [ "GlobalLocker", "da/d1f/classnpi_1_1_global_locker.html", "da/d1f/classnpi_1_1_global_locker" ],

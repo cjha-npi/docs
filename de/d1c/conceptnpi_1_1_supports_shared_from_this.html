@@ -152,8 +152,8 @@ $(function(){initNavTree('de/d1c/conceptnpi_1_1_supports_shared_from_this.html',
 </div><!-- fragment --><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concept to check if a type supports shared_from_this(). </p>
 <p>Checks if a given type T inherits from <span class="tt">std::enable_shared_from_this&lt;T&gt;</span> so that <span class="tt">shared_from_this()</span> can be safely called on an object of type T.</p>
-<dl class="section user"><dt>Example:</dt><dd><div class="fragment"><div class="line"><span class="keyword">struct </span>A : std::enable_shared_from_this&lt;A&gt; {};</div>
-<div class="line"><a class="code hl_concept" href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">SupportsSharedFromThis&lt;A&gt;</a>           <span class="comment">// true</span></div>
+<dl class="section user"><dt>Example:</dt><dd><div class="fragment"><div class="line"><span class="keyword">struct </span>MyStruct : std::enable_shared_from_this&lt;MyStruct&gt; {};</div>
+<div class="line"><a class="code hl_concept" href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">SupportsSharedFromThis&lt;MyStruct&gt;</a>    <span class="comment">// true</span></div>
 <div class="line"><a class="code hl_concept" href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">SupportsSharedFromThis&lt;std::string&gt;</a> <span class="comment">// false</span></div>
 </div><!-- fragment --> </dd></dl>
 
@@ -173,7 +173,7 @@ $(function(){initNavTree('de/d1c/conceptnpi_1_1_supports_shared_from_this.html',
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 11:58:08'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 15:16:57'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

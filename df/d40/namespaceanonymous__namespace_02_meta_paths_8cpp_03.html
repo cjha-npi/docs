@@ -231,7 +231,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   78</span> </div>
 <div class="line"><span class="lineno">   79</span>    <span class="comment">// Abort on failure to locate.</span></div>
 <div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
-<div class="line"><span class="lineno">   81</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">npi::app::startupFatalMessage</a>(</div>
+<div class="line"><span class="lineno">   81</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
 <div class="line"><span class="lineno">   82</span>        QString(<span class="stringliteral">&quot;%1 Not Found&quot;</span>).arg(pathNameForErrors),</div>
 <div class="line"><span class="lineno">   83</span>        QString(<span class="stringliteral">&quot;Could not locate the system&#39;s %1 directory. This folder is &quot;</span></div>
 <div class="line"><span class="lineno">   84</span>          <span class="stringliteral">&quot;required for application settings.&quot;</span>)</div>
@@ -240,7 +240,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   87</span> </div>
 <div class="line"><span class="lineno">   88</span>    <span class="comment">// Abort if the path is missing or not a directory.</span></div>
 <div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span>(<span class="keyword">const</span> QFileInfo info(base); !info.exists() || !info.isDir()) {</div>
-<div class="line"><span class="lineno">   90</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">npi::app::startupFatalMessage</a>(</div>
+<div class="line"><span class="lineno">   90</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
 <div class="line"><span class="lineno">   91</span>        QString(<span class="stringliteral">&quot;%1 Invalid&quot;</span>).arg(pathNameForErrors),</div>
 <div class="line"><span class="lineno">   92</span>        QString(<span class="stringliteral">&quot;The system&#39;s %1 path &#39;%2&#39; is missing or is not a &quot;</span></div>
 <div class="line"><span class="lineno">   93</span>          <span class="stringliteral">&quot;directory. Please ensure this folder exists.&quot;</span>)</div>
@@ -249,9 +249,9 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   96</span> </div>
 <div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> base;</div>
 <div class="line"><span class="lineno">   98</span>  }</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a9f6fcbf29fc09e84fd4f574b3eae5fdf"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">npi::app::startupFatalMessage</a></div><div class="ttdeci">void startupFatalMessage(const QString &amp;title, const QString &amp;msg) noexcept</div><div class="ttdoc">Emergency startup fatal error message box.</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d6e/_startup_fatal_message_8hpp_source.html#l00046">StartupFatalMessage.hpp:46</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a30b5245afa890e98f19f43c58f29e633"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a></div><div class="ttdeci">void nativeFatalMessage(const QString &amp;title, const QString &amp;msg) noexcept</div><div class="ttdoc">Windows native fatal error message box.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d9c/_native_fatal_message_8hpp_source.html#l00044">NativeFatalMessage.hpp:44</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">npi::app::startupFatalMessage()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir()</a>, and <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir()</a>.</p>
 <div class="dynheader">
@@ -309,7 +309,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  110</span>    QDir root{base};</div>
 <div class="line"><span class="lineno">  111</span>    <span class="keyword">const</span> QString target = root.filePath(dirName);</div>
 <div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span>(!root.mkpath(dirName)) {</div>
-<div class="line"><span class="lineno">  113</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">npi::app::startupFatalMessage</a>(</div>
+<div class="line"><span class="lineno">  113</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
 <div class="line"><span class="lineno">  114</span>        <span class="stringliteral">&quot;Cannot Create Directory&quot;</span>,</div>
 <div class="line"><span class="lineno">  115</span>        QString(<span class="stringliteral">&quot;The required settings directory could not be created:\n%1\n\n&quot;</span></div>
 <div class="line"><span class="lineno">  116</span>          <span class="stringliteral">&quot;This may be due to a permissions issue or because a file &quot;</span></div>
@@ -319,7 +319,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> QDir::cleanPath(target);</div>
 <div class="line"><span class="lineno">  121</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a9f6fcbf29fc09e84fd4f574b3eae5fdf">npi::app::startupFatalMessage()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir()</a>, <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir()</a>, <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir()</a>, and <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir()</a>.</p>
 <div class="dynheader">
@@ -357,7 +357,7 @@ Here is the caller graph for this function:</div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 11:58:04'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 15:16:57'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
