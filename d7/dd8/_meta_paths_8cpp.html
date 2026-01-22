@@ -73,7 +73,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -143,9 +143,11 @@ $(function(){initNavTree('d7/dd8/_meta_paths_8cpp.html','../../',''); });
 <code>#include &lt;combaseapi.h&gt;</code><br />
 <code>#include &lt;shlobj.h&gt;</code><br />
 <code>#include &lt;knownfolders.h&gt;</code><br />
-<code>#include &lt;QString&gt;</code><br />
 <code>#include &lt;QDir&gt;</code><br />
+<code>#include &lt;QTimer&gt;</code><br />
+<code>#include &lt;QString&gt;</code><br />
 <code>#include &lt;QFileInfo&gt;</code><br />
+<code>#include &lt;QCoreApplication&gt;</code><br />
 <code>#include &lt;QtEnvironmentVariables&gt;</code><br />
 <code>#include &quot;npi/OrgMetaData.hpp&quot;</code><br />
 <code>#include &quot;npi/AppMetaData.hpp&quot;</code><br />
@@ -163,10 +165,6 @@ Include dependency graph for MetaPaths.cpp:</div>
 Namespaces</h2></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BMetaPaths_2Ecpp_7D" id="r_anonymous_5Fnamespace_7BMetaPaths_2Ecpp_7D"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html">anonymous_namespace{MetaPaths.cpp}</a></td></tr>
 <tr class="memdesc:df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anonymous namespace for internal usage. <br /></td></tr>
-<tr class="memitem:npi" id="r_npi"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
-<tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for npi electronics GmbH. <br /></td></tr>
-<tr class="memitem:npi_3A_3Aapp" id="r_npi_3A_3Aapp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html">npi::app</a></td></tr>
-<tr class="memdesc:dc/dba/namespacenpi_1_1app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common namespace for application data and utilities. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -180,6 +178,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6b23c92ed8a542082d8cddde4bd55b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve base path using Known Folder ID or environment variable fallback.  <br /></td></tr>
 <tr class="memitem:ad34f59342fdb3a04d27ff5ae0320ad25" id="r_ad34f59342fdb3a04d27ff5ae0320ad25"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir</a> (const QString &amp;base, const QString &amp;dirName) noexcept</td></tr>
 <tr class="memdesc:ad34f59342fdb3a04d27ff5ae0320ad25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create subdirectory under base path.  <br /></td></tr>
+<tr class="memitem:a71f0c349fdc17bb538a0b720816e7bcd" id="r_a71f0c349fdc17bb538a0b720816e7bcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a71f0c349fdc17bb538a0b720816e7bcd">anonymous_namespace{MetaPaths.cpp}::scheduleInit</a> ()</td></tr>
+<tr class="memdesc:a71f0c349fdc17bb538a0b720816e7bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedules the initialization of application meta paths.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a9f918755b601cf4bffca775992e6fb90" name="a9f918755b601cf4bffca775992e6fb90"></a>
@@ -252,7 +252,7 @@ Functions</h2></td></tr>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 15:16:56'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Jan 22 2026 17:18:18'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

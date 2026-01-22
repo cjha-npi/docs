@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['platformcheck_2ehpp_0',['PlatformCheck.hpp',['../db/dbb/_platform_check_8hpp.html',1,'']]]
+  ['orgmetadata_2ehpp_0',['OrgMetaData.hpp',['../da/d7b/_org_meta_data_8hpp.html',1,'']]]
 ];

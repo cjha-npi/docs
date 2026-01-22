@@ -32,6 +32,8 @@ gui/ -> GUI-related resources
 
 ## Coding Conventions
 
+- **Everything** has to be inside either named or anonymous namespace.
+- **NO** single word simple names e.g. `Font`, `Show`, etc. for **Class** and **Struct**.
 - All **member variables** and **member functions** end with an underscore `_`.
 - **Static members** and **static functions** start with a capital letter.
 - **Comments:**

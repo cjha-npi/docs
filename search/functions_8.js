@@ -1,7 +1,28 @@
 var searchData=
 [
-  ['islocked_5f_0',['isLocked_',['../da/d1f/classnpi_1_1_global_locker.html#a064436d889306ded09d74f9fa74f7857',1,'npi::GlobalLocker']]],
-  ['isrefptrfromthisavailable_5f_1',['isRefPtrFromThisAvailable_',['../d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a5efdccd5fa5e9fe2edd474fe62101e2b',1,'npi::RefPtrFromThis']]],
-  ['issame_5f_2',['isSame_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a82cb63d42d8ba5ce3a610f15f7eaf682',1,'npi::RefPtrHost']]],
-  ['isvalid_5f_3',['isValid_',['../d2/d0d/classnpi_1_1_ref_ptr.html#a665c4ac45f2a60a261d1fe6f335eb7be',1,'npi::RefPtr::isValid_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#a0ba9792630f4de6ddc7b7d18cf65e666',1,'npi::RefPtrHost::isValid_()'],['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#ac9a92d740e1df43c31abfc5d4e4f94b2',1,'npi::RefPtrWeakHost::isValid_()']]]
+  ['implogwrite_0',['impLogWrite',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a97522aab6ec53ce2693cf4a5432927bf',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['initiateshutdown_5f_1',['initiateShutdown_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a26a241a862fcd7dfd89667433d7e4bd1',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['initlogging_2',['initLogging',['../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a7a82c11accb191c2f06849f6d13db39a',1,'anonymous_namespace{Log.cpp}']]],
+  ['insertlogmessage_5f_3',['insertLogMessage_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ab25a4996d5ead7b5656de343421f6788',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['inst_5f_4',['Inst_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af85854d22c95e86c8802d7d864fcd350',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['installcrashhandlers_5',['installCrashHandlers',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a5383dc98204ed88af64a0de8fb17de7f',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['invalidparamhandler_6',['invalidParamHandler',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a110b11e90b5bb8ae5c8a1521e33eec21',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['isconsolecolored_7',['isConsoleColored',['../d5/ddd/namespacenpi_1_1log.html#a890d624071d5e2e26743288d3ce2d79b',1,'npi::log']]],
+  ['isconsolecolored_5f_8',['isConsoleColored_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2642a951ac935c577058a2986c6b75f9',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['isconsoleopen_9',['isConsoleOpen',['../d5/ddd/namespacenpi_1_1log.html#a3f5453b25bfa7808da0fa9c48d5a0b01',1,'npi::log']]],
+  ['isconsoleopen_5f_10',['isConsoleOpen_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#acc79e18b0a8472ad63533edc0cad32f8',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['isconsolepermanent_11',['isConsolePermanent',['../d5/ddd/namespacenpi_1_1log.html#a03944c7d993d8f35806987a67f25a67d',1,'npi::log']]],
+  ['isdisplaymuted_12',['isDisplayMuted',['../d5/ddd/namespacenpi_1_1log.html#a887220e01a8730efd359ff7d59eea478',1,'npi::log']]],
+  ['isdisplaymuted_5f_13',['isDisplayMuted_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a02bba2baa1fd47b8a74778204bed7aed',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['isidentifierchar_14',['isIdentifierChar',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a0fe54293fedacd10e31e2ee3542c331e',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['isidentifierchar_5f_15',['isIdentifierChar_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a2d185efc4e84fc0f11add0d6cddc6f5d',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
+  ['islocked_5f_16',['isLocked_',['../da/d1f/classnpi_1_1_global_locker.html#a064436d889306ded09d74f9fa74f7857',1,'npi::GlobalLocker']]],
+  ['ispermanentconsole_5f_17',['isPermanentConsole_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af72ec4207bb7c4bd6752f9fdfd6f914f',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['isrefptrfromthisavailable_5f_18',['isRefPtrFromThisAvailable_',['../d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a5efdccd5fa5e9fe2edd474fe62101e2b',1,'npi::RefPtrFromThis']]],
+  ['issame_5f_19',['isSame_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a82cb63d42d8ba5ce3a610f15f7eaf682',1,'npi::RefPtrHost']]],
+  ['isspacechar_20',['isSpaceChar',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a1e4219749cab61533a6faf773fe7cddb',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['isspacechar_5f_21',['isSpaceChar_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a8ed9f249e7504829fc96b3f80a39d59d',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
+  ['isvalid_5f_22',['isValid_',['../d2/d0d/classnpi_1_1_ref_ptr.html#a665c4ac45f2a60a261d1fe6f335eb7be',1,'npi::RefPtr::isValid_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#a0ba9792630f4de6ddc7b7d18cf65e666',1,'npi::RefPtrHost::isValid_()'],['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#ac9a92d740e1df43c31abfc5d4e4f94b2',1,'npi::RefPtrWeakHost::isValid_()']]],
+  ['iswarnimp_5f_23',['isWarnImp_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a548b80afcae8b12691b0e7aa004e0414',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['iswarnimplog_24',['isWarnImpLog',['../d5/ddd/namespacenpi_1_1log.html#a5d120ddbdc6cf5c3ecd4b7d8bd0a22a3',1,'npi::log']]]
 ];

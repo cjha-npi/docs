@@ -1,0 +1,9 @@
+<map id="FixedStrings" name="FixedStrings">
+<area shape="rect" id="Node000001" title=" " alt="" coords="112,140,229,165"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,91,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,38,56,76,64,96,75,114,93,128,113,138,111,142,90,132,71,117,59,99,51,78,45,39"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="128,5,213,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,39,173,140,168,140,168,39"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="267,5,320,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="295,39,287,78,279,99,266,117,247,132,226,142,224,137,245,128,262,114,274,96,282,76,290,38"/>
+</map>

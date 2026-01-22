@@ -1,0 +1,31 @@
+<map id="anonymous_namespace{MetaPaths::cpp}::aCreateSubDir" name="anonymous_namespace{MetaPaths::cpp}::aCreateSubDir">
+<area shape="rect" id="Node000001" title="Create subdirectory under base path." alt="" coords="1512,157,1933,183"/>
+<area shape="rect" id="Node000002" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application&#45;level ProgramData path." alt="" coords="893,107,1131,132"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1663,158,1570,138,1464,122,1377,116,1289,114,1130,116,1130,111,1289,108,1377,111,1464,117,1571,133,1665,153"/>
+<area shape="rect" id="Node000009" href="$dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Absolute application&#45;level Public/Documents path." alt="" coords="877,208,1147,234"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1534,186,1147,214,1146,209,1534,181"/>
+<area shape="rect" id="Node000011" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute organization&#45;level ProgramData path." alt="" coords="1211,132,1448,158"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="1516,160,1448,155,1448,150,1516,154"/>
+<area shape="rect" id="Node000012" href="$dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9" title="Absolute organization&#45;level Public/Documents path." alt="" coords="1195,233,1464,259"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="1648,187,1397,236,1396,231,1647,182"/>
+<area shape="rect" id="Node000003" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ac93f5837a3f4726d287eb4537159fd42" title="Schedules the initialization of application meta paths." alt="" coords="560,258,829,298"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="979,138,930,164,879,198,856,220,846,231,831,242,788,260,786,255,828,237,842,227,852,217,876,193,928,160,976,133"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#ad3a49953f000d2b255f2e32166048605" title=" " alt="" coords="307,69,480,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="889,109,829,103,642,93,480,87,480,82,642,88,830,98,889,103"/>
+<area shape="rect" id="Node000006" href="$d5/ddd/namespacenpi_1_1log.html#ae0762e568cebcd885346fb347ffb9579" title=" " alt="" coords="275,193,512,219"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="982,138,914,171,873,186,830,198,748,211,664,218,512,218,512,212,664,212,747,206,829,193,871,181,912,166,980,134"/>
+<area shape="rect" id="Node000007" href="$d5/ddd/namespacenpi_1_1log.html#a8f3b90122377e77601b8b4e55362ec34" title=" " alt="" coords="319,144,468,170"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="886,129,560,147,468,154,468,149,560,142,885,123"/>
+<area shape="rect" id="Node000008" href="$d5/ddd/namespacenpi_1_1log.html#a9844dab9537c8747fbab8490418d2dda" title=" " alt="" coords="580,5,809,31"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="973,106,906,80,829,53,756,34,757,28,830,48,908,75,974,101"/>
+<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a474bf1d9b97572fbc7245fa612f19a5d" title=" " alt="" coords="5,62,227,102"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="299,85,226,85,226,80,299,80"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="933,238,808,260,807,255,932,232"/>
+<area shape="rect" id="Node000010" href="$d5/ddd/namespacenpi_1_1log.html#adc43e95b1d6b8f65bb04565dfda8a776" title=" " alt="" coords="604,157,785,183"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="923,209,775,186,776,180,924,204"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="641,158,437,98,439,92,643,152"/>
+<area shape="poly" id="edge12_Node000010_Node000006" title=" " alt="" coords="596,185,501,196,500,191,596,179"/>
+<area shape="poly" id="edge13_Node000010_Node000007" title=" " alt="" coords="596,168,468,163,468,157,596,163"/>
+<area shape="poly" id="edge15_Node000011_Node000002" title=" " alt="" coords="1203,137,1130,132,1131,126,1203,132"/>
+<area shape="poly" id="edge17_Node000012_Node000009" title=" " alt="" coords="1187,237,1146,234,1147,229,1187,232"/>
+</map>

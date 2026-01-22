@@ -73,7 +73,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -158,7 +158,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common namespace for application data and utilities. </p>
-<p>This namespace contains module-agnostic application-wide identifiers, compile-time defaults, and lightweight utilities. </p><dl class="section note"><dt>Note</dt><dd>Only for cross-cutting code; place domain-specific code in a dedicated child namespace e.g. <span class="tt">npi::log</span> or <span class="tt">npi::net</span>. </dd></dl>
+<p>This namespace contains module-agnostic application-wide identifiers, compile-time defaults, and lightweight utilities. </p><dl class="section note"><dt>Note</dt><dd>Only for cross-cutting code; place domain-specific code in a dedicated child namespace e.g. <span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html">npi::log</a></span> or <span class="tt">npi::net</span>. </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a40a2a28831f2f410c995f0657baf6544" name="a40a2a28831f2f410c995f0657baf6544"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40a2a28831f2f410c995f0657baf6544">&#9670;&#160;</a></span>appProgramDataDir()</h2>
@@ -202,25 +202,32 @@ Functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure to create the directory, a native dialog is shown and the process terminates (no return). </dd></dl>
 <dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="keyword">const</span> QString appPD = <a class="code hl_function" href="#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a>();</div>
 <div class="line"><span class="keyword">const</span> QString cfg   = QDir(appPD).filePath(<span class="stringliteral">&quot;settings.ini&quot;</span>);</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a40a2a28831f2f410c995f0657baf6544"><div class="ttname"><a href="#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a></div><div class="ttdeci">const QString &amp; appProgramDataDir() noexcept</div><div class="ttdoc">Absolute application-level ProgramData path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00142">MetaPaths.cpp:142</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a40a2a28831f2f410c995f0657baf6544"><div class="ttname"><a href="#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a></div><div class="ttdeci">const QString &amp; appProgramDataDir() noexcept</div><div class="ttdoc">Absolute application-level ProgramData path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00146">MetaPaths.cpp:146</a></div></div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00142">142</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>{</div>
-<div class="line"><span class="lineno">  144</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  145</span>    <span class="keyword">const</span> QString&amp; base = <a class="code hl_function" href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a>();</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>));</div>
-<div class="line"><span class="lineno">  147</span>  }();</div>
-<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  149</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a30836be8b9337a64733a6e05594b23c8"><div class="ttname"><a href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a></div><div class="ttdeci">const QString &amp; orgProgramDataDir() noexcept</div><div class="ttdoc">Absolute organization-level ProgramData path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00124">MetaPaths.cpp:124</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00146">146</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>{</div>
+<div class="line"><span class="lineno">  148</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keyword">const</span> QString&amp; base = <a class="code hl_function" href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a>();</div>
+<div class="line"><span class="lineno">  150</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>));</div>
+<div class="line"><span class="lineno">  151</span>  }();</div>
+<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  153</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a30836be8b9337a64733a6e05594b23c8"><div class="ttname"><a href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a></div><div class="ttdeci">const QString &amp; orgProgramDataDir() noexcept</div><div class="ttdoc">Absolute organization-level ProgramData path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00128">MetaPaths.cpp:128</a></div></div>
 <div class="ttc" id="astructnpi_1_1_app_meta_data_html_ac0d2d06cd6827abbd4a30043c88429e7"><div class="ttname"><a href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a></div><div class="ttdeci">static constexpr QLatin1StringView Name_</div><div class="ttdoc">Application display name.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d6f/_app_meta_data_8hpp_source.html#l00033">AppMetaData.hpp:33</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir()</a>, <a class="el" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>, and <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>, and <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aec0c49d654f69ba240eded5dee4bbc8b">anonymous_namespace{Log.cpp}::LogCore::getFutureDir_()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a953bdf43ab1e0d48f1225fe1dcccfbd4">anonymous_namespace{Log.cpp}::LogCore::getMaxFolderSizeMb_()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af4273441409e88d841adc86974b49c75">anonymous_namespace{Log.cpp}::LogCore::getStartupSettings_()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5fa684811c33eea49f63593fea332de4">anonymous_namespace{Log.cpp}::LogCore::saveSettings_()</a>, <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a71f0c349fdc17bb538a0b720816e7bcd">anonymous_namespace{MetaPaths.cpp}::scheduleInit()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a78f2c370e9ec632af877fe1dd49ef478">anonymous_namespace{Log.cpp}::LogCore::startImpLogProcess_()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a40a2a28831f2f410c995f0657baf6544_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a40a2a28831f2f410c995f0657baf6544_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a40a2a28831f2f410c995f0657baf6544_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -267,24 +274,31 @@ Here is the call graph for this function:</div>
 <dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure to create the directory, a native dialog is shown and the process terminates (no return). </dd></dl>
 <dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="keyword">const</span> QString appPub = <a class="code hl_function" href="#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a>();</div>
 <div class="line"><span class="keyword">const</span> QString demo   = QDir(appPub).filePath(<span class="stringliteral">&quot;examples/demo.txt&quot;</span>);</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_aff4c7482e4417f59ede04e359548a542"><div class="ttname"><a href="#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; appPublicDocumentsDir() noexcept</div><div class="ttdoc">Absolute application-level Public/Documents path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00151">MetaPaths.cpp:151</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_aff4c7482e4417f59ede04e359548a542"><div class="ttname"><a href="#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; appPublicDocumentsDir() noexcept</div><div class="ttdoc">Absolute application-level Public/Documents path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00155">MetaPaths.cpp:155</a></div></div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00151">151</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>{</div>
-<div class="line"><span class="lineno">  153</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  154</span>    <span class="keyword">const</span> QString&amp; base = <a class="code hl_function" href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a>();</div>
-<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">return</span> createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>));</div>
-<div class="line"><span class="lineno">  156</span>  }();</div>
-<div class="line"><span class="lineno">  157</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  158</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_ac0dca24602a75822c6f7fcf63f8781d9"><div class="ttname"><a href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; orgPublicDocumentsDir() noexcept</div><div class="ttdoc">Absolute organization-level Public/Documents path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00133">MetaPaths.cpp:133</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00155">155</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>{</div>
+<div class="line"><span class="lineno">  157</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  158</span>    <span class="keyword">const</span> QString&amp; base = <a class="code hl_function" href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a>();</div>
+<div class="line"><span class="lineno">  159</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>));</div>
+<div class="line"><span class="lineno">  160</span>  }();</div>
+<div class="line"><span class="lineno">  161</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  162</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ac0dca24602a75822c6f7fcf63f8781d9"><div class="ttname"><a href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; orgPublicDocumentsDir() noexcept</div><div class="ttdoc">Absolute organization-level Public/Documents path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00137">MetaPaths.cpp:137</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir()</a>, <a class="el" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
+<p class="reference">References <a class="el" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a71f0c349fdc17bb538a0b720816e7bcd">anonymous_namespace{MetaPaths.cpp}::scheduleInit()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_aff4c7482e4417f59ede04e359548a542_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_aff4c7482e4417f59ede04e359548a542_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_aff4c7482e4417f59ede04e359548a542_icgraph.svg" width="590" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -339,11 +353,11 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d8/d5a/structnpi_1_1_app_meta_data.html#ac0d2d06cd6827abbd4a30043c88429e7">npi::AppMetaData::Name_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47">anonymous_namespace{MetaPaths.cpp}::basePath()</a>, and <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47">anonymous_namespace{MetaPaths.cpp}::basePath()</a>, <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af4273441409e88d841adc86974b49c75">anonymous_namespace{Log.cpp}::LogCore::getStartupSettings_()</a>, <a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a97522aab6ec53ce2693cf4a5432927bf">anonymous_namespace{Log.cpp}::safe::impLogWrite()</a>, <a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a79b9de042466028e5c2c32bdf0635cb5">anonymous_namespace{Log.cpp}::safe::startImpLogProcess()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ae7262809081fcc0c21b93449f56b8c8b">anonymous_namespace{Log.cpp}::LogCore::startWriting_()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30b5245afa890e98f19f43c58f29e633_icgraph.svg" width="100%" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30b5245afa890e98f19f43c58f29e633_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -397,28 +411,28 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="comment">// CreateDirectoryW(reinterpret_cast&lt;LPCWSTR&gt;(native.utf16()), nullptr);</span></div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00124">124</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>{</div>
-<div class="line"><span class="lineno">  126</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keyword">const</span> QString base = basePath(FOLDERID_ProgramData, <span class="stringliteral">&quot;PROGRAMDATA&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;ProgramData&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">return</span> createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a>));</div>
-<div class="line"><span class="lineno">  129</span>  }();</div>
-<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  131</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
+<div class="line"><span class="lineno">  130</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keyword">const</span> QString base = ::basePath(FOLDERID_ProgramData, <span class="stringliteral">&quot;PROGRAMDATA&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;ProgramData&quot;</span>);</div>
+<div class="line"><span class="lineno">  132</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a>));</div>
+<div class="line"><span class="lineno">  133</span>  }();</div>
+<div class="line"><span class="lineno">  134</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  135</span>}</div>
 <div class="ttc" id="astructnpi_1_1_org_meta_data_html_ae47fb5dcbb921e605d3d1f96217d71c6"><div class="ttname"><a href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a></div><div class="ttdeci">static constexpr QLatin1StringView Name_</div><div class="ttdoc">Organization display name.</div><div class="ttdef"><b>Definition</b> <a href="../../da/d7b/_org_meta_data_8hpp_source.html#l00040">OrgMetaData.hpp:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47">anonymous_namespace{MetaPaths.cpp}::basePath()</a>, <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir()</a>, and <a class="el" href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47">anonymous_namespace{MetaPaths.cpp}::basePath()</a>, and <a class="el" href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_icgraph.svg" width="534" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -467,27 +481,27 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="keyword">const</span> QString readme = QDir(pubOrg).filePath(<span class="stringliteral">&quot;ReadMe.txt&quot;</span>);</div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00133">133</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>{</div>
-<div class="line"><span class="lineno">  135</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keyword">const</span> QString base = basePath(FOLDERID_PublicDocuments, <span class="stringliteral">&quot;PUBLIC&quot;</span>, <span class="stringliteral">&quot;Documents&quot;</span>, <span class="stringliteral">&quot;Public/Documents&quot;</span>);</div>
-<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">return</span> createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a>));</div>
-<div class="line"><span class="lineno">  138</span>  }();</div>
-<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  140</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00137">137</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>{</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keyword">const</span> QString base = ::basePath(FOLDERID_PublicDocuments, <span class="stringliteral">&quot;PUBLIC&quot;</span>, <span class="stringliteral">&quot;Documents&quot;</span>, <span class="stringliteral">&quot;Public/Documents&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a>));</div>
+<div class="line"><span class="lineno">  142</span>  }();</div>
+<div class="line"><span class="lineno">  143</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  144</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47">anonymous_namespace{MetaPaths.cpp}::basePath()</a>, <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25">anonymous_namespace{MetaPaths.cpp}::createSubDir()</a>, and <a class="el" href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47">anonymous_namespace{MetaPaths.cpp}::basePath()</a>, and <a class="el" href="../../d8/d1b/structnpi_1_1_org_meta_data.html#ae47fb5dcbb921e605d3d1f96217d71c6">npi::OrgMetaData::Name_</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_icgraph.svg" width="598" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -514,7 +528,7 @@ Here is the caller graph for this function:</div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 15:16:57'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Jan 22 2026 17:18:21'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

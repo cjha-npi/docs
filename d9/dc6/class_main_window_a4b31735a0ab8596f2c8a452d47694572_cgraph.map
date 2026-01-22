@@ -1,0 +1,22 @@
+<map id="MainWindow::on_coloredConsole_chk_checkStateChanged" name="MainWindow::on_coloredConsole_chk_checkStateChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,84,435,110"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#aa9c7f1de08a88a0dcac316127c1d384b" title=" " alt="" coords="483,84,720,110"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="434,94,475,94,475,100,434,100"/>
+<area shape="rect" id="Node000003" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af85854d22c95e86c8802d7d864fcd350" title=" " alt="" coords="772,29,945,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="684,82,764,69,765,74,685,87"/>
+<area shape="rect" id="Node000005" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a18c3c555110a16327bd67014b95739eb" title=" " alt="" coords="768,109,949,165"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="685,107,761,119,760,125,684,113"/>
+<area shape="rect" id="Node000004" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a730f0868e0c404fa25a887a023b70138" title=" " alt="" coords="997,29,1171,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="945,54,989,54,989,60,945,60"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="1040,29,1040,19,1048,10,1063,5,1084,3,1114,8,1128,19,1124,23,1112,12,1084,8,1064,10,1051,15,1045,21,1045,29"/>
+<area shape="rect" id="Node000006" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5fa684811c33eea49f63593fea332de4" title=" " alt="" coords="997,109,1171,165"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="949,134,989,134,989,140,949,140"/>
+<area shape="rect" id="Node000007" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application&#45;level ProgramData path." alt="" coords="1219,124,1456,150"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1171,134,1211,134,1211,140,1171,140"/>
+<area shape="rect" id="Node000008" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute organization&#45;level ProgramData path." alt="" coords="1504,124,1741,150"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="1456,134,1496,134,1496,140,1456,140"/>
+<area shape="rect" id="Node000009" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1789,117,2019,158"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1741,134,1782,134,1782,140,1741,140"/>
+<area shape="rect" id="Node000010" href="$dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633" title="Windows native fatal error message box." alt="" coords="2067,124,2312,150"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="2018,134,2059,134,2059,140,2018,140"/>
+</map>

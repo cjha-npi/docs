@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['universal_5f_0',['universal_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a8dcb9818065f7b5d7aca49ec2aab04be',1,'npi::RefPtrHost']]],
-  ['unlock_5f_1',['unlock_',['../da/d1f/classnpi_1_1_global_locker.html#a1e62b8dc3f17d2d1b98957b5dd142a26',1,'npi::GlobalLocker']]]
+  ['terminatehandler_0',['terminateHandler',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#ad3395aac6f72b3cacf47edce1bffd16d',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['test_1',['Test',['../d1/d9b/class_test.html#a99f2bbfac6c95612322b0f10e607ebe5',1,'Test']]],
+  ['textspec_2',['TextSpec',['../d2/db7/classnpi_1_1_text_spec.html#a1566f4aed80d9e0d65069a427bbab10b',1,'npi::TextSpec::TextSpec()=default'],['../d2/db7/classnpi_1_1_text_spec.html#a13387a0734024f544f1c1c9049c65884',1,'npi::TextSpec::TextSpec(const Style &amp;style)'],['../d2/db7/classnpi_1_1_text_spec.html#ab4fb3d21a0b90bb4847f8c3f576d6715',1,'npi::TextSpec::TextSpec(const int absolutePointSize)'],['../d2/db7/classnpi_1_1_text_spec.html#a8d9401c2ba156f185e5f9bf2589f0f3f',1,'npi::TextSpec::TextSpec(const Style &amp;style, const int absolutePointSize)']]],
+  ['thread_3',['Thread',['../d8/d18/class_thread.html#a95c703fb8f2f27cb64f475a8c940864a',1,'Thread']]]
 ];

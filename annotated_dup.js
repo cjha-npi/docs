@@ -1,6 +1,12 @@
 var annotated_dup =
 [
+    [ "anonymous_namespace{Log.cpp}", "dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html", [
+      [ "LogCore", "d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html", "d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core" ]
+    ] ],
     [ "npi", "d6/d57/namespacenpi.html", [
+      [ "log", "d5/ddd/namespacenpi_1_1log.html", [
+        [ "DirResult", "d5/ddd/namespacenpi_1_1log.html#d3/d52/structnpi_1_1log_1_1_dir_result", "d5/ddd/namespacenpi_1_1log_d3/d52/structnpi_1_1log_1_1_dir_result_dup" ]
+      ] ],
       [ "AppMetaData", "d8/d5a/structnpi_1_1_app_meta_data.html", "d8/d5a/structnpi_1_1_app_meta_data" ],
       [ "GlobalLocker", "da/d1f/classnpi_1_1_global_locker.html", "da/d1f/classnpi_1_1_global_locker" ],
       [ "GuiProps", "d2/dd5/structnpi_1_1_gui_props.html", "d2/dd5/structnpi_1_1_gui_props" ],
@@ -11,5 +17,10 @@ var annotated_dup =
       [ "RefPtrWeakHost", "d2/dad/classnpi_1_1_ref_ptr_weak_host.html", "d2/dad/classnpi_1_1_ref_ptr_weak_host" ],
       [ "StageWindow", "dd/d55/classnpi_1_1_stage_window.html", "dd/d55/classnpi_1_1_stage_window" ],
       [ "TextSpec", "d2/db7/classnpi_1_1_text_spec.html", "d2/db7/classnpi_1_1_text_spec" ]
-    ] ]
+    ] ],
+    [ "FixedStrings", "d5/da5/_main_window_8cpp.html#dd/d36/struct_fixed_strings", "d5/da5/_main_window_8cpp_dd/d36/struct_fixed_strings" ],
+    [ "MainWindow", "d9/dc6/class_main_window.html", "d9/dc6/class_main_window" ],
+    [ "OneLog", "d5/da5/_main_window_8cpp.html#d9/d28/struct_one_log", "d5/da5/_main_window_8cpp_d9/d28/struct_one_log" ],
+    [ "Test", "d1/d9b/class_test.html", "d1/d9b/class_test" ],
+    [ "Thread", "d8/d18/class_thread.html", "d8/d18/class_thread" ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['textspec_0',['TextSpec',['../d2/db7/classnpi_1_1_text_spec.html',1,'npi']]]
+  ['logcore_0',['LogCore',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html',1,'anonymous_namespace{Log.cpp}']]]
 ];

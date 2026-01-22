@@ -295,6 +295,21 @@
     });
   }
 
+  function sortListAlphabetically(list) {
+    list.sort((a, b) => {
+      const A = String(a[0]).toLowerCase();
+      const B = String(b[0]).toLowerCase();
+      if (A < B) return -1;
+      if (A > B) return 1;
+      // Optional tie-breaker by href keeps order deterministic
+      const aHref = String(a[1] ?? "");
+      const bHref = String(b[1] ?? "");
+      if (aHref < bHref) return -1;
+      if (aHref > bHref) return 1;
+      return 0;
+    });
+  }
+
   function printTreeTableFormat(tree) {
     // prints a tree in table format. each item in tree should have 3 entries: name, path, kids
     function flattenTree(oldTree, preName = '', newTree = []) {
@@ -934,19 +949,34 @@
     function loadChildren(tree) {
       const promises = [];
       tree.forEach(node => {
-        const c = node[2];
+        const h = node[1]; // Get the href
+        const c = node[2]; // Get the children
         if (typeof c === 'string') {
+
           // c is a script base name: load it then replace node[2] with the loaded array
-          promises.push(
-            loadScript(c + '.js')
-              .then(() => {
-                let arr = window[c];
-                if (!Array.isArray(arr)) arr = window[c.split('/').pop()];
-                node[2] = Array.isArray(arr) ? arr : [];
-                return loadChildren(node[2]);
-              })
-              .catch(() => { node[2] = []; })
-          );
+          // Check if the h is an anchor link (contains '#').
+          // Inlined elements link to anchors, not new pages.
+          const isAnchorLink = h && h.includes('#');
+
+          if (isAnchorLink) {
+            // This is an inlined element (e.g., INLINE_SIMPLE_STRUCTS = YES).
+            // It won't have a separate .js file for children.
+            // Set children to an empty array and skip loading.
+            node[2] = [];
+          } else {
+            // This is a regular page, load the script as before.
+            // c is a script base name: load it then replace node[2] with the loaded array
+            promises.push(
+              loadScript(c + '.js')
+                .then(() => {
+                  let arr = window[c];
+                  if (!Array.isArray(arr)) arr = window[c.split('/').pop()];
+                  node[2] = Array.isArray(arr) ? arr : [];
+                  return loadChildren(node[2]);
+                })
+                .catch(() => { node[2] = []; })
+            );
+          }
         } else if (Array.isArray(c)) {
           // Already an array: recurse
           promises.push(loadChildren(c));
@@ -1065,22 +1095,26 @@
     }
 
     /**
-     * Extracts anonymous-namespace entries from a flat [label, href, null] list,
-     * renames them as:
-     *   "anonymous_namespace{file.cpp}"                -> "file.cpp"
-     *   "npi::anonymous_namespace{file.cpp}"           -> "file.cpp npi::"
-     *   "npi::util::anonymous_namespace{file.cpp}"     -> "file.cpp npi::util::"
-     * Removes the extracted entries from the original list and returns a new
-     * array sorted case-insensitively by the pretty label.
+     * Finds, reformats, and extracts all entries related to C++ anonymous
+     * namespaces from a Doxygen navtree list.
      *
-     * @param {Array<[string, string, null]>} list - Flat namespace items (mutated).
-     * @returns {Array<[string, string, null]>} - Pretty, sorted anonymous items.
+     * This function modifies the input 'list' in-place by removing the
+     * matched items.
+     *
+     * @param {Array} list - An array of Doxygen navtree nodes.
+     * @returns {Array} A new, sorted array of the reformatted nodes.
      */
     function siphonAnonymousNamespaces(list) {
       const out = [];
       if (!Array.isArray(list) || list.length === 0) return out;
 
-      const reAnon = /anonymous_namespace\{([^}]+)\}$/;
+      // Updated Regex:
+      // (.*?)                     - Captures Group 1: The prefix (non-greedy)
+      // (anonymous_namespace\{...}) - Captures Group 2: The full anonymous namespace string
+      //   ([^}]+)                  - Captures Group 3: The filename inside the braces
+      // (.*)                      - Captures Group 4: The suffix (e.g., ::BClass)
+      // $                         - Anchor to the end of the string
+      const reAnon = /(.*?)(anonymous_namespace\{([^}]+)\})(.*)$/;
 
       for (let i = list.length - 1; i >= 0; --i) {
         const item = list[i];
@@ -1090,28 +1124,23 @@
         const href = item[1];
 
         const m = reAnon.exec(label);
-        if (!m) continue;
+        if (!m) continue; // No match, skip
 
-        const file = m[1];
-        const prefix = label.slice(0, m.index); // may be empty or end with "::"
-        const pretty = prefix ? (file + " (" + prefix + ")") : file;
+        // Extract all parts
+        const prefix = m[1]; // e.g., "npi::log::" or ""
+        const file = m[3];   // e.g., "Log.cpp"
+        const suffix = m[4]; // e.g., "::BClass" or ""
 
-        out.push([pretty, href, null]);
+        // Create a prettier label, e.g.:
+        // "npi::log::[Log.cpp]::BClass"
+        // "[Log.cpp]::AClass"
+        // "npi::log::[Log.cpp]"
+        const pretty = prefix + `[${file}]` + suffix;
+
+        // Use the original item's children (item[2]), not null
+        out.push([pretty, href, item[2]]);
         list.splice(i, 1); // remove in place
       }
-
-      out.sort((a, b) => {
-        const A = String(a[0]).toLowerCase();
-        const B = String(b[0]).toLowerCase();
-        if (A < B) return -1;
-        if (A > B) return 1;
-        // Optional tie-breaker by href keeps order deterministic
-        const aHref = String(a[1] ?? "");
-        const bHref = String(b[1] ?? "");
-        if (aHref < bHref) return -1;
-        if (aHref > bHref) return 1;
-        return 0;
-      });
 
       return out;
     }
@@ -1124,8 +1153,11 @@
         const list = flatAndPrune(kids, '::', ['namespace']);
         const anon = siphonAnonymousNamespaces(list);
 
+        sortListAlphabetically(list);
+        sortListAlphabetically(anon);
+
         if (anon.length > 0) {
-          //list.push(['-- ANONYMOUS --', null, null]);
+          list.push(['-- ANONYMOUS --', null, null]);
           for (let ii = 0; ii < anon.length; ++ii) {
             list.push([anon[ii][0], anon[ii][1], anon[ii][2]]);
           }
@@ -1166,7 +1198,8 @@
     const conceptsNode = findNodeByNameList(defTree, 'Concepts');
     if (conceptsNode) {
       const [, href, kids] = conceptsNode;
-      const list = flatAndPrune(kids, '::', ['concept'])
+      const list = flatAndPrune(kids, '::', ['concept']);
+      sortListAlphabetically(list);
       if (typeof href === 'string' && IS_HTML_END.test(href) && list.length > 0) {
         _htmlPages.push(['Concepts', href, list]);
       }
@@ -1178,7 +1211,19 @@
     const classListNode = findNodeByNameList(defTree, 'Classes', 'Class List');
     if (classListNode) {
       const [, href, kids] = classListNode;
-      const list = flatAndPrune(kids, '::', ['class', 'struct'])
+      const list = flatAndPrune(kids, '::', ['class', 'struct']);
+      const anon = siphonAnonymousNamespaces(list);
+
+      sortListAlphabetically(list);
+      sortListAlphabetically(anon);
+
+      if (anon.length > 0) {
+        list.push(['-- ANONYMOUS NS --', null, null]);
+        for (let ii = 0; ii < anon.length; ++ii) {
+          list.push([anon[ii][0], anon[ii][1], anon[ii][2]]);
+        }
+      }
+
       if (typeof href === 'string' && IS_HTML_END.test(href) && list.length > 0) {
         classListInserted = true;
         _htmlPages.push(['Classes', href, list]);
@@ -1247,7 +1292,8 @@
     const filesNode = findNodeByNameList(defTree, 'Files', 'File List');
     if (filesNode) {
       const [, href, kids] = filesNode;
-      const list = flatAndPrune(kids, '/', ['_', 'dir_'])
+      const list = flatAndPrune(kids, '/', ['_', 'dir_']);
+      sortListAlphabetically(list);
       if (typeof href === 'string' && IS_HTML_END.test(href) && list.length > 0) {
         _htmlPages.push(['Files', href, list]);
       }

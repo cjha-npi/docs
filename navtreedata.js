@@ -30,16 +30,18 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
     [ "Concepts", "concepts.html", "concepts" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
@@ -49,6 +51,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -58,8 +61,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/dd5/structnpi_1_1_gui_props.html#ae74d1309276ac331bca44fa5f5e3fa0c",
-"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a174538e18736034fae159635365aa057"
+"d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#acc79e18b0a8472ad63533edc0cad32f8",
+"d2/db7/classnpi_1_1_text_spec.html#a418b9bcb6a1292054de007257baffb12",
+"d6/d78/classnpi_1_1_ref_ptr_host.html#ab233b5c462e491138e2d57e0c12ea55c",
+"dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#aa6b36bd00b33419231c54be815716664"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -7,6 +7,7 @@ var namespacenpi =
       [ "orgProgramDataDir", "dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8", null ],
       [ "orgPublicDocumentsDir", "dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9", null ]
     ] ],
+    [ "log", "d5/ddd/namespacenpi_1_1log.html", "d5/ddd/namespacenpi_1_1log" ],
     [ "AppMetaData", "d8/d5a/structnpi_1_1_app_meta_data.html", "d8/d5a/structnpi_1_1_app_meta_data" ],
     [ "GlobalLocker", "da/d1f/classnpi_1_1_global_locker.html", "da/d1f/classnpi_1_1_global_locker" ],
     [ "GuiProps", "d2/dd5/structnpi_1_1_gui_props.html", "d2/dd5/structnpi_1_1_gui_props" ],

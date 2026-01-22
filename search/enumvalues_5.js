@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['red_0',['Red',['../d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8baee38e4d5dd68c4e440825018d549cb47',1,'npi::TextSpec']]]
+  ['level_0',['Level',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36aa0db49ba470c1c9ae2128c3470339153',1,'anonymous_namespace{Log.cpp}::LogCore']]]
 ];

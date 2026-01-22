@@ -11,5 +11,9 @@ var searchData=
   ['release_5f_8',['release_',['../d5/d8d/structnpi_1_1_stage_window_1_1_opacity_guard.html#a5a2bd1f74ddd6280d7ff95d9f608feb5',1,'npi::StageWindow::OpacityGuard']]],
   ['relsize_5f_9',['relSize_',['../d2/db7/classnpi_1_1_text_spec.html#a1ee68680ef64d2a80bf5e241fb173745',1,'npi::TextSpec']]],
   ['requirements_10',['Requirements',['../E:/Doxy/Main/main/README.md#autotoc_md2',1,'Requirements'],['../index.html#autotoc_md9',1,'Requirements']]],
-  ['reset_5f_11',['reset_',['../d2/d0d/classnpi_1_1_ref_ptr.html#a69607e1c7e7383cd4d3b0b2ab2eea154',1,'npi::RefPtr::reset_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#a3fdc3c8197e33eb75b24903aa6ceaa2d',1,'npi::RefPtrHost::reset_()'],['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a9f9f52df32b52dd80e78b2ad1e81f72c',1,'npi::RefPtrWeakHost::reset_()']]]
+  ['reraisedefault_11',['reraiseDefault',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aace4c2e1632cdc24f1bf5e597c0f6be6',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['reset_5f_12',['reset_',['../d2/d0d/classnpi_1_1_ref_ptr.html#a69607e1c7e7383cd4d3b0b2ab2eea154',1,'npi::RefPtr::reset_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#a3fdc3c8197e33eb75b24903aa6ceaa2d',1,'npi::RefPtrHost::reset_()'],['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a9f9f52df32b52dd80e78b2ad1e81f72c',1,'npi::RefPtrWeakHost::reset_()']]],
+  ['restoredefaultdir_13',['restoreDefaultDir',['../d5/ddd/namespacenpi_1_1log.html#a93f5626ee4252ae8bd940774a8e585ee',1,'npi::log']]],
+  ['restoredefaultmaxfoldersizemb_14',['restoreDefaultMaxFolderSizeMb',['../d5/ddd/namespacenpi_1_1log.html#a7b3479756b1c17fcc8305b593cbb4f45',1,'npi::log']]],
+  ['runtimelogs_5f_15',['runtimeLogs_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a4b3fa1cde2be15f6d4da853b16fd7509',1,'anonymous_namespace{Log.cpp}::LogCore']]]
 ];

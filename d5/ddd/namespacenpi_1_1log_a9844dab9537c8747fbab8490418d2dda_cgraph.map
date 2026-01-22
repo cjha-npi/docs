@@ -1,0 +1,17 @@
+<map id="npi::log::setMaxFolderSize" name="npi::log::setMaxFolderSize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,42,235,68"/>
+<area shape="rect" id="Node000002" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a4fd28b9a729792528c3707da82453049" title=" " alt="" coords="283,5,520,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,40,275,36,275,41,235,46"/>
+<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application&#45;level ProgramData path." alt="" coords="283,70,520,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,64,275,68,275,73,234,69"/>
+<area shape="rect" id="Node000004" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a1554aad28987c554d0ff1c379ce0567e" title="Create subdirectory under base path." alt="" coords="853,37,1123,78"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="520,75,846,61,846,66,520,81"/>
+<area shape="rect" id="Node000006" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute organization&#45;level ProgramData path." alt="" coords="568,96,805,121"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="520,91,561,94,560,100,519,96"/>
+<area shape="rect" id="Node000005" href="$dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633" title="Windows native fatal error message box." alt="" coords="1171,78,1416,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1123,70,1168,75,1167,80,1122,75"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="763,93,859,77,860,82,764,98"/>
+<area shape="rect" id="Node000007" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a1ba3938f670cc7526df2081bf6f6c0ce" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="869,103,1107,143"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="805,111,862,114,862,120,805,117"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="1106,108,1163,102,1163,107,1107,113"/>
+</map>

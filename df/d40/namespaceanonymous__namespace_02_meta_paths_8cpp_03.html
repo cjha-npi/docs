@@ -73,7 +73,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;2.3</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;3</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -149,6 +149,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6b23c92ed8a542082d8cddde4bd55b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve base path using Known Folder ID or environment variable fallback.  <br /></td></tr>
 <tr class="memitem:ad34f59342fdb3a04d27ff5ae0320ad25" id="r_ad34f59342fdb3a04d27ff5ae0320ad25"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad34f59342fdb3a04d27ff5ae0320ad25">createSubDir</a> (const QString &amp;base, const QString &amp;dirName) noexcept</td></tr>
 <tr class="memdesc:ad34f59342fdb3a04d27ff5ae0320ad25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create subdirectory under base path.  <br /></td></tr>
+<tr class="memitem:a71f0c349fdc17bb538a0b720816e7bcd" id="r_a71f0c349fdc17bb538a0b720816e7bcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71f0c349fdc17bb538a0b720816e7bcd">scheduleInit</a> ()</td></tr>
+<tr class="memdesc:a71f0c349fdc17bb538a0b720816e7bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedules the initialization of application meta paths.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Anonymous namespace for internal usage. </p>
@@ -156,8 +158,10 @@ Functions</h2></td></tr>
 <li><span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute organization-level ProgramData path.">npi::app::orgProgramDataDir()</a></span></li>
 <li><span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9" title="Absolute organization-level Public/Documents path.">npi::app::orgPublicDocumentsDir()</a></span></li>
 <li><span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application-level ProgramData path.">npi::app::appProgramDataDir()</a></span></li>
-<li><span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Absolute application-level Public/Documents path.">npi::app::appPublicDocumentsDir()</a></span> <dl class="section note"><dt>Note</dt><dd>This namespace is anonymous to limit the scope of the function it contains to this translation unit only. Since these functions terminate the process on failure, they should not be called from outside this translation unit. </dd></dl>
+<li><span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Absolute application-level Public/Documents path.">npi::app::appPublicDocumentsDir()</a></span> <dl class="section note"><dt>Note</dt><dd></dd></dl>
 </li>
+<li>Anonymous namespace variables/functions starts with <span class="tt">a</span>.</li>
+<li>This namespace is anonymous to limit the scope of the function it contains to this translation unit only. Since these functions terminate the process on failure, they should not be called from outside this translation unit. </li>
 </ul>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a6b23c92ed8a542082d8cddde4bd55b47" name="a6b23c92ed8a542082d8cddde4bd55b47"></a>
@@ -209,46 +213,46 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure (cannot locate or validate the directory), a native dialog is shown and the process is terminated (no return). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00059">59</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>  {</div>
-<div class="line"><span class="lineno">   61</span>    <span class="comment">// String to hold the resolved base path.</span></div>
-<div class="line"><span class="lineno">   62</span>    QString base;</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>    <span class="comment">// Windows API attempt.</span></div>
-<div class="line"><span class="lineno">   65</span>    PWSTR p = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   66</span>    <span class="keyword">const</span> HRESULT hr = SHGetKnownFolderPath(folderId, KF_FLAG_DEFAULT, <span class="keyword">nullptr</span>, &amp;p);</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">if</span>(SUCCEEDED(hr) &amp;&amp; p) {</div>
-<div class="line"><span class="lineno">   68</span>      base = QString::fromWCharArray(p);</div>
-<div class="line"><span class="lineno">   69</span>      CoTaskMemFree(p);</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    <span class="comment">// Environment variable fallback.</span></div>
-<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
-<div class="line"><span class="lineno">   74</span>      <span class="keywordflow">if</span>(<span class="keyword">const</span> QString envPath = qEnvironmentVariable(envVar); !envPath.isEmpty()) {</div>
-<div class="line"><span class="lineno">   75</span>        base = envSuffix.isEmpty() ? envPath : QDir(envPath).filePath(envSuffix);</div>
-<div class="line"><span class="lineno">   76</span>      }</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>    <span class="comment">// Abort on failure to locate.</span></div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
-<div class="line"><span class="lineno">   81</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
-<div class="line"><span class="lineno">   82</span>        QString(<span class="stringliteral">&quot;%1 Not Found&quot;</span>).arg(pathNameForErrors),</div>
-<div class="line"><span class="lineno">   83</span>        QString(<span class="stringliteral">&quot;Could not locate the system&#39;s %1 directory. This folder is &quot;</span></div>
-<div class="line"><span class="lineno">   84</span>          <span class="stringliteral">&quot;required for application settings.&quot;</span>)</div>
-<div class="line"><span class="lineno">   85</span>       .arg(pathNameForErrors));</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>    <span class="comment">// Abort if the path is missing or not a directory.</span></div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span>(<span class="keyword">const</span> QFileInfo info(base); !info.exists() || !info.isDir()) {</div>
-<div class="line"><span class="lineno">   90</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
-<div class="line"><span class="lineno">   91</span>        QString(<span class="stringliteral">&quot;%1 Invalid&quot;</span>).arg(pathNameForErrors),</div>
-<div class="line"><span class="lineno">   92</span>        QString(<span class="stringliteral">&quot;The system&#39;s %1 path &#39;%2&#39; is missing or is not a &quot;</span></div>
-<div class="line"><span class="lineno">   93</span>          <span class="stringliteral">&quot;directory. Please ensure this folder exists.&quot;</span>)</div>
-<div class="line"><span class="lineno">   94</span>       .arg(pathNameForErrors, QDir::fromNativeSeparators(base)));</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> base;</div>
-<div class="line"><span class="lineno">   98</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00063">63</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>  {</div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment">// String to hold the resolved base path.</span></div>
+<div class="line"><span class="lineno">   66</span>    QString base;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment">// Windows API attempt.</span></div>
+<div class="line"><span class="lineno">   69</span>    PWSTR p = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keyword">const</span> HRESULT hr = SHGetKnownFolderPath(folderId, KF_FLAG_DEFAULT, <span class="keyword">nullptr</span>, &amp;p);</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">if</span>(SUCCEEDED(hr) &amp;&amp; p) {</div>
+<div class="line"><span class="lineno">   72</span>      base = QString::fromWCharArray(p);</div>
+<div class="line"><span class="lineno">   73</span>      CoTaskMemFree(p);</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="comment">// Environment variable fallback.</span></div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
+<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">if</span>(<span class="keyword">const</span> QString envPath = qEnvironmentVariable(envVar); !envPath.isEmpty()) {</div>
+<div class="line"><span class="lineno">   79</span>        base = envSuffix.isEmpty() ? envPath : QDir(envPath).filePath(envSuffix);</div>
+<div class="line"><span class="lineno">   80</span>      }</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <span class="comment">// Abort on failure to locate.</span></div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span>(base.isEmpty()) {</div>
+<div class="line"><span class="lineno">   85</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
+<div class="line"><span class="lineno">   86</span>        QString(<span class="stringliteral">&quot;%1 Not Found&quot;</span>).arg(pathNameForErrors),</div>
+<div class="line"><span class="lineno">   87</span>        QString(<span class="stringliteral">&quot;Could not locate the system&#39;s %1 directory. This folder is &quot;</span></div>
+<div class="line"><span class="lineno">   88</span>          <span class="stringliteral">&quot;required for application settings.&quot;</span>)</div>
+<div class="line"><span class="lineno">   89</span>       .arg(pathNameForErrors));</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="comment">// Abort if the path is missing or not a directory.</span></div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span>(<span class="keyword">const</span> QFileInfo info(base); !info.exists() || !info.isDir()) {</div>
+<div class="line"><span class="lineno">   94</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
+<div class="line"><span class="lineno">   95</span>        QString(<span class="stringliteral">&quot;%1 Invalid&quot;</span>).arg(pathNameForErrors),</div>
+<div class="line"><span class="lineno">   96</span>        QString(<span class="stringliteral">&quot;The system&#39;s %1 path &#39;%2&#39; is missing or is not a &quot;</span></div>
+<div class="line"><span class="lineno">   97</span>          <span class="stringliteral">&quot;directory. Please ensure this folder exists.&quot;</span>)</div>
+<div class="line"><span class="lineno">   98</span>       .arg(pathNameForErrors, QDir::fromNativeSeparators(base)));</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> base;</div>
+<div class="line"><span class="lineno">  102</span>  }</div>
 <div class="ttc" id="anamespacenpi_1_1app_html_a30b5245afa890e98f19f43c58f29e633"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a></div><div class="ttdeci">void nativeFatalMessage(const QString &amp;title, const QString &amp;msg) noexcept</div><div class="ttdoc">Windows native fatal error message box.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d9c/_native_fatal_message_8hpp_source.html#l00044">NativeFatalMessage.hpp:44</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage()</a>.</p>
@@ -262,7 +266,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03_a6b23c92ed8a542082d8cddde4bd55b47_icgraph.svg" width="100%" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03_a6b23c92ed8a542082d8cddde4bd55b47_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -304,33 +308,66 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure to create the directory, a native dialog is shown and the process is terminated (no return). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00108">108</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>  {</div>
-<div class="line"><span class="lineno">  110</span>    QDir root{base};</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keyword">const</span> QString target = root.filePath(dirName);</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span>(!root.mkpath(dirName)) {</div>
-<div class="line"><span class="lineno">  113</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
-<div class="line"><span class="lineno">  114</span>        <span class="stringliteral">&quot;Cannot Create Directory&quot;</span>,</div>
-<div class="line"><span class="lineno">  115</span>        QString(<span class="stringliteral">&quot;The required settings directory could not be created:\n%1\n\n&quot;</span></div>
-<div class="line"><span class="lineno">  116</span>          <span class="stringliteral">&quot;This may be due to a permissions issue or because a file &quot;</span></div>
-<div class="line"><span class="lineno">  117</span>          <span class="stringliteral">&quot;with the same name already exists.&quot;</span>)</div>
-<div class="line"><span class="lineno">  118</span>       .arg(QDir::fromNativeSeparators(target)));</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> QDir::cleanPath(target);</div>
-<div class="line"><span class="lineno">  121</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00112">112</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>  {</div>
+<div class="line"><span class="lineno">  114</span>    QDir root{base};</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keyword">const</span> QString target = root.filePath(dirName);</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">if</span>(!root.mkpath(dirName)) {</div>
+<div class="line"><span class="lineno">  117</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(</div>
+<div class="line"><span class="lineno">  118</span>        <span class="stringliteral">&quot;Cannot Create Directory&quot;</span>,</div>
+<div class="line"><span class="lineno">  119</span>        QString(<span class="stringliteral">&quot;The required settings directory could not be created:\n%1\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  120</span>          <span class="stringliteral">&quot;This may be due to a permissions issue or because a file &quot;</span></div>
+<div class="line"><span class="lineno">  121</span>          <span class="stringliteral">&quot;with the same name already exists.&quot;</span>)</div>
+<div class="line"><span class="lineno">  122</span>       .arg(QDir::fromNativeSeparators(target)));</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span> QDir::cleanPath(target);</div>
+<div class="line"><span class="lineno">  125</span>  }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir()</a>, <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir()</a>, <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir()</a>, and <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03_ad34f59342fdb3a04d27ff5ae0320ad25_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+
+</div>
+</div>
+<a id="a71f0c349fdc17bb538a0b720816e7bcd" name="a71f0c349fdc17bb538a0b720816e7bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f0c349fdc17bb538a0b720816e7bcd">&#9670;&#160;</a></span>scheduleInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace{MetaPaths.cpp}::scheduleInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Schedules the initialization of application meta paths. </p>
+<p>This function is designed to be called by <span class="tt">Q_CONSTRUCTOR_FUNCTION</span> at application startup, which runs <em>before</em> <span class="tt">main()</span> and the <span class="tt">QApplication</span> instance exist.</p>
+<p>To safely initialize paths that may depend on a <span class="tt">QApplication</span> context this function uses <span class="tt">QTimer::singleShot(0, ...)</span> to post an asynchronous task to the Qt event queue.</p>
+<p>The task, executed within a lambda, calls <span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application-level ProgramData path.">npi::app::appProgramDataDir()</a></span> and <span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Absolute application-level Public/Documents path.">npi::app::appPublicDocumentsDir()</a></span>. This task will only execute <em>after</em> the event loop is started (i.e., when <span class="tt">app.exec()</span> runs) <b>OR</b> <span class="tt">QCoreApplication::processEvents()</span> after <span class="tt">QApplication</span> is created in the <span class="tt">main()</span> function.</p>
+<dl class="section note"><dt>Note</dt><dd>To force this initialization to run immediately after <span class="tt">QApplication</span> is created (but before other code, like <span class="tt"><a class="el" href="../../d9/dc6/class_main_window.html">MainWindow</a></span> construction), call <span class="tt">QCoreApplication::processEvents()</span> right after the <span class="tt">QApplication</span> object is instantiated in <span class="tt">main()</span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00185">185</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>  {</div>
+<div class="line"><span class="lineno">  187</span>    QTimer::singleShot(0, []() {</div>
+<div class="line"><span class="lineno">  188</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a>();</div>
+<div class="line"><span class="lineno">  189</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a>();</div>
+<div class="line"><span class="lineno">  190</span>    });</div>
+<div class="line"><span class="lineno">  191</span>  }</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a40a2a28831f2f410c995f0657baf6544"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a></div><div class="ttdeci">const QString &amp; appProgramDataDir() noexcept</div><div class="ttdoc">Absolute application-level ProgramData path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00146">MetaPaths.cpp:146</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_aff4c7482e4417f59ede04e359548a542"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; appPublicDocumentsDir() noexcept</div><div class="ttdoc">Absolute application-level Public/Documents path.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd8/_meta_paths_8cpp_source.html#l00155">MetaPaths.cpp:155</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir()</a>, and <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir()</a>.</p>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03_ad34f59342fdb3a04d27ff5ae0320ad25_icgraph.svg" width="100%" height="422"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03_a71f0c349fdc17bb538a0b720816e7bcd_cgraph.svg" width="100%" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -357,7 +394,7 @@ Here is the caller graph for this function:</div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Oct 30 2025 15:16:57'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Jan 22 2026 17:18:19'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

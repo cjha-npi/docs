@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['metapaths_2ecpp_0',['MetaPaths.cpp',['../d7/dd8/_meta_paths_8cpp.html',1,'']]],
-  ['metapaths_2eh_1',['MetaPaths.h',['../de/d9e/_meta_paths_8h.html',1,'']]]
+  ['log_2ecpp_0',['Log.cpp',['../d0/da7/_log_8cpp.html',1,'']]],
+  ['log_2eh_1',['Log.h',['../da/df4/_log_8h.html',1,'']]]
 ];
