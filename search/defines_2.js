@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test_0',['test',['../d5/da5/_main_window_8cpp.html#af04af1bc6d042a68a2b24d6e1312d253',1,'MainWindow.cpp']]]
+  ['win32_5flean_5fand_5fmean_0',['WIN32_LEAN_AND_MEAN',['../d7/db8/_global_locker_8hpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;GlobalLocker.hpp'],['../d0/da7/_log_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;Log.cpp'],['../d7/dd8/_meta_paths_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;MetaPaths.cpp'],['../d9/d9c/_native_fatal_message_8hpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;NativeFatalMessage.hpp'],['../d7/d4d/npi_imp_log_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;npiImpLog.cpp']]]
 ];

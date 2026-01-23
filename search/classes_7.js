@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['obs_0',['Obs',['../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html',1,'npi::RefPtrHost']]],
-  ['onelog_1',['OneLog',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d0/d89/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_one_log',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog'],['../d5/da5/_main_window_8cpp.html#d9/d28/struct_one_log',1,'OneLog']]],
-  ['opacityguard_2',['OpacityGuard',['../d5/d8d/structnpi_1_1_stage_window_1_1_opacity_guard.html',1,'npi::StageWindow']]],
-  ['orgmetadata_3',['OrgMetaData',['../d8/d1b/structnpi_1_1_org_meta_data.html',1,'npi']]]
+  ['refptr_0',['RefPtr',['../d2/d0d/classnpi_1_1_ref_ptr.html',1,'npi']]],
+  ['refptrfromthis_1',['RefPtrFromThis',['../d8/d8d/classnpi_1_1_ref_ptr_from_this.html',1,'npi']]],
+  ['refptrhost_2',['RefPtrHost',['../d6/d78/classnpi_1_1_ref_ptr_host.html',1,'npi']]],
+  ['refptrweakhost_3',['RefPtrWeakHost',['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html',1,'npi']]]
 ];

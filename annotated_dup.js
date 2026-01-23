@@ -17,10 +17,5 @@ var annotated_dup =
       [ "RefPtrWeakHost", "d2/dad/classnpi_1_1_ref_ptr_weak_host.html", "d2/dad/classnpi_1_1_ref_ptr_weak_host" ],
       [ "StageWindow", "dd/d55/classnpi_1_1_stage_window.html", "dd/d55/classnpi_1_1_stage_window" ],
       [ "TextSpec", "d2/db7/classnpi_1_1_text_spec.html", "d2/db7/classnpi_1_1_text_spec" ]
-    ] ],
-    [ "FixedStrings", "d5/da5/_main_window_8cpp.html#dd/d36/struct_fixed_strings", "d5/da5/_main_window_8cpp_dd/d36/struct_fixed_strings" ],
-    [ "MainWindow", "d9/dc6/class_main_window.html", "d9/dc6/class_main_window" ],
-    [ "OneLog", "d5/da5/_main_window_8cpp.html#d9/d28/struct_one_log", "d5/da5/_main_window_8cpp_d9/d28/struct_one_log" ],
-    [ "Test", "d1/d9b/class_test.html", "d1/d9b/class_test" ],
-    [ "Thread", "d8/d18/class_thread.html", "d8/d18/class_thread" ]
+    ] ]
 ];

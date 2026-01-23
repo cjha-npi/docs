@@ -1,29 +1,27 @@
 <map id="npi::app::appProgramDataDir" name="npi::app::appProgramDataDir">
-<area shape="rect" id="Node000001" title="Absolute application&#45;level ProgramData path." alt="" coords="1131,220,1368,246"/>
-<area shape="rect" id="Node000002" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aec0c49d654f69ba240eded5dee4bbc8b" title=" " alt="" coords="865,5,1039,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1232,216,1171,148,1129,109,1081,75,1037,56,1040,51,1084,71,1132,105,1175,144,1236,213"/>
-<area shape="rect" id="Node000003" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a953bdf43ab1e0d48f1225fe1dcccfbd4" title=" " alt="" coords="857,85,1047,141"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1216,219,1155,188,1082,156,1046,143,1047,138,1084,151,1157,183,1219,214"/>
-<area shape="rect" id="Node000004" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af4273441409e88d841adc86974b49c75" title=" " alt="" coords="857,165,1047,221"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1145,222,1046,208,1047,203,1146,217"/>
-<area shape="rect" id="Node000006" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5fa684811c33eea49f63593fea332de4" title=" " alt="" coords="865,389,1039,445"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1233,254,1172,315,1130,350,1084,380,1040,399,1038,394,1081,375,1126,345,1168,311,1230,250"/>
-<area shape="rect" id="Node000012" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a71f0c349fdc17bb538a0b720816e7bcd" title="Schedules the initialization of application meta paths." alt="" coords="821,325,1083,366"/>
-<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1220,252,1158,284,1084,316,1046,327,1045,322,1082,311,1156,279,1217,247"/>
-<area shape="rect" id="Node000013" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a78f2c370e9ec632af877fe1dd49ef478" title=" " alt="" coords="857,245,1047,301"/>
-<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1146,250,1047,263,1046,258,1145,244"/>
-<area shape="rect" id="Node000005" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac81e3393bfb7545e17c9fd8ea4cb4aa6" title=" " alt="" coords="596,245,769,301"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="851,226,770,250,768,245,850,221"/>
-<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="857,395,820,380,772,347,716,303,719,299,776,343,823,375,859,390"/>
-<area shape="rect" id="Node000007" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a18c3c555110a16327bd67014b95739eb" title=" " alt="" coords="592,357,773,413"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="857,409,773,398,773,393,858,403"/>
-<area shape="rect" id="Node000010" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a59eebbde2d3d36263a0d7a96e595573b" title=" " alt="" coords="596,437,769,493"/>
-<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="858,437,770,452,769,447,857,431"/>
-<area shape="rect" id="Node000008" href="$d5/ddd/namespacenpi_1_1log.html#aa9c7f1de08a88a0dcac316127c1d384b" title=" " alt="" coords="307,372,544,398"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="584,388,544,388,544,382,584,382"/>
-<area shape="rect" id="Node000009" href="$d9/dc6/class_main_window.html#a4b31735a0ab8596f2c8a452d47694572" title=" " alt="" coords="5,365,259,406"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="299,388,259,388,259,382,299,382"/>
-<area shape="rect" id="Node000011" href="$d5/ddd/namespacenpi_1_1log.html#a9be9faae3670cc6af86285afecfb3e58" title=" " alt="" coords="315,452,536,478"/>
-<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="588,468,536,468,536,462,588,462"/>
-<area shape="poly" id="edge14_Node000013_Node000005" title=" " alt="" coords="849,276,769,276,769,270,849,270"/>
+<area shape="rect" id="Node000001" title="Absolute application&#45;level ProgramData path." alt="" coords="829,220,1067,246"/>
+<area shape="rect" id="Node000002" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aec0c49d654f69ba240eded5dee4bbc8b" title=" " alt="" coords="564,5,737,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="931,216,870,148,827,109,780,75,736,56,738,51,783,71,831,105,874,144,935,213"/>
+<area shape="rect" id="Node000003" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a953bdf43ab1e0d48f1225fe1dcccfbd4" title=" " alt="" coords="556,85,745,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="915,219,853,188,780,156,744,143,746,138,782,151,856,183,917,214"/>
+<area shape="rect" id="Node000004" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af4273441409e88d841adc86974b49c75" title=" " alt="" coords="556,165,745,221"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="844,222,745,208,745,203,844,217"/>
+<area shape="rect" id="Node000006" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5fa684811c33eea49f63593fea332de4" title=" " alt="" coords="564,389,737,445"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="932,254,870,315,828,350,783,380,738,399,736,394,780,375,825,345,867,311,928,250"/>
+<area shape="rect" id="Node000011" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a71f0c349fdc17bb538a0b720816e7bcd" title="Schedules the initialization of application meta paths." alt="" coords="520,325,781,366"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="919,252,857,284,782,316,745,327,743,322,780,311,855,279,916,247"/>
+<area shape="rect" id="Node000012" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a78f2c370e9ec632af877fe1dd49ef478" title=" " alt="" coords="556,245,745,301"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="844,250,745,263,745,258,844,244"/>
+<area shape="rect" id="Node000005" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac81e3393bfb7545e17c9fd8ea4cb4aa6" title=" " alt="" coords="295,245,468,301"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="550,226,469,250,467,245,548,221"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="555,395,519,380,471,347,415,303,418,299,474,343,521,375,557,390"/>
+<area shape="rect" id="Node000007" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a18c3c555110a16327bd67014b95739eb" title=" " alt="" coords="291,357,472,413"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="556,409,471,398,472,393,556,403"/>
+<area shape="rect" id="Node000009" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a59eebbde2d3d36263a0d7a96e595573b" title=" " alt="" coords="295,437,468,493"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="557,437,468,452,467,447,556,431"/>
+<area shape="rect" id="Node000008" href="$d5/ddd/namespacenpi_1_1log.html#aa9c7f1de08a88a0dcac316127c1d384b" title=" " alt="" coords="5,372,243,398"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="283,388,243,388,243,382,283,382"/>
+<area shape="rect" id="Node000010" href="$d5/ddd/namespacenpi_1_1log.html#a9be9faae3670cc6af86285afecfb3e58" title=" " alt="" coords="13,452,235,478"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="287,468,234,468,234,462,287,462"/>
+<area shape="poly" id="edge13_Node000012_Node000005" title=" " alt="" coords="548,276,468,276,468,270,548,270"/>
 </map>

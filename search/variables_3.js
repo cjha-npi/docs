@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['datetime_5f_0',['dateTime_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ae62614689a80d34533e97aca8325d559',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog::dateTime_'],['../d5/da5/_main_window_8cpp.html#a842abcc690e41182d6cc0559bc3d1a31',1,'OneLog::dateTime_']]],
+  ['datetime_5f_0',['dateTime_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ae62614689a80d34533e97aca8325d559',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog']]],
   ['defaultdirname_5f_1',['DefaultDirName_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac59d07dd670b0b0ad57fe77de5c3da74',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['defaultmaxfoldersizemb_5f_2',['DefaultMaxFolderSizeMb_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#adf6a5b7e4060f204af043d650e71209b',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['defdir_5f_3',['defDir_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a60007d219e332ca18551b6f3aacaff19',1,'anonymous_namespace{Log.cpp}::LogCore']]],

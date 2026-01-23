@@ -7,8 +7,6 @@ var files_dup =
     [ "GuiProps.hpp", "dc/d0e/_gui_props_8hpp.html", "dc/d0e/_gui_props_8hpp" ],
     [ "Log.cpp", "d0/da7/_log_8cpp.html", "d0/da7/_log_8cpp" ],
     [ "Log.h", "da/df4/_log_8h.html", "da/df4/_log_8h" ],
-    [ "MainWindow.cpp", "d5/da5/_main_window_8cpp.html", "d5/da5/_main_window_8cpp" ],
-    [ "MainWindow.h", "d2/d97/_main_window_8h.html", "d2/d97/_main_window_8h" ],
     [ "MetaPaths.cpp", "d7/dd8/_meta_paths_8cpp.html", "d7/dd8/_meta_paths_8cpp" ],
     [ "MetaPaths.h", "de/d9e/_meta_paths_8h.html", "de/d9e/_meta_paths_8h" ],
     [ "NativeFatalMessage.hpp", "d9/d9c/_native_fatal_message_8hpp.html", "d9/d9c/_native_fatal_message_8hpp" ],

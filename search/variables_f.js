@@ -9,11 +9,10 @@ var searchData=
   ['settingsmsgfieldskey_5f_6',['SettingsMsgFieldsKey_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a86ea00388f234a7283b3b776077b098b',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['settingswarnisimpkey_5f_7',['SettingsWarnIsImpKey_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a69526540f56e70e11963b0419ca0380e',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['shutdownmode_5f_8',['shutdownMode_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a7a7e55ae520aa9085fd732dc822ca3aa',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['slotstate_5f_9',['slotState_',['../d9/dc6/class_main_window.html#a62ee6982bb875b0cf8344663231ff813',1,'MainWindow']]],
-  ['starttp_5f_10',['startTp_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a823c77b584c77cddd1eedbe2c4b9a0f7',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['startup_5f_11',['startup_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ad1101561538d36f5c8d21d473ea12b25',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['strikeout_5f_12',['strikeout_',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#add8955c28700770fdc008564a12d28f8',1,'npi::TextSpec::Style']]],
-  ['strings_5f_13',['strings_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a833eceed3271ed7208f8610a1e9f2d37',1,'anonymous_namespace{Log.cpp}::LogCore::FieldConfig']]],
-  ['style_5f_14',['style_',['../d2/db7/classnpi_1_1_text_spec.html#af48eb815628c1bb6ea919b72c5a57e6e',1,'npi::TextSpec']]],
-  ['suffix_5f_15',['suffix_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ad559142620776398f3898712f4bd5063',1,'anonymous_namespace{Log.cpp}::LogCore::UnitInfo']]]
+  ['starttp_5f_9',['startTp_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a823c77b584c77cddd1eedbe2c4b9a0f7',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['startup_5f_10',['startup_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ad1101561538d36f5c8d21d473ea12b25',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['strikeout_5f_11',['strikeout_',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#add8955c28700770fdc008564a12d28f8',1,'npi::TextSpec::Style']]],
+  ['strings_5f_12',['strings_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a833eceed3271ed7208f8610a1e9f2d37',1,'anonymous_namespace{Log.cpp}::LogCore::FieldConfig']]],
+  ['style_5f_13',['style_',['../d2/db7/classnpi_1_1_text_spec.html#af48eb815628c1bb6ea919b72c5a57e6e',1,'npi::TextSpec']]],
+  ['suffix_5f_14',['suffix_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ad559142620776398f3898712f4bd5063',1,'anonymous_namespace{Log.cpp}::LogCore::UnitInfo']]]
 ];

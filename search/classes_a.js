@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['test_0',['Test',['../d1/d9b/class_test.html',1,'']]],
-  ['textspec_1',['TextSpec',['../d2/db7/classnpi_1_1_text_spec.html',1,'npi']]],
-  ['thread_2',['Thread',['../d8/d18/class_thread.html',1,'']]]
+  ['unitinfo_0',['UnitInfo',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d8/db4/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_unit_info',1,'anonymous_namespace{Log.cpp}::LogCore']]]
 ];

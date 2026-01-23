@@ -1,7 +1,7 @@
 var searchData=
 [
   ['datetime_0',['DateTime',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36a8cf10d2341ed01492506085688270c1e',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['datetime_5f_1',['dateTime_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ae62614689a80d34533e97aca8325d559',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog::dateTime_'],['../d5/da5/_main_window_8cpp.html#a842abcc690e41182d6cc0559bc3d1a31',1,'OneLog::dateTime_']]],
+  ['datetime_5f_1',['dateTime_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ae62614689a80d34533e97aca8325d559',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog']]],
   ['decdigits_2',['decDigits',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#ab261e5125e925c910ea977d0ac217ab6',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['default_3',['Default',['../d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8ba7a1920d61156abc05a60135aefe8bc67',1,'npi::TextSpec']]],
   ['defaultdirname_5f_4',['DefaultDirName_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac59d07dd670b0b0ad57fe77de5c3da74',1,'anonymous_namespace{Log.cpp}::LogCore']]],
