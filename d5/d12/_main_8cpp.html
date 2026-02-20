@@ -139,118 +139,50 @@ $(function(){initNavTree('d5/d12/_main_8cpp.html','../../',''); });
   <div class="headertitle"><div class="title">Main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;windows.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;QApplication&gt;</code><br />
+<code>#include &quot;npi/MainWindow.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Main.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/dfb/_main_8cpp__incl.svg" width="104" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/dfb/_main_8cpp__incl.svg" width="302" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="../../d5/d12/_main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae1325efcce4a4b1b4ea52247f0a0a0c1" id="r_ae1325efcce4a4b1b4ea52247f0a0a0c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1325efcce4a4b1b4ea52247f0a0a0c1">wmain</a> (int argc, wchar_t *argv[])</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ae1325efcce4a4b1b4ea52247f0a0a0c1" name="ae1325efcce4a4b1b4ea52247f0a0a0c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1325efcce4a4b1b4ea52247f0a0a0c1">&#9670;&#160;</a></span>wmain()</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int wmain </td>
+          <td class="memname">int main </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">wchar_t *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00003">3</a> of file <a class="el" href="../../d5/d12/_main_8cpp_source.html">Main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
-<div class="line"><span class="lineno">    5</span>  <span class="keywordflow">if</span>(argc &lt; 2 || argv[1] == <span class="keyword">nullptr</span> || argv[1][0] == L<span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">    6</span>    <span class="keywordflow">return</span> 1; <span class="comment">// Error: Missing/Invalid log file path argument</span></div>
-<div class="line"><span class="lineno">    7</span> </div>
-<div class="line"><span class="lineno">    8</span>  <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* logFileName = argv[1];</div>
-<div class="line"><span class="lineno">    9</span> </div>
-<div class="line"><span class="lineno">   10</span>  <span class="keyword">const</span> HANDLE hStdIn = ::GetStdHandle(STD_INPUT_HANDLE);</div>
-<div class="line"><span class="lineno">   11</span>  <span class="keywordflow">if</span>(hStdIn == INVALID_HANDLE_VALUE || hStdIn == <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">   12</span>    <span class="keywordflow">return</span> 2; <span class="comment">// Missing/Invalid STDIN handle (pipe not redirected/inherited)</span></div>
-<div class="line"><span class="lineno">   13</span> </div>
-<div class="line"><span class="lineno">   14</span>  HANDLE hLogFile = INVALID_HANDLE_VALUE;</div>
-<div class="line"><span class="lineno">   15</span>  <span class="keyword">constexpr</span> DWORD bufSize = 20480;</div>
-<div class="line"><span class="lineno">   16</span>  <span class="keywordtype">char</span> buffer[bufSize];</div>
-<div class="line"><span class="lineno">   17</span> </div>
-<div class="line"><span class="lineno">   18</span>  DWORD bRead = 0;</div>
-<div class="line"><span class="lineno">   19</span>  DWORD bWrite = 0;</div>
-<div class="line"><span class="lineno">   20</span>  DWORD bRemain = 0;</div>
-<div class="line"><span class="lineno">   21</span>  DWORD bOffset = 0;</div>
-<div class="line"><span class="lineno">   22</span> </div>
-<div class="line"><span class="lineno">   23</span>  <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>    bRead = 0;</div>
-<div class="line"><span class="lineno">   26</span>    <span class="keyword">const</span> BOOL readSuccess = ::ReadFile(hStdIn, buffer, bufSize, &amp;bRead, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span>(!readSuccess) {</div>
-<div class="line"><span class="lineno">   29</span>      <span class="keyword">const</span> DWORD e = ::GetLastError();</div>
-<div class="line"><span class="lineno">   30</span>      <span class="keywordflow">if</span>(e == ERROR_BROKEN_PIPE || e == ERROR_HANDLE_EOF)</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">break</span>; <span class="comment">// Normal termination: parent closed/crashed and pipe ended.</span></div>
-<div class="line"><span class="lineno">   32</span>      <span class="keywordflow">if</span>(hLogFile != INVALID_HANDLE_VALUE)</div>
-<div class="line"><span class="lineno">   33</span>        CloseHandle(hLogFile);</div>
-<div class="line"><span class="lineno">   34</span>      <span class="keywordflow">return</span> 3; <span class="comment">// Read failed (unexpected error).</span></div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">if</span>(bRead == 0)</div>
-<div class="line"><span class="lineno">   38</span>      <span class="keywordflow">break</span>; <span class="comment">// EOF (End OF File) i.e. Main application closed</span></div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE) {</div>
-<div class="line"><span class="lineno">   41</span>      hLogFile = ::CreateFileW(</div>
-<div class="line"><span class="lineno">   42</span>        logFileName,           <span class="comment">// File path</span></div>
-<div class="line"><span class="lineno">   43</span>        FILE_APPEND_DATA,      <span class="comment">// Append access (atomic append per write)</span></div>
-<div class="line"><span class="lineno">   44</span>        FILE_SHARE_READ,       <span class="comment">// Allow others to read while we write</span></div>
-<div class="line"><span class="lineno">   45</span>        <span class="keyword">nullptr</span>,               <span class="comment">// Security attributes</span></div>
-<div class="line"><span class="lineno">   46</span>        OPEN_ALWAYS,           <span class="comment">// Create if missing, open if exists</span></div>
-<div class="line"><span class="lineno">   47</span>        FILE_ATTRIBUTE_NORMAL, <span class="comment">// Normal attributes</span></div>
-<div class="line"><span class="lineno">   48</span>        <span class="keyword">nullptr</span>                <span class="comment">// Template file</span></div>
-<div class="line"><span class="lineno">   49</span>      );</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>      <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE)</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> 4; <span class="comment">// Failed to create / open log file on first data (CreateFileW failure)</span></div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>    bRemain = bRead;</div>
-<div class="line"><span class="lineno">   56</span>    bOffset = 0;</div>
-<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> tries = 0; bRemain &gt; 0 &amp;&amp; tries &lt; 16; ++tries) {</div>
-<div class="line"><span class="lineno">   58</span>      bWrite = 0;</div>
-<div class="line"><span class="lineno">   59</span>      <span class="keyword">const</span> BOOL writeSuccess = ::WriteFile(hLogFile, buffer + bOffset, bRemain, &amp;bWrite, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>      <span class="keywordflow">if</span>(!writeSuccess || bWrite == 0) {</div>
-<div class="line"><span class="lineno">   62</span>        ::CloseHandle(hLogFile);</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> 5; <span class="comment">// Failed to write to log file (WriteFile failure / no progress)</span></div>
-<div class="line"><span class="lineno">   64</span>      }</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>      bOffset += bWrite;</div>
-<div class="line"><span class="lineno">   67</span>      bRemain -= bWrite;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">if</span>(bRemain &gt; 0) {</div>
-<div class="line"><span class="lineno">   71</span>      ::CloseHandle(hLogFile);</div>
-<div class="line"><span class="lineno">   72</span>      <span class="keywordflow">return</span> 6; <span class="comment">// Failed to write all data to the log file</span></div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="line"><span class="lineno">   74</span>  }</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">if</span>(hLogFile != INVALID_HANDLE_VALUE) {</div>
-<div class="line"><span class="lineno">   77</span>    FlushFileBuffers(hLogFile);</div>
-<div class="line"><span class="lineno">   78</span>    CloseHandle(hLogFile);</div>
-<div class="line"><span class="lineno">   79</span>  }</div>
-<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">return</span> 0; <span class="comment">// Success: Normal shutdown</span></div>
-<div class="line"><span class="lineno">   81</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../d5/d12/_main_8cpp_source.html">Main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    5</span>{</div>
+<div class="line"><span class="lineno">    6</span>  qDebug() &lt;&lt; <span class="stringliteral">&quot;1: -------------------- Main BEG&quot;</span>;</div>
+<div class="line"><span class="lineno">    7</span>  QApplication app(argc, argv);</div>
+<div class="line"><span class="lineno">    8</span>  QCoreApplication::processEvents();</div>
+<div class="line"><span class="lineno">    9</span>  MainWindow window;</div>
+<div class="line"><span class="lineno">   10</span>  window.show();</div>
+<div class="line"><span class="lineno">   11</span>  qDebug() &lt;&lt; <span class="stringliteral">&quot;1: -------------------- Main END&quot;</span>;</div>
+<div class="line"><span class="lineno">   12</span>  <span class="keywordflow">return</span> app.exec();</div>
+<div class="line"><span class="lineno">   13</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -276,7 +208,7 @@ Functions</h2></td></tr>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Wed Jan 21 2026 10:09:32'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Fri Feb 20 2026 12:02:29'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

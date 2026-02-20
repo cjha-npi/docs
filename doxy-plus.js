@@ -1074,6 +1074,56 @@
       return result;
     }
 
+    const DOXY_FILE_RE = /_8(hpp|h|cpp|c)\.html$/;
+    function pruneFilesList(tree) {
+      const result = [];
+
+      if (!Array.isArray(tree) || tree.length === 0) {
+        return result;
+      }
+
+      for (const [name, path, kids] of tree) {
+        const htmlName = (typeof path === 'string') ? path.split('/').pop() : '';
+        const keepSelf = !htmlName.includes('#') && IS_HTML_END.test(htmlName) && (htmlName.startsWith('dir_') || DOXY_FILE_RE.test(htmlName));
+        const prunedKids = (Array.isArray(kids) && kids.length > 0) ? pruneFilesList(kids) : [];
+        const keepKids = prunedKids.length > 0;
+
+        if (keepSelf || keepKids) {
+          result.push([name, path, keepKids ? prunedKids : null]);
+        }
+      }
+
+      return result;
+    }
+
+    function findIndexNode(tree) {
+      if (!Array.isArray(tree) || tree.length === 0) return null;
+      for (const node of tree) {
+        if (typeof node[1] === 'string' && node[1] === 'index.html') {
+          return node;
+        }
+        const kids = node[2];
+        if (Array.isArray(kids) && kids.length > 0) {
+          const found = findIndexNode(kids);
+          if (found) return found;
+        }
+      }
+      return null;
+    }
+
+    function findMdPages(tree, result = []) {
+      if (!Array.isArray(tree) || tree.length === 0) return;
+      for (const [name, path, kids] of tree) {
+        const htmlName = (typeof path === 'string') ? path.split('/').pop() : '';
+        if (!htmlName.includes('#') && IS_HTML_END.test(htmlName) && (htmlName.startsWith('md__'))) {
+          result.push([name, path, null]);
+        }
+        if (Array.isArray(kids) && kids.length > 0) {
+          findMdPages(kids, result);
+        }
+      }
+    }
+
     // Traverse a cloned default tree by a sequence of section names
     function findNodeByNameList(tree, ...nameList) {
       if (!Array.isArray(tree) || nameList.length === 0) return null;
@@ -1145,6 +1195,16 @@
       return out;
     }
 
+
+    const indexPage = findIndexNode(defTree);
+    if (indexPage) {
+      const mdPages = [];
+      findMdPages(defTree, mdPages);
+      if (mdPages.length > 0) {
+        _htmlPages.push(['Project', indexPage[1], mdPages]);
+      }
+    }
+
     // Process the Namespaces -> Namespace List
     const nsListNode = findNodeByNameList(defTree, 'Namespaces', 'Namespace List');
     if (nsListNode) {
@@ -1157,39 +1217,35 @@
         sortListAlphabetically(anon);
 
         if (anon.length > 0) {
-          list.push(['-- ANONYMOUS --', null, null]);
-          for (let ii = 0; ii < anon.length; ++ii) {
-            list.push([anon[ii][0], anon[ii][1], anon[ii][2]]);
+          list.push(['Anonymous', null, anon]);
+        }
+
+        const nsMemNode = findNodeByNameList(defTree, 'Namespaces', 'Namespace Members');
+        if (nsMemNode) {
+          const [, memHref, memKids] = nsMemNode;
+          if (Array.isArray(memKids) && memKids.length > 0) {
+            let memTemp = flatAndPrune(memKids, '::');
+            if (memTemp.length > 0) {
+              let memMainIdx = -1;
+              for (let ii = 0; ii < memTemp.length; ++ii) {
+                if (memTemp[ii][0] === 'All') {
+                  memMainIdx = ii;
+                  break;
+                }
+              }
+              if (memMainIdx > -1) {
+                let memMainHref = memTemp[memMainIdx][1];
+                memTemp.splice(memMainIdx, 1);
+                if (typeof memMainHref === 'string' && IS_HTML_END.test(memMainHref) && memTemp.length > 0) {
+                  list.push(['Members', memMainHref, memTemp]);
+                }
+              }
+            }
           }
         }
 
         if (list.length > 0) {
           _htmlPages.push(['Namespaces', href, list]);
-        }
-      }
-    }
-
-    // Process the Namespaces -> Namespace Members
-    const nsMemNode = findNodeByNameList(defTree, 'Namespaces', 'Namespace Members');
-    if (nsMemNode) {
-      const [, href, kids] = nsMemNode;
-      if (Array.isArray(kids) && kids.length > 0) {
-        let temp = flatAndPrune(kids, '::');
-        if (temp.length > 0) {
-          let idx = -1;
-          for (let ii = 0; ii < temp.length; ++ii) {
-            if (temp[ii][0] === 'All') {
-              idx = ii;
-              break;
-            }
-          }
-          if (idx > -1) {
-            let tempHref = temp[idx][1];
-            temp.splice(idx, 1);
-            if (typeof tempHref === 'string' && IS_HTML_END.test(tempHref) && temp.length > 0) {
-              _htmlPages.push(['Globals', tempHref, temp]);
-            }
-          }
         }
       }
     }
@@ -1218,9 +1274,44 @@
       sortListAlphabetically(anon);
 
       if (anon.length > 0) {
+        list.push(['File Local Classes', null, anon]);
+      }
+
+
+
+      /*
+      if (anon.length > 0) {
         list.push(['-- ANONYMOUS NS --', null, null]);
         for (let ii = 0; ii < anon.length; ++ii) {
           list.push([anon[ii][0], anon[ii][1], anon[ii][2]]);
+        }
+      }
+        */
+
+      const classMembersNode = findNodeByNameList(defTree, 'Classes', 'Class Members');
+      if (classMembersNode) {
+        const [, memHref, memKids] = classMembersNode;
+        if (Array.isArray(memKids) && memKids.length > 0) {
+          let memList = flatAndPrune(memKids, '::');
+          if (memList.length > 0) {
+            list.push(['Members', memHref, memList]);
+          }
+        }
+      }
+
+      const classHierarchyNode = findNodeByNameList(defTree, 'Classes', 'Class Hierarchy');
+      if (classHierarchyNode) {
+        const [, hiHref, hiKids] = classHierarchyNode;
+        if (typeof hiHref === 'string' && IS_HTML_END.test(hiHref)) {
+          list.push(['[Hierarchy]', hiHref, hiKids]);
+        }
+      }
+
+      const classIndexNode = findNodeByNameList(defTree, 'Classes', 'Class Index');
+      if (classIndexNode) {
+        const [, inHref, inKids] = classIndexNode;
+        if (typeof inHref === 'string' && IS_HTML_END.test(inHref)) {
+          list.push(['[Index]', inHref, inKids]);
         }
       }
 
@@ -1241,6 +1332,7 @@
       }
     }
 
+    /*
     // If Classes are added then add 'Class Hierarchy' and 'Class Index' pages
     if (classListInserted) {
 
@@ -1263,6 +1355,7 @@
       }
     }
 
+    
     // Process Classes -> Class Members
     const classMembersNode = findNodeByNameList(defTree, 'Classes', 'Class Members');
     if (classMembersNode) {
@@ -1287,7 +1380,41 @@
         }
       }
     }
+      */
 
+    const filesNode = findNodeByNameList(defTree, 'Files', 'File List');
+    if (filesNode) {
+      const [, href, kids] = filesNode;
+      const list = pruneFilesList(kids);
+
+      const filesMembersNode = findNodeByNameList(defTree, 'Files', 'File Members');
+      if (filesMembersNode) {
+        const [, memHref, memKids] = filesMembersNode;
+        if (Array.isArray(memKids) && memKids.length > 0) {
+          let temp = flatAndPrune(memKids, '::');
+          if (temp.length > 0) {
+            let idx = -1;
+            for (let ii = 0; ii < temp.length; ++ii) {
+              if (temp[ii][0] === 'All') {
+                idx = ii;
+                break;
+              }
+            }
+            if (idx > -1) {
+              let tempHref = temp[idx][1];
+              temp.splice(idx, 1);
+              if (typeof tempHref === 'string' && IS_HTML_END.test(tempHref) && temp.length > 0) {
+                list.push(['Members', tempHref, temp]);
+              }
+            }
+          }
+        }
+      }
+
+      _htmlPages.push(['Files', href, list]);
+    }
+
+    /*
     // Process Files -> Files List
     const filesNode = findNodeByNameList(defTree, 'Files', 'File List');
     if (filesNode) {
@@ -1323,11 +1450,13 @@
         }
       }
     }
+      */
 
 
+    /*
     // Enable below to add dummy items to the primary tree to see how it works
     // with more than 2 level deep tree structure.
-    /*
+
     _htmlPages.push(['Ind A Bla bla bla bla bla bla bla', null, null]);
     _htmlPages.push(['Ind B Bla bla bla bla bla bla bla', null, null]);
 
@@ -1369,6 +1498,7 @@
 
     _htmlPages.push(['Ind C Bla bla bla bla bla bla bla', null, null]);
     */
+
 
 
 

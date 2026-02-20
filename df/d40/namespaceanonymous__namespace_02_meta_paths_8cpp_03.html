@@ -348,10 +348,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Schedules the initialization of application meta paths. </p>
-<p>This function is designed to be called by <span class="tt">Q_CONSTRUCTOR_FUNCTION</span> at application startup, which runs <em>before</em> <span class="tt">main()</span> and the <span class="tt">QApplication</span> instance exist.</p>
+<p>This function is designed to be called by <span class="tt">Q_CONSTRUCTOR_FUNCTION</span> at application startup, which runs <em>before</em> <span class="tt"><a class="el" href="../../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></span> and the <span class="tt">QApplication</span> instance exist.</p>
 <p>To safely initialize paths that may depend on a <span class="tt">QApplication</span> context this function uses <span class="tt">QTimer::singleShot(0, ...)</span> to post an asynchronous task to the Qt event queue.</p>
-<p>The task, executed within a lambda, calls <span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application-level ProgramData path.">npi::app::appProgramDataDir()</a></span> and <span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Absolute application-level Public/Documents path.">npi::app::appPublicDocumentsDir()</a></span>. This task will only execute <em>after</em> the event loop is started (i.e., when <span class="tt">app.exec()</span> runs) <b>OR</b> <span class="tt">QCoreApplication::processEvents()</span> after <span class="tt">QApplication</span> is created in the <span class="tt">main()</span> function.</p>
-<dl class="section note"><dt>Note</dt><dd>To force this initialization to run immediately after <span class="tt">QApplication</span> is created (but before other code, like <span class="tt">MainWindow</span> construction), call <span class="tt">QCoreApplication::processEvents()</span> right after the <span class="tt">QApplication</span> object is instantiated in <span class="tt">main()</span>. </dd></dl>
+<p>The task, executed within a lambda, calls <span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application-level ProgramData path.">npi::app::appProgramDataDir()</a></span> and <span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Absolute application-level Public/Documents path.">npi::app::appPublicDocumentsDir()</a></span>. This task will only execute <em>after</em> the event loop is started (i.e., when <span class="tt">app.exec()</span> runs) <b>OR</b> <span class="tt">QCoreApplication::processEvents()</span> after <span class="tt">QApplication</span> is created in the <span class="tt"><a class="el" href="../../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></span> function.</p>
+<dl class="section note"><dt>Note</dt><dd>To force this initialization to run immediately after <span class="tt">QApplication</span> is created (but before other code, like <span class="tt">MainWindow</span> construction), call <span class="tt">QCoreApplication::processEvents()</span> right after the <span class="tt">QApplication</span> object is instantiated in <span class="tt"><a class="el" href="../../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></span>. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html#l00185">185</a> of file <a class="el" href="../../d7/dd8/_meta_paths_8cpp_source.html">MetaPaths.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  186</span>  {</div>
@@ -394,7 +394,7 @@ Here is the call graph for this function:</div>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Jan 23 2026 08:50:49'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Fri Feb 20 2026 12:02:31'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

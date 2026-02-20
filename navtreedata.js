@@ -26,6 +26,10 @@ var NAVTREE =
 [
   [ "Main Project", "index.html", [
     [ "Main Project Documentation", "index.html", "index" ],
+    [ "Imp Log Process", "da/dd8/md__test_page.html", [
+      [ "Some Test Data", "da/dd8/md__test_page.html#autotoc_md8", null ],
+      [ "Some Code", "da/dd8/md__test_page.html#autotoc_md9", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -60,10 +64,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#acc79e18b0a8472ad63533edc0cad32f8",
-"d2/db7/classnpi_1_1_text_spec.html#a570ca613f6c7b650e69717ff4bdd3652",
-"d6/d78/classnpi_1_1_ref_ptr_host.html#afb8d8dbdf14e10fb8e92938ea071d48f",
-"dd/d55/classnpi_1_1_stage_window.html#a9fb785ee31eae71b2660f4b9d0abfcdb"
+"d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac83f155438d4a0447ac048d50c7b1a47",
+"d2/db7/classnpi_1_1_text_spec.html#a418b9bcb6a1292054de007257baffb12",
+"d6/d78/classnpi_1_1_ref_ptr_host.html#aed0496d9766440923aff98210ff3bbab",
+"dd/d55/classnpi_1_1_stage_window.html#a9ab26c7e9c7ca6511e4cdf014b74fb60"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

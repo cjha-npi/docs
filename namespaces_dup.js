@@ -6,9 +6,5 @@ var namespaces_dup =
       [ "createSubDir", "df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25", null ],
       [ "scheduleInit", "df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a71f0c349fdc17bb538a0b720816e7bcd", null ]
     ] ],
-    [ "anonymous_namespace{npiImpLog.cpp}", "da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html", [
-      [ "ensureParentDirExists", "da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#ad48d762bce7f029decf2b5b4cca0586a", null ],
-      [ "openAppendFile", "da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#a7a9fc2ee817c389669c804874f4032b1", null ]
-    ] ],
     [ "npi", "d6/d57/namespacenpi.html", "d6/d57/namespacenpi" ]
 ];

@@ -1247,15 +1247,19 @@ li.dp-tree-item--parent.dp-tree-item--expanded > ul {
   display: flex;
   position: relative;
   align-items: center;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
   border-radius: var(--dp-border-radius-s);
   color: var(--page-foreground-color);
   cursor: pointer;
 }
+
 li.dp-tree-item--disabled > .dp-tree-line {
-  color: var(--dp-text-disabled-color);
   cursor: default;
+}
+
+li.dp-tree-item--disabled:not(.dp-tree-item--parent) > .dp-tree-line {
+  color: var(--dp-text-disabled-color);
 }
 
 li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
