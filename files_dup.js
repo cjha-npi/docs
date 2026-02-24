@@ -1,6 +1,5 @@
 var files_dup =
 [
-    [ "main", "dir_5c982d53a68cdbcd421152b4020263a9.html", null ],
     [ "AppMetaData.hpp", "d0/d6f/_app_meta_data_8hpp.html", "d0/d6f/_app_meta_data_8hpp" ],
     [ "Concepts.hpp", "d9/db9/_concepts_8hpp.html", "d9/db9/_concepts_8hpp" ],
     [ "GlobalLocker.hpp", "d7/db8/_global_locker_8hpp.html", "d7/db8/_global_locker_8hpp" ],

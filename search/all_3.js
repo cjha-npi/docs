@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['Some Test Data',['../da/dd8/md__test_page.html#autotoc_md15',1,'']]],
+  ['data_0',['Some Test Data',['../da/dd8/md__test_page.html#autotoc_md8',1,'']]],
   ['datetime_1',['DateTime',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36a8cf10d2341ed01492506085688270c1e',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['datetime_5f_2',['dateTime_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ae62614689a80d34533e97aca8325d559',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog']]],
   ['decdigits_3',['decDigits',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#ab261e5125e925c910ea977d0ac217ab6',1,'anonymous_namespace{Log.cpp}::safe']]],
@@ -20,7 +20,7 @@ var searchData=
   ['dispqueue_5f_17',['dispQueue_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a58433b82dba8cfbdf478ec49023f1290',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['dispthread_5f_18',['dispThread_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a365e20b87a272ecf4d1acb4056e6f50a',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['dispthreadrunning_5f_19',['dispThreadRunning_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a8934b7a3dde20903f5f320f2aa2495f8',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['documentation_20',['Documentation',['../E:/Doxy/Main/main/README.md#autotoc_md5',1,'Documentation'],['../index.html#autotoc_md12',1,'Documentation'],['../index.html',1,'Main Project Documentation'],['../E:/Doxy/Main/main/README.md#autotoc_md0',1,'Main Project Documentation']]],
+  ['documentation_20',['Documentation',['../index.html#autotoc_md5',1,'Documentation'],['../index.html',1,'Main Project Documentation']]],
   ['domain_5f_21',['Domain_',['../d8/d1b/structnpi_1_1_org_meta_data.html#a221c67f3f9c533bf75fa459152a7ae3d',1,'npi::OrgMetaData']]],
   ['draininterval_5f_22',['DrainInterval_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a9dc3ea1257c77ac00c3a19b428e52f99',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['duplicatewithnewlocal_5f_23',['duplicateWithNewLocal_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a5cdd6f42c9041fe93e404e1614fba609',1,'npi::RefPtrHost']]],

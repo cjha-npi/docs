@@ -27,8 +27,8 @@ var NAVTREE =
   [ "Main Project", "index.html", [
     [ "Main Project Documentation", "index.html", "index" ],
     [ "Imp Log Process", "da/dd8/md__test_page.html", [
-      [ "Some Test Data", "da/dd8/md__test_page.html#autotoc_md15", null ],
-      [ "Some Code", "da/dd8/md__test_page.html#autotoc_md16", null ]
+      [ "Some Test Data", "da/dd8/md__test_page.html#autotoc_md8", null ],
+      [ "Some Code", "da/dd8/md__test_page.html#autotoc_md9", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
