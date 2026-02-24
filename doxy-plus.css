@@ -143,7 +143,7 @@ html.dark-mode {
   --fragment-background: rgb(40, 45, 55) !important;
 
   /* Doxy-Plus */
-  --dp-pane-color: rgb(30, 35, 40); /* used as background for all panes */
+  --dp-pane-color: rgb(30, 40, 50); /* used as background for all panes */
   --dp-mark-color: rgb(240, 80, 0); /* used to mark current item */
   --dp-inpt-color: var(--dp-pane-color); /* search input box background */
   --dp-line-color: var(--separator-color); /* used as special lines by doxy-plus */
@@ -1268,6 +1268,7 @@ li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
   padding-top: 3px;
   padding-bottom: 3px;
 }
+
 li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::before {
   content: "";
   position: absolute;

@@ -1074,6 +1074,7 @@
       return result;
     }
 
+    // Prunes directory/files list and returns new list
     const DOXY_FILE_RE = /_8(hpp|h|cpp|c)\.html$/;
     function pruneFilesList(tree) {
       const result = [];
@@ -1096,6 +1097,7 @@
       return result;
     }
 
+    // Finds index.html page
     function findIndexNode(tree) {
       if (!Array.isArray(tree) || tree.length === 0) return null;
       for (const node of tree) {
@@ -1111,6 +1113,7 @@
       return null;
     }
 
+    // Finds all .md pages, it starts with md__ in Doxygen output
     function findMdPages(tree, result = []) {
       if (!Array.isArray(tree) || tree.length === 0) return;
       for (const [name, path, kids] of tree) {
@@ -1196,6 +1199,7 @@
     }
 
 
+    // Index page and .md pages
     const indexPage = findIndexNode(defTree);
     if (indexPage) {
       const mdPages = [];
@@ -1261,9 +1265,7 @@
       }
     }
 
-    // Process Classes -> Class List. If there are classes added then it sets
-    // classListInserted flag to true.
-    let classListInserted = false;
+    // Process Classes
     const classListNode = findNodeByNameList(defTree, 'Classes', 'Class List');
     if (classListNode) {
       const [, href, kids] = classListNode;
@@ -1276,17 +1278,6 @@
       if (anon.length > 0) {
         list.push(['File Local Classes', null, anon]);
       }
-
-
-
-      /*
-      if (anon.length > 0) {
-        list.push(['-- ANONYMOUS NS --', null, null]);
-        for (let ii = 0; ii < anon.length; ++ii) {
-          list.push([anon[ii][0], anon[ii][1], anon[ii][2]]);
-        }
-      }
-        */
 
       const classMembersNode = findNodeByNameList(defTree, 'Classes', 'Class Members');
       if (classMembersNode) {
@@ -1316,72 +1307,11 @@
       }
 
       if (typeof href === 'string' && IS_HTML_END.test(href) && list.length > 0) {
-        classListInserted = true;
         _htmlPages.push(['Classes', href, list]);
-        //_htmlPages.push(['Classes 1', null, [
-        //  ['Empty 1', null, null],
-        //  ['Empty 2', null, null],
-        //  ['Classes 2', null, [
-        //    ['Null 1', null, null],
-        //    ['Classes', href, list],
-        //    ['Null 3', null, null],
-        //    ['Null 4', null, null]
-        //  ]],
-        //  ['Empty 4', null, null]
-        //]]);
       }
     }
 
-    /*
-    // If Classes are added then add 'Class Hierarchy' and 'Class Index' pages
-    if (classListInserted) {
-
-      // Adding 'Class Hierarchy' page to Classes Node
-      const classHierarchyNode = findNodeByNameList(defTree, 'Classes', 'Class Hierarchy');
-      if (classHierarchyNode) {
-        const [, href, kids] = classHierarchyNode;
-        if (typeof href === 'string' && IS_HTML_END.test(href)) {
-          _htmlPages[_htmlPages.length - 1][2].push(['[Hierarchy]', href, null]);
-        }
-      }
-
-      // Adding 'Class Index' page to Classes Node
-      const classIndexNode = findNodeByNameList(defTree, 'Classes', 'Class Index');
-      if (classIndexNode) {
-        const [, href, kids] = classIndexNode;
-        if (typeof href === 'string' && IS_HTML_END.test(href)) {
-          _htmlPages[_htmlPages.length - 1][2].push(['[Index]', href, null]);
-        }
-      }
-    }
-
-    
-    // Process Classes -> Class Members
-    const classMembersNode = findNodeByNameList(defTree, 'Classes', 'Class Members');
-    if (classMembersNode) {
-      const [, href, kids] = classMembersNode;
-      if (Array.isArray(kids) && kids.length > 0) {
-        let temp = flatAndPrune(kids, '::');
-        if (temp.length > 0) {
-          let idx = -1;
-          for (let ii = 0; ii < temp.length; ++ii) {
-            if (temp[ii][0] === 'All') {
-              idx = ii;
-              break;
-            }
-          }
-          if (idx > -1) {
-            let tempHref = temp[idx][1];
-            temp.splice(idx, 1);
-            if (typeof tempHref === 'string' && IS_HTML_END.test(tempHref) && temp.length > 0) {
-              _htmlPages.push(['Class Members', tempHref, temp]);
-            }
-          }
-        }
-      }
-    }
-      */
-
+    // Process Files
     const filesNode = findNodeByNameList(defTree, 'Files', 'File List');
     if (filesNode) {
       const [, href, kids] = filesNode;
@@ -1413,45 +1343,6 @@
 
       _htmlPages.push(['Files', href, list]);
     }
-
-    /*
-    // Process Files -> Files List
-    const filesNode = findNodeByNameList(defTree, 'Files', 'File List');
-    if (filesNode) {
-      const [, href, kids] = filesNode;
-      const list = flatAndPrune(kids, '/', ['_', 'dir_']);
-      sortListAlphabetically(list);
-      if (typeof href === 'string' && IS_HTML_END.test(href) && list.length > 0) {
-        _htmlPages.push(['Files', href, list]);
-      }
-    }
-
-    // Process File -> File Members
-    const filesMembersNode = findNodeByNameList(defTree, 'Files', 'File Members');
-    if (filesMembersNode) {
-      const [, href, kids] = filesMembersNode;
-      if (Array.isArray(kids) && kids.length > 0) {
-        let temp = flatAndPrune(kids, '::');
-        if (temp.length > 0) {
-          let idx = -1;
-          for (let ii = 0; ii < temp.length; ++ii) {
-            if (temp[ii][0] === 'All') {
-              idx = ii;
-              break;
-            }
-          }
-          if (idx > -1) {
-            let tempHref = temp[idx][1];
-            temp.splice(idx, 1);
-            if (typeof tempHref === 'string' && IS_HTML_END.test(tempHref) && temp.length > 0) {
-              _htmlPages.push(['File Members', tempHref, temp]);
-            }
-          }
-        }
-      }
-    }
-      */
-
 
     /*
     // Enable below to add dummy items to the primary tree to see how it works
@@ -1498,9 +1389,6 @@
 
     _htmlPages.push(['Ind C Bla bla bla bla bla bla bla', null, null]);
     */
-
-
-
 
     // Compute whether indentation is needed
     _htmlpagesIndented = isTreeIndented(_htmlPages);

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Class Members - Functions</title>
+<title>Main Project: main Directory Reference</title>
 <link rel="icon" href="npi_icon.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -110,7 +110,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('functions_func_r.html','',''); });
+$(function(){initNavTree('dir_5c982d53a68cdbcd421152b4020263a9.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -135,25 +135,82 @@ $(function(){initNavTree('functions_func_r.html','',''); });
 </div>
 </div>
 
+<div class="header">
+  <div class="headertitle"><div class="title">main Directory Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all functions with links to the classes they belong to:</div>
-
-<h3 class="doxsection"><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>RefPtr()&#160;:&#160;<a class="el" href="d2/d0d/classnpi_1_1_ref_ptr.html#aff085c56c649f41e22c95d36c7c5a46f">npi::RefPtr&lt; T &gt;</a></li>
-<li>RefPtrFromThis()&#160;:&#160;<a class="el" href="d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a5e2fdcaec422ec8b9950dc98589d3c4f">npi::RefPtrFromThis&lt; T &gt;</a></li>
-<li>refPtrFromThis_()&#160;:&#160;<a class="el" href="d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a4738589f62d61c4ba74212b7bfc26aca">npi::RefPtrFromThis&lt; T &gt;</a></li>
-<li>RefPtrHost()&#160;:&#160;<a class="el" href="d6/d78/classnpi_1_1_ref_ptr_host.html#a8c4327ce9a771099bb1558119d428553">npi::RefPtrHost&lt; T &gt;</a></li>
-<li>RefPtrWeakHost()&#160;:&#160;<a class="el" href="d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a13160696be4292b185b2d13f5c1b955e">npi::RefPtrWeakHost&lt; T &gt;</a></li>
-<li>release_()&#160;:&#160;<a class="el" href="d5/d8d/structnpi_1_1_stage_window_1_1_opacity_guard.html#a5a2bd1f74ddd6280d7ff95d9f608feb5">npi::StageWindow::OpacityGuard</a></li>
-<li>reset_()&#160;:&#160;<a class="el" href="d2/d0d/classnpi_1_1_ref_ptr.html#a69607e1c7e7383cd4d3b0b2ab2eea154">npi::RefPtr&lt; T &gt;</a>, <a class="el" href="d6/d78/classnpi_1_1_ref_ptr_host.html#a3fdc3c8197e33eb75b24903aa6ceaa2d">npi::RefPtrHost&lt; T &gt;</a>, <a class="el" href="d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a9f9f52df32b52dd80e78b2ad1e81f72c">npi::RefPtrWeakHost&lt; T &gt;</a></li>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
+Main Project Documentation</h1>
+<p>This is the main documentation for the <b>NPI main project structure</b>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Current Components</h1>
+<ul>
+<li><b>Platform Check Utility</b> — Compile-time guard ensuring Windows-only builds.</li>
+<li><b>OrgMetaData</b> — Organization metadata container having static constexpr members.</li>
+<li><b>AppMetaData</b> — Application metadata container having static constexpr members.</li>
+<li><b>nativeFatalMessage Utility</b> — Emergency startup fatal error message box when <span class="tt">QApplication</span> may not be available.</li>
+<li><b>Meta Paths Utility</b> — Provides Organization and Application meta paths in ProgramData and Public/Documents directories.</li>
+<li><b>GlobalLocker</b> — RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.</li>
+<li><b>Concepts Page</b> — Contains reusable C++20 concepts that enforce design constraints.</li>
+<li><b>GuiProps Struct</b> — Defines Qt property names used by custom <span class="tt">QProxyStyle</span> and widget rendering logic.</li>
+<li><b>StageWindow Class</b> — Provides controlled show/hide animations for Qt widgets with opacity handling and optional timing customization.</li>
+<li><b>TextSpec Class</b> — Manages thread-safe font creation and caching for consistent application typography.</li>
+<li><b>RefPtr Classes</b> — Implements a non-owning, auto-nullifying linking mechanism (similar to <span class="tt">QPointer</span> + <span class="tt">std::shared_ptr</span>) for observer-style object tracking.</li>
 </ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Requirements</h1>
+<ul>
+<li><b>OS:</b> Windows 10 or newer (x64)</li>
+<li><b>IDE:</b> Microsoft Visual Studio Community 2022 or later</li>
+<li><b>Framework:</b> Qt 6.8.x (MSVC 64-bit)</li>
+<li><b>Language Standard:</b> C++20</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Project Structure</h1>
+<div class="fragment"><div class="line">inc/npi/ -&gt; Public headers under the npi namespace</div>
+<div class="line">src/ -&gt; Source files</div>
+<div class="line">gui/ -&gt; GUI-related resources</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Coding Conventions</h1>
+<ul>
+<li><b>Everything</b> has to be inside either named or anonymous namespace.</li>
+<li><b>NO</b> single word simple names e.g. <span class="tt">Font</span>, <span class="tt">Show</span>, etc. for <b>Class</b> and <b>Struct</b>.</li>
+<li>All <b>member variables</b> and <b>member functions</b> end with an underscore <span class="tt">_</span>.</li>
+<li><b>Static members</b> and <b>static functions</b> start with a capital letter.</li>
+<li><b>Comments:</b><ul>
+<li>ASCII-only (no Unicode symbols or smart quotes)</li>
+<li>Use <span class="tt">\brief</span> and <span class="tt">\details</span> for Doxygen descriptions</li>
+<li>Use <span class="tt">/** ... */</span> for files, classes, structs, etc.</li>
+<li>Use <span class="tt">///</span> for functions</li>
+<li>Use <span class="tt">///&lt;</span> for single-line member documentation</li>
+<li>No Doxygen comments inside function bodies</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Documentation</h1>
+<p>This project uses <b>Doxygen</b> for code documentation. <br  />
+ If used as the Doxygen main page, ensure the following in the Doxyfile: </p><div class="fragment"><div class="line">USE_MDFILE_AS_MAINPAGE = README.md</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+License</h1>
+<p>All rights reserved by <b>npi electronics GmbH</b>. <br  />
+ Use restricted to internal development and testing purposes. </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- HTML footer for doxygen 1.14.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>
@@ -161,7 +218,7 @@ $(function(){initNavTree('functions_func_r.html','',''); });
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Tue Feb 24 2026 09:28:17'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Tue Feb 24 2026 09:28:16'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

@@ -2,7 +2,7 @@ var searchData=
 [
   ['magenta_0',['Magenta',['../d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bab91cc2c1416fcca942b61c7ac5b1a9ac',1,'npi::TextSpec']]],
   ['main_1',['main',['../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'Main.cpp']]],
-  ['main_20project_20documentation_2',['Main Project Documentation',['../index.html',1,'']]],
+  ['main_20project_20documentation_2',['Main Project Documentation',['../index.html',1,'Main Project Documentation'],['../E:/Doxy/Main/main/README.md#autotoc_md0',1,'Main Project Documentation']]],
   ['main_2ecpp_3',['Main.cpp',['../d5/d12/_main_8cpp.html',1,'']]],
   ['maxdura_5f_4',['MaxDura_',['../dd/d55/classnpi_1_1_stage_window.html#a038e5c28b6402238139bc813b2bfcd02',1,'npi::StageWindow']]],
   ['maxfoldermb_5f_5',['maxFolderMb_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5cc3ae0ec42ef0dfd54879644fb3efe7',1,'anonymous_namespace{Log.cpp}::LogCore::StartupSettings']]],
