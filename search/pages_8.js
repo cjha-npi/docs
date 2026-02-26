@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['test_20data_0',['Some Test Data',['../da/dd8/md__test_page.html#autotoc_md8',1,'']]],
-  ['thread_20safety_20model_1',['Thread-safety model',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesThreadSafety',1,'']]]
+  ['e_3a_0',['Expected directory layout on E:',['../df/d3d/md_pre-push-readme.html#autotoc_md34',1,'']]],
+  ['exclusions_1',['Exclusions',['../df/d3d/md_pre-push-readme.html#autotoc_md19',1,'']]],
+  ['executable_2',['4) Mark the hook executable',['../df/d3d/md_pre-push-readme.html#autotoc_md28',1,'']]],
+  ['exit_20code_20handling_3',['Exit code handling',['../df/d3d/md_pre-push-readme.html#autotoc_md22',1,'']]],
+  ['expected_20directory_20layout_20on_20e_3a_4',['Expected directory layout on E:',['../df/d3d/md_pre-push-readme.html#autotoc_md34',1,'']]]
 ];

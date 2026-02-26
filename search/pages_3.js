@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['license_0',['License',['../index.html#autotoc_md6',1,'']]],
-  ['log_20process_1',['Imp Log Process',['../da/dd8/md__test_page.html',1,'']]]
+  ['4_20mark_20the_20hook_20executable_0',['4) Mark the hook executable',['../df/d3d/md_pre-push-readme.html#autotoc_md28',1,'']]]
 ];

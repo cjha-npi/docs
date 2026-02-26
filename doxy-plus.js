@@ -1407,6 +1407,71 @@
   // #region 🟩 GEN PAGE LINKS
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+  function getHeadingAnchorId_(h) {
+    // Doxygen Markdown headings look like:
+    // <h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>Title</h1>
+    const a = h.querySelector("a.anchor[id]");
+    if (a && a.id) return a.id;
+
+    // Some themes/versions might put id on the heading itself.
+    if (h.id) return h.id;
+
+    // Sometimes an anchor can be in the previous <p><a class="anchor" ...></a></p>
+    const prev = h.previousElementSibling;
+    if (prev) {
+      const ap = prev.querySelector && prev.querySelector("a.anchor[id]");
+      if (ap && ap.id) return ap.id;
+    }
+    return null;
+  }
+
+  function buildLinksFromMdHeadings_(contents) {
+    // Detect Doxygen Markdown pages by their autotoc anchors.
+    const mdAnchor = contents.querySelector("a.anchor[id^='autotoc_md']");
+    if (!mdAnchor) return false;
+
+    const headings = Array.from(
+      contents.querySelectorAll("h1, h2, h3, h4, h5, h6")
+    );
+
+    const seenHref = new Set();
+    const stack = []; // { level: number, node: [name, href, kids|null] }
+
+    for (const h of headings) {
+      const id = getHeadingAnchorId_(h);
+      if (!id) continue;
+
+      const name = (h.textContent || "").replace(/\s+/g, " ").trim();
+      if (!name) continue;
+
+      const href = "#" + id;
+      if (seenHref.has(href)) continue;
+      seenHref.add(href);
+
+      const level = parseInt(h.tagName.substring(1), 10) || 1;
+      const node = [name, href, null];
+
+      // Optional: if you want to scroll via element refs later.
+      _sectionMap.set(id, h);
+
+      while (stack.length > 0 && stack[stack.length - 1].level >= level) {
+        stack.pop();
+      }
+
+      if (stack.length === 0) {
+        _pageLinks.push(node);
+      } else {
+        const parent = stack[stack.length - 1].node;
+        if (!Array.isArray(parent[2])) parent[2] = [];
+        parent[2].push(node);
+      }
+
+      stack.push({ level, node });
+    }
+
+    return _pageLinks.length > 0;
+  }
+
   async function genPageLinks() {
 
     function slugify(text) {
@@ -1543,7 +1608,7 @@
       });
     }
     else {
-      _pageLinksRemark = 'Empty "table.memberdecls" element array';
+      buildLinksFromMdHeadings_(contents);
     }
 
     if (_pageLinks.length > 0) {

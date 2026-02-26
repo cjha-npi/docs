@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['_7eappmetadata_0',['~AppMetaData',['../d8/d5a/structnpi_1_1_app_meta_data.html#aa77016c41372a316005dfbc3f60830bb',1,'npi::AppMetaData']]],
-  ['_7egloballocker_1',['~GlobalLocker',['../da/d1f/classnpi_1_1_global_locker.html#a3af10c5768bdd65339d6f1e291e10472',1,'npi::GlobalLocker']]],
-  ['_7eguiprops_2',['~GuiProps',['../d2/dd5/structnpi_1_1_gui_props.html#a2f6ba273f5c8051e16b0d732e52d5217',1,'npi::GuiProps']]],
-  ['_7elogcore_3',['~LogCore',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a80814dc1f16ad1f77f19cc8b8b2a8cc5',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['_7eobs_4',['~Obs',['../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a4fa3584265b47d44d2fea9b07e96fefd',1,'npi::RefPtrHost::Obs']]],
-  ['_7eopacityguard_5',['~OpacityGuard',['../d5/d8d/structnpi_1_1_stage_window_1_1_opacity_guard.html#adc1f50d7de9bc8cdbf8967cb8788efa7',1,'npi::StageWindow::OpacityGuard']]],
-  ['_7eorgmetadata_6',['~OrgMetaData',['../d8/d1b/structnpi_1_1_org_meta_data.html#a2edf1242bbc7411da51b95eb01f07916',1,'npi::OrgMetaData']]],
-  ['_7erefptr_7',['~RefPtr',['../d2/d0d/classnpi_1_1_ref_ptr.html#a025e20d78efd857adda769e2667e2318',1,'npi::RefPtr']]],
-  ['_7erefptrfromthis_8',['~RefPtrFromThis',['../d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a54f01c02479cfb6a446f9df076791452',1,'npi::RefPtrFromThis']]],
-  ['_7erefptrhost_9',['~RefPtrHost',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a033844bc8dfa33aec904f84ffff11e1c',1,'npi::RefPtrHost']]],
-  ['_7erefptrweakhost_10',['~RefPtrWeakHost',['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a2b4bdcf6d5331e6f2f91683aeb1956ad',1,'npi::RefPtrWeakHost']]],
-  ['_7estagewindow_11',['~StageWindow',['../dd/d55/classnpi_1_1_stage_window.html#a7bb14445b2c7d2c4a66c4a266c8f385e',1,'npi::StageWindow']]]
+  ['underline_5f_0',['underline_',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#a7dcca834b67e7c0b49736138e8bae87c',1,'npi::TextSpec::Style']]],
+  ['uni_5f_1',['uni_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#ac47ae6cc3fe5b8f0b89538236dffd568',1,'npi::RefPtrHost']]],
+  ['unitinfo_2',['UnitInfo',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d8/db4/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_unit_info',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['universal_5f_3',['universal_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a8dcb9818065f7b5d7aca49ec2aab04be',1,'npi::RefPtrHost']]],
+  ['unlock_5f_4',['unlock_',['../da/d1f/classnpi_1_1_global_locker.html#a1e62b8dc3f17d2d1b98957b5dd142a26',1,'npi::GlobalLocker']]],
+  ['uptime_5',['UpTime',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36a051b640a90f92dd8f5fa5ab1dd30a7dd',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['uptime_5f_6',['upTime_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ae607f386555664619e7a6e02110f7a8c',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog']]],
+  ['usage_7',['Usage',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesUsage',1,'']]],
+  ['use_20the_20folder_8',['3) Configure Git to use the folder',['../df/d3d/md_pre-push-readme.html#autotoc_md27',1,'']]]
 ];
