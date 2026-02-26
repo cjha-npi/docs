@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['2_20place_20files_0',['2) Place files',['../df/d3d/md_pre-push-readme.html#autotoc_md26',1,'']]]
+  ['behavior_0',['Non-blocking behavior',['../df/d3d/md_pre-push-readme.html#autotoc_md11',1,'']]],
+  ['blocking_20behavior_1',['Non-blocking behavior',['../df/d3d/md_pre-push-readme.html#autotoc_md11',1,'']]]
 ];

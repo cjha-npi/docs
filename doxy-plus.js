@@ -1118,7 +1118,7 @@
       if (!Array.isArray(tree) || tree.length === 0) return;
       for (const [name, path, kids] of tree) {
         const htmlName = (typeof path === 'string') ? path.split('/').pop() : '';
-        if (!htmlName.includes('#') && IS_HTML_END.test(htmlName) && (htmlName.startsWith('md__'))) {
+        if (!htmlName.includes('#') && IS_HTML_END.test(htmlName) && (htmlName.startsWith('md_'))) {
           result.push([name, path, null]);
         }
         if (Array.isArray(kids) && kids.length > 0) {

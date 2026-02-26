@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['main_20project_20documentation_0',['Main Project Documentation',['../index.html',1,'']]],
-  ['mapping_1',['Path mapping',['../df/d3d/md_pre-push-readme.html#autotoc_md4',1,'']]],
-  ['mark_20the_20hook_20executable_2',['4) Mark the hook executable',['../df/d3d/md_pre-push-readme.html#autotoc_md28',1,'']]],
-  ['model_3',['Thread-safety model',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesThreadSafety',1,'']]]
+  ['safety_20guard_0',['Early Safety guard',['../df/d3d/md_pre-push-readme.html#autotoc_md5',1,'']]],
+  ['safety_20model_1',['Thread-safety model',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesThreadSafety',1,'']]],
+  ['selection_20rules_2',['File selection rules',['../df/d3d/md_pre-push-readme.html#autotoc_md15',1,'']]],
+  ['setup_3',['Setup',['../df/d3d/md_pre-push-readme.html#autotoc_md21',1,'']]],
+  ['structure_4',['Project Structure',['../index.html#autotoc_md29',1,'']]]
 ];

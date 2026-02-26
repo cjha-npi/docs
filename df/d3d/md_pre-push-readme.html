@@ -140,10 +140,12 @@ $(function(){initNavTree('df/d3d/md_pre-push-readme.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Introduction</h1>
 <p>This document describes the <span class="tt">pre-push</span> hook script placed in the global Git hooks folder (configured via <span class="tt">core.hooksPath</span>). The hook mirrors a curated subset of repository files from a source workspace on drive <span class="tt">F:</span> to a target workspace on drive <span class="tt">E:</span>, under a branch-named subfolder.</p>
-<p>The hook is non-blocking: it never prevents a <span class="tt">git push</span>. It always exits with code <span class="tt">0</span>.</p>
+<dl class="section note"><dt>Note</dt><dd>The hook is non-blocking: it never prevents a <span class="tt">git push</span>. It always exits with code <span class="tt">0</span>.</dd></dl>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 What this hook does</h1>
 <p>On every <span class="tt">git push</span> (including pushes initiated from Visual Studio), the hook:</p>
 <ol type="1">
@@ -153,42 +155,58 @@ What this hook does</h1>
 </ul>
 </li>
 <li>Computes a target root by:<ul>
-<li>Replacing the drive prefix: <span class="tt">F:\...</span> -&gt; <span class="tt">E:\...</span> (case-insensitive)</li>
-<li>Appending the current branch folder: <span class="tt">\&lt;branch&gt;\</span><ul>
-<li>Note: the script uses a sanitized branch folder name (often called <span class="tt">BRANCH_DIR</span>), derived from the current branch name, with certain invalid characters replaced.</li>
+<li>Replacing the drive prefix: <span class="tt">F:\...</span> -&gt; <span class="tt">E:\...</span> (case-insensitive).</li>
+<li>Appending the current branch folder: <span class="tt">\&lt;branch&gt;\</span> (sanitized branch folder name by replacing certain invalid characters).</li>
 </ul>
 </li>
+<li>Checks for preconditions/gates:<ul>
+<li>Source is on <span class="tt">F:</span> and is not drive root.</li>
+<li>Source root contains <span class="tt">*.sln</span> or <span class="tt">*.slnx</span>.</li>
 </ul>
 </li>
-<li>If preconditions (gates) are met, runs <span class="tt">robocopy</span> to sync only a defined set of file types from source to target, including <span class="tt">/PURGE</span> to remove extras in the destination within robocopy's scope.</li>
+<li>If preconditions/gates are met, runs <span class="tt">robocopy</span>:<ul>
+<li>Uses <span class="tt">robocopy</span> key <span class="tt">/PURGE</span> to remove extras in the destination within robocopy's scope.</li>
+<li>Syncs only a defined set of file types from source to target.</li>
+</ul>
+</li>
 <li>Logs everything to a file next to the hook script:<ul>
-<li><span class="tt">pre-push.log</span></li>
-<li>Rotates to <span class="tt">pre-push.log.old</span> when the log exceeds ~20 KB.</li>
+<li>Main log file is named <span class="tt">pre-push.log</span>.</li>
+<li>Rotates to <span class="tt">pre-push.log.old</span> when the main log exceeds ~20 KB.</li>
 </ul>
 </li>
 </ol>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Early Safety guard</h1>
+<p>The script includes an early guard that exits immediately if <span class="tt">$0</span> contains no path separator.</p>
+<p>Reason:</p><ul>
+<li>The log location is derived from the directory of the script using <span class="tt">dirname "$0"</span>.</li>
+<li>If the hook is invoked without a path (typically manual invocation via PATH), <span class="tt">dirname "$0"</span> becomes <span class="tt">.</span>, and the log could be written to an unintended folder.</li>
+</ul>
+<p>This guard keeps the "log next to this script" behavior reliable.</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 Path mapping</h1>
-<p>Source root:</p>
 <ul>
+<li><b>Source:</b><ul>
 <li>Repo root when inside a Git repo</li>
 <li>Otherwise current directory</li>
 </ul>
-<p>Target root:</p>
-<ul>
-<li><span class="tt">TARGET_BASE_WIN</span> = <span class="tt">SOURCE_WIN</span> with <span class="tt">F:\</span> replaced by <span class="tt">E:\</span> (case-insensitive)</li>
-<li><span class="tt">TARGET_WIN</span> = <span class="tt">TARGET_BASE_WIN\&lt;branch&gt;</span> (where <span class="tt">&lt;branch&gt;</span> is the sanitized branch folder name used by the script)</li>
+</li>
+<li><b>Target:</b><ul>
+<li>Base = Source with <span class="tt">F:\</span> replaced by <span class="tt">E:\</span> (case-insensitive)</li>
+<li>Final = <span class="tt">Base\&lt;branch&gt;</span> (where <span class="tt">&lt;branch&gt;</span> is the sanitized branch folder name used by the script)</li>
 </ul>
-<p>Example:</p>
-<ul>
-<li>Source repo root: <span class="tt">F:\sols\plot</span></li>
+</li>
+<li><b>Example:</b><ul>
+<li>Source: <span class="tt">F:\sols\plot\</span></li>
 <li>Branch: <span class="tt">main</span></li>
-<li>Source file: <span class="tt">F:\sols\plot\inc\npi\some.h</span></li>
-<li>Target file: <span class="tt">E:\sols\plot\main\inc\npi\some.h</span></li>
+<li>Target: <span class="tt">E:\sols\plot\main\</span></li>
+</ul>
+</li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Preconditions (Gates)</h1>
 <p>The hook runs robocopy only if:</p>
 <ol type="1">
@@ -199,20 +217,13 @@ Preconditions (Gates)</h1>
 </ul>
 </li>
 <li>Source root contains at least one solution file in the root folder:<ul>
-<li><span class="tt">*.sln</span> or <span class="tt">*.slnx</span> in the root directory only (not recursive)</li>
+<li><span class="tt">*.sln</span> or <span class="tt">*.slnx</span> (case-insensitive) in the root directory only (not recursive)</li>
 </ul>
 </li>
 </ol>
-<p>Note on filename case:</p>
-<ul>
-<li>If your solution file is uppercase (for example <span class="tt">MYAPP.SLN</span>), Gate 2 must check uppercase patterns too, because simple globbing may be case-sensitive in the shell.</li>
-<li><p class="startli">If needed, update the script's Gate 2 glob list to include uppercase variants, for example:</p>
-<p class="startli">for f in ./*.sln ./*.SLN ./*.slnx ./*.SLNX; do ...</p>
-</li>
-</ul>
-<p>If a gate fails, the script logs the reason and exits successfully (push continues).</p>
+<dl class="section note"><dt>Note</dt><dd>If a gate fails, the script logs the reason and exits successfully (push continues).</dd></dl>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 Non-blocking behavior</h1>
 <ul>
 <li>The script is designed to never block a push.</li>
@@ -224,37 +235,21 @@ Non-blocking behavior</h1>
 </ul>
 <p>This is intentional so the hook acts as a best-effort exporter/backup step rather than a quality gate.</p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
-Safety guard: refuse invocation without a path (<span class="tt">$0</span>)</h1>
-<p>The script includes an early guard that exits immediately if <span class="tt">$0</span> contains no path separator.</p>
-<p>Reason:</p>
-<ul>
-<li>The log location is derived from the directory of the script using <span class="tt">dirname "$0"</span>.</li>
-<li>If the hook is invoked without a path (typically manual invocation via PATH), <span class="tt">dirname "$0"</span> becomes <span class="tt">.</span>, and the log could be written to an unintended folder.</li>
-</ul>
-<p>This guard keeps the "log next to this script" behavior reliable.</p>
-<hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
 Logging</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
-Log location</h2>
-<p>The log file is created next to the hook script (in the same folder as <span class="tt">pre-push</span>):</p>
-<ul>
-<li><span class="tt">pre-push.log</span></li>
-<li><span class="tt">pre-push.log.old</span> (rotated)</li>
-</ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
-Log rotation</h2>
-<p>When <span class="tt">pre-push.log</span> exceeds 20480 bytes (~20 KB):</p>
 <ol type="1">
+<li>Log location: The log file is created next to the hook script (in the same folder as <span class="tt">pre-push</span>):<ul>
+<li>Primary Log File: <span class="tt">pre-push.log</span></li>
+<li>Backup Log File: <span class="tt">pre-push.log.old</span> (rotated)</li>
+</ul>
+</li>
+<li>Log rotation: When <span class="tt">pre-push.log</span> exceeds 20480 bytes (~20 KB):<ul>
 <li>Delete <span class="tt">pre-push.log.old</span> (if it exists)</li>
 <li>Move <span class="tt">pre-push.log</span> -&gt; <span class="tt">pre-push.log.old</span></li>
 <li>New output is written to a fresh <span class="tt">pre-push.log</span></li>
-</ol>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
-Log content</h2>
-<p>Each push creates a new log entry with:</p>
-<ul>
+</ul>
+</li>
+<li>Log content: Each push creates a new log entry with:<ul>
 <li>Timestamp (Windows time with milliseconds via PowerShell)</li>
 <li>Source path (Windows form)</li>
 <li>Branch name (raw)</li>
@@ -262,15 +257,15 @@ Log content</h2>
 <li>Gate decisions</li>
 <li>Full robocopy output (stdout + stderr)</li>
 <li>Robocopy summary outcome (success/failure with decoded meaning)</li>
-<li>End timestamp footer</li>
+<li>End timestamp footer (Windows time with milliseconds via PowerShell)</li>
 </ul>
+</li>
+</ol>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
 File selection rules</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
-Allowlist (copied file types)</h2>
-<p>The hook copies only files matching the allowlist patterns passed to robocopy (examples):</p>
-<ul>
+<ol type="1">
+<li>Allowed list (copied file types) patterns:<ul>
 <li>Source / C++ / Qt: <span class="tt">*.h</span>, <span class="tt">*.hpp</span>, <span class="tt">*.c</span>, <span class="tt">*.cpp</span>, <span class="tt">*.ui</span>, <span class="tt">*.qrc</span>, <span class="tt">*.qml</span>, <span class="tt">*.ts</span></li>
 <li>Visual Studio: <span class="tt">*.sln</span>, <span class="tt">*.slnx</span>, <span class="tt">*.vcxproj</span>, <span class="tt">*.filters</span>, <span class="tt">*.user</span>, <span class="tt">*.props</span>, <span class="tt">*.targets</span></li>
 <li>Config / data: <span class="tt">*.md</span>, <span class="tt">*.ini</span>, <span class="tt">*.json</span>, <span class="tt">*.cmake</span>, <span class="tt">*.pro</span>, <span class="tt">*.pri</span></li>
@@ -278,22 +273,24 @@ Allowlist (copied file types)</h2>
 <li>Windows resources: <span class="tt">*.rc</span></li>
 <li>Debug tooling: <span class="tt">*.natvis</span></li>
 </ul>
-<p>Only these patterns are copied. Everything else is ignored.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
-Exclusions</h2>
-<p>Excluded directories (anywhere in the tree), via <span class="tt">/XD</span>:</p>
-<ul>
+</li>
+<li><b>Blocked list</b> (at any depth and not just the root)<ul>
+<li>Directories: Excluded via <span class="tt">/XD</span> key of <span class="tt">robocopy</span><ul>
 <li><span class="tt">x64</span>, <span class="tt">x86</span>, <span class="tt">x32</span>, <span class="tt">win32</span></li>
 <li><span class="tt">debug</span>, <span class="tt">release</span>, plus common variants like <span class="tt">x64_debug</span>, <span class="tt">x64_release</span>, etc.</li>
 <li><span class="tt">build</span>, <span class="tt">__bin</span>, <span class="tt">__obj</span></li>
 <li><span class="tt">.*</span> (any dot-prefixed directory)</li>
 </ul>
-<p>Excluded files, via <span class="tt">/XF</span>:</p>
-<ul>
+</li>
+<li>Files: Excluded via <span class="tt">/XD</span> key of <span class="tt">robocopy</span><ul>
 <li><span class="tt">.*</span> (any dot-prefixed file)</li>
 </ul>
+</li>
+</ul>
+</li>
+</ol>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
 Robocopy configuration</h1>
 <p>The hook runs robocopy with the following key switches (high-level meaning):</p>
 <ul>
@@ -306,102 +303,18 @@ Robocopy configuration</h1>
 <li><span class="tt">/XD ...</span> : excluded directories</li>
 <li><span class="tt">/XF ".*"</span> : excluded files</li>
 </ul>
-<p>Important note on <span class="tt">/PURGE</span>:</p>
-<ul>
+<dl class="section note"><dt>Note</dt><dd><ul>
 <li><span class="tt">/PURGE</span> removes extras only within robocopy's scope.</li>
 <li>Items excluded by <span class="tt">/XD</span>, <span class="tt">/XF</span>, or <span class="tt">/MAX</span> may remain in the destination if they already exist.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
-Exit code handling</h2>
-<p>Robocopy exit codes are bitmask-based. The script treats:</p>
-<ul>
+</dd></dl>
+<p><b>Exit code handling:</b> Robocopy exit codes are bitmask-based. The script treats:</p><ul>
 <li><span class="tt">0..7</span> as success (including "success with minor issues")</li>
 <li><span class="tt">&gt;= 8</span> as failure</li>
-</ul>
-<p>The hook logs a human-readable interpretation for codes <span class="tt">0..7</span>.</p>
-<hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
-Installation</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
-1) Create a global hooks folder</h2>
-<p>Example:</p>
-<ul>
-<li><span class="tt">C:\git-hooks\</span></li>
-</ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
-2) Place files</h2>
-<p>Put both files next to each other:</p>
-<ul>
-<li><span class="tt">C:\git-hooks\pre-push</span></li>
-<li><span class="tt">C:\git-hooks\<a class="el" href="../../d1/d9e/pre-push-readme_8md.html">pre-push-readme.md</a></span></li>
-</ul>
-<p>Notes:</p>
-<ul>
-<li>The hook file must be named exactly <span class="tt">pre-push</span> (no extension).</li>
-<li>Use LF line endings if possible.</li>
-</ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
-3) Configure Git to use the folder</h2>
-<p>Run in any shell:</p>
-<div class="fragment"><div class="line">git config --global core.hooksPath &quot;C:/git-hooks&quot;</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
-4) Mark the hook executable</h2>
-<p>Run in Git Bash/MSYS:</p>
-<div class="fragment"><div class="line">chmod +x /c/git-hooks/pre-push</div>
-</div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
-Verification</h1>
-<p>Check configured hooks path:</p>
-<div class="fragment"><div class="line">git config --global --get core.hooksPath</div>
-</div><!-- fragment --><p>It should return the configured hooks path (commonly <span class="tt">C:/git-hooks</span>).</p>
-<p>Trigger the hook (run a normal push in a repo on <span class="tt">F:</span>):</p>
-<div class="fragment"><div class="line">git push</div>
-</div><!-- fragment --><p>Then inspect:</p>
-<div class="fragment"><div class="line">C:\git-hooks\pre-push.log</div>
-</div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
-Removal / disable</h1>
-<p>To disable global hooks:</p>
-<div class="fragment"><div class="line">git config --global --unset core.hooksPath</div>
-</div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
-Expected directory layout on E:</h1>
-<p>If your source repo root is:</p>
-<ul>
-<li><span class="tt">F:\sols\plot</span></li>
-</ul>
-<p>And your branch is:</p>
-<ul>
-<li><span class="tt">main</span></li>
-</ul>
-<p>Then the target root becomes:</p>
-<ul>
-<li><span class="tt">E:\sols\plot\main</span></li>
-</ul>
-<p>The directory structure under <span class="tt">main</span> mirrors the source structure (for the allowed file types).</p>
-<hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md36"></a>
-Troubleshooting</h1>
-<p>Hook runs but robocopy does not execute:</p>
-<ul>
-<li>Gate 1 failed: source is not <span class="tt">F:\...</span> or source is <span class="tt">F:\</span></li>
-<li>Gate 2 failed: no <span class="tt">*.sln</span> / <span class="tt">*.slnx</span> in the source root folder (or case mismatch, for example <span class="tt">.SLN</span>)</li>
-<li>Check <span class="tt">pre-push.log</span> for the exact gate result line</li>
-</ul>
-<p>Robocopy reports success but some files are missing:</p>
-<ul>
-<li>Extension not in allowlist</li>
-<li>File larger than 10 MB (blocked by <span class="tt">/MAX</span>)</li>
-<li>File/directory excluded by <span class="tt">/XD</span> or dot rules</li>
-</ul>
-<p>Robocopy reports failure (&gt;=8):</p>
-<ul>
-<li>Push still continues</li>
-<li>Common causes: permission issues on <span class="tt">E:</span>, long path issues, locked files, missing/unavailable target drive</li>
-<li>Check robocopy output in <span class="tt">pre-push.log</span></li>
+<li>The hook logs a human-readable interpretation for codes <span class="tt">0..7</span>.</li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Requirements / assumptions</h1>
 <ul>
 <li>Git for Windows (MSYS environment for hook execution)</li>
@@ -409,9 +322,72 @@ Requirements / assumptions</h1>
 <li>Windows <span class="tt">powershell.exe</span> available for timestamps</li>
 <li><span class="tt">pwd -W</span> available (Git for Windows/MSYS)</li>
 </ul>
-<p>If any of these are missing or restricted, the hook may skip or log errors but will not block pushes.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
+<dl class="section note"><dt>Note</dt><dd>If any of these are missing or restricted, the hook may skip or log errors but will not block pushes.</dd></dl>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+Setup</h1>
+<ol type="1">
+<li>Create a global hooks folder<ul>
+<li>Example <span class="tt">C:\git-hooks\</span></li>
+</ul>
+</li>
+<li>Place <span class="tt">pre-push</span> file with the code in this folder<ul>
+<li>The name must be named exactly <span class="tt">pre-push</span> (no extension).</li>
+<li>Should use LF line endings if possible.</li>
+</ul>
+</li>
+<li>Configure Git to use the folder<ol type="a">
+<li>Configure global hooks path (run in any shell): <div class="fragment"><div class="line">git config --global core.hooksPath &quot;C:/git-hooks&quot;</div>
+</div><!-- fragment --></li>
+<li>Mark the hook executable (run in Git Bash/MSYS): <div class="fragment"><div class="line">chmod +x /c/git-hooks/pre-push</div>
+</div><!-- fragment --></li>
+</ol>
+</li>
+<li>Verification<ol type="a">
+<li>Check configured hooks path: <div class="fragment"><div class="line">git config --global --get core.hooksPath</div>
+</div><!-- fragment --> It should return the configured hooks path (e.g. <span class="tt">C:/git-hooks</span>).</li>
+<li>Trigger the hook (run a normal push in a repo on <span class="tt">F:</span>): <div class="fragment"><div class="line">git push</div>
+</div><!-- fragment --> Then inspect <span class="tt">C:\git-hooks\pre-push.log</span></li>
+</ol>
+</li>
+<li>Removal / disable<ol type="a">
+<li>To disable global hooks: <div class="fragment"><div class="line">git config --global --unset core.hooksPath</div>
+</div><!-- fragment --></li>
+</ol>
+</li>
+</ol>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+Troubleshooting</h1>
+<ul>
+<li>Nothing gets copied and no logs are written<ul>
+<li>Check if the hook is installed</li>
+<li>May have exited due to <span class="tt">Early Safety Guard</span> i.e. if <span class="tt">$0</span> contains no path separator.</li>
+</ul>
+</li>
+<li>Hook runs but robocopy does not execute:<ul>
+<li>Gate 1 failed: source is not <span class="tt">F:\...</span> or source is <span class="tt">F:\</span></li>
+<li>Gate 2 failed: no <span class="tt">*.sln</span> / <span class="tt">*.slnx</span> in the source root folder</li>
+<li>Check <span class="tt">pre-push.log</span> for the exact gate result line</li>
+</ul>
+</li>
+<li>Robocopy reports success but some files are missing:<ul>
+<li>Extension not in allowlist</li>
+<li>File larger than 10 MB (blocked by <span class="tt">/MAX</span>)</li>
+<li>File/directory excluded by <span class="tt">/XD</span> or dot rules</li>
+</ul>
+</li>
+<li>Robocopy reports failure (&gt;=8):<ul>
+<li>Push still continues</li>
+<li>Common causes: permission issues on <span class="tt">E:</span>, long path issues, locked files, missing/unavailable target drive</li>
+<li>Check robocopy output in <span class="tt">pre-push.log</span></li>
+</ul>
+</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 Code</h1>
+<dl class="section note"><dt>Note</dt><dd>This code is complete and can be copy pasted exactly to create the <span class="tt">pre-push</span> file.</dd></dl>
 <div class="fragment"><div class="line">#!/bin/sh</div>
 <div class="line"># ------------------------------------------------------------</div>
 <div class="line"># Shebang:</div>
@@ -788,7 +764,7 @@ Code</h1>
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
 <!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Thu Feb 26 2026 16:33:13'; </script>
+<script> window.DOXY_PLUS_DATE_TIME = 'Thu Feb 26 2026 22:33:37'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->
