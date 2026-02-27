@@ -11,11 +11,15 @@ var searchData=
   ['preconditions_20gates_8',['Preconditions (Gates)',['../df/d3d/md_pre-push-readme.html#autotoc_md9',1,'']]],
   ['prevlogfilter_5f_9',['prevLogFilter_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aa0634259e3ebcc0689cbd00379753f8b',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['project_20documentation_10',['Main Project Documentation',['../index.html',1,'']]],
-  ['project_20structure_11',['Project Structure',['../index.html#autotoc_md29',1,'']]],
-  ['ptr_5f_12',['ptr_',['../d2/d0d/classnpi_1_1_ref_ptr.html#ad25d5bd82437d16ce64d61c5cd5a4f75',1,'npi::RefPtr::ptr_'],['../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a648f9c28d4486f336c6c574ccbbc14d8',1,'npi::RefPtrHost::Obs::ptr_']]],
-  ['purecallhandler_13',['pureCallHandler',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a2ccdd616a9266b8ac0b03f18feb92c0a',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['pureshared_5f_14',['pureShared_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#adb55ed9b16f86a957b0dca871f53ca45',1,'npi::RefPtrHost']]],
-  ['push_20hook_15',['Git Pre-Push Hook',['../df/d3d/md_pre-push-readme.html',1,'']]],
-  ['pushbuttonrighticon_5f_16',['PushButtonRightIcon_',['../d2/dd5/structnpi_1_1_gui_props.html#ae7b02162cc2baa7e6e2ad0b6d132ce85',1,'npi::GuiProps']]],
-  ['pushbuttonwidthnochange_5f_17',['PushButtonWidthNoChange_',['../d2/dd5/structnpi_1_1_gui_props.html#a176697b559023f26fccea3f7ebf04567',1,'npi::GuiProps']]]
+  ['project_20names_11',['Solution and Project Names',['../d8/d31/md__project-_properties.html#autotoc_md28',1,'']]],
+  ['project_20properties_12',['Project Properties',['../d8/d31/md__project-_properties.html',1,'']]],
+  ['project_20structure_13',['Project Structure',['../index.html#autotoc_md34',1,'']]],
+  ['project_2dproperties_2emd_14',['Project-Properties.md',['../d5/d8c/_project-_properties_8md.html',1,'']]],
+  ['properties_15',['Project Properties',['../d8/d31/md__project-_properties.html',1,'']]],
+  ['ptr_5f_16',['ptr_',['../d2/d0d/classnpi_1_1_ref_ptr.html#ad25d5bd82437d16ce64d61c5cd5a4f75',1,'npi::RefPtr::ptr_'],['../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a648f9c28d4486f336c6c574ccbbc14d8',1,'npi::RefPtrHost::Obs::ptr_']]],
+  ['purecallhandler_17',['pureCallHandler',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a2ccdd616a9266b8ac0b03f18feb92c0a',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['pureshared_5f_18',['pureShared_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#adb55ed9b16f86a957b0dca871f53ca45',1,'npi::RefPtrHost']]],
+  ['push_20hook_19',['Git Pre-Push Hook',['../df/d3d/md_pre-push-readme.html',1,'']]],
+  ['pushbuttonrighticon_5f_20',['PushButtonRightIcon_',['../d2/dd5/structnpi_1_1_gui_props.html#ae7b02162cc2baa7e6e2ad0b6d132ce85',1,'npi::GuiProps']]],
+  ['pushbuttonwidthnochange_5f_21',['PushButtonWidthNoChange_',['../d2/dd5/structnpi_1_1_gui_props.html#a176697b559023f26fccea3f7ebf04567',1,'npi::GuiProps']]]
 ];

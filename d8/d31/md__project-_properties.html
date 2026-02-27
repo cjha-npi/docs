@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: GlobalLocker.hpp File Reference</title>
+<title>Main Project: Project Properties</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -110,7 +110,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('d7/db8/_global_locker_8hpp.html','../../',''); });
+$(function(){initNavTree('d8/d31/md__project-_properties.html','../../',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -135,94 +135,48 @@ $(function(){initNavTree('d7/db8/_global_locker_8hpp.html','../../',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">GlobalLocker.hpp File Reference</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Project Properties </div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>RAII locker for a Windows named mutex for both inter-process and inter-thread synchronization.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;npi/PlatformCheck.hpp&quot;</code><br />
-<code>#include &lt;windows.h&gt;</code><br />
-<code>#include &lt;QString&gt;</code><br />
-</div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for GlobalLocker.hpp:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d1a/_global_locker_8hpp__incl.svg" width="419" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<p><a href="../../d7/db8/_global_locker_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:npi_3A_3AGlobalLocker" id="r_npi_3A_3AGlobalLocker"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1f/classnpi_1_1_global_locker.html">npi::GlobalLocker</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.  <a href="../../da/d1f/classnpi_1_1_global_locker.html#details">More...</a><br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:npi" id="r_npi"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
-<tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for npi electronics GmbH. <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a9f918755b601cf4bffca775992e6fb90" id="r_a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f918755b601cf4bffca775992e6fb90">NOMINMAX</a></td></tr>
-<tr class="memitem:ac7bef5d85e3dcd73eef56ad39ffc84a9" id="r_ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">WIN32_LEAN_AND_MEAN</a></td></tr>
-</table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RAII locker for a Windows named mutex for both inter-process and inter-thread synchronization. </p>
-<p>This header defines <a class="el" href="../../da/d1f/classnpi_1_1_global_locker.html" title="RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.">npi::GlobalLocker</a>, a small RAII helper that acquires and releases a Windows named mutex using CreateMutexW/WaitForSingleObject/ReleaseMutex. Because it uses a named mutex, it can synchronize:</p><ul>
-<li>Threads within the same process (intra-process), and</li>
-<li>Different processes/applications (inter-process) running on the same machine/session.</li>
+<div class="textblock"><p><a class="anchor" id="autotoc_md26"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+Introduction</h1>
+<p>This document describes the different project properties for a C/C++ project in Visual Studio that should be correctly to have projects working smoothly.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+Solution and Project Names</h1>
+<p>When creating the solution/project always select different names for solution and project.</p><ul>
+<li>Always <b>uncheck</b> <span class="tt">Place solution and project in the same directory</span> when creating a solution/project.</li>
+<li>Project folder is placed inside the solution folder</li>
+<li>Convention is to name primary project as <span class="tt">App</span></li>
 </ul>
-<p>Scope and visibility:</p><ul>
-<li>The constructor prepends "Local\\" to the provided name. This limits visibility to the
-      current logon session. Use "Global\" (not provided here) for a machine-wide namespace requiring appropriate privileges and Terminal Services mutex namespace support.</li>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+Language Standard</h1>
+<ul>
+<li>C++ Language Standard: <span class="tt">C++20</span></li>
+<li>C Language Standard: <span class="tt">c17</span></li>
 </ul>
-<p>Ownership and lifetime:</p><ul>
-<li>On success, the constructor blocks until the mutex can be acquired. Destruction releases the mutex and closes the HANDLE.</li>
-<li>ReleaseMutex is called only if this instance actually holds the lock.</li>
-<li>CloseHandle is always called if a HANDLE was created to avoid handle leaks.</li>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
+Main Directories</h1>
+<p>The projects have a few important directories, by default these dikrectories are placed either inside the solution folder or inside the project folder. We move these directories to a different location for easier maintainence.</p>
+<p><b>Output Directory:</b></p>
+<p>This directory contains the generated <span class="tt">.exe</span> and <span class="tt">.pdb</span>. Projects inside the same solution should have the same output directory. By default it is <span class="tt">&lt;SolutionDir&gt;\&lt;Platform&gt;\&lt;Configuration&gt;</span> e.g. <span class="tt">sol\x64\Debug</span>. We change it to <span class="tt">F:\Misc\VS_Bins\&lt;SolutionName&gt;\&lt;Platform&gt;_&lt;Configuration&gt;</span>. To make this change happen, make sure the setting <span class="tt">Project Properties &gt; Configuration Properties &gt; General &gt; Output Directory</span> is set to the following: </p><div class="fragment"><div class="line">F:\Misc\VS_Bins\$(SolutionName)\$(Platform)_$(Configuration)\</div>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>This folder is safe to delete, VS automatically creates this folder if it does not exist.</dd></dl>
+<p><b>Intermediate Directory</b></p>
+<p>This directory contains the intermediate files (e.g. <span class="tt">.obj</span>, <span class="tt">ui_*.h</span>, etc.). Each project should have its own intermediate directory so that files from different projects do not mingle. By default it is <span class="tt">&lt;SolutionDir&gt;\&lt;ProjectName&gt;\&lt;Platform&gt;\&lt;Configuration&gt;</span> e.g. <span class="tt">sol\proj\x64\Debug</span>. We change it to <span class="tt">F:\Misc\VS_objs\&lt;SolutionName&gt;\&lt;Platform&gt;_&lt;Configuration&gt;_&lt;ProjectName&gt;</span>. To make this change happen, make sure the setting <span class="tt">Project Properties &gt; Configuration Properties &gt; General &gt; Intermediate Directory</span> is set to the following: </p><div class="fragment"><div class="line">F:\Misc\VS_Objs\$(SolutionName)\$(Platform)_$(Configuration)_$(ProjectName)\</div>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>This folder is safe to delete, VS automatically creates this folder if it does not exist.</dd></dl>
+<p><b>Cache Location</b></p>
+<p>This directory defines where the cache generated by Visual Studio is stored. Usually Visual Studio generates Many GBs of cache data and by default stores it in <span class="tt">.vs</span> file inside the solution folder. This makes solutions very bug in size and makes maintainence a bug haedache since (either delete all solution folders and lose all code files or manually open each solution folder and delete <span class="tt">.vs</span> file one by one). Changing it to an externam folder makes it much easier to free up space. To change it go to <span class="tt">Visual Studio Options &gt; Text Editor &gt; C/C++ &gt; Advanced</span> Here under <span class="tt">Browsing Database Fallback</span> for <span class="tt">Fallback Location</span> select a folder, set <span class="tt">Always Use Fallback Location</span> to <span class="tt">True</span> and set <span class="tt">Do Not Warn If Fallback Location Used</span> (if available, in VS 2026 this option is no longer available) to <span class="tt">True</span> (otherwise it will warn every time a solution is opened). I am using the following folder currently </p><div class="fragment"><div class="line">F:\Misc\VS_Caches`</div>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd><ul>
+<li>This has to be done only once. Since this is a Visual Studio settings, there is no need to do it per solution/project. </li>
 </ul>
-<p>WAIT_ABANDONED handling:</p><ul>
-<li>If a previous owner terminated without releasing the mutex, WaitForSingleObject returns WAIT_ABANDONED. This class treats it as a successful acquisition (Windows semantics) and sets locked_ = true. Validate any shared state guarded by the mutex if needed. </li>
+</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><ul>
+<li>Do not delete the <span class="tt">Fallback Location</span> folder otherwise Visual Studio will complain and Intellisense will not work. To reclaim space open the folder and delete every thing inside it. </li>
 </ul>
-
-<p class="definition">Definition in file <a class="el" href="../../d7/db8/_global_locker_8hpp_source.html">GlobalLocker.hpp</a>.</p>
-</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="a9f918755b601cf4bffca775992e6fb90" name="a9f918755b601cf4bffca775992e6fb90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f918755b601cf4bffca775992e6fb90">&#9670;&#160;</a></span>NOMINMAX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NOMINMAX</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d7/db8/_global_locker_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d7/db8/_global_locker_8hpp_source.html">GlobalLocker.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ac7bef5d85e3dcd73eef56ad39ffc84a9" name="ac7bef5d85e3dcd73eef56ad39ffc84a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">&#9670;&#160;</a></span>WIN32_LEAN_AND_MEAN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define WIN32_LEAN_AND_MEAN</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d7/db8/_global_locker_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d7/db8/_global_locker_8hpp_source.html">GlobalLocker.hpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</dd></dl>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -236,7 +190,6 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../d7/db8/_global_locker_8hpp.html">GlobalLocker.hpp</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

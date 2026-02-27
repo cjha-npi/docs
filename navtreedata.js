@@ -41,6 +41,12 @@ var NAVTREE =
       [ "Troubleshooting", "df/d3d/md_pre-push-readme.html#autotoc_md23", null ],
       [ "Code", "df/d3d/md_pre-push-readme.html#autotoc_md25", null ]
     ] ],
+    [ "Project Properties", "d8/d31/md__project-_properties.html", [
+      [ "Introduction", "d8/d31/md__project-_properties.html#autotoc_md27", null ],
+      [ "Solution and Project Names", "d8/d31/md__project-_properties.html#autotoc_md28", null ],
+      [ "Language Standard", "d8/d31/md__project-_properties.html#autotoc_md29", null ],
+      [ "Main Directories", "d8/d31/md__project-_properties.html#autotoc_md30", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -78,7 +84,7 @@ var NAVTREEINDEX =
 "d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac83f155438d4a0447ac048d50c7b1a47",
 "d2/db7/classnpi_1_1_text_spec.html#a418b9bcb6a1292054de007257baffb12",
 "d6/d78/classnpi_1_1_ref_ptr_host.html#aed0496d9766440923aff98210ff3bbab",
-"dd/d55/classnpi_1_1_stage_window.html#a9fb785ee31eae71b2660f4b9d0abfcdb"
+"dd/d55/classnpi_1_1_stage_window.html#a9a9c1fe4bff0c192b54e0c0b7d9f6a82"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

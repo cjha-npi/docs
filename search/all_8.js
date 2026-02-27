@@ -14,7 +14,7 @@ var searchData=
   ['insertlogmessage_5f_11',['insertLogMessage_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ab25a4996d5ead7b5656de343421f6788',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['inst_5f_12',['Inst_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af85854d22c95e86c8802d7d864fcd350',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['installcrashhandlers_13',['installCrashHandlers',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a5383dc98204ed88af64a0de8fb17de7f',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['introduction_14',['Introduction',['../df/d3d/md_pre-push-readme.html#autotoc_md1',1,'']]],
+  ['introduction_14',['Introduction',['../df/d3d/md_pre-push-readme.html#autotoc_md1',1,'Introduction'],['../d8/d31/md__project-_properties.html#autotoc_md27',1,'Introduction']]],
   ['invalidparamhandler_15',['invalidParamHandler',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a110b11e90b5bb8ae5c8a1521e33eec21',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['isconsolecolored_16',['isConsoleColored',['../d5/ddd/namespacenpi_1_1log.html#a890d624071d5e2e26743288d3ce2d79b',1,'npi::log']]],
   ['isconsolecolored_5f_17',['isConsoleColored_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2642a951ac935c577058a2986c6b75f9',1,'anonymous_namespace{Log.cpp}::LogCore']]],
