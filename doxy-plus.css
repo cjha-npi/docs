@@ -76,11 +76,9 @@ html {
   --dp-page-nav-line-height: 18px;
 
   --dp-root-item-font-size: 13px;
-  --dp-root-icon-font-size: 12px;
   --dp-root-item-line-height: 20px;
 
   --dp-leaf-item-font-size: 12px;
-  --dp-leaf-icon-font-size: 12px;
   --dp-leaf-item-line-height: 20px;
 
   --dp-side-nav-width: 0px;
@@ -130,6 +128,9 @@ html {
 
   --dp-root-item-font-weight: 500;
   --dp-leaf-item-font-weight: 500;
+
+  --dp-root-icon-font-size: 12px;
+  --dp-leaf-icon-font-size: 12px;
 }
 
 /* DARK MODE */
@@ -164,6 +165,9 @@ html.dark-mode {
 
   --dp-root-item-font-weight: 400;
   --dp-leaf-item-font-weight: 400;
+
+  --dp-root-icon-font-size: 11px;
+  --dp-leaf-icon-font-size: 11px;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1291,6 +1295,7 @@ li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::before {
 }
 li:not(.dp-tree-item--parent) > .dp-tree-line > .dp-tree-node {
   visibility: hidden;
+  width: 4px !important;
 }
 li.dp-tree-item--expanded > .dp-tree-line > .dp-tree-node {
   transform: rotate(90deg);
@@ -1301,13 +1306,10 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   display: block;
   flex: 1 1 auto; /* take remaining space */
   margin-top: 2px;
+  margin-left: var(--dp-sep);
   align-self: center;
   height: 1px; /* visual thickness */
-  /* draw transparent gap then the line, without consuming layout space */
-  background: linear-gradient(to right, transparent var(--dp-sep), var(--dp-line-color) var(--dp-sep), var(--dp-line-color) 100%);
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 100% 1px;
+  background: var(--dp-line-color);
   pointer-events: none;
 }
 
@@ -1349,12 +1351,12 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   direction: ltr;
 }
 
-#dp-root-pane.dp-pane-has-indented-tree ul ul {
-  margin-left: var(--dp-root-item-line-height);
+#dp-root-pane ul ul {
+  margin-left: calc(var(--dp-root-item-line-height) - 3px);
 }
 
 #dp-root-pane .dp-tree-item{
-  margin: 3px 0px;
+  margin: 1px 0px;
   scroll-margin-top: 10px !important;
   scroll-margin-bottom: 10px !important;
 }
@@ -1421,7 +1423,7 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   width: var(--dp-root-item-line-height);
 }
 #dp-root-pane .dp-tree-node:hover{
-  font-size: calc(var(--dp-root-icon-font-size) + 3px);
+  font-size: calc(var(--dp-root-icon-font-size) + 4px);
 }
 
 #dp-root-pane .dp-tree-link {
@@ -1438,12 +1440,6 @@ li.dp-tree-item--parent > .dp-tree-line::after {
 
 #dp-root-pane .dp-tree-link:hover {
   text-decoration: none !important;
-}
-
-#dp-root-pane li.dp-tree-item--parent > .dp-tree-line > .dp-tree-link {
-  font-family: var(--font-family) !important;
-  letter-spacing: 0.03em;
-  font-kerning: normal;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1535,12 +1531,8 @@ html.dark-mode {
   padding-right: 1px;
 }
 
-#dp-leaf-ul.dp-pane-has-indented-tree ul ul {
-  margin-left: var(--dp-leaf-item-line-height);
-}
-
-#dp-leaf-pane li.dp-tree-item--parent:not(:first-child) > .dp-tree-line{
-  margin-top: 8px;
+#dp-leaf-ul ul ul {
+  margin-left: calc(var(--dp-root-item-line-height) - 4px);
 }
 
 #dp-leaf-ul li.dp-tree-item--visited:not(.dp-tree-item--current) > .dp-tree-line {
@@ -1564,7 +1556,7 @@ html.dark-mode {
   top: calc(100% + 6px);
   left: 26px;
   height: 4px;
-  width: calc(100% - 50px);
+  width: calc(100% - 52px);
   border-radius: var(--dp-border-radius-s);
   background: var(--page-background-color);
   border-left: 20px solid var(--dp-mark-color);
@@ -1593,13 +1585,6 @@ html.dark-mode {
 
 #dp-leaf-ul .dp-tree-link:hover {
   text-decoration: none !important;
-}
-
-#dp-leaf-ul li.dp-tree-item--parent > .dp-tree-line > .dp-tree-link {
-  font-family: var(--font-family) !important;
-  font-size: calc(var(--dp-leaf-item-font-size) + 0.05em);
-  letter-spacing: 0.03em;
-  font-kerning: normal;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/

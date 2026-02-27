@@ -63,6 +63,9 @@ var NAVTREEINDEX3 =
 "d8/d31/md__project-_properties.html#autotoc_md28":[2,1],
 "d8/d31/md__project-_properties.html#autotoc_md29":[2,2],
 "d8/d31/md__project-_properties.html#autotoc_md30":[2,3],
+"d8/d31/md__project-_properties.html#autotoc_md31":[2,3,0],
+"d8/d31/md__project-_properties.html#autotoc_md32":[2,3,1],
+"d8/d31/md__project-_properties.html#autotoc_md33":[2,3,2],
 "d8/d5a/structnpi_1_1_app_meta_data.html":[3,0,2,2],
 "d8/d5a/structnpi_1_1_app_meta_data.html":[5,0,1,1],
 "d8/d5a/structnpi_1_1_app_meta_data.html#a2e846930e1139147bd4b3761af7e8fc2":[3,0,2,2,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "dd/d55/classnpi_1_1_stage_window.html#a63c0b3796949e1c1ff85fac09966956e":[3,0,2,10,20],
 "dd/d55/classnpi_1_1_stage_window.html#a63c0b3796949e1c1ff85fac09966956e":[5,0,1,9,20],
 "dd/d55/classnpi_1_1_stage_window.html#a7bb14445b2c7d2c4a66c4a266c8f385e":[3,0,2,10,3],
-"dd/d55/classnpi_1_1_stage_window.html#a7bb14445b2c7d2c4a66c4a266c8f385e":[5,0,1,9,3],
-"dd/d55/classnpi_1_1_stage_window.html#a89d9e55b23bd78290df114907267d8a9":[3,0,2,10,7],
-"dd/d55/classnpi_1_1_stage_window.html#a89d9e55b23bd78290df114907267d8a9":[5,0,1,9,7],
-"dd/d55/classnpi_1_1_stage_window.html#a9a9c1fe4bff0c192b54e0c0b7d9f6a82":[3,0,2,10,6]
+"dd/d55/classnpi_1_1_stage_window.html#a7bb14445b2c7d2c4a66c4a266c8f385e":[5,0,1,9,3]
 };

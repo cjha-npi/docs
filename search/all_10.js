@@ -59,7 +59,7 @@ var searchData=
   ['strikeout_5f_56',['strikeout_',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#add8955c28700770fdc008564a12d28f8',1,'npi::TextSpec::Style']]],
   ['strings_5f_57',['strings_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a833eceed3271ed7208f8610a1e9f2d37',1,'anonymous_namespace{Log.cpp}::LogCore::FieldConfig']]],
   ['stringstofields_5f_58',['stringsToFields_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a994289c65633485ca041a065c3db4819',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['structure_59',['Project Structure',['../index.html#autotoc_md34',1,'']]],
+  ['structure_59',['Project Structure',['../index.html#autotoc_md37',1,'']]],
   ['style_60',['Style',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html',1,'npi::TextSpec::Style'],['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#afff1c697e073cdf1953cda184e1f1627',1,'npi::TextSpec::Style::Style()=default'],['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#ac1f559902a1267dd780e9f52eb2465b4',1,'npi::TextSpec::Style::Style(const bool bold, const bool italic, const bool underline, const bool overline, const bool strikeout, const QFont::Capitalization capitalization)']]],
   ['style_5f_61',['style_',['../d2/db7/classnpi_1_1_text_spec.html#af48eb815628c1bb6ea919b72c5a57e6e',1,'npi::TextSpec']]],
   ['suffix_5f_62',['suffix_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ad559142620776398f3898712f4bd5063',1,'anonymous_namespace{Log.cpp}::LogCore::UnitInfo']]],

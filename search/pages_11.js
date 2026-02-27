@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_20this_20hook_20does_0',['What this hook does',['../df/d3d/md_pre-push-readme.html#autotoc_md3',1,'']]]
+  ['usage_0',['Usage',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesUsage',1,'']]]
 ];

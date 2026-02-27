@@ -13,7 +13,7 @@ var searchData=
   ['project_20documentation_10',['Main Project Documentation',['../index.html',1,'']]],
   ['project_20names_11',['Solution and Project Names',['../d8/d31/md__project-_properties.html#autotoc_md28',1,'']]],
   ['project_20properties_12',['Project Properties',['../d8/d31/md__project-_properties.html',1,'']]],
-  ['project_20structure_13',['Project Structure',['../index.html#autotoc_md34',1,'']]],
+  ['project_20structure_13',['Project Structure',['../index.html#autotoc_md37',1,'']]],
   ['project_2dproperties_2emd_14',['Project-Properties.md',['../d5/d8c/_project-_properties_8md.html',1,'']]],
   ['properties_15',['Project Properties',['../d8/d31/md__project-_properties.html',1,'']]],
   ['ptr_5f_16',['ptr_',['../d2/d0d/classnpi_1_1_ref_ptr.html#ad25d5bd82437d16ce64d61c5cd5a4f75',1,'npi::RefPtr::ptr_'],['../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a648f9c28d4486f336c6c574ccbbc14d8',1,'npi::RefPtrHost::Obs::ptr_']]],
