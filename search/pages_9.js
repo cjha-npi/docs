@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['language_20standard_0',['Language Standard',['../d8/d31/md__project-_properties.html#autotoc_md29',1,'']]],
-  ['license_1',['License',['../index.html#autotoc_md40',1,'']]],
-  ['location_2',['Cache Location',['../d8/d31/md__project-_properties.html#autotoc_md33',1,'']]],
-  ['logging_3',['Logging',['../df/d3d/md_pre-push-readme.html#autotoc_md13',1,'']]]
+  ['js_20file_0',['Doxy-Plus JS FIle',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_code_files']]]
 ];

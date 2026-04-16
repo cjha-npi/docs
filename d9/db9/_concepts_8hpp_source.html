@@ -60,8 +60,8 @@
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
   <div id="dp-leaf-pane" class="dp-nav-pane">
-    <div id="dp-leaf-bg">
-    <div id="dp-leaf-ul"></div>
+    <div id="dp-leaf-base">
+      <div id="dp-leaf-show"></div>
     </div>
   </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
@@ -73,7 +73,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;3</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;4</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -151,7 +151,8 @@ $(function(){initNavTree('d9/db9/_concepts_8hpp_source.html','../../',''); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/d57/namespacenpi.html">npi</a> {</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d6/d57/namespacenpi.html">   13</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/d57/namespacenpi.html">npi</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"></span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">  /**</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">  * \brief Concept to check if two types are related through inheritance.</span></div>
@@ -195,9 +196,10 @@ $(function(){initNavTree('d9/db9/_concepts_8hpp_source.html','../../',''); });
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">   54</a></span>  <span class="keyword">concept </span><a class="code hl_concept" href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">SupportsSharedFromThis</a> =</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::derived_from&lt;T, std::enable_shared_from_this&lt;T&gt;&gt;;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
 <div class="ttc" id="aconceptnpi_1_1_polymorphically_related_html"><div class="ttname"><a href="../../d1/d7e/conceptnpi_1_1_polymorphically_related.html">npi::PolymorphicallyRelated</a></div><div class="ttdoc">Concept to check if two types are related through inheritance.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">Concepts.hpp:36</a></div></div>
 <div class="ttc" id="aconceptnpi_1_1_supports_shared_from_this_html"><div class="ttname"><a href="../../de/d1c/conceptnpi_1_1_supports_shared_from_this.html">npi::SupportsSharedFromThis</a></div><div class="ttdoc">Concept to check if a type supports shared_from_this().</div><div class="ttdef"><b>Definition</b> <a href="#l00054">Concepts.hpp:54</a></div></div>
-<div class="ttc" id="anamespacenpi_html"><div class="ttname"><a href="../../d6/d57/namespacenpi.html">npi</a></div><div class="ttdoc">Root namespace for npi electronics GmbH.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d6f/_app_meta_data_8hpp_source.html#l00013">AppMetaData.hpp:14</a></div></div>
+<div class="ttc" id="anamespacenpi_html"><div class="ttname"><a href="../../d6/d57/namespacenpi.html">npi</a></div><div class="ttdoc">Root namespace for npi electronics GmbH.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Concepts.hpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
@@ -212,8 +214,6 @@ $(function(){initNavTree('d9/db9/_concepts_8hpp_source.html','../../',''); });
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
-<!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Feb 27 2026 14:05:49'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

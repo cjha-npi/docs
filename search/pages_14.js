@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_20this_20hook_20does_0',['What this hook does',['../df/d3d/md_pre-push-readme.html#autotoc_md3',1,'']]]
+  ['visual_20studio_0',['Visual Studio',['../d4/d27/dp_dh_dir_visual_studio.html',1,'dp_dh_dir_dev_hub']]]
 ];

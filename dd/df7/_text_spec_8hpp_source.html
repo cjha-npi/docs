@@ -60,8 +60,8 @@
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
   <div id="dp-leaf-pane" class="dp-nav-pane">
-    <div id="dp-leaf-bg">
-    <div id="dp-leaf-ul"></div>
+    <div id="dp-leaf-base">
+      <div id="dp-leaf-show"></div>
     </div>
   </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
@@ -73,7 +73,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;3</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;4</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -802,7 +802,7 @@ $(function(){initNavTree('dd/df7/_text_spec_8hpp_source.html','../../',''); });
 <div class="ttc" id="aclassnpi_1_1_text_spec_html_af48eb815628c1bb6ea919b72c5a57e6e"><div class="ttname"><a href="../../d2/db7/classnpi_1_1_text_spec.html#af48eb815628c1bb6ea919b72c5a57e6e">npi::TextSpec::style_</a></div><div class="ttdeci">Style style_</div><div class="ttdoc">Style configuration for this TextSpec instance.</div><div class="ttdef"><b>Definition</b> <a href="#l00401">TextSpec.hpp:401</a></div></div>
 <div class="ttc" id="aclassnpi_1_1_text_spec_html_af9acbeace0b958a80e0525a11eef2020"><div class="ttname"><a href="../../d2/db7/classnpi_1_1_text_spec.html#af9acbeace0b958a80e0525a11eef2020">npi::TextSpec::getAbsoluteSize_</a></div><div class="ttdeci">int getAbsoluteSize_() const</div><div class="ttdoc">Get absolute size override (&lt;= 0 means unset).</div><div class="ttdef"><b>Definition</b> <a href="#l00310">TextSpec.hpp:310</a></div></div>
 <div class="ttc" id="aclassnpi_1_1_text_spec_html_afafd8b8be1df4ce63d3be94a796d5b6a"><div class="ttname"><a href="../../d2/db7/classnpi_1_1_text_spec.html#afafd8b8be1df4ce63d3be94a796d5b6a">npi::TextSpec::FixFontMutex_</a></div><div class="ttdeci">static QMutex FixFontMutex_</div><div class="ttdoc">Mutex guarding fixed-width font state and cache.</div><div class="ttdef"><b>Definition</b> <a href="#l00446">TextSpec.hpp:446</a></div></div>
-<div class="ttc" id="anamespacenpi_html"><div class="ttname"><a href="../../d6/d57/namespacenpi.html">npi</a></div><div class="ttdoc">Root namespace for npi electronics GmbH.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d6f/_app_meta_data_8hpp_source.html#l00013">AppMetaData.hpp:14</a></div></div>
+<div class="ttc" id="anamespacenpi_html"><div class="ttname"><a href="../../d6/d57/namespacenpi.html">npi</a></div><div class="ttdoc">Root namespace for npi electronics GmbH.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db9/_concepts_8hpp_source.html#l00013">Concepts.hpp:13</a></div></div>
 <div class="ttc" id="astructnpi_1_1_gui_props_html_aafa082d9d7d58ffe909ade3634772bcd"><div class="ttname"><a href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">npi::GuiProps::FixedWidthFontWidget_</a></div><div class="ttdeci">static constexpr char FixedWidthFontWidget_[]</div><div class="ttdoc">Marks a QWidget to use a fixed-width font.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d0e/_gui_props_8hpp_source.html#l00074">GuiProps.hpp:74</a></div></div>
 <div class="ttc" id="astructnpi_1_1_text_spec_1_1_group_html"><div class="ttname"><a href="../../da/d3b/structnpi_1_1_text_spec_1_1_group.html">npi::TextSpec::Group</a></div><div class="ttdoc">Cached triplet of QFont and its metrics.</div><div class="ttdef"><b>Definition</b> <a href="#l00415">TextSpec.hpp:415</a></div></div>
 <div class="ttc" id="astructnpi_1_1_text_spec_1_1_group_html_a12c3d2f76146ff1c3a44b6e6b2890166"><div class="ttname"><a href="../../da/d3b/structnpi_1_1_text_spec_1_1_group.html#a12c3d2f76146ff1c3a44b6e6b2890166">npi::TextSpec::Group::metrics_</a></div><div class="ttdeci">QFontMetrics metrics_</div><div class="ttdoc">Integer-based metrics for the font.</div><div class="ttdef"><b>Definition</b> <a href="#l00417">TextSpec.hpp:417</a></div></div>
@@ -835,8 +835,6 @@ $(function(){initNavTree('dd/df7/_text_spec_8hpp_source.html','../../',''); });
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
-<!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Feb 27 2026 14:05:49'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

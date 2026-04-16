@@ -25,32 +25,9 @@
 var NAVTREE =
 [
   [ "Main Project", "index.html", [
-    [ "Main Project Documentation", "index.html", "index" ],
-    [ "Git Pre-Push Hook", "df/d3d/md_pre-push-readme.html", [
-      [ "Introduction", "df/d3d/md_pre-push-readme.html#autotoc_md1", null ],
-      [ "What this hook does", "df/d3d/md_pre-push-readme.html#autotoc_md3", null ],
-      [ "Early Safety guard", "df/d3d/md_pre-push-readme.html#autotoc_md5", null ],
-      [ "Path mapping", "df/d3d/md_pre-push-readme.html#autotoc_md7", null ],
-      [ "Preconditions (Gates)", "df/d3d/md_pre-push-readme.html#autotoc_md9", null ],
-      [ "Non-blocking behavior", "df/d3d/md_pre-push-readme.html#autotoc_md11", null ],
-      [ "Logging", "df/d3d/md_pre-push-readme.html#autotoc_md13", null ],
-      [ "File selection rules", "df/d3d/md_pre-push-readme.html#autotoc_md15", null ],
-      [ "Robocopy configuration", "df/d3d/md_pre-push-readme.html#autotoc_md17", null ],
-      [ "Requirements / assumptions", "df/d3d/md_pre-push-readme.html#autotoc_md19", null ],
-      [ "Setup", "df/d3d/md_pre-push-readme.html#autotoc_md21", null ],
-      [ "Troubleshooting", "df/d3d/md_pre-push-readme.html#autotoc_md23", null ],
-      [ "Code", "df/d3d/md_pre-push-readme.html#autotoc_md25", null ]
-    ] ],
-    [ "Project Properties", "d8/d31/md__project-_properties.html", [
-      [ "Introduction", "d8/d31/md__project-_properties.html#autotoc_md27", null ],
-      [ "Solution and Project Names", "d8/d31/md__project-_properties.html#autotoc_md28", null ],
-      [ "Language Standard", "d8/d31/md__project-_properties.html#autotoc_md29", null ],
-      [ "Main Directories", "d8/d31/md__project-_properties.html#autotoc_md30", [
-        [ "Output Directory", "d8/d31/md__project-_properties.html#autotoc_md31", null ],
-        [ "Intermediate Directory", "d8/d31/md__project-_properties.html#autotoc_md32", null ],
-        [ "Cache Location", "d8/d31/md__project-_properties.html#autotoc_md33", null ]
-      ] ]
-    ] ],
+    [ "NPI Main Project", "index.html", "index" ],
+    [ "Dependencies", "d2/d46/dp_dep_dir_dependencies.html", "d2/d46/dp_dep_dir_dependencies" ],
+    [ "Dev Hub", "d3/dfe/dp_dh_dir_dev_hub.html", "d3/dfe/dp_dh_dir_dev_hub" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -86,9 +63,9 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac83f155438d4a0447ac048d50c7b1a47",
-"d2/db7/classnpi_1_1_text_spec.html#a418b9bcb6a1292054de007257baffb12",
-"d6/d78/classnpi_1_1_ref_ptr_host.html#aed0496d9766440923aff98210ff3bbab",
-"dd/d55/classnpi_1_1_stage_window.html#a89d9e55b23bd78290df114907267d8a9"
+"d2/db7/classnpi_1_1_text_spec.html#a09ed5179c0dfd97c19b4012e63caeffb",
+"d6/d78/classnpi_1_1_ref_ptr_host.html#aa20913cc4c3579bd5b12b6f00e4af103",
+"dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a10410013e62e5adfa34cf8b32ca58ff1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

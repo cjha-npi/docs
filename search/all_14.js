@@ -1,16 +1,12 @@
 var searchData=
 [
-  ['warnisimp_5f_0',['warnIsImp_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aa24bed138e41872d2e020eec2e033505',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['weakhost_5f_1',['weakHost_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#afb8d8dbdf14e10fb8e92938ea071d48f',1,'npi::RefPtrHost']]],
-  ['weakloc_5f_2',['weakLoc_',['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#ac1f210a87e9f808dc7dab6f67c2f9c44',1,'npi::RefPtrWeakHost']]],
-  ['weakobj_5f_3',['weakObj_',['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a0619d5f297d3e72da8f5b827983617f7',1,'npi::RefPtrWeakHost']]],
-  ['weakuni_5f_4',['weakUni_',['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a537f6249ed32f3924b1cc4b5980ffe86',1,'npi::RefPtrWeakHost::weakUni_'],['../d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a048fb7f9159a840f35499ed31031c4ec',1,'npi::RefPtrFromThis::weakUni_']]],
-  ['what_20this_20hook_20does_5',['What this hook does',['../df/d3d/md_pre-push-readme.html#autotoc_md3',1,'']]],
-  ['widget_5f_6',['widget_',['../dd/d55/classnpi_1_1_stage_window.html#a45a22e5d8f8ca622ff6c7d5356a6b8f7',1,'npi::StageWindow']]],
-  ['win32_5flean_5fand_5fmean_7',['WIN32_LEAN_AND_MEAN',['../d7/db8/_global_locker_8hpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;GlobalLocker.hpp'],['../d0/d0c/_imp_log_process_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;ImpLogProcess.cpp'],['../d0/da7/_log_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;Log.cpp'],['../d7/dd8/_meta_paths_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;MetaPaths.cpp'],['../d9/d9c/_native_fatal_message_8hpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'WIN32_LEAN_AND_MEAN:&#160;NativeFatalMessage.hpp']]],
-  ['win32errortext_8',['win32ErrorText',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#abc25ab769b48a34eb27ff7c789822b7e',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['win32lasterror_9',['win32LastError',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#acee0c3f06b3d9996946c9c55104868c4',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['windowsexceptionfilter_10',['windowsExceptionFilter',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a2fc634cd009955d042c53cb5f5eebcb5',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['wmain_11',['wmain',['../d0/d0c/_imp_log_process_8cpp.html#ae1325efcce4a4b1b4ea52247f0a0a0c1',1,'ImpLogProcess.cpp']]],
-  ['writeinitiallogs_5f_12',['writeInitialLogs_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a137b0a08d3ab0aa10f902110216127f4',1,'anonymous_namespace{Log.cpp}::LogCore']]]
+  ['underline_5f_0',['underline_',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#a7dcca834b67e7c0b49736138e8bae87c',1,'npi::TextSpec::Style']]],
+  ['uni_5f_1',['uni_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#ac47ae6cc3fe5b8f0b89538236dffd568',1,'npi::RefPtrHost']]],
+  ['unitinfo_2',['UnitInfo',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d8/db4/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_unit_info',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['universal_5f_3',['universal_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a8dcb9818065f7b5d7aca49ec2aab04be',1,'npi::RefPtrHost']]],
+  ['unlock_5f_4',['unlock_',['../da/d1f/classnpi_1_1_global_locker.html#a1e62b8dc3f17d2d1b98957b5dd142a26',1,'npi::GlobalLocker']]],
+  ['uptime_5',['UpTime',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36a051b640a90f92dd8f5fa5ab1dd30a7dd',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['uptime_5f_6',['upTime_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ae607f386555664619e7a6e02110f7a8c',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog']]],
+  ['usage_7',['Usage',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__tokens_recommended_usage',1,'Tokens and Recommended Usage'],['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesUsage',1,'Usage']]],
+  ['usage_20in_20the_20codebase_8',['Recommended Usage in the Codebase',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__recommended_usage',1,'']]]
 ];

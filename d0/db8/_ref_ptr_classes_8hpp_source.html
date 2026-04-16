@@ -60,8 +60,8 @@
   <div id="dp-root-pane-resizer" class="dp-nav-pane-resizer"></div>
   <!-- Doxy-Plus Leaf Navigation Container -->
   <div id="dp-leaf-pane" class="dp-nav-pane">
-    <div id="dp-leaf-bg">
-    <div id="dp-leaf-ul"></div>
+    <div id="dp-leaf-base">
+      <div id="dp-leaf-show"></div>
     </div>
   </div>
   <div id="dp-leaf-pane-resizer" class="dp-nav-pane-resizer"></div>
@@ -73,7 +73,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;3</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;4</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -1506,7 +1506,7 @@ $(function(){initNavTree('d0/db8/_ref_ptr_classes_8hpp_source.html','../../','')
 <div class="ttc" id="aclassnpi_1_1_ref_ptr_weak_host_html_ac9a92d740e1df43c31abfc5d4e4f94b2"><div class="ttname"><a href="../../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#ac9a92d740e1df43c31abfc5d4e4f94b2">npi::RefPtrWeakHost::isValid_</a></div><div class="ttdeci">bool isValid_() const noexcept</div><div class="ttdoc">Check if the weak host still references a live object.</div><div class="ttdef"><b>Definition</b> <a href="#l01050">RefPtrClasses.hpp:1050</a></div></div>
 <div class="ttc" id="aclassnpi_1_1_ref_ptr_weak_host_html_ae81d34352e5c3d462cc3547d23d005b8"><div class="ttname"><a href="../../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#ae81d34352e5c3d462cc3547d23d005b8">npi::RefPtrWeakHost::swap_</a></div><div class="ttdeci">void swap_(RefPtrWeakHost &amp;other) noexcept</div><div class="ttdoc">Member swap function.</div><div class="ttdef"><b>Definition</b> <a href="#l01079">RefPtrClasses.hpp:1079</a></div></div>
 <div class="ttc" id="aconceptnpi_1_1_polymorphically_related_html"><div class="ttname"><a href="../../d1/d7e/conceptnpi_1_1_polymorphically_related.html">npi::PolymorphicallyRelated</a></div><div class="ttdoc">Concept to check if two types are related through inheritance.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db9/_concepts_8hpp_source.html#l00036">Concepts.hpp:36</a></div></div>
-<div class="ttc" id="anamespacenpi_html"><div class="ttname"><a href="../../d6/d57/namespacenpi.html">npi</a></div><div class="ttdoc">Root namespace for npi electronics GmbH.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d6f/_app_meta_data_8hpp_source.html#l00013">AppMetaData.hpp:14</a></div></div>
+<div class="ttc" id="anamespacenpi_html"><div class="ttname"><a href="../../d6/d57/namespacenpi.html">npi</a></div><div class="ttdoc">Root namespace for npi electronics GmbH.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db9/_concepts_8hpp_source.html#l00013">Concepts.hpp:13</a></div></div>
 <div class="ttc" id="astructnpi_1_1_ref_ptr_host_1_1_obs_html_a174538e18736034fae159635365aa057"><div class="ttname"><a href="../../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a174538e18736034fae159635365aa057">npi::RefPtrHost::Obs::Obs</a></div><div class="ttdeci">Obs(Obs &amp;&amp;other) noexcept=default</div><div class="ttdoc">Default move constructor.</div></div>
 <div class="ttc" id="astructnpi_1_1_ref_ptr_host_1_1_obs_html_a2ebe2dc8dcac0a790c9370d3d78ccdce"><div class="ttname"><a href="../../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a2ebe2dc8dcac0a790c9370d3d78ccdce">npi::RefPtrHost::Obs::operator=</a></div><div class="ttdeci">Obs &amp; operator=(const Obs &amp;other) noexcept=default</div><div class="ttdoc">Default copy assignment operator.</div></div>
 <div class="ttc" id="astructnpi_1_1_ref_ptr_host_1_1_obs_html_a4fa3584265b47d44d2fea9b07e96fefd"><div class="ttname"><a href="../../da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a4fa3584265b47d44d2fea9b07e96fefd">npi::RefPtrHost::Obs::~Obs</a></div><div class="ttdeci">~Obs() noexcept</div><div class="ttdoc">Destructor sets the internal pointer to nullptr using std::memory_order_release to ensure thread-safe...</div><div class="ttdef"><b>Definition</b> <a href="#l00870">RefPtrClasses.hpp:870</a></div></div>
@@ -1528,8 +1528,6 @@ $(function(){initNavTree('d0/db8/_ref_ptr_classes_8hpp_source.html','../../','')
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
 <!-- store.js with all plugins include expire and namespace plugins -->
 <script type="text/javascript" src="../../store.everything.min.js"></script>
-<!-- Storing Generation DateTime for use in doxy-plus.js -->
-<script> window.DOXY_PLUS_DATE_TIME = 'Fri Feb 27 2026 14:05:49'; </script>
 <!-- Doxy-Plus Custom JavaScript File -->
 <script type="text/javascript" src="../../doxy-plus.js"></script>
 <!-- 🟥 END ------------------------------------------------------------------------------------------------ -->

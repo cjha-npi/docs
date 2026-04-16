@@ -27,7 +27,9 @@
 */
 @font-face {
   font-family: "noto-2b9";
-  src: url("NotoSansSymbols2-Regular.woff2") format("woff2"), url("NotoSansSymbols2-Regular.ttf") format("truetype"); /* .ttf is optional fallback */
+  src:
+    url("NotoSansSymbols2-Regular.woff2") format("woff2"),
+    url("NotoSansSymbols2-Regular.ttf") format("truetype"); /* .ttf is optional fallback */
   font-display: swap;
   unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
 }
@@ -36,7 +38,7 @@
 /* CUSTOMIZING IN-BUILT FONT VALUES */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Font sizes for desktop view */
+/* Font sizes and line height for desktop view */
 html {
   --page-font-size: 13px !important;
   --navigation-font-size: 13px !important;
@@ -44,9 +46,10 @@ html {
   --code-font-size: 12px !important;
   --title-font-size: 18px !important;
   --memtitle-font-size: 16px !important;
+  --content-line-height: 20px !important;
 }
 
-/* Font sizes for mobile view */
+/* Font sizes and line height for mobile view */
 @media screen and (max-width: 767px) {
   html {
     --page-font-size: 13px !important;
@@ -55,6 +58,7 @@ html {
     --code-font-size: 12px !important;
     --title-font-size: 16px !important;
     --memtitle-font-size: 16px !important;
+    --content-line-height: 20px !important;
   }
 }
 
@@ -76,10 +80,10 @@ html {
   --dp-page-nav-line-height: 18px;
 
   --dp-root-item-font-size: 13px;
-  --dp-root-item-line-height: 20px;
+  --dp-root-item-line-height: 22px;
 
   --dp-leaf-item-font-size: 12px;
-  --dp-leaf-item-line-height: 20px;
+  --dp-leaf-item-line-height: 21px;
 
   --dp-side-nav-width: 0px;
   --dp-root-pane-width: 0px;
@@ -103,10 +107,13 @@ html {
   /* Default colors defined by Doxygen or Doxygen Awesome */
   --page-background-color: rgb(220, 225, 230) !important; /* forms the separator between panes*/
   --separator-color: rgb(200, 200, 200) !important;
-  --code-background: rgb(225, 230, 235) !important;
-  --fragment-background: rgb(235, 240, 245) !important;
+  --code-background: rgb(210, 220, 230) !important;
+  --tablehead-background: rgb(215, 220, 225) !important;
+  --blockquote-background: rgb(215, 220, 225) !important;
+  --fragment-background: rgb(220, 230, 240) !important;
 
   /* Doxy-Plus */
+  --dp-back-color: var(--page-background-color); /* because --page-background-color is overridden inside contents */
   --dp-pane-color: rgb(255, 255, 255); /* used as background for all panes */
   --dp-mark-color: rgb(240, 80, 0); /* used to mark current item */
   --dp-inpt-color: var(--dp-pane-color); /* search input box background */
@@ -114,6 +121,7 @@ html {
   --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
   --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
   --dp-scrollbar-color: rgb(160, 175, 190); /* scrollbar button and handle color */
+  --dp-item-prefix-color: rgb(100, 100, 100); /* Namespace prefix for items in root pane */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-text-visited-color: rgb(200, 50, 200); /* visited entry in root and leaf panes */
   --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
@@ -125,12 +133,6 @@ html {
   --dp-leaf-item-color: var(--page-background-color);
   --dp-leaf-item-hover-color: rgb(from var(--page-background-color) r g b / 0.8);
   --dp-root-item-hover-color: rgb(from var(--dp-pane-color) r g b / 0.8);
-
-  --dp-root-item-font-weight: 500;
-  --dp-leaf-item-font-weight: 500;
-
-  --dp-root-icon-font-size: 12px;
-  --dp-leaf-icon-font-size: 12px;
 }
 
 /* DARK MODE */
@@ -138,12 +140,13 @@ html.dark-mode {
   /* Default colors defined by Doxygen or Doxygen Awesome */
   --page-background-color: rgb(10, 15, 20) !important; /* forms the separator between panes*/
   --separator-color: rgb(65, 70, 75) !important;
-  --code-background: rgb(25, 25, 25) !important;
-  --tablehead-background: rgb(35, 40, 50) !important;
+  --code-background: rgb(45, 60, 75) !important;
+  --tablehead-background: rgb(40, 60, 80) !important;
   --blockquote-background: rgb(35, 40, 50) !important;
-  --fragment-background: rgb(40, 45, 55) !important;
+  --fragment-background: rgb(40, 50, 60) !important;
 
   /* Doxy-Plus */
+  --dp-back-color: var(--page-background-color); /* because --page-background-color is overridden inside contents */
   --dp-pane-color: rgb(30, 40, 50); /* used as background for all panes */
   --dp-mark-color: rgb(240, 80, 0); /* used to mark current item */
   --dp-inpt-color: var(--dp-pane-color); /* search input box background */
@@ -151,6 +154,7 @@ html.dark-mode {
   --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
   --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
   --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */
+  --dp-item-prefix-color: rgb(150, 150, 150); /* Namespace prefix for items in root pane */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-text-visited-color: rgb(250, 100, 250); /* visited entry in root and leaf panes */
   --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
@@ -162,12 +166,6 @@ html.dark-mode {
   --dp-leaf-item-color: var(--page-background-color);
   --dp-leaf-item-hover-color: rgb(from var(--page-background-color) r g b / 0.5);
   --dp-root-item-hover-color: rgb(from var(--dp-pane-color) r g b / 0.5);
-
-  --dp-root-item-font-weight: 400;
-  --dp-leaf-item-font-weight: 400;
-
-  --dp-root-icon-font-size: 11px;
-  --dp-leaf-icon-font-size: 11px;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -187,7 +185,7 @@ tr.inherit_header + tr[class^="memitem"] td.memTemplParams {
   border-top-color: var(--separator-color);
 }
 
-.doxsection{
+.doxsection {
   font-size: 20px;
 }
 
@@ -212,18 +210,18 @@ body {
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /* Override if only root pane of dual-nav is active */
-body[data-dp-dual-nav-active] {
+body.dp-dual-nav-active {
   --dp-doc-head-margin-left: calc(var(--dp-root-pane-width) + var(--dp-sep));
   --dp-doc-body-margin-left: calc(var(--dp-root-pane-width) + var(--dp-sep));
 }
 
 /* Override if both root pane and leaf pane of dual-nav are active */
-body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane] {
+body.dp-dual-nav-active.dp-hash-data-available.dp-show-leaf-pane {
   --dp-doc-body-margin-left: calc(var(--dp-root-pane-width) + var(--dp-leaf-pane-width) + var(--dp-sep));
 }
 
-@media screen and (max-width: 1500px){
-  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane][data-dp-auto-hide-lists]{
+@media screen and (max-width: 1500px) {
+  body.dp-dual-nav-active.dp-hash-data-available.dp-show-leaf-pane.dp-auto-hide-lists {
     --dp-doc-body-margin-left: calc(var(--dp-root-pane-width) + var(--dp-sep));
   }
 }
@@ -252,34 +250,34 @@ body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-le
 
 /* we only change the display state when in desktop view */
 @media screen and (min-width: 768px) {
-  body[data-dp-dual-nav-active] #side-nav {
+  body.dp-dual-nav-active #side-nav {
     display: none;
   }
 
-  body[data-dp-dual-nav-active] #dp-root-pane,
-  body[data-dp-dual-nav-active] #dp-root-pane-resizer {
+  body.dp-dual-nav-active #dp-root-pane,
+  body.dp-dual-nav-active #dp-root-pane-resizer {
     display: block;
   }
 
-  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane] #dp-leaf-pane,
-  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane] #dp-leaf-pane-resizer {
+  body.dp-dual-nav-active.dp-hash-data-available.dp-show-leaf-pane #dp-leaf-pane,
+  body.dp-dual-nav-active.dp-hash-data-available.dp-show-leaf-pane #dp-leaf-pane-resizer {
     display: block;
   }
 
-  body:not([data-dp-show-page-nav]) #page-nav {
+  body:not(.dp-show-page-nav) #page-nav {
     display: none;
   }
 }
 
-@media screen and (max-width: 1500px){
-  body[data-dp-auto-hide-lists] #dp-leaf-pane,
-  body[data-dp-auto-hide-lists] #dp-leaf-pane-resizer {
+@media screen and (max-width: 1500px) {
+  body.dp-auto-hide-lists #dp-leaf-pane,
+  body.dp-auto-hide-lists #dp-leaf-pane-resizer {
     display: none !important;
   }
 }
 
-@media screen and (max-width: 1000px){
-  body[data-dp-auto-hide-lists] #page-nav {
+@media screen and (max-width: 1000px) {
+  body.dp-auto-hide-lists #page-nav {
     display: none !important;
   }
 }
@@ -292,6 +290,11 @@ body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-le
   #dp-leaf-pane-resizer {
     display: none !important;
   }
+}
+
+/* Do not display empty page nav */
+body.dp-empty-page-nav #page-nav {
+  display: none !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -344,7 +347,7 @@ body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-le
 }
 
 /* Right-side border only appears when main nav is on the right */
-body:not([data-dp-main-nav-below-title]) #titlearea {
+body:not(.dp-main-nav-below-title) #titlearea {
   background: linear-gradient(var(--dp-line-color), var(--dp-line-color)) right 0 top 10px / 1px calc(100% - 20px) no-repeat;
   background-origin: border-box; /* anchor at the outer edge */
 }
@@ -381,7 +384,7 @@ body:not([data-dp-main-nav-below-title]) #titlearea {
   In such a case we remove the top padding of the main-nav since the title
    bottom padding serves as a separator space.
 */
-body[data-dp-main-nav-below-title] #main-nav {
+body.dp-main-nav-below-title #main-nav {
   padding-top: 0px !important;
 }
 
@@ -902,7 +905,7 @@ body .header > .headertitle > .title {
 }
 
 @media screen and (min-width: 768px) {
-  body[data-dp-doc-header-available] #container {
+  body.dp-doc-header-available #container {
     border-top-right-radius: 0px;
   }
 }
@@ -978,7 +981,7 @@ h2.groupheader {
 }
 
 @media screen and (min-width: 768px) {
-  body[data-dp-doc-header-available] #doc-content {
+  body.dp-doc-header-available #doc-content {
     height: calc(100vh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
     height: calc(100dvh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
 
@@ -986,15 +989,15 @@ h2.groupheader {
     border-top-left-radius: 0px;
   }
 
-  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane] #doc-content {
+  body.dp-dual-nav-active.dp-hash-data-available.dp-show-leaf-pane #doc-content {
     border-left: 0px solid var(--dp-pane-color);
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
   }
 }
 
-@media screen and (max-width: 1500px){
-  body[data-dp-dual-nav-active][data-dp-page-links-tree-available][data-dp-show-leaf-pane][data-dp-auto-hide-lists] #doc-content {
+@media screen and (max-width: 1500px) {
+  body.dp-dual-nav-active.dp-hash-data-available.dp-show-leaf-pane.dp-auto-hide-lists #doc-content {
     border-left: var(--dp-border-width) solid var(--dp-pane-color);
     border-bottom-left-radius: var(--dp-border-radius-l);
   }
@@ -1033,7 +1036,7 @@ h2.groupheader {
   border-bottom: var(--dp-border-width) solid var(--dp-pane-color);
 }
 
-body:not([data-dp-doc-header-available]) #page-nav {
+body:not(.dp-doc-header-available) #page-nav {
   border-top: var(--dp-border-width) solid var(--dp-pane-color);
 }
 
@@ -1048,8 +1051,8 @@ body:not([data-dp-doc-header-available]) #page-nav {
   padding-left: 6px;
 }
 
-@media (pointer: coarse){
-  #page-nav-contents ul.page-outline{
+@media (pointer: coarse) {
+  #page-nav-contents ul.page-outline {
     padding-right: 12px;
   }
 }
@@ -1134,19 +1137,9 @@ body:not([data-dp-doc-header-available]) #page-nav {
 
 /*
   By default the padding on the left is 16px, this is too much, so we
-  change it to 8px;
+  change it to 0px since we have extra space on left. ;
 */
-#page-nav-contents li[id^="nav-"] > .item > span {
-  padding-left: 8px !important;
-}
-
-/*
-  Since normal item in #page-nav has ids starting with 'nav-' and section
-  headers have ids starting with 'nav-header-'. When we target the normal
-  ones (just above) and change its left padding, it also affects the left
-  padding of section headers, we here we change it back to 0px.
-*/
-#page-nav-contents li[id^="nav-header-"] > .item > span {
+#page-nav-contents li > .item > span {
   padding-left: 0px !important;
 }
 
@@ -1191,13 +1184,155 @@ body:not([data-dp-doc-header-available]) #page-nav {
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* BLOCKQUOTE CUSTOMIZATION */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/* Remove the big double-quote icons */
+blockquote.doxtable::before,
+blockquote.doxtable::after {
+  content: "" !important;
+  display: none !important;
+}
+
+blockquote.doxtable {
+  color: var(--page-foreground-color);
+  margin: 0px;
+  border-radius: var(--dp-border-radius-l);
+  background: var(--dp-pane-color);
+  box-shadow: 0px 0px 5px 3px var(--dp-back-color);
+  padding-bottom: 1px;
+}
+
+html.dark-mode{
+  blockquote.doxtable{
+    box-shadow: 0px 0px 5px 1px var(--dp-back-color);
+  }
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* INLINE CODE CUSTOMIZATION */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+span.tt{
+  border: none;
+  border-radius: var(--dp-border-radius-s);
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* CODE FRAGMENT CUSTOMIZATION */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+div.fragment{
+  border: none;
+  border-radius: var(--dp-border-radius-l);
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* CUSTOM REQUIRED CUSTOMIZATION */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+dl.dh_required{
+  position: relative;
+  padding: 10px;
+  border-radius: var(--dp-border-radius-l);
+  box-shadow: 0px 0px 5px 3px var(--dp-mark-color);
+}
+
+dl.dh_required dd{
+  margin-inline-start: 0px;
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* NOTE, WARNING, ETC. BLOCK CUSTOMIZATION */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+dl.warning, dl.attention, dl.note, dl.deprecated, dl.bug, dl.invariant, dl.pre, dl.post, dl.todo, dl.remark, dl.test{
+  position: relative;
+  padding-left: 20px;
+  border-radius: var(--dp-border-radius-l);
+  color: var(--page-foreground-color);
+}
+
+dl.warning::before, dl.attention::before, dl.note::before, dl.deprecated::before, dl.bug::before, 
+dl.invariant::before, dl.pre::before, dl.post::before, dl.todo::before, dl.remark::before, dl.test::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  bottom: 3px;
+  width: 8px;
+  border-radius: var(--dp-border-radius-l);
+  pointer-events: none;
+}
+
+dl.warning::before, dl.attention::before {
+  background: var(--warning-color-dark);
+}
+
+dl.warning, dl.attention{
+  color: var(--warning-color-darker);
+  border: 2px solid var(--warning-color-dark);
+}
+
+dl.note::before, dl.remark::before{
+  background: var(--note-color-dark);
+}
+
+dl.note, dl.remark{
+  color: var(--note-color-darker);
+  border: 2px solid var(--note-color-dark);
+}
+
+dl.deprecated::before{
+  background: var(--deprecated-color-dark);
+}
+
+dl.deprecated{
+  color: var(--deprecated-color-darker);
+  border: 2px solid var(--deprecated-color-dark);
+}
+
+dl.bug::before{
+  background: var(--bug-color-dark);
+}
+
+dl.bug{
+  color: var(--bug-color-darker);
+  border: 2px solid var(--bug-color-dark);
+}
+
+dl.invariant::before, dl.pre::before, dl.post::before{
+  background: var(--invariant-color-dark);
+}
+
+dl.invariant, dl.pre, dl.post{
+  color: var(--invariant-color-darker);
+  border: 2px solid var(--invariant-color-dark);
+}
+
+dl.todo::before, dl.test::before{
+  background: var(--todo-color-dark);
+}
+
+dl.todo, dl.test{
+  color: var(--todo-color-darker);
+  border: 2px solid var(--todo-color-dark);
+}
+
+dl.test{
+  background: var(--todo-color);
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* ROOT + LEAF PANE COMMON */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* Minimum width of panes */
 .dp-nav-pane {
   min-width: 100px;
 }
 
+/* Basic structure of panes and resizers */
 .dp-nav-pane,
 .dp-nav-pane-resizer {
   box-sizing: border-box;
@@ -1206,6 +1341,7 @@ body:not([data-dp-doc-header-available]) #page-nav {
   border: none;
 }
 
+/* Resizer in normal non-touch screen use */
 .dp-nav-pane-resizer {
   touch-action: none;
   z-index: 1;
@@ -1214,6 +1350,7 @@ body:not([data-dp-doc-header-available]) #page-nav {
   cursor: col-resize;
 }
 
+/* Change width and margin of resizer for touch screens */
 @media (pointer: coarse) {
   .dp-nav-pane-resizer {
     width: 36px !important;
@@ -1221,17 +1358,20 @@ body:not([data-dp-doc-header-available]) #page-nav {
   }
 }
 
-.dp-tree-list,
-.dp-tree-item,
-.dp-tree-line,
-.dp-tree-node,
-.dp-tree-link {
+/* General properties of list and items */
+.dpt-list,
+.dpt-node,
+.dpt-row,
+.dpt-toggle,
+.dpt-prefix,
+.dpt-label,
+.dpt-sep {
   -webkit-appearance: none;
   appearance: none;
   list-style: none;
   box-shadow: none;
   background: none;
-  text-decoration: none;
+  text-decoration: none !important; /* Removes underlining for links */
   text-align: left;
   padding: 0;
   margin: 0;
@@ -1239,44 +1379,130 @@ body:not([data-dp-doc-header-available]) #page-nav {
   min-inline-size: 0;
 }
 
-li.dp-tree-item--parent > ul {
+/* If no .dpt-node--expanded class then keep the branch collapsed */
+li.dpt-node--branch > ul {
   display: none;
 }
 
-li.dp-tree-item--parent.dp-tree-item--expanded > ul {
+/* Show branch only when li has .dpt-node--expanded class */
+li.dpt-node--branch.dpt-node--expanded > ul {
   display: block;
 }
 
-.dp-tree-line {
-  display: flex;
+/* Base configuration of .dpt-row for both panes */
+.dpt-row {
   position: relative;
+  display: flex;
   align-items: center;
-  padding-left: 7px;
-  padding-right: 7px;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
   border-radius: var(--dp-border-radius-s);
   color: var(--page-foreground-color);
+  font-weight: normal;
+  font-family: var(--font-family); /* Always set explicitly */
   cursor: pointer;
 }
 
-li.dp-tree-item--disabled > .dp-tree-line {
-  cursor: default;
+/* Remove outline and shadow on any type of focus. */
+.dpt-row:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-li.dp-tree-item--disabled:not(.dp-tree-item--parent) > .dp-tree-line {
-  color: var(--dp-text-disabled-color);
+/* Base configuration of expand/collapse node */
+.dpt-toggle {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+  overflow: hidden; /* Otherwise if size increases then width will also increase */
 }
 
-li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
-  margin-top: 3px;
-  margin-bottom: 3px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+/* Base configuration of prefix and label */
+.dpt-prefix,
+.dpt-label {
+  flex: 0 1 auto;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
+  font-size: inherit;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::before {
+/* Prefix has different font size and color */
+.dpt-prefix {
+  color: var(--dp-item-prefix-color);
+  /* Slight gap, this makes it feel like correct spacing between 
+  prefix and label, otherwise label is too close to the right end
+  of prefix */
+  padding-right: 1px;
+}
+
+/* Label has the default foreground color */
+.dpt-label {
+  color: var(--page-foreground-color);
+}
+
+/* The '::' separator between label text */
+.dpt-sep {
+  flex: 0 0 auto;
+  text-align: center;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: inherit;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: var(--font-family-monospace);
+  color: var(--page-foreground-color);
+}
+
+/* The .dpt-row for a branch is a button so we have to
+apply a different width for it to look consistent
+compared to other rows which are links. */
+li.dpt-node--branch > .dpt-row {
+  width: 100%;
+}
+
+/* The horizontal line after the branch node */
+li.dpt-node--branch > .dpt-row::after {
+  content: "";
+  display: block;
+  flex: 1 1 auto; /* take remaining space */
+  margin-top: 2px; /* slight offset */
+  margin-left: var(--dp-sep);
+  align-self: center;
+  height: 1px; /* visual thickness */
+  background: var(--dp-line-color);
+  pointer-events: none;
+}
+
+/* Current item has different top and bottom
+margin and padding to distinguish it from other items
+other items*/
+li.dpt-node--current > .dpt-row {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* Small thick line with mark color to denote the current
+item, placed on the left of the item. */
+li.dpt-node--current > .dpt-row::before {
   content: "";
   position: absolute;
-  left: 3px;
+  /* Makes it being positioned outside the
+  left boundry of the item row*/
+  left: -6px;
   top: 3px;
   bottom: 3px;
   width: 4px;
@@ -1285,38 +1511,16 @@ li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::before {
   pointer-events: none;
 }
 
-.dp-tree-node {
-  flex: 0 0 auto;
-  font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: auto;
-  transition: transform 0.25s ease;
-}
-li:not(.dp-tree-item--parent) > .dp-tree-line > .dp-tree-node {
-  visibility: hidden;
-  width: 4px !important;
-}
-li.dp-tree-item--expanded > .dp-tree-line > .dp-tree-node {
+/* Rotate expanded branch icon to point down */
+li.dpt-node--expanded > .dpt-row > .dpt-toggle {
   transform: rotate(90deg);
-}
-
-li.dp-tree-item--parent > .dp-tree-line::after {
-  content: "";
-  display: block;
-  flex: 1 1 auto; /* take remaining space */
-  margin-top: 2px;
-  margin-left: var(--dp-sep);
-  align-self: center;
-  height: 1px; /* visual thickness */
-  background: var(--dp-line-color);
-  pointer-events: none;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* ROOT PANE */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* Basic configuration of root pane */
 #dp-root-pane {
   z-index: 0;
   top: calc(var(--dp-header-height) + 10px);
@@ -1327,9 +1531,20 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   white-space: nowrap;
   overflow-x: hidden;
   overflow-y: auto;
+  /* Changes the scroll bar position from left to
+  right. Also changes the text alignment. We fix the
+  text alignment back to left to right in the main
+  ul of root pane. */
   direction: rtl;
+  /* This padding allows extra height of ul so
+  that whe bottom most item is the current one
+  then the total height still remains inside 
+  the bounds so as to not make the scroll bar
+  appear if there is enough height otherwise. */
+  padding-bottom: 3px;
 }
 
+/* Basic configuration of root pane resizer */
 #dp-root-pane-resizer {
   top: calc(var(--dp-header-height) + 10px);
   left: calc(var(--dp-root-pane-width) + (var(--dp-sep) / 2));
@@ -1337,34 +1552,101 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height) - 20px) !important; /* for use in newer browsers */
 }
 
-#dp-root-pane .dp-tree-list,
-#dp-root-pane .dp-tree-item,
-#dp-root-pane .dp-tree-line,
-#dp-root-pane .dp-tree-node,
-#dp-root-pane .dp-tree-link {
-  font-size: var(--dp-root-item-font-size);
-  line-height: var(--dp-root-item-line-height);
-}
-
+/* Main ul of root pane */
 #dp-root-pane > ul {
-  padding: 8px 3px;
+  /* Setting text alignment back to left
+  to right. */
   direction: ltr;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  /* Enough margin to have the current
+  item marker with space to spare. */
+  margin-left: 7px;
+  /* Separation between root pane and
+  the main content. */
+  margin-right: var(--dp-sep);
 }
 
+/* Deeper ul nesting. Creates a step like tree.
+Each nested ul is indented by line height minus
+5px. The 5px here is to compensate for the small
+gap betwen expand/collapse icon and text. */
 #dp-root-pane ul ul {
-  margin-left: calc(var(--dp-root-item-line-height) - 3px);
+  margin-left: calc(var(--dp-root-item-line-height) - 5px);
 }
 
-#dp-root-pane .dp-tree-item{
-  margin: 1px 0px;
-  scroll-margin-top: 10px !important;
-  scroll-margin-bottom: 10px !important;
+/* If Dev Hub is available push it to the bottom.
+Dev Hub is supposed to be the last item in the main
+top level tree structure. Pushing it to the bottom
+creates the necessary separation between project
+documentation and other documentation for developers. */
+body.dp-dev-hub-available #dp-root-pane > ul > li:last-child {
+  margin-top: auto;
+  padding-top: 10px;
 }
 
-#dp-root-pane li:not(.dp-tree-item--disabled) > .dp-tree-line:hover {
+/* Only assign the line height to the root item and not to
+prefix or label otherwise their text is not correctly aligned
+in vertical direction. */
+#dp-root-pane .dpt-row {
+  line-height: var(--dp-root-item-line-height);
+  font-size: var(--dp-root-item-font-size);
+  /* This creates a visual gap where the text ends and where
+  the item ends. Makes the hover color change look correct in
+  terms of the background color and borders. */
+  padding-right: 5px;
+}
+
+/* Style prefix differently */
+#dp-root-pane .dpt-prefix {
+  font-family: var(--font-family-monospace);
+  font-size: calc(var(--dp-root-item-font-size) * 0.9);
+}
+
+/* The expand/collapse icon. It is necessary that the width
+and height of the expand collapse icon remains exactly the
+same as the line height. This way when the entire thing is
+rotated to make it point downwards the prefix and label do
+not have to shift. */
+#dp-root-pane .dpt-toggle {
+  line-height: var(--dp-root-item-line-height);
+  font-size: calc(var(--dp-root-item-line-height) * 0.5);
+  width: var(--dp-root-item-line-height);
+  height: var(--dp-root-item-line-height);
+}
+
+/* Make the expand/collapse icon slightly bigger on hover.
+Do not make it too big otherwise alignments differ and it
+looks weird. */
+#dp-root-pane li.dpt-node--branch > .dpt-row:hover > .dpt-toggle {
+  font-size: calc(var(--dp-root-item-line-height) * 0.6);
+}
+
+/* Left padding of leaf items. This is to align it correctly
+with the expand/collapse icon and also to provide extra space
+on left to have a good visual separation. This makes the hover
+color change and background/border look correct and aligned. */
+#dp-root-pane li.dpt-node--leaf > .dpt-row {
+  padding-left: 5px;
+}
+
+/* Leaf has slightly smaller label */
+#dp-root-pane li.dpt-node--leaf .dpt-label {
+  font-size: calc(var(--dp-root-item-font-size) * 0.95);
+}
+
+/* Change row background on hover. */
+#dp-root-pane .dpt-row:hover {
   background: var(--dp-root-item-hover-color);
 }
-#dp-root-pane li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
+
+/* Change row background on current item. Here we remove
+the right padding, margin and both (right-top and right-
+bottom) border radius. This is so that we can extend it
+on the right to merge it with the main doc page. */
+#dp-root-pane li.dpt-node--current > .dpt-row {
   background: var(--dp-pane-color);
   padding-right: 0px !important;
   margin-right: calc(-1 * var(--dp-sep));
@@ -1372,7 +1654,10 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   border-bottom-right-radius: 0px !important;
 }
 
-#dp-root-pane li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line::after {
+/* A top and bottom curve at the right end of the current
+item. This makes it look like the current item is visibly
+expanding to make the main doc content. */
+#dp-root-pane li.dpt-node--current > .dpt-row::after {
   content: "";
   position: absolute;
   margin: 0;
@@ -1380,30 +1665,56 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   padding: 0;
   width: 8px; /* 2 * radius (r=4px) */
   height: calc(100% + 8px);
-  right: -1px;
+  right: -4px;
   background: inherit;
   mask: radial-gradient(circle 4px at 0% 0%, transparent 90%, #000 100%), radial-gradient(circle 4px at 0% 100%, #000 90%, transparent 100%);
   mask-composite: subtract;
 }
 
-#dp-root-pane li.dp-tree-item--parent:not(.dp-tree-item--expanded):has(.dp-tree-item--current) > .dp-tree-line{
+/* 
+When the current item is hidden (because its parent is collapsed)
+we show a small horizontal bar to visibly show where the current
+item is. The below parts for for that.
+*/
+
+/* 1. Extra separation between the parent that has the current item
+any item below it. */
+#dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row {
   margin-bottom: 10px;
 }
 
-#dp-root-pane li.dp-tree-item--parent:not(.dp-tree-item--expanded):has(.dp-tree-item--current) > .dp-tree-line::before {
+/* 2. A small horizontal bar to visibly show where the current item is. 
+This is the representation of the mark on the left of the current
+item when it is visible. */
+#dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row > .dpt-label::before {
   content: "";
   position: absolute;
   top: calc(100% + 4px);
-  left: 28px;
+  left: 23px;
   height: 4px;
-  width: calc(100% - 44px);
+  width: 6px;
   border-radius: var(--dp-border-radius-s);
-  background: var(--dp-pane-color);
-  border-left: 20px solid var(--dp-mark-color);
+  background: var(--dp-mark-color);
   pointer-events: none;
 }
 
-#dp-root-pane li.dp-tree-item--parent:not(.dp-tree-item--expanded):has(.dp-tree-item--current) > .dp-tree-line >.dp-tree-link::after {
+/* 3. A line that extends to the main doc content. This is the representation
+of the current item background. */
+#dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 32px;
+  height: 4px;
+  width: calc(100% - 28px);
+  border-radius: var(--dp-border-radius-s);
+  background: var(--dp-pane-color);
+  pointer-events: none;
+}
+
+/* 4. The top and bottom right side curves that makes it look like
+the current item marker is expanding to form the main doc content. */
+#dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row > .dpt-label::after {
   content: "";
   position: absolute;
   margin: 0;
@@ -1412,40 +1723,19 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   top: calc(100% - 0px);
   width: 8px; /* 2 * radius (r=4px) */
   height: 12px;
-  right: -7px;
+  right: -10px;
   background: var(--dp-pane-color);
   mask: radial-gradient(circle 4px at 0% 0%, transparent 90%, #000 100%), radial-gradient(circle 4px at 0% 100%, #000 90%, transparent 100%);
   mask-composite: subtract;
-}
-
-#dp-root-pane .dp-tree-node {
-  font-size: var(--dp-root-icon-font-size);
-  width: var(--dp-root-item-line-height);
-}
-#dp-root-pane .dp-tree-node:hover{
-  font-size: calc(var(--dp-root-icon-font-size) + 4px);
-}
-
-#dp-root-pane .dp-tree-link {
-  flex: 0 1 auto;
-  font-family: var(--font-family-monospace) !important;
-  font-weight: var(--dp-root-item-font-weight) !important;
-  color: inherit !important;
-  cursor: inherit !important;
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#dp-root-pane .dp-tree-link:hover {
-  text-decoration: none !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* LEAF PANE */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* Main leaf pane. This holds the dp-leaf-base and is itself
+merged with main doc content. This is done to provide a better
+visual experience. */
 #dp-leaf-pane {
   z-index: 0;
   top: var(--dp-header-height);
@@ -1464,6 +1754,7 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   border-bottom-left-radius: var(--dp-border-radius-l);
 }
 
+/* Leaf pane resizer */
 #dp-leaf-pane-resizer {
   top: var(--dp-header-height);
   left: calc(var(--dp-sep) + var(--dp-root-pane-width) + var(--dp-leaf-pane-width) - (var(--dp-sep) / 2) - var(--dp-border-width));
@@ -1471,7 +1762,9 @@ li.dp-tree-item--parent > .dp-tree-line::after {
   height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
 }
 
-body[data-dp-doc-header-available] #dp-leaf-pane {
+/* Main leaf pane has different measurments when doc
+header is available.*/
+body.dp-doc-header-available #dp-leaf-pane {
   top: calc(var(--dp-header-height) + var(--dp-doc-header-height));
   height: calc(100vh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
   height: calc(100dvh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
@@ -1479,34 +1772,38 @@ body[data-dp-doc-header-available] #dp-leaf-pane {
   border-top-left-radius: 0px;
 }
 
-body[data-dp-doc-header-available] #dp-leaf-pane-resizer {
+/* Main leaf pane resizer has different measurments when doc
+header is available.*/
+body.dp-doc-header-available #dp-leaf-pane-resizer {
   top: calc(var(--dp-header-height) + var(--dp-doc-header-height));
   height: calc(100vh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
   height: calc(100dvh - var(--dp-header-height) - var(--dp-doc-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
 }
 
-/* Background layer (fills the pane and provides the inset) */
-#dp-leaf-bg {
+/* This forms the box shadow for the leaf tree */
+#dp-leaf-base {
   box-sizing: border-box;
   width: auto;
   height: calc(100% - (2 * var(--dp-sep)));
   margin: var(--dp-sep);
   padding: var(--dp-sep);
-  padding-left: 0px;
   background: var(--dp-pane-color);
   border-radius: var(--dp-border-radius-l);
   min-height: 0;
   box-shadow: 0px 0px 5px 3px var(--page-background-color);
 }
 
+/* Different shadow style for dark mode. */
 html.dark-mode {
-  #dp-leaf-bg {
-    box-shadow: 0px 0px 3px 0px var(--page-background-color);
+  #dp-leaf-base {
+    box-shadow: 0px 0px 5px 1px var(--page-background-color);
   }
 }
 
-#dp-leaf-ul {
+/* Leaf pane that holds the ul tree */
+#dp-leaf-show {
   height: 100%;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -1517,74 +1814,118 @@ html.dark-mode {
   list-style: none;
 }
 
-#dp-leaf-pane .dp-tree-list,
-#dp-leaf-pane .dp-tree-item,
-#dp-leaf-pane .dp-tree-line,
-#dp-leaf-pane .dp-tree-node,
-#dp-leaf-pane .dp-tree-link {
-  font-size: var(--dp-leaf-item-font-size);
+/* Padding on left and right for visual consistency */
+#dp-leaf-show > ul {
+  margin-left: 7px;
+  margin-right: 5px;
+}
+
+/* Create a step like structure for nested branches. */
+#dp-leaf-show ul ul {
+  margin-left: calc(var(--dp-leaf-item-line-height) - 5px);
+}
+
+/* Base for a single li. Only assign the line height to the root item and not to
+prefix or label otherwise their text is not correctly aligned
+in vertical direction.*/
+#dp-leaf-show .dpt-row {
   line-height: var(--dp-leaf-item-line-height);
+  font-size: var(--dp-leaf-item-font-size);
+  /* This creates a visual gap where the text ends and where
+  the item ends. Makes the hover color change look correct in
+  terms of the background color and borders. */
+  padding-right: 5px;
 }
 
-#dp-leaf-ul > ul {
-  padding: 5px 5px;
-  padding-right: 1px;
+/* The expand/collapse icon. It is necessary that the width
+and height of the expand collapse icon remains exactly the
+same as the line height. This way when the entire thing is
+rotated to make it point downwards the prefix and label do
+not have to shift. */
+#dp-leaf-show .dpt-toggle {
+  line-height: var(--dp-leaf-item-line-height);
+  font-size: calc(var(--dp-leaf-item-line-height) * 0.55);
+  width: var(--dp-leaf-item-line-height);
+  height: var(--dp-leaf-item-line-height);
 }
 
-#dp-leaf-ul ul ul {
-  margin-left: calc(var(--dp-root-item-line-height) - 4px);
+/* Make the expand/collapse icon slightly bigger on hover.
+Do not make it too big otherwise alignments differ and it
+looks weird. */
+#dp-leaf-show li.dpt-node--branch > .dpt-row:hover > .dpt-toggle {
+  font-size: calc(var(--dp-leaf-item-line-height) * 0.6);
 }
 
-#dp-leaf-ul li.dp-tree-item--visited:not(.dp-tree-item--current) > .dp-tree-line {
+/* Left padding of leaf items. This is to align it correctly
+with the expand/collapse icon and also to provide extra space
+on left to have a good visual separation. This makes the hover
+color change and background/border look correct and aligned. */
+#dp-leaf-show li.dpt-node--leaf > .dpt-row {
+  padding-left: 5px;
+}
+
+/* Change leaf items to have monospace font for code pages
+(e.g. class/struct, etc.) */
+body.dp-hash-data-is-code #dp-leaf-show li.dpt-node--leaf > .dpt-row {
+  font-family: var(--font-family-monospace);
+  font-size: calc(var(--dp-leaf-item-font-size) * 0.9);
+}
+
+/* Change row background on hover. */
+#dp-leaf-show .dpt-row:hover {
+  background: var(--dp-leaf-item-hover-color);
+}
+
+/* Show visited text color */
+#dp-leaf-show li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-prefix,
+#dp-leaf-show li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-label {
   color: var(--dp-text-visited-color);
 }
 
-#dp-leaf-ul li:not(.dp-tree-item--current, .dp-tree-item--section, .dp-tree-item--disabled) > .dp-tree-line:hover {
-  background: var(--dp-leaf-item-hover-color);
-}
-#dp-leaf-ul li.dp-tree-item--current:not(.dp-tree-item--disabled) > .dp-tree-line {
+/* Current item highlight */
+#dp-leaf-show li.dpt-node--current > .dpt-row {
   background: var(--dp-leaf-item-color);
 }
 
-#dp-leaf-ul li.dp-tree-item--parent:not(.dp-tree-item--expanded):has(.dp-tree-item--current) > .dp-tree-line{
-  margin-bottom: 14px;
+/* 
+When the current item is hidden (because its parent is collapsed)
+we show a small horizontal bar to visibly show where the current
+item is. The below parts for for that.
+*/
+
+/* 1. Extra separation between the parent that has the current item
+any item below it. */
+#dp-leaf-show li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row {
+  margin-bottom: 9px;
 }
 
-#dp-leaf-ul li.dp-tree-item--parent:not(.dp-tree-item--expanded):has(.dp-tree-item--current) > .dp-tree-line::before {
+/* 2. A small horizontal bar to visibly show where the current item is. 
+This is the representation of the mark on the left of the current
+item when it is visible. */
+#dp-leaf-show li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row > .dpt-label::before {
   content: "";
   position: absolute;
-  top: calc(100% + 6px);
-  left: 26px;
+  top: calc(100% + 3px);
+  left: 22px;
   height: 4px;
-  width: calc(100% - 52px);
+  width: 6px;
   border-radius: var(--dp-border-radius-s);
-  background: var(--page-background-color);
-  border-left: 20px solid var(--dp-mark-color);
+  background: var(--dp-mark-color);
   pointer-events: none;
 }
 
-#dp-leaf-ul .dp-tree-node {
-  font-size: var(--dp-leaf-icon-font-size);
-  width: var(--dp-leaf-item-line-height);
-}
-#dp-leaf-ul .dp-tree-node:hover{
-  font-size: calc(var(--dp-leaf-icon-font-size) + 3px);
-}
-
-#dp-leaf-ul .dp-tree-link {
-  flex: 0 1 auto;
-  font-family: var(--font-family-monospace) !important;
-  font-weight: var(--dp-leaf-item-font-weight) !important;
-  color: inherit !important;
-  cursor: inherit !important;
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#dp-leaf-ul .dp-tree-link:hover {
-  text-decoration: none !important;
+/* 3. A line that extends to the main doc content. This is the representation
+of the current item background. */
+#dp-leaf-show li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 31px;
+  height: 4px;
+  width: calc(100% - 36px);
+  border-radius: var(--dp-border-radius-s);
+  background: var(--dp-leaf-item-color);
+  pointer-events: none;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
