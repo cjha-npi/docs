@@ -34,6 +34,8 @@
 // accessed. If the current time is past the expiry time, store.js removes the
 // stored data and returns `undefined`.
 //
+// NOTE: store.js namespaces can only contain letters, digits, underscores, and dashes.
+//
 // To set the expiry time, we pass a third parameter to the `set()` function
 // provided by store.js. This third parameter is the current time plus the time
 // to live in milliseconds. For example:
@@ -69,7 +71,7 @@
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // #endregion 🟥 STORE.JS INFO
 
-// #region 🟩 DATE-TIME ISSUE
+// #region 🟩 DATE-TIME INFO
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 // For a long time I was using window.DOXY_PLUS_DATE_TIME as a true source
@@ -117,7 +119,21 @@
 // which gives me the above doxygen.css '--timestamp' value (which is a string value).
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// #endregion 🟥 DATE-TIME ISSUE
+// #endregion 🟥 DATE-TIME INFO
+
+// #region 🟩 CONSOLE.TABLE LIMITATION
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// In Chrome DevTools Console, the console.table() command has a major restriction.
+// A single cell can display maximum of 100 characters of text, anything more will
+// lead to text being truncated in the middle. For example a text like this:
+// 'This is an example text to show how the console.table truncates the text which is longer than 100 characters'
+// will appear like this:
+// 'This is an example text to show how the console.ta…ates the text which is longer than 100 characters'
+// Because of this reason almost all of the console outputs have been moved to non console.table() format.
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// #endregion 🟥 CONSOLE.TABLE LIMITATION
 
 ; (function ($) {
   'use strict';
@@ -212,502 +228,6 @@
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 BROKEN HASH PATCH
-
-  // #region 🟩 CONSTANTS
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  // Central container for shared fixed values, grouped constants, and computed top-level identifiers.
-  const CONSTS = (() => {
-
-    // DOC_ROOT (Root of the project):
-    // - Determine the base path of the currently executing script.
-    // - Works for both local file paths and online hosting.
-    // - If this does not throw, DOC_ROOT is the directory URL as a string.
-    // - Examples:
-    //   - https://test.com/docs/doxy-plus.js -> https://test.com/docs/
-    //   - file:///F:/Doxy/Dummy/doxy-plus.js -> file:///F:/Doxy/Dummy/
-    // - CAUTION:
-    //   - Make sure this file (doxy-plus.js) is added via HTML_EXTRA_FILES in Doxyfile.
-    //   - Capture this only at top level during script execution, not later inside
-    //   callbacks, async code, or delayed code.
-    //   - On failure, replaces the page content with a fatal error message and throws.
-
-    // Get the path of the currently executing script.
-    const src = document.currentScript && document.currentScript.src;
-    if (!src) dispFatalError('Unable to determine DOC_ROOT.');
-
-    // Find the last '/' in path string.
-    const pos = src.lastIndexOf('/');
-    if (pos < 0) dispFatalError('Invalid script URL for DOC_ROOT.');
-
-    // Get the base path, including the trailing '/' but strip the filename.
-    const DOC_ROOT = src.slice(0, pos + 1);
-
-    // Reject '/' because it does not represent a usable path.
-    if (DOC_ROOT === '/') dispFatalError('Invalid script URL for DOC_ROOT.');
-
-    // HTML_NAME: The HTML base name of the current page without extension or hash.
-    // Example: bar.com/proj/class_foo.html#abc -> class_foo.
-    // The 'window.location.pathname' does not include hash part.
-    // If 'window.location.pathname.split('/').pop().replace(/\.[^.]*$/, '')' is empty, treat
-    // it the same as being on the index.html page. This can happen when DOC_ROOT itself is
-    // opened while hosted online, so replacing the empty value with 'index' is correct
-    // because the index.html page is shown in that case.
-    const HTML_NAME = window.location.pathname.split('/').pop().replace(/\.[^.]*$/, '') || 'index';
-
-    // Class list for presence/absence flags
-    const CLS = Object.freeze({
-      DEV_HUB_AVAILABLE: 'dp-dev-hub-available',
-      HASH_DATA_AVAILABLE: 'dp-hash-data-available',
-      HASH_DATA_IS_CODE: 'dp-hash-data-is-code',
-      DOC_HEADER_AVAILABLE: 'dp-doc-header-available',
-      EMPTY_PAGE_NAV: 'dp-empty-page-nav',
-      MAIN_NAV_BELOW_TITLE: 'dp-main-nav-below-title',
-      DUAL_NAV_ACTIVE: 'dp-dual-nav-active',
-      SHOW_LEAF_PANE: 'dp-show-leaf-pane',
-      SHOW_PAGE_NAV: 'dp-show-page-nav',
-      AUTO_HIDE_LISTS: 'dp-auto-hide-lists'
-    });
-
-    // Properties for CSS
-    const PROP = Object.freeze({
-      ROOT_PANE_WIDTH: '--dp-root-pane-width',
-      LEAF_PANE_WIDTH: '--dp-leaf-pane-width',
-      HEADER_HEIGHT: '--dp-header-height',
-      SIDE_NAV_WIDTH: '--dp-side-nav-width',
-      FOOTER_HEIGHT: '--dp-footer-height',
-      DOC_HEADER_HEIGHT: '--dp-doc-header-height',
-      SEARCH_FIELD: '--dp-search-field'
-    });
-
-    // Values
-    const VAL = Object.freeze({
-
-      // Minimum width (px) of panes
-      MIN_W: 100,
-
-      // Gutter width (px) on right side in dual-nav
-      GUTTER_W: 250,
-
-      // Max width (px) of window for Desktop view
-      DESKTOP_VIEW_MIN_WIDTH: 768,
-
-      // Threshold (px) width below which leaf pane can hide automatically if enabled
-      LEAF_PANE_AUTO_HIDE_THRESHOLD: 1500,
-
-      // Timeout (ms) to save pane widths when dragging and resizing
-      PANE_WIDTH_SAVE_DEBOUNCE_MS: 500,
-
-      // Timeout duration (ms) when waiting for a DOM element
-      TIMEOUT_MS: 2000,
-
-      // Max count of flat list after which Alphabetic groups are formed
-      BUCKET_THRESHOLD: 20
-    });
-
-    // Common DOM selectors used throughout the script.
-    const SEL = Object.freeze({
-      TOP: '#top',
-      TITLE_AREA: '#titlearea',
-      SIDE_NAV: '#side-nav',
-      NAV_PATH: '#nav-path',
-      PAGE_NAV: '#page-nav',
-      CONTAINER: '#container',
-      DOC_CONTENT: '#doc-content',
-      DP_ROOT_PANE: '#dp-root-pane',
-      DP_LEAF_SHOW: '#dp-leaf-show',
-      DP_ROOT_RESIZER: '#dp-root-pane-resizer',
-      DP_LEAF_RESIZER: '#dp-leaf-pane-resizer',
-      SEARCH_RESULTS_WIN: '#MSearchResultsWindow',
-      PAGE_CONTENT: '#doc-content > div.contents, #doc-content > * > div.contents'
-    });
-
-    // Expose the frozen constant groups and computed identifiers.
-    return Object.freeze({
-      CLS,
-      PROP,
-      VAL,
-      SEL,
-      DOC_ROOT,
-      HTML_NAME
-    });
-  })();
-
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // #endregion 🟥 CONSTANTS
-
-  // #region 🟩 STORAGE
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  // Namespace and expiry based storage (both using store.js) for the project
-  const storage = (() => {
-
-    const STORE_JS_EXPIRY_PREFIX = '__storejs___storejs_'; // Prefix for expiry key name in local storage
-    const STORE_JS_EXPIRY_SEPARATOR = '_expire_mixin_'; // Separator for expiry key name in local storage
-    const STORE_JS_NORMAL_PREFIX = '__storejs_'; // Prefix for value keyname in local storage
-    const TIME_TO_LIVE = 30 * 24 * 60 * 60 * 1000; // 30 days in ms, time until stored data is considered stale
-
-    // NOTE: No underscore in key name because store.js prefix and separator uses underscores and
-    // we would like to not mingle our underscores to have easier separation in key names.
-    const KEY__HTML_DATA = 'html-data'; // Key by which HTML data is stored
-    const KEY__HTML_IGNORED = 'html-ignored'; // Array of HTML files ignored in HTML data
-    const KEY__HTML_NOT_FOUND = 'html-not-found'; // Array of HTML pages not found in Doxygen NAVTREE
-    const KEY__EXPIRED_DATA_LAST_PURGE_DATE = 'expired-data-last-purge-date'; // Last purge date storage key
-    const KEY__GENERATION_TIMESTAMP = 'generation-timestamp'; // Generation timestamp as provided by doxygen.css
-    const PREFIX__HASH_DATA = 'hash-data--'; // Prefix for hash data of the current HTML_NAME
-    const PREFIX__HASH_DATA_IS_CODE = 'hash-data-is-code--'; // Prefix to know if hash data for for code
-    const PREFIX__PAGE_SCROLL_VPOS = 'page-scroll-vpos--'; // Previously held scroll vertical position
-
-    // This is the namespace for this project. All keys are stored in this namespace.
-    // NOTE: store.js namespaces can only contain letters, digits, underscores, and dashes.
-    // NOTE: We intentionally avoid underscores because store.js uses underscores in its
-    //       prefix and separator format. Avoiding them makes key names easier to read
-    //       and easier to split when retrieving namespace-key pairs from storage.
-    const PROJ_NAMESPACE = (() => {
-
-      // Create a stable hash from the original CONSTS.DOC_ROOT.
-      // - The same CONSTS.DOC_ROOT always produces the same hash.
-      // - The hash is always 8 hexadecimal characters.
-      let hashSeed = 2166136261;
-      for (let ii = 0; ii < CONSTS.DOC_ROOT.length; ++ii) {
-        hashSeed ^= CONSTS.DOC_ROOT.charCodeAt(ii);
-        hashSeed = Math.imul(hashSeed, 16777619);
-      }
-      const hash = (hashSeed >>> 0).toString(16).padStart(8, '0');
-
-      // Sanitize CONSTS.DOC_ROOT to create a human-readable base string.
-      const base = CONSTS.DOC_ROOT
-        .replace(/[^A-Za-z0-9-]+/g, '-')
-        .replace(/-+/g, '-')
-        .replace(/^-+|-+$/g, '');
-
-      // Combine both parts to create the project namespace.
-      // Fall back to "proj" if sanitization removes the entire base.
-      return `${base || 'proj'}--${hash}`;
-    })();
-
-    // The store.js namespaced variable for direct use
-    const PROJ_STORAGE = store.namespace(PROJ_NAMESPACE);
-
-    // Returns key list divided by namespace on this origin (only keys with expiry are included)
-    function getAllNamespaceKeyPairs() {
-      const map = new Map();
-
-      for (const fullKey of Object.keys(localStorage)) {
-        if (!fullKey.startsWith(STORE_JS_EXPIRY_PREFIX)) continue;
-
-        const sepPos = fullKey.indexOf(STORE_JS_EXPIRY_SEPARATOR, STORE_JS_EXPIRY_PREFIX.length);
-        if (sepPos === -1) continue;
-
-        const namespace = fullKey.slice(STORE_JS_EXPIRY_PREFIX.length, sepPos);
-        const actualKey = fullKey.slice(sepPos + STORE_JS_EXPIRY_SEPARATOR.length);
-        if (!namespace || !actualKey) continue;
-
-        if (!map.has(namespace)) map.set(namespace, []);
-        map.get(namespace).push(actualKey);
-      }
-
-      const list = [];
-      for (const [namespace, keyList] of map) {
-        list.push({ proj: namespace, keys: keyList });
-      }
-
-      return list;
-    }
-
-    // Returns all keys saved with namespace and expiry at this origin
-    function getOriginStorageTable() {
-      const list = getAllNamespaceKeyPairs();
-      list.sort((a, b) => a.proj.localeCompare(b.proj));
-      for (const node of list) {
-        node.keys.sort((a, b) => a.localeCompare(b));
-      }
-
-      const rows = [];
-      for (const node of list) {
-        const projName = node.proj;
-        const projStore = store.namespace(projName);
-        for (const name of node.keys) {
-          const expiresAt = projStore.getExpiration(name);
-          rows.push({
-            'Namespace': projName,
-            'Key': name,
-            'Value': projStore.get(name),
-            'Expiry': expiresAt != null ? new Date(expiresAt).toLocaleString() : null
-          });
-        }
-      }
-      return rows;
-    }
-
-    // Returns all keys with expiry for this project
-    function getProjectStorageTable() {
-      const list = getAllNamespaceKeyPairs();
-      const rows = [];
-      for (const node of list) {
-        if (node.proj === PROJ_NAMESPACE) {
-          node.keys.sort((a, b) => a.localeCompare(b));
-          for (const name of node.keys) {
-            const expiresAt = PROJ_STORAGE.getExpiration(name);
-            rows.push({
-              'Namespace': PROJ_NAMESPACE,
-              'Key': name,
-              'Value': PROJ_STORAGE.get(name),
-              'Expiry': expiresAt != null ? new Date(expiresAt).toLocaleString() : null
-            });
-          }
-          break;
-        }
-      }
-      return rows;
-    }
-
-    // Returns all keys not stored through store.js in localStorage
-    function getLocalStorageNonStoreKeyValuePairs() {
-      const rows = [];
-      for (const fullKey of Object.keys(localStorage).sort((a, b) => a.localeCompare(b))) {
-        if (!fullKey.startsWith(STORE_JS_NORMAL_PREFIX)) {
-          rows.push({
-            'Key': fullKey,
-            'Value': localStorage.getItem(fullKey)
-          });
-        }
-      }
-      return rows;
-    }
-
-    // Returns all keys (including ones stored through store.js) in localStorage
-    function getLocalStorageAllKeyValuePairs() {
-      const rows = [];
-      for (const fullKey of Object.keys(localStorage).sort((a, b) => a.localeCompare(b))) {
-        rows.push({
-          'Key': fullKey,
-          'Value': localStorage.getItem(fullKey)
-        });
-      }
-      return rows;
-    }
-
-    // Returns all keys not stored through store.js in sessionStorage
-    function getSessionStorageNonStoreKeyValuePairs() {
-      const rows = [];
-      for (const fullKey of Object.keys(sessionStorage).sort((a, b) => a.localeCompare(b))) {
-        if (!fullKey.startsWith(STORE_JS_NORMAL_PREFIX)) {
-          rows.push({
-            'Key': fullKey,
-            'Value': sessionStorage.getItem(fullKey)
-          });
-        }
-      }
-      return rows;
-    }
-
-    // Returns all keys (including ones stored through store.js) in sessionStorage
-    function getSessionStorageAllKeyValuePairs() {
-      const rows = [];
-      for (const fullKey of Object.keys(sessionStorage).sort((a, b) => a.localeCompare(b))) {
-        rows.push({
-          'Key': fullKey,
-          'Value': sessionStorage.getItem(fullKey)
-        });
-      }
-      return rows;
-    }
-
-    // Purge any key + data which is stored on this origin and has been expired
-    function purgeExpired() {
-      // Use the UTC calendar date in YYYY-MM-DD form so the once-per-day
-      // guard is compact and timezone-stable.
-      const today = new Date().toISOString().slice(0, 10);
-
-      // Skip the purge if it already completed today.
-      const lastPurged = localStorage.getItem(KEY__EXPIRED_DATA_LAST_PURGE_DATE);
-      if (lastPurged === today) return;
-
-      // Collect store.js namespace/key pairs for entries that use the
-      // expire mixin encoding in localStorage.
-      const list = getAllNamespaceKeyPairs();
-
-      // Remove expired data
-      const now = Date.now();
-      for (const node of list) {
-        const nsTemp = store.namespace(node.proj);
-        for (const keyName of node.keys) {
-          const exp = nsTemp.getExpiration(keyName);
-          if (typeof exp === 'number' && exp <= now) {
-            nsTemp.remove(keyName);
-          }
-        }
-      }
-
-      // Record that today's purge completed.
-      localStorage.setItem(KEY__EXPIRED_DATA_LAST_PURGE_DATE, today);
-    }
-
-    // Run purgeExpired() when the browser becomes idle when supported
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(purgeExpired, { timeout: 5000 });
-    } else {
-      setTimeout(purgeExpired, 5000); // Use delayed fallback if requestIdleCallback is not available
-    }
-
-    // If the Doxygen generation date-time does not match the stored value then 
-    // delete all HTML, ignored HTML and hash data and save the new date-time.
-    // Previously, the date-time was obtained using window.DOXY_PLUS_DATE_TIME
-    // and since this is generated for each html page separately, there was difference
-    // between the values obtained using window.DOXY_PLUS_DATE_TIME between two
-    // html pages. A better solution is to use the css variable '--timestamp'. This
-    // is defined at the very end of doxygen.css file and contains the generation
-    // timestamp and since all different html pages share this doxygen.css file
-    // all of it gets the same timestamp.
-    // --- For details see the DATE-TIME ISSUE section at the top of this page ---
-    (() => {
-      // Since the --timestamp is like 'Thu Apr 16 2026 20:32:59' in the doxygen.css
-      // i.e. a string variable, the curTimeStamp becomes double quoted string like 
-      // "'Thu Apr 16 2026 20:32:59'" here. When stored it looks the same that is
-      // starting with "' and ending with '"". So we use .replace(/^['"]|['"]$/g, '') to
-      // remove only one ' or " character and only from both beginning and end. This way
-      // curTimeStamp remains simple string and is stored that way.
-      const curTimeStamp = getComputedStyle(document.documentElement)
-        .getPropertyValue('--timestamp') // get --timestamp from doxygen.css, it always returns a string
-        .trim() // remove leading and trailing spaces
-        .replace(/^['"]|['"]$/g, ''); // Remove one leading and one trailing quote, if present.
-
-      if (curTimeStamp.length === 0) {
-        // This throws and shows the error, so nothing more is needed after dispFatalError call.
-        dispFatalError('Storage: Current timestamp from CSS variable "--timestamp" is invalid.');
-      }
-
-      const storedTimeStamp = PROJ_STORAGE.get(KEY__GENERATION_TIMESTAMP);
-      if (storedTimeStamp !== curTimeStamp) {
-        PROJ_STORAGE.remove(KEY__HTML_DATA);
-        PROJ_STORAGE.remove(KEY__HTML_IGNORED);
-        PROJ_STORAGE.remove(KEY__HTML_NOT_FOUND);
-
-        const list = getAllNamespaceKeyPairs();
-        for (const node of list) {
-          if (node.proj === PROJ_NAMESPACE) {
-            for (const keyName of node.keys) {
-              if (keyName.startsWith(PREFIX__HASH_DATA)
-                || keyName.startsWith(PREFIX__HASH_DATA_IS_CODE)
-                || keyName.startsWith(PREFIX__PAGE_SCROLL_VPOS)) {
-                PROJ_STORAGE.remove(keyName);
-              }
-            }
-            break;
-          }
-        }
-      }
-      PROJ_STORAGE.set(KEY__GENERATION_TIMESTAMP, curTimeStamp, Date.now() + TIME_TO_LIVE);
-    })();
-
-    // Extend the expiry time for a key
-    function extendExpiryPrivate(name) {
-      const exp = PROJ_STORAGE.getExpiration(name);
-      if (typeof exp === 'number') {
-        const fullKey = `${STORE_JS_EXPIRY_PREFIX}${PROJ_NAMESPACE}${STORE_JS_EXPIRY_SEPARATOR}${name}`;
-        localStorage.setItem(fullKey, String(Date.now() + TIME_TO_LIVE));
-      }
-    }
-
-    // Construct a key with a given name
-    function makeKey(name) {
-      return Object.freeze({
-
-        // name of the key
-        name,
-
-        // Load the data from storage, it automatically identifies normal data types 
-        // (e.g. array and numbers) and converts to it.
-        load(defVal = null) {
-          const loaded = PROJ_STORAGE.get(name);
-          if (loaded === undefined) return defVal;
-          extendExpiryPrivate(name);
-          return loaded;
-        },
-
-        // Save the value and extend the expiry
-        save(val) {
-          PROJ_STORAGE.set(name, val, Date.now() + TIME_TO_LIVE);
-        },
-
-        // Remove key + data from storage
-        remove() {
-          PROJ_STORAGE.remove(name);
-        },
-
-        // Explicit function to just extend the expiry
-        extendExpiry() { extendExpiryPrivate(name); }
-      });
-    }
-
-    // Internals of storage
-    const internals = Object.freeze({
-      timeToLiveMs: TIME_TO_LIVE,
-      namespace: PROJ_NAMESPACE,
-      getOriginStorageTable,
-      getProjectStorageTable,
-      getLocalStorageNonStoreKeyValuePairs,
-      getLocalStorageAllKeyValuePairs,
-      getSessionStorageNonStoreKeyValuePairs,
-      getSessionStorageAllKeyValuePairs
-    });
-
-    // Expose internals and keys (add new keys here)
-    return Object.freeze({
-      internals,
-      htmlData: makeKey(KEY__HTML_DATA),
-      htmlIgnored: makeKey(KEY__HTML_IGNORED),
-      htmlNotFound: makeKey(KEY__HTML_NOT_FOUND),
-      htmlPrevName: makeKey('html-prev-name'),
-      hashData: makeKey(PREFIX__HASH_DATA + CONSTS.HTML_NAME),
-      hashDataIsCode: makeKey(PREFIX__HASH_DATA_IS_CODE + CONSTS.HTML_NAME),
-      pageScrollVPos: makeKey(PREFIX__PAGE_SCROLL_VPOS + CONSTS.HTML_NAME),
-      dualNav: makeKey('dual-nav'),
-      showPageNav: makeKey('show-page-nav'),
-      showLeafPane: makeKey('show-leaf-pane'),
-      autoHideLists: makeKey('auto-hide-lists'),
-      rootPaneWidth: makeKey('root-pane-width'),
-      leafPaneWidth: makeKey('leaf-pane-width')
-    });
-
-  })();
-
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // #endregion 🟥 STORAGE
-
-  // #region 🟩 VARIABLES
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  // Mutable runtime state used across the script.
-  const vars = {
-
-    // Cached DOM elements looked up from CONSTS.SEL...
-    els: {},
-
-    // User/UI state loaded once from storage during startup.
-    dualNav: storage.dualNav.load(true),
-    showPageNav: storage.showPageNav.load(true),
-    showLeafPane: storage.showLeafPane.load(true),
-    autoHideLists: storage.autoHideLists.load(true),
-
-    // Persisted pane widths.
-    rootPaneWidth: storage.rootPaneWidth.load(200),
-    leafPaneWidth: storage.leafPaneWidth.load(400),
-
-    // Shared data arrays; keep references stable and mutate contents when needed.
-    htmlData: [],
-    hashData: [],
-
-    // Name used when exposing the console helper object on window.
-    consoleObjectName: '',
-
-    // Cache of script-load promises keyed by absolute URL.
-    scriptLoadMap: new Map()
-  };
-
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // #endregion 🟥 VARIABLES
 
   // #region 🟩 HELPERS
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -875,133 +395,1232 @@
       // Stop waiting after the timeout.
       timer = setTimeout(() => {
         cleanup();
-        console.warn(`waitFor(): Timed out waiting for selector "${selector}" after ${CONSTS.VAL.TIMEOUT_MS} ms`);
+        console.warn(`waitFor(): Timed out waiting for selector "${selector}" after 2000 ms`);
         resolve(null);
-      }, CONSTS.VAL.TIMEOUT_MS);
+      }, 2000);
     });
   }
 
-  // Check correct construction of html/hash data and decode escaped page titles.
-  function checkData(kind = 'html') {
+  // Format a date-time value as "HH:MM:SS DD/MM/YYYY".
+  function formatDateTime(dateTimeValue) {
+
+    // Accepted dateTimeValue:
+    // - Date() object:
+    //   - new Date()
+    //   - new Date('2026-04-23T14:30:45')
+    // - date-time string:
+    //   - '2026-04-23T14:30:45'
+    //   - '2026-04-23'
+    //   - 'April 23, 2026 14:30:45'
+    //   - '2026-04-23T14:30:45Z'
+    // - timestamp in milliseconds:
+    //   - 0
+    //   - Date.now()
+    //   - 1776941445000
+
+    const date = new Date(dateTimeValue);
+
+    const year = String(date.getFullYear());
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+
+    return `${hours}:${minutes}:${seconds} ${day}/${month}/${year}`;
+  }
+
+  // Checks generated html or hash data and reports all errors or hard-fails.
+  function checkTreeData(data, kind = 'html', hardFail = false) {
+
+    // This function is a strict validator for checking generated tree data.
+    // It accepts only html and hash kinds, verifies that the top-level data 
+    // is an array, and then walks the entire nested tree recursively. For 
+    // every node, it checks that the node itself is an array of exactly three 
+    // entries, that node[0] is a non-empty non-whitespace string, that node[1] 
+    // follows the expected rule for the selected kind, and that node[2] is 
+    // either a non-empty string or a non-empty child array. While traversing, 
+    // it builds a readable path for each node so error messages point to the 
+    // exact failing location in the tree. All discovered problems are collected 
+    // into a single errors list. If hardFail is true, the collected error text 
+    // is passed to dispFatalError, which aborts execution. Otherwise, all errors 
+    // are printed to the console and the function returns false. If no error is 
+    // found, it returns true.
+
+    // Rules for each node:
+    // - node[0]: A non-empty string without trailing whitespaces.
+    // - node[1]: A null or non-empty string without trailing whitespaces.
+    // - node[2]: A non-empty array or non-empty string without trailing whitespaces. If node[2] is a string:
+    //   - kind === 'html': it must end with '.html' (case-insensitive).
+    //   - kind === 'hash': it must start with '#' and contain text after '#'.
+
+    function typStr(obj) {
+      if (obj === null) return 'null';
+      else if (obj === undefined) return 'undefined';
+      return typeof obj;
+    }
+
+    function valStr(obj) {
+      if (obj === null) return 'null';
+      if (obj === undefined) return 'undefined';
+
+      try {
+        const json = JSON.stringify(obj);
+        return json === undefined ? String(obj) : json;
+      }
+      catch {
+        return String(obj);
+      }
+    }
 
     const isHtml = kind === 'html';
     const isHash = kind === 'hash';
 
-    if (!isHtml && !isHash) dispFatalError(`checkData(): Invalid kind "${kind}".`);
+    if (!isHtml && !isHash) {
+      const errTxt = `checkTreeData() - Invalid kind parameter: ${valStr(kind)}; expected 'html' or 'hash'.`;
+      if (hardFail) dispFatalError(errTxt);
+      else console.error(errTxt);
+      return false;
+    }
 
-    const data = isHtml ? vars.htmlData : vars.hashData;
-    const dataName = isHtml ? 'HTML Data' : 'Hash Data';
-    const dataVarName = isHtml ? 'vars.htmlData' : 'vars.hashData';
-    const nodeLen = isHtml ? 3 : 2;
-    const valIdx = isHtml ? 2 : 1;
-    const finalEntry = isHtml ? 'Third' : 'Second';
+    const dataName = isHtml ? 'checkTreeData() - HTML Data Array Errors' : 'checkTreeData() - Hash Data Array Errors';
+
+    const errors = [];
+    errors.push(dataName);
 
     if (!Array.isArray(data)) {
-      dispFatalError(`checkData(): Top-level ${dataName} (${dataVarName}) is missing or invalid.`);
+      errors.push(`Invalid data parameter: '${typStr(data)}'; expected an array.`);
+      if (hardFail) dispFatalError(errors.join('\n - '));
+      else console.error(errors.join(' > '));
+      return false;
     }
 
-    if (data.length === 0) {
-      dispFatalError(`checkData(): Top-level ${dataName} (${dataVarName}) is empty.`);
-    }
+    const sep = isHtml ? '::' : ' ';
 
-    const decodeText = document.createElement('textarea');
-    function checkBranch(branch, parentChain = '') {
-
+    function checkBranch(branch, parent = '') {
+      if (branch.length === 0) return;
       let idx = 0;
       for (const node of branch) {
-        idx += 1;
-
-        const rawPrefix = parentChain
-          ? `checkData(): ${dataName} Node [${dataVarName} > ${parentChain} > Node ${idx}] `
-          : `checkData(): ${dataName} Node [${dataVarName} > Top Level Node ${idx}] `;
+        let nodeName = `${++idx}`;
+        let fullName = parent ? `${parent} > ${nodeName}` : nodeName;
 
         if (!Array.isArray(node)) {
-          dispFatalError(`${rawPrefix} It is not an array.`);
+          errors.push(`${fullName}: Node has invalid type '${typStr(node)}'.`);
+          continue;
         }
 
-        if (node.length !== nodeLen) {
-          dispFatalError(`${rawPrefix} Its length is not ${nodeLen}, it is ${node.length}.`);
+        if (node.length !== 3) {
+          errors.push(`${fullName}: Node length is not 3, it is ${node.length}.`);
+          continue;
         }
 
-        if (typeof node[0] !== 'string') {
-          dispFatalError(`${rawPrefix} First entry (i.e. name) is not a string, it is ${typeof node[0]}.`);
-        }
-
-        // Doxygen changes certain characters like '&' to '&amp;', '<' to '&lt;', etc.
-        // To change it back we use the below method.
-        if (node[0].includes('&')) {
-          decodeText.innerHTML = node[0];
-          node[0] = decodeText.value;
-        }
-
-        if (node[0].trim().length === 0) {
-          dispFatalError(`${rawPrefix} First entry (i.e. name) is an empty or whitespace-only string.`);
-        }
-
-        const labelPrefix = parentChain
-          ? `checkData(): ${dataName} Node [${dataVarName} > ${parentChain} > ${idx}: ${node[0]}] `
-          : `checkData(): ${dataName} Node [${dataVarName} > ${idx}: ${node[0]}] `;
-
-        if (isHtml) {
-          if (typeof node[1] !== 'string' && node[1] !== null) {
-            dispFatalError(`${labelPrefix} Second entry (i.e. prefix) is of invalid type, it is ${typeof node[1]}.`);
+        let name = '';
+        if (typeof node[0] === 'string') {
+          const trimmed = node[0].trim();
+          if (trimmed.length === 0) {
+            errors.push(`${fullName}: node[0] is empty or whitespace-only string.`);
           }
-
-          if (typeof node[1] === 'string' && node[1].trim().length === 0) {
-            dispFatalError(`${labelPrefix} Second entry (i.e. prefix) is an empty or whitespace-only string.`);
+          else {
+            if (node[0] !== trimmed) {
+              errors.push(`${fullName}: node[0] text ${JSON.stringify(node[0])} has leading/trailing whitespace.`);
+            }
+            name = trimmed;
           }
-        }
-
-        if (typeof node[valIdx] === 'string') {
-          if (node[valIdx].trim().length === 0) {
-            dispFatalError(`${labelPrefix} ${finalEntry} entry (i.e. link or kids) is an empty or whitespace-only string.`);
-          }
-        }
-        else if (Array.isArray(node[valIdx])) {
-          if (node[valIdx].length === 0) {
-            dispFatalError(`${labelPrefix} ${finalEntry} entry (i.e. link or kids) is an empty child branch.`);
-          }
-
-          const fullNameChain = parentChain
-            ? `${parentChain} > ${idx}: ${node[0]}`
-            : `${idx}: ${node[0]}`;
-
-          checkBranch(node[valIdx], fullNameChain);
         }
         else {
-          dispFatalError(`${labelPrefix} ${finalEntry} entry (i.e. link or kids) is of invalid type, it is ${typeof node[valIdx]}.`);
+          errors.push(`${fullName}: node[0] is not a 'string'; type = ${typStr(node[0])}, value = ${valStr(node[0])}.`);
         }
+
+        if (name.length > 0) {
+          nodeName = `${idx}. ${name}`;
+          fullName = parent ? `${parent} > ${nodeName}` : nodeName;
+        }
+
+        if (typeof node[1] === 'string') {
+          let prefix = '';
+
+          const trimmed = node[1].trim();
+          if (trimmed.length === 0) {
+            errors.push(`${fullName}: node[1] is empty or whitespace-only string.`);
+          }
+          else {
+            if (node[1] !== trimmed) {
+              errors.push(`${fullName}: node[1] text ${JSON.stringify(node[1])} has leading/trailing whitespace.`);
+            }
+            prefix = trimmed;
+          }
+
+          if (prefix.length > 0) {
+            if (name.length > 0) {
+              nodeName = `${prefix}${sep}${name}`;
+              fullName = parent ? `${parent} > ${nodeName}` : nodeName;
+            }
+            else {
+              nodeName = `${idx}. ${prefix}${sep}-`;
+              fullName = parent ? `${parent} > ${nodeName}` : nodeName;
+            }
+          }
+          else {
+            if (name.length > 0) {
+              nodeName = `${idx}.  -${sep}${name}`;
+              fullName = parent ? `${parent} > ${nodeName}` : nodeName;
+            }
+          }
+        }
+        else {
+          if (node[1] !== null) {
+            errors.push(`${fullName}: node[1] must be 'null' or 'string'; type = ${typStr(node[1])}, value = ${valStr(node[1])}.`);
+          }
+          else {
+            if (name.length > 0) {
+              nodeName = `${name}`;
+              fullName = parent ? `${parent} > ${nodeName}` : nodeName;
+            }
+          }
+        }
+
+        let processKids = false;
+        if (typeof node[2] === 'string') {
+          const trimmed = node[2].trim();
+          if (trimmed.length === 0) {
+            errors.push(`${fullName}: node[2] is empty or whitespace-only string.`);
+          }
+          else {
+            if (node[2] !== trimmed) {
+              errors.push(`${fullName}: node[2] text ${JSON.stringify(node[2])} has leading/trailing whitespace.`);
+            }
+
+            if (isHash) {
+              if (!/^#.+/.test(trimmed)) {
+                errors.push(`${fullName}: node[2] text ${JSON.stringify(node[2])} must start with '#' and contain a target after it.`);
+              }
+            }
+            else {
+              if (!/\.html$/i.test(trimmed)) {
+                errors.push(`${fullName}: node[2] text ${JSON.stringify(node[2])} does not end with a '.html' (case-insensitive).`);
+              }
+            }
+          }
+        }
+        else if (Array.isArray(node[2])) {
+          if (node[2].length === 0) {
+            errors.push(`${fullName}: node[2] is an empty array.`);
+          }
+          else {
+            processKids = true;
+          }
+        }
+        else {
+          errors.push(`${fullName}: node[2] has invalid type; type = ${typStr(node[2])}, value = ${valStr(node[2])}.`);
+        }
+
+        if (processKids) checkBranch(node[2], fullName);
       }
     }
 
     checkBranch(data);
+
+    if (errors.length > 1) {
+      if (hardFail) {
+        const errTxt = errors.join('\n - ');
+        dispFatalError(errTxt);
+      }
+      else {
+        console.group(errors[0]);
+        for (let ii = 1; ii < errors.length; ++ii) {
+          console.error(errors[ii]);
+        }
+        console.groupEnd();
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  // Checks and prints a tree in hierarchical format while classifying problems as errors or warnings.
+  function debugTreeData(data, kind = 'default') {
+
+    // This function is both a validator and a visual debugger for tree data. 
+    // It accepts default, html, or hash kinds, confirms that the top-level 
+    // data is an array, and then recursively walks the tree while building 
+    // styled console output for each node. Each printed line shows the node 
+    // number, visible name, optional link text, and child count, while parent 
+    // paths are shown above child groups to make nesting clear. During traversal, 
+    // it checks the same core structure rules as the strict validator, but it 
+    // treats some conditions as warnings rather than errors depending on the 
+    // selected kind. For example, default data is treated more leniently 
+    // because it originates from loaded Doxygen data rather than from the 
+    // generated structures. It keeps separate counts for errors and warnings, 
+    // shows them inline on each node line, and prints a final summary at the 
+    // end. Its purpose is not to stop execution, but to let you inspect the 
+    // tree shape and immediately see where the data is malformed, suspicious, 
+    // or inconsistent.
+
+    // Rules for each node:
+    // kind === 'default'
+    // - node[0]: A non-empty string without trailing whitespaces.
+    // - node[1]: A null, undefined or non-empty string without trailing whitespaces.
+    // - node[2]: A non-empty array or null.
+    // kind === 'html' or kind === 'hash'
+    // - node[0]: A non-empty string without trailing whitespaces.
+    // - node[1]: A null or non-empty string without trailing whitespaces.
+    // - node[2]: A non-empty array or non-empty string without trailing whitespaces. If node[2] is a string:
+    //   - kind === 'html': it must end with '.html' (case-insensitive).
+    //   - kind === 'hash': it must start with '#' and contain text after '#'.
+
+    const cPar = 'color: GrayText; font-size: 90%;';
+    const cTxt = '';
+    const cLnk = 'color: LinkText;';
+    const cKid = 'color: GrayText;';
+    const cErr = 'color: red;';
+    const cWrn = 'color: orange;';
+
+    const validKinds = new Set(['default', 'html', 'hash']);
+
+    function typStr(obj) {
+      if (obj === null) return 'null';
+      else if (obj === undefined) return 'undefined';
+      return typeof obj;
+    }
+
+    function valStr(obj) {
+      if (obj === null) return 'null';
+      if (obj === undefined) return 'undefined';
+
+      try {
+        const json = JSON.stringify(obj);
+        return json === undefined ? String(obj) : json;
+      }
+      catch {
+        return String(obj);
+      }
+    }
+
+    if (!validKinds.has(kind)) {
+      console.log(`%cInvalid 'kind' parameter. Expected 'default', 'html', or 'hash'; got: ${valStr(kind)}.`, cErr);
+      return;
+    }
+
+    if (!Array.isArray(data)) {
+      console.log(`%cThe ${kind} data has invalid type '${typStr(data)}'.`, cErr);
+      return;
+    }
+
+    const isDefault = kind === 'default';
+    const sep = isDefault ? '' : ((kind === 'html') ? '::' : ' ');
+
+    let idx = 0;
+    let iErr = 0;
+    let iWrn = 0;
+
+    function dispBranch(branch, spaces = 0, parent = '') {
+      if (branch.length === 0) return;
+      const txtGap = ' '.repeat(spaces);
+      for (const node of branch) {
+
+        let sGap = '';
+        let sPar = '';
+        let sTxt = '';
+        let sLnk = '';
+        let sKid = '';
+        let sErr = '';
+        let sWrn = '';
+
+        const lineNo = ++idx;
+        sTxt = `${txtGap}${lineNo}.`;
+
+        if (!Array.isArray(node)) {
+          ++iErr;
+          console.log('%s%c%s', sTxt, cErr, ` Node has invalid type '${typStr(node)}'.`);
+          continue;
+        }
+
+        if (node.length !== 3) {
+          ++iErr;
+          console.log('%s%c%s', sTxt, cErr, ` Node length is not 3, it is ${node.length}.`);
+          continue;
+        }
+
+        let name = '';
+        let namePrefixNotAdded = true;
+        if (typeof node[1] === 'string') {
+          const trimmed = node[1].trim();
+          if (isDefault) {
+            if (trimmed.length === 0) {
+              sWrn = ` node[1] is empty or whitespace-only string`;
+              ++iWrn
+              sLnk = ' null';
+            }
+            else {
+              if (node[1] !== trimmed) {
+                sWrn = ` node[1] text ${JSON.stringify(node[1])} has leading/trailing whitespace`;
+                ++iWrn
+              }
+              sLnk = ` ${trimmed}`;
+            }
+          }
+          else {
+            if (trimmed.length === 0) {
+              sErr = ` node[1] is empty or whitespace-only string`;
+              ++iErr
+            }
+            else {
+              if (node[1] !== trimmed) {
+                sErr = ` node[1] text ${JSON.stringify(node[1])} has leading/trailing whitespace`;
+                ++iErr
+              }
+              name = `${trimmed}${sep}`;
+              sTxt += ` ${name}`;
+              namePrefixNotAdded = false;
+            }
+          }
+        }
+        else {
+          if (isDefault) {
+            if (node[1] != null) {
+              sErr = ` node[1] must be 'null', 'undefined', or 'string'; it is '${typStr(node[1])}'`;
+              ++iErr
+            }
+          }
+          else {
+            if (node[1] !== null) {
+              sErr = ` node[1] must be 'null' or 'string'; it is '${typStr(node[1])}'`;
+              ++iErr
+            }
+          }
+        }
+
+        if (typeof node[0] === 'string') {
+          const trimmed = node[0].trim();
+          if (trimmed.length === 0) {
+            if (sErr.length > 0) sErr += ';'
+            sErr += ` node[0] is empty or whitespace-only string`;
+            ++iErr
+          }
+          else {
+            if (node[0] !== trimmed) {
+              if (isDefault) {
+                if (sWrn.length > 0) sWrn += ';'
+                sWrn += ` node[0] text ${JSON.stringify(node[0])} has leading/trailing whitespace`;
+                ++iWrn
+              }
+              else {
+                if (sErr.length > 0) sErr += ';'
+                sErr += ` node[0] text ${JSON.stringify(node[0])} has leading/trailing whitespace`;
+                ++iErr
+              }
+            }
+            if (namePrefixNotAdded) sTxt += ' ';
+            sTxt += trimmed;
+            name += trimmed;
+          }
+        }
+        else {
+          if (sErr.length > 0) sErr += ';'
+          sErr += ` node[0] is not a 'string', it is '${typStr(node[0])}'`;
+          ++iErr
+        }
+
+        let processKids = false;
+        if (typeof node[2] === 'string') {
+          if (isDefault) {
+            if (sErr.length > 0) sErr += ';'
+            sErr += ` node[2] is of 'string' type with text ${JSON.stringify(node[2])}.`;
+            ++iErr
+          }
+          else {
+            const trimmed = node[2].trim();
+            if (trimmed.length === 0) {
+              if (sErr.length > 0) sErr += ';'
+              sErr += ` node[2] is empty or whitespace-only string`;
+              ++iErr
+              sLnk = ' null';
+            }
+            else {
+              if (node[2] !== trimmed) {
+                if (sErr.length > 0) sErr += ';'
+                sErr += ` node[2] text ${JSON.stringify(node[2])} has leading/trailing whitespace`;
+                ++iErr
+              }
+
+              if (kind === 'hash') {
+                if (!/^#.+/.test(trimmed)) {
+                  if (sErr.length > 0) sErr += ';'
+                  sErr += ` node[2] text ${JSON.stringify(node[2])} must start with '#' and contain a target after it`;
+                  ++iErr
+                }
+              }
+              else {
+                if (!/\.html$/i.test(trimmed)) {
+                  if (sErr.length > 0) sErr += ';'
+                  sErr += ` node[2] text ${JSON.stringify(node[2])} does not end with a '.html' (case-insensitive)`;
+                  ++iErr
+                }
+              }
+
+              sLnk = ` ${trimmed}`;
+            }
+          }
+        }
+        else if (Array.isArray(node[2])) {
+          if (node[2].length === 0) {
+            if (isDefault) {
+              if (sWrn.length > 0) sWrn += ';'
+              sWrn += ` node[2] is an empty array`;
+              ++iWrn
+            }
+            else {
+              if (sErr.length > 0) sErr += ';'
+              sErr += ` node[2] is an empty array`;
+              ++iErr
+            }
+          }
+          else {
+            processKids = true;
+            sKid = ` ${node[2].length} Children`;
+          }
+        }
+        else {
+          if (isDefault) {
+            if (node[2] != null) {
+              if (sErr.length > 0) sErr += ';'
+              sErr += ` node[2] has invalid type '${typStr(node[2])}'`;
+              ++iErr
+            }
+          }
+          else {
+            if (sErr.length > 0) sErr += ';'
+            sErr += ` node[2] has invalid type '${typStr(node[2])}'`;
+            ++iErr
+          }
+        }
+
+        if (sErr.length > 0 && sWrn.length > 0) sErr += ';';
+
+        const childSpaces = spaces + String(lineNo).length + 2;
+        if (processKids && parent.length > 0) {
+          sGap = ' '.repeat(childSpaces);
+          sPar = `${parent}:\n`;
+        }
+
+        console.log('%s%c%s%c%s%c%s%c%s%c%s%c%s', sGap, cPar, sPar, cTxt, sTxt, cLnk, sLnk, cKid, sKid, cErr, sErr, cWrn, sWrn);
+
+        if (processKids) {
+          const childParents = parent ? `${parent} > ${name}` : name;
+          dispBranch(node[2], childSpaces, childParents);
+        }
+      }
+    }
+    dispBranch(data);
+
+    if (idx === 0) {
+      console.log('--- EMPTY ---');
+    }
+    else {
+      if (iErr > 0 && iWrn > 0) {
+        console.log('%s%c%s%c%s%c%s', 'There are ', cErr, `${iErr} Errors`, '', ' and ', cWrn, `${iWrn} Warnings.`)
+      }
+      else if (iErr > 0) {
+        console.log('%s%c%s', 'There are ', cErr, `${iErr} Errors.`);
+      }
+      else if (iWrn > 0) {
+        console.log('%s%c%s', 'There are ', cWrn, `${iWrn} Warnings.`);
+      }
+    }
   }
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 HELPERS
 
+  // #region 🟩 CONSTANTS
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  // Central container for shared fixed values, grouped constants, and computed top-level identifiers.
+  const CONSTS = (() => {
+
+    // DOC_ROOT (Root of the project):
+    // - Determine the base path of the currently executing script.
+    // - Works for both local file paths and online hosting.
+    // - If this does not throw, DOC_ROOT is the directory URL as a string.
+    // - Examples:
+    //   - https://test.com/docs/doxy-plus.js -> https://test.com/docs/
+    //   - file:///F:/Doxy/Dummy/doxy-plus.js -> file:///F:/Doxy/Dummy/
+    // - CAUTION:
+    //   - Make sure this file (doxy-plus.js) is added via HTML_EXTRA_FILES in Doxyfile.
+    //   - Capture this only at top level during script execution, not later inside
+    //   callbacks, async code, or delayed code.
+    //   - On failure, replaces the page content with a fatal error message and throws.
+
+    // Get the path of the currently executing script.
+    const src = document.currentScript && document.currentScript.src;
+    if (!src) dispFatalError('Unable to determine DOC_ROOT.');
+
+    // Find the last '/' in path string.
+    const pos = src.lastIndexOf('/');
+    if (pos < 0) dispFatalError('Invalid script URL for DOC_ROOT.');
+
+    // Get the base path, including the trailing '/' but strip the filename.
+    const DOC_ROOT = src.slice(0, pos + 1);
+
+    // Reject '/' because it does not represent a usable path.
+    if (DOC_ROOT === '/') dispFatalError('Invalid script URL for DOC_ROOT.');
+
+    // HTML_NAME: The HTML base name of the current page without extension or hash.
+    // Example: bar.com/proj/class_foo.html#abc -> class_foo.
+    // The 'window.location.pathname' does not include hash part.
+    // If 'window.location.pathname.split('/').pop().replace(/\.[^.]*$/, '')' is empty, treat
+    // it the same as being on the index.html page. This can happen when DOC_ROOT itself is
+    // opened while hosted online, so replacing the empty value with 'index' is correct
+    // because the index.html page is shown in that case.
+    const HTML_NAME = window.location.pathname.split('/').pop().replace(/\.[^.]*$/, '') || 'index';
+
+    // Class list for presence/absence flags
+    const CLS = Object.freeze({
+      DEV_HUB_AVAILABLE: 'dp-dev-hub-available',
+      HASH_DATA_AVAILABLE: 'dp-hash-data-available',
+      HASH_DATA_IS_CODE: 'dp-hash-data-is-code',
+      DOC_HEADER_AVAILABLE: 'dp-doc-header-available',
+      EMPTY_PAGE_NAV: 'dp-empty-page-nav',
+      MAIN_NAV_BELOW_TITLE: 'dp-main-nav-below-title',
+      DUAL_NAV_ACTIVE: 'dp-dual-nav-active',
+      SHOW_LEAF_PANE: 'dp-show-leaf-pane',
+      SHOW_PAGE_NAV: 'dp-show-page-nav',
+      AUTO_HIDE_LISTS: 'dp-auto-hide-lists',
+      DOXSECTION_CHILDREN: 'dp-doxsection-children',
+      MARKDOWN_PAGE_NAV_HEADER_ITEM: 'dp-markdown-page-nav-header-item'
+    });
+
+    // Properties for CSS
+    const PROP = Object.freeze({
+      ROOT_PANE_WIDTH: '--dp-root-pane-width',
+      LEAF_PANE_WIDTH: '--dp-leaf-pane-width',
+      HEADER_HEIGHT: '--dp-header-height',
+      SIDE_NAV_WIDTH: '--dp-side-nav-width',
+      FOOTER_HEIGHT: '--dp-footer-height',
+      DOC_HEADER_HEIGHT: '--dp-doc-header-height',
+      SEARCH_FIELD: '--dp-search-field'
+    });
+
+    // Values
+    const VAL = Object.freeze({
+      MIN_W: 100,                          // Minimum width (px) of panes
+      GUTTER_W: 250,                       // Gutter width (px) on right side in dual-nav
+      DESKTOP_VIEW_MIN_WIDTH: 768,         // Max width (px) of window for Desktop view
+      LEAF_PANE_AUTO_HIDE_THRESHOLD: 1500, // Threshold (px) width for leaf pane auto hide
+      PANE_WIDTH_SAVE_DEBOUNCE_MS: 500,    // Timeout (ms) to save pane widths when dragging/resizing
+      TIMEOUT_MS: 2000,                    // Timeout (ms) for waiting (not used in waitFor() helper)
+      BUCKET_THRESHOLD: 20                 // Max count of flat list after which Alphabetic groups are formed
+    });
+
+    // Common DOM selectors used throughout the script.
+    const SEL = Object.freeze({
+      TOP: '#top',
+      TITLE_AREA: '#titlearea',
+      SIDE_NAV: '#side-nav',
+      NAV_PATH: '#nav-path',
+      PAGE_NAV: '#page-nav',
+      CONTAINER: '#container',
+      DOC_CONTENT: '#doc-content',
+      DP_ROOT_PANE: '#dp-root-pane',
+      DP_LEAF_SHOW: '#dp-leaf-show',
+      DP_ROOT_RESIZER: '#dp-root-pane-resizer',
+      DP_LEAF_RESIZER: '#dp-leaf-pane-resizer',
+      SEARCH_RESULTS_WIN: '#MSearchResultsWindow',
+      PAGE_CONTENT: '#doc-content > div.contents, #doc-content > div > div.contents > div.textblock'
+    });
+
+    // Expose the frozen constant groups and computed identifiers.
+    return Object.freeze({
+      CLS,
+      PROP,
+      VAL,
+      SEL,
+      DOC_ROOT,
+      HTML_NAME
+    });
+  })();
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // #endregion 🟥 CONSTANTS
+
+  // #region 🟩 STORAGE
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  // Namespace and expiry based storage (both using store.js) for the project
+  const storage = (() => {
+
+    const STORE_JS_EXPIRY_PREFIX = '__storejs___storejs_'; // Prefix for expiry key name in local storage
+    const STORE_JS_EXPIRY_SEPARATOR = '_expire_mixin_'; // Separator for expiry key name in local storage
+    const STORE_JS_NORMAL_PREFIX = '__storejs_'; // Prefix for value keyname in local storage
+    const TIME_TO_LIVE = 30 * 24 * 60 * 60 * 1000; // 30 days in ms, time until stored data is considered stale
+
+    // NOTE: No underscore in key name because store.js prefix and separator uses underscores and
+    // we would like to not mingle our underscores to have easier separation in key names.
+    const KEY__HTML_DATA = 'html-data'; // Key by which HTML data is stored
+    const KEY__HTML_IGNORED = 'html-ignored'; // Array of HTML files ignored in HTML data
+    const KEY__HTML_NOT_FOUND = 'html-not-found'; // Array of HTML pages not found in Doxygen NAVTREE
+    const KEY__EXPIRED_DATA_LAST_PURGE_DATE = 'expired-data-last-purge-date'; // Last purge date storage key
+    const KEY__GENERATION_TIMESTAMP = 'generation-timestamp'; // Generation timestamp as provided by doxygen.css
+    const PREFIX__HASH_DATA = 'hash-data--'; // Prefix for hash data of the current HTML_NAME
+    const PREFIX__HASH_DATA_IS_CODE = 'hash-data-is-code--'; // Prefix to know if hash data for for code
+    const PREFIX__PAGE_SCROLL_VPOS = 'page-scroll-vpos--'; // Previously held scroll vertical position
+    const PREFIX__PAGE_HAS_DOXSECTIONS = 'page-has-doxsections--';
+
+    // This is the namespace for this project. All keys are stored in this namespace.
+    // NOTE: store.js namespaces can only contain letters, digits, underscores, and dashes.
+    // NOTE: We intentionally avoid underscores because store.js uses underscores in its
+    //       prefix and separator format. Avoiding them makes key names easier to read
+    //       and easier to split when retrieving namespace-key pairs from storage.
+    const PROJ_NAMESPACE = (() => {
+
+      // Create a stable hash from the original CONSTS.DOC_ROOT.
+      // - The same CONSTS.DOC_ROOT always produces the same hash.
+      // - The hash is always 8 hexadecimal characters.
+      let hashSeed = 2166136261;
+      for (let ii = 0; ii < CONSTS.DOC_ROOT.length; ++ii) {
+        hashSeed ^= CONSTS.DOC_ROOT.charCodeAt(ii);
+        hashSeed = Math.imul(hashSeed, 16777619);
+      }
+      const hash = (hashSeed >>> 0).toString(16).padStart(8, '0');
+
+      // Sanitize CONSTS.DOC_ROOT to create a human-readable base string.
+      const base = CONSTS.DOC_ROOT
+        .replace(/[^A-Za-z0-9-]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-+|-+$/g, '');
+
+      // Combine both parts to create the project namespace.
+      // Fall back to "proj" if sanitization removes the entire base.
+      return `${base || 'proj'}--${hash}`;
+    })();
+
+    // The store.js namespaced variable for direct use
+    const PROJ_STORAGE = store.namespace(PROJ_NAMESPACE);
+
+    // Returns key list divided by namespace on this origin (only keys with expiry are included)
+    function getAllNamespaceKeyPairs() {
+      const map = new Map();
+
+      for (const fullKey of Object.keys(localStorage)) {
+        if (!fullKey.startsWith(STORE_JS_EXPIRY_PREFIX)) continue;
+
+        const sepPos = fullKey.indexOf(STORE_JS_EXPIRY_SEPARATOR, STORE_JS_EXPIRY_PREFIX.length);
+        if (sepPos === -1) continue;
+
+        const namespace = fullKey.slice(STORE_JS_EXPIRY_PREFIX.length, sepPos);
+        const actualKey = fullKey.slice(sepPos + STORE_JS_EXPIRY_SEPARATOR.length);
+        if (!namespace || !actualKey) continue;
+
+        if (!map.has(namespace)) map.set(namespace, []);
+        map.get(namespace).push(actualKey);
+      }
+
+      const list = [];
+      for (const [namespace, keyList] of map) {
+        list.push({ proj: namespace, keys: keyList });
+      }
+
+      return list;
+    }
+
+    // Displays keys stored in origin storage using store.js
+    function dispOriginStorage() {
+      const list = getAllNamespaceKeyPairs();
+      list.sort((a, b) => a.proj.localeCompare(b.proj));
+      for (const node of list) {
+        node.keys.sort((a, b) => a.localeCompare(b));
+      }
+
+      let total = 0;
+      console.group('Origin Storage');
+      console.log(`- The key-value pairs stored (using store.js) on this origin`,
+        `\n- Examples of the same origin:`,
+        `\n  - some.com/proj_a and some.com/proj_b share the same origin: some.com`,
+        `\n  - D:/file/proj_a and E:/other/proj_b may share the same local origin, depending on the browser`,
+        `\n- Data is stored using store.js features:`,
+        `\n  - Namespace: Different projects on the same origin can store different values for the same keys`,
+        `\n    (Namespace is obtained using project url)`,
+        `\n  - Expiry: Each key has its own expiry and is removed when accessed after it has expired`,
+        `\n- Display format: '[Expiry] #. Key: Value'`);
+      for (const node of list) {
+        let idx = 0;
+        const grpName = node.proj === PROJ_NAMESPACE ? `Namespace: ${node.proj} (This Project)` : `Namespace: ${node.proj}`;
+        console.log('%c' + grpName + ':', 'font-weight: bold');
+        const projStore = store.namespace(node.proj);
+        for (const name of node.keys) {
+          const expiresAt = projStore.getExpiration(name);
+          const expiry = expiresAt != null ? formatDateTime(expiresAt) : null;
+          const value = projStore.get(name);
+          const val = Array.isArray(value) ? `Array(${value.length})` : value;
+          console.log('%c%s%c%s%c%s', 'color: GrayText;', `[${expiry}]`, '', ` ${++idx}. ${name}: `, 'color: LinkText;', val);
+        }
+        total += idx;
+      }
+      console.groupEnd();
+      if (total === 0) return 'Origin Storage: Empty';
+      else return `Origin Storage: ${total} keys`;
+    }
+
+    // Displays keys stored for this project using store.js
+    function dispProjectStorage() {
+      const list = getAllNamespaceKeyPairs();
+      let idx = 0;
+      console.group('Project Storage');
+      console.log(`- The key-value pairs stored (using store.js) for this project on this origin`,
+        `\n- Examples of the same origin:`,
+        `\n  - some.com/proj_a and some.com/proj_b share the same origin: some.com`,
+        `\n  - D:/file/proj_a and E:/other/proj_b may share the same local origin, depending on the browser`,
+        `\n- Data is stored using store.js features:`,
+        `\n  - Namespace: Different projects on the same origin can store different values for the same keys`,
+        `\n    (Namespace is obtained using project url)`,
+        `\n  - Expiry: Each key has its own expiry and is removed when accessed after it has expired`,
+        `\n- Display format: '[Expiry] #. Key: Value'`);
+      for (const node of list) {
+        if (node.proj === PROJ_NAMESPACE) {
+          node.keys.sort((a, b) => a.localeCompare(b));
+          console.log('%c%s', 'font-weight: bold;', `Namespace: ${PROJ_NAMESPACE}`);
+          for (const name of node.keys) {
+            const expiresAt = PROJ_STORAGE.getExpiration(name);
+            const expiry = expiresAt != null ? formatDateTime(expiresAt) : null;
+            const value = PROJ_STORAGE.get(name);
+            const val = Array.isArray(value) ? `Array(${value.length})` : value;
+            console.log('%c%s%c%s%c%s', 'color: GrayText;', `[${expiry}]`, '', ` ${++idx}. ${name}: `, 'color: LinkText;', val);
+          }
+          break;
+        }
+      }
+      console.groupEnd();
+      if (idx === 0) return 'Project Storage: Empty';
+      else return `Project Storage: ${idx} keys`;
+    }
+
+    // Displays local storage (including ones stored through store.js)
+    function dispLocalStorage() {
+      let idx = 0;
+      console.group('Local Storage');
+      console.log(`- The current contents of the browser's localStorage`,
+        `\n- Includes all keys from all projects on this origin`,
+        `\n- Examples of the same origin:`,
+        `\n  - some.com/proj_a and some.com/proj_b share the same origin: some.com`,
+        `\n  - D:/file/proj_a and E:/other/proj_b may share the same local origin, depending on the browser`,
+        `\n- Keys starting with '__storejs_' are key values from store.js keys`,
+        `\n  - These keys might appear garbled (mojibake) because of incorrect decoding while reading it`,
+        `\n  - These keys should only be read using store.js to get its correct value`,
+        `\n    (Use 'Origin Storage' or 'Project Storage' to read these keys)`,
+        `\n- Keys starting with '__storejs___storejs_' are expiry timestamp (ms) keys from store.js`,
+        `\n- There is no expiry feature for localStorage itself`,
+        `\n- Display format: '#. key: value'`);
+      for (const fullKey of Object.keys(localStorage).sort((a, b) => a.localeCompare(b))) {
+        const value = localStorage.getItem(fullKey);
+        let val = Array.isArray(value) ? `Array(${value.length})` : value;
+        if (typeof val === 'string' && /[^\x00-\x7F]/.test(val) && val.length > 32) {
+          val = val.slice(0, 29) + '...';
+        }
+        console.log('%s%c%s', `${++idx}. ${fullKey}: `, 'color: LinkText;', val);
+      }
+      console.groupEnd();
+      if (idx === 0) return 'Local Storage: Empty';
+      else return `Local Storage: ${idx} keys`;
+    }
+
+    // Displays local storage non-store.js
+    function dispLocalStorageNonStoreJS() {
+      let idx = 0;
+      console.group('Local Storage (excluding store.js keys)');
+      console.log(`- The current contents of the browser's localStorage excluding keys stored using store.js`,
+        `\n- Includes all keys from all projects on this origin`,
+        `\n- Examples of the same origin:`,
+        `\n  - some.com/proj_a and some.com/proj_b share the same origin: some.com`,
+        `\n  - D:/file/proj_a and E:/other/proj_b may share the same local origin, depending on the browser`,
+        `\n- Excludes keys starting with '__storejs_' (since these are store.js keys)`,
+        `\n- There is no expiry feature for localStorage itself`,
+        `\n- Display format: '#. key: value'`);
+      for (const fullKey of Object.keys(localStorage).sort((a, b) => a.localeCompare(b))) {
+        if (!fullKey.startsWith(STORE_JS_NORMAL_PREFIX)) {
+          const value = localStorage.getItem(fullKey);
+          let val = Array.isArray(value) ? `Array(${value.length})` : value;
+          if (typeof val === 'string' && /[^\x00-\x7F]/.test(val) && val.length > 32) {
+            val = val.slice(0, 29) + '...';
+          }
+          console.log('%s%c%s', `${++idx}. ${fullKey}: `, 'color: LinkText;', val);
+        }
+      }
+      console.groupEnd();
+      if (idx === 0) return 'Local Storage (excluding store.js keys): Empty';
+      else return `Local Storage (excluding store.js keys): ${idx} keys`;
+    }
+
+    // Displays session storage (including ones stored through store.js)
+    function dispSessionStorage() {
+      let idx = 0;
+      console.group('Session Storage');
+      console.log(`- The current contents of the browser's sessionStorage`,
+        `\n- sessionStorage is tab based:`,
+        `\n  - Each tab has its own sessionStorage`,
+        `\n  - sessionStorage is destroyed on tab close or browser restart`,
+        `\n- Keys starting with '__storejs_' are key values from store.js keys`,
+        `\n  - These keys might appear garbled (mojibake) because of incorrect decoding while reading it`,
+        `\n  - These keys should only be read using store.js to get its correct value`,
+        `\n    (Use 'Origin Storage' or 'Project Storage' to read these keys)`,
+        `\n- Keys starting with '__storejs___storejs_' are expiry timestamp (ms) keys from store.js`,
+        `\n- There is no expiry feature for sessionStorage itself`,
+        `\n- Display format: '#. key: value'`);
+      for (const fullKey of Object.keys(sessionStorage).sort((a, b) => a.localeCompare(b))) {
+        const value = sessionStorage.getItem(fullKey);
+        let val = Array.isArray(value) ? `Array(${value.length})` : value;
+        if (typeof val === 'string' && /[^\x00-\x7F]/.test(val) && val.length > 32) {
+          val = val.slice(0, 29) + '...';
+        }
+        console.log('%s%c%s', `${++idx}. ${fullKey}: `, 'color: LinkText;', val);
+      }
+      console.groupEnd();
+      if (idx === 0) return 'Session Storage: Empty';
+      else return `Session Storage: ${idx} keys`;
+    }
+
+    // Displays session storage non-store.js
+    function dispSessionStorageNonStoreJS() {
+      let idx = 0;
+      console.group('Session Storage (excluding store.js keys)');
+      console.log(`- The current contents of the browser's sessionStorage excluding keys stored using store.js`,
+        `\n- sessionStorage is tab based:`,
+        `\n  - Each tab has its own sessionStorage`,
+        `\n  - sessionStorage is destroyed on tab close or browser restart`,
+        `\n- Excludes keys starting with '__storejs_' (since these are store.js keys)`,
+        `\n- There is no expiry feature for sessionStorage itself`,
+        `\n- Display format: '#. key: value'`);
+      for (const fullKey of Object.keys(sessionStorage).sort((a, b) => a.localeCompare(b))) {
+        if (!fullKey.startsWith(STORE_JS_NORMAL_PREFIX)) {
+          const value = sessionStorage.getItem(fullKey);
+          let val = Array.isArray(value) ? `Array(${value.length})` : value;
+          if (typeof val === 'string' && /[^\x00-\x7F]/.test(val) && val.length > 32) {
+            val = val.slice(0, 29) + '...';
+          }
+          console.log('%s%c%s', `${++idx}. ${fullKey}: `, 'color: LinkText;', val);
+        }
+      }
+      console.groupEnd();
+      if (idx === 0) return 'Session Storage (excluding store.js keys): Empty';
+      else return `Session Storage (excluding store.js keys): ${idx} keys`;
+    }
+
+    // Removes all keys on this origin
+    function clearAllKeys() {
+      console.log('Check browser page to confirm...');
+      const confirmed = window.confirm('Clear all Keys?\nThis will remove all localStorage keys stored on this origin and all sessionStorage keys for this tab.');
+      if (confirmed) {
+        localStorage.clear();
+        sessionStorage.clear();
+        return 'All localStorage keys stored on this origin and all sessionStorage keys for this tab has been cleared';
+      }
+      else {
+        return 'Clearing all keys cancelled';
+      }
+    }
+
+    // Remove all localStoarge keys on this origin
+    function clearLocalStorage() {
+      console.log('Check browser page to confirm...');
+      const confirmed = window.confirm('Clear localStorage keys?\nThis will remove all localStorage keys stored on this origin.');
+      if (confirmed) {
+        localStorage.clear();
+        return 'All localStorage keys stored on this origin has been cleared';
+      }
+      else {
+        return 'Clearing localStorage keys cancelled';
+      }
+    }
+
+    // Remove all sessionStorage keys on this origin
+    function clearSessionStorage() {
+      console.log('Check browser page to confirm...');
+      const confirmed = window.confirm('Clear sessionStorage keys?\nThis will remove all sessionStorage keys for this tab.');
+      if (confirmed) {
+        sessionStorage.clear();
+        return 'All sessionStorage keys for this tab has been cleared';
+      }
+      else {
+        return 'Clearing sessionStorage keys cancelled';
+      }
+    }
+
+    // Removes all keys stored using store.js on this origin
+    function clearOriginStorage() {
+      console.log('Check browser page to confirm...');
+      const confirmed = window.confirm('Clear origin storage keys?\nThis will remove all keys stored on this origin using store.js.');
+      if (confirmed) {
+        let idx = 0;
+        const list = getAllNamespaceKeyPairs();
+        for (const node of list) {
+          const projStore = store.namespace(node.proj);
+          for (const name of node.keys) {
+            ++idx;
+            projStore.remove(name);
+          }
+        }
+        return `Cleared ${idx} keys stored using store.js on this origin`;
+      }
+      else {
+        return 'Clearing origin storage keys cancelled';
+      }
+    }
+
+    // Removes all keys stored using store.js for this project
+    function clearProjectStorage() {
+      console.log('Check browser page to confirm...');
+      const confirmed = window.confirm('Clear project storage keys?\nThis will remove all store.js keys stored for this project on this origin.');
+      if (confirmed) {
+        let idx = 0;
+        const list = getAllNamespaceKeyPairs();
+        for (const node of list) {
+          if (node.proj === PROJ_NAMESPACE) {
+            for (const name of node.keys) {
+              ++idx;
+              PROJ_STORAGE.remove(name);
+            }
+            break;
+          }
+        }
+        return `Cleared ${idx} keys stored for this project using store.js on this origin`;
+      }
+      else {
+        return 'Clearing project storage keys cancelled';
+      }
+    }
+
+    // Purge any key + data which is stored on this origin and has been expired
+    function purgeExpired() {
+      // Use the UTC calendar date in YYYY-MM-DD form so the once-per-day
+      // guard is compact and timezone-stable.
+      const today = new Date().toISOString().slice(0, 10);
+
+      // Skip the purge if it already completed today.
+      const lastPurged = localStorage.getItem(KEY__EXPIRED_DATA_LAST_PURGE_DATE);
+      if (lastPurged === today) return;
+
+      // Collect store.js namespace/key pairs for entries that use the
+      // expire mixin encoding in localStorage.
+      const list = getAllNamespaceKeyPairs();
+
+      // Remove expired data
+      const now = Date.now();
+      for (const node of list) {
+        const nsTemp = store.namespace(node.proj);
+        for (const keyName of node.keys) {
+          const exp = nsTemp.getExpiration(keyName);
+          if (typeof exp === 'number' && exp <= now) {
+            nsTemp.remove(keyName);
+          }
+        }
+      }
+
+      // Record that today's purge completed.
+      localStorage.setItem(KEY__EXPIRED_DATA_LAST_PURGE_DATE, today);
+    }
+
+    // Run purgeExpired() when the browser becomes idle when supported
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(purgeExpired, { timeout: 5000 });
+    } else {
+      setTimeout(purgeExpired, 5000); // Use delayed fallback if requestIdleCallback is not available
+    }
+
+    // If the Doxygen generation date-time does not match the stored value then 
+    // delete all HTML, ignored HTML and hash data and save the new date-time.
+    // Previously, the date-time was obtained using window.DOXY_PLUS_DATE_TIME
+    // and since this is generated for each html page separately, there was difference
+    // between the values obtained using window.DOXY_PLUS_DATE_TIME between two
+    // html pages. A better solution is to use the css variable '--timestamp'. This
+    // is defined at the very end of doxygen.css file and contains the generation
+    // timestamp and since all different html pages share this doxygen.css file
+    // all of it gets the same timestamp.
+    // --- For details see the DATE-TIME ISSUE section at the top of this page ---
+    let dateTime = '';
+    (() => {
+      // Since the --timestamp is like 'Thu Apr 16 2026 20:32:59' in the doxygen.css
+      // i.e. a string variable, the curTimeStamp becomes double quoted string like 
+      // "'Thu Apr 16 2026 20:32:59'" here. When stored it looks the same that is
+      // starting with "' and ending with '"". So we use .replace(/^['"]|['"]$/g, '') to
+      // remove only one ' or " character and only from both beginning and end. This way
+      // curTimeStamp remains simple string and is stored that way.
+      const curTimeStamp = getComputedStyle(document.documentElement)
+        .getPropertyValue('--timestamp') // get --timestamp from doxygen.css, it always returns a string
+        .trim() // remove leading and trailing spaces
+        .replace(/^['"]|['"]$/g, ''); // Remove one leading and one trailing quote, if present.
+
+      if (curTimeStamp.length === 0) {
+        // This throws and shows the error, so nothing more is needed after dispFatalError call.
+        dispFatalError('Storage: Current timestamp from CSS variable "--timestamp" is invalid.');
+      }
+
+      const storedTimeStamp = PROJ_STORAGE.get(KEY__GENERATION_TIMESTAMP);
+      if (storedTimeStamp !== curTimeStamp) {
+        PROJ_STORAGE.remove(KEY__HTML_DATA);
+        PROJ_STORAGE.remove(KEY__HTML_IGNORED);
+        PROJ_STORAGE.remove(KEY__HTML_NOT_FOUND);
+        const list = getAllNamespaceKeyPairs();
+        for (const node of list) {
+          if (node.proj === PROJ_NAMESPACE) {
+            for (const keyName of node.keys) {
+              if (keyName.startsWith(PREFIX__HASH_DATA)
+                || keyName.startsWith(PREFIX__HASH_DATA_IS_CODE)
+                || keyName.startsWith(PREFIX__PAGE_SCROLL_VPOS)
+                || keyName.startsWith(PREFIX__PAGE_HAS_DOXSECTIONS)) {
+                PROJ_STORAGE.remove(keyName);
+              }
+            }
+            break;
+          }
+        }
+      }
+      PROJ_STORAGE.set(KEY__GENERATION_TIMESTAMP, curTimeStamp, Date.now() + TIME_TO_LIVE);
+      dateTime = curTimeStamp;
+    })();
+
+    // Extend the expiry time for a key
+    function extendExpiryPrivate(name) {
+      const exp = PROJ_STORAGE.getExpiration(name);
+      if (typeof exp === 'number') {
+        const fullKey = `${STORE_JS_EXPIRY_PREFIX}${PROJ_NAMESPACE}${STORE_JS_EXPIRY_SEPARATOR}${name}`;
+        localStorage.setItem(fullKey, String(Date.now() + TIME_TO_LIVE));
+      }
+    }
+
+    // Construct a key with a given name
+    function makeKey(name) {
+      return Object.freeze({
+
+        // name of the key
+        name,
+
+        // Load the data from storage, it automatically identifies normal data types 
+        // (e.g. array and numbers) and converts to it.
+        load(defVal = null) {
+          const loaded = PROJ_STORAGE.get(name);
+          if (loaded === undefined) return defVal;
+          extendExpiryPrivate(name);
+          return loaded;
+        },
+
+        // Save the value and extend the expiry
+        save(val) {
+          PROJ_STORAGE.set(name, val, Date.now() + TIME_TO_LIVE);
+        },
+
+        // Remove key + data from storage
+        remove() {
+          PROJ_STORAGE.remove(name);
+        },
+
+        // Explicit function to just extend the expiry
+        extendExpiry() { extendExpiryPrivate(name); }
+      });
+    }
+
+    // Internals of storage
+    const internals = Object.freeze({
+      timeToLiveMs: TIME_TO_LIVE,
+      namespace: PROJ_NAMESPACE,
+      dateTime,
+      dispOriginStorage,
+      dispProjectStorage,
+      dispLocalStorage,
+      dispLocalStorageNonStoreJS,
+      dispSessionStorage,
+      dispSessionStorageNonStoreJS,
+      clearAllKeys,
+      clearLocalStorage,
+      clearSessionStorage,
+      clearOriginStorage,
+      clearProjectStorage
+    });
+
+    // Expose internals and keys (add new keys here)
+    return Object.freeze({
+      internals,
+      htmlData: makeKey(KEY__HTML_DATA),
+      htmlIgnored: makeKey(KEY__HTML_IGNORED),
+      htmlNotFound: makeKey(KEY__HTML_NOT_FOUND),
+      htmlPrevName: makeKey('html-prev-name'),
+      hashData: makeKey(PREFIX__HASH_DATA + CONSTS.HTML_NAME),
+      hashDataIsCode: makeKey(PREFIX__HASH_DATA_IS_CODE + CONSTS.HTML_NAME),
+      pageScrollVPos: makeKey(PREFIX__PAGE_SCROLL_VPOS + CONSTS.HTML_NAME),
+      pageHasDoxsections: makeKey(PREFIX__PAGE_HAS_DOXSECTIONS + CONSTS.HTML_NAME),
+      dualNav: makeKey('dual-nav'),
+      showPageNav: makeKey('show-page-nav'),
+      showLeafPane: makeKey('show-leaf-pane'),
+      autoHideLists: makeKey('auto-hide-lists'),
+      rootPaneWidth: makeKey('root-pane-width'),
+      leafPaneWidth: makeKey('leaf-pane-width')
+    });
+
+  })();
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // #endregion 🟥 STORAGE
+
+  // #region 🟩 VARIABLES
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  // Mutable runtime state used across the script.
+  const vars = {
+
+    // Cached DOM elements looked up from CONSTS.SEL...
+    els: {},
+
+    // User/UI state loaded once from storage during startup.
+    dualNav: storage.dualNav.load(true),
+    showPageNav: storage.showPageNav.load(true),
+    showLeafPane: storage.showLeafPane.load(true),
+    autoHideLists: storage.autoHideLists.load(true),
+
+    // Marks current page as a Markdown page with doxsections
+    pageHasDoxsections: false,
+
+    // Persisted pane widths.
+    rootPaneWidth: storage.rootPaneWidth.load(200),
+    leafPaneWidth: storage.leafPaneWidth.load(400),
+
+    // Shared data arrays; keep references stable and mutate contents when needed.
+    htmlData: [],
+    hashData: [],
+
+    // Name used when exposing the console helper object on window.
+    consoleObjectName: '',
+
+    // Cache of script-load promises keyed by absolute URL.
+    scriptLoadMap: new Map()
+  };
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // #endregion 🟥 VARIABLES
+
   // #region 🟩 DOXYGEN NAVTREE
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  // Returns a fully loaded, pruned clone of Doxygen NAVTREE, or [] on timeout.
-  async function buildPrunedDoxygenNavTree() {
+  // Returns a fully loaded clone of Doxygen NAVTREE, or [] on timeout.
+  async function buildDoxygenNavtree(prune = true) {
     // Steps:
-    // 1. Wait until window.NAVTREE exists and window.NAVTREE[0][2] is a non-empty array (timeout after CONSTS.VAL.TIMEOUT_MS).
+    // 1. Wait until window.NAVTREE exists and window.NAVTREE[0][2] is a 
+    //    non-empty array (timeout after CONSTS.VAL.TIMEOUT_MS).
     // 2. Recursively clone the tree structure into a new array.
     // 3. Dynamically load any external JS files for deferred child nodes.
     // 4. Recursively attach those loaded children.
-    // 5. Prune hash entries from the cloned NAVTREE, e.g. remove links like "file.html#anchor".
-    // 6. Return the pruned clone.
+    // 5. If 'prune' is true Prune hash entries from the cloned NAVTREE, e.g. remove links 
+    //    like "file.html#anchor".
+    // 6. Return the cloned navtree.
 
     // Wait for NAVTREE
     const start = performance.now();
     while (!Array.isArray(window.NAVTREE) || !Array.isArray(window.NAVTREE?.[0]?.[2]) || window.NAVTREE[0][2].length === 0) {
       const elapsed = performance.now() - start;
       if (elapsed > CONSTS.VAL.TIMEOUT_MS) {
-        dispFatalError(`buildPrunedDoxygenNavTree(): Timed out waiting for a non-empty "window.NAVTREE[0][2]" after ${Math.round(elapsed)} ms`);
+        dispFatalError(`buildDoxygenNavtree(): Timed out waiting for a non-empty "window.NAVTREE[0][2]" after ${Math.round(elapsed)} ms`);
         return [];
       }
-      //console.log(`buildPrunedDoxygenNavTree(): Waiting for non-empty "window.NAVTREE[0][2]" after ${Math.round(elapsed)} ms...`);
+      //console.log(`buildDoxygenNavtree(): Waiting for non-empty "window.NAVTREE[0][2]" after ${Math.round(elapsed)} ms...`);
       await new Promise((resolve) => { setTimeout(resolve, 16); });
     }
 
@@ -1077,7 +1696,7 @@
                   if (!Array.isArray(arr)) arr = window[c.split('/').pop()];
 
                   if (!Array.isArray(arr)) {
-                    console.warn(`buildPrunedDoxygenNavTree() - loadChildren(): "${c}.js" loaded, but no valid array global was found for "${c}"`);
+                    console.warn(`buildDoxygenNavtree() - loadChildren(): "${c}.js" loaded, but no valid array global was found for "${c}"`);
                     node[2] = [];
                     return;
                   }
@@ -1086,7 +1705,7 @@
                   return loadChildren(node[2]);
                 })
                 .catch((err) => {
-                  console.warn(`buildPrunedDoxygenNavTree() - loadChildren(): Failed to resolve children for "${c}.js"`, err);
+                  console.warn(`buildDoxygenNavtree() - loadChildren(): Failed to resolve children for "${c}.js"`, err);
                   node[2] = [];
                 })
             );
@@ -1106,40 +1725,74 @@
     // Load all deferred children; not all NAVTREE data is present up front.
     await loadChildren(clonedTree);
 
-    // Prune cloned tree in place.
-    (function pruneClonedTree(branch) {
-      if (!Array.isArray(branch) || branch.length === 0) return;
+    // Doxygen changes certain characters like '&' to '&amp;', '<' to '&lt;', etc.
+    // To change it back we use assign the text to a 'textarea' and replace the
+    // text with its value. This automatically changes the text back to original.
+    const decodeText = document.createElement('textarea');
+    function decodeName(text) {
+      if (typeof text !== 'string') return text;
+      decodeText.innerHTML = text;
+      return decodeText.value;
+    }
 
-      for (let ii = branch.length - 1; ii >= 0; --ii) {
+    if (prune) {
+      // Prune cloned tree in place.
+      function pruneClonedTree(branch) {
+        if (!Array.isArray(branch) || branch.length === 0) return;
 
-        // Remove nodes that are not arrays
-        if (!Array.isArray(branch[ii])) {
-          branch.splice(ii, 1);
-          continue;
+        for (let ii = branch.length - 1; ii >= 0; --ii) {
+
+          // Remove nodes that are not arrays
+          if (!Array.isArray(branch[ii])) {
+            branch.splice(ii, 1);
+            continue;
+          }
+
+          // Normalize length to 3 entries only
+          branch[ii].length = 3;
+
+          // Remove nodes whos first entry is not string
+          if (typeof branch[ii][0] !== 'string') {
+            branch.splice(ii, 1);
+            continue;
+          }
+
+          // Set the name back to original
+          branch[ii][0] = decodeName(branch[ii][0]);
+
+          // Remove nodes with empty names
+          if (branch[ii][0].trim().length === 0) {
+            branch.splice(ii, 1);
+            continue;
+          }
+
+          // Prune child nodes if present.
+          pruneClonedTree(branch[ii][2]);
+          if (!Array.isArray(branch[ii][2]) || branch[ii][2].length === 0) branch[ii][2] = null;
+
+          // Validate href: keep only valid html links, otherwise set to null
+          if (typeof branch[ii][1] !== 'string' || branch[ii][1].includes('#') || !/\.html$/i.test(branch[ii][1])) branch[ii][1] = null;
+
+          // Remove nodes that have no href and no kids
+          if (branch[ii][1] === null && branch[ii][2] === null) branch.splice(ii, 1);
         }
-
-        // Normalize length to 3 entries only
-        branch[ii].length = 3;
-
-        // Remove nodes with empty names
-        if (typeof branch[ii][0] !== 'string' || branch[ii][0].length === 0) {
-          branch.splice(ii, 1);
-          continue;
-        }
-
-        // Prune child nodes if present.
-        pruneClonedTree(branch[ii][2]);
-        if (!Array.isArray(branch[ii][2]) || branch[ii][2].length === 0) branch[ii][2] = null;
-
-        // Validate href: keep only valid html links, otherwise set to null
-        if (typeof branch[ii][1] !== 'string' || branch[ii][1].includes('#') || !/\.html$/i.test(branch[ii][1])) branch[ii][1] = null;
-
-        // Remove nodes that have no href and no kids
-        if (branch[ii][1] === null && branch[ii][2] === null) branch.splice(ii, 1);
       }
-    })(clonedTree);
+      pruneClonedTree(clonedTree);
+    }
+    else {
+      // Only decode names back to its original text
+      function decodeAllNames(branch) {
+        if (!Array.isArray(branch) || branch.length === 0) return;
+        for (const node of branch) {
+          if (!Array.isArray(node)) continue;
+          if (typeof node[0] === 'string') node[0] = decodeName(node[0]);
+          if (Array.isArray(node[2]) && node[2].length > 0) decodeAllNames(node[2]);
+        }
+      }
+      decodeAllNames(clonedTree);
+    }
 
-    //console.log('buildPrunedDoxygenNavTree(): SUCCESS');
+    //console.log('buildDoxygenNavtree(): SUCCESS');
     return clonedTree;
   }
 
@@ -1210,29 +1863,38 @@
     // Check for previous HTML data being a non-empty array
     if (Array.isArray(prevHtmlData) && prevHtmlData.length > 0) {
 
-      // Check for redirection, if true return because the url will be redirected
-      if (checkRedirect(prevHtmlData)) return;
+      // Check if the data obtained from storage is valid
+      if (checkTreeData(prevHtmlData, 'html')) {
 
-      // Add dev hub class in document body to detect it in CSS file
-      if (prevHtmlData[prevHtmlData.length - 1][0] === 'Dev Hub') {
-        document.body.classList.add(CONSTS.CLS.DEV_HUB_AVAILABLE);
+        // Check for redirection, if true return because the url will be redirected
+        if (checkRedirect(prevHtmlData)) return;
+
+        // Add dev hub class in document body to detect it in CSS file
+        if (prevHtmlData[prevHtmlData.length - 1][0] === 'Dev Hub') {
+          document.body.classList.add(CONSTS.CLS.DEV_HUB_AVAILABLE);
+        }
+
+        // Extend expiry timeout of ignored not found HTML arrays
+        storage.htmlIgnored.extendExpiry();
+        storage.htmlNotFound.extendExpiry();
+
+        // Save current HTML name for future use
+        storage.htmlPrevName.save(CONSTS.HTML_NAME);
+
+        // Assign loaded HTML data to vars.htmlData array, freeze it and return
+        vars.htmlData.push(...prevHtmlData);
+        deepFreeze(vars.htmlData);
+        return;
       }
-
-      // Extend expiry timeout of ignored not found HTML arrays
-      storage.htmlIgnored.extendExpiry();
-      storage.htmlNotFound.extendExpiry();
-
-      // Save current HTML name for future use
-      storage.htmlPrevName.save(CONSTS.HTML_NAME);
-
-      // Assign loaded HTML data to vars.htmlData array, freeze it and return
-      vars.htmlData.push(...prevHtmlData);
-      deepFreeze(vars.htmlData);
-      return;
+      else {
+        storage.htmlData.remove();
+        storage.htmlIgnored.remove();
+        storage.htmlNotFound.remove();
+      }
     }
 
     // Get the fully built pruned Doxygen NAVTREE
-    const prunedNavTree = await buildPrunedDoxygenNavTree();
+    const prunedNavTree = await buildDoxygenNavtree(true);
 
     // Check whether prunedNavTree is an array
     if (!Array.isArray(prunedNavTree)) {
@@ -1256,8 +1918,10 @@
     // Map of all nodes that is to be obtained from prunedNavTree
     const pending = new Map([
       ['mainPage', { Link: 'index.html', Path: [] }],
+      ['requirements', { Link: 'requirements.html', Path: [] }],
       ['depRequired', { Link: 'dp_dep_required.html', Path: [] }],
       ['dependencies', { Link: 'dp_dep_dir_dependencies.html', Path: [] }],
+      ['architecture', { Link: 'dp_arch_dir_architecture.html', Path: [] }],
       ['namespaceList', { Link: 'namespaces.html', Path: ['Namespaces', 'Namespace List'] }],
       ['namespaceMems', { Link: null, Path: ['Namespaces', 'Namespace Members'] }],
       ['concepts', { Link: 'concepts.html', Path: ['Concepts'] }],
@@ -1269,6 +1933,7 @@
       ['fileMems', { Link: null, Path: ['Files', 'File Members'] }],
       ['examples', { Link: 'examples.html', Path: ['Examples'] }],
       ['devHub', { Link: 'dp_dh_dir_dev_hub.html', Path: [] }],
+      ['dhBugs', { Link: 'dp_dh_bugs.html', Path: [] }],
       ['dhRequired', { Link: 'dp_dh_required.html', Path: [] }],
       ['deprList', { Link: 'deprecated.html', Path: ['Deprecated List'] }],
       ['bugsList', { Link: 'bug.html', Path: ['Bug List'] }],
@@ -1499,6 +2164,7 @@
     // The main top nodes for the doxy-plus root pane.
     const theProject = ['Project', null, []];
     const theDependencies = ['Dependencies', null, []];
+    const theArchitecture = ['Architecture', null, []];
     const theNamespaces = ['Namespaces', null, []];
     const theConcepts = ['Concepts', null, []];
     const theClasses = ['Classes', null, []];
@@ -1508,6 +2174,9 @@
 
     // Main 'index.html' page as overview page
     if (found.mainPage) theProject[2].push(['Overview', null, found.mainPage[1]]);
+
+    // Doxygen Requirements Page
+    if (found.requirements) theProject[2].push([found.requirements[0], null, found.requirements[1]]);
 
     // Dependency Required Page
     if (found.depRequired) theDependencies[2].push([found.depRequired[0], null, found.depRequired[1]]);
@@ -1523,6 +2192,13 @@
         const tempDepList = convertBranch(found.dependencies[2], 'Dependencies', /^dp_dep_/);
         theDependencies[2].push(...tempDepList);
       }
+    }
+
+    // Architecture
+    if (found.architecture) {
+      seenIgnoredHref.add(found.architecture[1]);
+      ignoredList.push([found.architecture[0], found.architecture[1]]);
+      theArchitecture[2] = convertBranch(found.architecture[2], 'Architecture', /^dp_arch_/);
     }
 
     // Namespace List
@@ -1722,6 +2398,13 @@
       theDevHub[2] = convertBranch(found.devHub[2], 'Dev Hub', /^dp_dh_/);
     }
 
+    // Dev Hub Bugs Page
+    if (found.dhBugs) {
+      // splice(1, 0, 'bla') inserts 'bla' at position 1, 0 = removes nothing 
+      if (theDevHub[2].length > 0) theDevHub[2].splice(1, 0, [found.dhBugs[0], null, found.dhBugs[1]]);
+      else theDevHub[2].push([found.dhBugs[0], null, found.dhBugs[1]]);
+    }
+
     // Dev Hub Required Page
     if (found.dhRequired) {
       // splice(1, 0, 'bla') inserts 'bla' at position 1, 0 = removes nothing 
@@ -1744,6 +2427,7 @@
     // Assigning to vars.htmlData array
     if (theProject[2].length > 0) vars.htmlData.push(theProject);
     if (theDependencies[2].length > 0) vars.htmlData.push(theDependencies);
+    if (theArchitecture[2].length > 0) vars.htmlData.push(theArchitecture);
     if (theNamespaces[2].length > 0) vars.htmlData.push(theNamespaces);
     if (theConcepts[2].length > 0) vars.htmlData.push(theConcepts);
     if (theClasses[2].length > 0) vars.htmlData.push(theClasses);
@@ -1751,9 +2435,8 @@
     if (theExamples[2].length > 0) vars.htmlData.push(theExamples);
     if (theDevHub[2].length > 0) vars.htmlData.push(theDevHub);
 
-    // Check structure and normalize names. Since Doxygen changes
-    // '&' to '&amp;', '<' to '&lt;', we have to change it back.
-    checkData('html');
+    // Check generated data
+    checkTreeData(vars.htmlData, 'html', true);
 
     // Save HTML data and ignored list
     storage.htmlData.save(vars.htmlData);
@@ -1815,14 +2498,29 @@
 
     // If stored hash data is a non-empty array then assign and return
     if (Array.isArray(prevHashData) && prevHashData.length > 0) {
-      document.body.classList.add(CONSTS.CLS.HASH_DATA_AVAILABLE);
-      const isCode = storage.hashDataIsCode.load();
-      if (isCode === 'yes') {
-        document.body.classList.add(CONSTS.CLS.HASH_DATA_IS_CODE);
+
+      // Check stored data
+      if (checkTreeData(prevHashData, 'hash')) {
+        document.body.classList.add(CONSTS.CLS.HASH_DATA_AVAILABLE);
+        const isCode = storage.hashDataIsCode.load();
+        if (isCode === 'yes') {
+          document.body.classList.add(CONSTS.CLS.HASH_DATA_IS_CODE);
+        }
+        else {
+          const hasDoxsections = storage.pageHasDoxsections.load();
+          if (hasDoxsections === 'yes') {
+            vars.pageHasDoxsections = true;
+          }
+        }
+        vars.hashData.push(...prevHashData);
+        deepFreeze(vars.hashData);
+        return;
       }
-      vars.hashData.push(...prevHashData);
-      deepFreeze(vars.hashData);
-      return;
+      else {
+        storage.hashData.remove();
+        storage.hashDataIsCode.remove();
+        storage.pageHasDoxsections.remove();
+      }
     }
 
     // Ensure vars.els.PAGE_CONTENT exists and is still connected before generating hash data.
@@ -1862,6 +2560,9 @@
         // Remove space before (
         .replace(/\s+\(/g, '(')
 
+        // Remove space before {
+        .replace(/\s+\{/g, '{')
+
         // Add space before and after = in special cases
         .replace(/\s*=\s*(default|delete|0)/g, ' = $1')
 
@@ -1877,59 +2578,29 @@
         .trim();
     }
 
-    // Returns members hash for doxygen generated 'table.memberdecls'.
-    // NOT for markdown pages.
-    // The '<tbody>' of '<table class="memberdecls">' inside '<div class=contents">'
-    // constains the list of members. This list of members usually looks like
-    // '<tr class="memitem:abc" id="r_abc">' and this is what is passed as 'row' to
-    // this function. In this row the 'abc' part is the hash.
-    // Sometimes (for templates usually) there is no 'id="r_abc"', instead the class
-    // name contains 'template' e.g. 'class="memitem:abc template"'. So, in order to
-    // get the hash we get the 'abc' from 'id="r_abc"' and then use 'row.classList'
-    // which splits on space and then if a class text from classList starts with
-    // 'memitem:' we split that and take the rest.
-    // If we get hash from both classList and id and both hash do not match then we
-    // log a console warning because this is inconsistent behavior.
-    // For returning the hash, the hash gotten by 'id="r_abc"' is given priority over
-    // hash gotten by classList. If neither generates a hash this function returns an
-    // empty string.
-    function getMemberHash(row) {
-      if (!row) return '';
-      let idHash = '';
-      let classHash = '';
-
-      // Get the hash from id
-      if (typeof row.id === 'string' && row.id.startsWith('r_') && row.id.length > 2) {
-        idHash = row.id.slice(2);
-      }
-
-      // Get the hash from classList
-      for (const cls of row.classList) {
-        if (cls.startsWith('memitem:') && cls.length > 8) {
-          classHash = cls.slice(8);
-          break;
-        }
-      }
-
-      // If both id and classHash hash is generated then they must match
-      if (idHash && classHash && idHash !== classHash) {
-        console.warn('initHashData() - getMemberHash(): row id/class hash mismatch', row, idHash, classHash);
-      }
-
-      // return priority: idHash > classHash.
-      return idHash || classHash || '';
-    }
-
     // Collect member signatures and group them into vars.hashData by section header.
-    // NOT for markdown pages.
+    // --- NOT for markdown pages ---
     // The '<tbody>' of '<table class="memberdecls">' inside '<div class=contents">'
     // constains the list of members. This list of members usually looks like
     // '<tr class="memitem:abc" id="r_abc">' and this is what is use as 'row' in
     // this function.
+    // The tables below comes from <body>...<div id="container">...<div id="doc-content">
+    // ...<div class="contents">...<table class="memberdecls">. The <table class="memberdecls">
+    // has <tbody> which has 
+    // - one <tr class="heading"> which contains headings for the group (e.g. "Public Member 
+    //   Functions", "Private Types", etc.). From here we get the heading for the section. And,
+    // - one or more <tr class="memitem:..." id="r_..."> which contains the each member links 
+    //   and text. Here we get the links. Each <tr class="memitem:..." id="r_..."> contains
+    //   <td class="memItemLeft"...> and <td class="memItemRight"...>. Here:
+    //   - <td class="memItemLeft"...> might contain links but these are not the correct links.
+    //     This class provides text for the type of a function or variable (e.g. "void", "static
+    //     bool", etc.) as its innerText. It can be empty.
+    //   - <td class="memItemRight"...> can have one or more <a class="el" href="#abcdefg">. The
+    //     first <a class="el" href="#abcdefg"> contains the real hash in href="#abcdefg" for the
+    //     member as well as the text (function/variable name with parameters) for the member.
     const tables = Array.from(vars.els.PAGE_CONTENT.querySelectorAll("table.memberdecls"));
     tables.forEach((table, idx) => {
       const grpSigs = [];
-      const seenName = new Set();
       const seenHref = new Set();
 
       const headerEl = table.querySelector("h2.groupheader");
@@ -1941,40 +2612,36 @@
 
       const rows = table.querySelectorAll('tr');
       rows.forEach((row) => {
-        const leftTd =
-          row.querySelector(':scope > td.memItemLeft, :scope > td.memTemplItemLeft');
-        const rightTd =
-          row.querySelector(':scope > td.memItemRight, :scope > td.memTemplItemRight');
+        const lftTd = row.querySelector(':scope > td.memItemLeft');
+        const ritTd = row.querySelector(':scope > td.memItemRight');
 
-        if (!leftTd || !rightTd) return;
+        if (!ritTd) return;
 
-        const memberHash = getMemberHash(row);
-        if (memberHash.length === 0) return;
+        const leafHref = ritTd.querySelector(':scope > a.el[href^="#"]')?.getAttribute('href') || '';
+        if (leafHref.length === 0 || seenHref.has(leafHref)) return;
 
-        const leafHref = `#${memberHash}`;
-        if (seenHref.has(leafHref)) return;
+        let lftText = lftTd ? lftTd.innerText.replace(/\s+/g, ' ').trim() : '';
+        let ritText = ritTd.innerText.replace(/\s+/g, ' ').trim();
 
-        const lftText = leftTd.innerText.replace(/\s+/g, ' ').trim();
-        const ritText = rightTd.innerText.replace(/\s+/g, ' ').trim();
+        lftText = formatSignature(lftText);
+        ritText = formatSignature(ritText);
 
-        const leafNameTemp = `${lftText} ${ritText}`.trim();
-        let leafName = formatSignature(leafNameTemp);
-
-        if (leafName.startsWith('enum')) {
-          leafName = leafName.replace(/\s*\{[\s\S]*\}/, '').trim();
+        if (lftText.startsWith('enum')) {
+          ritText = ritText.replace(/\s*\{[\s\S]*\}/, '').trim();
         }
 
-        leafName = prettierAnon(leafName);
-        if (seenName.has(leafName)) return;
+        lftText = prettierAnon(lftText);
+        ritText = prettierAnon(ritText);
+
+        if (lftText.trim().length === 0) lftText = null;
 
         seenHref.add(leafHref);
-        seenName.add(leafName);
-        grpSigs.push([leafName, leafHref]);
+        grpSigs.push([ritText, lftText, leafHref]);
       });
 
       // Add this group to hash data if it has entries
       if (grpSigs.length > 0) {
-        vars.hashData.push([headName, grpSigs]);
+        vars.hashData.push([headName, null, grpSigs]);
       }
     });
 
@@ -1982,7 +2649,7 @@
     // we are on a page with code. Set the correct class lists,
     // save the data, freeze vars.hashData and return.
     if (vars.hashData.length > 0) {
-      checkData('hash'); // Checks structure and normallizes names
+      checkTreeData(vars.hashData, 'hash', true);
       document.body.classList.add(CONSTS.CLS.HASH_DATA_AVAILABLE);
       document.body.classList.add(CONSTS.CLS.HASH_DATA_IS_CODE);
       storage.hashData.save(vars.hashData);
@@ -2019,8 +2686,20 @@
       return '';
     }
 
+    // Returns true if a parent doxsection has content before first child doxsection
+    function hasOwnContentBeforeNextDoxsection(sec) {
+      let el = sec.nextElementSibling;
+
+      while (el) {
+        if (el.matches(':is(h1, h2, h3, h4, h5, h6).doxsection')) return false;
+        if (el.tagName !== 'HR') return true;
+        el = el.nextElementSibling;
+      }
+
+      return false;
+    }
+
     // Get on-page heading anchors for Markdown pages.
-    // NOTE: A parent heading loses its own anchor as soon as it gets a child.
     const doxSections = Array.from(vars.els.PAGE_CONTENT.querySelectorAll('.doxsection'));
     const doxSeenHref = new Set();
     const doxStack = []; // { level: number, node: [name, href|kids] }
@@ -2040,7 +2719,7 @@
       if (doxSeenHref.has(href)) continue;
       doxSeenHref.add(href);
 
-      const node = [name, href];
+      const node = [name, null, href];
 
       while (doxStack.length > 0 && doxStack[doxStack.length - 1].level >= level) {
         doxStack.pop();
@@ -2048,15 +2727,21 @@
 
       if (doxStack.length === 0) {
         vars.hashData.push(node);
-      } else {
-        const parent = doxStack[doxStack.length - 1].node;
-
-        // By design, once a heading gets children, its own hash is discarded.
-        if (!Array.isArray(parent[1])) parent[1] = [];
-        parent[1].push(node);
+      }
+      else {
+        const parentEntry = doxStack[doxStack.length - 1];
+        const parent = parentEntry.node;
+        if (!Array.isArray(parent[2])) {
+          const parentHref = parent[2];
+          parent[2] = [];
+          if (hasOwnContentBeforeNextDoxsection(parentEntry.sec)) {
+            parent[2].push(['Overview', null, parentHref]);
+          }
+        }
+        parent[2].push(node);
       }
 
-      doxStack.push({ level, node });
+      doxStack.push({ level, node, sec });
     }
 
     // Hash data was generated using the 'doxsection' method for
@@ -2064,7 +2749,9 @@
     // data for 'hashDataIsCode'. Just save the class list and
     // data for hash data, freeze vars.hashData and return.
     if (vars.hashData.length > 0) {
-      checkData('hash'); // Checks structure and normallizes names
+      checkTreeData(vars.hashData, 'hash', true);
+      storage.pageHasDoxsections.save('yes');
+      vars.pageHasDoxsections = true;
       document.body.classList.add(CONSTS.CLS.HASH_DATA_AVAILABLE);
       storage.hashData.save(vars.hashData);
       deepFreeze(vars.hashData);
@@ -2221,27 +2908,6 @@
             prefix.textContent = prefixText;
           }
 
-          // We separate label based on '::'. This way we can
-          // style '::' differently using css. Using normal
-          // non-monospace font for `::` makes it too weak and
-          // not visible and so we use monospace font for `::`
-          // and normal font for the rest of the label.
-          const labels = [];
-          const labelText = cfg.getLabelText(item);
-          const labelParts = labelText.split('::');
-          for (const lblPart of labelParts) {
-            if (labels.length > 0) {
-              const sep = document.createElement('span');
-              sep.classList.add(CLS.sep);
-              sep.textContent = '::';
-              labels.push(sep);
-            }
-            const label = document.createElement('span');
-            label.classList.add(CLS.label);
-            label.textContent = lblPart;
-            labels.push(label);
-          }
-
           // If value is of type string then this is a leaf node
           if (typeof value === 'string') {
 
@@ -2256,7 +2922,8 @@
 
             // Append prefix and labels to row
             if (prefix) row.append(prefix);
-            for(const lbl of labels) row.append(lbl);
+            const labels = cfg.getLabelSpans(item);
+            for (const lbl of labels) row.append(lbl);
 
             // Append row to li
             li.appendChild(row);
@@ -2289,7 +2956,8 @@
             // Append toggle, prefix and labels to row
             row.append(toggle);
             if (prefix) row.append(prefix);
-            for(const lbl of labels) row.append(lbl);
+            const labels = cfg.getLabelSpans(item);
+            for (const lbl of labels) row.append(lbl);
 
             // Append row to li
             li.appendChild(row);
@@ -2335,7 +3003,23 @@
     // Tree built from vars.htmlData
     const htmlTree = buildTreeFromData(vars.htmlData, {
       warnName: 'buildTreeFromData(): vars.htmlData',
-      getLabelText: (item) => item[0],
+      getLabelSpans: (item) => {
+        const labels = [];
+        const labelParts = String(item[0]).split('::');
+        for (const lblPart of labelParts) {
+          if (labels.length > 0) {
+            const sep = document.createElement('span');
+            sep.classList.add(CLS.sep);
+            sep.textContent = '::';
+            labels.push(sep);
+          }
+          const label = document.createElement('span');
+          label.classList.add(CLS.label);
+          label.textContent = lblPart;
+          labels.push(label);
+        }
+        return labels;
+      },
       getPrefixText: (item) => item[1] ? `${item[1]}::` : null,
       getValue: (item) => item[2],
       getHref: (item) => CONSTS.DOC_ROOT + item[2],
@@ -2346,11 +3030,18 @@
     // Tree built from vars.hashData
     const hashTree = buildTreeFromData(vars.hashData, {
       warnName: 'buildTreeFromData(): vars.hashData',
-      getLabelText: (item) => item[0],
-      getPrefixText: () => null,
-      getValue: (item) => item[1],
-      getHref: (item) => item[1],
-      getTitle: (item) => item[0],
+      getLabelSpans: (item) => {
+        const labels = [];
+        const label = document.createElement('span');
+        label.classList.add(CLS.label);
+        label.textContent = item[0];
+        labels.push(label);
+        return labels;
+      },
+      getPrefixText: (item) => item[1] ? `${item[1]}\u00A0` : null,
+      getValue: (item) => item[2],
+      getHref: (item) => item[2],
+      getTitle: (item) => item[1] ? `${item[1]} ${item[0]}` : item[0],
       isCurrent: (row) => row.getAttribute('href') === curHash,
       onLeaf: (row, li) => {
         const hash = row.getAttribute('href');
@@ -3019,6 +3710,14 @@
         modal.style.top = finalTop + 'px';
       }
 
+      // When the page is opened htrough history the checkboxes are not
+      // correctly checked when shown, so we set the correct checkbox
+      // state each time the checkboxes are displayed.
+      cbRoot.checked = vars.dualNav;
+      cbLeaf.checked = vars.showLeafPane;
+      cbPage.checked = vars.showPageNav;
+      cbAuto.checked = vars.autoHideLists;
+
       lastFocus = document.activeElement;
       modal.setAttribute('tabindex', '-1');
       modal.focus();
@@ -3157,89 +3856,113 @@
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 INIT OPTIONS
 
-  // #region 🟩 DATA TABLES
+  // #region 🟩 DATA DISPLAY
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  // Returns vars.htmlData as a flat table format for console.table().
-  function getHtmlDataAsFlatTable() {
-    const rows = [];
-    (function collect(branch, prefix = '') {
-      if (!Array.isArray(branch) || branch.length === 0) return;
-      for (const node of branch) {
-        const name = prefix ? `${prefix} > ${node[0]}` : node[0];
-        if (Array.isArray(node[2])) {
-          rows.push({ Label: name, Scope: node[1], Value: `Kids: ${node[2].length}` });
-          collect(node[2], name);
-        }
-        else {
-          rows.push({ Label: name, Scope: node[1], Value: `Link: ${node[2]}` });
-        }
-      }
-    })(vars.htmlData);
-    return rows;
+  // Displays vars.htmlData in console
+  function dispHtmlData() {
+    console.group('HTML Data Array (vars.htmlData in code)');
+    console.log(`- Modified version of the Doxygen NAVTREE`,
+      `\n- Excludes:`,
+      `\n  - Any href values containing hash links, such as "abc.html#def"`,
+      `\n  - Duplicate nodes with the same href`,
+      `\n- Node format:`,
+      `\n  - node[0]: Name (non-empty string)`,
+      `\n  - node[1]: Prefix (null or non-empty string)`,
+      `\n  - node[2]: Href (string ending in .html) or Child Nodes (non-empty array)`);
+    debugTreeData(vars.htmlData, 'html');
+    console.groupEnd();
   }
 
-  // Returns vars.hashData as a flat table format for console.table().
-  function getHashDataAsFlatTable() {
-    const rows = [];
-    (function collect(branch, prefix = '') {
-      if (!Array.isArray(branch) || branch.length === 0) return;
-      for (const node of branch) {
-        const name = prefix ? `${prefix} > ${node[0]}` : node[0];
-        if (Array.isArray(node[1])) {
-          rows.push({ Label: name, Value: `Kids: ${node[1].length}` });
-          collect(node[1], name);
-        }
-        else {
-          rows.push({ Label: name, Value: `Link: ${node[1]}` });
-        }
-      }
-    })(vars.hashData);
-    return rows;
+  // Displays vars.hashData in console
+  function dispHashData() {
+    console.group('Hash Data Array (vars.hashData in code)');
+    console.log(`- Generated hash-data array for the current page`,
+      `\n- Contains:`,
+      `\n  - Hash values, such as "#abcdefg", as href values`,
+      `\n  - No duplicate nodes with the same href`,
+      `\n- Node format:`,
+      `\n  - node[0]: Name (non-empty string)`,
+      `\n  - node[1]: Prefix (null or non-empty string)`,
+      `\n  - node[2]: Hash (string starting with #) or Child Nodes (non-empty array)`);
+    debugTreeData(vars.hashData, 'hash');
+    console.groupEnd();
   }
 
-  // Returns the HTML ignored list as a flat table format for console.table().
-  function getHtmlIgnoredListAsFlatTable() {
-    const rows = [];
-    const list = storage.htmlIgnored.load();
-    if (Array.isArray(list) && list.length > 0) {
-      for (const node of list) rows.push({ Name: node[0], Href: node[1] });
-    }
-    return rows;
+  // Displays default Doxygen NAVTREE in console
+  async function dispDoxygenNavtree() {
+    const doxygenNavtree = await buildDoxygenNavtree(false);
+    console.group('Default Doxygen NAVTREE');
+    console.log(`- Fully loaded Default Doxygen NAVTREE`,
+      `\n- Node format:`,
+      `\n  - node[0]: Name (string)`,
+      `\n  - node[1]: Href (string)`,
+      `\n  - node[2]: Child Nodes (array)`,
+      `\nNOTE: Due to a bug in Doxygen, node[2] can sometimes contain a string, but this is harmless.`);
+    debugTreeData(doxygenNavtree, 'default');
+    console.groupEnd();
   }
 
-  // Returns the HTML not-found list as a flat table format for console.table().
-  function getHtmlNotFoundListAsFlatTable() {
-    const rows = [];
+  // Displays pruned Doxygen NAVTREE in console
+  async function dispPrunedDoxygenNavtree() {
+    const prunedDoxygenNavtree = await buildDoxygenNavtree(true);
+    console.group('Pruned Doxygen NAVTREE');
+    console.log(`- Fully loaded Pruned Doxygen NAVTREE`,
+      `\n- Pruned:`,
+      `\n  - All malformed nodes are removed`,
+      `\n  - Nodes with hash hrefs (for example, "abc.html#def") are removed`,
+      `\n  - Nodes with no child and no href are removed`,
+      `\n- Node format:`,
+      `\n  - node[0]: Name (string)`,
+      `\n  - node[1]: Href (string)`,
+      `\n  - node[2]: Child Nodes (array)`,
+      `\nNOTE: Due to a bug in Doxygen, node[2] can sometimes contain a string, but this is harmless.`);
+    debugTreeData(prunedDoxygenNavtree, 'default');
+    console.groupEnd();
+  }
+
+  // Displays html not found list in console
+  function dispHtmlNotFoundList() {
     const list = storage.htmlNotFound.load();
+    let idx = 0;
+    console.group('HTML Not Found List');
+    console.log(`- List of all html pages that were not found in Doxygen NAVTREE`,
+      `\n- It is generated when generating modified html data from Doxygen NAVTREE`,
+      `\n- Doxygen generates some html pages on demand, and so not all pages exist everytime`,
+      `\n  - Examples: 'hierarchy.html', 'todo.html', 'test.html', etc.`,
+      `\n- Having a non-empty not found list does not mean there was an error in generating html data`,
+      `\n- Format: '#. Name Path: href'`);
     if (Array.isArray(list) && list.length > 0) {
-      for (const node of list) rows.push({ Name: node[0], Href: node[1] });
-    }
-    return rows;
-  }
-
-  // Returns the pruned Doxygen NAVTREE as a flat table format for console.table().
-  async function getPrunedDoxygenNavTreeAsFlatTable() {
-    const prunedNavTree = await buildPrunedDoxygenNavTree();
-    const rows = [];
-    (function collect(branch, prefix = '') {
-      if (!Array.isArray(branch) || branch.length === 0) return;
-      for (const node of branch) {
-        const name = prefix ? `${prefix} > ${node[0]}` : node[0];
-        if (Array.isArray(node[2])) {
-          rows.push({ Name: name, Href: node[1], Kids: node[2].length });
-          collect(node[2], name);
-        }
-        else {
-          rows.push({ Name: name, Href: node[1], Kids: null });
-        }
+      for (const node of list) {
+        console.log('%s%c%s', `${++idx}. ${node[0]}: `, 'color: LinkText;', String(node[1]));
       }
-    })(prunedNavTree);
-    return rows;
+    }
+    if (idx === 0) console.log('--- HTML Not Found List is Empty ---');
+    console.groupEnd();
   }
 
-  // Returns HTML pages that are not in vars.htmlData and not in the HTML ignored list format for console.table().
-  async function getMissedHtmlPagesAsFlatTable() {
+  // Displays html ignored list in console
+  function dispHtmlIgnoredList() {
+    const list = storage.htmlIgnored.load();
+    let idx = 0;
+    console.group('HTML Ignored List');
+    console.log(`- List of all html pages that were deliberately ignored`,
+      `\n- It is generated when generating modified html data from Doxygen NAVTREE`,
+      `\n- This list mostly has directory pages, most of the information can be viewed in Files List`,
+      `\n  - All href strings with 'dir_' anywhere in it means a directory page`,
+      `\n- These html pages provide no additional information and should be ignored`,
+      `\n- Format: '#. Name Path: href'`);
+    if (Array.isArray(list) && list.length > 0) {
+      for (const node of list) {
+        console.log('%s%c%s', `${++idx}. ${node[0]}: `, 'color: LinkText;', String(node[1]));
+      }
+    }
+    if (idx === 0) console.log('--- HTML Ignored List is Empty ---');
+    console.groupEnd();
+  }
+
+  // Displays html list of pages that are not in vars.htmlData and not in the HTML ignored list
+  async function dispHtmlMissedList() {
 
     const have = new Set();
 
@@ -3258,19 +3981,29 @@
       }
     }
 
-    const prunedNavTree = await buildPrunedDoxygenNavTree();
-    const rows = [];
+    const prunedDoxygenNavtree = await buildDoxygenNavtree(true);
+
+    let idx = 0;
+    console.group('HTML Missed List');
+    console.log(`- List of all html pages that are present in pruned Doxygen NAVTREE but are not included in:`,
+      `\n  - Generated html data array (i.e. vars.htmlData), or`,
+      `\n  - In html Ignored List`,
+      `\n- This list contains directory pages (href string with 'dir_' in it) from Markdown only branches`,
+      `\n  - The directory pages of Markdown only branches are designed to be without text contents and should be ignored`,
+      `\n- Format: '#. Name Path: href'`);
+
     (function collectMissedHrefs(branch, prefix = '') {
       if (!Array.isArray(branch) || branch.length === 0) return;
       for (const node of branch) {
         const name = prefix ? `${prefix} > ${node[0]}` : node[0];
         if (typeof node[1] === 'string' && node[1].length > 0 && !have.has(node[1])) {
-          rows.push({ Name: name, Href: node[1] });
+          console.log('%s%c%s', `${++idx}. ${name}: `, 'color: LinkText;', String(node[1]));
         }
         if (Array.isArray(node[2])) collectMissedHrefs(node[2], name);
       }
-    })(prunedNavTree);
-    return rows;
+    })(prunedDoxygenNavtree);
+    if (idx === 0) console.log('--- HTML Missed List is Empty ---');
+    console.groupEnd();
   }
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -3282,249 +4015,210 @@
   // Create the console debug object as "dp" or "debugDoxyPlus".
   function createConsoleObject() {
 
-    // Create the info sub-object
-    function makeInfoObj() {
-      const infoObj = Object.create(null);
+    // Create the build sub-object
+    function makeBuildObj() {
+      const buildObj = Object.create(null);
 
-      Object.defineProperty(infoObj, 'date_time', {
+      Object.defineProperty(buildObj, 'about', {
         get() {
-          console.log(window.DOXY_PLUS_DATE_TIME);
-          console.log('The date-time of the generation of Doxygen output.');
+          console.group('About Build');
+          console.log('This section displays the current data in the page:',
+            '\n- doxygen_navtree        : Non-altered Doxygen NAVTREE',
+            '\n- doxygen_navtree_pruned : Altered Doxygen NAVTREE with hash links and empty nodes removed',
+            '\n- hash_data              : Hash links for the current page',
+            '\n- html_data              : Full html pages list for this project, generated by modifying pruned Doxygen NAVTREE',
+            '\n- html_ignored           : The html pages that were deliberately ignored while generating full html pages list',
+            '\n- html_missed            : A list of all html pages that are in pruned Doxygen NAVTREE but not in generated html pages or ignored list',
+            '\n- html_not_found         : A list of all html pages that were not found in pruned Doxygen NAVTREE while generating full html pages list');
+          console.groupEnd();
         },
         configurable: true,
         enumerable: true
       });
 
-      Object.defineProperty(infoObj, 'doc_root', {
-        get() {
-          console.log(CONSTS.DOC_ROOT);
-          console.log('If the project is hosted on GitHub, the root is the origin URL plus the repository name; otherwise, it defaults to the local folder path on disk.');
-        },
+      Object.defineProperty(buildObj, 'html_data', {
+        get() { dispHtmlData(); },
         configurable: true,
         enumerable: true
       });
 
-      Object.defineProperty(infoObj, 'storage_namespace', {
-        get() {
-          console.log(storage.internals.namespace);
-          console.log('This namespace is used to store project data through the store.js namespace feature. Assigning each project its own namespace ensures that its data remains isolated and cannot conflict with data from other projects on the same origin. Projects loaded from disk share the same origin regardless of their location on disk.');
-        },
+      Object.defineProperty(buildObj, 'hash_data', {
+        get() { dispHashData(); },
         configurable: true,
         enumerable: true
       });
 
-      return infoObj;
+      Object.defineProperty(buildObj, 'doxygen_navtree', {
+        get() { setTimeout(() => { void dispDoxygenNavtree(); }, 0); },
+        configurable: true,
+        enumerable: true
+      });
+
+      Object.defineProperty(buildObj, 'doxygen_navtree_pruned', {
+        get() { setTimeout(() => { void dispPrunedDoxygenNavtree(); }, 0); },
+        configurable: true,
+        enumerable: true
+      });
+
+      Object.defineProperty(buildObj, 'html_not_found', {
+        get() { dispHtmlNotFoundList(); },
+        configurable: true,
+        enumerable: true
+      });
+
+      Object.defineProperty(buildObj, 'html_ignored', {
+        get() { dispHtmlIgnoredList(); },
+        configurable: true,
+        enumerable: true
+      });
+
+      Object.defineProperty(buildObj, 'html_missed', {
+        get() { setTimeout(() => { void dispHtmlMissedList(); }, 0); },
+        configurable: true,
+        enumerable: true
+      });
+
+      return buildObj;
     }
 
-    // Create the data sub-object
-    function makeDataObj() {
-      const dataObj = Object.create(null);
+    // Create store sub-object
+    function makeStoreObj() {
 
-      Object.defineProperty(dataObj, 'html_data', {
+      // Create clear sub-object
+      function makeClearObj() {
+        const clearObj = Object.create(null);
+
+        Object.defineProperty(clearObj, 'about', {
+          get() {
+            console.group('About Clear');
+            console.log('This section clears the stored keys',
+              '\n- all             : Clears all storage i.e. browser localStorage and sessionStorage, all key-value pairs on this origin and for this tab is removed',
+              '\n- local_storage   : Clears browser localStorage but not sessionStorage, all key-value pairs on this origin is removed',
+              '\n- session_storage : Clears browser sessionStorage, all key-value pairs for this tab is removed',
+              '\n- origin_storage  : Clears all key-value pairs on this origin (only for keys stored using store.js)',
+              '\n- project_storage : Clears all key-value pairs for this project only (only for keys stored using store.js), does not affect other projects on this origin');
+            console.log('%cNOTE: When any clear option is used, a confirmation message box is shown on the main browser page. The selected command is executed only after the user clicks "OK" in that message box.', 'color: orange; font-weight: bold;');
+            console.groupEnd();
+          },
+          configurable: true,
+          enumerable: true
+        });
+
+        Object.defineProperty(clearObj, 'all', {
+          get() { return storage.internals.clearAllKeys(); },
+          configurable: true,
+          enumerable: true
+        });
+
+        Object.defineProperty(clearObj, 'local_storage', {
+          get() { return storage.internals.clearLocalStorage(); },
+          configurable: true,
+          enumerable: true
+        });
+
+        Object.defineProperty(clearObj, 'session_storage', {
+          get() { return storage.internals.clearSessionStorage(); },
+          configurable: true,
+          enumerable: true
+        });
+
+        Object.defineProperty(clearObj, 'origin_storage', {
+          get() { return storage.internals.clearOriginStorage(); },
+          configurable: true,
+          enumerable: true
+        });
+
+        Object.defineProperty(clearObj, 'project_storage', {
+          get() { return storage.internals.clearProjectStorage(); },
+          configurable: true,
+          enumerable: true
+        });
+
+        return clearObj;
+      }
+
+      const storeObj = Object.create(null);
+      Object.defineProperty(storeObj, 'clear', { value: makeClearObj(), configurable: true, enumerable: true });
+
+      Object.defineProperty(storeObj, 'about', {
         get() {
-          console.log('The generated HTML data (called "vars.htmlData" in the code). This is a modified version of the Doxygen NAVTREE data, and it does not include any href values with hash links, that is, no "bla.com/some.html#some_link".');
-          const rows = getHtmlDataAsFlatTable();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- HTML Data is EMPTY ---');
+          console.group('About Store');
+          console.log('This section displays the stored key-value pairs',
+            '\n- clear                        : Clears stored key-value pairs (see clear.about)',
+            '\n- origin_storage               : All key-value pairs stored on this origin using store.js',
+            '\n- project_storage              : All key-value pairs stored for this project using store.js',
+            '\n- local_storage                : All key-value pairs stored in browser localStorage on this origin',
+            '\n- local_storage_non_store_js   : All key-value pairs stored (without using store.js) in browser localStorage on this origin',
+            '\n- session_storage              : All key-value pairs stored in browser sessionStorage',
+            '\n- session_storage_non_store_js : All key-value pairs stored (without using store.js) in browser sessionStorage');
+          console.groupEnd();
         },
         configurable: true,
         enumerable: true
       });
 
-      Object.defineProperty(dataObj, 'hash_data', {
-        get() {
-          console.log('The generated hash data (called "vars.hashData" in the code) for the current page.');
-          const rows = getHashDataAsFlatTable();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- Hash Data is EMPTY ---');
-        },
+      Object.defineProperty(storeObj, 'origin_storage', {
+        get() { return storage.internals.dispOriginStorage(); },
         configurable: true,
         enumerable: true
       });
 
-      Object.defineProperty(dataObj, 'html_ignored_list', {
-        get() {
-          console.log('The HTML files deliberately excluded from "vars.htmlData"; these files provide no additional information and should be ignored.');
-          const rows = getHtmlIgnoredListAsFlatTable();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- HTML Ignored List is EMPTY ---');
-        },
+      Object.defineProperty(storeObj, 'project_storage', {
+        get() { return storage.internals.dispProjectStorage(); },
         configurable: true,
         enumerable: true
       });
 
-      Object.defineProperty(dataObj, 'html_not_found_list', {
-        get() {
-          console.log('The HTML files that were not found in the pruned Doxygen NAVTREE and are therefore excluded from "vars.htmlData".');
-          const rows = getHtmlNotFoundListAsFlatTable();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- HTML Not Found List is EMPTY ---');
-        },
+      Object.defineProperty(storeObj, 'local_storage', {
+        get() { return storage.internals.dispLocalStorage(); },
         configurable: true,
         enumerable: true
       });
 
-      Object.defineProperty(dataObj, 'html_missed_list', {
-        get() {
-          console.log('Compares the HTML pages present in the Doxygen NAVTREE against those present in "vars.htmlData" and the ignored list, and shows any HTML pages that are present in the Doxygen NAVTREE but are missing from both "vars.htmlData" and the ignored list.');
-          getMissedHtmlPagesAsFlatTable()
-            .then(rows => {
-              if (rows.length > 0) console.table(rows);
-              else console.log('--- HTML Missed List is EMPTY ---');
-            })
-            .catch(err => {
-              console.error('Failed to build HTML missed list.', err);
-            });
-        },
+      Object.defineProperty(storeObj, 'local_storage_non_store_js', {
+        get() { return storage.internals.dispLocalStorageNonStoreJS(); },
         configurable: true,
         enumerable: true
       });
 
-      Object.defineProperty(dataObj, 'pruned_doxygen_navtree', {
-        get() {
-          console.log('The Doxygen NAVTREE with all href values containing hash links removed.');
-          getPrunedDoxygenNavTreeAsFlatTable()
-            .then(rows => {
-              if (rows.length > 0) console.table(rows);
-              else console.log('--- Pruned Doxygen NAVTREE is EMPTY ---');
-            })
-            .catch(err => {
-              console.error('Failed to build Pruned Doxygen NAVTREE.', err);
-            });
-        },
+      Object.defineProperty(storeObj, 'session_storage', {
+        get() { return storage.internals.dispSessionStorage(); },
         configurable: true,
         enumerable: true
       });
 
-      return dataObj;
+      Object.defineProperty(storeObj, 'session_storage_non_store_js', {
+        get() { return storage.internals.dispSessionStorageNonStoreJS(); },
+        configurable: true,
+        enumerable: true
+      });
+
+      return storeObj;
     }
 
-    // Create the keys sub-object
-    function makeKeysObj() {
-      const keysObj = Object.create(null);
-
-      Object.defineProperty(keysObj, 'clear_help', {
-        get() {
-          console.log('clear_all     : Clears all keys and their related data stored at this origin.');
-          console.log('clear_local   : Clears all keys and their related data stored in "localStorage" at this origin.');
-          console.log('clear_session : Clears all keys and their related data stored in "sessionStorage" at this origin.');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'clear_all', {
-        get() {
-          localStorage.clear();
-          sessionStorage.clear();
-          console.log('Cleared all keys and their related data stored at this origin.');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'clear_local', {
-        get() {
-          localStorage.clear();
-          console.log('Cleared all keys and their related data stored in "localStorage" at this origin.');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'clear_session', {
-        get() {
-          sessionStorage.clear();
-          console.log('Cleared all keys and their related data stored in "sessionStorage" at this origin.');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'local_storage_all', {
-        get() {
-          console.log('The key-value pairs of all keys stored in "localStorage" at this origin.');
-          const rows = storage.internals.getLocalStorageAllKeyValuePairs();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- Local Storage Key-Value Pairs List is EMPTY ---');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'local_storage_non_store', {
-        get() {
-          console.log('The key-value pairs of all keys stored in "localStorage" at this origin, excluding those created through store.js.');
-          const rows = storage.internals.getLocalStorageNonStoreKeyValuePairs();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- Local Storage Non-Store Key-Value Pairs List is EMPTY ---');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'session_storage_all', {
-        get() {
-          console.log('The key-value pairs of all keys stored in "sessionStorage" at this origin.');
-          const rows = storage.internals.getSessionStorageAllKeyValuePairs();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- Session Storage Key-Value Pairs List is EMPTY ---');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'session_storage_non_store', {
-        get() {
-          console.log('The key-value pairs of all keys stored in "sessionStorage" at this origin, excluding those created through store.js.');
-          const rows = storage.internals.getSessionStorageNonStoreKeyValuePairs();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- Session Storage Non-Store Key-Value Pairs List is EMPTY ---');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'origin', {
-        get() {
-          console.log('All namespace-keys-value-expiry data of all keys stored at this origin using store.js.');
-          const rows = storage.internals.getOriginStorageTable();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- Origin is EMPTY ---');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      Object.defineProperty(keysObj, 'project', {
-        get() {
-          console.log('All namespace-key-value-expiry data of all keys stored at this origin by this project using store.js.');
-          const rows = storage.internals.getProjectStorageTable();
-          if (rows.length > 0) console.table(rows);
-          else console.log('--- Project is EMPTY ---');
-        },
-        configurable: true,
-        enumerable: true
-      });
-
-      return keysObj;
-    }
-
-    // Create main object and assign sub-objects to it.
+    // Main object
     const mainObj = Object.create(null);
-    Object.defineProperty(mainObj, 'info', { value: makeInfoObj(), configurable: true, enumerable: true });
-    Object.defineProperty(mainObj, 'data', { value: makeDataObj(), configurable: true, enumerable: true });
-    Object.defineProperty(mainObj, 'keys', { value: makeKeysObj(), configurable: true, enumerable: true });
 
-    Object.defineProperty(mainObj, 'help', {
+    // About project
+    Object.defineProperty(mainObj, 'about', {
       get() {
-        console.log(`${vars.consoleObjectName}.info : Project and environment information`);
-        console.log(`${vars.consoleObjectName}.data : Generated data views`);
-        console.log(`${vars.consoleObjectName}.keys : Storage inspection and clearing helpers`);
+        const gap = '\n' + ' '.repeat(19); // Details line start position
+        console.group('About Project');
+        console.log('%s%c%s%c%s%c%s', 'Date-Time        : ', 'color: LinkText;', storage.internals.dateTime, '', gap,
+          'color: GrayText; font-size: 90%;', 'Doxygen generation date-time.');
+        console.log('%s%c%s%c%s%c%s', 'Doc Root         : ', 'color: LinkText;', CONSTS.DOC_ROOT, '', gap,
+          'color: GrayText; font-size: 90%;', 'Origin URL plus the repository name (hosted online) or local folder path (hosted offline).');
+        console.log('%s%c%s%c%s%c%s', 'Storage Namespace: ', 'color: LinkText;', storage.internals.namespace, '', gap,
+          'color: GrayText; font-size: 90%;', 'Namespace used to store project data through the store.js namespace feature.');
+
+        console.groupEnd();
       },
       configurable: true,
       enumerable: true
     });
+
+    Object.defineProperty(mainObj, 'build', { value: makeBuildObj(), configurable: true, enumerable: true });
+    Object.defineProperty(mainObj, 'store', { value: makeStoreObj(), configurable: true, enumerable: true });
 
     // Assign "dp" as the console debug handler if it is not already defined.
     // If "dp" is already defined, use "debugDoxyPlus" instead.
@@ -3542,6 +4236,99 @@
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 CONSOLE OBJECT
+
+  // #region 🟩 DOXSECTION CUSTOMIZATION
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  // Customizes doxsection on Markdown pages for better view
+  async function doxsectionsCustomizations() {
+
+    // Only needed on pages that have doxsections e.g. Markdown pages
+    if (!vars.pageHasDoxsections) return;
+
+    // Return if page content is not found
+    if (!vars.els.PAGE_CONTENT || !vars.els.PAGE_CONTENT.isConnected) {
+      vars.els.PAGE_CONTENT = await waitFor(CONSTS.SEL.PAGE_CONTENT);
+      if (!vars.els.PAGE_CONTENT) {
+        console.warn(`doxsectionsCustomizations(): Selector ${CONSTS.SEL.PAGE_CONTENT} not found.`);
+        return;
+      }
+    }
+
+    // Query all doxsection headings
+    const doxHeads = vars.els.PAGE_CONTENT.querySelectorAll(':is(h1, h2, h3, h4, h5, h6).doxsection');
+    const headStack = [];
+    for (let ii = 0; ii < doxHeads.length; ++ii) {
+      const heading = doxHeads[ii];
+      const level = Number(heading.tagName.slice(1));
+      const text = heading.textContent.replace(/\s+/g, ' ').trim();
+      if (!text) continue;
+
+      headStack[level - 1] = text;
+      headStack.length = level;
+
+      const parentPath = headStack.slice(0, level - 1).join(' > ');
+
+      // For a child doxsection attach its parent path
+      // dataset.dpDoxsectionParentPath = 'data-dp-doxsection-parent-path' in html
+      if (parentPath) heading.dataset.dpDoxsectionParentPath = parentPath;
+      else delete heading.dataset.dpDoxsectionParentPath;
+
+      // Set has children flags for parent sections
+      // dataset.dpDoxsectionHasChildren = 'data-dp-doxsection-has-children' in html
+      const nextHeading = doxHeads[ii + 1];
+      if (nextHeading) {
+        const nextLevel = Number(nextHeading.tagName.slice(1));
+        if (nextLevel > level) heading.dataset.dpDoxsectionHasChildren = 'true';
+        else delete heading.dataset.dpDoxsectionHasChildren;
+      } else {
+        delete heading.dataset.dpDoxsectionHasChildren;
+      }
+    }
+
+    // We wrap child doxsections in additional 'div' so that we can change
+    // its margin and add a vertical line on the left to show the depth of
+    // child sections.
+    const doxNodes = Array.from(vars.els.PAGE_CONTENT.children);
+    const nodeStack = [];
+    for (const doxNode of doxNodes) {
+      const isHeading = doxNode.matches(':is(h1, h2, h3, h4, h5, h6).doxsection');
+      const level = isHeading ? Number(doxNode.tagName.slice(1)) : 0;
+
+      if (isHeading) {
+        while (nodeStack.length && nodeStack[nodeStack.length - 1].level >= level) {
+          nodeStack.pop();
+        }
+
+        if (nodeStack.length) {
+          nodeStack[nodeStack.length - 1].wrap.appendChild(doxNode);
+        }
+
+        if (doxNode.dataset.dpDoxsectionHasChildren === 'true') {
+          const wrap = document.createElement('div');
+          wrap.className = CONSTS.CLS.DOXSECTION_CHILDREN;
+          wrap.dataset.dpDoxsectionChildrenOf = doxNode.tagName.toLowerCase();
+
+          if (nodeStack.length) {
+            nodeStack[nodeStack.length - 1].wrap.appendChild(wrap);
+          } else {
+            doxNode.insertAdjacentElement('afterend', wrap);
+          }
+
+          nodeStack.push({ level, wrap });
+        }
+
+        continue;
+      }
+
+      if (nodeStack.length) {
+        nodeStack[nodeStack.length - 1].wrap.appendChild(doxNode);
+      }
+    }
+  }
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // #endregion 🟥 DOXSECTION CUSTOMIZATION
 
   // #region 🟩 VERTICAL SCROLL
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -3609,6 +4396,69 @@
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // #endregion 🟥 VERTICAL SCROLL
 
+  // #region 🟩 MARKDOWN PAGENAV
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  // Attches a class to markdown page nav header items, because Doxygen does not do that 
+  function markdownPagenav() {
+
+    // NOTE: doxsectionsCustomizations() function should have run before running this function
+
+    // Only run on pages that have doxsection (e.g. Markdown pages) and when page content is available
+    if (!vars.pageHasDoxsections || !vars.els.PAGE_CONTENT || !vars.els.PAGE_CONTENT.isConnected) return;
+
+    // Function to attach markdown page nav haeder item correctly
+    function attchPagenavItemClass() {
+
+      // The headings in the main page that have children are already
+      // customized with `data-dp-doxsection-has-children="true"` in
+      // doxygenCustomization() function.
+      const headings = vars.els.PAGE_CONTENT.querySelectorAll(
+        ':is(h1, h2, h3, h4, h5, h6).doxsection[data-dp-doxsection-has-children="true"]'
+      );
+
+      // For each heading get its anchor then find the same anchor in page nav
+      // and attach a class called 'dp-markdown-page-nav-header-item' to it.
+      // Page nav items with 'dp-markdown-page-nav-header-item' is customized
+      // using CSS.
+      for (const heading of headings) {
+        const anchor = heading.querySelector(':scope > a.anchor[id]');
+        if (!anchor) continue;
+        const navItem = document.getElementById(`nav-${anchor.id}`);
+        if (!navItem || !vars.els.PAGE_NAV.contains(navItem)) continue;
+        navItem.classList.add(CONSTS.CLS.MARKDOWN_PAGE_NAV_HEADER_ITEM);
+      }
+    }
+
+    // If page nav is available and has li items then proceed immediately otherwise use
+    // a mutation observer to wait for it. The page nav does not immediately gets populated
+    // with li items on page load and so waiting for it is necessary.
+    if (vars.els.PAGE_NAV && vars.els.PAGE_NAV.isConnected && vars.els.PAGE_NAV.querySelector('li')) {
+      attchPagenavItemClass();
+    }
+    else {
+      let pageNavItemMoTimeoutId = null;
+      const pageNavItemMo = new MutationObserver(() => {
+        if (!vars.els.PAGE_NAV || !vars.els.PAGE_NAV.isConnected) {
+          clearTimeout(pageNavItemMoTimeoutId);
+          pageNavItemMo.disconnect();
+          return;
+        }
+
+        if (vars.els.PAGE_NAV.querySelector('li')) {
+          attchPagenavItemClass();
+          clearTimeout(pageNavItemMoTimeoutId);
+          pageNavItemMo.disconnect();
+        }
+      });
+      pageNavItemMo.observe(vars.els.PAGE_NAV, { childList: true, subtree: true });
+      pageNavItemMoTimeoutId = setTimeout(() => { pageNavItemMo.disconnect(); }, 3000);
+    }
+  }
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // #endregion 🟥 MARKDOWN PAGENAV
+
   // #region 🟩 DOCUMENT READY CALLS
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -3658,9 +4508,16 @@
     // This stays synchronous and runs immediately.
     createConsoleObject();
 
+    // Customize doxsections on pages that have it e.g. Markdown pages
+    doxsectionsCustomizations();
+
     // Restore previous vertical scroll position for this page and save new
     // scroll positions as the user scrolls or when page hides.
     restoreAndObserveVScroll();
+
+    // Attaches 'dp-markdown-page-nav-header-item' to page nav header items on
+    // markdown pages, because Doxygen does not do that.
+    markdownPagenav();
   }
 
   // Fires as soon as the browser has parsed the HTML and built the DOM (Document Object Model) tree — before images, 

@@ -1,7 +1,7 @@
 <map id="npi::app::orgPublicDocumentsDir" name="npi::app::orgPublicDocumentsDir">
 <area shape="rect" id="Node000001" title="Absolute organization&#45;level Public/Documents path." alt="" coords="5,13,275,38"/>
 <area shape="rect" id="Node000002" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="323,5,552,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,23,315,23,315,28,274,28"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,23,317,26,312,26,275,28"/>
 <area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633" title="Windows native fatal error message box." alt="" coords="600,13,845,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="552,23,592,23,592,28,552,28"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="552,23,595,26,590,26,552,28"/>
 </map>

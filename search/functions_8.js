@@ -19,7 +19,7 @@ var searchData=
   ['islocked_5f_16',['isLocked_',['../da/d1f/classnpi_1_1_global_locker.html#a064436d889306ded09d74f9fa74f7857',1,'npi::GlobalLocker']]],
   ['ispermanentconsole_5f_17',['isPermanentConsole_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af72ec4207bb7c4bd6752f9fdfd6f914f',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['isrefptrfromthisavailable_5f_18',['isRefPtrFromThisAvailable_',['../d8/d8d/classnpi_1_1_ref_ptr_from_this.html#a5efdccd5fa5e9fe2edd474fe62101e2b',1,'npi::RefPtrFromThis']]],
-  ['issame_5f_19',['isSame_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a82cb63d42d8ba5ce3a610f15f7eaf682',1,'npi::RefPtrHost']]],
+  ['issame_5f_19',['isSame_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a9b188d886abe828e00dd37ec928d86aa',1,'npi::RefPtrHost']]],
   ['isspacechar_20',['isSpaceChar',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a1e4219749cab61533a6faf773fe7cddb',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['isspacechar_5f_21',['isSpaceChar_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a8ed9f249e7504829fc96b3f80a39d59d',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
   ['isvalid_5f_22',['isValid_',['../d2/d0d/classnpi_1_1_ref_ptr.html#a665c4ac45f2a60a261d1fe6f335eb7be',1,'npi::RefPtr::isValid_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#a0ba9792630f4de6ddc7b7d18cf65e666',1,'npi::RefPtrHost::isValid_()'],['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#ac9a92d740e1df43c31abfc5d4e4f94b2',1,'npi::RefPtrWeakHost::isValid_()']]],

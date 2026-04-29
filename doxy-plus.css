@@ -121,9 +121,10 @@ html {
   --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
   --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
   --dp-scrollbar-color: rgb(160, 175, 190); /* scrollbar button and handle color */
-  --dp-item-prefix-color: rgb(100, 100, 100); /* Namespace prefix for items in root pane */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
-  --dp-text-visited-color: rgb(200, 50, 200); /* visited entry in root and leaf panes */
+  --dp-item-prefix-color: rgb(120, 120, 120); /* Prefix color for items in root and leaf pane */
+  --dp-text-visited-color: rgb(200, 50, 200); /* Color of visited item in leaf pane */
+  --dp-item-prefix-visited-color: rgb(240, 100, 240); /* Prefix color of visited items in leaf pane */
   --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
   --dp-text-search-select-color: var(--dp-mark-color); /* search select text color */
   --dp-text-page-nav-section-color: var(--dp-mark-color); /* section entries in page nav */
@@ -154,9 +155,10 @@ html.dark-mode {
   --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
   --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
   --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */
-  --dp-item-prefix-color: rgb(150, 150, 150); /* Namespace prefix for items in root pane */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
-  --dp-text-visited-color: rgb(250, 100, 250); /* visited entry in root and leaf panes */
+  --dp-item-prefix-color: rgb(120, 120, 120); /* Prefix color for items in root and leaf pane */
+  --dp-text-visited-color: rgb(250, 100, 250); /* Color of visited item in leaf pane */
+  --dp-item-prefix-visited-color: rgb(180, 80, 180); /* Prefix color of visited items in leaf pane */
   --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
   --dp-text-search-select-color: var(--dp-mark-color); /* search select text color */
   --dp-text-page-nav-section-color: var(--dp-mark-color); /* section entries in page nav */
@@ -1128,8 +1130,12 @@ body:not(.dp-doc-header-available) #page-nav {
   In #page section name ids starts with 'nav-header-'. We make it sticky so
   that it is always visible if there are any items in that section currently
   visible in the #doc-content.
+
+  For markdown pages, we add 'dp-markdown-page-nav-header-item' to the li
+  items which are header items because Doxygen does not do that.
 */
-#page-nav-contents li[id^="nav-header-"] {
+#page-nav-contents li[id^="nav-header-"],
+#page-nav-contents li.dp-markdown-page-nav-header-item {
   position: sticky;
   top: 0;
   z-index: 2;
@@ -1146,8 +1152,14 @@ body:not(.dp-doc-header-available) #page-nav {
 /*
   To make section headers appear differently we apply different text color
   and different font weight for section header items.
+
+  For markdown pages, we add 'dp-markdown-page-nav-header-item' to the li
+  items which are header items because Doxygen does not do that. We have
+  to increase the specificity by using '#page-nav .page-outline >' because
+  otherwise it does not work.
 */
-#page-nav-contents ul.page-outline li[id^="nav-header-"] a {
+#page-nav-contents ul.page-outline li[id^="nav-header-"] a,
+#page-nav .page-outline > li.dp-markdown-page-nav-header-item > .item > a {
   font-weight: 600 !important;
   color: var(--dp-text-page-nav-section-color) !important;
   --primary-color: var(--dp-text-page-nav-section-color) !important;
@@ -1324,6 +1336,111 @@ dl.test{
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* HIDE XREFITEM ITEM AT SOURCE */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+#doc-content > div > div.contents > div.textblock .dp-hidden-xrefitem {
+  display: none;
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* MARKDOWN FILE CUSTOMIZATION */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/* Changing indentation of lists */
+#doc-content > div > div.contents > div.textblock ul,
+#doc-content > div > div.contents > div.textblock ol{
+  padding-inline-start: 30px;
+}
+
+/* To add a gap in markdown pages */
+#doc-content > div > div.contents > div.textblock .dp-markdown-list-gap {
+  height: 1em;
+}
+
+/* Changing the weight of bold font */
+#doc-content > div > div.contents > div.textblock b {
+  font-weight: 600;
+}
+
+/* Change the look of headings */
+#doc-content .doxsection {
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid var(--page-foreground-color);
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+/* Change the look of top level h1 heading */
+#doc-content h1.doxsection {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+/* Increase the font size for h2+ parent sections */
+#doc-content h2.doxsection[data-dp-doxsection-has-children],
+#doc-content h3.doxsection[data-dp-doxsection-has-children],
+#doc-content h4.doxsection[data-dp-doxsection-has-children],
+#doc-content h5.doxsection[data-dp-doxsection-has-children],
+#doc-content h6.doxsection[data-dp-doxsection-has-children]{
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* Change the look of the Markdown separator */
+#doc-content > div > div.contents > div.textblock hr {
+  background-color: var(--separator-color);
+  margin-right: 0px;
+  box-shadow: none;
+  height: 2px;
+}
+
+/* Change the look of parent section */
+#doc-content .doxsection[data-dp-doxsection-has-children] {
+  color: var(--dp-mark-color);
+  padding-left: calc(1.25rem + 2px);
+  padding-bottom: 0.5rem;
+  border-bottom: none;
+}
+
+/* Add parent path text for child section */
+#doc-content .doxsection[data-dp-doxsection-parent-path]::before {
+  content: attr(data-dp-doxsection-parent-path);
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 2px;
+  line-height: 1.5;
+}
+
+/* Different opacity in dark mode for parent path text */
+html.dark-mode{
+  #doc-content .doxsection[data-dp-doxsection-parent-path]::before {
+    opacity: 0.5;
+  }
+  #doc-content .doxsection[data-dp-doxsection-has-children][data-dp-doxsection-parent-path]::before {
+    opacity: 0.75;
+  }
+}
+
+/* Extra padding and border on left for child sections */
+#doc-content .dp-doxsection-children {
+  position: relative;
+  margin-left: 0em;
+  padding-left: 1.25rem;
+  border-top-left-radius: var(--dp-border-radius-l);
+  border-left: 2px solid var(--dp-mark-color);
+  border-top: 2px solid var(--dp-mark-color);
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* ROOT + LEAF PANE COMMON */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
@@ -1426,7 +1543,6 @@ li.dpt-node--branch.dpt-node--expanded > ul {
 /* Base configuration of prefix and label */
 .dpt-prefix,
 .dpt-label {
-  flex: 0 1 auto;
   align-items: center;
   text-align: center;
   min-width: 0;
@@ -1437,17 +1553,15 @@ li.dpt-node--branch.dpt-node--expanded > ul {
   text-overflow: ellipsis;
 }
 
-/* Prefix has different font size and color */
+/* Prefix does not shrink or expand and has different text color */
 .dpt-prefix {
+  flex: 0 0 auto;
   color: var(--dp-item-prefix-color);
-  /* Slight gap, this makes it feel like correct spacing between 
-  prefix and label, otherwise label is too close to the right end
-  of prefix */
-  padding-right: 1px;
 }
 
-/* Label has the default foreground color */
+/* Label can shrink but does not expand and has default foreground color */
 .dpt-label {
+  flex: 0 1 auto;
   color: var(--page-foreground-color);
 }
 
@@ -1601,7 +1715,16 @@ in vertical direction. */
 
 /* Style prefix differently */
 #dp-root-pane .dpt-prefix {
+  /* Slight gap, this makes it feel like correct spacing between 
+  prefix and label, otherwise label is too close to the right end
+  of prefix */
+  padding-right: 1px;
   font-family: var(--font-family-monospace);
+  font-size: calc(var(--dp-root-item-font-size) * 0.9);
+}
+
+/* Make separator slightly smaller than text*/
+#dp-root-pane .dpt-sep {
   font-size: calc(var(--dp-root-item-font-size) * 0.9);
 }
 
@@ -1876,8 +1999,12 @@ body.dp-hash-data-is-code #dp-leaf-show li.dpt-node--leaf > .dpt-row {
   background: var(--dp-leaf-item-hover-color);
 }
 
+/* Visisted text color for prefix */
+#dp-leaf-show li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-prefix {
+  color: var(--dp-item-prefix-visited-color);
+}
+
 /* Show visited text color */
-#dp-leaf-show li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-prefix,
 #dp-leaf-show li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-label {
   color: var(--dp-text-visited-color);
 }
