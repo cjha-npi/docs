@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xrefitem_20text_20at_20source_0',['Hide xrefitem Text at Source',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__hide_xrefitem_at_source',1,'']]]
+  ['yellow_0',['Yellow',['../d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8ba51e6cd92b6c45f9affdc158ecca2b8b8',1,'npi::TextSpec']]]
 ];

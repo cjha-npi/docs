@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['magic_20enum_0',['Magic Enum',['../dc/d55/dp_dep_magic_enum.html',1,'dp_dep_dir_dependencies']]],
-  ['main_20files_1',['Main Files',['../d6/d59/dp_dh_doxy_overview.html#autotoc_md7',1,'Main Files'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__main_files',1,'Main Files']]],
-  ['main_20project_2',['NPI Main Project',['../index.html',1,'']]],
-  ['maintenance_3',['Maintenance',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__license_maintenance',1,'Licensing and Maintenance'],['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__licensing_maintenance',1,'Licensing and Maintenance']]],
-  ['mapping_4',['Path mapping',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__path_mapping',1,'']]],
-  ['markdown_20tips_20tricks_5',['Markdown Tips &amp;amp; Tricks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks',1,'']]],
-  ['miscellaneous_6',['Miscellaneous',['../df/d08/dp_dh_dir_misc.html',1,'dp_dh_dir_dev_hub']]],
-  ['model_7',['Operational Model',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__operation_model',1,'']]],
-  ['model_8',['Thread-safety model',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesThreadSafety',1,'']]],
-  ['moodycamel_20queue_9',['MoodyCamel Queue',['../d7/d7b/dp_dep_moody_camel_queue.html',1,'dp_dep_dir_dependencies']]]
+  ['navigation_0',['Data &amp;amp; Navigation',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__data_and_nav',1,'']]],
+  ['needed_1',['Add Line Gap When Needed',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__line_gap_when_needed',1,'']]],
+  ['non_20blocking_20behavior_2',['Non-blocking behavior',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__non_block_behavior',1,'']]],
+  ['non_20heading_20texts_3',['Big Non-Heading Texts',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text',1,'']]],
+  ['npi_20main_20project_4',['NPI Main Project',['../index.html',1,'']]]
 ];

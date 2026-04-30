@@ -1,17 +1,13 @@
 var searchData=
 [
-  ['language_20requirements_0',['Compiler and Language Requirements',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__compiler_lang_requirements',1,'']]],
-  ['language_20standard_1',['Language Standard',['../d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__props_to_change__c_lang_standard',1,'C Language Standard'],['../d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__props_to_change__cpp_lang_standard',1,'C++ Language Standard']]],
-  ['layout_20options_2',['Stored Layout Options',['../d6/d59/dp_dh_doxy_overview.html#autotoc_md18',1,'']]],
-  ['license_3',['License',['../index.html#autotoc_md6',1,'']]],
-  ['licensing_20and_20maintenance_4',['Licensing and Maintenance',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__license_maintenance',1,'Licensing and Maintenance'],['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__licensing_maintenance',1,'Licensing and Maintenance']]],
-  ['lifetime_20and_20correctness_20requirements_5',['Lifetime and Correctness Requirements',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__lifetime_correctness_requirements',1,'']]],
-  ['limitations_6',['Limitations',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__limitations',1,'Limitations'],['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__limitations',1,'Limitations'],['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__limitations',1,'Limitations']]],
-  ['line_20gap_20when_20needed_7',['Add Line Gap When Needed',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__line_gap_when_needed',1,'']]],
-  ['links_8',['Adding Links',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__add_links',1,'']]],
-  ['list_9',['Bugs List',['../dc/d96/dp_dh_bugs.html',1,'']]],
-  ['location_10',['Browsing Database Location',['../dc/d17/dp_dh_vs_settings.html#dp_dh_vs_settings__browsing_database_location',1,'']]],
-  ['log_20process_11',['Imp Log Process',['../de/d99/dp_dep_imp_log_process.html',1,'dp_dep_dir_dependencies']]],
-  ['log_20selection_20in_20the_20host_12',['Log Selection in the Host',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__host_log_selection',1,'']]],
-  ['logging_13',['Logging',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__logging',1,'']]]
+  ['magic_20enum_0',['Magic Enum',['../dc/d55/dp_dep_magic_enum.html',1,'dp_dep_dir_dependencies']]],
+  ['main_20files_1',['Main Files',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__main_files',1,'']]],
+  ['main_20project_2',['NPI Main Project',['../index.html',1,'']]],
+  ['maintenance_3',['Maintenance',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__license_maintenance',1,'Licensing and Maintenance'],['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__licensing_maintenance',1,'Licensing and Maintenance']]],
+  ['mapping_4',['Path mapping',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__path_mapping',1,'']]],
+  ['markdown_20tips_20tweaks_5',['Markdown Tips &amp;amp; Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'']]],
+  ['miscellaneous_6',['Miscellaneous',['../df/d08/dp_dh_dir_misc.html',1,'dp_dh_dir_dev_hub']]],
+  ['model_7',['Operational Model',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__operation_model',1,'']]],
+  ['model_8',['Thread-safety model',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesThreadSafety',1,'']]],
+  ['moodycamel_20queue_9',['MoodyCamel Queue',['../d7/d7b/dp_dep_moody_camel_queue.html',1,'dp_dep_dir_dependencies']]]
 ];

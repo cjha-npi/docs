@@ -4431,12 +4431,13 @@
     }
 
     // If page nav is available and has li items then proceed immediately otherwise use
-    // a mutation observer to wait for it. The page nav does not immediately gets populated
-    // with li items on page load and so waiting for it is necessary.
+    // a mutation observer to wait for it only if the page nav parent element exists. 
+    // The page nav does not immediately gets populated with li items on page load and 
+    // so waiting for it is necessary.
     if (vars.els.PAGE_NAV && vars.els.PAGE_NAV.isConnected && vars.els.PAGE_NAV.querySelector('li')) {
       attchPagenavItemClass();
     }
-    else {
+    else if (vars.els.PAGE_NAV && vars.els.PAGE_NAV.isConnected) {
       let pageNavItemMoTimeoutId = null;
       const pageNavItemMo = new MutationObserver(() => {
         if (!vars.els.PAGE_NAV || !vars.els.PAGE_NAV.isConnected) {

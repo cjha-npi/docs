@@ -104,6 +104,7 @@ var NAVTREEINDEX1 =
 "d0/da7/_log_8cpp_source.html":[7,0,7],
 "d0/db8/_ref_ptr_classes_8hpp.html":[7,0,12],
 "d0/db8/_ref_ptr_classes_8hpp_source.html":[7,0,12],
+"d1/d79/dp_dh_dir_rainmeter.html":[2,5],
 "d1/d7e/conceptnpi_1_1_polymorphically_related.html":[4,0,2,12],
 "d1/d7e/conceptnpi_1_1_polymorphically_related.html":[5,0,0],
 "d1/dd4/dp_dh_vs_proj_props.html":[2,2,1],
@@ -191,6 +192,10 @@ var NAVTREEINDEX1 =
 "d2/d0d/classnpi_1_1_ref_ptr.html#aff085c56c649f41e22c95d36c7c5a46f":[4,0,2,6,0],
 "d2/d0d/classnpi_1_1_ref_ptr.html#aff085c56c649f41e22c95d36c7c5a46f":[6,0,1,5,0],
 "d2/d46/dp_dep_dir_dependencies.html":[1],
+"d2/da4/dp_dh_rainmeter_overview.html":[2,5,0],
+"d2/da4/dp_dh_rainmeter_overview.html#dp_dh_rainmeter_overview__install":[2,5,0,2],
+"d2/da4/dp_dh_rainmeter_overview.html#dp_dh_rainmeter_overview__intro":[2,5,0,0],
+"d2/da4/dp_dh_rainmeter_overview.html#dp_dh_rainmeter_overview__requirements":[2,5,0,1],
 "d2/dad/classnpi_1_1_ref_ptr_weak_host.html":[4,0,2,9],
 "d2/dad/classnpi_1_1_ref_ptr_weak_host.html":[6,0,1,8],
 "d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a0619d5f297d3e72da8f5b827983617f7":[4,0,2,9,16],
@@ -244,10 +249,5 @@ var NAVTREEINDEX1 =
 "d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8ba9594eec95be70e7b1710f730fdda33d9":[4,0,2,11,2,3],
 "d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8ba9594eec95be70e7b1710f730fdda33d9":[6,0,1,10,2,3],
 "d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bab91cc2c1416fcca942b61c7ac5b1a9ac":[4,0,2,11,2,6],
-"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bab91cc2c1416fcca942b61c7ac5b1a9ac":[6,0,1,10,2,6],
-"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bad382816a3cbeed082c9e216e7392eed1":[4,0,2,11,2,2],
-"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bad382816a3cbeed082c9e216e7392eed1":[6,0,1,10,2,2],
-"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8baee38e4d5dd68c4e440825018d549cb47":[4,0,2,11,2,1],
-"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8baee38e4d5dd68c4e440825018d549cb47":[6,0,1,10,2,1],
-"d2/db7/classnpi_1_1_text_spec.html#a09ed5179c0dfd97c19b4012e63caeffb":[4,0,2,11,27]
+"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bab91cc2c1416fcca942b61c7ac5b1a9ac":[6,0,1,10,2,6]
 };

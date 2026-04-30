@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['failure_20behavior_0',['Exception and Failure Behavior',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__exception_failure_behavior',1,'']]],
-  ['file_1',['doxy-plus.css FIle',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
-  ['file_2',['doxy-plus.js File',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_doxygen']]],
-  ['file_20selection_20rules_3',['File selection rules',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__file_selection_rules',1,'']]],
-  ['files_4',['Files',['../df/da8/dp_dh_doxy_html_files.html',1,'HTML Files'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__main_files__htmls',1,'HTML Files'],['../d6/d59/dp_dh_doxy_overview.html#autotoc_md7',1,'Main Files'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__main_files',1,'Main Files']]],
-  ['fixes_5',['Bugs and Fixes',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__bugs',1,'']]],
-  ['flow_6',['Generation Flow',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__gen_flow',1,'']]],
-  ['footer_20html_7',['Footer HTML',['../df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__foot',1,'']]]
+  ['gap_20when_20needed_0',['Add Line Gap When Needed',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__line_gap_when_needed',1,'']]],
+  ['gates_1',['Preconditions &amp;amp; Gates',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__precons_gates',1,'']]],
+  ['generation_20flow_2',['Generation Flow',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__gen_flow',1,'']]],
+  ['git_20github_3',['Git &amp;amp; Github',['../de/d8d/dp_dh_dir_git_github.html',1,'dp_dh_dir_dev_hub']]],
+  ['git_20pre_20push_20hook_4',['Git &amp;amp; Pre-Push Hook',['../d7/d32/dp_dh_git_pre_push_hook.html',1,'dp_dh_dir_git_github']]],
+  ['github_5',['Git &amp;amp; Github',['../de/d8d/dp_dh_dir_git_github.html',1,'dp_dh_dir_dev_hub']]],
+  ['guard_6',['Early Safety guard',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__early_safety_guard',1,'']]]
 ];

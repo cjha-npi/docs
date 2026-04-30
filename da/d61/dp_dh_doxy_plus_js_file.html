@@ -4573,12 +4573,13 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // If page nav is available and has li items then proceed immediately otherwise use</div>
-<div class="line">    // a mutation observer to wait for it. The page nav does not immediately gets populated</div>
-<div class="line">    // with li items on page load and so waiting for it is necessary.</div>
+<div class="line">    // a mutation observer to wait for it only if the page nav parent element exists. </div>
+<div class="line">    // The page nav does not immediately gets populated with li items on page load and </div>
+<div class="line">    // so waiting for it is necessary.</div>
 <div class="line">    if (vars.els.PAGE_NAV &amp;&amp; vars.els.PAGE_NAV.isConnected &amp;&amp; vars.els.PAGE_NAV.querySelector(&#39;li&#39;)) {</div>
 <div class="line">      attchPagenavItemClass();</div>
 <div class="line">    }</div>
-<div class="line">    else {</div>
+<div class="line">    else if (vars.els.PAGE_NAV &amp;&amp; vars.els.PAGE_NAV.isConnected) {</div>
 <div class="line">      let pageNavItemMoTimeoutId = null;</div>
 <div class="line">      const pageNavItemMo = new MutationObserver(() =&gt; {</div>
 <div class="line">        if (!vars.els.PAGE_NAV || !vars.els.PAGE_NAV.isConnected) {</div>

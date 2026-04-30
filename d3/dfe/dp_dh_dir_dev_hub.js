@@ -14,13 +14,13 @@ var dp_dh_dir_dev_hub =
         [ "Dev Hub Required Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_required_page", null ],
         [ "Dev Hub Bugs Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_bugs_page", null ]
       ] ],
-      [ "Markdown Tips &amp; Tricks", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks", [
-        [ "Adding Links", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__add_links", null ],
-        [ "Adding Images", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__add_images", null ],
-        [ "Inserting Anchors", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__insert_anchorss", null ],
-        [ "Hide xrefitem Text at Source", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__hide_xrefitem_at_source", null ],
-        [ "Add Line Gap When Needed", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__line_gap_when_needed", null ],
-        [ "Big Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__big_non_heading_text", null ]
+      [ "Markdown Tips &amp; Tweaks", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks", [
+        [ "Adding Links", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__add_links", null ],
+        [ "Adding Images", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__add_images", null ],
+        [ "Inserting Anchors", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__insert_anchorss", null ],
+        [ "Hide xrefitem Text at Source", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source", null ],
+        [ "Add Line Gap When Needed", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__line_gap_when_needed", null ],
+        [ "Big Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text", null ]
       ] ]
     ] ],
     [ "Conventions", "d5/dff/dp_dh_conventions.html", [
@@ -32,5 +32,6 @@ var dp_dh_dir_dev_hub =
     [ "Visual Studio", "d4/d27/dp_dh_dir_visual_studio.html", "d4/d27/dp_dh_dir_visual_studio" ],
     [ "Doxygen", "d4/d7c/dp_dh_dir_doxygen.html", "d4/d7c/dp_dh_dir_doxygen" ],
     [ "Git &amp; Github", "de/d8d/dp_dh_dir_git_github.html", "de/d8d/dp_dh_dir_git_github" ],
+    [ "Rainmeter Skin", "d1/d79/dp_dh_dir_rainmeter.html", "d1/d79/dp_dh_dir_rainmeter" ],
     [ "Miscellaneous", "df/d08/dp_dh_dir_misc.html", "df/d08/dp_dh_dir_misc" ]
 ];
