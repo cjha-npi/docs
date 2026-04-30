@@ -1347,6 +1347,12 @@ dl.test{
 /* MARKDOWN FILE CUSTOMIZATION */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* Big non-heading text */
+#doc-content > div > div.contents > div.textblock .dp-markdown-big-text {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
 /* Changing indentation of lists */
 #doc-content > div > div.contents > div.textblock ul,
 #doc-content > div > div.contents > div.textblock ol{

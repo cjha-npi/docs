@@ -1,13 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"d6/d78/classnpi_1_1_ref_ptr_host.html":[4,0,2,8],
-"d6/d78/classnpi_1_1_ref_ptr_host.html":[6,0,1,7],
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a033844bc8dfa33aec904f84ffff11e1c":[4,0,2,8,4],
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a033844bc8dfa33aec904f84ffff11e1c":[6,0,1,7,4],
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a068f8403d8f79dbbae4cb714178bf9a2":[4,0,2,8,27],
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a068f8403d8f79dbbae4cb714178bf9a2":[6,0,1,7,27],
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a0ba9792630f4de6ddc7b7d18cf65e666":[4,0,2,8,12],
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a0ba9792630f4de6ddc7b7d18cf65e666":[6,0,1,7,12],
 "d6/d78/classnpi_1_1_ref_ptr_host.html#a161a8052754985bb8024c19c06fd9206":[4,0,2,8,38],
 "d6/d78/classnpi_1_1_ref_ptr_host.html#a161a8052754985bb8024c19c06fd9206":[6,0,1,7,38],
 "d6/d78/classnpi_1_1_ref_ptr_host.html#a29d994cc92740f0ba73ebfd1011415df":[4,0,2,8,3],
@@ -249,5 +241,13 @@ var NAVTREEINDEX3 =
 "da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a2ebe2dc8dcac0a790c9370d3d78ccdce":[4,0,2,8,0,4],
 "da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a2ebe2dc8dcac0a790c9370d3d78ccdce":[6,0,1,7,0,4],
 "da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a4fa3584265b47d44d2fea9b07e96fefd":[4,0,2,8,0,3],
-"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a4fa3584265b47d44d2fea9b07e96fefd":[6,0,1,7,0,3]
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a4fa3584265b47d44d2fea9b07e96fefd":[6,0,1,7,0,3],
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a648f9c28d4486f336c6c574ccbbc14d8":[4,0,2,8,0,6],
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#a648f9c28d4486f336c6c574ccbbc14d8":[6,0,1,7,0,6],
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#aab47d9a67c818230a9826c1dffdc2dac":[4,0,2,8,0,0],
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#aab47d9a67c818230a9826c1dffdc2dac":[6,0,1,7,0,0],
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#ab5ff9089a3797aebbc175acb36a2c728":[4,0,2,8,0,5],
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#ab5ff9089a3797aebbc175acb36a2c728":[6,0,1,7,0,5],
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#ae9801536498b8a7492b04328a9be71b8":[4,0,2,8,0,1],
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#ae9801536498b8a7492b04328a9be71b8":[6,0,1,7,0,1]
 };

@@ -1,13 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"functions_g.html":[6,2,0,6],
-"functions_h.html":[6,2,0,7],
-"functions_i.html":[6,2,0,8],
-"functions_l.html":[6,2,0,9],
-"functions_m.html":[6,2,0,10],
-"functions_n.html":[6,2,0,11],
-"functions_o.html":[6,2,0,12],
-"functions_p.html":[6,2,0,13],
 "functions_q.html":[6,2,0,14],
 "functions_r.html":[6,2,0,15],
 "functions_rela.html":[6,2,4],

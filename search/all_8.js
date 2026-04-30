@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gap_20when_20needed_0',['Add Line Gap When Needed',['../d3/df8/dp_dh_dev_hub_overview.html#autotoc_md45',1,'']]],
+  ['gap_20when_20needed_0',['Add Line Gap When Needed',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__line_gap_when_needed',1,'']]],
   ['gates_1',['Preconditions &amp;amp; Gates',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__precons_gates',1,'']]],
   ['generation_20flow_2',['Generation Flow',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__gen_flow',1,'']]],
   ['get_5f_3',['get_',['../d2/d0d/classnpi_1_1_ref_ptr.html#a648720bbca1c6b1ebe9e6bd14176e692',1,'npi::RefPtr::get_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#acb32eb21f8b38a7ff7bc276d994b9e36',1,'npi::RefPtrHost::get_()']]],

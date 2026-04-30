@@ -2,39 +2,25 @@ var dp_dh_dir_dev_hub =
 [
     [ "Overview", "d3/df8/dp_dh_dev_hub_overview.html", [
       [ "Introduction", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__intro", null ],
-      [ "Special Branches", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md21", [
-        [ "Limitations", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md22", [
-          [ "Markdown Page Hierarchy", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md23", null ]
-        ] ],
-        [ "Constraints", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md24", [
-          [ "Tree Node Restriction", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md25", null ],
-          [ "Starting Point", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md26", null ]
-        ] ],
-        [ "Setup", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md27", [
-          [ "Rules", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md28", null ],
-          [ "Recommendations", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md29", null ],
-          [ "Contents File", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md30", null ]
-        ] ],
-        [ "Project-Independent Branches", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md31", [
-          [ "Dev Hub Branch", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md32", null ]
-        ] ],
-        [ "Project-Dependent Branches", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md33", [
-          [ "Dependencies Branch", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md34", null ],
-          [ "Architecture Branch", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md35", null ]
-        ] ]
+      [ "Additional Branches", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches", [
+        [ "Rules", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__rules", null ],
+        [ "Types", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__types", null ],
+        [ "Dev Hub Branch", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__dev_hub_branch", null ],
+        [ "Dependencies Branch", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__dependencies_branch", null ],
+        [ "Architecture Branch", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__architecture_branch", null ]
       ] ],
-      [ "Automatic Pages", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md36", [
-        [ "Project Required Page", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md37", null ],
-        [ "Dev Hub Required Page", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md38", null ],
-        [ "Dev Hub Bugs Page", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md39", null ]
+      [ "Automatic Pages", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages", [
+        [ "Project Required Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__project_required_page", null ],
+        [ "Dev Hub Required Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_required_page", null ],
+        [ "Dev Hub Bugs Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_bugs_page", null ]
       ] ],
-      [ "Adding Content to Markdown Files", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md40", [
-        [ "Adding Links", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md41", null ],
-        [ "Adding Images", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md42", null ]
-      ] ],
-      [ "Tips &amp; Tricks", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md43", [
-        [ "Hide xrefitem Text at Source", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md44", null ],
-        [ "Add Line Gap When Needed", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md45", null ]
+      [ "Markdown Tips &amp; Tricks", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks", [
+        [ "Adding Links", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__add_links", null ],
+        [ "Adding Images", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__add_images", null ],
+        [ "Inserting Anchors", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__insert_anchorss", null ],
+        [ "Hide xrefitem Text at Source", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__hide_xrefitem_at_source", null ],
+        [ "Add Line Gap When Needed", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__line_gap_when_needed", null ],
+        [ "Big Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tricks__big_non_heading_text", null ]
       ] ]
     ] ],
     [ "Conventions", "d5/dff/dp_dh_conventions.html", [
