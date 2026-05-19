@@ -1,8 +1,4 @@
 var dp_dh_dir_rainmeter =
 [
-    [ "Overview", "d2/da4/dp_dh_rainmeter_overview.html", [
-      [ "Introduction", "d2/da4/dp_dh_rainmeter_overview.html#dp_dh_rainmeter_overview__intro", null ],
-      [ "Requirements", "d2/da4/dp_dh_rainmeter_overview.html#dp_dh_rainmeter_overview__requirements", null ],
-      [ "Installation", "d2/da4/dp_dh_rainmeter_overview.html#dp_dh_rainmeter_overview__install", null ]
-    ] ]
+    [ "CJ_SysGraphs Skin", "dd/df8/dp_dh_dir_rm_sys_graphs.html", "dd/df8/dp_dh_dir_rm_sys_graphs" ]
 ];

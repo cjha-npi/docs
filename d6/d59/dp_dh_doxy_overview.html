@@ -370,7 +370,15 @@ Dox Extension Setup</h2>
 <p>To revert the association, in an Administrator level Command Prompt, run:</p>
 <div class="fragment"><div class="line">assoc .dox=</div>
 <div class="line">ftype Doxygen.Config=</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dp_dh_doxy_overview__bugs_fixes"></a>
+</div><!-- fragment --><p><span class="dp-markdown-big-text">Create Taskbar Pinnable Shortcut</span></p>
+<p>Since Microsoft’s current taskbar model is app-oriented, Windows may block pinning shortcuts whose target is not an <span class="tt">.exe</span>. To be able to pin the <span class="tt">.dox</span> file to the taskbar while maintaining its double-click to run functionality, do the following:</p>
+<p>Create a Windows shortcut with following shortcut target </p><div class="fragment"><div class="line">%SystemRoot%\System32\cmd.exe /d /c start &quot;&quot; &quot;C:\Path\To\YourFile.dox&quot;</div>
+</div><!-- fragment --><p> Change <span class="tt">C:\Path\To\YourFile.dox</span> to the correct file. Then right-click the shortcut select <span class="tt">Show more options &gt; Pin to taskbar</span>.</p>
+<p>Change the icon if needed, current icon for Main Project is:</p>
+<div class="image">
+<img src="../../dox_shortcut_icon.png" alt="" width="128px" height="auto"/>
+</div>
+    <h1 class="doxsection"><a class="anchor" id="dp_dh_doxy_overview__bugs_fixes"></a>
 Bugs and Fixes</h1>
 <h2 class="doxsection"><a class="anchor" id="dp_dh_doxy_overview__bugs_fixes__broken_hash"></a>
 Broken Hash with INLINE_SIMPLE_STRUCTS</h2>

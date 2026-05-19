@@ -8,7 +8,7 @@ var searchData=
   ['fields_5f_5',['fields_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aa21ed2b823fa9be1517a188dca8032af',1,'anonymous_namespace{Log.cpp}::LogCore::FieldConfig']]],
   ['fieldstostrings_5f_6',['FieldsToStrings_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a09f819da9e8a9fd17aae47c89f78b497',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['file_7',['doxy-plus.css FIle',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
-  ['file_8',['doxy-plus.js File',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_doxygen']]],
+  ['file_8',['File',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'doxy-plus.js File'],['../d5/da9/dp_dh_rm_sys_graphs_skin_file.html',1,'Rainmeter Skin File']]],
   ['file_20selection_20rules_9',['File selection rules',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__file_selection_rules',1,'']]],
   ['filebasename_5f_10',['fileBaseName_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a7d1d1db76e938c74f3602c5e18443264',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['fileline_11',['FileLine',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36a995f116e75809666864045a846c51ae0',1,'anonymous_namespace{Log.cpp}::LogCore']]],
@@ -38,9 +38,11 @@ var searchData=
   ['flushinterval_5f_35',['FlushInterval_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a65ebdcc24bfd585e31f165aec297c528',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['font_5f_36',['font_',['../da/d3b/structnpi_1_1_text_spec_1_1_group.html#abd69a742b2a82f2df0adcf50ac2b38fc',1,'npi::TextSpec::Group']]],
   ['footer_20html_37',['Footer HTML',['../df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__foot',1,'']]],
-  ['formatoneline_5f_38',['FormatOneLine_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ada2216e6d5c8ed9150550651e529c9a7',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['funcname_5f_39',['funcName_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a7c2503d683cf2a34a0d6e5f273fa3ed3',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
-  ['funcnamelen_5f_40',['funcNameLen_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#af4401d948f8c6e2d370469e772480cf2',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
-  ['function_41',['Function',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36a86408593c34af77fdd90df932f8b5261',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['futuredir_42',['futureDir',['../d5/ddd/namespacenpi_1_1log.html#a90cd97a57be7cb3a82198fcf86a00d76',1,'npi::log']]]
+  ['force_20new_20line_38',['Force New Line',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_new_line',1,'']]],
+  ['force_20visual_20indent_39',['Force Visual Indent',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent',1,'']]],
+  ['formatoneline_5f_40',['FormatOneLine_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ada2216e6d5c8ed9150550651e529c9a7',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['funcname_5f_41',['funcName_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a7c2503d683cf2a34a0d6e5f273fa3ed3',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
+  ['funcnamelen_5f_42',['funcNameLen_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#af4401d948f8c6e2d370469e772480cf2',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
+  ['function_43',['Function',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36a86408593c34af77fdd90df932f8b5261',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['futuredir_44',['futureDir',['../d5/ddd/namespacenpi_1_1log.html#a90cd97a57be7cb3a82198fcf86a00d76',1,'npi::log']]]
 ];

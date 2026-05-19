@@ -18,6 +18,8 @@ var dp_dh_dir_dev_hub =
         [ "Adding Links", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__add_links", null ],
         [ "Adding Images", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__add_images", null ],
         [ "Inserting Anchors", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__insert_anchorss", null ],
+        [ "Force New Line", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_new_line", null ],
+        [ "Force Visual Indent", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent", null ],
         [ "Hide xrefitem Text at Source", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source", null ],
         [ "Add Line Gap When Needed", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__line_gap_when_needed", null ],
         [ "Big Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text", null ]
@@ -29,9 +31,11 @@ var dp_dh_dir_dev_hub =
       [ "Coding Conventions", "d5/dff/dp_dh_conventions.html#dp_dh_conventions__coding_conventions", null ],
       [ "Comment Conventions", "d5/dff/dp_dh_conventions.html#dp_dh_conventions__comment_conventions", null ]
     ] ],
+    [ "Tips &amp; Tricks", "d2/dab/dp_dh_tips_tricks.html", [
+      [ "Create ICO Icons Using ImageMagick", "d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick", null ]
+    ] ],
     [ "Visual Studio", "d4/d27/dp_dh_dir_visual_studio.html", "d4/d27/dp_dh_dir_visual_studio" ],
     [ "Doxygen", "d4/d7c/dp_dh_dir_doxygen.html", "d4/d7c/dp_dh_dir_doxygen" ],
     [ "Git &amp; Github", "de/d8d/dp_dh_dir_git_github.html", "de/d8d/dp_dh_dir_git_github" ],
-    [ "Rainmeter Skin", "d1/d79/dp_dh_dir_rainmeter.html", "d1/d79/dp_dh_dir_rainmeter" ],
     [ "Miscellaneous", "df/d08/dp_dh_dir_misc.html", "df/d08/dp_dh_dir_misc" ]
 ];

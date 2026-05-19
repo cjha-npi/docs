@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['●_20full_20reload_3a_20dp_20already_20defined_20debugdoxyplus_20is_20the_20console_20debug_20handler_0',['● Full Reload: &quot;dp&quot; already defined - &quot;debugDoxyPlus&quot; is the console debug handler',['../d6/d59/dp_dh_doxy_overview.html#autotoc_md10',1,'']]],
-  ['●_20full_20reload_3a_20dp_20is_20the_20console_20debug_20handler_1',['● Full Reload: &quot;dp&quot; is the console debug handler',['../d6/d59/dp_dh_doxy_overview.html#autotoc_md8',1,'']]]
+  ['yellow_0',['Yellow',['../d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8ba51e6cd92b6c45f9affdc158ecca2b8b8',1,'npi::TextSpec']]]
 ];

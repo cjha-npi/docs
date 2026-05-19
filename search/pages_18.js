@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queue_0',['MoodyCamel Queue',['../d7/d7b/dp_dep_moody_camel_queue.html',1,'dp_dep_dir_dependencies']]]
+  ['xrefitem_20text_20at_20source_0',['Hide xrefitem Text at Source',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source',1,'']]]
 ];

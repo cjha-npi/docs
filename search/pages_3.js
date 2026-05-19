@@ -15,12 +15,14 @@ var searchData=
   ['dev_20hub_20required_20page_12',['Dev Hub Required Page',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_required_page',1,'']]],
   ['directories_13',['Additional Include Directories',['../d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__props_to_change__add_incl_dir',1,'']]],
   ['directory_14',['Directory',['../d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__props_to_change__int_dir',1,'Intermediate Directory'],['../d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__props_to_change__out_dir',1,'Output Directory']]],
-  ['documentation_15',['Documentation',['../index.html#autotoc_md5',1,'']]],
-  ['does_16',['What this hook does',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__what_it_does',1,'']]],
-  ['dox_20extension_20setup_17',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]],
-  ['doxy_20plus_20css_20file_18',['doxy-plus.css FIle',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxy_20plus_20js_20file_19',['doxy-plus.js File',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxyfile_20',['Doxyfile',['../dc/d5a/dp_dh_doxy_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxygen_21',['Doxygen',['../d4/d7c/dp_dh_dir_doxygen.html',1,'dp_dh_dir_dev_hub']]],
-  ['doxygen_20examples_22',['Doxygen Examples',['../d6/d8f/dp_dh_doxy_examples.html',1,'dp_dh_dir_misc']]]
+  ['dll_15',['Build Plugin DLL',['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__dll_plugin',1,'']]],
+  ['dll_20plugin_20source_16',['DLL Plugin Source',['../d2/d5a/dp_dh_rm_sys_graphs_dll_plugin_source.html',1,'dp_dh_dir_rm_sys_graphs']]],
+  ['documentation_17',['Documentation',['../index.html#autotoc_md5',1,'']]],
+  ['does_18',['What this hook does',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__what_it_does',1,'']]],
+  ['dox_20extension_20setup_19',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]],
+  ['doxy_20plus_20css_20file_20',['doxy-plus.css FIle',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxy_20plus_20js_20file_21',['doxy-plus.js File',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxyfile_22',['Doxyfile',['../dc/d5a/dp_dh_doxy_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxygen_23',['Doxygen',['../d4/d7c/dp_dh_dir_doxygen.html',1,'dp_dh_dir_dev_hub']]],
+  ['doxygen_20examples_24',['Doxygen Examples',['../d6/d8f/dp_dh_doxy_examples.html',1,'dp_dh_dir_misc']]]
 ];
