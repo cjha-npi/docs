@@ -10,7 +10,7 @@ var searchData=
   ['branches_7',['Additional Branches',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches',1,'']]],
   ['broken_20hash_20with_20inline_5fsimple_5fstructs_8',['Broken Hash with INLINE_SIMPLE_STRUCTS',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__bugs_fixes__broken_hash',1,'Broken Hash with INLINE_SIMPLE_STRUCTS'],['../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000001',1,'Broken Hash with INLINE_SIMPLE_STRUCTS']]],
   ['browser_20storage_9',['Browser Storage',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__browser_storage',1,'']]],
-  ['browsing_20database_20location_10',['Browsing Database Location',['../dc/d17/dp_dh_vs_settings.html#dp_dh_vs_settings__browsing_database_location',1,'']]],
+  ['browsing_20database_20location_10',['Browsing Database Location',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location',1,'']]],
   ['bugs_20and_20fixes_11',['Bugs and Fixes',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__bugs_fixes',1,'']]],
   ['bugs_20list_12',['Bugs List',['../dc/d96/dp_dh_bugs.html',1,'']]],
   ['bugs_20page_13',['Dev Hub Bugs Page',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_bugs_page',1,'']]],

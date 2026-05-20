@@ -139,33 +139,29 @@ $(function(){initNavTree('dc/d17/dp_dh_vs_settings.html','../../',''); });
   <div class="headertitle"><div class="title">Settings </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="dp_dh_vs_settings__intro"></a>
-Introduction</h1>
-<p>This document describes the different Visual Studio 2022/2026 settings.</p>
+<div class="textblock"><p>This page describes Visual Studio IDE settings that should be configured for a consistent development environment. These settings affect the editor, formatting behavior, extensions, UI preferences, debugging experience, and other user-level Visual Studio behavior.</p>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_vs_settings__browsing_database_location"></a>
 Browsing Database Location</h1>
-<p>The folder location used for browsing database and/or Intellisense files. The size of this could be huge (many GBs), by default it is stored in <span class="tt">.vs</span> folder in the solution folder. This makes the solution folder extermely large and makes freeing up drive space a tedious process. To avoid this we can change the location outside of solution folder.</p>
+<p>The folder location used for browsing database and IntelliSense files. This folder can become very large, often several GB. By default, Visual Studio stores these files in the <span class="tt">.vs</span> folder inside the solution folder, which can make the solution folder unnecessarily large and make cleanup tedious. To avoid this, use a separate cache location outside the solution folder. The preferred folder name is <span class="tt">VS_Caches</span>.</p>
 <ul>
-<li><b>VS 2022:</b><ul>
-<li>Go to <span class="tt">Options &gt; Text Editor &gt; C/C++ &gt; Advanced</span>, here on the right under <span class="tt">Browsing Database Fallback</span> set:</li>
-<li><span class="tt">Fallback Location</span> : <span class="tt">F:\Misc\VS_Caches</span></li>
-<li><span class="tt">Always Use Fallback Location</span> : <span class="tt">True</span></li>
-<li><span class="tt">Do Not Warn If Fallback Location Used</span> : <span class="tt">True</span> (otherwise VS will warn a fallback location is used every time solution/project is opened)</li>
+<li><b>VS 2022:</b> <span class="tt">Tools &gt; Options... &gt; Text Editor &gt; C/C++ &gt; Advanced &gt; Browsing Database Fallback</span><ul>
+<li>Always Use Fallback Location: <span class="tt">True</span></li>
+<li>Do Not Warn If Fallback Location Used: <span class="tt">True</span></li>
+<li>Fallback Location: <span class="tt">F:\Misc\VS_Caches</span> <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
-<li><b>VS 2026:</b><ul>
-<li>Go to <span class="tt">Options &gt; Languages &gt; C/C++ &gt; Intellisense &gt; Browsing &amp; navigation &gt; Location</span>, here on the right:</li>
-<li>Check <span class="tt">Always use the specified custom location for the browsing database</span></li>
-<li><span class="tt">Custom location for browsing database files</span> : <span class="tt">F:\Misc\VS_Caches</span></li>
+<li><b>VS 2026:</b> <span class="tt">Tools &gt; Options... &gt; Languages &gt; C/C++ &gt; Intellisense &gt; Browsing &amp; navigation &gt; Location</span><ul>
+<li>Always use the specified custom location for the browsing database: <span class="tt">Enabled</span></li>
+<li>Custom location for browsing database files: <span class="tt">F:\Misc\VS_Caches</span></li>
 </ul>
 </li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd><ul>
-<li>The option can be easily found by searching for <span class="tt">browsing database</span> under <span class="tt">options</span> in either VS installation.</li>
-<li>The option <span class="tt">Do Not Warn If Fallback Location Used</span> is not available in VS 2026, instead when it is used for the first time a popup will appear with a checkbox <span class="tt">Do not prompt again</span>, check this to make the popup not appear again (same is also available in VS 2022).</li>
+<li>The option can be found by searching for <span class="tt">browsing database</span> in the <span class="tt">Tools &gt; Options...</span> window.</li>
+<li>The option <span class="tt">Do Not Warn If Fallback Location Used</span> is not available in VS 2026. Instead, when the custom location is used for the first time, a popup appears with a <span class="tt">Do not prompt again</span> checkbox. Enable this checkbox to prevent the popup from appearing again. The same popup is also available in VS 2022.</li>
 </ul>
 </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects <span class="tt">F:\Misc</span> to exist, it will only create the <span class="tt">VS_Caches</span> and not its parent. If the parent is unavailable then browsing database and Intellisense will stop working. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects the parent folder of <span class="tt">VS_Caches</span> to exist. For example, if the cache location is <span class="tt">F:\Misc\VS_Caches</span>, then <span class="tt">F:\Misc</span> must already exist. Visual Studio can recreate the <span class="tt">VS_Caches</span> folder itself, but it does not create the missing parent folder. If the parent folder is missing, the browsing database and IntelliSense may stop working. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
@@ -181,7 +177,7 @@ Browsing Database Location</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../d3/dfe/dp_dh_dir_dev_hub.html">Dev Hub</a></li><li class="navelem"><a href="../../d4/d27/dp_dh_dir_visual_studio.html">Visual Studio</a></li>
+    <li class="navelem"><a href="../../d4/d27/dp_dh_dir_visual_studio.html">Visual Studio</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

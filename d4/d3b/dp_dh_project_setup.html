@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Project Properties</title>
+<title>Main Project: Project Setup</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -110,7 +110,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('d1/dd4/dp_dh_vs_proj_props.html','../../',''); });
+$(function(){initNavTree('d4/d3b/dp_dh_project_setup.html','../../',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -136,107 +136,147 @@ $(function(){initNavTree('d1/dd4/dp_dh_vs_proj_props.html','../../',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Project Properties </div></div>
+  <div class="headertitle"><div class="title">Project Setup </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__intro"></a>
-Introduction</h1>
-<p>This document describes the recommended project properties for MSBuild-based C/C++ projects in Visual Studio 2022/2026.</p>
-<p>These settings are intended to:</p><ul>
-<li>Keep build artifacts out of the repository/solution tree.</li>
-<li>Ensure consistent language standards.</li>
-<li>Enable Qt log context metadata in Release builds.</li>
-<li>Provide a predictable include layout for project-owned headers.</li>
+<div class="textblock"><p>This page defines the general project structure and development standards used across projects. It includes information about directory layout, file placement, naming conventions, coding conventions, documentation style, and other project-level practices that are independent of any specific IDE.</p>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__rules"></a>
+Rules</h1>
+<p> <div class="dp-hidden-xrefitem"> </p>
+<dl class="dp_dh_required"><dt><b><a class="el" href="../../d5/d96/dp_dh_required.html#_dp_dh_required000001">REQUIRED</a></b></dt><dd><a class="el" href="#dp_dh_project_setup__rules" title="Rules">Project Setup: Rules</a></dd></dl>
+<p> </div> </p>
+<ol type="1">
+<li><b>Structure</b><ul>
+<li>Only entry files, such as <span class="tt">main.cpp</span>, are placed at the project root.</li>
+<li>Manually created project files are placed inside project-relative subfolders.</li>
+<li>Each project uses the following directories, created only when required:<ul>
+<li><span class="tt">&lt;Project&gt;\ext\</span> : Header and source files obtained from external sources.</li>
+<li><span class="tt">&lt;Project&gt;\img\</span> : Image files, such as <span class="tt">.png</span>, <span class="tt">.jpg</span>, <span class="tt">.svg</span>, etc.</li>
+<li><span class="tt">&lt;Project&gt;\ico\</span> : Icon files, such as <span class="tt">.ico</span>.</li>
+<li><span class="tt">&lt;Project&gt;\res\</span> : Resource files, such as <span class="tt">.rc</span>, <span class="tt">.qrc</span>, etc. <div class="dp-markdown-list-gap"></div></li>
 </ul>
-<blockquote class="doxtable">
-<p>The last section <a class="el" href="#dp_dh_vs_proj_props__auto_assignment" title="Automatic Assignment">Automatic Assignment</a> provides a way to have these properties assigned automatically for each new project. </p>
-</blockquote>
-<dl class="section note"><dt>Note</dt><dd>See <a class="el" href="../../dc/d17/dp_dh_vs_settings.html" title="Settings">Settings</a> page for settings related to Visual Studio 2022/2026</dd></dl>
-<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__props_to_change"></a>
-Properties to Change</h1>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__props_to_change__out_dir"></a>
-Output Directory</h2>
-<p><span class="tt">Project Properties &gt; Configuration Properties &gt; General &gt; Output Directory</span> </p><div class="fragment"><div class="line">F:\Misc\VS_Bins\$(SolutionName)\$(Platform)_$(Configuration)\</div>
-</div><!-- fragment --><p>This directory contains the final build outputs (for example: <span class="tt">.exe</span>, <span class="tt">.dll</span>, <span class="tt">.pdb</span>, <span class="tt">.lib</span>). It is recommended that projects inside a single solution share the same output directory, as long as output file names do not collide, to facilitate interaction between projects. Default is <span class="tt">$(SolutionDir)$(Platform)\$(Configuration)\</span> (e.g. <span class="tt">...\MySolution\x64\Debug\</span>).</p>
-<dl class="section note"><dt>Note</dt><dd><ul>
+</li>
+</ul>
+</li>
+<li><b>Includes</b><ul>
+<li>All project-specific includes use a project-relative subpath, such as <span class="tt">#include "abc/def.h"</span>.</li>
+<li><b>DO NOT</b> use parent-relative includes, such as <span class="tt">#include "../abc/def.h"</span>. <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Coding</b><ul>
+<li><b>NO</b> global functions or variables, except required entry points and external API callbacks.</li>
+<li><b>NO</b> simple/common names such as <span class="tt">Font</span>, <span class="tt">Show</span>, etc. for classes/structs.</li>
+<li>Member variables/functions end with an underscore <span class="tt">_</span>.</li>
+<li>Static member variables/functions start with a capital letter. <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Comments</b><ul>
+<li>ASCII-only.</li>
+<li><b>NO</b> Doxygen comments inside function bodies.</li>
+</ul>
+</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__recommendations"></a>
+Recommendations</h1>
+<ol type="1">
+<li><b>Structure</b><ul>
+<li>The <span class="tt">Project name</span> and <span class="tt">Solution name</span> should be different.</li>
+<li>Main project inside a Visual Studio solution should be named <span class="tt">App</span>.</li>
+<li>Non-main projects inside a Visual Studio solution can be named as required.</li>
+<li>Suggested directories for splitting header, source and form files, if desired:<ul>
+<li><span class="tt">&lt;Project&gt;\hdr\</span> : Project header files, such as <span class="tt">.h</span>, <span class="tt">.hpp</span>, etc.</li>
+<li><span class="tt">&lt;Project&gt;\src\</span> : Project source files, such as <span class="tt">.c</span>, <span class="tt">.cpp</span>, etc.</li>
+<li><span class="tt">&lt;Project&gt;\gui\</span> : Qt form files, such as <span class="tt">.ui</span>. <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>Includes</b><ul>
+<li>Keep includes minimal.</li>
+<li>Prefer forward declarations in headers when practical. <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Coding</b><ul>
+<li>Use <span class="tt">#pragma once</span> in headers.</li>
+<li>Start signal names with <span class="tt">sig_</span>.</li>
+<li>Start slot names with <span class="tt">on_</span> or <span class="tt">on</span>. <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Comments</b><ul>
+<li>Use <span class="tt">/** ... */</span> style for high-level declarations, such as files, namespaces, classes, structs, etc.</li>
+<li>Use <span class="tt">///</span> above functions.</li>
+<li>Use <span class="tt">///&lt;</span> for trailing single-line Doxygen comments after declarations.</li>
+</ul>
+</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__vs_proj_settings"></a>
+VS Project Settings</h1>
+<p>This section applies only to projects developed with Visual Studio. Ignore this section for projects that use a different build system or IDE.</p>
+<p>Set <b>Project Properties &gt; Configuration:</b> <span class="tt">All Configurations</span> and <b>Platform:</b> <span class="tt">All Platforms</span> (if possible) first.</p>
+<p><b>Project Properties &gt; Configuration Properties:</b><br  />
+ (<b>Auto</b> = Automatically assigned by <a class="el" href="#dp_dh_project_setup__vs_prop_sheets" title="VS Property Sheets">VS Property Sheets</a> if it is set up)</p>
+<ul>
+<li>General<ul>
+<li>Output Directory: <span class="tt">F:\Misc\VS_Bins\$(SolutionName)\$(Platform)_$(Configuration)\</span> <b>Auto</b></li>
+<li>Intermediate Directory: <span class="tt">F:\Misc\VS_Objs\$(SolutionName)\$(Platform)_$(Configuration)__$(ProjectName)\</span> <b>Auto</b></li>
+<li>C++ Language Standard: <span class="tt">ISO C++20 Standard (/std:c++20)</span> <b>Auto</b></li>
+<li>C Language Standard: <span class="tt">ISO C17 (2018) Standard (/std:c17)</span> <b>Auto</b></li>
+</ul>
+</li>
+<li>C/C++<ul>
+<li>Preprocessor<ul>
+<li>Preprocessor Definitions: <span class="tt">QT_MESSAGELOGCONTEXT;%(PreprocessorDefinitions)</span> <b>Auto</b></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Linker<ul>
+<li>System<ul>
+<li>SubSystem: <span class="tt">Windows (/SUBSYSTEM:WINDOWS)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Instead of <span class="tt">$(SolutionName)</span>, Visual Studio may show <span class="tt">$(_SolName)</span>. This is a custom macro generated by <a class="el" href="#dp_dh_project_setup__vs_prop_sheets" title="VS Property Sheets">VS Property Sheets</a> and appears when the property is assigned from that property sheet. In normal solution builds, <span class="tt">$(_SolName)</span> resolves to the solution name. If no solution name is available, the property sheet may use a fallback value.</dd></dl>
+<p><b>Descriptions:</b></p>
+<ul>
+<li><p class="startli"><b>Output Directory</b></p>
+<p class="startli">This directory contains the final build outputs (for example: <span class="tt">.exe</span>, <span class="tt">.dll</span>, <span class="tt">.pdb</span>, <span class="tt">.lib</span>). It is recommended that projects inside a single solution share the same output directory, as long as output file names do not collide, to facilitate interaction between projects. Default is <span class="tt">$(SolutionDir)$(Platform)\$(Configuration)\</span> (e.g. <span class="tt">...\MySolution\x64\Debug\</span>).</p><ul>
 <li>Safe to delete, Visual Studio/MSBuild recreates it when needed.</li>
-<li>In <span class="tt">.props</span> xml file, it is refferred as <span class="tt">OutDir</span>.</li>
-<li>If changed, the previously generated folder is not removed automatically.</li>
+<li>In a <span class="tt">.props</span> XML file, this property is named <span class="tt">OutDir</span>.</li>
+<li>If changed, the previously generated folder is not removed automatically. <div class="dp-markdown-list-gap"></div></li>
 </ul>
-</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__props_to_change__int_dir"></a>
-Intermediate Directory</h2>
-<p><span class="tt">Project Properties &gt; Configuration Properties &gt; General &gt; Intermediate Directory</span> </p><div class="fragment"><div class="line">F:\Misc\VS_Objs\$(SolutionName)\$(Platform)_$(Configuration)__$(ProjectName)\</div>
-</div><!-- fragment --><p>This directory contains intermediate build artifacts (for example: <span class="tt">.obj</span>, <span class="tt">.pch</span>, <span class="tt">moc_*.cpp</span>, <span class="tt">ui_*.h</span>, <span class="tt">qrc_*.cpp</span>, generated <span class="tt">.tlog</span>, etc.). It is highly recommended that projects have different intermediate directory, even inside the same solution, to avoid name collisions. Default is <span class="tt">$(ProjectDir)$(Platform)\$(Configuration)\</span> (e.g. <span class="tt">...\MyProject\x64\Debug\</span>).</p>
-<dl class="section warning"><dt>Warning</dt><dd>Projects should have their own intermediate directory, even inside the same solution, to avoid the possibility of name collision between build artifacts.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd><ul>
+</li>
+<li><p class="startli"><b>Intermediate Directory</b></p>
+<p class="startli">This directory contains intermediate build artifacts (for example: <span class="tt">.obj</span>, <span class="tt">.pch</span>, <span class="tt">moc_*.cpp</span>, <span class="tt">ui_*.h</span>, <span class="tt">qrc_*.cpp</span>, generated <span class="tt">.tlog</span>, etc.). It is highly recommended that each project has a different intermediate directory, even inside the same solution, to avoid name collisions. Default is <span class="tt">$(ProjectDir)$(Platform)\$(Configuration)\</span> (e.g. <span class="tt">...\MyProject\x64\Debug\</span>).</p><ul>
 <li>Safe to delete, Visual Studio/MSBuild recreates it when needed.</li>
-<li>In <span class="tt">.props</span> xml file, it is refferred as <span class="tt">IntDir</span>.</li>
-<li>If changed, the previously generated folder is not removed automatically.</li>
-</ul>
-</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__props_to_change__cpp_lang_standard"></a>
-C++ Language Standard</h2>
-<p><span class="tt">Project Properties &gt; Configuration Properties &gt; General &gt; C++ Language Standard</span> <span class="tt">Project Properties &gt; Configuration Properties &gt; C/C++ &gt; Language &gt; C++ Language Standard</span> </p><div class="fragment"><div class="line">ISO C++20 Standard (/std:c++20)</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>The same value is found in both locations, changing one is sufficient, the change is reflected in other location as well.</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__props_to_change__c_lang_standard"></a>
-C Language Standard</h2>
-<p><span class="tt">Project Properties &gt; Configuration Properties &gt; General &gt; C Language Standard</span> <span class="tt">Project Properties &gt; Configuration Properties &gt; C/C++ &gt; Language &gt; C Language Standard</span> </p><div class="fragment"><div class="line">ISO C17 (2018) Standard (/std:c17)</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>The same value is found in both locations, changing one is sufficient, the change is reflected in other location as well.</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__props_to_change__add_incl_dir"></a>
-Additional Include Directories</h2>
-<p><span class="tt">Project Properties &gt; Configuration Properties &gt; C/C++ &gt; General &gt; Additional Include Directories</span> </p><div class="fragment"><div class="line">$(ProjectDir)inc;%(AdditionalIncludeDirectories)</div>
-</div><!-- fragment --><ul>
-<li><span class="tt">$(ProjectDir)inc</span> : Adds <span class="tt">project-root\inc\</span> to include path.<ul>
-<li>Purpose:<ul>
-<li>Establish a consistent include root for project-owned headers.</li>
-<li>Encourage includes with a prefix (example: <span class="tt">#include "npi/bla.h"</span>) to reduce ambiguity.</li>
+<li>In a <span class="tt">.props</span> XML file, this property is named <span class="tt">IntDir</span>.</li>
+<li>If changed, the previously generated folder is not removed automatically. <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
-<li>Recommended project include layout:<ul>
-<li><span class="tt">project-root\inc\</span> -&gt; added to "Additional Include Directories"</li>
-<li><span class="tt">project-root\inc\<a class="el" href="../../d6/d57/namespacenpi.html" title="Root namespace for npi electronics GmbH.">npi</a>\</span> -&gt; headers native to npi</li>
-<li><span class="tt">project-root\inc\ext\</span> -&gt; external/vendor headers (only if you intentionally mirror them here)</li>
-</ul>
-</li>
-<li>With <span class="tt">project-root\inc</span> on the include path, project header usage becomes explicit:<ul>
-<li><span class="tt">#include "npi/bla.h"</span></li>
-<li><span class="tt">#include "ext/some_lib/header.h"</span> <dl class="section note"><dt>Note</dt><dd>If a project does not have an <span class="tt">inc</span> folder, nothing fails just because the directory is missing. You only get an error if you actually include a header that would have been found only in that folder.</dd></dl>
-</li>
-</ul>
+<li><p class="startli"><b>C++ Language Standard:</b></p>
+<p class="startli">The same value is also found at <span class="tt">Project Properties &gt; Configuration Properties &gt; C/C++ &gt; Language &gt; C++ Language Standard</span>, changing one is sufficient, the change is reflected in other location as well. </p><div class="dp-markdown-list-gap"></div></li>
+<li><p class="startli"><b>C Language Standard:</b></p>
+<p class="startli">The same value is also found at <span class="tt">Project Properties &gt; Configuration Properties &gt; C/C++ &gt; Language &gt; C Language Standard</span>, changing one is sufficient, the change is reflected in other location as well. </p><div class="dp-markdown-list-gap"></div></li>
+<li><p class="startli"><b>Preprocessor Definitions:</b> <span class="tt">QT_MESSAGELOGCONTEXT;%(PreprocessorDefinitions)</span></p>
+<p class="startli">Qt's log context fields (<span class="tt">category</span>, <span class="tt">file</span>, <span class="tt">function</span>, <span class="tt">line</span>) are not available in Release build, with <span class="tt">QT_MESSAGELOGCONTEXT</span> macro these are enabled in Release builds as well. </p><div class="dp-markdown-list-gap"></div></li>
+<li><p class="startli"><b>SubSystem:</b> <span class="tt">Windows (/SUBSYSTEM:WINDOWS)</span></p>
+<p class="startli">GUI applications should use Windows subsystem; console tools should use Console subsystem. Some templates (including "Qt Empty Project") may default to Console subsystem, that's why this change is necessary. This setting can be changed through <a class="el" href="#dp_dh_project_setup__vs_prop_sheets" title="VS Property Sheets">VS Property Sheets</a> but it is later overridden by templates back to a hardcoded value. For this reason, setting <span class="tt">SubSystem</span> through <a class="el" href="#dp_dh_project_setup__vs_prop_sheets" title="VS Property Sheets">VS Property Sheets</a> is not useful.</p>
 </li>
 </ul>
-</li>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__vs_prop_sheets"></a>
+VS Property Sheets</h1>
+<p>Visual Studio C++ projects can auto-import a per-user property sheet if it exists here:</p>
+<div class="fragment"><div class="line">%LOCALAPPDATA%\Microsoft\MSBuild\v4.0\</div>
+</div><!-- fragment --><p>Visual Studio expects exact file names:</p><ul>
+<li><b>x64 Platform:</b> <div class="fragment"><div class="line">Microsoft.Cpp.x64.user.props</div>
+</div><!-- fragment --></li>
+<li><b>Win32 Platform:</b> <div class="fragment"><div class="line">Microsoft.Cpp.Win32.user.props</div>
+</div><!-- fragment --></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__props_to_change__pre_processor_defs"></a>
-Preprocessor Definitions</h2>
-<p><span class="tt">Project Properties &gt; Configuration Properties &gt; C/C++ &gt; Preprocessor &gt; Preprocessor Definitions</span> </p><div class="fragment"><div class="line">QT_MESSAGELOGCONTEXT;%(PreprocessorDefinitions)</div>
-</div><!-- fragment --><ul>
-<li><span class="tt">QT_MESSAGELOGCONTEXT</span> : Qt’s log context fields (<span class="tt">category</span>, <span class="tt">file</span>, <span class="tt">function</span>, <span class="tt">line</span>) are not available in Release build, with this macro these are enabled in Release builds as well.</li>
-</ul>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__props_to_change__win_subsystem"></a>
-Subsystem</h2>
-<p><span class="tt">Project Properties &gt; Configuration Properties &gt; Linker &gt; System &gt; Subsystem</span> </p><div class="fragment"><div class="line">Windows (/SUBSYSTEM:WINDOWS)</div>
-</div><!-- fragment --><p>GUI applications should use Windows subsystem; console tools should use Console subsystem. Some templates (including Qt “Empty Project”) may default to Console subsystem.</p>
-<dl class="section note"><dt>Note</dt><dd>A global <span class="tt">.props</span> imported early can be overridden later by the project file or other imported props/targets (templates often hardcode Console in the project). If subsystem does not change as expected, set the subsystem explicitly in that project properties or search the <span class="tt">.vcxproj</span> for <span class="tt">&lt;SubSystem&gt;</span> and remove/override the later setting.</dd></dl>
-<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__auto_assignment"></a>
-Automatic Assignment</h1>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__auto_assignment__procedure"></a>
-Procedure</h2>
-<p>Visual Studio C++ projects can auto-import a per-user property sheet if it exists:</p><ul>
-<li><span class="tt">LOCALAPPDATA%\Microsoft\MSBuild\v4.0\Microsoft.Cpp.x64.user.props</span> (applies when building Platform = x64)</li>
-<li><span class="tt">LOCALAPPDATA%\Microsoft\MSBuild\v4.0\Microsoft.Cpp.Win32.user.props</span> (applies when building Platform = Win32)</li>
-</ul>
-<dl class="section note"><dt>Note</dt><dd><ul>
-<li>This is per-user (i.e. user acoount based) and per-platform (i.e. <span class="tt">x64</span> and <span class="tt">Win32</span>);</li>
-<li>The <span class="tt">LOCALAPPDATA%\Microsoft\MSBuild\...</span> directory may not exist by default. Create the directory and the files as needed.</li>
-</ul>
-</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The <span class="tt">subsystem</span> property assigned by this these <span class="tt">.props</span> files can be overridden later by the project file or other imported props/targets (templates often hardcode Console in the project). If <span class="tt">subsystem</span> does not change as expected, set the <span class="tt">subsystem</span> explicitly in that project properties or search the <span class="tt">.vcxproj</span> for <span class="tt">&lt;SubSystem&gt;</span> and remove/override the later setting.</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__auto_assignment__safeguard_scope"></a>
-Safeguard &amp; Scope</h2>
-<p>These user props apply to any <span class="tt">.vcxproj</span> loaded/built via MSBuild under this Windows user account (Visual Studio builds, command line <span class="tt">msbuild</span>, CI jobs, scripts, etc.).</p>
-<p>To avoid affecting unrelated projects, the provided code includes a safeguard so the defaults are applied only when the project is located under approved roots on <span class="tt">F:\</span> (any depth):</p><ul>
+<p>We can place our own <span class="tt">.props</span> file in the given location (create the directory if it does not exist) and rename the <span class="tt">.props</span> file to what Visual Studio expects. Same <span class="tt">.props</span> file content can be used for both <span class="tt">Microsoft.Cpp.x64.user.props</span> and <span class="tt">Microsoft.Cpp.Win32.user.props</span> if desired. These will then apply to any <span class="tt">.vcxproj</span> loaded/built via MSBuild under this Windows user account (Visual Studio builds, command line msbuild, CI jobs, scripts, etc.).</p>
+<p>To avoid affecting unrelated projects, our <span class="tt">.props</span> file code includes a safeguard. The defaults properties are applied only when the project is located under approved roots on <span class="tt">F:\</span> (any depth):</p><ul>
 <li><span class="tt">F:\Test\...</span></li>
 <li><span class="tt">F:\Eval\...</span></li>
 <li><span class="tt">F:\Demo\...</span></li>
@@ -244,13 +284,7 @@ Safeguard &amp; Scope</h2>
 <li><span class="tt">F:\Uniq\...</span></li>
 <li><span class="tt">F:\Gear\...</span></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="dp_dh_vs_proj_props__auto_assignment__code"></a>
-Code</h2>
-<p>Copy/paste the same XML into both files:</p><ul>
-<li><span class="tt">LOCALAPPDATA%\Microsoft\MSBuild\v4.0\Microsoft.Cpp.x64.user.props</span></li>
-<li><span class="tt">LOCALAPPDATA%\Microsoft\MSBuild\v4.0\Microsoft.Cpp.Win32.user.props</span></li>
-</ul>
-<p>(Use identical content unless you intentionally need platform-specific differences.)</p>
+<p>Below is the complete code for the <span class="tt">.props</span> file:</p>
 <div class="fragment"><div class="line">&lt;?<span class="keyword">xml</span> <span class="keyword">version</span>=<span class="stringliteral">&quot;1.0&quot;</span> <span class="keyword">encoding</span>=<span class="stringliteral">&quot;utf-8&quot;</span>?&gt;</div>
 <div class="line">&lt;<span class="keywordtype">Project</span>&gt;</div>
 <div class="line"> </div>
@@ -361,32 +395,16 @@ Code</h2>
 <div class="line"><span class="comment">    ClCompile:</span></div>
 <div class="line"><span class="comment">      - LanguageStandard: selects /std:c++20</span></div>
 <div class="line"><span class="comment">      - LanguageStandard_C: selects /std:c17</span></div>
-<div class="line"><span class="comment">      - AdditionalIncludeDirectories:</span></div>
-<div class="line"><span class="comment">          Adds &quot;$(ProjectDir)inc&quot; first, then keeps whatever the project</span></div>
-<div class="line"><span class="comment">          already had via %(AdditionalIncludeDirectories).</span></div>
-<div class="line"><span class="comment">          If &quot;inc&quot; does not exist, nothing fails by itself; it only matters</span></div>
-<div class="line"><span class="comment">          if you try to include headers from there.</span></div>
 <div class="line"><span class="comment">      - PreprocessorDefinitions:</span></div>
 <div class="line"><span class="comment">          Adds QT_MESSAGELOGCONTEXT, then preserves existing defines via</span></div>
 <div class="line"><span class="comment">          %(PreprocessorDefinitions).</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="comment">    Link:</span></div>
-<div class="line"><span class="comment">      - SubSystem: sets /SUBSYSTEM:WINDOWS by default.</span></div>
-<div class="line"><span class="comment">        You can override per-project to CONSOLE in that project&#39;s properties</span></div>
-<div class="line"><span class="comment">        (project settings normally take precedence over these defaults).</span></div>
 <div class="line"><span class="comment">  --&gt;</span></div>
 <div class="line">  &lt;<span class="keywordtype">ItemDefinitionGroup</span> <span class="keyword">Condition</span>=<span class="stringliteral">&quot;&#39;$(_ApplyUserProps)&#39;==&#39;true&#39;&quot;</span>&gt;</div>
 <div class="line">    &lt;<span class="keywordtype">ClCompile</span>&gt;</div>
 <div class="line">      &lt;<span class="keywordtype">LanguageStandard</span>&gt;<span class="keyword">stdcpp20</span>&lt;/<span class="keywordtype">LanguageStandard</span>&gt;</div>
 <div class="line">      &lt;<span class="keywordtype">LanguageStandard_C</span>&gt;<span class="keyword">stdc17</span>&lt;/<span class="keywordtype">LanguageStandard_C</span>&gt;</div>
-<div class="line"> </div>
-<div class="line">      &lt;<span class="keywordtype">AdditionalIncludeDirectories</span>&gt;$(<span class="keyword">ProjectDir</span>)<span class="keyword">inc</span>;%(<span class="keyword">AdditionalIncludeDirectories</span>)&lt;/<span class="keywordtype">AdditionalIncludeDirectories</span>&gt;</div>
 <div class="line">      &lt;<span class="keywordtype">PreprocessorDefinitions</span>&gt;<span class="keyword">QT_MESSAGELOGCONTEXT</span>;%(<span class="keyword">PreprocessorDefinitions</span>)&lt;/<span class="keywordtype">PreprocessorDefinitions</span>&gt;</div>
 <div class="line">    &lt;/<span class="keywordtype">ClCompile</span>&gt;</div>
-<div class="line"> </div>
-<div class="line">    &lt;<span class="keywordtype">Link</span>&gt;</div>
-<div class="line">      &lt;<span class="keywordtype">SubSystem</span>&gt;<span class="keyword">Windows</span>&lt;/<span class="keywordtype">SubSystem</span>&gt;</div>
-<div class="line">    &lt;/<span class="keywordtype">Link</span>&gt;</div>
 <div class="line">  &lt;/<span class="keywordtype">ItemDefinitionGroup</span>&gt;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">&lt;!--</span></div>
@@ -401,8 +419,7 @@ Code</h2>
 <div class="line"><span class="comment">  --&gt;</span></div>
 <div class="line"> </div>
 <div class="line">&lt;/<span class="keywordtype">Project</span>&gt;</div>
-</div><!-- fragment --><hr  />
- </div></div><!-- contents -->
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -417,7 +434,7 @@ Code</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../d4/d27/dp_dh_dir_visual_studio.html">Visual Studio</a></li>
+    <li class="navelem"><a href="../../d3/dfe/dp_dh_dir_dev_hub.html">Dev Hub</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

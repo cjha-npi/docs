@@ -1,8 +1,10 @@
 var dp_dh_dir_visual_studio =
 [
     [ "Settings", "dc/d17/dp_dh_vs_settings.html", [
-      [ "Introduction", "dc/d17/dp_dh_vs_settings.html#dp_dh_vs_settings__intro", null ],
       [ "Browsing Database Location", "dc/d17/dp_dh_vs_settings.html#dp_dh_vs_settings__browsing_database_location", null ]
+    ] ],
+    [ "Project Settings", "d9/db7/dp_dh_vs_proj_settings.html", [
+      [ "Automatic Property Sheet", "d9/db7/dp_dh_vs_proj_settings.html#dp_dh_vs_proj_settings__auto_prop_sheets", null ]
     ] ],
     [ "Project Properties", "d1/dd4/dp_dh_vs_proj_props.html", [
       [ "Introduction", "d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__intro", null ],

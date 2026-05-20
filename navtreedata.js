@@ -29,6 +29,7 @@ var NAVTREE =
     [ "Dependencies", "d2/d46/dp_dep_dir_dependencies.html", "d2/d46/dp_dep_dir_dependencies" ],
     [ "Dev Hub", "d3/dfe/dp_dh_dir_dev_hub.html", "d3/dfe/dp_dh_dir_dev_hub" ],
     [ "Bugs List", "dc/d96/dp_dh_bugs.html", null ],
+    [ "Required", "d5/d96/dp_dh_required.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -64,10 +65,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac83f155438d4a0447ac048d50c7b1a47",
-"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bad382816a3cbeed082c9e216e7392eed1",
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a29d994cc92740f0ba73ebfd1011415df",
-"da/d3b/structnpi_1_1_text_spec_1_1_group.html#a12c3d2f76146ff1c3a44b6e6b2890166",
-"functions_o.html"
+"d2/db7/classnpi_1_1_text_spec.html#a342a1c9142e5513a75b35b08d8feff1d",
+"d6/d78/classnpi_1_1_ref_ptr_host.html#a445b5634fbcbd3812e61004ef799c8dc",
+"da/d7b/_org_meta_data_8hpp_source.html",
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

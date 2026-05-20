@@ -25,16 +25,18 @@ var dp_dh_dir_dev_hub =
         [ "Big Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text", null ]
       ] ]
     ] ],
-    [ "Conventions", "d5/dff/dp_dh_conventions.html", [
-      [ "Introduction", "d5/dff/dp_dh_conventions.html#dp_dh_conventions__intro", null ],
-      [ "Project Structure", "d5/dff/dp_dh_conventions.html#dp_dh_conventions__proj_structure", null ],
-      [ "Coding Conventions", "d5/dff/dp_dh_conventions.html#dp_dh_conventions__coding_conventions", null ],
-      [ "Comment Conventions", "d5/dff/dp_dh_conventions.html#dp_dh_conventions__comment_conventions", null ]
+    [ "VS Setup", "d7/d3c/dp_dh_vs_setup.html", [
+      [ "Browsing Database Location", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location", null ]
+    ] ],
+    [ "Project Setup", "d4/d3b/dp_dh_project_setup.html", [
+      [ "Rules", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__rules", null ],
+      [ "Recommendations", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__recommendations", null ],
+      [ "VS Project Settings", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_proj_settings", null ],
+      [ "VS Property Sheets", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets", null ]
     ] ],
     [ "Tips &amp; Tricks", "d2/dab/dp_dh_tips_tricks.html", [
       [ "Create ICO Icons Using ImageMagick", "d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick", null ]
     ] ],
-    [ "Visual Studio", "d4/d27/dp_dh_dir_visual_studio.html", "d4/d27/dp_dh_dir_visual_studio" ],
     [ "Doxygen", "d4/d7c/dp_dh_dir_doxygen.html", "d4/d7c/dp_dh_dir_doxygen" ],
     [ "Git &amp; Github", "de/d8d/dp_dh_dir_git_github.html", "de/d8d/dp_dh_dir_git_github" ],
     [ "Miscellaneous", "df/d08/dp_dh_dir_misc.html", "df/d08/dp_dh_dir_misc" ]

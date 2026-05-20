@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Required</title>
+<title>Main Project: VS Setup</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -110,7 +110,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('d5/d96/dp_dh_required.html','../../',''); });
+$(function(){initNavTree('d7/d3c/dp_dh_vs_setup.html','../../',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -136,21 +136,48 @@ $(function(){initNavTree('d5/d96/dp_dh_required.html','../../',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Required </div></div>
+  <div class="headertitle"><div class="title">VS Setup </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="reflist">
-<dt>Page <a class="el" href="../../d4/d3b/dp_dh_project_setup.html">Project Setup</a>  </dt>
-<dd><a class="anchor" id="_dp_dh_required000001"></a> <a class="el" href="../../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__rules" title="Rules">Project Setup: Rules</a></dd>
-</dl>
+<div class="textblock"><p>This page describes Visual Studio IDE settings that should be configured for a consistent development environment. These settings affect the editor, formatting behavior, extensions, UI preferences, debugging experience, and other user-level Visual Studio behavior.</p>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__browsing_database_location"></a>
+Browsing Database Location</h1>
+<p>The folder location used for browsing database and IntelliSense files. This folder can become very large, often several GB. By default, Visual Studio stores these files in the <span class="tt">.vs</span> folder inside the solution folder, which can make the solution folder unnecessarily large and make cleanup tedious. To avoid this, use a separate cache location outside the solution folder. The preferred folder name is <span class="tt">VS_Caches</span>.</p>
+<ul>
+<li><b>VS 2022:</b> <span class="tt">Tools &gt; Options... &gt; Text Editor &gt; C/C++ &gt; Advanced &gt; Browsing Database Fallback</span><ul>
+<li>Always Use Fallback Location: <span class="tt">True</span></li>
+<li>Do Not Warn If Fallback Location Used: <span class="tt">True</span></li>
+<li>Fallback Location: <span class="tt">F:\Misc\VS_Caches</span> <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>VS 2026:</b> <span class="tt">Tools &gt; Options... &gt; Languages &gt; C/C++ &gt; Intellisense &gt; Browsing &amp; navigation &gt; Location</span><ul>
+<li>Always use the specified custom location for the browsing database: <span class="tt">Enabled</span></li>
+<li>Custom location for browsing database files: <span class="tt">F:\Misc\VS_Caches</span></li>
+</ul>
+</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>The option can be found by searching for <span class="tt">browsing database</span> in the <span class="tt">Tools &gt; Options...</span> window.</li>
+<li>The option <span class="tt">Do Not Warn If Fallback Location Used</span> is not available in VS 2026. Instead, when the custom location is used for the first time, a popup appears with a <span class="tt">Do not prompt again</span> checkbox. Enable this checkbox to prevent the popup from appearing again. The same popup is also available in VS 2022.</li>
+</ul>
+</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects the parent folder of <span class="tt">VS_Caches</span> to exist. For example, if the cache location is <span class="tt">F:\Misc\VS_Caches</span>, then <span class="tt">F:\Misc</span> must already exist. Visual Studio can recreate the <span class="tt">VS_Caches</span> folder itself, but it does not create the missing parent folder. If the parent folder is missing, the browsing database and IntelliSense may stop working. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- HTML footer for doxygen 1.14.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a href="../../d3/dfe/dp_dh_dir_dev_hub.html">Dev Hub</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>
