@@ -28,6 +28,7 @@ var NAVTREE =
     [ "NPI Main Project", "index.html", "index" ],
     [ "Dependencies", "d2/d46/dp_dep_dir_dependencies.html", "d2/d46/dp_dep_dir_dependencies" ],
     [ "Dev Hub", "d3/dfe/dp_dh_dir_dev_hub.html", "d3/dfe/dp_dh_dir_dev_hub" ],
+    [ "Visual Studio", "d4/d27/dp_dh_dir_visual_studio.html", "d4/d27/dp_dh_dir_visual_studio" ],
     [ "Bugs List", "dc/d96/dp_dh_bugs.html", null ],
     [ "Required", "d5/d96/dp_dh_required.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -65,10 +66,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac83f155438d4a0447ac048d50c7b1a47",
-"d2/db7/classnpi_1_1_text_spec.html#a342a1c9142e5513a75b35b08d8feff1d",
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a445b5634fbcbd3812e61004ef799c8dc",
-"da/d7b/_org_meta_data_8hpp_source.html",
-"index.html"
+"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bad382816a3cbeed082c9e216e7392eed1",
+"d6/d78/classnpi_1_1_ref_ptr_host.html#a161a8052754985bb8024c19c06fd9206",
+"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#ab5ff9089a3797aebbc175acb36a2c728",
+"functions_h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

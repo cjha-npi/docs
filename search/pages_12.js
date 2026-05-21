@@ -9,9 +9,10 @@ var searchData=
   ['thread_20safety_20model_6',['Thread-safety model',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesThreadSafety',1,'']]],
   ['tips_20tricks_7',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_dev_hub']]],
   ['tips_20tweaks_8',['Tips Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
-  ['tokens_20and_20recommended_20usage_9',['Tokens and Recommended Usage',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__tokens_recommended_usage',1,'']]],
-  ['tricks_10',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_dev_hub']]],
-  ['troubleshooting_11',['Troubleshooting',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__troubleshooting',1,'Troubleshooting'],['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__troubleshooting',1,'Troubleshooting']]],
-  ['tweaks_12',['Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
-  ['types_13',['Types',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__types',1,'']]]
+  ['to_20change_9',['Properties to Change',['../d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__props_to_change',1,'']]],
+  ['tokens_20and_20recommended_20usage_10',['Tokens and Recommended Usage',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__tokens_recommended_usage',1,'']]],
+  ['tricks_11',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_dev_hub']]],
+  ['troubleshooting_12',['Troubleshooting',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__troubleshooting',1,'Troubleshooting'],['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__troubleshooting',1,'Troubleshooting']]],
+  ['tweaks_13',['Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
+  ['types_14',['Types',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__types',1,'']]]
 ];

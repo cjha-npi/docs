@@ -21,17 +21,36 @@
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /*
- - NotoSansSymbols2-Regular.ttf is the fallback for older browsers
  - Only collapse icon (U+2B9E i.e. ⮞) is used, in expanded state, it
    is rotated by 90 degrees.
 */
 @font-face {
   font-family: "noto-2b9";
-  src:
-    url("NotoSansSymbols2-Regular.woff2") format("woff2"),
-    url("NotoSansSymbols2-Regular.ttf") format("truetype"); /* .ttf is optional fallback */
+  src: url("NotoSansSymbols2-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
   unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* CUSTOM FONT FOR CODE */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-SemiBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -43,7 +62,7 @@ html {
   --page-font-size: 13px !important;
   --navigation-font-size: 13px !important;
   --toc-font-size: 13px !important;
-  --code-font-size: 12px !important;
+  --code-font-size: 11.5px !important;
   --title-font-size: 18px !important;
   --memtitle-font-size: 16px !important;
   --content-line-height: 20px !important;
@@ -55,7 +74,7 @@ html {
     --page-font-size: 13px !important;
     --navigation-font-size: 13px !important;
     --toc-font-size: 13px !important;
-    --code-font-size: 12px !important;
+    --code-font-size: 11.5px !important;
     --title-font-size: 16px !important;
     --memtitle-font-size: 16px !important;
     --content-line-height: 20px !important;
@@ -67,6 +86,9 @@ html {
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 :root {
+
+  --font-family-monospace: "JB-Mono",ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+
   --dp-sep: 6px;
   --dp-min-width: 100px;
   --dp-border-width: 6px;
@@ -76,14 +98,14 @@ html {
 
   --dp-side-nav-icon-font-size: 13px;
 
-  --dp-page-nav-font-size: 11px;
+  --dp-page-nav-font-size: 11.5px;
   --dp-page-nav-line-height: 18px;
 
   --dp-root-item-font-size: 13px;
   --dp-root-item-line-height: 22px;
 
-  --dp-leaf-item-font-size: 12px;
-  --dp-leaf-item-line-height: 21px;
+  --dp-leaf-item-font-size: 13px;
+  --dp-leaf-item-line-height: 22px;
 
   --dp-side-nav-width: 0px;
   --dp-root-pane-width: 0px;
@@ -1226,17 +1248,48 @@ html.dark-mode{
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 span.tt{
-  border: none;
-  border-radius: var(--dp-border-radius-s);
+  font-weight: normal  !important;
+  border: none !important;
+  border-radius: var(--dp-border-radius-s)  !important;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* CODE FRAGMENT CUSTOMIZATION */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-div.fragment{
+#doc-content div.fragment{
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
   border: none;
   border-radius: var(--dp-border-radius-l);
+  padding: 10px 14px 10px 14px;
+}
+
+#doc-content div.fragment,
+#doc-content div.fragment div.line,
+#doc-content div.fragment div.line span,
+#doc-content div.fragment pre {
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+#doc-content div.fragment div.line::after {
+  display: none;
+}
+
+#doc-content div.fragment .clipboard {
+  width: 16px;
+  height: 16px;
+  padding: 4px 4px 4px 4px;
+  background: black;
+  border-radius: var(--dp-border-radius-s);
+}
+
+#doc-content div.fragment .clipboard svg {
+  width: 16px;
+  height: 16px;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1726,12 +1779,12 @@ in vertical direction. */
   of prefix */
   padding-right: 1px;
   font-family: var(--font-family-monospace);
-  font-size: calc(var(--dp-root-item-font-size) * 0.9);
+  font-size: calc(var(--dp-root-item-font-size) * 0.89);
 }
 
 /* Make separator slightly smaller than text*/
 #dp-root-pane .dpt-sep {
-  font-size: calc(var(--dp-root-item-font-size) * 0.9);
+  font-size: calc(var(--dp-root-item-font-size) * 0.89);
 }
 
 /* The expand/collapse icon. It is necessary that the width

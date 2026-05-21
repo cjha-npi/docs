@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: doxy-plus.css FIle</title>
+<title>Main Project: doxy-plus CSS</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -44,8 +44,6 @@
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../doxy-plus.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
-<!-- Doxy-Plus Stylesheet -->
-<link href="../../doxy-plus.css" rel="stylesheet" type="text/css" />
 <!-- Doxygen Awesome Theme - Dark Mode Toggle -->
 <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
 <script type="text/javascript">
@@ -136,11 +134,11 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">doxy-plus.css FIle </div></div>
+  <div class="headertitle"><div class="title">doxy-plus CSS </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The complete code below can be copied and pasted into the <span class="tt">doxy-plus.css</span> file.</p>
-<div class="fragment"><div class="line">/* file: doxy-plus.css */</div>
+<div class="textblock"><p>Filename: </p><div class="fragment"><div class="line">doxy-plus.css</div>
+</div><!-- fragment --><p> Contents: </p><div class="fragment"><div class="line">/* file: doxy-plus.css */</div>
 <div class="line"> </div>
 <div class="line">/* Variable names starting with --dp- are Doxy-Plus variables */</div>
 <div class="line"> </div>
@@ -163,17 +161,36 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
 <div class="line"> </div>
 <div class="line">/*</div>
-<div class="line"> - NotoSansSymbols2-Regular.ttf is the fallback for older browsers</div>
 <div class="line"> - Only collapse icon (U+2B9E i.e. ⮞) is used, in expanded state, it</div>
 <div class="line">   is rotated by 90 degrees.</div>
 <div class="line">*/</div>
 <div class="line">@font-face {</div>
 <div class="line">  font-family: &quot;noto-2b9&quot;;</div>
-<div class="line">  src:</div>
-<div class="line">    url(&quot;NotoSansSymbols2-Regular.woff2&quot;) format(&quot;woff2&quot;),</div>
-<div class="line">    url(&quot;NotoSansSymbols2-Regular.ttf&quot;) format(&quot;truetype&quot;); /* .ttf is optional fallback */</div>
+<div class="line">  src: url(&quot;NotoSansSymbols2-Regular.woff2&quot;) format(&quot;woff2&quot;);</div>
+<div class="line">  font-weight: 400;</div>
+<div class="line">  font-style: normal;</div>
 <div class="line">  font-display: swap;</div>
 <div class="line">  unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
+<div class="line">/* CUSTOM FONT FOR CODE */</div>
+<div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
+<div class="line"> </div>
+<div class="line">@font-face {</div>
+<div class="line">  font-family: &quot;JB-Mono&quot;;</div>
+<div class="line">  src: url(&quot;JetBrainsMono-Regular.woff2&quot;) format(&quot;woff2&quot;);</div>
+<div class="line">  font-weight: 400;</div>
+<div class="line">  font-style: normal;</div>
+<div class="line">  font-display: block;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">@font-face {</div>
+<div class="line">  font-family: &quot;JB-Mono&quot;;</div>
+<div class="line">  src: url(&quot;JetBrainsMono-SemiBold.woff2&quot;) format(&quot;woff2&quot;);</div>
+<div class="line">  font-weight: 700;</div>
+<div class="line">  font-style: normal;</div>
+<div class="line">  font-display: block;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
@@ -185,7 +202,7 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  --page-font-size: 13px !important;</div>
 <div class="line">  --navigation-font-size: 13px !important;</div>
 <div class="line">  --toc-font-size: 13px !important;</div>
-<div class="line">  --code-font-size: 12px !important;</div>
+<div class="line">  --code-font-size: 11.5px !important;</div>
 <div class="line">  --title-font-size: 18px !important;</div>
 <div class="line">  --memtitle-font-size: 16px !important;</div>
 <div class="line">  --content-line-height: 20px !important;</div>
@@ -197,7 +214,7 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">    --page-font-size: 13px !important;</div>
 <div class="line">    --navigation-font-size: 13px !important;</div>
 <div class="line">    --toc-font-size: 13px !important;</div>
-<div class="line">    --code-font-size: 12px !important;</div>
+<div class="line">    --code-font-size: 11.5px !important;</div>
 <div class="line">    --title-font-size: 16px !important;</div>
 <div class="line">    --memtitle-font-size: 16px !important;</div>
 <div class="line">    --content-line-height: 20px !important;</div>
@@ -209,6 +226,9 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
 <div class="line"> </div>
 <div class="line">:root {</div>
+<div class="line"> </div>
+<div class="line">  --font-family-monospace: &quot;JB-Mono&quot;,ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;</div>
+<div class="line"> </div>
 <div class="line">  --dp-sep: 6px;</div>
 <div class="line">  --dp-min-width: 100px;</div>
 <div class="line">  --dp-border-width: 6px;</div>
@@ -218,14 +238,14 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line"> </div>
 <div class="line">  --dp-side-nav-icon-font-size: 13px;</div>
 <div class="line"> </div>
-<div class="line">  --dp-page-nav-font-size: 11px;</div>
+<div class="line">  --dp-page-nav-font-size: 11.5px;</div>
 <div class="line">  --dp-page-nav-line-height: 18px;</div>
 <div class="line"> </div>
 <div class="line">  --dp-root-item-font-size: 13px;</div>
 <div class="line">  --dp-root-item-line-height: 22px;</div>
 <div class="line"> </div>
-<div class="line">  --dp-leaf-item-font-size: 12px;</div>
-<div class="line">  --dp-leaf-item-line-height: 21px;</div>
+<div class="line">  --dp-leaf-item-font-size: 13px;</div>
+<div class="line">  --dp-leaf-item-line-height: 22px;</div>
 <div class="line"> </div>
 <div class="line">  --dp-side-nav-width: 0px;</div>
 <div class="line">  --dp-root-pane-width: 0px;</div>
@@ -1368,17 +1388,48 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
 <div class="line"> </div>
 <div class="line">span.tt{</div>
-<div class="line">  border: none;</div>
-<div class="line">  border-radius: var(--dp-border-radius-s);</div>
+<div class="line">  font-weight: normal  !important;</div>
+<div class="line">  border: none !important;</div>
+<div class="line">  border-radius: var(--dp-border-radius-s)  !important;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
 <div class="line">/* CODE FRAGMENT CUSTOMIZATION */</div>
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
 <div class="line"> </div>
-<div class="line">div.fragment{</div>
+<div class="line">#doc-content div.fragment{</div>
+<div class="line">  width: fit-content;</div>
+<div class="line">  max-width: 100%;</div>
+<div class="line">  box-sizing: border-box;</div>
+<div class="line">  overflow-x: auto;</div>
 <div class="line">  border: none;</div>
 <div class="line">  border-radius: var(--dp-border-radius-l);</div>
+<div class="line">  padding: 10px 14px 10px 14px;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">#doc-content div.fragment,</div>
+<div class="line">#doc-content div.fragment div.line,</div>
+<div class="line">#doc-content div.fragment div.line span,</div>
+<div class="line">#doc-content div.fragment pre {</div>
+<div class="line">  line-height: 1.5;</div>
+<div class="line">  font-weight: normal;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">#doc-content div.fragment div.line::after {</div>
+<div class="line">  display: none;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">#doc-content div.fragment .clipboard {</div>
+<div class="line">  width: 16px;</div>
+<div class="line">  height: 16px;</div>
+<div class="line">  padding: 4px 4px 4px 4px;</div>
+<div class="line">  background: black;</div>
+<div class="line">  border-radius: var(--dp-border-radius-s);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">#doc-content div.fragment .clipboard svg {</div>
+<div class="line">  width: 16px;</div>
+<div class="line">  height: 16px;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
@@ -1868,12 +1919,12 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  of prefix */</div>
 <div class="line">  padding-right: 1px;</div>
 <div class="line">  font-family: var(--font-family-monospace);</div>
-<div class="line">  font-size: calc(var(--dp-root-item-font-size) * 0.9);</div>
+<div class="line">  font-size: calc(var(--dp-root-item-font-size) * 0.89);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">/* Make separator slightly smaller than text*/</div>
 <div class="line">#dp-root-pane .dpt-sep {</div>
-<div class="line">  font-size: calc(var(--dp-root-item-font-size) * 0.9);</div>
+<div class="line">  font-size: calc(var(--dp-root-item-font-size) * 0.89);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">/* The expand/collapse icon. It is necessary that the width</div>

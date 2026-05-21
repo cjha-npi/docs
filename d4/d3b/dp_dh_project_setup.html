@@ -44,8 +44,6 @@
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="../../doxy-plus.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
-<!-- Doxy-Plus Stylesheet -->
-<link href="../../doxy-plus.css" rel="stylesheet" type="text/css" />
 <!-- Doxygen Awesome Theme - Dark Mode Toggle -->
 <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
 <script type="text/javascript">
@@ -139,7 +137,7 @@ $(function(){initNavTree('d4/d3b/dp_dh_project_setup.html','../../',''); });
   <div class="headertitle"><div class="title">Project Setup </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This page defines the general project structure and development standards used across projects. It includes information about directory layout, file placement, naming conventions, coding conventions, documentation style, and other project-level practices that are independent of any specific IDE.</p>
+<div class="textblock"><p>This page defines the general project structure and development standards used across projects. It includes information about directory layout, file placement, naming conventions, coding conventions, documentation style, IDE related settings, and other project-level practices.</p>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__rules"></a>
 Rules</h1>
 <p> <div class="dp-hidden-xrefitem"> </p>
@@ -147,27 +145,26 @@ Rules</h1>
 <p> </div> </p>
 <ol type="1">
 <li><b>Structure</b><ul>
-<li>Only entry files, such as <span class="tt">main.cpp</span>, are placed at the project root.</li>
-<li>Manually created project files are placed inside project-relative subfolders.</li>
-<li>Each project uses the following directories, created only when required:<ul>
+<li>Files are named using PascalCase, for example <span class="tt">MainWindow.h</span>.</li>
+<li>Only entry-point files, for example <span class="tt">Main.cpp</span>, are placed at the project root.</li>
+<li>Each project uses the following top-level directories:<ul>
 <li><span class="tt">&lt;Project&gt;\ext\</span> : Header and source files obtained from external sources.</li>
-<li><span class="tt">&lt;Project&gt;\img\</span> : Image files, such as <span class="tt">.png</span>, <span class="tt">.jpg</span>, <span class="tt">.svg</span>, etc.</li>
-<li><span class="tt">&lt;Project&gt;\ico\</span> : Icon files, such as <span class="tt">.ico</span>.</li>
-<li><span class="tt">&lt;Project&gt;\res\</span> : Resource files, such as <span class="tt">.rc</span>, <span class="tt">.qrc</span>, etc. <div class="dp-markdown-list-gap"></div></li>
+<li><span class="tt">&lt;Project&gt;\res\</span> : Project assets, such as <span class="tt">.png</span>, <span class="tt">.jpg</span>, <span class="tt">.svg</span>, <span class="tt">.ico</span>, etc.</li>
+<li><span class="tt">&lt;Project&gt;\src\</span> : Project files, such as <span class="tt">.h</span>, <span class="tt">.hpp</span>, <span class="tt">.c</span>, <span class="tt">.cpp</span>, <span class="tt">.ui</span>, <span class="tt">.qrc</span>, <span class="tt">.rc</span>, etc. <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><b>Includes</b><ul>
-<li>All project-specific includes use a project-relative subpath, such as <span class="tt">#include "abc/def.h"</span>.</li>
-<li><b>DO NOT</b> use parent-relative includes, such as <span class="tt">#include "../abc/def.h"</span>. <div class="dp-markdown-list-gap"></div></li>
+<li>All project-specific includes use a project-relative subpath, for example <span class="tt">#include "abc/Def.h"</span>.</li>
+<li><b>DO NOT</b> use parent-relative includes, for example <span class="tt">#include "../abc/Def.h"</span>. <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
 <li><b>Coding</b><ul>
 <li><b>NO</b> global functions or variables, except required entry points and external API callbacks.</li>
 <li><b>NO</b> simple/common names such as <span class="tt">Font</span>, <span class="tt">Show</span>, etc. for classes/structs.</li>
-<li>Member variables/functions end with an underscore <span class="tt">_</span>.</li>
-<li>Static member variables/functions start with a capital letter. <div class="dp-markdown-list-gap"></div></li>
+<li>Member variables/functions end with an underscore <span class="tt">_</span>, for example <span class="tt">int calcId_</span>.</li>
+<li>Static member variables/functions start with a capital letter, for example <span class="tt">static int InstanceId_</span> <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
 <li><b>Comments</b><ul>
@@ -176,19 +173,43 @@ Rules</h1>
 </ul>
 </li>
 </ol>
-<h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__recommendations"></a>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__example_structure"></a>
+Example Structure</h1>
+<p>Here is an example structure for a project. The directories <span class="tt">ext\</span>, <span class="tt">res\</span> and <span class="tt">src\</span> should only be created when required.</p>
+<div class="fragment"><div class="line">&lt;Project&gt;\</div>
+<div class="line">├── Main.cpp</div>
+<div class="line">├── ext\</div>
+<div class="line">│   ├── MagicEnum.h</div>
+<div class="line">│   ├── calc\</div>
+<div class="line">│   │   ├── HighPrecision.h</div>
+<div class="line">│   │   └── HighPrecision.cpp</div>
+<div class="line">│   └── threading\</div>
+<div class="line">│       └── ThreadQueue.hpp</div>
+<div class="line">├── res\</div>
+<div class="line">│   ├── img\</div>
+<div class="line">│   │   ├── AppLogo.png</div>
+<div class="line">│   │   └── Startup.png</div>
+<div class="line">│   └── ico\</div>
+<div class="line">│       ├── Open.ico</div>
+<div class="line">│       └── SaveFile.ico</div>
+<div class="line">└── src\</div>
+<div class="line">    ├── LogCats.hpp</div>
+<div class="line">    ├── meta\</div>
+<div class="line">    │   ├── AppMeta.h</div>
+<div class="line">    │   └── AppMeta.cpp</div>
+<div class="line">    ├── util\</div>
+<div class="line">    │   ├── FileCheck.hpp</div>
+<div class="line">    │   └── OneLocker.cpp</div>
+<div class="line">    └── plot\</div>
+<div class="line">        ├── Plot.h</div>
+<div class="line">        ├── Plot.cpp</div>
+<div class="line">        └── PlotSettings.ui</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__recommendations"></a>
 Recommendations</h1>
 <ol type="1">
 <li><b>Structure</b><ul>
 <li>The <span class="tt">Project name</span> and <span class="tt">Solution name</span> should be different.</li>
-<li>Main project inside a Visual Studio solution should be named <span class="tt">App</span>.</li>
-<li>Non-main projects inside a Visual Studio solution can be named as required.</li>
-<li>Suggested directories for splitting header, source and form files, if desired:<ul>
-<li><span class="tt">&lt;Project&gt;\hdr\</span> : Project header files, such as <span class="tt">.h</span>, <span class="tt">.hpp</span>, etc.</li>
-<li><span class="tt">&lt;Project&gt;\src\</span> : Project source files, such as <span class="tt">.c</span>, <span class="tt">.cpp</span>, etc.</li>
-<li><span class="tt">&lt;Project&gt;\gui\</span> : Qt form files, such as <span class="tt">.ui</span>. <div class="dp-markdown-list-gap"></div></li>
-</ul>
-</li>
+<li>Main project inside a Visual Studio solution should be named <span class="tt">App</span>. <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
 <li><b>Includes</b><ul>
