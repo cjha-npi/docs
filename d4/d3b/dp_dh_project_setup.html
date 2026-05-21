@@ -173,6 +173,14 @@ Rules</h1>
 </ul>
 </li>
 </ol>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__conventions"></a>
+Conventions</h1>
+<ul>
+<li>The main project name should normally match the solution name.</li>
+<li>Use <span class="tt">#pragma once</span> in headers, keep includes minimal and prefer forward declarations in headers when practical.</li>
+<li>Start signal names with <span class="tt">sig_</span> and slot names with <span class="tt">on_</span> or <span class="tt">on</span>.</li>
+<li>Use <span class="tt">/** ... */</span> for high-level Doxygen comments, <span class="tt">///</span> above functions, and <span class="tt">///&lt;</span> for trailing declaration comments.</li>
+</ul>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__example_structure"></a>
 Example Structure</h1>
 <p>Here is an example structure for a project. The directories <span class="tt">ext\</span>, <span class="tt">res\</span> and <span class="tt">src\</span> should only be created when required.</p>
@@ -204,33 +212,7 @@ Example Structure</h1>
 <div class="line">        ├── Plot.h</div>
 <div class="line">        ├── Plot.cpp</div>
 <div class="line">        └── PlotSettings.ui</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__recommendations"></a>
-Recommendations</h1>
-<ol type="1">
-<li><b>Structure</b><ul>
-<li>The <span class="tt">Project name</span> and <span class="tt">Solution name</span> should be different.</li>
-<li>Main project inside a Visual Studio solution should be named <span class="tt">App</span>. <div class="dp-markdown-list-gap"></div></li>
-</ul>
-</li>
-<li><b>Includes</b><ul>
-<li>Keep includes minimal.</li>
-<li>Prefer forward declarations in headers when practical. <div class="dp-markdown-list-gap"></div></li>
-</ul>
-</li>
-<li><b>Coding</b><ul>
-<li>Use <span class="tt">#pragma once</span> in headers.</li>
-<li>Start signal names with <span class="tt">sig_</span>.</li>
-<li>Start slot names with <span class="tt">on_</span> or <span class="tt">on</span>. <div class="dp-markdown-list-gap"></div></li>
-</ul>
-</li>
-<li><b>Comments</b><ul>
-<li>Use <span class="tt">/** ... */</span> style for high-level declarations, such as files, namespaces, classes, structs, etc.</li>
-<li>Use <span class="tt">///</span> above functions.</li>
-<li>Use <span class="tt">///&lt;</span> for trailing single-line Doxygen comments after declarations.</li>
-</ul>
-</li>
-</ol>
-<h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__vs_proj_settings"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dp_dh_project_setup__vs_proj_settings"></a>
 VS Project Settings</h1>
 <p>This section applies only to projects developed with Visual Studio. Ignore this section for projects that use a different build system or IDE.</p>
 <p>Set <b>Project Properties &gt; Configuration:</b> <span class="tt">All Configurations</span> and <b>Platform:</b> <span class="tt">All Platforms</span> (if possible) first.</p>

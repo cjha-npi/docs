@@ -30,8 +30,8 @@ var dp_dh_dir_dev_hub =
     ] ],
     [ "Project Setup", "d4/d3b/dp_dh_project_setup.html", [
       [ "Rules", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__rules", null ],
+      [ "Conventions", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__conventions", null ],
       [ "Example Structure", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__example_structure", null ],
-      [ "Recommendations", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__recommendations", null ],
       [ "VS Project Settings", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_proj_settings", null ],
       [ "VS Property Sheets", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets", null ]
     ] ],

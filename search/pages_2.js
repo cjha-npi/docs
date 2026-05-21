@@ -12,7 +12,7 @@ var searchData=
   ['components_9',['Current Components',['../index.html#autotoc_md1',1,'']]],
   ['configuration_10',['Robocopy configuration',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__robocopy_config',1,'']]],
   ['contract_11',['Contract',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__data_contract',1,'Data Contract'],['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__startup_contract',1,'Startup Contract']]],
-  ['conventions_12',['Coding Conventions',['../index.html#autotoc_md4',1,'']]],
+  ['conventions_12',['Conventions',['../index.html#autotoc_md4',1,'Coding Conventions'],['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__conventions',1,'Conventions']]],
   ['core_20capabilities_13',['Core Capabilities',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__core_capabilities',1,'']]],
   ['correctness_20requirements_14',['Lifetime and Correctness Requirements',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__lifetime_correctness_requirements',1,'']]],
   ['cpu_20bar_20generator_15',['CPU Bar Generator',['../dc/df4/dp_dh_rm_sys_graphs_cpu_bar_generator.html',1,'dp_dh_dir_rm_sys_graphs']]],
