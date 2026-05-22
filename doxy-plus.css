@@ -24,8 +24,14 @@
  - Only collapse icon (U+2B9E i.e. ⮞) is used, in expanded state, it
    is rotated by 90 degrees.
 */
-
-
+@font-face {
+  font-family: "noto-2b9";
+  src: url("NotoSansSymbols2-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
+}
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* CUSTOM FONT FOR CODE */
@@ -1589,7 +1595,7 @@ li.dpt-node--branch.dpt-node--expanded > ul {
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-family: "JB-Mono" !important;
+  font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
   overflow: hidden; /* Otherwise if size increases then width will also increase */
