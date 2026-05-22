@@ -182,6 +182,7 @@ var NAVTREEINDEX4 =
 "dd/df7/_text_spec_8hpp.html":[9,0,14],
 "dd/df7/_text_spec_8hpp_source.html":[9,0,14],
 "dd/df8/dp_dh_dir_rm_sys_graphs.html":[2,6,1,0],
+"de/d10/dp_dh_doxy_plus_xml_file.html":[2,4,5],
 "de/d1c/conceptnpi_1_1_supports_shared_from_this.html":[6,0,2,13],
 "de/d1c/conceptnpi_1_1_supports_shared_from_this.html":[7,0,1],
 "de/d8d/dp_dh_dir_git_github.html":[2,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "functions_func_t.html":[8,2,1,15],
 "functions_func_u.html":[8,2,1,16],
 "functions_func_w.html":[8,2,1,17],
-"functions_func_~.html":[8,2,1,18],
-"functions_g.html":[8,2,0,6]
+"functions_func_~.html":[8,2,1,18]
 };

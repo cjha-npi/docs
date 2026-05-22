@@ -138,11 +138,21 @@ $(function(){initNavTree('d2/dd5/structnpi_1_1_gui_props.html','../../','d8/d53/
 </div><!--header-->
 <div class="contents">
 
-<p>Scope-only container for GUI property keys.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../dc/d0e/_gui_props_8hpp_source.html">GuiProps.hpp</a>&gt;</code></p>
-<div class="dynheader">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><p>Scope-only container for GUI property keys. </p>
+<p><a class="el" href="../../d2/dd5/structnpi_1_1_gui_props.html" title="Scope-only container for GUI property keys.">GuiProps</a> provides a closed set of GUI-related dynamic property names for use with QObject. The type cannot be constructed, copied, moved, or destroyed. Only the static members are intended to be used. All keys are ASCII-only and stable by contract so they can be relied upon by styles, delegates, and other UI infrastructure without string duplication or translation.</p>
+<p>Invariants:</p><ul>
+<li>No instances of <a class="el" href="../../d2/dd5/structnpi_1_1_gui_props.html" title="Scope-only container for GUI property keys.">GuiProps</a> exist at runtime.</li>
+<li>All keys are null-terminated and suitable for QObject::setProperty().</li>
+<li>Keys are intended to be read-only and never modified.</li>
+</ul>
+<p>Extension policy:</p><ul>
+<li>Add new keys as additional static members in this type to keep a single source of truth and predictable auto-complete. If third-party modules must contribute keys without editing this file, prefer a namespace container. </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d0e/_gui_props_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../dc/d0e/_gui_props_8hpp_source.html">GuiProps.hpp</a>.</p>
+</div><div class="dynheader">
 Collaboration diagram for npi::GuiProps:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d8/d14/structnpi_1_1_gui_props__coll__graph.svg" width="222" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -200,20 +210,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a57e21a040aef9e111756692e2dc32ea5" id="r_a57e21a040aef9e111756692e2dc32ea5"><td class="memItemLeft">static constexpr char&#160;</td><td class="memItemRight"><a class="el" href="#a57e21a040aef9e111756692e2dc32ea5">TransparentForMouseWheel_</a> [] = &quot;TransparentForMouseWheel&quot;</td></tr>
 <tr class="memdesc:a57e21a040aef9e111756692e2dc32ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes mouse wheel events to underlying widgets.  <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Scope-only container for GUI property keys. </p>
-<p><a class="el" href="../../d2/dd5/structnpi_1_1_gui_props.html" title="Scope-only container for GUI property keys.">GuiProps</a> provides a closed set of GUI-related dynamic property names for use with QObject. The type cannot be constructed, copied, moved, or destroyed. Only the static members are intended to be used. All keys are ASCII-only and stable by contract so they can be relied upon by styles, delegates, and other UI infrastructure without string duplication or translation.</p>
-<p>Invariants:</p><ul>
-<li>No instances of <a class="el" href="../../d2/dd5/structnpi_1_1_gui_props.html" title="Scope-only container for GUI property keys.">GuiProps</a> exist at runtime.</li>
-<li>All keys are null-terminated and suitable for QObject::setProperty().</li>
-<li>Keys are intended to be read-only and never modified.</li>
-</ul>
-<p>Extension policy:</p><ul>
-<li>Add new keys as additional static members in this type to keep a single source of truth and predictable auto-complete. If third-party modules must contribute keys without editing this file, prefer a namespace container. </li>
-</ul>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d0e/_gui_props_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../dc/d0e/_gui_props_8hpp_source.html">GuiProps.hpp</a>.</p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa2e70a07d7e0a78501f4e6b66e5c9a5" name="afa2e70a07d7e0a78501f4e6b66e5c9a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa2e70a07d7e0a78501f4e6b66e5c9a5">&#9670;&#160;</a></span>GuiProps() <span class="overload">[1/3]</span></h2>
 

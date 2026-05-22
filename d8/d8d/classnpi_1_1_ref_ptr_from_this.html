@@ -138,11 +138,35 @@ $(function(){initNavTree('d8/d8d/classnpi_1_1_ref_ptr_from_this.html','../../','
 </div><!--header-->
 <div class="contents">
 
-<p>Enables objects that inherits from this class to produce a <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object referencing themselves if the object is wrapped in a <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>&gt;</code></p>
-<div class="dynheader">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class npi::RefPtrFromThis&lt; T &gt;</div><p>Enables objects that inherits from this class to produce a <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object referencing themselves if the object is wrapped in a <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>. </p>
+<ul>
+<li>Behaves like a std::enable_shared_from_this but for <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>.</li>
+<li>Stores a weak reference to the universal observer in the <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>.</li>
+<li>Provides a way to obtain a <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object to itself using the universal observer if the <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> object is still alive.</li>
+</ul>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the object being wrapped in <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> and supporting enable-from-this semantics.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This class only holds a weak reference to the universal observer in the <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>. This means that as long as any <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> object is alive, the <a class="el" href="../../d8/d8d/classnpi_1_1_ref_ptr_from_this.html" title="Enables objects that inherits from this class to produce a RefPtr object referencing themselves if th...">RefPtrFromThis</a> object will be able to create a <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object to itself and that <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object will be valid as long as the <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> object is alive.</dd></dl>
+<dl class="section user"><dt>Example of using LinkFromThis:</dt><dd><div class="fragment"><div class="line"><span class="keyword">struct </span>MyClass : <a class="code hl_function" href="#a5e2fdcaec422ec8b9950dc98589d3c4f">RefPtrFromThis</a>&lt;MyClass&gt; {</div>
+<div class="line">  <span class="keywordtype">void</span> hello() {}</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> host = <a class="code hl_friend" href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">RefPtrHost&lt;MyClass&gt;</a>(<span class="keyword">new</span> MyClass());</div>
+<div class="line"><span class="keyword">auto</span> refPtr = host.universal_()-&gt;refPtrFromThis_();</div>
+<div class="line"><span class="keywordflow">if</span>(refPtr) refPtr-&gt;hello();</div>
+<div class="ttc" id="aclassnpi_1_1_ref_ptr_from_this_html_a5e2fdcaec422ec8b9950dc98589d3c4f"><div class="ttname"><a href="#a5e2fdcaec422ec8b9950dc98589d3c4f">npi::RefPtrFromThis::RefPtrFromThis</a></div><div class="ttdeci">RefPtrFromThis() noexcept=default</div><div class="ttdoc">Default constructor.</div></div>
+<div class="ttc" id="aclassnpi_1_1_ref_ptr_from_this_html_a9a90d6c7f87e0b3d7dc0ecc2a5bc4980"><div class="ttname"><a href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">npi::RefPtrFromThis::RefPtrHost</a></div><div class="ttdeci">friend class RefPtrHost</div><div class="ttdoc">Friend declarations of RefPtrHost class.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l01176">RefPtrClasses.hpp:1176</a></div></div>
+</div><!-- fragment --> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l01123">1123</a> of file <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>.</p>
+</div><div class="dynheader">
 Collaboration diagram for npi::RefPtrFromThis&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d6f/classnpi_1_1_ref_ptr_from_this__coll__graph.svg" width="224" height="163"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -182,34 +206,7 @@ Friends</h2></td></tr>
 <tr class="memitem:a559269952c68a83e865a2c8a15f8c110" id="r_a559269952c68a83e865a2c8a15f8c110"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a559269952c68a83e865a2c8a15f8c110">swap</a> (<a class="el" href="#a5e2fdcaec422ec8b9950dc98589d3c4f">RefPtrFromThis</a> &amp;a, <a class="el" href="#a5e2fdcaec422ec8b9950dc98589d3c4f">RefPtrFromThis</a> &amp;b) noexcept</td></tr>
 <tr class="memdesc:a559269952c68a83e865a2c8a15f8c110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friend swap to exchange two <a class="el" href="../../d8/d8d/classnpi_1_1_ref_ptr_from_this.html" title="Enables objects that inherits from this class to produce a RefPtr object referencing themselves if th...">RefPtrFromThis</a> instances.  <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class npi::RefPtrFromThis&lt; T &gt;</div><p>Enables objects that inherits from this class to produce a <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object referencing themselves if the object is wrapped in a <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>. </p>
-<ul>
-<li>Behaves like a std::enable_shared_from_this but for <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>.</li>
-<li>Stores a weak reference to the universal observer in the <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>.</li>
-<li>Provides a way to obtain a <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object to itself using the universal observer if the <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> object is still alive.</li>
-</ul>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the object being wrapped in <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> and supporting enable-from-this semantics.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This class only holds a weak reference to the universal observer in the <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>. This means that as long as any <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> object is alive, the <a class="el" href="../../d8/d8d/classnpi_1_1_ref_ptr_from_this.html" title="Enables objects that inherits from this class to produce a RefPtr object referencing themselves if th...">RefPtrFromThis</a> object will be able to create a <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object to itself and that <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object will be valid as long as the <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> object is alive.</dd></dl>
-<dl class="section user"><dt>Example of using LinkFromThis:</dt><dd><div class="fragment"><div class="line"><span class="keyword">struct </span>MyClass : <a class="code hl_function" href="#a5e2fdcaec422ec8b9950dc98589d3c4f">RefPtrFromThis</a>&lt;MyClass&gt; {</div>
-<div class="line">  <span class="keywordtype">void</span> hello() {}</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">auto</span> host = <a class="code hl_friend" href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">RefPtrHost&lt;MyClass&gt;</a>(<span class="keyword">new</span> MyClass());</div>
-<div class="line"><span class="keyword">auto</span> refPtr = host.universal_()-&gt;refPtrFromThis_();</div>
-<div class="line"><span class="keywordflow">if</span>(refPtr) refPtr-&gt;hello();</div>
-<div class="ttc" id="aclassnpi_1_1_ref_ptr_from_this_html_a5e2fdcaec422ec8b9950dc98589d3c4f"><div class="ttname"><a href="#a5e2fdcaec422ec8b9950dc98589d3c4f">npi::RefPtrFromThis::RefPtrFromThis</a></div><div class="ttdeci">RefPtrFromThis() noexcept=default</div><div class="ttdoc">Default constructor.</div></div>
-<div class="ttc" id="aclassnpi_1_1_ref_ptr_from_this_html_a9a90d6c7f87e0b3d7dc0ecc2a5bc4980"><div class="ttname"><a href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">npi::RefPtrFromThis::RefPtrHost</a></div><div class="ttdeci">friend class RefPtrHost</div><div class="ttdoc">Friend declarations of RefPtrHost class.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l01176">RefPtrClasses.hpp:1176</a></div></div>
-</div><!-- fragment --> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l01123">1123</a> of file <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>.</p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5e2fdcaec422ec8b9950dc98589d3c4f" name="a5e2fdcaec422ec8b9950dc98589d3c4f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e2fdcaec422ec8b9950dc98589d3c4f">&#9670;&#160;</a></span>RefPtrFromThis() <span class="overload">[1/3]</span></h2>
 

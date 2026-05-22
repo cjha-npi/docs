@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: StageWindow.hpp File Reference</title>
+<title>Main Project: E:/Doxy/_dev/Doxygen/doxy_plus_xml.md File Reference</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -108,7 +108,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('dd/de0/_stage_window_8hpp.html','../../',''); });
+$(function(){initNavTree('d7/d3d/doxy__plus__xml_8md.html','../../',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -134,61 +134,9 @@ $(function(){initNavTree('dd/de0/_stage_window_8hpp.html','../../',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">StageWindow.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">E:/Doxy/_dev/Doxygen/doxy_plus_xml.md File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;QObject&gt;</code><br />
-<code>#include &lt;QStyle&gt;</code><br />
-<code>#include &lt;QWidget&gt;</code><br />
-<code>#include &lt;QScreen&gt;</code><br />
-<code>#include &lt;QPointer&gt;</code><br />
-<code>#include &lt;QApplication&gt;</code><br />
-<code>#include &lt;QPropertyAnimation&gt;</code><br />
-<code>#include &lt;QEasingCurve&gt;</code><br />
-<code>#include &lt;QCursor&gt;</code><br />
-<code>#include &lt;QPoint&gt;</code><br />
-<code>#include &lt;QRect&gt;</code><br />
-<code>#include &lt;QColor&gt;</code><br />
-<code>#include &lt;QPalette&gt;</code><br />
-<code>#include &lt;QtGlobal&gt;</code><br />
-<code>#include &lt;QtMath&gt;</code><br />
-</div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
-<div class="textblock"><p>Header-only utility for showing a top-level widget either instantly or with a source-origin animation. </p>
-<p>This header defines <span class="tt"><a class="el" href="../../dd/d55/classnpi_1_1_stage_window.html" title="Helper to display a top-level widget with optional animation and robust on-screen positioning.">npi::StageWindow</a></span>, a helper class for top-level <span class="tt">QWidget</span> display:</p><ul>
-<li><span class="tt">quick_()</span> positions and shows immediately.</li>
-<li><span class="tt">animate_()</span> creates a temporary frameless overlay window that grows/moves from a source rectangle (cursor or a "caller" widget) to the target widget's frame geometry, while the real widget fades from 0.0 to 1.0 opacity at the end.</li>
-</ul>
-<p>Positioning guarantees:</p><ul>
-<li>The target widget is adjusted to remain inside the available geometry of the chosen screen.</li>
-<li>Optional centering over a "center" widget.</li>
-</ul>
-<p>Safety and lifetime notes:</p><ul>
-<li><span class="tt">animate_()</span> does not capture <span class="tt">this</span>; it captures a <span class="tt">QPointer&lt;QWidget&gt;</span> to avoid use-after-free.</li>
-<li>If the target widget is deleted during the animation, the temporary overlay is still cleaned up.</li>
-</ul>
-<dl class="section warning"><dt>Warning</dt><dd>Call these APIs from the GUI thread. Showing/moving widgets from worker threads is undefined. </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="../../dd/de0/_stage_window_8hpp_source.html">StageWindow.hpp</a>.</p>
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for StageWindow.hpp:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d98/_stage_window_8hpp__incl.svg" width="100%" height="383"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-</div>
-<p><a href="../../dd/de0/_stage_window_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:npi_3A_3AStageWindow" id="r_npi_3A_3AStageWindow"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d55/classnpi_1_1_stage_window.html">npi::StageWindow</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to display a top-level widget with optional animation and robust on-screen positioning.  <a href="../../dd/d55/classnpi_1_1_stage_window.html#details">More...</a><br /></td></tr>
-<tr class="memitem:npi_3A_3AStageWindow_3A_3AOpacityGuard" id="r_npi_3A_3AStageWindow_3A_3AOpacityGuard"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d8d/structnpi_1_1_stage_window_1_1_opacity_guard.html">npi::StageWindow::OpacityGuard</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper for <span class="tt"><a class="el" href="../../dd/d55/classnpi_1_1_stage_window.html" title="Helper to display a top-level widget with optional animation and robust on-screen positioning.">StageWindow</a></span> class. A RAII guard that restores a widget's window opacity on scope exit.  <a href="../../d5/d8d/structnpi_1_1_stage_window_1_1_opacity_guard.html#details">More...</a><br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:npi" id="r_npi"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
-<tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for npi electronics GmbH. <br /></td></tr>
-</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -203,7 +151,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../dd/de0/_stage_window_8hpp.html">StageWindow.hpp</a></li>
+    <li class="navelem"><a href="../../d7/d3d/doxy__plus__xml_8md.html">doxy_plus_xml.md</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

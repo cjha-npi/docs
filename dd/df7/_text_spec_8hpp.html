@@ -137,9 +137,6 @@ $(function(){initNavTree('dd/df7/_text_spec_8hpp.html','../../',''); });
   <div class="headertitle"><div class="title">TextSpec.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Thread-safe font utility for application and fixed-width fonts.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;QHash&gt;</code><br />
 <code>#include &lt;QFont&gt;</code><br />
 <code>#include &lt;QColor&gt;</code><br />
@@ -153,6 +150,19 @@ $(function(){initNavTree('dd/df7/_text_spec_8hpp.html','../../',''); });
 <code>#include &lt;QList&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &quot;npi/GuiProps.hpp&quot;</code><br />
+</div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><p>Thread-safe font utility for application and fixed-width fonts. </p>
+<p>This header defines <a class="el" href="../../d2/db7/classnpi_1_1_text_spec.html" title="Thread-safe font utility with style, sizing, and caching.">npi::TextSpec</a>, a small utility that centralizes font handling:</p><ul>
+<li>Maintains a global application font and a global fixed-width font.</li>
+<li>Provides style flags (bold, italic, underline, overline, strikeout) and capitalization.</li>
+<li>Supports absolute and relative point sizes and computes effective sizes.</li>
+<li>Caches QFont and its metrics (QFontMetrics, QFontMetricsF) keyed by style+size.</li>
+<li>Uses per-family mutexes to guard static state and caches.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>GUI thread requirement: Any interaction with QWidget or QApplication must occur on the GUI thread. This class posts updates using queued connections where needed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Ordering note for SetAppFont_ and SetFixFont_: These methods update internal state and clear caches under a mutex, unlock, and then perform GUI updates (qApp-&gt;setFont or posting QWidget::update()). This introduces a brief window where cache state and GUI state may not be perfectly in sync. This is acceptable in practice and avoids holding a lock across GUI calls. </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="../../dd/df7/_text_spec_8hpp_source.html">TextSpec.hpp</a>.</p>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for TextSpec.hpp:</div>
 <div class="dyncontent">
@@ -175,20 +185,7 @@ Namespaces</h2></td></tr>
 <tr class="memitem:npi" id="r_npi"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
 <tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for npi electronics GmbH. <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Thread-safe font utility for application and fixed-width fonts. </p>
-<p>This header defines <a class="el" href="../../d2/db7/classnpi_1_1_text_spec.html" title="Thread-safe font utility with style, sizing, and caching.">npi::TextSpec</a>, a small utility that centralizes font handling:</p><ul>
-<li>Maintains a global application font and a global fixed-width font.</li>
-<li>Provides style flags (bold, italic, underline, overline, strikeout) and capitalization.</li>
-<li>Supports absolute and relative point sizes and computes effective sizes.</li>
-<li>Caches QFont and its metrics (QFontMetrics, QFontMetricsF) keyed by style+size.</li>
-<li>Uses per-family mutexes to guard static state and caches.</li>
-</ul>
-<dl class="section note"><dt>Note</dt><dd>GUI thread requirement: Any interaction with QWidget or QApplication must occur on the GUI thread. This class posts updates using queued connections where needed.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Ordering note for SetAppFont_ and SetFixFont_: These methods update internal state and clear caches under a mutex, unlock, and then perform GUI updates (qApp-&gt;setFont or posting QWidget::update()). This introduces a brief window where cache state and GUI state may not be perfectly in sync. This is acceptable in practice and avoids holding a lock across GUI calls. </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="../../dd/df7/_text_spec_8hpp_source.html">TextSpec.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

@@ -138,11 +138,32 @@ $(function(){initNavTree('d6/d78/classnpi_1_1_ref_ptr_host.html','../../','de/d2
 </div><!--header-->
 <div class="contents">
 
-<p>A thread-safe, owning host that manages an object of type T and notifies <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> objects upon destruction.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>&gt;</code></p>
-<div class="dynheader">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class npi::RefPtrHost&lt; T &gt;</div><p>A thread-safe, owning host that manages an object of type T and notifies <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> objects upon destruction. </p>
+<ul>
+<li>Behaves like a std::shared_ptr i.e. owns the object T and destroys it when the last reference is released.</li>
+<li>Provides direct pointer-like access to the object.</li>
+<li>Supports polymorphic conversion and comparison.</li>
+<li>Maintains two <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> channels: Universal and Local.</li>
+<li><a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object obtained through Universal channel is valid while the object is alive.</li>
+<li><a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object obtained through Local channel is valid only while the last local copy of <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> is alive.</li>
+</ul>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the object being hosted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Example of creating and using links:</dt><dd><div class="fragment"><div class="line"><a class="code hl_friend" href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">RefPtrHost&lt;MyClass&gt;</a> host(<span class="keyword">new</span> MyClass());</div>
+<div class="line"><span class="keyword">auto</span> refPtr = host.universal_();</div>
+<div class="line"><span class="keywordflow">if</span> (refPtr) refPtr-&gt;doSomething_();</div>
+<div class="ttc" id="aclassnpi_1_1_ref_ptr_host_html_a9a90d6c7f87e0b3d7dc0ecc2a5bc4980"><div class="ttname"><a href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">npi::RefPtrHost::RefPtrHost</a></div><div class="ttdeci">friend class RefPtrHost</div><div class="ttdoc">Friend declarations of RefPtrHost class with type as U. This makes any RefPtrHost class object a frie...</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l00821">RefPtrClasses.hpp:821</a></div></div>
+</div><!-- fragment --> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l00546">546</a> of file <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>.</p>
+</div><div class="dynheader">
 Collaboration diagram for npi::RefPtrHost&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d8a/classnpi_1_1_ref_ptr_host__coll__graph.svg" width="414" height="167"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -270,31 +291,7 @@ Friends</h2></td></tr>
 <tr class="memitem:aa7de8d60a0e0fc05612bbf6b0f04d9d2" id="r_aa7de8d60a0e0fc05612bbf6b0f04d9d2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa7de8d60a0e0fc05612bbf6b0f04d9d2">swap</a> (<a class="el" href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">RefPtrHost</a>&lt; T &gt; &amp;a, <a class="el" href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">RefPtrHost</a>&lt; T &gt; &amp;b) noexcept</td></tr>
 <tr class="memdesc:aa7de8d60a0e0fc05612bbf6b0f04d9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two hosts.  <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class npi::RefPtrHost&lt; T &gt;</div><p>A thread-safe, owning host that manages an object of type T and notifies <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> objects upon destruction. </p>
-<ul>
-<li>Behaves like a std::shared_ptr i.e. owns the object T and destroys it when the last reference is released.</li>
-<li>Provides direct pointer-like access to the object.</li>
-<li>Supports polymorphic conversion and comparison.</li>
-<li>Maintains two <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> channels: Universal and Local.</li>
-<li><a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object obtained through Universal channel is valid while the object is alive.</li>
-<li><a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> object obtained through Local channel is valid only while the last local copy of <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a> is alive.</li>
-</ul>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the object being hosted.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section user"><dt>Example of creating and using links:</dt><dd><div class="fragment"><div class="line"><a class="code hl_friend" href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">RefPtrHost&lt;MyClass&gt;</a> host(<span class="keyword">new</span> MyClass());</div>
-<div class="line"><span class="keyword">auto</span> refPtr = host.universal_();</div>
-<div class="line"><span class="keywordflow">if</span> (refPtr) refPtr-&gt;doSomething_();</div>
-<div class="ttc" id="aclassnpi_1_1_ref_ptr_host_html_a9a90d6c7f87e0b3d7dc0ecc2a5bc4980"><div class="ttname"><a href="#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980">npi::RefPtrHost::RefPtrHost</a></div><div class="ttdeci">friend class RefPtrHost</div><div class="ttdoc">Friend declarations of RefPtrHost class with type as U. This makes any RefPtrHost class object a frie...</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l00821">RefPtrClasses.hpp:821</a></div></div>
-</div><!-- fragment --> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l00546">546</a> of file <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>.</p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8c4327ce9a771099bb1558119d428553" name="a8c4327ce9a771099bb1558119d428553"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c4327ce9a771099bb1558119d428553">&#9670;&#160;</a></span>RefPtrHost() <span class="overload">[1/6]</span></h2>
 

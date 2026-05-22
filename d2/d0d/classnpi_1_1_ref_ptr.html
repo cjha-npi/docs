@@ -138,11 +138,31 @@ $(function(){initNavTree('d2/d0d/classnpi_1_1_ref_ptr.html','../../','de/d07/cla
 </div><!--header-->
 <div class="contents">
 
-<p>A non-owning, auto-nullifying pointer-like handle to an object of type T.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>&gt;</code></p>
-<div class="dynheader">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class npi::RefPtr&lt; T &gt;</div><p>A non-owning, auto-nullifying pointer-like handle to an object of type T. </p>
+<ul>
+<li>Does not own the object T.</li>
+<li>Object must be wrapped in <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>.</li>
+<li>Provides safe pointer-like access to T.</li>
+<li>Supports polymorphic conversion and comparison.</li>
+<li>Offers a safe boolean conversion to check if the linked object is still alive.</li>
+</ul>
+<ul>
+<li>Holds a shared control block containing an atomic&lt;void*&gt; to the object.</li>
+<li>When the observer is torn down, the atomic is set to nullptr (release), so readers detect teardown via acquire loads.</li>
+<li>Does not synchronize arbitrary reads or writes to the object T; callers must provide their own synchronization for T's data.</li>
+</ul>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the object being linked to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l00165">165</a> of file <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>.</p>
+</div><div class="dynheader">
 Collaboration diagram for npi::RefPtr&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d3c/classnpi_1_1_ref_ptr__coll__graph.svg" width="216" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -242,30 +262,7 @@ Friends</h2></td></tr>
 <tr class="memitem:a7c41e7b8deba52875b45571109c576de" id="r_a7c41e7b8deba52875b45571109c576de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7c41e7b8deba52875b45571109c576de">swap</a> (<a class="el" href="#a161a8052754985bb8024c19c06fd9206">RefPtr</a>&lt; T &gt; &amp;a, <a class="el" href="#a161a8052754985bb8024c19c06fd9206">RefPtr</a>&lt; T &gt; &amp;b) noexcept</td></tr>
 <tr class="memdesc:a7c41e7b8deba52875b45571109c576de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap the contents of two <a class="el" href="../../d2/d0d/classnpi_1_1_ref_ptr.html" title="A non-owning, auto-nullifying pointer-like handle to an object of type T.">RefPtr</a> objects.  <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class npi::RefPtr&lt; T &gt;</div><p>A non-owning, auto-nullifying pointer-like handle to an object of type T. </p>
-<ul>
-<li>Does not own the object T.</li>
-<li>Object must be wrapped in <a class="el" href="../../d6/d78/classnpi_1_1_ref_ptr_host.html" title="A thread-safe, owning host that manages an object of type T and notifies RefPtr objects upon destruct...">RefPtrHost</a>.</li>
-<li>Provides safe pointer-like access to T.</li>
-<li>Supports polymorphic conversion and comparison.</li>
-<li>Offers a safe boolean conversion to check if the linked object is still alive.</li>
-</ul>
-<ul>
-<li>Holds a shared control block containing an atomic&lt;void*&gt; to the object.</li>
-<li>When the observer is torn down, the atomic is set to nullptr (release), so readers detect teardown via acquire loads.</li>
-<li>Does not synchronize arbitrary reads or writes to the object T; callers must provide their own synchronization for T's data.</li>
-</ul>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the object being linked to. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html#l00165">165</a> of file <a class="el" href="../../d0/db8/_ref_ptr_classes_8hpp_source.html">RefPtrClasses.hpp</a>.</p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aff085c56c649f41e22c95d36c7c5a46f" name="aff085c56c649f41e22c95d36c7c5a46f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff085c56c649f41e22c95d36c7c5a46f">&#9670;&#160;</a></span>RefPtr() <span class="overload">[1/5]</span></h2>
 

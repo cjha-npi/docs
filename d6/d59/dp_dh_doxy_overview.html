@@ -144,6 +144,7 @@ Introduction</h1>
 <ul>
 <li>JavaScript</li>
 <li>CSS</li>
+<li>XML</li>
 <li>Header and footer HTML template modifications</li>
 <li>Supporting external assets</li>
 </ul>
@@ -156,7 +157,7 @@ Introduction</h1>
 <li>additional debug and inspection helpers</li>
 <li>custom styling</li>
 </ul>
-<p>The custom <span class="tt">doxy-plus.js</span> and <span class="tt">doxy-plus.css</span> files add an enhancement layer on top of Doxygen's generated pages without changing the documented source code itself.</p>
+<p>The custom <span class="tt">doxy-plus.js</span>, <span class="tt">doxy-plus.css</span> and <span class="tt">doxy-plus.xml</span> files add an enhancement layer on top of Doxygen's generated pages without changing the documented source code itself.</p>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_doxy_overview__ver_info"></a>
 Version Information</h1>
 <p>The current Doxygen output generation is built for the following versions:</p>
@@ -180,7 +181,7 @@ Main Files</h1>
 </li>
 <li><b><span class="tt">doxy-plus-head.html</span> :</b> Default Doxygen header with a few extra contents added.<ul>
 <li>Manipulate default widths of default Doxygen panes</li>
-<li>Insert CSS stylesheets and navigation panes</li>
+<li>Insert navigation panes</li>
 <li>Added via <span class="tt">HTML_HEADER</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a></li>
 <li>Full file content: <a class="el" href="../../df/da8/dp_dh_doxy_html_files.html" title="HTML Files">HTML Files</a> <div class="dp-markdown-list-gap"></div></li>
 </ul>
@@ -212,6 +213,24 @@ Main Files</h1>
 <li>Full file content: <a class="el" href="../../dc/dc4/dp_dh_doxy_plus_css_file.html" title="doxy-plus CSS">doxy-plus CSS</a> <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
+<li><b><span class="tt">doxy-plus.xml</span> :</b> Adds the custom page ordering for the generated documentation.<ul>
+<li>Moves the detailed description part to the top of the page</li>
+<li>Added via <span class="tt">LAYOUT_FILE</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a></li>
+<li>Full file content: <a class="el" href="../../de/d10/dp_dh_doxy_plus_xml_file.html" title="doxy-plus XML">doxy-plus XML</a> <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Internal Assets:</b> These files are generated internally.<ul>
+<li><span class="tt">npi_icon.png</span> : The icon shown in browser tabs<ul>
+<li>Added via <span class="tt">PROJECT_ICON</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a></li>
+</ul>
+</li>
+<li><span class="tt">npi_logo.png</span> : The logo used in the HTML header.<ul>
+<li>Max size: H: 55px, W: 200px</li>
+<li>Added via <span class="tt">PROJECT_LOGO</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a> <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><b>External Assets:</b> Free to use files downloaded from external sources.<ul>
 <li><a href="https://jothepro.github.io/doxygen-awesome-css/">Doxygen Awesome Theme</a><ul>
 <li><span class="tt">doxygen-awesome.css</span> : Added via <span class="tt">HTML_EXTRA_STYLESHEET</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a></li>
@@ -224,14 +243,9 @@ Main Files</h1>
 </li>
 <li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+Symbols+2">Expand/Collapse Icons</a><ul>
 <li><span class="tt">NotoSansSymbols2-Regular.woff2</span> : Added via <span class="tt">HTML_EXTRA_FILES</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a></li>
-<li><span class="tt">NotoSansSymbols2-Regular.ttf</span> : Added via <span class="tt">HTML_EXTRA_FILES</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a> <div class="dp-markdown-list-gap"></div></li>
+<li><span class="tt">NotoSansSymbols2-Regular.ttf</span> : Added via <span class="tt">HTML_EXTRA_FILES</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><b>Internal Assets:</b> These files are generated internally.<ul>
-<li><span class="tt">npi_icon.png</span> : The icon shown in browser tabs (added via <span class="tt">PROJECT_ICON</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a>)</li>
-<li><span class="tt">npi_logo.png</span> : The logo used in the HTML header, max size: H: 55px, W: 200px (added via <span class="tt">PROJECT_LOGO</span> tag in <a class="el" href="../../dc/d5a/dp_dh_doxy_file.html" title="Doxyfile">Doxyfile</a>)</li>
 </ul>
 </li>
 </ol>

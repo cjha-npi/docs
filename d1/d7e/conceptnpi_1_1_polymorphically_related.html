@@ -138,16 +138,8 @@ $(function(){initNavTree('d1/d7e/conceptnpi_1_1_polymorphically_related.html','.
 </div><!--header-->
 <div class="contents">
 
-<p>Concept to check if two types are related through inheritance.  
-<a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../d9/db9/_concepts_8hpp_source.html">Concepts.hpp</a>&gt;</code></p>
-<h2 id="header-conceptdef" class="groupheader">Concept definition</h2>
-<div class="fragment"><div class="line">  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> A, <span class="keyword">typename</span> B&gt;</div>
-<div class="line">  <span class="keyword">concept </span><a class="code hl_concept" href="../../d1/d7e/conceptnpi_1_1_polymorphically_related.html">PolymorphicallyRelated</a> =</div>
-<div class="line">    std::is_base_of_v&lt;A, B&gt; || std::is_base_of_v&lt;B, A&gt;</div>
-<div class="ttc" id="aconceptnpi_1_1_polymorphically_related_html"><div class="ttname"><a href="../../d1/d7e/conceptnpi_1_1_polymorphically_related.html">npi::PolymorphicallyRelated</a></div><div class="ttdoc">Concept to check if two types are related through inheritance.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db9/_concepts_8hpp_source.html#l00036">Concepts.hpp:36</a></div></div>
-</div><!-- fragment --><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
 <div class="textblock"><p>Concept to check if two types are related through inheritance. </p>
 <p>Checks whether two types are related through inheritance, either in a base-to-derived or derived-to-base direction. This is useful for verifying safe polymorphic usage such as upcasting or downcasting between types.</p>
 <dl class="section user"><dt>Example:</dt><dd><div class="fragment"><div class="line"><span class="keyword">struct </span>A {};</div>
@@ -160,7 +152,12 @@ $(function(){initNavTree('d1/d7e/conceptnpi_1_1_polymorphically_related.html','.
 </div><!-- fragment --> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/db9/_concepts_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d9/db9/_concepts_8hpp_source.html">Concepts.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 id="header-conceptdef" class="groupheader">Concept definition</h2>
+<div class="fragment"><div class="line">  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> A, <span class="keyword">typename</span> B&gt;</div>
+<div class="line">  <span class="keyword">concept </span><a class="code hl_concept" href="../../d1/d7e/conceptnpi_1_1_polymorphically_related.html">PolymorphicallyRelated</a> =</div>
+<div class="line">    std::is_base_of_v&lt;A, B&gt; || std::is_base_of_v&lt;B, A&gt;</div>
+<div class="ttc" id="aconceptnpi_1_1_polymorphically_related_html"><div class="ttname"><a href="../../d1/d7e/conceptnpi_1_1_polymorphically_related.html">npi::PolymorphicallyRelated</a></div><div class="ttdoc">Concept to check if two types are related through inheritance.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/db9/_concepts_8hpp_source.html#l00036">Concepts.hpp:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- HTML footer for doxygen 1.14.0-->

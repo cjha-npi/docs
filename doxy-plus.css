@@ -24,14 +24,8 @@
  - Only collapse icon (U+2B9E i.e. ⮞) is used, in expanded state, it
    is rotated by 90 degrees.
 */
-@font-face {
-  font-family: "noto-2b9";
-  src: url("NotoSansSymbols2-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
-}
+
+
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* CUSTOM FONT FOR CODE */
@@ -127,6 +121,7 @@ html {
 /* LIGHT MODE */
 html {
   /* Default colors defined by Doxygen or Doxygen Awesome */
+  --link-color: rgb(30, 100, 200); /* color of links defined by <a>...</a> in HTML */
   --page-background-color: rgb(220, 225, 230) !important; /* forms the separator between panes*/
   --separator-color: rgb(200, 200, 200) !important;
   --code-background: rgb(210, 220, 230) !important;
@@ -161,6 +156,7 @@ html {
 /* DARK MODE */
 html.dark-mode {
   /* Default colors defined by Doxygen or Doxygen Awesome */
+  --link-color: rgb(100, 180, 255); /* color of links defined by <a>...</a> in HTML */
   --page-background-color: rgb(10, 15, 20) !important; /* forms the separator between panes*/
   --separator-color: rgb(65, 70, 75) !important;
   --code-background: rgb(45, 60, 75) !important;
@@ -1593,7 +1589,7 @@ li.dpt-node--branch.dpt-node--expanded > ul {
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif !important;
+  font-family: "JB-Mono" !important;
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
   overflow: hidden; /* Otherwise if size increases then width will also increase */
@@ -1622,6 +1618,7 @@ li.dpt-node--branch.dpt-node--expanded > ul {
 .dpt-label {
   flex: 0 1 auto;
   color: var(--page-foreground-color);
+  font-family: var(--font-family-monospace) !important;
 }
 
 /* The '::' separator between label text */

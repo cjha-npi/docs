@@ -137,12 +137,29 @@ $(function(){initNavTree('d7/db8/_global_locker_8hpp.html','../../',''); });
   <div class="headertitle"><div class="title">GlobalLocker.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>RAII locker for a Windows named mutex for both inter-process and inter-thread synchronization.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;npi/PlatformCheck.hpp&quot;</code><br />
 <code>#include &lt;windows.h&gt;</code><br />
 <code>#include &lt;QString&gt;</code><br />
+</div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><p>RAII locker for a Windows named mutex for both inter-process and inter-thread synchronization. </p>
+<p>This header defines <a class="el" href="../../da/d1f/classnpi_1_1_global_locker.html" title="RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.">npi::GlobalLocker</a>, a small RAII helper that acquires and releases a Windows named mutex using CreateMutexW/WaitForSingleObject/ReleaseMutex. Because it uses a named mutex, it can synchronize:</p><ul>
+<li>Threads within the same process (intra-process), and</li>
+<li>Different processes/applications (inter-process) running on the same machine/session.</li>
+</ul>
+<p>Scope and visibility:</p><ul>
+<li>The constructor prepends "Local\\" to the provided name. This limits visibility to the
+      current logon session. Use "Global\" (not provided here) for a machine-wide namespace requiring appropriate privileges and Terminal Services mutex namespace support.</li>
+</ul>
+<p>Ownership and lifetime:</p><ul>
+<li>On success, the constructor blocks until the mutex can be acquired. Destruction releases the mutex and closes the HANDLE.</li>
+<li>ReleaseMutex is called only if this instance actually holds the lock.</li>
+<li>CloseHandle is always called if a HANDLE was created to avoid handle leaks.</li>
+</ul>
+<p>WAIT_ABANDONED handling:</p><ul>
+<li>If a previous owner terminated without releasing the mutex, WaitForSingleObject returns WAIT_ABANDONED. This class treats it as a successful acquisition (Windows semantics) and sets locked_ = true. Validate any shared state guarded by the mutex if needed. </li>
+</ul>
+
+<p class="definition">Definition in file <a class="el" href="../../d7/db8/_global_locker_8hpp_source.html">GlobalLocker.hpp</a>.</p>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for GlobalLocker.hpp:</div>
 <div class="dyncontent">
@@ -166,27 +183,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a9f918755b601cf4bffca775992e6fb90" id="r_a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9f918755b601cf4bffca775992e6fb90">NOMINMAX</a></td></tr>
 <tr class="memitem:ac7bef5d85e3dcd73eef56ad39ffc84a9" id="r_ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">WIN32_LEAN_AND_MEAN</a></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RAII locker for a Windows named mutex for both inter-process and inter-thread synchronization. </p>
-<p>This header defines <a class="el" href="../../da/d1f/classnpi_1_1_global_locker.html" title="RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.">npi::GlobalLocker</a>, a small RAII helper that acquires and releases a Windows named mutex using CreateMutexW/WaitForSingleObject/ReleaseMutex. Because it uses a named mutex, it can synchronize:</p><ul>
-<li>Threads within the same process (intra-process), and</li>
-<li>Different processes/applications (inter-process) running on the same machine/session.</li>
-</ul>
-<p>Scope and visibility:</p><ul>
-<li>The constructor prepends "Local\\" to the provided name. This limits visibility to the
-      current logon session. Use "Global\" (not provided here) for a machine-wide namespace requiring appropriate privileges and Terminal Services mutex namespace support.</li>
-</ul>
-<p>Ownership and lifetime:</p><ul>
-<li>On success, the constructor blocks until the mutex can be acquired. Destruction releases the mutex and closes the HANDLE.</li>
-<li>ReleaseMutex is called only if this instance actually holds the lock.</li>
-<li>CloseHandle is always called if a HANDLE was created to avoid handle leaks.</li>
-</ul>
-<p>WAIT_ABANDONED handling:</p><ul>
-<li>If a previous owner terminated without releasing the mutex, WaitForSingleObject returns WAIT_ABANDONED. This class treats it as a successful acquisition (Windows semantics) and sets locked_ = true. Validate any shared state guarded by the mutex if needed. </li>
-</ul>
-
-<p class="definition">Definition in file <a class="el" href="../../d7/db8/_global_locker_8hpp_source.html">GlobalLocker.hpp</a>.</p>
-</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a9f918755b601cf4bffca775992e6fb90" name="a9f918755b601cf4bffca775992e6fb90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f918755b601cf4bffca775992e6fb90">&#9670;&#160;</a></span>NOMINMAX</h2>
 
