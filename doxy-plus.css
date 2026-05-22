@@ -1618,7 +1618,6 @@ li.dpt-node--branch.dpt-node--expanded > ul {
 .dpt-label {
   flex: 0 1 auto;
   color: var(--page-foreground-color);
-  font-family: var(--font-family-monospace) !important;
 }
 
 /* The '::' separator between label text */

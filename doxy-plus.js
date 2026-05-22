@@ -2950,7 +2950,7 @@
             // Add toggle as span to show expand/collapse icon
             const toggle = document.createElement('span');
             toggle.classList.add(CLS.toggle);
-            toggle.textContent = "\u2B9E"; // ⮞, rotated to show open state
+            toggle.textContent = "\u25B6"; //\u25B6 = ▶ in JetBrains Mono, \u2B9E = ⮞ in NotoSansSymbols2, rotated to show open state
             toggle.setAttribute('aria-hidden', 'true');
 
             // Append toggle, prefix and labels to row
