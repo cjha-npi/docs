@@ -1120,7 +1120,6 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    const CLS = Object.freeze({</div>
 <div class="line">      DEV_HUB_AVAILABLE: &#39;dp-dev-hub-available&#39;,</div>
 <div class="line">      HASH_DATA_AVAILABLE: &#39;dp-hash-data-available&#39;,</div>
-<div class="line">      HASH_DATA_IS_CODE: &#39;dp-hash-data-is-code&#39;,</div>
 <div class="line">      DOC_HEADER_AVAILABLE: &#39;dp-doc-header-available&#39;,</div>
 <div class="line">      EMPTY_PAGE_NAV: &#39;dp-empty-page-nav&#39;,</div>
 <div class="line">      MAIN_NAV_BELOW_TITLE: &#39;dp-main-nav-below-title&#39;,</div>
@@ -1204,7 +1203,6 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    const KEY__EXPIRED_DATA_LAST_PURGE_DATE = &#39;expired-data-last-purge-date&#39;; // Last purge date storage key</div>
 <div class="line">    const KEY__GENERATION_TIMESTAMP = &#39;generation-timestamp&#39;; // Generation timestamp as provided by doxygen.css</div>
 <div class="line">    const PREFIX__HASH_DATA = &#39;hash-data--&#39;; // Prefix for hash data of the current HTML_NAME</div>
-<div class="line">    const PREFIX__HASH_DATA_IS_CODE = &#39;hash-data-is-code--&#39;; // Prefix to know if hash data for for code</div>
 <div class="line">    const PREFIX__PAGE_SCROLL_VPOS = &#39;page-scroll-vpos--&#39;; // Previously held scroll vertical position</div>
 <div class="line">    const PREFIX__PAGE_HAS_DOXSECTIONS = &#39;page-has-doxsections--&#39;;</div>
 <div class="line"> </div>
@@ -1605,7 +1603,6 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">          if (node.proj === PROJ_NAMESPACE) {</div>
 <div class="line">            for (const keyName of node.keys) {</div>
 <div class="line">              if (keyName.startsWith(PREFIX__HASH_DATA)</div>
-<div class="line">                || keyName.startsWith(PREFIX__HASH_DATA_IS_CODE)</div>
 <div class="line">                || keyName.startsWith(PREFIX__PAGE_SCROLL_VPOS)</div>
 <div class="line">                || keyName.startsWith(PREFIX__PAGE_HAS_DOXSECTIONS)) {</div>
 <div class="line">                PROJ_STORAGE.remove(keyName);</div>
@@ -1685,7 +1682,6 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      htmlNotFound: makeKey(KEY__HTML_NOT_FOUND),</div>
 <div class="line">      htmlPrevName: makeKey(&#39;html-prev-name&#39;),</div>
 <div class="line">      hashData: makeKey(PREFIX__HASH_DATA + CONSTS.HTML_NAME),</div>
-<div class="line">      hashDataIsCode: makeKey(PREFIX__HASH_DATA_IS_CODE + CONSTS.HTML_NAME),</div>
 <div class="line">      pageScrollVPos: makeKey(PREFIX__PAGE_SCROLL_VPOS + CONSTS.HTML_NAME),</div>
 <div class="line">      pageHasDoxsections: makeKey(PREFIX__PAGE_HAS_DOXSECTIONS + CONSTS.HTML_NAME),</div>
 <div class="line">      dualNav: makeKey(&#39;dual-nav&#39;),</div>
@@ -2642,15 +2638,9 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      // Check stored data</div>
 <div class="line">      if (checkTreeData(prevHashData, &#39;hash&#39;)) {</div>
 <div class="line">        document.body.classList.add(CONSTS.CLS.HASH_DATA_AVAILABLE);</div>
-<div class="line">        const isCode = storage.hashDataIsCode.load();</div>
-<div class="line">        if (isCode === &#39;yes&#39;) {</div>
-<div class="line">          document.body.classList.add(CONSTS.CLS.HASH_DATA_IS_CODE);</div>
-<div class="line">        }</div>
-<div class="line">        else {</div>
-<div class="line">          const hasDoxsections = storage.pageHasDoxsections.load();</div>
-<div class="line">          if (hasDoxsections === &#39;yes&#39;) {</div>
-<div class="line">            vars.pageHasDoxsections = true;</div>
-<div class="line">          }</div>
+<div class="line">        const hasDoxsections = storage.pageHasDoxsections.load();</div>
+<div class="line">        if (hasDoxsections === &#39;yes&#39;) {</div>
+<div class="line">          vars.pageHasDoxsections = true;</div>
 <div class="line">        }</div>
 <div class="line">        vars.hashData.push(...prevHashData);</div>
 <div class="line">        deepFreeze(vars.hashData);</div>
@@ -2658,7 +2648,6 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      }</div>
 <div class="line">      else {</div>
 <div class="line">        storage.hashData.remove();</div>
-<div class="line">        storage.hashDataIsCode.remove();</div>
 <div class="line">        storage.pageHasDoxsections.remove();</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
@@ -2791,9 +2780,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    if (vars.hashData.length &gt; 0) {</div>
 <div class="line">      checkTreeData(vars.hashData, &#39;hash&#39;, true);</div>
 <div class="line">      document.body.classList.add(CONSTS.CLS.HASH_DATA_AVAILABLE);</div>
-<div class="line">      document.body.classList.add(CONSTS.CLS.HASH_DATA_IS_CODE);</div>
 <div class="line">      storage.hashData.save(vars.hashData);</div>
-<div class="line">      storage.hashDataIsCode.save(&#39;yes&#39;);</div>
 <div class="line">      deepFreeze(vars.hashData);</div>
 <div class="line">      return;</div>
 <div class="line">    }</div>
@@ -2885,9 +2872,8 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Hash data was generated using the &#39;doxsection&#39; method for</div>
-<div class="line">    // markdown pages. In this case we do not set the class and</div>
-<div class="line">    // data for &#39;hashDataIsCode&#39;. Just save the class list and</div>
-<div class="line">    // data for hash data, freeze vars.hashData and return.</div>
+<div class="line">    // markdown pages. Just save the class list and data</div>
+<div class="line">    // for hash data, freeze vars.hashData and return.</div>
 <div class="line">    if (vars.hashData.length &gt; 0) {</div>
 <div class="line">      checkTreeData(vars.hashData, &#39;hash&#39;, true);</div>
 <div class="line">      storage.pageHasDoxsections.save(&#39;yes&#39;);</div>
@@ -2919,12 +2905,9 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      list: &#39;dpt-list&#39;,      // ul</div>
 <div class="line">      node: &#39;dpt-node&#39;,      // li, tree node</div>
 <div class="line">      row: &#39;dpt-row&#39;,        // clickable row (&lt;button&gt; for branch, &lt;a&gt; for leaf)</div>
-<div class="line">      toggle: &#39;dpt-toggle&#39;,  // branch toggle icon</div>
 <div class="line">      prefix: &#39;dpt-prefix&#39;,  // prefix, e.g. spe::</div>
 <div class="line">      label: &#39;dpt-label&#39;,    // visible node text</div>
-<div class="line">      sep: &#39;dpt-sep&#39;,        // Separator i.e. span</div>
 <div class="line"> </div>
-<div class="line">      leaf: &#39;dpt-node--leaf&#39;,         // Node with no children</div>
 <div class="line">      branch: &#39;dpt-node--branch&#39;,     // Node with children</div>
 <div class="line">      current: &#39;dpt-node--current&#39;,   // Current node</div>
 <div class="line">      visited: &#39;dpt-node--visited&#39;,   // Visited node (only for hashTree)</div>
@@ -2963,10 +2946,38 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">        if (curPar.classList.contains(CLS.branch)) {</div>
 <div class="line">          curPar.classList.add(CLS.expanded);</div>
 <div class="line">          const row = curPar.firstElementChild;</div>
-<div class="line">          if (row instanceof HTMLButtonElement) row.setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);</div>
+<div class="line">          if (row instanceof HTMLButtonElement) {</div>
+<div class="line">            row.setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);</div>
+<div class="line">          }</div>
 <div class="line">        }</div>
 <div class="line">        curPar = curPar.parentElement ? curPar.parentElement.closest(`.${CLS.node}`) : null;</div>
 <div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // Helper to scroll into view after height settles</div>
+<div class="line">    function runAfterScrollHeightStable(pane, item) {</div>
+<div class="line">      if (!pane || !item) return;</div>
+<div class="line"> </div>
+<div class="line">      let lastScrollHeight = -1;</div>
+<div class="line">      let stableCount = 0;</div>
+<div class="line">      function check() {</div>
+<div class="line">        const curScrollHeight = pane.scrollHeight;</div>
+<div class="line"> </div>
+<div class="line">        if (curScrollHeight === lastScrollHeight) {</div>
+<div class="line">          ++stableCount;</div>
+<div class="line">        }</div>
+<div class="line">        else {</div>
+<div class="line">          stableCount = 0;</div>
+<div class="line">          lastScrollHeight = curScrollHeight;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        if (stableCount &gt;= 3) {</div>
+<div class="line">          item.scrollIntoView({ behavior: &#39;smooth&#39;, block: &#39;nearest&#39; });</div>
+<div class="line">          return;</div>
+<div class="line">        }</div>
+<div class="line">        requestAnimationFrame(check);</div>
+<div class="line">      }</div>
+<div class="line">      requestAnimationFrame(check);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Handle on-page hash changes.</div>
@@ -3006,8 +3017,11 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      markAndExpandCurrentNode(item);</div>
 <div class="line"> </div>
 <div class="line">      // Scroll into view</div>
-<div class="line">      item.scrollIntoView({ behavior: &#39;smooth&#39;, block: &#39;nearest&#39; });</div>
+<div class="line">      runAfterScrollHeightStable(vars.els.DP_LEAF_SHOW, item);</div>
 <div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    let curRootItem = null;</div>
+<div class="line">    let curLeafItem = null;</div>
 <div class="line"> </div>
 <div class="line">    // Build a tree from the given data and config.</div>
 <div class="line">    function buildTreeFromData(data, cfg) {</div>
@@ -3032,6 +3046,12 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line"> </div>
 <div class="line">          const item = branch[ii];</div>
 <div class="line"> </div>
+<div class="line">          // Early guard</div>
+<div class="line">          if (!Array.isArray(item) || item.length &lt; 3) {</div>
+<div class="line">            console.warn(`${cfg.warnName}: Malformed node.`, item);</div>
+<div class="line">            continue;</div>
+<div class="line">          }</div>
+<div class="line"> </div>
 <div class="line">          // li for the node</div>
 <div class="line">          const li = document.createElement(&#39;li&#39;);</div>
 <div class="line">          li.classList.add(CLS.node);</div>
@@ -3048,11 +3068,13 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">            prefix.textContent = prefixText;</div>
 <div class="line">          }</div>
 <div class="line"> </div>
+<div class="line">          // Create label text as span</div>
+<div class="line">          const label = document.createElement(&#39;span&#39;);</div>
+<div class="line">          label.classList.add(CLS.label);</div>
+<div class="line">          label.textContent = item[0];</div>
+<div class="line"> </div>
 <div class="line">          // If value is of type string then this is a leaf node</div>
 <div class="line">          if (typeof value === &#39;string&#39;) {</div>
-<div class="line"> </div>
-<div class="line">            // Mark li as leaf</div>
-<div class="line">            li.classList.add(CLS.leaf);</div>
 <div class="line"> </div>
 <div class="line">            // Create row as a link</div>
 <div class="line">            const row = document.createElement(&#39;a&#39;);</div>
@@ -3060,16 +3082,15 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">            row.href = cfg.getHref(item);</div>
 <div class="line">            row.title = cfg.getTitle(item);</div>
 <div class="line"> </div>
-<div class="line">            // Append prefix and labels to row</div>
+<div class="line">            // Append prefix and label to row</div>
 <div class="line">            if (prefix) row.append(prefix);</div>
-<div class="line">            const labels = cfg.getLabelSpans(item);</div>
-<div class="line">            for (const lbl of labels) row.append(lbl);</div>
+<div class="line">            row.append(label);</div>
 <div class="line"> </div>
 <div class="line">            // Append row to li</div>
 <div class="line">            li.appendChild(row);</div>
 <div class="line"> </div>
 <div class="line">            // Run the optional leaf callback.</div>
-<div class="line">            if (cfg.onLeaf) cfg.onLeaf(row, li);</div>
+<div class="line">            if (typeof cfg.onLeaf === &#39;function&#39;) cfg.onLeaf(row, li);</div>
 <div class="line"> </div>
 <div class="line">            // Check for the node being the current node</div>
 <div class="line">            if (cfg.isCurrent(row)) curNode = li;</div>
@@ -3087,17 +3108,9 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">            row.setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);</div>
 <div class="line">            row.title = cfg.getTitle(item);</div>
 <div class="line"> </div>
-<div class="line">            // Add toggle as span to show expand/collapse icon</div>
-<div class="line">            const toggle = document.createElement(&#39;span&#39;);</div>
-<div class="line">            toggle.classList.add(CLS.toggle);</div>
-<div class="line">            toggle.textContent = &quot;\u2B9E&quot;; // ⮞, rotated to show open state</div>
-<div class="line">            toggle.setAttribute(&#39;aria-hidden&#39;, &#39;true&#39;);</div>
-<div class="line"> </div>
-<div class="line">            // Append toggle, prefix and labels to row</div>
-<div class="line">            row.append(toggle);</div>
+<div class="line">            // Append prefix and label to row</div>
 <div class="line">            if (prefix) row.append(prefix);</div>
-<div class="line">            const labels = cfg.getLabelSpans(item);</div>
-<div class="line">            for (const lbl of labels) row.append(lbl);</div>
+<div class="line">            row.append(label);</div>
 <div class="line"> </div>
 <div class="line">            // Append row to li</div>
 <div class="line">            li.appendChild(row);</div>
@@ -3124,8 +3137,15 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">        parent.appendChild(fragment);</div>
 <div class="line">      }</div>
 <div class="line"> </div>
-<div class="line">      // Mark and expand the current node</div>
-<div class="line">      markAndExpandCurrentNode(curNode);</div>
+<div class="line">      if (curNode) {</div>
+<div class="line">        // Mark and expand the current node</div>
+<div class="line">        markAndExpandCurrentNode(curNode);</div>
+<div class="line"> </div>
+<div class="line">        // Assign current node</div>
+<div class="line">        if (cfg.type === &#39;root&#39;) curRootItem = curNode;</div>
+<div class="line">        else curLeafItem = curNode;</div>
+<div class="line"> </div>
+<div class="line">      }</div>
 <div class="line"> </div>
 <div class="line">      // Return built tree</div>
 <div class="line">      return root;</div>
@@ -3142,24 +3162,8 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line"> </div>
 <div class="line">    // Tree built from vars.htmlData</div>
 <div class="line">    const htmlTree = buildTreeFromData(vars.htmlData, {</div>
+<div class="line">      type: &#39;root&#39;,</div>
 <div class="line">      warnName: &#39;buildTreeFromData(): vars.htmlData&#39;,</div>
-<div class="line">      getLabelSpans: (item) =&gt; {</div>
-<div class="line">        const labels = [];</div>
-<div class="line">        const labelParts = String(item[0]).split(&#39;::&#39;);</div>
-<div class="line">        for (const lblPart of labelParts) {</div>
-<div class="line">          if (labels.length &gt; 0) {</div>
-<div class="line">            const sep = document.createElement(&#39;span&#39;);</div>
-<div class="line">            sep.classList.add(CLS.sep);</div>
-<div class="line">            sep.textContent = &#39;::&#39;;</div>
-<div class="line">            labels.push(sep);</div>
-<div class="line">          }</div>
-<div class="line">          const label = document.createElement(&#39;span&#39;);</div>
-<div class="line">          label.classList.add(CLS.label);</div>
-<div class="line">          label.textContent = lblPart;</div>
-<div class="line">          labels.push(label);</div>
-<div class="line">        }</div>
-<div class="line">        return labels;</div>
-<div class="line">      },</div>
 <div class="line">      getPrefixText: (item) =&gt; item[1] ? `${item[1]}::` : null,</div>
 <div class="line">      getValue: (item) =&gt; item[2],</div>
 <div class="line">      getHref: (item) =&gt; CONSTS.DOC_ROOT + item[2],</div>
@@ -3169,15 +3173,8 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line"> </div>
 <div class="line">    // Tree built from vars.hashData</div>
 <div class="line">    const hashTree = buildTreeFromData(vars.hashData, {</div>
+<div class="line">      type: &#39;leaf&#39;,</div>
 <div class="line">      warnName: &#39;buildTreeFromData(): vars.hashData&#39;,</div>
-<div class="line">      getLabelSpans: (item) =&gt; {</div>
-<div class="line">        const labels = [];</div>
-<div class="line">        const label = document.createElement(&#39;span&#39;);</div>
-<div class="line">        label.classList.add(CLS.label);</div>
-<div class="line">        label.textContent = item[0];</div>
-<div class="line">        labels.push(label);</div>
-<div class="line">        return labels;</div>
-<div class="line">      },</div>
 <div class="line">      getPrefixText: (item) =&gt; item[1] ? `${item[1]}\u00A0` : null,</div>
 <div class="line">      getValue: (item) =&gt; item[2],</div>
 <div class="line">      getHref: (item) =&gt; item[2],</div>
@@ -3194,6 +3191,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    if (htmlTree) {</div>
 <div class="line">      vars.els.DP_ROOT_PANE.appendChild(htmlTree);</div>
 <div class="line">      htmlTree.addEventListener(&#39;click&#39;, clickHandler);</div>
+<div class="line">      runAfterScrollHeightStable(vars.els.DP_ROOT_PANE, curRootItem);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Mount hashTree</div>
@@ -3202,6 +3200,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      vars.els.DP_LEAF_SHOW.appendChild(hashTree);</div>
 <div class="line">      hashTree.addEventListener(&#39;click&#39;, clickHandler);</div>
 <div class="line">      window.addEventListener(&#39;hashchange&#39;, onHashChange);</div>
+<div class="line">      runAfterScrollHeightStable(vars.els.DP_LEAF_SHOW, curLeafItem);</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
 <div class="line"> </div>

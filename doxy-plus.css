@@ -17,26 +17,10 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* CUSTOM FONT FOR EXPAND/COLLAPSE ICONS ONLY */
-/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-
-/*
- - Only collapse icon (U+2B9E i.e. ⮞) is used, in expanded state, it
-   is rotated by 90 degrees.
-*/
-@font-face {
-  font-family: "noto-2b9";
-  src: url("NotoSansSymbols2-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+2B9E, U+2B9F; /* ⮞, ⮟ */
-}
-
-/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* CUSTOM FONT FOR CODE */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* JetBrains Mono for code and custom navigation tree */
 @font-face {
   font-family: "JB-Mono";
   src: url("JetBrainsMono-Regular.woff2") format("woff2");
@@ -45,12 +29,10 @@
   font-display: block;
 }
 
-@font-face {
-  font-family: "JB-Mono";
-  src: url("JetBrainsMono-SemiBold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: block;
+/* Disable browser-made fake bold fonts for the whole document.
+   This does not effect real bold fonts that are available. */
+html {
+  font-synthesis-weight: none;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -91,6 +73,8 @@ html {
 
   --dp-sep: 6px;
   --dp-min-width: 100px;
+  --dp-mark-width: 4px;
+  --dp-mark-border-width: 2px;
   --dp-border-width: 6px;
   --dp-search-field: "All:";
   --dp-border-radius-s: 4px;
@@ -98,14 +82,14 @@ html {
 
   --dp-side-nav-icon-font-size: 13px;
 
-  --dp-page-nav-font-size: 11.5px;
+  --dp-page-nav-font-size: 11px;
   --dp-page-nav-line-height: 18px;
 
-  --dp-root-item-font-size: 13px;
-  --dp-root-item-line-height: 22px;
+  --dp-root-item-font-size: 12px;
+  --dp-root-item-line-height: 20px;
 
-  --dp-leaf-item-font-size: 13px;
-  --dp-leaf-item-line-height: 22px;
+  --dp-leaf-item-font-size: 11.5px;
+  --dp-leaf-item-line-height: 18px;
 
   --dp-side-nav-width: 0px;
   --dp-root-pane-width: 0px;
@@ -128,35 +112,40 @@ html {
 html {
   /* Default colors defined by Doxygen or Doxygen Awesome */
   --link-color: rgb(30, 100, 200); /* color of links defined by <a>...</a> in HTML */
-  --page-background-color: rgb(220, 225, 230) !important; /* forms the separator between panes*/
+  --page-background-color: rgb(210, 220, 230) !important; /* forms the separator between panes*/
   --separator-color: rgb(200, 200, 200) !important;
   --code-background: rgb(210, 220, 230) !important;
   --tablehead-background: rgb(215, 220, 225) !important;
   --blockquote-background: rgb(215, 220, 225) !important;
   --fragment-background: rgb(220, 230, 240) !important;
 
-  /* Doxy-Plus */
+  /* Doxy-Plus background colors */
   --dp-back-color: var(--page-background-color); /* because --page-background-color is overridden inside contents */
   --dp-pane-color: rgb(255, 255, 255); /* used as background for all panes */
   --dp-mark-color: rgb(240, 80, 0); /* used to mark current item */
   --dp-inpt-color: var(--dp-pane-color); /* search input box background */
   --dp-line-color: var(--separator-color); /* used as special lines by doxy-plus */
-  --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
-  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
+  --dp-icon-hover-color: var(--dp-mark-color); /* color of the top-right button icons when hovered */
+  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the top-right button icons */
   --dp-scrollbar-color: rgb(160, 175, 190); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
-  --dp-item-prefix-color: rgb(120, 120, 120); /* Prefix color for items in root and leaf pane */
-  --dp-text-visited-color: rgb(200, 50, 200); /* Color of visited item in leaf pane */
-  --dp-item-prefix-visited-color: rgb(240, 100, 240); /* Prefix color of visited items in leaf pane */
-  --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
-  --dp-text-search-select-color: var(--dp-mark-color); /* search select text color */
-  --dp-text-page-nav-section-color: var(--dp-mark-color); /* section entries in page nav */
   --dp-footer-link-separation-color: var(--dp-scrollbar-color); /* separator of links in footer */
+  --dp-page-nav-vis-color: var(--page-background-color); /* Background color for items in page nav which are visible on main page */
 
-  --dp-page-nav-vis-color: var(--page-background-color);
-  --dp-leaf-item-color: var(--page-background-color);
-  --dp-leaf-item-hover-color: rgb(from var(--page-background-color) r g b / 0.8);
-  --dp-root-item-hover-color: rgb(from var(--dp-pane-color) r g b / 0.8);
+  /* Doxy-Plus Text Colors */
+  --dp-disabled-text-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
+  --dp-search-select-text-color: var(--dp-mark-color); /* search select text color */
+  --dp-page-nav-section-text-color: var(--dp-mark-color); /* section entries in page nav */
+  --dp-visited-text-color: rgb(200, 50, 200); /* Text color of visited item in leaf pane */
+  --dp-prefix-text-color: rgb(120, 120, 120); /* Text color for prefix in root and leaf panes */
+  --dp-prefix-visited-text-color: rgb(240, 100, 240); /* Text color for prefix of visited items in leaf pane */
+
+  /* Root and Leaf Pane colors */
+  --dp-root-item-hover-color: rgb(from var(--dp-pane-color) r g b / 0.5); /* Background color on hover for items in root pane */
+  --dp-leaf-item-hover-color: rgb(from var(--page-background-color) r g b / 0.5); /* Background color on hover for items in leaf pane */
+
+  --dp-root-parent-item-color: var(--dp-pane-color); /* Background color of parent items in root pane */
+  --dp-leaf-parent-item-color: var(--page-background-color); /* Background color of parent items in leaf pane */
 }
 
 /* DARK MODE */
@@ -170,7 +159,7 @@ html.dark-mode {
   --blockquote-background: rgb(35, 40, 50) !important;
   --fragment-background: rgb(40, 50, 60) !important;
 
-  /* Doxy-Plus */
+  /* Doxy-Plus background colors  */
   --dp-back-color: var(--page-background-color); /* because --page-background-color is overridden inside contents */
   --dp-pane-color: rgb(30, 40, 50); /* used as background for all panes */
   --dp-mark-color: rgb(240, 80, 0); /* used to mark current item */
@@ -180,18 +169,23 @@ html.dark-mode {
   --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
   --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
-  --dp-item-prefix-color: rgb(120, 120, 120); /* Prefix color for items in root and leaf pane */
-  --dp-text-visited-color: rgb(250, 100, 250); /* Color of visited item in leaf pane */
-  --dp-item-prefix-visited-color: rgb(180, 80, 180); /* Prefix color of visited items in leaf pane */
-  --dp-text-disabled-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
-  --dp-text-search-select-color: var(--dp-mark-color); /* search select text color */
-  --dp-text-page-nav-section-color: var(--dp-mark-color); /* section entries in page nav */
   --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
+  --dp-page-nav-vis-color: var(--page-background-color); /* Background color for items in page nav which are visible on main page */
 
-  --dp-page-nav-vis-color: var(--page-background-color);
-  --dp-leaf-item-color: var(--page-background-color);
-  --dp-leaf-item-hover-color: rgb(from var(--page-background-color) r g b / 0.5);
-  --dp-root-item-hover-color: rgb(from var(--dp-pane-color) r g b / 0.5);
+  /* Doxy-Plus Text Colors */
+  --dp-disabled-text-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
+  --dp-search-select-text-color: var(--dp-mark-color); /* search select text color */
+  --dp-page-nav-section-text-color: var(--dp-mark-color); /* section entries in page nav */
+  --dp-visited-text-color: rgb(250, 100, 250); /* Text color of visited item in leaf pane */
+  --dp-prefix-text-color: rgb(120, 120, 120); /* Text color for prefix in root and leaf panes */
+  --dp-prefix-visited-text-color: rgb(180, 80, 180); /* Text color for prefix of visited items in leaf pane */
+
+  /* Root and Leaf Pane colors */
+  --dp-root-item-hover-color: rgb(from var(--dp-pane-color) r g b / 0.65); /* Background color on hover for items in root pane */
+  --dp-leaf-item-hover-color: rgb(from var(--page-background-color) r g b / 0.5); /* Background color on hover for items in leaf pane */
+
+  --dp-root-parent-item-color: color-mix(in srgb, var(--dp-pane-color) 98%, white 2%); /* Background color of parent items in root pane */
+  --dp-leaf-parent-item-color: color-mix(in srgb, var(--page-background-color) 98%, black 2%); /* Background color of parent items in leaf pane */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -577,7 +571,7 @@ body.dp-main-nav-below-title #main-nav {
   margin-left: 5px !important;
   top: 0px !important;
   left: 0px !important;
-  color: var(--dp-text-search-select-color) !important;
+  color: var(--dp-search-select-text-color) !important;
 }
 
 #MSearchSelect.search-icon::before {
@@ -782,8 +776,8 @@ doxygen-awesome-dark-mode-toggle:hover > svg {
 
 /* assigning a new arrow head expand/collapse icon */
 #side-nav .item .arrow .arrowhead::before {
-  font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif;
-  content: "\2B9E";
+  font-family:  var(--font-family-monospace);
+  content: "\25B6"; /* \u25B6 = ▶ in JetBrains Mono */
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
   display: inline-block;
@@ -1185,8 +1179,8 @@ body:not(.dp-doc-header-available) #page-nav {
 #page-nav-contents ul.page-outline li[id^="nav-header-"] a,
 #page-nav .page-outline > li.dp-markdown-page-nav-header-item > .item > a {
   font-weight: 600 !important;
-  color: var(--dp-text-page-nav-section-color) !important;
-  --primary-color: var(--dp-text-page-nav-section-color) !important;
+  color: var(--dp-page-nav-section-text-color) !important;
+  --primary-color: var(--dp-page-nav-section-text-color) !important;
 }
 
 /*
@@ -1505,6 +1499,28 @@ html.dark-mode{
 /* ROOT + LEAF PANE COMMON */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
+/* Values specific for root pane */
+#dp-root-pane {
+  --dp-pane-font-size: var(--dp-root-item-font-size);
+  --dp-pane-line-height: var(--dp-root-item-line-height);
+
+  --dp-pane-bg: var(--page-background-color);
+  --dp-pane-item-hover-color: var(--dp-root-item-hover-color);
+  --dp-pane-current-item-color: var(--dp-pane-color);
+  --dp-pane-parent-item-color: var(--dp-root-parent-item-color);
+}
+
+/* Values specific for leaf pane */
+#dp-leaf-show {
+  --dp-pane-font-size: var(--dp-leaf-item-font-size);
+  --dp-pane-line-height: var(--dp-leaf-item-line-height);
+
+  --dp-pane-bg: var(--dp-pane-color);
+  --dp-pane-item-hover-color: var(--dp-leaf-item-hover-color);
+  --dp-pane-current-item-color: var(--page-background-color);
+  --dp-pane-parent-item-color: var(--dp-leaf-parent-item-color);
+}
+
 /* Minimum width of panes */
 .dp-nav-pane {
   min-width: 100px;
@@ -1536,14 +1552,17 @@ html.dark-mode{
   }
 }
 
+/* Indentation for sub-levels */
+.dp-nav-pane ul ul {
+  margin-left: calc(var(--dp-mark-width) + var(--dp-mark-border-width));
+}
+
 /* General properties of list and items */
 .dpt-list,
 .dpt-node,
 .dpt-row,
-.dpt-toggle,
 .dpt-prefix,
-.dpt-label,
-.dpt-sep {
+.dpt-label {
   -webkit-appearance: none;
   appearance: none;
   list-style: none;
@@ -1569,75 +1588,20 @@ li.dpt-node--branch.dpt-node--expanded > ul {
 
 /* Base configuration of .dpt-row for both panes */
 .dpt-row {
+  display: flex;
   position: relative;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding-left: 0px;
-  padding-right: 0px;
+  align-items: center; /* vertical alignment */
+  min-inline-size: 0;
+  text-align: left;
+  padding: 0 calc(var(--dp-mark-width) + var(--dp-mark-border-width)); /* top and bottom | left and right */
+  margin-block-end: 2px;
+  font-family: var(--font-family-monospace); /* Always set explicitly */
+  font-size: var(--dp-pane-font-size);
+  font-weight: normal;
+  color: var(--page-foreground-color);
+  line-height: var(--dp-pane-line-height);
   border-radius: var(--dp-border-radius-s);
-  color: var(--page-foreground-color);
-  font-weight: normal;
-  font-family: var(--font-family); /* Always set explicitly */
   cursor: pointer;
-}
-
-/* Remove outline and shadow on any type of focus. */
-.dpt-row:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Base configuration of expand/collapse node */
-.dpt-toggle {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  font-family: "noto-2b9", "Noto Sans Symbols 2", "Segoe UI Symbol", system-ui, sans-serif !important;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: auto;
-  overflow: hidden; /* Otherwise if size increases then width will also increase */
-}
-
-/* Base configuration of prefix and label */
-.dpt-prefix,
-.dpt-label {
-  align-items: center;
-  text-align: center;
-  min-width: 0;
-  font-size: inherit;
-  font-weight: normal;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Prefix does not shrink or expand and has different text color */
-.dpt-prefix {
-  flex: 0 0 auto;
-  color: var(--dp-item-prefix-color);
-}
-
-/* Label can shrink but does not expand and has default foreground color */
-.dpt-label {
-  flex: 0 1 auto;
-  color: var(--page-foreground-color);
-}
-
-/* The '::' separator between label text */
-.dpt-sep {
-  flex: 0 0 auto;
-  text-align: center;
-  padding-left: 1px;
-  padding-right: 1px;
-  font-size: inherit;
-  font-weight: normal;
-  white-space: nowrap;
-  overflow: hidden;
-  font-family: var(--font-family-monospace);
-  color: var(--page-foreground-color);
 }
 
 /* The .dpt-row for a branch is a button so we have to
@@ -1647,49 +1611,166 @@ li.dpt-node--branch > .dpt-row {
   width: 100%;
 }
 
-/* The horizontal line after the branch node */
-li.dpt-node--branch > .dpt-row::after {
-  content: "";
-  display: block;
-  flex: 1 1 auto; /* take remaining space */
-  margin-top: 2px; /* slight offset */
-  margin-left: var(--dp-sep);
-  align-self: center;
-  height: 1px; /* visual thickness */
-  background: var(--dp-line-color);
-  pointer-events: none;
+/* Remove outline and shadow on any type of focus. */
+.dpt-row:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-/* Current item has different top and bottom
-margin and padding to distinguish it from other items
-other items*/
+/* Base configuration of prefix and label */
+.dpt-prefix,
+.dpt-label {
+  align-items: center;
+  min-width: 0;
+  min-inline-size: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Separate config for prefix */
+.dpt-prefix {
+  flex: 0 1 auto; /* <grow> <shrink> <basis> */
+  color: var(--dp-prefix-text-color);
+}
+
+/* Separate config for label. Here the shrink value
+is 9999 so that the tendency to shrink label is much
+higher than to shrink prefix. This way when ellipses
+appears it first appears on the label and only when 
+almost all the label is not visible anymore then it
+appears on prefix. */
+.dpt-label {
+  flex: 0 9999 auto; /* <grow> <shrink> <basis> */
+  color: var(--page-foreground-color);
+}
+
+
+/* Visited text color for prefix and label */
+li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-prefix {
+  color: var(--dp-prefix-visited-text-color);
+}
+li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-label {
+  color: var(--dp-visited-text-color);
+}
+
+/* On-hover background change for leaf i.e. non-parent items */
+li:not(.dpt-node--branch):not(.dpt-node--current) > .dpt-row:hover {
+  background: var(--dp-pane-item-hover-color);
+}
+
+
+/* Currently selected item ------------------------------*/
+
+/* This helps to put the item with a little margin
+when it is scrolled programatically. For root pane
+items the current item has pseudo elements that forms
+a joining to the main page, this margin makes sure
+that those curves are also visible. */
+li.dpt-node--current {
+  scroll-margin-block: 8px;
+}
+
+/* Current item basic changes */
 li.dpt-node--current > .dpt-row {
-  margin-top: 2px;
-  margin-bottom: 2px;
   padding-top: 2px;
   padding-bottom: 2px;
+  background: var(--dp-pane-current-item-color);
 }
 
-/* Small thick line with mark color to denote the current
-item, placed on the left of the item. */
+/* The marker before the current item */
 li.dpt-node--current > .dpt-row::before {
   content: "";
   position: absolute;
-  /* Makes it being positioned outside the
-  left boundry of the item row*/
-  left: -6px;
-  top: 3px;
-  bottom: 3px;
-  width: 4px;
+  left: -8px;
+  top: 0px;
+  bottom: 0px;
+  width: var(--dp-mark-width);
   background: var(--dp-mark-color);
-  border-radius: 2px;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 9999;
+  border: var(--dp-mark-border-width) solid var(--dp-pane-bg);
+}
+
+/* Parent items ------------------------------*/
+
+/* Changes to the parent item so that any margin
+or padding in the child items are considered in
+parents calculations. */
+li.dpt-node--branch {
+  position: relative;
+  display: flow-root;
+}
+
+/* Extra padding and different background for parent items */
+li.dpt-node--branch > .dpt-row {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: linear-gradient(to right, var(--dp-pane-parent-item-color) 0%, var(--dp-pane-bg) 100%);
+}
+
+/* Vertical rail from parent to its last child */
+li.dpt-node--expanded::before,
+li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current)::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: calc(var(--dp-pane-line-height) / 2);
+  bottom: 2px;
+  width: var(--dp-mark-width);
+  background: var(--dp-pane-parent-item-color);
+  border-radius: var(--dp-border-radius-s);
   pointer-events: none;
 }
 
-/* Rotate expanded branch icon to point down */
-li.dpt-node--expanded > .dpt-row > .dpt-toggle {
-  transform: rotate(90deg);
+/* Curve at the top right of the vertical rail to make it appear nicer */
+li.dpt-node--expanded::after,
+li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current)::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--dp-pane-line-height) - var(--dp-border-radius-s) + 4px);
+  width: calc(2 * var(--dp-border-radius-s));
+  height: calc(2 * var(--dp-border-radius-s));
+  left: 0px;
+  background: var(--dp-pane-parent-item-color);
+  mask: radial-gradient(circle var(--dp-border-radius-s) at 100% 100%, transparent 80%, #000 100%);
+  mask-composite: subtract;
 }
+
+/* Collapsed parent with currently selected child has extra padding on the bottom
+to show the horizontal bar as an indicator for this collapsed parent contains
+the currently selected item. */
+li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) {
+  padding-bottom: calc((3 * var(--dp-mark-width)) - 2px);
+}
+
+/* Marker below the collapsed parent with currently selected child */
+li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + var(--dp-mark-width));
+  left: calc(2 * var(--dp-mark-width));
+  height: var(--dp-mark-width);
+  width: calc(2 * var(--dp-mark-width));
+  border-radius: var(--dp-border-radius-s);
+  background: var(--dp-mark-color);
+  pointer-events: none;
+}
+
+/* Horizontal bar below the collapsed parent with currently selected child */
+li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row > .dpt-label::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + var(--dp-mark-width));
+  left: calc((4 * var(--dp-mark-width)) + var(--dp-mark-border-width));
+  height: var(--dp-mark-width);
+  width: calc(100% - (4 * var(--dp-mark-width)) - var(--dp-mark-border-width));
+  border-radius: var(--dp-border-radius-s);
+  background: var(--dp-pane-current-item-color);
+  pointer-events: none;
+}
+
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* ROOT PANE */
@@ -1703,6 +1784,8 @@ li.dpt-node--expanded > .dpt-row > .dpt-toggle {
   width: var(--dp-root-pane-width);
   height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height) - 20px) !important; /* fallback for older browsers */
   height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height) - 20px) !important; /* for use in newer browsers */
+  padding: calc(var(--dp-mark-width) + (2 * var(--dp-mark-border-width))) 0;  /* top and bottom | left and right */
+  min-height: 0;
   white-space: nowrap;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1711,12 +1794,6 @@ li.dpt-node--expanded > .dpt-row > .dpt-toggle {
   text alignment back to left to right in the main
   ul of root pane. */
   direction: rtl;
-  /* This padding allows extra height of ul so
-  that whe bottom most item is the current one
-  then the total height still remains inside 
-  the bounds so as to not make the scroll bar
-  appear if there is enough height otherwise. */
-  padding-bottom: 3px;
 }
 
 /* Basic configuration of root pane resizer */
@@ -1727,29 +1804,13 @@ li.dpt-node--expanded > .dpt-row > .dpt-toggle {
   height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height) - 20px) !important; /* for use in newer browsers */
 }
 
-/* Main ul of root pane */
+/* To level list */
 #dp-root-pane > ul {
-  /* Setting text alignment back to left
-  to right. */
   direction: ltr;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 0;
-  /* Enough margin to have the current
-  item marker with space to spare. */
-  margin-left: 7px;
-  /* Separation between root pane and
-  the main content. */
-  margin-right: var(--dp-sep);
-}
-
-/* Deeper ul nesting. Creates a step like tree.
-Each nested ul is indented by line height minus
-5px. The 5px here is to compensate for the small
-gap betwen expand/collapse icon and text. */
-#dp-root-pane ul ul {
-  margin-left: calc(var(--dp-root-item-line-height) - 5px);
+  min-height: 100%;
+  padding: 0 calc(var(--dp-mark-width) + (2 * var(--dp-mark-border-width))) 0 var(--dp-mark-border-width);  /* top | right | bottom | left */
 }
 
 /* If Dev Hub is available push it to the bottom.
@@ -1759,158 +1820,38 @@ creates the necessary separation between project
 documentation and other documentation for developers. */
 body.dp-dev-hub-available #dp-root-pane > ul > li:last-child {
   margin-top: auto;
-  padding-top: 10px;
 }
 
-/* Only assign the line height to the root item and not to
-prefix or label otherwise their text is not correctly aligned
-in vertical direction. */
-#dp-root-pane .dpt-row {
-  line-height: var(--dp-root-item-line-height);
-  font-size: var(--dp-root-item-font-size);
-  /* This creates a visual gap where the text ends and where
-  the item ends. Makes the hover color change look correct in
-  terms of the background color and borders. */
-  padding-right: 5px;
-}
-
-/* Style prefix differently */
+/* Extra padding after prefix */
 #dp-root-pane .dpt-prefix {
-  /* Slight gap, this makes it feel like correct spacing between 
-  prefix and label, otherwise label is too close to the right end
-  of prefix */
   padding-right: 1px;
-  font-family: var(--font-family-monospace);
-  font-size: calc(var(--dp-root-item-font-size) * 0.89);
 }
 
-/* Make separator slightly smaller than text*/
-#dp-root-pane .dpt-sep {
-  font-size: calc(var(--dp-root-item-font-size) * 0.89);
-}
-
-/* The expand/collapse icon. It is necessary that the width
-and height of the expand collapse icon remains exactly the
-same as the line height. This way when the entire thing is
-rotated to make it point downwards the prefix and label do
-not have to shift. */
-#dp-root-pane .dpt-toggle {
-  line-height: var(--dp-root-item-line-height);
-  font-size: calc(var(--dp-root-item-line-height) * 0.5);
-  width: var(--dp-root-item-line-height);
-  height: var(--dp-root-item-line-height);
-}
-
-/* Make the expand/collapse icon slightly bigger on hover.
-Do not make it too big otherwise alignments differ and it
-looks weird. */
-#dp-root-pane li.dpt-node--branch > .dpt-row:hover > .dpt-toggle {
-  font-size: calc(var(--dp-root-item-line-height) * 0.6);
-}
-
-/* Left padding of leaf items. This is to align it correctly
-with the expand/collapse icon and also to provide extra space
-on left to have a good visual separation. This makes the hover
-color change and background/border look correct and aligned. */
-#dp-root-pane li.dpt-node--leaf > .dpt-row {
-  padding-left: 5px;
-}
-
-/* Leaf has slightly smaller label */
-#dp-root-pane li.dpt-node--leaf .dpt-label {
-  font-size: calc(var(--dp-root-item-font-size) * 0.95);
-}
-
-/* Change row background on hover. */
-#dp-root-pane .dpt-row:hover {
-  background: var(--dp-root-item-hover-color);
-}
-
-/* Change row background on current item. Here we remove
-the right padding, margin and both (right-top and right-
-bottom) border radius. This is so that we can extend it
-on the right to merge it with the main doc page. */
-#dp-root-pane li.dpt-node--current > .dpt-row {
-  background: var(--dp-pane-color);
-  padding-right: 0px !important;
-  margin-right: calc(-1 * var(--dp-sep));
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-}
-
-/* A top and bottom curve at the right end of the current
-item. This makes it look like the current item is visibly
-expanding to make the main doc content. */
-#dp-root-pane li.dpt-node--current > .dpt-row::after {
-  content: "";
-  position: absolute;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  width: 8px; /* 2 * radius (r=4px) */
-  height: calc(100% + 8px);
-  right: -4px;
-  background: inherit;
-  mask: radial-gradient(circle 4px at 0% 0%, transparent 90%, #000 100%), radial-gradient(circle 4px at 0% 100%, #000 90%, transparent 100%);
-  mask-composite: subtract;
-}
-
-/* 
-When the current item is hidden (because its parent is collapsed)
-we show a small horizontal bar to visibly show where the current
-item is. The below parts for for that.
-*/
-
-/* 1. Extra separation between the parent that has the current item
-any item below it. */
-#dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row {
-  margin-bottom: 10px;
-}
-
-/* 2. A small horizontal bar to visibly show where the current item is. 
-This is the representation of the mark on the left of the current
-item when it is visible. */
-#dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row > .dpt-label::before {
-  content: "";
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 23px;
-  height: 4px;
-  width: 6px;
-  border-radius: var(--dp-border-radius-s);
-  background: var(--dp-mark-color);
-  pointer-events: none;
-}
-
-/* 3. A line that extends to the main doc content. This is the representation
-of the current item background. */
-#dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row::before {
-  content: "";
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 32px;
-  height: 4px;
-  width: calc(100% - 28px);
-  border-radius: var(--dp-border-radius-s);
-  background: var(--dp-pane-color);
-  pointer-events: none;
-}
-
-/* 4. The top and bottom right side curves that makes it look like
-the current item marker is expanding to form the main doc content. */
+/* The curved connector to the main page */
+#dp-root-pane li.dpt-node--current > .dpt-row::after,
 #dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row > .dpt-label::after {
   content: "";
   position: absolute;
   margin: 0;
   border: 0;
   padding: 0;
-  top: calc(100% - 0px);
-  width: 8px; /* 2 * radius (r=4px) */
-  height: 12px;
-  right: -10px;
-  background: var(--dp-pane-color);
-  mask: radial-gradient(circle 4px at 0% 0%, transparent 90%, #000 100%), radial-gradient(circle 4px at 0% 100%, #000 90%, transparent 100%);
-  mask-composite: subtract;
+  width: calc(var(--dp-mark-width) + (3 * var(--dp-mark-border-width)) + 8px); /* 2 * radius (r=4px) */
+  height: calc(100% + 8px);
+  right: calc(-1 * (var(--dp-mark-width) + (2 * var(--dp-mark-border-width)) + 4px));
+  background: var(--dp-pane-current-item-color);
+  mask:
+  radial-gradient(circle 4px at calc(100% - 8px) 0%, transparent 90%, #000 100%),
+  linear-gradient(#000 0 0) left top / calc(100% - 8px) 4px no-repeat,
+  radial-gradient(circle 4px at calc(100% - 8px) 100%, #000 90%, transparent 100%),
+  linear-gradient(#000 0 0) left bottom / calc(100% - 8px) 4px no-repeat;
+  mask-composite: subtract, add, add;
+}
+
+/* Different top and height for curved connector to the main page when parent containing
+a currently selected child is collapsed */
+#dp-root-pane li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row > .dpt-label::after {
+  top: calc(100% + var(--dp-mark-width) - 4px);
+  height: calc(var(--dp-mark-width) + 8px);
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1991,129 +1932,16 @@ html.dark-mode {
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 0;
+  padding: calc(var(--dp-mark-width) + (2 * var(--dp-mark-border-width))) 0; /* top and bottom | left and right */
   margin: 0;
   border: 0;
   background: transparent;
   list-style: none;
 }
 
-/* Padding on left and right for visual consistency */
+/* Padding for top level ul */
 #dp-leaf-show > ul {
-  margin-left: 7px;
-  margin-right: 5px;
-}
-
-/* Create a step like structure for nested branches. */
-#dp-leaf-show ul ul {
-  margin-left: calc(var(--dp-leaf-item-line-height) - 5px);
-}
-
-/* Base for a single li. Only assign the line height to the root item and not to
-prefix or label otherwise their text is not correctly aligned
-in vertical direction.*/
-#dp-leaf-show .dpt-row {
-  line-height: var(--dp-leaf-item-line-height);
-  font-size: var(--dp-leaf-item-font-size);
-  /* This creates a visual gap where the text ends and where
-  the item ends. Makes the hover color change look correct in
-  terms of the background color and borders. */
-  padding-right: 5px;
-}
-
-/* The expand/collapse icon. It is necessary that the width
-and height of the expand collapse icon remains exactly the
-same as the line height. This way when the entire thing is
-rotated to make it point downwards the prefix and label do
-not have to shift. */
-#dp-leaf-show .dpt-toggle {
-  line-height: var(--dp-leaf-item-line-height);
-  font-size: calc(var(--dp-leaf-item-line-height) * 0.55);
-  width: var(--dp-leaf-item-line-height);
-  height: var(--dp-leaf-item-line-height);
-}
-
-/* Make the expand/collapse icon slightly bigger on hover.
-Do not make it too big otherwise alignments differ and it
-looks weird. */
-#dp-leaf-show li.dpt-node--branch > .dpt-row:hover > .dpt-toggle {
-  font-size: calc(var(--dp-leaf-item-line-height) * 0.6);
-}
-
-/* Left padding of leaf items. This is to align it correctly
-with the expand/collapse icon and also to provide extra space
-on left to have a good visual separation. This makes the hover
-color change and background/border look correct and aligned. */
-#dp-leaf-show li.dpt-node--leaf > .dpt-row {
-  padding-left: 5px;
-}
-
-/* Change leaf items to have monospace font for code pages
-(e.g. class/struct, etc.) */
-body.dp-hash-data-is-code #dp-leaf-show li.dpt-node--leaf > .dpt-row {
-  font-family: var(--font-family-monospace);
-  font-size: calc(var(--dp-leaf-item-font-size) * 0.9);
-}
-
-/* Change row background on hover. */
-#dp-leaf-show .dpt-row:hover {
-  background: var(--dp-leaf-item-hover-color);
-}
-
-/* Visisted text color for prefix */
-#dp-leaf-show li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-prefix {
-  color: var(--dp-item-prefix-visited-color);
-}
-
-/* Show visited text color */
-#dp-leaf-show li.dpt-node--visited:not(.dpt-node--current) > .dpt-row > .dpt-label {
-  color: var(--dp-text-visited-color);
-}
-
-/* Current item highlight */
-#dp-leaf-show li.dpt-node--current > .dpt-row {
-  background: var(--dp-leaf-item-color);
-}
-
-/* 
-When the current item is hidden (because its parent is collapsed)
-we show a small horizontal bar to visibly show where the current
-item is. The below parts for for that.
-*/
-
-/* 1. Extra separation between the parent that has the current item
-any item below it. */
-#dp-leaf-show li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row {
-  margin-bottom: 9px;
-}
-
-/* 2. A small horizontal bar to visibly show where the current item is. 
-This is the representation of the mark on the left of the current
-item when it is visible. */
-#dp-leaf-show li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row > .dpt-label::before {
-  content: "";
-  position: absolute;
-  top: calc(100% + 3px);
-  left: 22px;
-  height: 4px;
-  width: 6px;
-  border-radius: var(--dp-border-radius-s);
-  background: var(--dp-mark-color);
-  pointer-events: none;
-}
-
-/* 3. A line that extends to the main doc content. This is the representation
-of the current item background. */
-#dp-leaf-show li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current) > .dpt-row::before {
-  content: "";
-  position: absolute;
-  top: calc(100% + 3px);
-  left: 31px;
-  height: 4px;
-  width: calc(100% - 36px);
-  border-radius: var(--dp-border-radius-s);
-  background: var(--dp-leaf-item-color);
-  pointer-events: none;
+  padding: 0 calc(var(--dp-mark-width) + (2 * var(--dp-mark-border-width)));  /* top and bottom | left and right */
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -2193,7 +2021,7 @@ body.dp-opt-backdrop-blur > :not(#dp-opt-backdrop) { filter: blur(4px); }
 }
 
 /* Disabled label text helper */
-.dp-opt-disabled { color: var(--dp-text-disabled-color); }
+.dp-opt-disabled { color: var(--dp-disabled-text-color); }
 
 /* ---------- Inputs ---------- */
 /* Checkbox: native look with accent-color */
@@ -2201,7 +2029,7 @@ body.dp-opt-backdrop-blur > :not(#dp-opt-backdrop) { filter: blur(4px); }
   accent-color: var(--dp-mark-color);
 }
 #dp-opt-modal input[type="checkbox"]:disabled {
-  accent-color: var(--dp-text-disabled-color);
+  accent-color: var(--dp-disabled-text-color);
 }
 
 /* ---------- Print ---------- */

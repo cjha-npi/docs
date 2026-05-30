@@ -980,7 +980,6 @@
     const CLS = Object.freeze({
       DEV_HUB_AVAILABLE: 'dp-dev-hub-available',
       HASH_DATA_AVAILABLE: 'dp-hash-data-available',
-      HASH_DATA_IS_CODE: 'dp-hash-data-is-code',
       DOC_HEADER_AVAILABLE: 'dp-doc-header-available',
       EMPTY_PAGE_NAV: 'dp-empty-page-nav',
       MAIN_NAV_BELOW_TITLE: 'dp-main-nav-below-title',
@@ -1064,7 +1063,6 @@
     const KEY__EXPIRED_DATA_LAST_PURGE_DATE = 'expired-data-last-purge-date'; // Last purge date storage key
     const KEY__GENERATION_TIMESTAMP = 'generation-timestamp'; // Generation timestamp as provided by doxygen.css
     const PREFIX__HASH_DATA = 'hash-data--'; // Prefix for hash data of the current HTML_NAME
-    const PREFIX__HASH_DATA_IS_CODE = 'hash-data-is-code--'; // Prefix to know if hash data for for code
     const PREFIX__PAGE_SCROLL_VPOS = 'page-scroll-vpos--'; // Previously held scroll vertical position
     const PREFIX__PAGE_HAS_DOXSECTIONS = 'page-has-doxsections--';
 
@@ -1465,7 +1463,6 @@
           if (node.proj === PROJ_NAMESPACE) {
             for (const keyName of node.keys) {
               if (keyName.startsWith(PREFIX__HASH_DATA)
-                || keyName.startsWith(PREFIX__HASH_DATA_IS_CODE)
                 || keyName.startsWith(PREFIX__PAGE_SCROLL_VPOS)
                 || keyName.startsWith(PREFIX__PAGE_HAS_DOXSECTIONS)) {
                 PROJ_STORAGE.remove(keyName);
@@ -1545,7 +1542,6 @@
       htmlNotFound: makeKey(KEY__HTML_NOT_FOUND),
       htmlPrevName: makeKey('html-prev-name'),
       hashData: makeKey(PREFIX__HASH_DATA + CONSTS.HTML_NAME),
-      hashDataIsCode: makeKey(PREFIX__HASH_DATA_IS_CODE + CONSTS.HTML_NAME),
       pageScrollVPos: makeKey(PREFIX__PAGE_SCROLL_VPOS + CONSTS.HTML_NAME),
       pageHasDoxsections: makeKey(PREFIX__PAGE_HAS_DOXSECTIONS + CONSTS.HTML_NAME),
       dualNav: makeKey('dual-nav'),
@@ -2502,15 +2498,9 @@
       // Check stored data
       if (checkTreeData(prevHashData, 'hash')) {
         document.body.classList.add(CONSTS.CLS.HASH_DATA_AVAILABLE);
-        const isCode = storage.hashDataIsCode.load();
-        if (isCode === 'yes') {
-          document.body.classList.add(CONSTS.CLS.HASH_DATA_IS_CODE);
-        }
-        else {
-          const hasDoxsections = storage.pageHasDoxsections.load();
-          if (hasDoxsections === 'yes') {
-            vars.pageHasDoxsections = true;
-          }
+        const hasDoxsections = storage.pageHasDoxsections.load();
+        if (hasDoxsections === 'yes') {
+          vars.pageHasDoxsections = true;
         }
         vars.hashData.push(...prevHashData);
         deepFreeze(vars.hashData);
@@ -2518,7 +2508,6 @@
       }
       else {
         storage.hashData.remove();
-        storage.hashDataIsCode.remove();
         storage.pageHasDoxsections.remove();
       }
     }
@@ -2651,9 +2640,7 @@
     if (vars.hashData.length > 0) {
       checkTreeData(vars.hashData, 'hash', true);
       document.body.classList.add(CONSTS.CLS.HASH_DATA_AVAILABLE);
-      document.body.classList.add(CONSTS.CLS.HASH_DATA_IS_CODE);
       storage.hashData.save(vars.hashData);
-      storage.hashDataIsCode.save('yes');
       deepFreeze(vars.hashData);
       return;
     }
@@ -2745,9 +2732,8 @@
     }
 
     // Hash data was generated using the 'doxsection' method for
-    // markdown pages. In this case we do not set the class and
-    // data for 'hashDataIsCode'. Just save the class list and
-    // data for hash data, freeze vars.hashData and return.
+    // markdown pages. Just save the class list and data
+    // for hash data, freeze vars.hashData and return.
     if (vars.hashData.length > 0) {
       checkTreeData(vars.hashData, 'hash', true);
       storage.pageHasDoxsections.save('yes');
@@ -2779,12 +2765,9 @@
       list: 'dpt-list',      // ul
       node: 'dpt-node',      // li, tree node
       row: 'dpt-row',        // clickable row (<button> for branch, <a> for leaf)
-      toggle: 'dpt-toggle',  // branch toggle icon
       prefix: 'dpt-prefix',  // prefix, e.g. spe::
       label: 'dpt-label',    // visible node text
-      sep: 'dpt-sep',        // Separator i.e. span
 
-      leaf: 'dpt-node--leaf',         // Node with no children
       branch: 'dpt-node--branch',     // Node with children
       current: 'dpt-node--current',   // Current node
       visited: 'dpt-node--visited',   // Visited node (only for hashTree)
@@ -2823,10 +2806,38 @@
         if (curPar.classList.contains(CLS.branch)) {
           curPar.classList.add(CLS.expanded);
           const row = curPar.firstElementChild;
-          if (row instanceof HTMLButtonElement) row.setAttribute('aria-expanded', 'true');
+          if (row instanceof HTMLButtonElement) {
+            row.setAttribute('aria-expanded', 'true');
+          }
         }
         curPar = curPar.parentElement ? curPar.parentElement.closest(`.${CLS.node}`) : null;
       }
+    }
+
+    // Helper to scroll into view after height settles
+    function runAfterScrollHeightStable(pane, item) {
+      if (!pane || !item) return;
+
+      let lastScrollHeight = -1;
+      let stableCount = 0;
+      function check() {
+        const curScrollHeight = pane.scrollHeight;
+
+        if (curScrollHeight === lastScrollHeight) {
+          ++stableCount;
+        }
+        else {
+          stableCount = 0;
+          lastScrollHeight = curScrollHeight;
+        }
+
+        if (stableCount >= 3) {
+          item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          return;
+        }
+        requestAnimationFrame(check);
+      }
+      requestAnimationFrame(check);
     }
 
     // Handle on-page hash changes.
@@ -2866,8 +2877,11 @@
       markAndExpandCurrentNode(item);
 
       // Scroll into view
-      item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      runAfterScrollHeightStable(vars.els.DP_LEAF_SHOW, item);
     }
+
+    let curRootItem = null;
+    let curLeafItem = null;
 
     // Build a tree from the given data and config.
     function buildTreeFromData(data, cfg) {
@@ -2892,6 +2906,12 @@
 
           const item = branch[ii];
 
+          // Early guard
+          if (!Array.isArray(item) || item.length < 3) {
+            console.warn(`${cfg.warnName}: Malformed node.`, item);
+            continue;
+          }
+
           // li for the node
           const li = document.createElement('li');
           li.classList.add(CLS.node);
@@ -2908,11 +2928,13 @@
             prefix.textContent = prefixText;
           }
 
+          // Create label text as span
+          const label = document.createElement('span');
+          label.classList.add(CLS.label);
+          label.textContent = item[0];
+
           // If value is of type string then this is a leaf node
           if (typeof value === 'string') {
-
-            // Mark li as leaf
-            li.classList.add(CLS.leaf);
 
             // Create row as a link
             const row = document.createElement('a');
@@ -2920,16 +2942,15 @@
             row.href = cfg.getHref(item);
             row.title = cfg.getTitle(item);
 
-            // Append prefix and labels to row
+            // Append prefix and label to row
             if (prefix) row.append(prefix);
-            const labels = cfg.getLabelSpans(item);
-            for (const lbl of labels) row.append(lbl);
+            row.append(label);
 
             // Append row to li
             li.appendChild(row);
 
             // Run the optional leaf callback.
-            if (cfg.onLeaf) cfg.onLeaf(row, li);
+            if (typeof cfg.onLeaf === 'function') cfg.onLeaf(row, li);
 
             // Check for the node being the current node
             if (cfg.isCurrent(row)) curNode = li;
@@ -2947,17 +2968,9 @@
             row.setAttribute('aria-expanded', 'false');
             row.title = cfg.getTitle(item);
 
-            // Add toggle as span to show expand/collapse icon
-            const toggle = document.createElement('span');
-            toggle.classList.add(CLS.toggle);
-            toggle.textContent = "\u2B9E"; //\u25B6 = ▶ in JetBrains Mono, \u2B9E = ⮞ in NotoSansSymbols2, rotated to show open state
-            toggle.setAttribute('aria-hidden', 'true');
-
-            // Append toggle, prefix and labels to row
-            row.append(toggle);
+            // Append prefix and label to row
             if (prefix) row.append(prefix);
-            const labels = cfg.getLabelSpans(item);
-            for (const lbl of labels) row.append(lbl);
+            row.append(label);
 
             // Append row to li
             li.appendChild(row);
@@ -2984,8 +2997,15 @@
         parent.appendChild(fragment);
       }
 
-      // Mark and expand the current node
-      markAndExpandCurrentNode(curNode);
+      if (curNode) {
+        // Mark and expand the current node
+        markAndExpandCurrentNode(curNode);
+
+        // Assign current node
+        if (cfg.type === 'root') curRootItem = curNode;
+        else curLeafItem = curNode;
+
+      }
 
       // Return built tree
       return root;
@@ -3002,24 +3022,8 @@
 
     // Tree built from vars.htmlData
     const htmlTree = buildTreeFromData(vars.htmlData, {
+      type: 'root',
       warnName: 'buildTreeFromData(): vars.htmlData',
-      getLabelSpans: (item) => {
-        const labels = [];
-        const labelParts = String(item[0]).split('::');
-        for (const lblPart of labelParts) {
-          if (labels.length > 0) {
-            const sep = document.createElement('span');
-            sep.classList.add(CLS.sep);
-            sep.textContent = '::';
-            labels.push(sep);
-          }
-          const label = document.createElement('span');
-          label.classList.add(CLS.label);
-          label.textContent = lblPart;
-          labels.push(label);
-        }
-        return labels;
-      },
       getPrefixText: (item) => item[1] ? `${item[1]}::` : null,
       getValue: (item) => item[2],
       getHref: (item) => CONSTS.DOC_ROOT + item[2],
@@ -3029,15 +3033,8 @@
 
     // Tree built from vars.hashData
     const hashTree = buildTreeFromData(vars.hashData, {
+      type: 'leaf',
       warnName: 'buildTreeFromData(): vars.hashData',
-      getLabelSpans: (item) => {
-        const labels = [];
-        const label = document.createElement('span');
-        label.classList.add(CLS.label);
-        label.textContent = item[0];
-        labels.push(label);
-        return labels;
-      },
       getPrefixText: (item) => item[1] ? `${item[1]}\u00A0` : null,
       getValue: (item) => item[2],
       getHref: (item) => item[2],
@@ -3054,6 +3051,7 @@
     if (htmlTree) {
       vars.els.DP_ROOT_PANE.appendChild(htmlTree);
       htmlTree.addEventListener('click', clickHandler);
+      runAfterScrollHeightStable(vars.els.DP_ROOT_PANE, curRootItem);
     }
 
     // Mount hashTree
@@ -3062,6 +3060,7 @@
       vars.els.DP_LEAF_SHOW.appendChild(hashTree);
       hashTree.addEventListener('click', clickHandler);
       window.addEventListener('hashchange', onHashChange);
+      runAfterScrollHeightStable(vars.els.DP_LEAF_SHOW, curLeafItem);
     }
   }
 
