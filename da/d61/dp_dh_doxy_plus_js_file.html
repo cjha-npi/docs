@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: doxy-plus JS</title>
+<title>Main Project: doxy-plus.js</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -134,7 +134,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">doxy-plus JS </div></div>
+  <div class="headertitle"><div class="title">doxy-plus.js </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Filename: </p><div class="fragment"><div class="line">doxy-plus.js</div>
@@ -2935,6 +2935,32 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      // Toggle its expanded state</div>
 <div class="line">      const isExpanded = li.classList.toggle(CLS.expanded);</div>
 <div class="line">      row.setAttribute(&#39;aria-expanded&#39;, isExpanded ? &#39;true&#39; : &#39;false&#39;);</div>
+<div class="line"> </div>
+<div class="line">      // If not expanded then no need to scroll</div>
+<div class="line">      if (!isExpanded) return;</div>
+<div class="line"> </div>
+<div class="line">      // For expanded nodes we scroll</div>
+<div class="line">      requestAnimationFrame(() =&gt; {</div>
+<div class="line">        const children = li.querySelectorAll(`:scope &gt; ul &gt; .${CLS.node}`);</div>
+<div class="line">        if (children.length === 0) return;</div>
+<div class="line"> </div>
+<div class="line">        let lastChild = children[children.length - 1];</div>
+<div class="line">        while (lastChild.classList.contains(CLS.expanded)) {</div>
+<div class="line">          const subChildren = lastChild.querySelectorAll(`:scope &gt; ul &gt; .${CLS.node}`);</div>
+<div class="line">          if (subChildren.length === 0) break;</div>
+<div class="line">          lastChild = subChildren[subChildren.length - 1];</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        const begRow = li.querySelector(`:scope &gt; .${CLS.row}`);</div>
+<div class="line">        const endRow = lastChild.querySelector(`:scope &gt; .${CLS.row}`);</div>
+<div class="line">        if (!(begRow instanceof HTMLElement) || !(endRow instanceof HTMLElement)) return;</div>
+<div class="line"> </div>
+<div class="line">        // First scroll the last visible child into view</div>
+<div class="line">        endRow.scrollIntoView({ behavior: &#39;auto&#39;, block: &#39;nearest&#39; });</div>
+<div class="line"> </div>
+<div class="line">        // Then scroll the current item into view</div>
+<div class="line">        begRow.scrollIntoView({ behavior: &#39;smooth&#39;, block: &#39;nearest&#39; });</div>
+<div class="line">      });</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Mark a node as current and expand its parent chain.</div>

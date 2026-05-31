@@ -17,7 +17,7 @@ var searchData=
   ['correctness_20requirements_14',['Lifetime and Correctness Requirements',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__lifetime_correctness_requirements',1,'']]],
   ['cpu_20bar_20generator_15',['CPU Bar Generator',['../dc/df4/dp_dh_rm_sys_graphs_cpu_bar_generator.html',1,'dp_dh_dir_rm_sys_graphs']]],
   ['create_20ico_20icons_20using_20imagemagick_16',['Create ICO Icons Using ImageMagick',['../d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick',1,'']]],
-  ['css_17',['doxy-plus CSS',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
+  ['css_17',['doxy-plus.css',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
   ['current_20components_18',['Current Components',['../index.html#autotoc_md1',1,'']]],
   ['customization_19',['Customization',['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__customization',1,'Customization'],['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__reflection_customization',1,'Reflection Range and Customization']]]
 ];

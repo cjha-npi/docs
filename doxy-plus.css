@@ -167,7 +167,7 @@ html.dark-mode {
   --dp-line-color: var(--separator-color); /* used as special lines by doxy-plus */
   --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */
   --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */
-  --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */
+  --dp-scrollbar-color: rgb(40, 80, 100); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
   --dp-page-nav-vis-color: var(--page-background-color); /* Background color for items in page nav which are visible on main page */
@@ -392,6 +392,11 @@ body:not(.dp-main-nav-below-title) #titlearea {
   font-size: 20px !important;
   color: var(--dp-footer-link-separation-color);
   background-color: transparent !important;
+}
+
+/* Removing the hover color, it shows underline and that is enough */
+#nav-path.navpath li.navelem:hover {
+  background: transparent;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1260,7 +1265,8 @@ span.tt{
   overflow-x: auto;
   border: none;
   border-radius: var(--dp-border-radius-l);
-  padding: 10px 14px 10px 14px;
+  padding: 8px 10px; /* top and bottom | left and right */
+  margin: 4px 0; /* top and bottom | left and right */
 }
 
 #doc-content div.fragment,
@@ -1286,6 +1292,57 @@ span.tt{
 #doc-content div.fragment .clipboard svg {
   width: 16px;
   height: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    div.fragment, pre.fragment {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 0;
+    }
+
+    .contents > div.fragment,
+    .textblock > div.fragment,
+    .textblock > pre.fragment,
+    .textblock > .tabbed > ul > li > div.fragment,
+    .textblock > .tabbed > ul > li > pre.fragment,
+    .contents > .doxygen-awesome-fragment-wrapper > div.fragment,
+    .textblock > .doxygen-awesome-fragment-wrapper > div.fragment,
+    .textblock > .doxygen-awesome-fragment-wrapper > pre.fragment,
+    .textblock > .tabbed > ul > li > .doxygen-awesome-fragment-wrapper > div.fragment,
+    .textblock > .tabbed > ul > li > .doxygen-awesome-fragment-wrapper > pre.fragment {
+        margin: 0;
+        padding: 0 !important;
+        border-radius: 0;
+        border-left: 0;
+    }
+
+    .textblock li > .fragment,
+    .textblock li > .doxygen-awesome-fragment-wrapper > .fragment {
+        margin: 4px;
+    }
+
+    .memdoc li > .fragment,
+    .memdoc li > .doxygen-awesome-fragment-wrapper > .fragment {
+        margin: 0;
+    }
+
+    .textblock ul, .memdoc ul {
+        overflow: initial;
+    }
+
+    .memdoc > div.fragment,
+    .memdoc > pre.fragment,
+    dl dd > div.fragment,
+    dl dd pre.fragment,
+    .memdoc > .doxygen-awesome-fragment-wrapper > div.fragment,
+    .memdoc > .doxygen-awesome-fragment-wrapper > pre.fragment,
+    dl dd > .doxygen-awesome-fragment-wrapper > div.fragment,
+    dl dd .doxygen-awesome-fragment-wrapper > pre.fragment {
+        margin: 0;
+        border-radius: 0;
+        border-left: 0;
+    }
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1667,7 +1724,7 @@ when it is scrolled programatically. For root pane
 items the current item has pseudo elements that forms
 a joining to the main page, this margin makes sure
 that those curves are also visible. */
-li.dpt-node--current {
+.dpt-node {
   scroll-margin-block: 8px;
 }
 
@@ -1734,7 +1791,7 @@ li.dpt-node--branch:not(.dpt-node--expanded):has(.dpt-node--current)::after {
   height: calc(2 * var(--dp-border-radius-s));
   left: 0px;
   background: var(--dp-pane-parent-item-color);
-  mask: radial-gradient(circle var(--dp-border-radius-s) at 100% 100%, transparent 80%, #000 100%);
+  mask: radial-gradient(circle var(--dp-border-radius-s) at 100% 100%, transparent 90%, #000 100%);
   mask-composite: subtract;
 }
 

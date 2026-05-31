@@ -21,7 +21,7 @@ var dp_dh_dir_doxygen =
       [ "Header HTML", "df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__head", null ],
       [ "Footer HTML", "df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__foot", null ]
     ] ],
-    [ "doxy-plus JS", "da/d61/dp_dh_doxy_plus_js_file.html", null ],
-    [ "doxy-plus CSS", "dc/dc4/dp_dh_doxy_plus_css_file.html", null ],
-    [ "doxy-plus XML", "de/d10/dp_dh_doxy_plus_xml_file.html", null ]
+    [ "doxy-plus.js", "da/d61/dp_dh_doxy_plus_js_file.html", null ],
+    [ "doxy-plus.css", "dc/dc4/dp_dh_doxy_plus_css_file.html", null ],
+    [ "doxy-plus.xml", "de/d10/dp_dh_doxy_plus_xml_file.html", null ]
 ];

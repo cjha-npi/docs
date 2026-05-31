@@ -2795,6 +2795,32 @@
       // Toggle its expanded state
       const isExpanded = li.classList.toggle(CLS.expanded);
       row.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+
+      // If not expanded then no need to scroll
+      if (!isExpanded) return;
+
+      // For expanded nodes we scroll
+      requestAnimationFrame(() => {
+        const children = li.querySelectorAll(`:scope > ul > .${CLS.node}`);
+        if (children.length === 0) return;
+
+        let lastChild = children[children.length - 1];
+        while (lastChild.classList.contains(CLS.expanded)) {
+          const subChildren = lastChild.querySelectorAll(`:scope > ul > .${CLS.node}`);
+          if (subChildren.length === 0) break;
+          lastChild = subChildren[subChildren.length - 1];
+        }
+
+        const begRow = li.querySelector(`:scope > .${CLS.row}`);
+        const endRow = lastChild.querySelector(`:scope > .${CLS.row}`);
+        if (!(begRow instanceof HTMLElement) || !(endRow instanceof HTMLElement)) return;
+
+        // First scroll the last visible child into view
+        endRow.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+
+        // Then scroll the current item into view
+        begRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
     }
 
     // Mark a node as current and expand its parent chain.

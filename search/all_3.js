@@ -45,7 +45,7 @@ var searchData=
   ['crashing_42',['crashing',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a51df948e5fa3868b91f8b698cbe1b58e',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['create_20ico_20icons_20using_20imagemagick_43',['Create ICO Icons Using ImageMagick',['../d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick',1,'']]],
   ['createsubdir_44',['createSubDir',['../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#ad34f59342fdb3a04d27ff5ae0320ad25',1,'anonymous_namespace{MetaPaths.cpp}']]],
-  ['css_45',['doxy-plus CSS',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
+  ['css_45',['doxy-plus.css',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
   ['ctxtbuf_46',['cTxtBuf',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aeeb137a2c9cda360c642a9f465b4fd0c',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['ctxtpos_47',['cTxtPos',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a9b1e6370f161f0e3cb2fab8ed0c23417',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['current_20components_48',['Current Components',['../index.html#autotoc_md1',1,'']]],

@@ -20,9 +20,9 @@ var searchData=
   ['documentation_17',['Documentation',['../index.html#autotoc_md5',1,'']]],
   ['does_18',['What this hook does',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__what_it_does',1,'']]],
   ['dox_20extension_20setup_19',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]],
-  ['doxy_20plus_20css_20',['doxy-plus CSS',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxy_20plus_20js_21',['doxy-plus JS',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxy_20plus_20xml_22',['doxy-plus XML',['../de/d10/dp_dh_doxy_plus_xml_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxy_20plus_20css_20',['doxy-plus.css',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxy_20plus_20js_21',['doxy-plus.js',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxy_20plus_20xml_22',['doxy-plus.xml',['../de/d10/dp_dh_doxy_plus_xml_file.html',1,'dp_dh_dir_doxygen']]],
   ['doxyfile_23',['Doxyfile',['../dc/d5a/dp_dh_doxy_file.html',1,'dp_dh_dir_doxygen']]],
   ['doxygen_24',['Doxygen',['../d4/d7c/dp_dh_dir_doxygen.html',1,'dp_dh_dir_dev_hub']]],
   ['doxygen_20examples_25',['Doxygen Examples',['../d6/d8f/dp_dh_doxy_examples.html',1,'dp_dh_dir_misc']]]

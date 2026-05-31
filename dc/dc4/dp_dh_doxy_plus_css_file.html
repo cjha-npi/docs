@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: doxy-plus CSS</title>
+<title>Main Project: doxy-plus.css</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -134,7 +134,7 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">doxy-plus CSS </div></div>
+  <div class="headertitle"><div class="title">doxy-plus.css </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Filename: </p><div class="fragment"><div class="line">doxy-plus.css</div>
@@ -307,7 +307,7 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  --dp-line-color: var(--separator-color); /* used as special lines by doxy-plus */</div>
 <div class="line">  --dp-icon-hover-color: var(--dp-mark-color); /* color of the button icon when hovered */</div>
 <div class="line">  --dp-icon-color: rgb(from var(--dp-icon-hover-color) r g b / 0.8); /* color of the button icons */</div>
-<div class="line">  --dp-scrollbar-color: var(--separator-color); /* scrollbar button and handle color */</div>
+<div class="line">  --dp-scrollbar-color: rgb(40, 80, 100); /* scrollbar button and handle color */</div>
 <div class="line">  --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */</div>
 <div class="line">  --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */</div>
 <div class="line">  --dp-page-nav-vis-color: var(--page-background-color); /* Background color for items in page nav which are visible on main page */</div>
@@ -532,6 +532,11 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  font-size: 20px !important;</div>
 <div class="line">  color: var(--dp-footer-link-separation-color);</div>
 <div class="line">  background-color: transparent !important;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">/* Removing the hover color, it shows underline and that is enough */</div>
+<div class="line">#nav-path.navpath li.navelem:hover {</div>
+<div class="line">  background: transparent;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
@@ -1400,7 +1405,8 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  overflow-x: auto;</div>
 <div class="line">  border: none;</div>
 <div class="line">  border-radius: var(--dp-border-radius-l);</div>
-<div class="line">  padding: 10px 14px 10px 14px;</div>
+<div class="line">  padding: 8px 10px; /* top and bottom | left and right */</div>
+<div class="line">  margin: 4px 0; /* top and bottom | left and right */</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">#doc-content div.fragment,</div>
@@ -1426,6 +1432,57 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">#doc-content div.fragment .clipboard svg {</div>
 <div class="line">  width: 16px;</div>
 <div class="line">  height: 16px;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">@media screen and (max-width: 767px) {</div>
+<div class="line">    div.fragment, pre.fragment {</div>
+<div class="line">        border-top-right-radius: 0;</div>
+<div class="line">        border-bottom-right-radius: 0;</div>
+<div class="line">        border-right: 0;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    .contents &gt; div.fragment,</div>
+<div class="line">    .textblock &gt; div.fragment,</div>
+<div class="line">    .textblock &gt; pre.fragment,</div>
+<div class="line">    .textblock &gt; .tabbed &gt; ul &gt; li &gt; div.fragment,</div>
+<div class="line">    .textblock &gt; .tabbed &gt; ul &gt; li &gt; pre.fragment,</div>
+<div class="line">    .contents &gt; .doxygen-awesome-fragment-wrapper &gt; div.fragment,</div>
+<div class="line">    .textblock &gt; .doxygen-awesome-fragment-wrapper &gt; div.fragment,</div>
+<div class="line">    .textblock &gt; .doxygen-awesome-fragment-wrapper &gt; pre.fragment,</div>
+<div class="line">    .textblock &gt; .tabbed &gt; ul &gt; li &gt; .doxygen-awesome-fragment-wrapper &gt; div.fragment,</div>
+<div class="line">    .textblock &gt; .tabbed &gt; ul &gt; li &gt; .doxygen-awesome-fragment-wrapper &gt; pre.fragment {</div>
+<div class="line">        margin: 0;</div>
+<div class="line">        padding: 0 !important;</div>
+<div class="line">        border-radius: 0;</div>
+<div class="line">        border-left: 0;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    .textblock li &gt; .fragment,</div>
+<div class="line">    .textblock li &gt; .doxygen-awesome-fragment-wrapper &gt; .fragment {</div>
+<div class="line">        margin: 4px;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    .memdoc li &gt; .fragment,</div>
+<div class="line">    .memdoc li &gt; .doxygen-awesome-fragment-wrapper &gt; .fragment {</div>
+<div class="line">        margin: 0;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    .textblock ul, .memdoc ul {</div>
+<div class="line">        overflow: initial;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    .memdoc &gt; div.fragment,</div>
+<div class="line">    .memdoc &gt; pre.fragment,</div>
+<div class="line">    dl dd &gt; div.fragment,</div>
+<div class="line">    dl dd pre.fragment,</div>
+<div class="line">    .memdoc &gt; .doxygen-awesome-fragment-wrapper &gt; div.fragment,</div>
+<div class="line">    .memdoc &gt; .doxygen-awesome-fragment-wrapper &gt; pre.fragment,</div>
+<div class="line">    dl dd &gt; .doxygen-awesome-fragment-wrapper &gt; div.fragment,</div>
+<div class="line">    dl dd .doxygen-awesome-fragment-wrapper &gt; pre.fragment {</div>
+<div class="line">        margin: 0;</div>
+<div class="line">        border-radius: 0;</div>
+<div class="line">        border-left: 0;</div>
+<div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/</div>
@@ -1807,7 +1864,7 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">items the current item has pseudo elements that forms</div>
 <div class="line">a joining to the main page, this margin makes sure</div>
 <div class="line">that those curves are also visible. */</div>
-<div class="line">li.dpt-node--current {</div>
+<div class="line">.dpt-node {</div>
 <div class="line">  scroll-margin-block: 8px;</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -1874,7 +1931,7 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  height: calc(2 * var(--dp-border-radius-s));</div>
 <div class="line">  left: 0px;</div>
 <div class="line">  background: var(--dp-pane-parent-item-color);</div>
-<div class="line">  mask: radial-gradient(circle var(--dp-border-radius-s) at 100% 100%, transparent 80%, #000 100%);</div>
+<div class="line">  mask: radial-gradient(circle var(--dp-border-radius-s) at 100% 100%, transparent 90%, #000 100%);</div>
 <div class="line">  mask-composite: subtract;</div>
 <div class="line">}</div>
 <div class="line"> </div>
