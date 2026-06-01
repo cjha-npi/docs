@@ -1219,6 +1219,20 @@ body:not(.dp-doc-header-available) #page-nav {
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* REMOVE BORDERS */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+td.memItemLeft, 
+td.memItemRight,
+td.memTemplParams,
+div.memitem,
+.memtitle,
+.memproto,
+.memdoc{
+  border: 0px !important;
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 /* BLOCKQUOTE CUSTOMIZATION */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
@@ -1366,7 +1380,7 @@ dl.dh_required dd{
 
 dl.warning, dl.attention, dl.note, dl.deprecated, dl.bug, dl.invariant, dl.pre, dl.post, dl.todo, dl.remark, dl.test{
   position: relative;
-  padding-left: 20px;
+  padding: 4px 4px 4px 18px;
   border-radius: var(--dp-border-radius-l);
   color: var(--page-foreground-color);
 }
@@ -1375,9 +1389,9 @@ dl.warning::before, dl.attention::before, dl.note::before, dl.deprecated::before
 dl.invariant::before, dl.pre::before, dl.post::before, dl.todo::before, dl.remark::before, dl.test::before {
   content: "";
   position: absolute;
-  left: 3px;
-  top: 3px;
-  bottom: 3px;
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
   width: 8px;
   border-radius: var(--dp-border-radius-l);
   pointer-events: none;
@@ -1385,60 +1399,67 @@ dl.invariant::before, dl.pre::before, dl.post::before, dl.todo::before, dl.remar
 
 dl.warning::before, dl.attention::before {
   background: var(--warning-color-dark);
+  border: 0;
 }
 
 dl.warning, dl.attention{
   color: var(--warning-color-darker);
-  border: 2px solid var(--warning-color-dark);
+  border: 0;
 }
 
 dl.note::before, dl.remark::before{
   background: var(--note-color-dark);
+  border: 0;
 }
 
 dl.note, dl.remark{
   color: var(--note-color-darker);
-  border: 2px solid var(--note-color-dark);
+  border: 0;
 }
 
 dl.deprecated::before{
   background: var(--deprecated-color-dark);
+  border: 0;
 }
 
 dl.deprecated{
   color: var(--deprecated-color-darker);
-  border: 2px solid var(--deprecated-color-dark);
+  border: 0;
 }
 
 dl.bug::before{
   background: var(--bug-color-dark);
+  border: 0;
 }
 
 dl.bug{
   color: var(--bug-color-darker);
-  border: 2px solid var(--bug-color-dark);
+  border: 0;
 }
 
 dl.invariant::before, dl.pre::before, dl.post::before{
   background: var(--invariant-color-dark);
+  border: 0;
 }
 
 dl.invariant, dl.pre, dl.post{
   color: var(--invariant-color-darker);
-  border: 2px solid var(--invariant-color-dark);
+  border: 0;
 }
 
 dl.todo::before, dl.test::before{
   background: var(--todo-color-dark);
+  border: 0;
 }
 
 dl.todo, dl.test{
   color: var(--todo-color-darker);
-  border: 2px solid var(--todo-color-dark);
+  border: 0;
 }
 
 dl.test{
   background: var(--todo-color);
+  border: 0;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
