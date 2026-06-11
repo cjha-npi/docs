@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['appmetadata_0',['AppMetaData',['../d8/d5a/structnpi_1_1_app_meta_data.html',1,'npi']]]
+  ['crossprocesslocker_0',['CrossProcessLocker',['../d0/d9b/classnpi_1_1ind_1_1_cross_process_locker.html',1,'npi::ind']]]
 ];

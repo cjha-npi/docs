@@ -71,7 +71,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;5</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;6</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -254,10 +254,10 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  --link-color: rgb(30, 100, 200); /* color of links defined by &lt;a&gt;...&lt;/a&gt; in HTML */</div>
 <div class="line">  --page-background-color: rgb(210, 220, 230) !important; /* forms the separator between panes*/</div>
 <div class="line">  --separator-color: rgb(200, 200, 200) !important;</div>
-<div class="line">  --code-background: rgb(210, 220, 230) !important;</div>
+<div class="line">  --code-background: rgb(225, 235, 245) !important;</div>
 <div class="line">  --tablehead-background: rgb(215, 220, 225) !important;</div>
 <div class="line">  --blockquote-background: rgb(215, 220, 225) !important;</div>
-<div class="line">  --fragment-background: rgb(220, 230, 240) !important;</div>
+<div class="line">  --fragment-background: rgb(225, 235, 245) !important;</div>
 <div class="line"> </div>
 <div class="line">  /* Doxy-Plus background colors */</div>
 <div class="line">  --dp-back-color: var(--page-background-color); /* because --page-background-color is overridden inside contents */</div>
@@ -1420,7 +1420,7 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  border: none;</div>
 <div class="line">  border-radius: var(--dp-border-radius-l);</div>
 <div class="line">  padding: 8px 10px; /* top and bottom | left and right */</div>
-<div class="line">  margin: 4px 0; /* top and bottom | left and right */</div>
+<div class="line">  margin: 8px 0; /* top and bottom | left and right */</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">#doc-content div.fragment,</div>
@@ -1520,20 +1520,21 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line"> </div>
 <div class="line">dl.warning, dl.attention, dl.note, dl.deprecated, dl.bug, dl.invariant, dl.pre, dl.post, dl.todo, dl.remark, dl.test{</div>
 <div class="line">  position: relative;</div>
-<div class="line">  padding: 4px 4px 4px 18px;</div>
+<div class="line">  padding: 6px 10px 6px 20px; /* top | right | bottom | left */</div>
 <div class="line">  border-radius: var(--dp-border-radius-l);</div>
 <div class="line">  color: var(--page-foreground-color);</div>
+<div class="line">  box-shadow: 0px 0px 5px var(--dp-back-color);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">dl.warning::before, dl.attention::before, dl.note::before, dl.deprecated::before, dl.bug::before, </div>
 <div class="line">dl.invariant::before, dl.pre::before, dl.post::before, dl.todo::before, dl.remark::before, dl.test::before {</div>
 <div class="line">  content: &quot;&quot;;</div>
 <div class="line">  position: absolute;</div>
-<div class="line">  left: 4px;</div>
-<div class="line">  top: 4px;</div>
-<div class="line">  bottom: 4px;</div>
-<div class="line">  width: 8px;</div>
-<div class="line">  border-radius: var(--dp-border-radius-l);</div>
+<div class="line">  left: 6px;</div>
+<div class="line">  top: 6px;</div>
+<div class="line">  bottom: 6px;</div>
+<div class="line">  width: 6px;</div>
+<div class="line">  border-radius: var(--dp-border-radius-s);</div>
 <div class="line">  pointer-events: none;</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -1846,20 +1847,17 @@ $(function(){initNavTree('dc/dc4/dp_dh_doxy_plus_css_file.html','../../',''); })
 <div class="line">  text-overflow: ellipsis;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line">/* Separate config for prefix */</div>
+<div class="line">/* Separate config for prefix. Here the shrink value</div>
+<div class="line">is 9999 so that prefix shrinks much faster than the</div>
+<div class="line">label when not enough width is available. */</div>
 <div class="line">.dpt-prefix {</div>
-<div class="line">  flex: 0 1 auto; /* &lt;grow&gt; &lt;shrink&gt; &lt;basis&gt; */</div>
+<div class="line">  flex: 0 9999 auto; /* &lt;grow&gt; &lt;shrink&gt; &lt;basis&gt; */</div>
 <div class="line">  color: var(--dp-prefix-text-color);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line">/* Separate config for label. Here the shrink value</div>
-<div class="line">is 9999 so that the tendency to shrink label is much</div>
-<div class="line">higher than to shrink prefix. This way when ellipses</div>
-<div class="line">appears it first appears on the label and only when </div>
-<div class="line">almost all the label is not visible anymore then it</div>
-<div class="line">appears on prefix. */</div>
+<div class="line">/* Separate config for label */</div>
 <div class="line">.dpt-label {</div>
-<div class="line">  flex: 0 9999 auto; /* &lt;grow&gt; &lt;shrink&gt; &lt;basis&gt; */</div>
+<div class="line">  flex: 0 1 auto; /* &lt;grow&gt; &lt;shrink&gt; &lt;basis&gt; */</div>
 <div class="line">  color: var(--page-foreground-color);</div>
 <div class="line">}</div>
 <div class="line"> </div>

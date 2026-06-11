@@ -1,7 +1,7 @@
 var searchData=
 [
   ['addlogcategory_5f_0',['addLogCategory_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aafe9aec9f51646b9da69be36e4d0ea34',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['animate_5f_1',['animate_',['../dd/d55/classnpi_1_1_stage_window.html#a1b36a4af380af0f926279b89d38ab67d',1,'npi::StageWindow']]],
+  ['animate_5f_1',['animate_',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#a6abbebe97305aa0d9e9ffb2c0684e6fc',1,'npi::ind::StageWindow']]],
   ['append2digits_2',['append2Digits',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#ac8e06193aa953194d78cd55baf2151d8',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['append3digits_3',['append3Digits',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a1138ca08d0d8b5a0482ee827987b024f',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['append4digits_4',['append4Digits',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a99008cbbcf5923943b42b8788667114a',1,'anonymous_namespace{Log.cpp}::safe']]],
@@ -21,13 +21,9 @@ var searchData=
   ['appendmsg_18',['appendMsg',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a70f8ae638e66e98804ee3dbd8772433a',1,'anonymous_namespace{Log.cpp}::safe']]],
   ['appendstr_5f_19',['AppendStr_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aa885eb55dee8680b48150be9c21ee5f9',1,'anonymous_namespace{Log.cpp}::LogCore::AppendStr_(QString &amp;buf, const QString &amp;s)'],['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a12c1d3df406e83c6c5e8f5bed9d18ede',1,'anonymous_namespace{Log.cpp}::LogCore::AppendStr_(QByteArray &amp;buf, const QString &amp;s)']]],
   ['appendtxt_20',['appendTxt',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aa8d11c260254c761c7437280b4284d17',1,'anonymous_namespace{Log.cpp}::safe::appendTxt(char *out, size_t &amp;pos, const char *txt) noexcept'],['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#afe624b9c8f583070f229333403693a5b',1,'anonymous_namespace{Log.cpp}::safe::appendTxt(char *out, size_t &amp;pos, const wchar_t *txt) noexcept']]],
-  ['appfont_5f_21',['appFont_',['../d2/db7/classnpi_1_1_text_spec.html#ad4b0ed692dc864e5a0175cf85eb84910',1,'npi::TextSpec']]],
-  ['appfontmetrics_5f_22',['appFontMetrics_',['../d2/db7/classnpi_1_1_text_spec.html#a418b9bcb6a1292054de007257baffb12',1,'npi::TextSpec']]],
-  ['appfontmetricsf_5f_23',['appFontMetricsF_',['../d2/db7/classnpi_1_1_text_spec.html#ac41e847d23c1b85e83027a6f84c47eba',1,'npi::TextSpec']]],
-  ['applystartupfilterrules_5f_24',['applyStartupFilterRules_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a99690e486ca4ffff9a8c04124b01459e',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['appmetadata_25',['AppMetaData',['../d8/d5a/structnpi_1_1_app_meta_data.html#a926571b70af9d3d44abbcdbd4599025f',1,'npi::AppMetaData::AppMetaData()=delete'],['../d8/d5a/structnpi_1_1_app_meta_data.html#a3dce8e5cccf39fd18f163a2d5c4ecd2f',1,'npi::AppMetaData::AppMetaData(AppMetaData &amp;&amp;)=delete'],['../d8/d5a/structnpi_1_1_app_meta_data.html#a2e846930e1139147bd4b3761af7e8fc2',1,'npi::AppMetaData::AppMetaData(const AppMetaData &amp;)=delete']]],
-  ['appprogramdatadir_26',['appProgramDataDir',['../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544',1,'npi::app']]],
-  ['apppublicdocumentsdir_27',['appPublicDocumentsDir',['../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542',1,'npi::app']]],
-  ['assign_5f_28',['assign_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#ad3c900f4bfc5104a58eac1ad7c31778c',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings::assign_()'],['../d2/d0d/classnpi_1_1_ref_ptr.html#ae7da4162c8998d6346866e6a1be4953d',1,'npi::RefPtr::assign_()'],['../d6/d78/classnpi_1_1_ref_ptr_host.html#ab671de1cb79c6f8d532defd76a50305b',1,'npi::RefPtrHost::assign_()']]],
-  ['availablefieldnames_29',['availableFieldNames',['../d5/ddd/namespacenpi_1_1log.html#ae6eac236972f24cbb4bc02759093004f',1,'npi::log']]]
+  ['applystartupfilterrules_5f_21',['applyStartupFilterRules_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a99690e486ca4ffff9a8c04124b01459e',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['appprogramdatadir_22',['appProgramDataDir',['../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544',1,'npi::app']]],
+  ['apppublicdocumentsdir_23',['appPublicDocumentsDir',['../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542',1,'npi::app']]],
+  ['assign_5f_24',['assign_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#ad3c900f4bfc5104a58eac1ad7c31778c',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
+  ['availablefieldnames_25',['availableFieldNames',['../d5/ddd/namespacenpi_1_1log.html#ae6eac236972f24cbb4bc02759093004f',1,'npi::log']]]
 ];

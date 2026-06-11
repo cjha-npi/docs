@@ -15,13 +15,7 @@ var searchData=
   ['filterruleslock_5f_12',['filterRulesLock_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aa046e5c286dd94ef3cc4938a49076fc6',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['filterrulestempstate_5f_13',['filterRulesTempState_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#adbcc6924f69f80d7e8e91331bdc70eab',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['fixedstrings_5f_14',['fixedStrings_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a702395ba22ec763667dfc96108a4ee4f',1,'anonymous_namespace{Log.cpp}::LogCore::OneLog']]],
-  ['fixedwidthfontwidget_5f_15',['FixedWidthFontWidget_',['../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd',1,'npi::GuiProps']]],
-  ['fixfont_5f_16',['FixFont_',['../d2/db7/classnpi_1_1_text_spec.html#a384cfd8f07478f60f9c15493f59d6f4f',1,'npi::TextSpec']]],
-  ['fixfontmutex_5f_17',['FixFontMutex_',['../d2/db7/classnpi_1_1_text_spec.html#afafd8b8be1df4ce63d3be94a796d5b6a',1,'npi::TextSpec']]],
-  ['fixfontsize_5f_18',['FixFontSize_',['../d2/db7/classnpi_1_1_text_spec.html#a03a6e804b4f9cab97910f84c8dae8b73',1,'npi::TextSpec']]],
-  ['fixgroupcache_5f_19',['FixGroupCache_',['../d2/db7/classnpi_1_1_text_spec.html#aa71a55a0b94a39af957a9a297545779e',1,'npi::TextSpec']]],
-  ['flushinterval_5f_20',['FlushInterval_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a65ebdcc24bfd585e31f165aec297c528',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['font_5f_21',['font_',['../da/d3b/structnpi_1_1_text_spec_1_1_group.html#abd69a742b2a82f2df0adcf50ac2b38fc',1,'npi::TextSpec::Group']]],
-  ['funcname_5f_22',['funcName_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a7c2503d683cf2a34a0d6e5f273fa3ed3',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
-  ['funcnamelen_5f_23',['funcNameLen_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#af4401d948f8c6e2d370469e772480cf2',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]]
+  ['flushinterval_5f_15',['FlushInterval_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a65ebdcc24bfd585e31f165aec297c528',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['funcname_5f_16',['funcName_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a7c2503d683cf2a34a0d6e5f273fa3ed3',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
+  ['funcnamelen_5f_17',['funcNameLen_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#af4401d948f8c6e2d370469e772480cf2',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]]
 ];

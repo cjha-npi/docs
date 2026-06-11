@@ -1,4 +1,5 @@
 // file: doxy-plus.js
+// version: 6
 
 // #region ⚠️ WARNING: DO NOT CREATE CUSTOM HASH/HREF
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -253,41 +254,6 @@
   function prettierAnon(text) {
     if (typeof text !== 'string') return text;
     return text.replace(/anonymous_namespace\{([^}]+)\}/g, '<$1>');
-  }
-
-  // Compares two strings and provides highest priority to alphabets.
-  function compareAlphaBeforePunctuation(a, b) {
-    // Provided for sorting anonymous namespace after normal normal ones.
-    // Anonymous namespace is often replaced using 'prettierAnon()' function
-    // above. Then the sorting happens and so normal namespace that starts
-    // with alphabets will be sorted above anonymous namespaces. For example
-    // 'some_ns' will be above '<anon_ns>'.
-
-    if (typeof a !== 'string' || typeof b !== 'string') return 0;
-
-    const aLen = a.length;
-    const bLen = b.length;
-    const minLen = Math.min(aLen, bLen);
-
-    // Compare each character till the length of the shorter string
-    for (let ii = 0; ii < minLen; ++ii) {
-      const aCh = a[ii].toUpperCase();
-      const bCh = b[ii].toUpperCase();
-
-      const aIsAlpha = (aCh >= 'A' && aCh <= 'Z');
-      const bIsAlpha = (bCh >= 'A' && bCh <= 'Z');
-
-      if (aIsAlpha && !bIsAlpha) return -1;
-      if (!aIsAlpha && bIsAlpha) return 1;
-
-      // If both characters are alphabets then use native compare
-      const cmpResult = aCh.localeCompare(bCh, undefined, { sensitivity: 'base' });
-      if (cmpResult !== 0) return cmpResult;
-    }
-
-    // In case of one string is a sub-string of another, e.g. a = 'Some' and
-    // b = 'SomeFunc', then sort shorter string before longer string.
-    return aLen - bLen;
   }
 
   // Recursively freezes the given value and everything nested inside it.
@@ -1010,7 +976,9 @@
       LEAF_PANE_AUTO_HIDE_THRESHOLD: 1500, // Threshold (px) width for leaf pane auto hide
       PANE_WIDTH_SAVE_DEBOUNCE_MS: 500,    // Timeout (ms) to save pane widths when dragging/resizing
       TIMEOUT_MS: 2000,                    // Timeout (ms) for waiting (not used in waitFor() helper)
-      BUCKET_THRESHOLD: 20                 // Max count of flat list after which Alphabetic groups are formed
+      MIN_CLASS_FOR_BRANCH: 3,             // Minimum number of classes in a namespace to form a branch
+      MAX_TOP_LEVEL_CLASS_BRANCH: 11,      // Maximum number of top-level namespace based class branches
+      BUCKET_THRESHOLD: 50                 // Max count of flat list after which Alphabetic groups are formed
     });
 
     // Common DOM selectors used throughout the script.
@@ -2157,14 +2125,101 @@
       return out;
     }
 
+    // Special sorting for concepts and classes
+    function specialSort(flatList) {
+      if (!Array.isArray(flatList) || flatList.length === 0) return;
+
+      flatList.sort((a, b) => {
+        const nameA = a[0] || '';
+        const nameB = b[0] || '';
+
+        const nsA = a[1] || null;
+        const nsB = b[1] || null;
+
+        const aHasNs = typeof nsA === 'string' && nsA.length > 0;
+        const bHasNs = typeof nsB === 'string' && nsB.length > 0;
+
+        // 1. Classes without namespace first.
+        if (!aHasNs && bHasNs) return -1;
+        if (aHasNs && !bHasNs) return 1;
+
+        // 2. If both have no namespace, sort by name.
+        if (!aHasNs && !bHasNs) {
+          const cmpName = nameA.localeCompare(nameB, undefined, { sensitivity: 'base' });
+          if (cmpName !== 0) return cmpName;
+
+          return (a[2] || '').localeCompare(b[2] || '', undefined, { sensitivity: 'base' });
+        }
+
+        // 3. If both have namespace, sort by namespace first.
+        const cmpNs = nsA.localeCompare(nsB, undefined, { sensitivity: 'base' });
+        if (cmpNs !== 0) return cmpNs;
+
+        // 4. Then sort by name.
+        const cmpName = nameA.localeCompare(nameB, undefined, { sensitivity: 'base' });
+        if (cmpName !== 0) return cmpName;
+
+        // 5. Final tie-breaker.
+        return (a[2] || '').localeCompare(b[2] || '', undefined, { sensitivity: 'base' });
+      });
+    }
+
+    // Finds anonymous namespace filename
+    function anonNamespaceFileName(prefix, label = null) {
+      const parts = [];
+      if (typeof prefix === 'string' && prefix.length > 0) parts.push(prefix);
+      if (typeof label === 'string' && label.length > 0) parts.push(label);
+      if (parts.length === 0) return null;
+
+      const text = parts.join('::');
+
+      const matches = [...text.matchAll(/(?:^|::)<([^<>]+)>(?=::|$)/g)].map(match => match[1]);
+
+      if (matches.length === 0) return null;
+
+      const fileName = matches[0];
+      for (let ii = 1; ii < matches.length; ++ii) {
+        if (matches[ii] !== fileName) {
+          dispFatalError(`'${text}' contains more than one filename as anonymous namespace: [${matches.join(', ')}]`);
+          return null;
+        }
+      }
+      return fileName;
+    }
+
+    // Normalize anonymous namespace prefix entries
+    function normalizeAnonPrefix(text, nsName) {
+      if (typeof text !== 'string' || typeof nsName !== 'string' || nsName.length === 0) {
+        return text;
+      }
+
+      let result = text;
+      if (result.startsWith(nsName)) {
+        result = result.slice(nsName.length);
+      }
+      if (result.startsWith('::')) {
+        result = result.slice(2);
+      }
+      result = result.replaceAll(nsName, '<anon>');
+
+      if (result.length === 0) return null;
+      return result;
+    }
+
+    // Maps for sorting accoring to file and according to namespace
+    const fileLocalMap = new Map();
+    const classListMap = new Map();
+
     // The main top nodes for the doxy-plus root pane.
     const theProject = ['Project', null, []];
     const theDependencies = ['Dependencies', null, []];
     const theArchitecture = ['Architecture', null, []];
     const theNamespaces = ['Namespaces', null, []];
     const theConcepts = ['Concepts', null, []];
-    const theClasses = ['Classes', null, []];
+    const theOtherClasses = ['Other Classes', null, []];
+    const theFileLocals = ['File-Local', null, []];
     const theFiles = ['Files', null, []];
+    const theMembers = ['Members', null, []];
     const theExamples = ['Examples', null, []];
     const theDevHub = ['Dev Hub', null, []];
 
@@ -2206,45 +2261,42 @@
       // Populate
       (function processNamespaceListBranch(branch, path = null) {
         if (!Array.isArray(branch) || branch.length === 0) return;
-
-        // Separate normal and anonymous namespace first, on same
-        // level anonymous namespace always goes below normal ones.
-        const nsNormList = [];
-        const nsAnonList = [];
         for (const node of branch) {
           const href = node[1] ? node[1].split('/').pop() : null;
           if (href && /^namespace/.test(href)) {
             const pName = prettierAnon(node[0]);
-            if (pName === node[0]) nsNormList.push([pName, node[1], node[2]]);
-            else nsAnonList.push([pName, node[1], node[2]]);
-          }
-        }
+            const anonName = anonNamespaceFileName(path, pName);
+            if (anonName) {
+              if (!fileLocalMap.has(anonName)) fileLocalMap.set(anonName, []);
+              fileLocalMap.get(anonName).push([pName, path, node[1]]);
+            }
+            else {
+              theNamespaces[2].push([pName, path, node[1]]);
+            }
 
-        // Push normal namespace to namespace list branch.
-        for (const node of nsNormList) {
-          theNamespaces[2].push([node[0], path, node[1]]);
-          if (node[2]) {
-            const childPath = path ? `${path}::${node[0]}` : node[0];
-            processNamespaceListBranch(node[2], childPath);
-          }
-        }
-
-        // Push anonymous namespace to namespace list branch.
-        for (const node of nsAnonList) {
-          theNamespaces[2].push([node[0], path, node[1]]);
-          if (node[2]) {
-            const childPath = path ? `${path}::${node[0]}` : node[0];
-            processNamespaceListBranch(node[2], childPath);
+            if (node[2]) {
+              const childPath = path ? `${path}::${pName}` : pName;
+              processNamespaceListBranch(node[2], childPath);
+            }
           }
         }
 
       })(found.namespaceList[2]);
     }
 
+    // Normalize the namespace name
+    for (const [key, val] of fileLocalMap) {
+      const nsName = `<${key}>`;
+      for (const node of val) {
+        if (node[0] === nsName) node[0] = '<anon>';
+        if (!node[0].endsWith('::')) node[0] = `${node[0]}::`;
+      }
+    }
+
     // Namespace Members
     if (found.namespaceMems && found.namespaceMems[2]) {
       const converted = convertBranch(found.namespaceMems[2], 'Namespaces > Namespace Members');
-      if (converted.length > 0) theNamespaces[2].push(['[Members]', null, converted]);
+      if (converted.length > 0) theMembers[2].push(['Namespace Members', null, converted]);
     }
 
     // Concepts
@@ -2261,7 +2313,14 @@
 
           const href = node[1] ? node[1].split('/').pop() : null;
           if (href && /^concept/.test(href)) {
-            theConcepts[2].push([pName, prefix, node[1]]);
+            const anonName = anonNamespaceFileName(prefix);
+            if (anonName) {
+              if (!fileLocalMap.has(anonName)) fileLocalMap.set(anonName, []);
+              fileLocalMap.get(anonName).push([pName, prefix, node[1]]);
+            }
+            else {
+              theConcepts[2].push([pName, prefix, node[1]]);
+            }
           }
 
           if (node[2]) {
@@ -2272,19 +2331,7 @@
       })(found.concepts[2]);
 
       // Sort
-      theConcepts[2].sort((a, b) => {
-
-        // 1. Concept name.
-        let cmpResult = a[0].localeCompare(b[0], undefined, { sensitivity: 'base' });
-        if (cmpResult !== 0) return cmpResult;
-
-        // 2. Path, but keep alphabetic namespaces before <file.cpp>-style ones.
-        cmpResult = compareAlphaBeforePunctuation(a[1] || '', b[1] || '');
-        if (cmpResult !== 0) return cmpResult;
-
-        // 3. Final tie-breaker.
-        return a[2].localeCompare(b[2], undefined, { sensitivity: 'base' });
-      });
+      specialSort(theConcepts[2]);
 
       // Change to alphabetic buckets if needed
       if (theConcepts[2].length > CONSTS.VAL.BUCKET_THRESHOLD) {
@@ -2297,6 +2344,10 @@
 
       // Add main page to project node
       theProject[2].push(['Class List', null, found.classList[1]]);
+
+      // temp holders
+      const tempClassMap = new Map();
+      const tempOtherCls = [];
 
       // Populate
       (function processClassListBranch(branch, namespacePath = null, classPath = null) {
@@ -2311,7 +2362,28 @@
             const pName = prettierAnon(node[0]);
             if (/^(?:class|struct)/.test(href)) {
               className = classPath ? `${classPath}::${pName}` : pName;
-              theClasses[2].push([className, namespaceName, node[1]]);
+              const anonName = anonNamespaceFileName(namespaceName);
+              if (anonName) {
+                if (!fileLocalMap.has(anonName)) fileLocalMap.set(anonName, []);
+                fileLocalMap.get(anonName).push([className, namespaceName, node[1]]);
+              }
+              else {
+                if (typeof namespaceName === 'string' && namespaceName.length > 0) {
+                  const nsParts = namespaceName.split('::');
+                  if (nsParts.length === 1) {
+                    if (!tempClassMap.has(nsParts[0])) tempClassMap.set(nsParts[0], []);
+                    tempClassMap.get(nsParts[0]).push([className, namespaceName, node[1]]);
+                  }
+                  else {
+                    const grpName = `${nsParts[0]}::${nsParts[1]}`;
+                    if (!tempClassMap.has(grpName)) tempClassMap.set(grpName, []);
+                    tempClassMap.get(grpName).push([className, namespaceName, node[1]]);
+                  }
+                }
+                else {
+                  tempOtherCls.push([className, null, node[1]]);
+                }
+              }
             }
             else if (/^namespace/.test(href)) {
               namespaceName = namespacePath ? `${namespacePath}::${pName}` : pName;
@@ -2322,52 +2394,94 @@
         }
       })(found.classList[2]);
 
-      // Sort
-      theClasses[2].sort((a, b) => {
-        // split class names
-        const aClasses = a[0].split('::');
-        const bClasses = b[0].split('::');
+      // filter out lists which has less than minimum for creating a separate branch
+      const filteredMap = new Map();
+      if (tempClassMap.size > 0) {
+        for (const [key, val] of tempClassMap) {
+          if (val.length < CONSTS.VAL.MIN_CLASS_FOR_BRANCH) {
+            for (const node of val) {
+              tempOtherCls.push(node);
+            }
+          }
+          else {
+            const tempList = [];
+            for (const node of val) {
+              const nsSpliced = node[1].slice(key.length + 2);
+              const nsTempName = nsSpliced.length > 0 ? nsSpliced : null;
+              tempList.push([node[0], nsTempName, node[2]]);
+            }
+            specialSort(tempList);
+            if (tempList > CONSTS.VAL.BUCKET_THRESHOLD) {
+              tempList = putInAlphabeticBuckets(tempList);
+            }
+            else filteredMap.set(key, tempList);
+          }
+        }
+      }
 
-        // 1. Outermost class name.
-        let cmpResult = aClasses[0].localeCompare(bClasses[0], undefined, { sensitivity: 'base' });
-        if (cmpResult !== 0) return cmpResult;
+      // If filtered map has more than maximum number of top-level branches
+      // then we divide it into two categories: one for top-level and another
+      // that will go in 'Other Classes'. This filtering is based on array
+      // length. Then we sort based on key name and assign to correct map/array.
+      if (filteredMap.size > 0) {
+        const sortedFilteredMap = new Map([...filteredMap.entries()].sort(([, valA], [, valB]) => valB.length - valA.length));
 
-        // 2. Namespace path, but keep alphabetic namespaces before <file.cpp>-style ones.
-        cmpResult = compareAlphaBeforePunctuation(a[1] || '', b[1] || '');
-        if (cmpResult !== 0) return cmpResult;
-
-        // 3. Inner class segments.
-        const minLen = Math.min(aClasses.length, bClasses.length);
-        for (let ii = 1; ii < minLen; ++ii) {
-          cmpResult = aClasses[ii].localeCompare(bClasses[ii], undefined, { sensitivity: 'base' });
-          if (cmpResult !== 0) return cmpResult;
+        let idx = 0;
+        const lvlOneCls = new Map();
+        const lvlTwoCls = new Map();
+        for (const [key, val] of sortedFilteredMap) {
+          ++idx;
+          if (idx > CONSTS.VAL.MAX_TOP_LEVEL_CLASS_BRANCH) lvlTwoCls.set(key, val);
+          else lvlOneCls.set(key, val);
         }
 
-        // 4. Shorter path first if one is a prefix of the other.
-        cmpResult = aClasses.length - bClasses.length;
-        if (cmpResult !== 0) return cmpResult;
+        if (lvlOneCls.size > 0) {
+          const lvlOneStored = new Map([...lvlOneCls.entries()].sort(([keyA], [keyB]) => keyA.localeCompare(keyB)));
+          for (const [key, val] of lvlOneStored) {
+            classListMap.set(key, val);
+          }
 
-        // 5. Final tie-breaker.
-        return a[2].localeCompare(b[2], undefined, { sensitivity: 'base' });
-      });
+          if (lvlTwoCls.size > 0) {
+            const lvlTwoStored = new Map([...lvlTwoCls.entries()].sort(([keyA], [keyB]) => keyA.localeCompare(keyB)));
+            for (const [key, val] of lvlTwoStored) {
+              theOtherClasses[2].push([key, null, val]);
+            }
+          }
+        }
+      }
 
-      // Change to alphabetic buckets if needed
-      if (theClasses[2].length > CONSTS.VAL.BUCKET_THRESHOLD) {
-        theClasses[2] = putInAlphabeticBuckets(theClasses[2]);
+      // We first assign any sub-branch in the other classes so that it appears
+      // on top (done above). Then we sort the rest of the classes and assign it
+      // to the other classes top-level.
+      if (tempOtherCls.length > 0) {
+        specialSort(tempOtherCls);
+        if (tempOtherCls.length > CONSTS.VAL.BUCKET_THRESHOLD) {
+          tempOtherCls = putInAlphabeticBuckets(tempOtherCls);
+        }
+        for (const node of tempOtherCls) {
+          theOtherClasses[2].push(node);
+        }
+      }
+    }
+
+    // If file local size is more than 0 then sort it based on key name
+    // i.e. file name and assign it to the file local array.
+    if (fileLocalMap.size > 0) {
+      const sortedEntries = new Map([...fileLocalMap.entries()].sort(([keyA], [keyB]) => keyA.localeCompare(keyB)));
+      for (const [key, val] of sortedEntries) {
+        const nsName = `<${key}>`;
+        for (const node of val) {
+          node[1] = normalizeAnonPrefix(node[1], nsName);
+        }
+        theFileLocals[2].push([key, null, val]);
       }
     }
 
     // Class Members
     if (found.classMems && found.classMems[2]) {
       const converted = convertBranch(found.classMems[2], 'Classes > Class Members');
-      if (converted.length > 0) theClasses[2].push(['[Members]', null, converted]);
+      if (converted.length > 0) theMembers[2].push(['Class Members', null, converted]);
     }
-
-    // Class Hierarchy
-    if (found.classHierarchy) theClasses[2].push(['[Hierarchy]', null, found.classHierarchy[1]]);
-
-    // Class Index
-    if (found.classIndex) theClasses[2].push(['[Index]', null, found.classIndex[1]]);
 
     // File List
     if (found.fileList) {
@@ -2378,7 +2492,7 @@
     // File Members
     if (found.fileMems && found.fileMems[2]) {
       const converted = convertBranch(found.fileMems[2], 'Files > File Members');
-      if (converted.length > 0) theFiles[2].push(['[Members]', null, converted]);
+      if (converted.length > 0) theMembers[2].push(['File Members', null, converted]);
     }
 
     // Example List
@@ -2420,14 +2534,34 @@
     // Test List
     if (found.testList) theProject[2].push(['Test List', null, found.testList[1]]);
 
+    // Class Hierarchy
+    if (found.classHierarchy) theProject[2].push(['Class Hierarchy', null, found.classHierarchy[1]]);
+
+    // Class Index
+    if (found.classIndex) theProject[2].push(['Class Index', null, found.classIndex[1]]);
+
     // Assigning to vars.htmlData array
     if (theProject[2].length > 0) vars.htmlData.push(theProject);
     if (theDependencies[2].length > 0) vars.htmlData.push(theDependencies);
     if (theArchitecture[2].length > 0) vars.htmlData.push(theArchitecture);
     if (theNamespaces[2].length > 0) vars.htmlData.push(theNamespaces);
     if (theConcepts[2].length > 0) vars.htmlData.push(theConcepts);
-    if (theClasses[2].length > 0) vars.htmlData.push(theClasses);
+
+    // If there are no other class list than `Other Classes` then
+    // name `Other Classes` to `Classes`
+    if (classListMap.size > 0) {
+      for (const [key, val] of classListMap) {
+        vars.htmlData.push([`${key} Classes`, null, val]);
+      }
+    }
+    else{
+      theOtherClasses[0] = 'Classes';
+    }
+
+    if (theOtherClasses[2].length > 0) vars.htmlData.push(theOtherClasses);
+    if (theFileLocals[2].length > 0) vars.htmlData.push(theFileLocals);
     if (theFiles[2].length > 0) vars.htmlData.push(theFiles);
+    if (theMembers[2].length > 0) vars.htmlData.push(theMembers);
     if (theExamples[2].length > 0) vars.htmlData.push(theExamples);
     if (theDevHub[2].length > 0) vars.htmlData.push(theDevHub);
 

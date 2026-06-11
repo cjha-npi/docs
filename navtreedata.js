@@ -39,16 +39,14 @@ var NAVTREE =
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
-    [ "Concepts", "concepts.html", "concepts" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
-        [ "Related Symbols", "functions_rela.html", null ]
+        [ "Enumerations", "functions_enum.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -66,10 +64,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac83f155438d4a0447ac048d50c7b1a47",
-"d2/db7/classnpi_1_1_text_spec.html#a087f595350584c429aa189100a8a8a8bad382816a3cbeed082c9e216e7392eed1",
-"d6/d78/classnpi_1_1_ref_ptr_host.html#a161a8052754985bb8024c19c06fd9206",
-"da/d29/structnpi_1_1_ref_ptr_host_1_1_obs.html#ab5ff9089a3797aebbc175acb36a2c728",
-"functions_g.html"
+"d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__early_safety_guard",
+"df/d08/dp_dh_dir_misc.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

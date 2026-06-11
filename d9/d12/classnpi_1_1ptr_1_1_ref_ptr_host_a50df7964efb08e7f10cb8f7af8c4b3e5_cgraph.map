@@ -1,0 +1,5 @@
+<map id="npi::ptr::RefPtrHost::operator*" name="npi::ptr::RefPtrHost::operator*">
+<area shape="rect" id="Node000001" title="Dereference operator to obtain a reference to the hosted object." alt="" coords="5,13,275,38"/>
+<area shape="rect" id="Node000002" href="$d9/d12/classnpi_1_1ptr_1_1_ref_ptr_host.html#ac46c84f28b6be56f6e02cbdb7255a0c8" title="Retrieve the raw pointer to the hosted object." alt="" coords="323,5,504,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,23,317,26,312,26,274,28"/>
+</map>

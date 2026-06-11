@@ -71,7 +71,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;5</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;6</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -1262,7 +1262,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  403</span>            }</div>
 <div class="line"><span class="lineno">  404</span>          }</div>
 <div class="line"><span class="lineno">  405</span> </div>
-<div class="line"><span class="lineno">  406</span>          <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;ImpLog Write Failed&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  406</span>          npi::app::nativeFatalMessage(<span class="stringliteral">&quot;ImpLog Write Failed&quot;</span>, msg);</div>
 <div class="line"><span class="lineno">  407</span>        }</div>
 <div class="line"><span class="lineno">  408</span> </div>
 <div class="line"><span class="lineno">  409</span>        <span class="comment">// Progress.</span></div>
@@ -1274,15 +1274,14 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1safe_html_a75f37e97f418c07255e5d291419b4951"><div class="ttname"><a href="#a75f37e97f418c07255e5d291419b4951">anonymous_namespace{Log.cpp}::safe::hImpLogPipe</a></div><div class="ttdeci">HANDLE hImpLogPipe</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00091">Log.cpp:91</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1safe_html_a7b9ca54d0332982c503c224cd9371f3b"><div class="ttname"><a href="#a7b9ca54d0332982c503c224cd9371f3b">anonymous_namespace{Log.cpp}::safe::hImpLogProc</a></div><div class="ttdeci">HANDLE hImpLogProc</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00090">Log.cpp:90</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1safe_html_abc25ab769b48a34eb27ff7c789822b7e"><div class="ttname"><a href="#abc25ab769b48a34eb27ff7c789822b7e">anonymous_namespace{Log.cpp}::safe::win32ErrorText</a></div><div class="ttdeci">std::wstring win32ErrorText(DWORD err)</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00101">Log.cpp:101</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a30b5245afa890e98f19f43c58f29e633"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a></div><div class="ttdeci">void nativeFatalMessage(const QString &amp;title, const QString &amp;msg) noexcept</div><div class="ttdoc">Windows native fatal error message box.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d9c/_native_fatal_message_8hpp_source.html#l00044">NativeFatalMessage.hpp:44</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a75f37e97f418c07255e5d291419b4951">hImpLogPipe</a>, <a class="el" href="#a7b9ca54d0332982c503c224cd9371f3b">hImpLogProc</a>, <a class="el" href="#a97522aab6ec53ce2693cf4a5432927bf">impLogWrite()</a>, <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage()</a>, and <a class="el" href="#abc25ab769b48a34eb27ff7c789822b7e">win32ErrorText()</a>.</p>
+<p class="reference">References <a class="el" href="#a75f37e97f418c07255e5d291419b4951">hImpLogPipe</a>, <a class="el" href="#a7b9ca54d0332982c503c224cd9371f3b">hImpLogProc</a>, <a class="el" href="#a97522aab6ec53ce2693cf4a5432927bf">impLogWrite()</a>, and <a class="el" href="#abc25ab769b48a34eb27ff7c789822b7e">win32ErrorText()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a97522aab6ec53ce2693cf4a5432927bf">impLogWrite()</a>, <a class="el" href="#a110b11e90b5bb8ae5c8a1521e33eec21">invalidParamHandler()</a>, <a class="el" href="#a460f691136cced36ea40b2595c18d0a8">msgHandler()</a>, <a class="el" href="#a2ccdd616a9266b8ac0b03f18feb92c0a">pureCallHandler()</a>, <a class="el" href="#a05dd8955535418321e297dbbc885a56d">signalHandler()</a>, <a class="el" href="#ad3395aac6f72b3cacf47edce1bffd16d">terminateHandler()</a>, and <a class="el" href="#a2fc634cd009955d042c53cb5f5eebcb5">windowsExceptionFilter()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a97522aab6ec53ce2693cf4a5432927bf_cgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a97522aab6ec53ce2693cf4a5432927bf_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1444,7 +1443,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a110b11e90b5bb8ae5c8a1521e33eec21_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a110b11e90b5bb8ae5c8a1521e33eec21_cgraph.svg" width="100%" height="588"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1736,7 +1735,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a2ccdd616a9266b8ac0b03f18feb92c0a_cgraph.svg" width="100%" height="521"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a2ccdd616a9266b8ac0b03f18feb92c0a_cgraph.svg" width="100%" height="491"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1854,7 +1853,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a05dd8955535418321e297dbbc885a56d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a05dd8955535418321e297dbbc885a56d_cgraph.svg" width="100%" height="595"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1891,14 +1890,14 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  146</span>      <span class="keywordtype">wchar_t</span> impLogExePathBuf[<a class="code hl_variable" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a305c8b2db3c0358ff6fd4863450fde35">fileNameMaxLen</a>]{};</div>
 <div class="line"><span class="lineno">  147</span>      <span class="keyword">const</span> DWORD n = ::GetModuleFileNameW(<span class="keyword">nullptr</span>, impLogExePathBuf, <a class="code hl_variable" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a305c8b2db3c0358ff6fd4863450fde35">fileNameMaxLen</a>);</div>
 <div class="line"><span class="lineno">  148</span>      <span class="keywordflow">if</span>(n == 0 || n &gt;= <a class="code hl_variable" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a305c8b2db3c0358ff6fd4863450fde35">fileNameMaxLen</a>) {</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  149</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  150</span>          QStringLiteral(<span class="stringliteral">&quot;&#39;GetModuleFileNameW&#39; Error: %1&quot;</span>).arg(QString::fromStdWString(<a class="code hl_function" href="#acee0c3f06b3d9996946c9c55104868c4">win32LastError</a>())));</div>
 <div class="line"><span class="lineno">  151</span>      }</div>
 <div class="line"><span class="lineno">  152</span> </div>
 <div class="line"><span class="lineno">  153</span>      std::wstring impLogExePath(impLogExePathBuf, impLogExePathBuf + n);</div>
 <div class="line"><span class="lineno">  154</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> slash = impLogExePath.find_last_of(L<span class="stringliteral">&quot;\\/&quot;</span>);</div>
 <div class="line"><span class="lineno">  155</span>      <span class="keywordflow">if</span>(slash == std::wstring::npos)</div>
-<div class="line"><span class="lineno">  156</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>, <span class="stringliteral">&quot;npiImpLog.exe path could not be determined&quot;</span>);</div>
+<div class="line"><span class="lineno">  156</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>, <span class="stringliteral">&quot;npiImpLog.exe path could not be determined&quot;</span>);</div>
 <div class="line"><span class="lineno">  157</span> </div>
 <div class="line"><span class="lineno">  158</span>      impLogExePath.resize(slash + 1);</div>
 <div class="line"><span class="lineno">  159</span>      impLogExePath += L<span class="stringliteral">&quot;npiImpLog.exe&quot;</span>;</div>
@@ -1912,7 +1911,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  167</span>      HANDLE hWrite = INVALID_HANDLE_VALUE;</div>
 <div class="line"><span class="lineno">  168</span> </div>
 <div class="line"><span class="lineno">  169</span>      <span class="keywordflow">if</span>(!::CreatePipe(&amp;hRead, &amp;hWrite, &amp;sa, 0)) {</div>
-<div class="line"><span class="lineno">  170</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  170</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  171</span>          QStringLiteral(<span class="stringliteral">&quot;&#39;CreatePipe&#39; Error: %1&quot;</span>).arg(QString::fromStdWString(<a class="code hl_function" href="#acee0c3f06b3d9996946c9c55104868c4">win32LastError</a>())));</div>
 <div class="line"><span class="lineno">  172</span>      }</div>
 <div class="line"><span class="lineno">  173</span> </div>
@@ -1921,7 +1920,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  176</span>        <span class="keyword">const</span> <span class="keyword">auto</span> eTxt = <a class="code hl_function" href="#acee0c3f06b3d9996946c9c55104868c4">win32LastError</a>();</div>
 <div class="line"><span class="lineno">  177</span>        ::CloseHandle(hRead);</div>
 <div class="line"><span class="lineno">  178</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno">  179</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  179</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  180</span>          QStringLiteral(<span class="stringliteral">&quot;&#39;SetHandleInformation&#39; Error: %1&quot;</span>).arg(QString::fromStdWString(eTxt)));</div>
 <div class="line"><span class="lineno">  181</span>      }</div>
 <div class="line"><span class="lineno">  182</span> </div>
@@ -1939,7 +1938,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  194</span>        <span class="keyword">const</span> <span class="keyword">auto</span> eTxt = <a class="code hl_function" href="#acee0c3f06b3d9996946c9c55104868c4">win32LastError</a>();</div>
 <div class="line"><span class="lineno">  195</span>        ::CloseHandle(hRead);</div>
 <div class="line"><span class="lineno">  196</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno">  197</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  197</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  198</span>          QStringLiteral(<span class="stringliteral">&quot;&#39;CreateFileW(NUL)&#39; Error: %1&quot;</span>).arg(QString::fromStdWString(eTxt)));</div>
 <div class="line"><span class="lineno">  199</span>      }</div>
 <div class="line"><span class="lineno">  200</span> </div>
@@ -1970,7 +1969,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  225</span>        ::CloseHandle(hNull);</div>
 <div class="line"><span class="lineno">  226</span>        ::CloseHandle(hRead);</div>
 <div class="line"><span class="lineno">  227</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno">  228</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>, <span class="stringliteral">&quot;&#39;HeapAlloc&#39; failed for attribute list&quot;</span>);</div>
+<div class="line"><span class="lineno">  228</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>, <span class="stringliteral">&quot;&#39;HeapAlloc&#39; failed for attribute list&quot;</span>);</div>
 <div class="line"><span class="lineno">  229</span>      }</div>
 <div class="line"><span class="lineno">  230</span> </div>
 <div class="line"><span class="lineno">  231</span>      <span class="keywordflow">if</span>(!::InitializeProcThreadAttributeList(attrList, 1, 0, &amp;attrListBytes)) {</div>
@@ -1979,7 +1978,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  234</span>        ::CloseHandle(hNull);</div>
 <div class="line"><span class="lineno">  235</span>        ::CloseHandle(hRead);</div>
 <div class="line"><span class="lineno">  236</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno">  237</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  237</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  238</span>          QStringLiteral(<span class="stringliteral">&quot;&#39;InitializeProcThreadAttributeList&#39; Error: %1&quot;</span>).arg(QString::fromStdWString(eTxt)));</div>
 <div class="line"><span class="lineno">  239</span>      }</div>
 <div class="line"><span class="lineno">  240</span> </div>
@@ -1997,7 +1996,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  252</span>        ::CloseHandle(hNull);</div>
 <div class="line"><span class="lineno">  253</span>        ::CloseHandle(hRead);</div>
 <div class="line"><span class="lineno">  254</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno">  255</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  255</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  256</span>          QStringLiteral(<span class="stringliteral">&quot;&#39;UpdateProcThreadAttribute(HANDLE_LIST)&#39; Error: %1&quot;</span>).arg(QString::fromStdWString(eTxt)));</div>
 <div class="line"><span class="lineno">  257</span>      }</div>
 <div class="line"><span class="lineno">  258</span> </div>
@@ -2033,7 +2032,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  288</span>        ::CloseHandle(hNull);</div>
 <div class="line"><span class="lineno">  289</span>        ::CloseHandle(hRead);</div>
 <div class="line"><span class="lineno">  290</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno">  291</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  291</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  292</span>          QStringLiteral(<span class="stringliteral">&quot;&#39;CreateProcessW&#39; Error: %1&quot;</span>).arg(QString::fromStdWString(eTxt)));</div>
 <div class="line"><span class="lineno">  293</span>      }</div>
 <div class="line"><span class="lineno">  294</span> </div>
@@ -2049,7 +2048,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  304</span>      <span class="keyword">const</span> DWORD w = ::WaitForSingleObject(<a class="code hl_variable" href="#a7b9ca54d0332982c503c224cd9371f3b">hImpLogProc</a>, 250);</div>
 <div class="line"><span class="lineno">  305</span>      <span class="keywordflow">if</span>(w == WAIT_FAILED) {</div>
 <div class="line"><span class="lineno">  306</span>        <span class="keyword">const</span> <span class="keyword">auto</span> eTxt = <a class="code hl_function" href="#acee0c3f06b3d9996946c9c55104868c4">win32LastError</a>();</div>
-<div class="line"><span class="lineno">  307</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  307</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  308</span>          QStringLiteral(<span class="stringliteral">&quot;&#39;WaitForSingleObject&#39; Error: %1&quot;</span>).arg(QString::fromStdWString(eTxt)));</div>
 <div class="line"><span class="lineno">  309</span>      }</div>
 <div class="line"><span class="lineno">  310</span> </div>
@@ -2058,26 +2057,26 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  313</span>        (void)::GetExitCodeProcess(<a class="code hl_variable" href="#a7b9ca54d0332982c503c224cd9371f3b">hImpLogProc</a>, &amp;code);</div>
 <div class="line"><span class="lineno">  314</span> </div>
 <div class="line"><span class="lineno">  315</span>        <span class="keywordflow">if</span>(code == 1)</div>
-<div class="line"><span class="lineno">  316</span>          <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  316</span>          npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  317</span>            <span class="stringliteral">&quot;npiImpLog.exe returned 1: Missing/invalid primary log file path argument&quot;</span>);</div>
 <div class="line"><span class="lineno">  318</span>        <span class="keywordflow">if</span>(code == 2)</div>
-<div class="line"><span class="lineno">  319</span>          <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  319</span>          npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  320</span>            <span class="stringliteral">&quot;npiImpLog.exe returned 2: Missing/invalid STDIN handle (pipe not redirected/inherited)&quot;</span>);</div>
 <div class="line"><span class="lineno">  321</span> </div>
-<div class="line"><span class="lineno">  322</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage</a>(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
+<div class="line"><span class="lineno">  322</span>        npi::app::nativeFatalMessage(<span class="stringliteral">&quot;Start Imp Log Process Failed&quot;</span>,</div>
 <div class="line"><span class="lineno">  323</span>          QString(<span class="stringliteral">&quot;npiImpLog.exe returned %1: Unknown error&quot;</span>).arg(code));</div>
 <div class="line"><span class="lineno">  324</span>      }</div>
 <div class="line"><span class="lineno">  325</span>    }</div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1safe_html_acee0c3f06b3d9996946c9c55104868c4"><div class="ttname"><a href="#acee0c3f06b3d9996946c9c55104868c4">anonymous_namespace{Log.cpp}::safe::win32LastError</a></div><div class="ttdeci">std::wstring win32LastError()</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00136">Log.cpp:136</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_a305c8b2db3c0358ff6fd4863450fde35"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a305c8b2db3c0358ff6fd4863450fde35">anonymous_namespace{Log.cpp}::fileNameMaxLen</a></div><div class="ttdeci">constexpr size_t fileNameMaxLen</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00086">Log.cpp:86</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a305c8b2db3c0358ff6fd4863450fde35">anonymous_namespace{Log.cpp}::fileNameMaxLen</a>, <a class="el" href="#a75f37e97f418c07255e5d291419b4951">hImpLogPipe</a>, <a class="el" href="#a7b9ca54d0332982c503c224cd9371f3b">hImpLogProc</a>, <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633">npi::app::nativeFatalMessage()</a>, <a class="el" href="#a79b9de042466028e5c2c32bdf0635cb5">startImpLogProcess()</a>, and <a class="el" href="#acee0c3f06b3d9996946c9c55104868c4">win32LastError()</a>.</p>
+<p class="reference">References <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a305c8b2db3c0358ff6fd4863450fde35">anonymous_namespace{Log.cpp}::fileNameMaxLen</a>, <a class="el" href="#a75f37e97f418c07255e5d291419b4951">hImpLogPipe</a>, <a class="el" href="#a7b9ca54d0332982c503c224cd9371f3b">hImpLogProc</a>, <a class="el" href="#a79b9de042466028e5c2c32bdf0635cb5">startImpLogProcess()</a>, and <a class="el" href="#acee0c3f06b3d9996946c9c55104868c4">win32LastError()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a79b9de042466028e5c2c32bdf0635cb5">startImpLogProcess()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a78f2c370e9ec632af877fe1dd49ef478">anonymous_namespace{Log.cpp}::LogCore::startImpLogProcess_()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a79b9de042466028e5c2c32bdf0635cb5_cgraph.svg" width="100%" height="406"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a79b9de042466028e5c2c32bdf0635cb5_cgraph.svg" width="100%" height="368"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -2152,7 +2151,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_ad3395aac6f72b3cacf47edce1bffd16d_cgraph.svg" width="100%" height="521"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_ad3395aac6f72b3cacf47edce1bffd16d_cgraph.svg" width="100%" height="491"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -2350,7 +2349,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a2fc634cd009955d042c53cb5f5eebcb5_cgraph.svg" width="100%" height="540"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe_a2fc634cd009955d042c53cb5f5eebcb5_cgraph.svg" width="100%" height="491"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>

@@ -1,12 +1,10 @@
 <map id="anonymous_namespace{Log::cpp}::safe::startImpLogProcess" name="anonymous_namespace{Log::cpp}::safe::startImpLogProcess">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,51,467,76"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="172,51,159,43,159,37,166,32,191,26,236,24,277,26,303,31,314,40,306,50,303,45,309,40,301,36,277,31,236,29,192,31,168,37,164,39,164,41,177,51"/>
-<area shape="rect" id="Node000002" href="$dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633" title="Windows native fatal error message box." alt="" coords="515,5,760,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="350,48,518,31,513,32,350,53"/>
-<area shape="rect" id="Node000003" href="$dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#acee0c3f06b3d9996946c9c55104868c4" title=" " alt="" coords="519,80,756,135"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="353,74,513,93,508,94,353,79"/>
-<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="578,78,578,69,589,61,609,55,637,53,678,58,691,63,697,73,692,71,687,67,677,63,637,58,609,60,591,65,583,72,582,82"/>
-<area shape="rect" id="Node000004" href="$dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#abc25ab769b48a34eb27ff7c789822b7e" title=" " alt="" coords="808,87,1085,128"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="756,105,803,107,797,108,756,110"/>
-<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="890,86,886,78,895,68,915,63,947,61,992,66,1004,72,1007,82,1002,79,1000,76,990,71,947,66,916,68,898,73,891,79,895,89"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,44,467,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="173,44,159,37,160,30,166,26,192,20,236,18,277,19,302,24,313,33,305,44,303,39,308,34,300,29,276,25,236,23,193,25,169,30,165,33,164,35,178,45"/>
+<area shape="rect" id="Node000002" href="$dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#acee0c3f06b3d9996946c9c55104868c4" title=" " alt="" coords="515,29,752,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="466,55,509,57,504,57,466,60"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="575,28,575,19,585,10,605,5,633,3,674,7,686,13,692,22,687,20,683,17,672,12,633,8,606,10,588,15,580,21,579,31"/>
+<area shape="rect" id="Node000003" href="$dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#abc25ab769b48a34eb27ff7c789822b7e" title=" " alt="" coords="800,37,1077,78"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="752,55,795,57,790,57,752,60"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="883,36,879,28,888,18,908,12,939,10,983,15,995,22,998,32,994,29,991,25,982,20,939,15,909,18,891,23,884,29,888,38"/>
 </map>

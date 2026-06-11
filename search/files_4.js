@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['git_5fpre_5fpush_5fhook_2emd_0',['git_pre_push_hook.md',['../de/d0d/git__pre__push__hook_8md.html',1,'']]],
-  ['globallocker_2ehpp_1',['GlobalLocker.hpp',['../d7/db8/_global_locker_8hpp.html',1,'']]],
-  ['guiprops_2ehpp_2',['GuiProps.hpp',['../dc/d0e/_gui_props_8hpp.html',1,'']]]
+  ['imp_5flog_5fprocess_2emd_0',['imp_log_process.md',['../d3/d6a/imp__log__process_8md.html',1,'']]],
+  ['implogprocess_2ecpp_1',['ImpLogProcess.cpp',['../d0/d0c/_imp_log_process_8cpp.html',1,'']]]
 ];

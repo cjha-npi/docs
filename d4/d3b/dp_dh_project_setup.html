@@ -71,7 +71,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;5</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;6</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -161,11 +161,33 @@ Rules</h1>
 <li><b>DO NOT</b> use parent-relative includes, for example <span class="tt">#include "../abc/Def.h"</span>. <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
+<li><b>Namespaces</b><ul>
+<li><span class="tt"><a class="el" href="../../d6/d57/namespacenpi.html" title="Root namespace for npi electronic GmbH code.">npi</a></span> : Root namespace, contains main classes/structs and other namespaces.</li>
+<li><span class="tt"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html" title="Application-wide cross-cutting non-domain specific code.">npi::app</a></span> : For application-wide cross-cutting non-domain specific code.</li>
+<li><span class="tt"><a class="el" href="../../da/d14/namespacenpi_1_1ind.html" title="Strictly self-contained and application-independent utility code.">npi::ind</a></span> : Strictly self-contained and application-independent utility code.<ul>
+<li>Allowed includes:<ul>
+<li>C++ standard library headers</li>
+<li>Qt headers</li>
+<li>Windows headers</li>
+<li>Its own matching header in a source file</li>
+</ul>
+</li>
+<li>Forbidden includes:<ul>
+<li>Any project header</li>
+<li>Any other <span class="tt"><a class="el" href="../../da/d14/namespacenpi_1_1ind.html" title="Strictly self-contained and application-independent utility code.">npi::ind</a></span> header</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="tt"><a class="el" href="../../d6/d57/namespacenpi.html" title="Root namespace for npi electronic GmbH code.">npi</a>::&lt;domain&gt;</span> : Anything domain-specific, such as <span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html">npi::log</a></span>. <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
 <li><b>Coding</b><ul>
 <li><b>NO</b> global functions or variables, except required entry points and external API callbacks.</li>
 <li><b>NO</b> simple/common names such as <span class="tt">Font</span>, <span class="tt">Show</span>, etc. for classes/structs.</li>
-<li>Member variables/functions end with an underscore <span class="tt">_</span>, for example <span class="tt">int calcId_</span>.</li>
-<li>Static member variables/functions start with a capital letter, for example <span class="tt">static int InstanceId_</span> <div class="dp-markdown-list-gap"></div></li>
+<li>Type names start with a capital letter. Non-type names start with a lowercase letter, except static members.</li>
+<li>Member variables/functions <b>end</b> with an underscore <span class="tt">_</span>, for example <span class="tt">int calcId_</span>.</li>
+<li>Static member variables/functions <b>start</b> with a capital letter, for example <span class="tt">static int InstanceId_</span>. <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
 <li><b>Comments</b><ul>

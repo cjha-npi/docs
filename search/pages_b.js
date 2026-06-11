@@ -8,6 +8,5 @@ var searchData=
   ['markdown_20tips_20tweaks_5',['Markdown Tips &amp;amp; Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'']]],
   ['miscellaneous_6',['Miscellaneous',['../df/d08/dp_dh_dir_misc.html',1,'dp_dh_dir_dev_hub']]],
   ['model_7',['Operational Model',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__operation_model',1,'']]],
-  ['model_8',['Thread-safety model',['../d0/db8/_ref_ptr_classes_8hpp.html#RefPtrClassesThreadSafety',1,'']]],
-  ['moodycamel_20queue_9',['MoodyCamel Queue',['../d7/d7b/dp_dep_moody_camel_queue.html',1,'dp_dep_dir_dependencies']]]
+  ['moodycamel_20queue_8',['MoodyCamel Queue',['../d7/d7b/dp_dep_moody_camel_queue.html',1,'dp_dep_dir_dependencies']]]
 ];

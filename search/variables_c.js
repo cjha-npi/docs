@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['obj_5f_0',['obj_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#aec37199554590d64c202fc3794e044c6',1,'npi::RefPtrHost']]],
-  ['okbutton_5f_1',['OkButton_',['../d2/dd5/structnpi_1_1_gui_props.html#acf0e276931a45f120f052f704ceecde4',1,'npi::GuiProps']]],
-  ['overline_5f_2',['overline_',['../d6/de2/structnpi_1_1_text_spec_1_1_style.html#aa73d5d199596c01cbd738b5396463b57',1,'npi::TextSpec::Style']]]
+  ['orgdirname_0',['orgDirName',['../dc/dba/namespacenpi_1_1app.html#a786b074c596617d18abb1957f26d3156',1,'npi::app']]],
+  ['orgdomain_1',['orgDomain',['../dc/dba/namespacenpi_1_1app.html#a306977cd103a3449007db1e926e213e8',1,'npi::app']]],
+  ['orgname_2',['orgName',['../dc/dba/namespacenpi_1_1app.html#adc67984091da507784ab70eca8975491',1,'npi::app']]]
 ];

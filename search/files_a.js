@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['platformcheck_2ehpp_0',['PlatformCheck.hpp',['../db/dbb/_platform_check_8hpp.html',1,'']]],
-  ['project_5fsetup_2emd_1',['project_setup.md',['../d8/d6b/project__setup_8md.html',1,'']]]
+  ['stagewindow_2ecpp_0',['StageWindow.cpp',['../de/d71/_stage_window_8cpp.html',1,'']]],
+  ['stagewindow_2eh_1',['StageWindow.h',['../d2/d07/_stage_window_8h.html',1,'']]]
 ];

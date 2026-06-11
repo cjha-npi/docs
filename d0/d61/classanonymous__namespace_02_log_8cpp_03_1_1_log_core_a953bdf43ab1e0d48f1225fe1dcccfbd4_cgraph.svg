@@ -47,7 +47,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 1234;
+var viewWidth = 1186;
 var viewHeight = 39;
 var sectionId = 'dynsection-28';
 </script>
@@ -67,7 +67,7 @@ var sectionId = 'dynsection-28';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" target="_top" xlink:title="Absolute application&#45;level ProgramData path.">
+<g id="a_Node000002"><a xlink:href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" target="_top" xlink:title="Application ProgramData path: C:/ProgramData/[organization]/[Application].">
 <polygon fill="white" stroke="none" points="584,-24.88 406,-24.88 406,-5.62 584,-5.62 584,-24.88"/>
 <text xml:space="preserve" text-anchor="middle" x="495" y="-10.43" font-family="Consolas" font-size="11.00">npi::app::appProgramDataDir</text>
 </a>
@@ -85,7 +85,7 @@ var sectionId = 'dynsection-28';
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" target="_top" xlink:title="Absolute organization&#45;level ProgramData path.">
+<g id="a_Node000003"><a xlink:href="../../dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" target="_top" xlink:title="Organization ProgramData path: C:/ProgramData/[organization].">
 <polygon fill="white" stroke="none" points="798,-24.88 620,-24.88 620,-5.62 798,-5.62 798,-24.88"/>
 <text xml:space="preserve" text-anchor="middle" x="709" y="-10.43" font-family="Consolas" font-size="11.00">npi::app::orgProgramDataDir</text>
 </a>
@@ -103,10 +103,10 @@ var sectionId = 'dynsection-28';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47" target="_top" xlink:title="Resolve base path using Known Folder ID or environment variable fallback.">
-<polygon fill="white" stroke="none" points="1006,-30.5 834,-30.5 834,0 1006,0 1006,-30.5"/>
+<g id="a_Node000004"><a xlink:href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1" target="_top" xlink:title="Resolve base path using Known Folder ID or environment variable fallback.">
+<polygon fill="white" stroke="none" points="1000,-30.5 834,-30.5 834,0 1000,0 1000,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="842" y="-16.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="middle" x="920" y="-4.8" font-family="Consolas" font-size="11.00">{MetaPaths::cpp}::basePath</text>
+<text xml:space="preserve" text-anchor="middle" x="917" y="-4.8" font-family="Consolas" font-size="11.00">{MetaInfo::cpp}::basePath</text>
 </a>
 </g>
 </g>
@@ -114,17 +114,17 @@ var sectionId = 'dynsection-28';
 <g id="edge3_Node000003_Node000004" class="edge">
 <title>Node3&#45;&gt;Node4</title>
 <g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M797.73,-15.25C807.81,-15.25 818.11,-15.25 828.24,-15.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="832.95,-15.25 827.95,-17.5 831.67,-15.25 827.95,-15.25 827.95,-15.25 827.95,-15.25 831.67,-15.25 827.95,-13 832.95,-15.25"/>
+<path fill="none" stroke="#63b8ff" d="M797.96,-15.25C807.92,-15.25 818.08,-15.25 828.04,-15.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="832.99,-15.25 827.99,-17.5 831.71,-15.25 827.99,-15.25 827.99,-15.25 827.99,-15.25 831.71,-15.25 827.99,-13 832.99,-15.25"/>
 </a>
 </g>
 </g>
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633" target="_top" xlink:title="Windows native fatal error message box.">
-<polygon fill="white" stroke="none" points="1226,-24.88 1042,-24.88 1042,-5.62 1226,-5.62 1226,-24.88"/>
-<text xml:space="preserve" text-anchor="middle" x="1134" y="-10.43" font-family="Consolas" font-size="11.00">npi::app::nativeFatalMessage</text>
+<g id="a_Node000005"><a xlink:href="../../dc/dba/namespacenpi_1_1app.html#a2a7d7ff8fc3a71350a1d640be744c1f9" target="_top" xlink:title="Displays a Windows&#45;native fatal error message box.">
+<polygon fill="white" stroke="none" points="1178,-24.88 1036,-24.88 1036,-5.62 1178,-5.62 1178,-24.88"/>
+<text xml:space="preserve" text-anchor="middle" x="1107" y="-10.43" font-family="Consolas" font-size="11.00">npi::app::winFatalMsg</text>
 </a>
 </g>
 </g>
@@ -132,8 +132,8 @@ var sectionId = 'dynsection-28';
 <g id="edge4_Node000004_Node000005" class="edge">
 <title>Node4&#45;&gt;Node5</title>
 <g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1005.7,-15.25C1015.73,-15.25 1026.02,-15.25 1036.2,-15.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1040.96,-15.25 1035.96,-17.5 1039.68,-15.25 1035.96,-15.25 1035.96,-15.25 1035.96,-15.25 1039.68,-15.25 1035.96,-13 1040.96,-15.25"/>
+<path fill="none" stroke="#63b8ff" d="M999.91,-15.25C1009.91,-15.25 1020.09,-15.25 1030,-15.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1034.91,-15.25 1029.91,-17.5 1033.63,-15.25 1029.91,-15.25 1029.91,-15.25 1029.91,-15.25 1033.63,-15.25 1029.91,-13 1034.91,-15.25"/>
 </a>
 </g>
 </g>

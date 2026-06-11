@@ -71,7 +71,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../npi_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Main Project<span id="projectnumber">&#160;5</span>
+   <div id="projectname">Main Project<span id="projectnumber">&#160;6</span>
    </div>
    <div id="projectbrief">Main Project Documentation</div>
   </td>
@@ -1514,7 +1514,7 @@ Here is the call graph for this function:</div>
 <p>Set the global fixed-width font (family, size, style). </p>
 <ul>
 <li>Clears the fixed-width font cache.</li>
-<li>Queues <span class="tt">QWidget::update()</span> on widgets marked with <span class="tt"><a class="el" href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd" title="Marks a QWidget to use a fixed-width font.">npi::GuiProps::FixedWidthFontWidget_</a></span>. Lifetime is guarded via QPointer in the queued lambda.</li>
+<li>Queues <span class="tt">QWidget::update()</span> on widgets marked with <span class="tt">npi::GuiProps::FixedWidthFontWidget_</span>. Lifetime is guarded via QPointer in the queued lambda.</li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>Should be invoked on the GUI thread. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1537,7 +1537,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  176</span>        <span class="keyword">const</span> QList&lt;QWidget*&gt; widgets = qApp-&gt;allWidgets();</div>
 <div class="line"><span class="lineno">  177</span>        <span class="keywordflow">for</span>(QWidget* widget : widgets) {</div>
 <div class="line"><span class="lineno">  178</span>          <span class="comment">// If the widget uses the fixed-width font, force an update to apply the new font.</span></div>
-<div class="line"><span class="lineno">  179</span>          <span class="keywordflow">if</span>(QPointer&lt;QWidget&gt; w{widget}; w &amp;&amp; w-&gt;property(<a class="code hl_variable" href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">npi::GuiProps::FixedWidthFontWidget_</a>).toBool()) {</div>
+<div class="line"><span class="lineno">  179</span>          <span class="keywordflow">if</span>(QPointer&lt;QWidget&gt; w{widget}; w &amp;&amp; w-&gt;property(npi::GuiProps::FixedWidthFontWidget_).toBool()) {</div>
 <div class="line"><span class="lineno">  180</span>            QMetaObject::invokeMethod(qApp, [w] { <span class="keywordflow">if</span>(w) w-&gt;update(); }, Qt::QueuedConnection);</div>
 <div class="line"><span class="lineno">  181</span>          }</div>
 <div class="line"><span class="lineno">  182</span>        }</div>
@@ -1546,9 +1546,8 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  185</span>        <a class="code hl_variable" href="#afafd8b8be1df4ce63d3be94a796d5b6a">FixFontMutex_</a>.unlock(); <span class="comment">// Unlock if no change.</span></div>
 <div class="line"><span class="lineno">  186</span>      }</div>
 <div class="line"><span class="lineno">  187</span>    }</div>
-<div class="ttc" id="astructnpi_1_1_gui_props_html_aafa082d9d7d58ffe909ade3634772bcd"><div class="ttname"><a href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">npi::GuiProps::FixedWidthFontWidget_</a></div><div class="ttdeci">static constexpr char FixedWidthFontWidget_[]</div><div class="ttdoc">Marks a QWidget to use a fixed-width font.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d0e/_gui_props_8hpp_source.html#l00074">GuiProps.hpp:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d2/dd5/structnpi_1_1_gui_props.html#aafa082d9d7d58ffe909ade3634772bcd">npi::GuiProps::FixedWidthFontWidget_</a>, <a class="el" href="#a384cfd8f07478f60f9c15493f59d6f4f">FixFont_</a>, <a class="el" href="#afafd8b8be1df4ce63d3be94a796d5b6a">FixFontMutex_</a>, <a class="el" href="#a03a6e804b4f9cab97910f84c8dae8b73">FixFontSize_</a>, and <a class="el" href="#aa71a55a0b94a39af957a9a297545779e">FixGroupCache_</a>.</p>
+<p class="reference">References <a class="el" href="#a384cfd8f07478f60f9c15493f59d6f4f">FixFont_</a>, <a class="el" href="#afafd8b8be1df4ce63d3be94a796d5b6a">FixFontMutex_</a>, <a class="el" href="#a03a6e804b4f9cab97910f84c8dae8b73">FixFontSize_</a>, and <a class="el" href="#aa71a55a0b94a39af957a9a297545779e">FixGroupCache_</a>.</p>
 
 </div>
 </div>

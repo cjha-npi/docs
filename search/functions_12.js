@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['universal_5f_0',['universal_',['../d6/d78/classnpi_1_1_ref_ptr_host.html#a8dcb9818065f7b5d7aca49ec2aab04be',1,'npi::RefPtrHost']]],
-  ['unlock_5f_1',['unlock_',['../da/d1f/classnpi_1_1_global_locker.html#a1e62b8dc3f17d2d1b98957b5dd142a26',1,'npi::GlobalLocker']]]
+  ['_7ecrossprocesslocker_0',['~CrossProcessLocker',['../d0/d9b/classnpi_1_1ind_1_1_cross_process_locker.html#a29623432de18b501d15fab3a1b3e8221',1,'npi::ind::CrossProcessLocker']]],
+  ['_7elogcore_1',['~LogCore',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a80814dc1f16ad1f77f19cc8b8b2a8cc5',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['_7eopacityguard_2',['~OpacityGuard',['../de/d5c/classanonymous__namespace_02_stage_window_8cpp_03_1_1_opacity_guard.html#abe0cf759586a5f17bec0d1113791ced8',1,'anonymous_namespace{StageWindow.cpp}::OpacityGuard']]],
+  ['_7estagewindow_3',['~StageWindow',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#ab01b02f80d0ba11cc3f7fe5ac22be5e9',1,'npi::ind::StageWindow']]]
 ];

@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['terminatehandler_0',['terminateHandler',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#ad3395aac6f72b3cacf47edce1bffd16d',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['textspec_1',['TextSpec',['../d2/db7/classnpi_1_1_text_spec.html#a1566f4aed80d9e0d65069a427bbab10b',1,'npi::TextSpec::TextSpec()=default'],['../d2/db7/classnpi_1_1_text_spec.html#a13387a0734024f544f1c1c9049c65884',1,'npi::TextSpec::TextSpec(const Style &amp;style)'],['../d2/db7/classnpi_1_1_text_spec.html#ab4fb3d21a0b90bb4847f8c3f576d6715',1,'npi::TextSpec::TextSpec(const int absolutePointSize)'],['../d2/db7/classnpi_1_1_text_spec.html#a8d9401c2ba156f185e5f9bf2589f0f3f',1,'npi::TextSpec::TextSpec(const Style &amp;style, const int absolutePointSize)']]]
+  ['win32errortext_0',['win32ErrorText',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#abc25ab769b48a34eb27ff7c789822b7e',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['win32lasterror_1',['win32LastError',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#acee0c3f06b3d9996946c9c55104868c4',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['windowsexceptionfilter_2',['windowsExceptionFilter',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a2fc634cd009955d042c53cb5f5eebcb5',1,'anonymous_namespace{Log.cpp}::safe']]],
+  ['winfatalmsg_3',['winFatalMsg',['../dc/dba/namespacenpi_1_1app.html#a2a7d7ff8fc3a71350a1d640be744c1f9',1,'npi::app']]],
+  ['wmain_4',['wmain',['../d0/d0c/_imp_log_process_8cpp.html#ae1325efcce4a4b1b4ea52247f0a0a0c1',1,'ImpLogProcess.cpp']]],
+  ['writeinitiallogs_5f_5',['writeInitialLogs_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a137b0a08d3ab0aa10f902110216127f4',1,'anonymous_namespace{Log.cpp}::LogCore']]]
 ];

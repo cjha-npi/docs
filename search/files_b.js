@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['refptrclasses_2ehpp_0',['RefPtrClasses.hpp',['../d0/db8/_ref_ptr_classes_8hpp.html',1,'']]]
+  ['tips_5ftricks_2emd_0',['tips_tricks.md',['../df/d5a/tips__tricks_8md.html',1,'']]]
 ];

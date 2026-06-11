@@ -1,4 +1,5 @@
 /* file: doxy-plus.css */
+/* version: 6 */
 
 /* Variable names starting with --dp- are Doxy-Plus variables */
 
@@ -82,8 +83,8 @@ html {
 
   --dp-side-nav-icon-font-size: 13px;
 
-  --dp-page-nav-font-size: 11px;
-  --dp-page-nav-line-height: 18px;
+  --dp-page-nav-font-size: 10.5px;
+  --dp-page-nav-line-height: 16px;
 
   --dp-root-item-font-size: 12px;
   --dp-root-item-line-height: 20px;
@@ -114,10 +115,10 @@ html {
   --link-color: rgb(30, 100, 200); /* color of links defined by <a>...</a> in HTML */
   --page-background-color: rgb(210, 220, 230) !important; /* forms the separator between panes*/
   --separator-color: rgb(200, 200, 200) !important;
-  --code-background: rgb(210, 220, 230) !important;
+  --code-background: rgb(225, 235, 245) !important;
   --tablehead-background: rgb(215, 220, 225) !important;
   --blockquote-background: rgb(215, 220, 225) !important;
-  --fragment-background: rgb(220, 230, 240) !important;
+  --fragment-background: rgb(225, 235, 245) !important;
 
   /* Doxy-Plus background colors */
   --dp-back-color: var(--page-background-color); /* because --page-background-color is overridden inside contents */
@@ -130,7 +131,6 @@ html {
   --dp-scrollbar-color: rgb(160, 175, 190); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-footer-link-separation-color: var(--dp-scrollbar-color); /* separator of links in footer */
-  --dp-page-nav-vis-color: var(--page-background-color); /* Background color for items in page nav which are visible on main page */
 
   /* Doxy-Plus Text Colors */
   --dp-disabled-text-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
@@ -170,7 +170,6 @@ html.dark-mode {
   --dp-scrollbar-color: rgb(40, 80, 100); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
-  --dp-page-nav-vis-color: var(--page-background-color); /* Background color for items in page nav which are visible on main page */
 
   /* Doxy-Plus Text Colors */
   --dp-disabled-text-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
@@ -924,7 +923,6 @@ body .header > .headertitle > .title {
 #container {
   grid-template-columns: minmax(0, 1fr) max-content !important;
   margin-right: var(--dp-sep);
-  border-right: var(--dp-border-width) solid var(--dp-pane-color);
   border-top-right-radius: var(--dp-border-radius-l);
   border-bottom-right-radius: var(--dp-border-radius-l);
 }
@@ -937,7 +935,6 @@ body .header > .headertitle > .title {
 
 @media screen and (max-width: 767px) {
   #container {
-    border-right: 0px solid var(--dp-pane-color);
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
   }
@@ -970,11 +967,7 @@ body .header > .headertitle > .title {
   height: calc(100vh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* fallback for older browsers */
   height: calc(100dvh - var(--dp-header-height) - var(--dp-footer-height)) !important; /* for use in newer browsers */
 
-  border-top: var(--dp-border-width) solid var(--dp-pane-color);
-  border-left: var(--dp-border-width) solid var(--dp-pane-color);
-  border-bottom: var(--dp-border-width) solid var(--dp-pane-color);
-  /* right border is provided by the #container */
-
+  border: var(--dp-border-width) solid var(--dp-pane-color);
   border-top-left-radius: var(--dp-border-radius-l);
   border-bottom-left-radius: var(--dp-border-radius-l);
 }
@@ -1039,25 +1032,14 @@ h2.groupheader {
 /* PAGE NAV CUSTOMIZATIONS */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* resize handle of #page-nav */
-#page-nav-resize-handle {
-  transition: unset !important;
-  background-color: transparent !important;
-  opacity: 1 !important;
-}
-
-/* remove the icon that is drawn since we rely on curosr */
-#page-nav-resize-handle::after {
-  display: block !important;
-  opacity: 1 !important;
-  border-right-width: 0 !important;
-}
-
 /* page-nav customizations */
 #page-nav {
   min-width: var(--dp-min-width) !important;
-  background-color: var(--dp-pane-color) !important;
-  border-color: var(--dp-pane-color);
+  min-height: 0;
+  border: 0;
+  box-sizing: border-box;
+  background-color: var(--dp-pane-color);
+  border-right: var(--dp-border-width) solid var(--dp-pane-color);
   border-bottom: var(--dp-border-width) solid var(--dp-pane-color);
 }
 
@@ -1065,21 +1047,44 @@ body:not(.dp-doc-header-available) #page-nav {
   border-top: var(--dp-border-width) solid var(--dp-pane-color);
 }
 
-#page-nav-contents {
-  top: 0px !important;
-  overflow: auto;
-  background-color: var(--dp-pane-color);
-}
-
-#page-nav-contents ul.page-outline {
-  padding-right: 8px;
-  padding-left: 6px;
+/* resize handle of #page-nav */
+#page-nav-resize-handle {
+  transition: unset !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  width: var(--dp-sep);
+  left: calc(-1 * (var(--dp-sep) / 2));
+  z-index: 9999;
 }
 
 @media (pointer: coarse) {
-  #page-nav-contents ul.page-outline {
-    padding-right: 12px;
+  #page-nav-resize-handle {
+    width: 36px !important;
+    left: -18px !important;
   }
+}
+
+/* remove the icon that is drawn since we rely on curosr */
+#page-nav-resize-handle::after {
+  display: none !important;
+}
+
+/* contents that holds the list */
+#page-nav-contents {
+  top: 0px !important;
+  min-height: 0;
+  overflow: auto;
+  overflow-y: auto;
+  scrollbar-width: none !important; /* hide the scrollbar */
+  background-color: var(--dp-back-color);
+  box-sizing: border-box;
+  border-radius: var(--dp-border-radius-l);
+  border: 6px solid var(--dp-back-color);
+}
+
+#page-nav-contents ul.page-outline {
+  margin-block: 0 !important;
+  padding-block: 0 !important;
 }
 
 /* change individual items inside #page-nav */
@@ -1089,12 +1094,12 @@ body:not(.dp-doc-header-available) #page-nav {
   min-width: 0;
   white-space: nowrap;
   overflow: hidden;
-  padding-right: 3px;
+  padding-right: 4px;
 }
 
 #page-nav #page-nav-contents .item span {
   flex: 0 0 auto;
-  width: 8px !important;
+  width: 4px !important;
 }
 
 #page-nav #page-nav-contents .item a {
@@ -1117,7 +1122,7 @@ body:not(.dp-doc-header-available) #page-nav {
 }
 
 #page-nav-contents ul.page-outline li {
-  background: var(--dp-pane-color);
+  background: var(--dp-back-color);
 }
 
 /* change the text and sizes of individual items inside #page-nav */
@@ -1140,7 +1145,7 @@ body:not(.dp-doc-header-available) #page-nav {
   and root and leaf panes.
 */
 #page-nav-contents li.vis {
-  background-color: var(--dp-page-nav-vis-color) !important;
+  background-color: var(--dp-pane-color) !important;
 }
 
 /* remove the default left bar drawn for .vis items */
@@ -1196,16 +1201,28 @@ body:not(.dp-doc-header-available) #page-nav {
 
 /* padding and border radius for the first item that has .vis class */
 #page-nav-contents li.vis:nth-child(1 of li.vis) {
-  padding-top: 3px;
+  margin-top: 2px;
+  padding-top: 2px;
   border-top-left-radius: var(--dp-border-radius-s);
   border-top-right-radius: var(--dp-border-radius-s);
 }
 
+/* Remove top margin if the top moist li is having .vis */
+#page-nav-contents li:nth-child(1 of li) {
+  margin-top: 0 !important;
+}
+
 /* padding and border radius for the last item that has .vis class */
 #page-nav-contents li.vis:nth-last-child(1 of li.vis) {
-  padding-bottom: 3px;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
   border-bottom-left-radius: var(--dp-border-radius-s);
   border-bottom-right-radius: var(--dp-border-radius-s);
+}
+
+/* Remove the bottom margin if bottom most li is having .vis */
+#page-nav-contents li:nth-last-child(1 of li) {
+  margin-bottom: 0 !important;
 }
 
 /*
@@ -1216,6 +1233,7 @@ body:not(.dp-doc-header-available) #page-nav {
   font-weight: 600 !important;
   --primary-color: unset !important;
   color: var(--primary-color) !important;
+  padding-top: 5px;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1230,6 +1248,23 @@ div.memitem,
 .memproto,
 .memdoc{
   border: 0px !important;
+}
+
+/* Doxygen does not add any spacing between members in the table on the top of
+the page if there are no description for it. Here we add some spacing using
+bottom border because that is the only one which works. This then makes the
+bottom rounded corners not correct to we correct them below after this. */
+table.memberdecls tr[class^="memitem:"]:not(:has(+ tr[class^="memdesc:"])) > td.memItemLeft,
+table.memberdecls tr[class^="memitem:"]:not(:has(+ tr[class^="memdesc:"])) > td.memItemRight {
+  border-bottom: 2px solid var(--dp-pane-color) !important;
+}
+
+table.memberdecls tr[class^="memitem:"]:not(:has(+ tr[class^="memdesc:"])) > td.memItemLeft {
+  border-bottom-left-radius: 6px;
+}
+
+table.memberdecls tr[class^="memitem:"]:not(:has(+ tr[class^="memdesc:"])) > td.memItemRight{
+  border-bottom-right-radius: 6px;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -1279,8 +1314,12 @@ span.tt{
   overflow-x: auto;
   border: none;
   border-radius: var(--dp-border-radius-l);
-  padding: 8px 10px; /* top and bottom | left and right */
-  margin: 4px 0; /* top and bottom | left and right */
+  padding: 4px 6px; /* top and bottom | left and right */
+  margin: 8px 0; /* top and bottom | left and right */
+  /* Transparent border because otherwise the scrollbar
+  is at the edge. Since we use the 4px border, I have
+  reduced all padding above by 4px. */
+  border: 4px solid transparent;
 }
 
 #doc-content div.fragment,
@@ -1380,20 +1419,21 @@ dl.dh_required dd{
 
 dl.warning, dl.attention, dl.note, dl.deprecated, dl.bug, dl.invariant, dl.pre, dl.post, dl.todo, dl.remark, dl.test{
   position: relative;
-  padding: 4px 4px 4px 18px;
+  padding: 6px 10px 6px 20px; /* top | right | bottom | left */
   border-radius: var(--dp-border-radius-l);
   color: var(--page-foreground-color);
+  box-shadow: var(--box-shadow);
 }
 
 dl.warning::before, dl.attention::before, dl.note::before, dl.deprecated::before, dl.bug::before, 
 dl.invariant::before, dl.pre::before, dl.post::before, dl.todo::before, dl.remark::before, dl.test::before {
   content: "";
   position: absolute;
-  left: 4px;
-  top: 4px;
-  bottom: 4px;
-  width: 8px;
-  border-radius: var(--dp-border-radius-l);
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 6px;
+  border-radius: var(--dp-border-radius-s);
   pointer-events: none;
 }
 
@@ -1706,20 +1746,22 @@ li.dpt-node--branch > .dpt-row {
   text-overflow: ellipsis;
 }
 
-/* Separate config for prefix */
+/* Separate config for prefix. Here the shrink value
+is 9999 so that prefix shrinks much faster than the
+label when not enough width is available. Minimum
+width of 18px ensures that it never becomes invisible.
+Minimum width should be set after flex otherwise it
+is overriden. */
 .dpt-prefix {
-  flex: 0 1 auto; /* <grow> <shrink> <basis> */
+  flex: 0 9999 auto; /* <grow> <shrink> <basis> */
+  min-width: 18px;
   color: var(--dp-prefix-text-color);
 }
 
-/* Separate config for label. Here the shrink value
-is 9999 so that the tendency to shrink label is much
-higher than to shrink prefix. This way when ellipses
-appears it first appears on the label and only when 
-almost all the label is not visible anymore then it
-appears on prefix. */
+/* Separate config for label */
 .dpt-label {
-  flex: 0 9999 auto; /* <grow> <shrink> <basis> */
+  flex: 0 1 auto; /* <grow> <shrink> <basis> */
+  min-width: 18px;
   color: var(--page-foreground-color);
 }
 
@@ -1993,13 +2035,13 @@ body.dp-doc-header-available #dp-leaf-pane-resizer {
   background: var(--dp-pane-color);
   border-radius: var(--dp-border-radius-l);
   min-height: 0;
-  box-shadow: 0px 0px 5px 3px var(--page-background-color);
+  box-shadow: 0px 0px 5px 1px var(--page-background-color);
 }
 
 /* Different shadow style for dark mode. */
 html.dark-mode {
   #dp-leaf-base {
-    box-shadow: 0px 0px 5px 1px var(--page-background-color);
+    box-shadow: 0px 0px 5px 0px var(--page-background-color);
   }
 }
 

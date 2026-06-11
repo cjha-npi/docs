@@ -2,12 +2,12 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,20,491,46"/>
 <area shape="rect" id="Node000002" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5fa684811c33eea49f63593fea332de4" title=" " alt="" coords="539,5,712,61"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="490,31,533,33,528,33,490,36"/>
-<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Absolute application&#45;level ProgramData path." alt="" coords="760,20,997,46"/>
+<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Application ProgramData path: C:/ProgramData/[organization]/[Application]." alt="" coords="760,20,997,46"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="712,31,755,33,750,33,712,36"/>
-<area shape="rect" id="Node000004" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Absolute organization&#45;level ProgramData path." alt="" coords="1045,20,1283,46"/>
+<area shape="rect" id="Node000004" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Organization ProgramData path: C:/ProgramData/[organization]." alt="" coords="1045,20,1283,46"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="997,31,1040,33,1035,33,997,36"/>
-<area shape="rect" id="Node000005" href="$df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a6b23c92ed8a542082d8cddde4bd55b47" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1331,13,1560,54"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1282,31,1326,33,1320,33,1282,36"/>
-<area shape="rect" id="Node000006" href="$dc/dba/namespacenpi_1_1app.html#a30b5245afa890e98f19f43c58f29e633" title="Windows native fatal error message box." alt="" coords="1608,20,1853,46"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1560,31,1603,33,1598,33,1560,36"/>
+<area shape="rect" id="Node000005" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1331,13,1552,54"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1283,31,1325,33,1320,33,1283,36"/>
+<area shape="rect" id="Node000006" href="$dc/dba/namespacenpi_1_1app.html#a2a7d7ff8fc3a71350a1d640be744c1f9" title="Displays a Windows&#45;native fatal error message box." alt="" coords="1600,20,1789,46"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1552,31,1595,33,1589,33,1552,36"/>
 </map>

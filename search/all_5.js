@@ -1,13 +1,12 @@
 var searchData=
 [
   ['early_20safety_20guard_0',['Early Safety guard',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__early_safety_guard',1,'']]],
-  ['easingcurve_5f_1',['easingCurve_',['../dd/d55/classnpi_1_1_stage_window.html#a9d363f97deaf582be88e29e396df0af5',1,'npi::StageWindow']]],
+  ['easingcurve_5f_1',['easingCurve_',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#a06571ebabf91306837fd3c65a3b8be81',1,'npi::ind::StageWindow']]],
   ['enum_2',['Magic Enum',['../dc/d55/dp_dep_magic_enum.html',1,'dp_dep_dir_dependencies']]],
   ['error_20handling_3',['Error Handling',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__error_handling',1,'']]],
   ['error_5f_4',['error_',['../d5/ddd/namespacenpi_1_1log.html#a3e8568552a07004c1e722f1281bbdb0d',1,'npi::log::DirResult']]],
   ['example_20structure_5',['Example Structure',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__example_structure',1,'']]],
   ['examples_6',['Doxygen Examples',['../d6/d8f/dp_dh_doxy_examples.html',1,'dp_dh_dir_misc']]],
   ['exception_20and_20failure_20behavior_7',['Exception and Failure Behavior',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__exception_failure_behavior',1,'']]],
-  ['expired_5f_8',['expired_',['../d2/dad/classnpi_1_1_ref_ptr_weak_host.html#a1742522045ed93d49f6412ba0f3081fd',1,'npi::RefPtrWeakHost']]],
-  ['extension_20setup_9',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]]
+  ['extension_20setup_8',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]]
 ];

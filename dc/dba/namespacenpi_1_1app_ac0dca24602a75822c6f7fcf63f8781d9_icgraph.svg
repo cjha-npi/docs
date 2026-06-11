@@ -47,9 +47,9 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 680;
+var viewWidth = 674;
 var viewHeight = 39;
-var sectionId = 'dynsection-8';
+var sectionId = 'dynsection-7';
 </script>
 <script type="application/ecmascript" xlink:href="../../svg.min.js"/>
 <svg id="graph" class="graph">
@@ -58,18 +58,18 @@ var sectionId = 'dynsection-8';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Absolute organization&#45;level Public/Documents path.">
-<polygon fill="#999999" stroke="none" points="672,-24.88 470,-24.88 470,-5.62 672,-5.62 672,-24.88"/>
-<text xml:space="preserve" text-anchor="start" x="478" y="-11.43" font-family="Consolas" font-weight="bold" font-size="11.00">npi::app::orgPublicDocumentsDir</text>
+<g id="a_Node000001"><a xlink:title="Organization Public/Documents path: C:/Users/Public/Documents/[organization].">
+<polygon fill="#999999" stroke="none" points="666,-24.88 464,-24.88 464,-5.62 666,-5.62 666,-24.88"/>
+<text xml:space="preserve" text-anchor="start" x="472" y="-11.43" font-family="Consolas" font-weight="bold" font-size="11.00">npi::app::orgPublicDocumentsDir</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" target="_top" xlink:title="Absolute application&#45;level Public/Documents path.">
-<polygon fill="white" stroke="none" points="434,-24.88 232,-24.88 232,-5.62 434,-5.62 434,-24.88"/>
-<text xml:space="preserve" text-anchor="middle" x="333" y="-10.43" font-family="Consolas" font-size="11.00">npi::app::appPublicDocumentsDir</text>
+<g id="a_Node000002"><a xlink:href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" target="_top" xlink:title="Application Public/Documents path: C:/Users/Public/Documents/[organization]/[Application].">
+<polygon fill="white" stroke="none" points="428,-24.88 226,-24.88 226,-5.62 428,-5.62 428,-24.88"/>
+<text xml:space="preserve" text-anchor="middle" x="327" y="-10.43" font-family="Consolas" font-size="11.00">npi::app::appPublicDocumentsDir</text>
 </a>
 </g>
 </g>
@@ -77,18 +77,18 @@ var sectionId = 'dynsection-8';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M464.29,-15.25C454.14,-15.25 443.86,-15.25 433.76,-15.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="469.04,-15.25 464.04,-17.5 467.76,-15.25 464.04,-15.25 464.04,-15.25 464.04,-15.25 467.76,-15.25 464.04,-13 469.04,-15.25"/>
+<path fill="none" stroke="#63b8ff" d="M458.29,-15.25C448.14,-15.25 437.86,-15.25 427.76,-15.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="463.04,-15.25 458.04,-17.5 461.76,-15.25 458.04,-15.25 458.04,-15.25 458.04,-15.25 461.76,-15.25 458.04,-13 463.04,-15.25"/>
 </a>
 </g>
 </g>
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../df/d40/namespaceanonymous__namespace_02_meta_paths_8cpp_03.html#a71f0c349fdc17bb538a0b720816e7bcd" target="_top" xlink:title="Schedules the initialization of application meta paths.">
-<polygon fill="white" stroke="none" points="196,-30.5 0,-30.5 0,0 196,0 196,-30.5"/>
+<g id="a_Node000003"><a xlink:href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a18d742d7cfbf3028262fb1dc81b61386" target="_top" xlink:title="Schedules the initialization of application meta paths.">
+<polygon fill="white" stroke="none" points="190,-30.5 0,-30.5 0,0 190,0 190,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-16.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="middle" x="98" y="-4.8" font-family="Consolas" font-size="11.00">{MetaPaths::cpp}::scheduleInit</text>
+<text xml:space="preserve" text-anchor="middle" x="95" y="-4.8" font-family="Consolas" font-size="11.00">{MetaInfo::cpp}::scheduleInit</text>
 </a>
 </g>
 </g>
@@ -96,8 +96,8 @@ var sectionId = 'dynsection-8';
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M226.2,-15.25C216.02,-15.25 205.74,-15.25 195.66,-15.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="230.95,-15.25 225.95,-17.5 229.67,-15.25 225.95,-15.25 225.95,-15.25 225.95,-15.25 229.67,-15.25 225.95,-13 230.95,-15.25"/>
+<path fill="none" stroke="#63b8ff" d="M219.92,-15.25C209.93,-15.25 199.85,-15.25 189.98,-15.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="224.9,-15.25 219.9,-17.5 223.62,-15.25 219.9,-15.25 219.9,-15.25 219.9,-15.25 223.62,-15.25 219.9,-13 224.9,-15.25"/>
 </a>
 </g>
 </g>

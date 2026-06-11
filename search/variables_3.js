@@ -12,7 +12,6 @@ var searchData=
   ['dispqueue_5f_9',['dispQueue_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a58433b82dba8cfbdf478ec49023f1290',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['dispthread_5f_10',['dispThread_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a365e20b87a272ecf4d1acb4056e6f50a',1,'anonymous_namespace{Log.cpp}::LogCore']]],
   ['dispthreadrunning_5f_11',['dispThreadRunning_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a8934b7a3dde20903f5f320f2aa2495f8',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['domain_5f_12',['Domain_',['../d8/d1b/structnpi_1_1_org_meta_data.html#a221c67f3f9c533bf75fa459152a7ae3d',1,'npi::OrgMetaData']]],
-  ['draininterval_5f_13',['DrainInterval_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a9dc3ea1257c77ac00c3a19b428e52f99',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['duration_5f_14',['duration_',['../dd/d55/classnpi_1_1_stage_window.html#a63c0b3796949e1c1ff85fac09966956e',1,'npi::StageWindow']]]
+  ['draininterval_5f_12',['DrainInterval_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a9dc3ea1257c77ac00c3a19b428e52f99',1,'anonymous_namespace{Log.cpp}::LogCore']]],
+  ['duration_5f_13',['duration_',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#a1c448ed9d93bd4709016f89d4185845a',1,'npi::ind::StageWindow']]]
 ];
