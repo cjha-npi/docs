@@ -26,6 +26,7 @@ var NAVTREE =
 [
   [ "Main Project", "index.html", [
     [ "NPI Main Project", "index.html", "index" ],
+    [ "Architecture", "db/d8d/dp_arch_dir_architecture.html", "db/d8d/dp_arch_dir_architecture" ],
     [ "Dependencies", "d2/d46/dp_dep_dir_dependencies.html", "d2/d46/dp_dep_dir_dependencies" ],
     [ "Dev Hub", "d3/dfe/dp_dh_dir_dev_hub.html", "d3/dfe/dp_dh_dir_dev_hub" ],
     [ "Visual Studio", "d4/d27/dp_dh_dir_visual_studio.html", "d4/d27/dp_dh_dir_visual_studio" ],
@@ -36,7 +37,9 @@ var NAVTREE =
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
+        [ "Variables", "namespacemembers_vars.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -46,7 +49,8 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Enumerations", "functions_enum.html", null ]
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -63,9 +67,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac83f155438d4a0447ac048d50c7b1a47",
-"d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__early_safety_guard",
-"df/d08/dp_dh_dir_misc.html"
+"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a089d6bb50bb468c61d1994eea3852262",
+"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a57d6b24dc1a39d73983a73fd8afbd2b6",
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a43a88c468a70d84a209929f3ef0c3db3",
+"da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a770514f089d7e726049b295fa262efcc",
+"dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a12337598673e90f48d586f8c8039d7c3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

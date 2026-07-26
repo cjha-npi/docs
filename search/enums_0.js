@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['field_0',['Field',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36',1,'anonymous_namespace{Log.cpp}::LogCore']]]
+  ['field_0',['Field',['../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d',1,'anonymous_namespace{Log.cpp}']]]
 ];

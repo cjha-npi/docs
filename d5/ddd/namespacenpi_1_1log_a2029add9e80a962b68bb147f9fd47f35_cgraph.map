@@ -1,0 +1,8 @@
+<map id="npi::log::isWarnLogImportant" name="npi::log::isWarnLogImportant">
+<area shape="rect" id="Node000001" title="Checks whether warning logs are treated as important logs." alt="" coords="5,44,251,70"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="299,29,504,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,55,293,57,288,57,251,60"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="552,29,757,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="504,55,547,57,541,57,504,60"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="606,28,606,19,615,10,631,5,655,3,688,7,699,13,704,22,699,20,695,17,687,12,655,8,632,10,617,15,611,21,610,31"/>
+</map>

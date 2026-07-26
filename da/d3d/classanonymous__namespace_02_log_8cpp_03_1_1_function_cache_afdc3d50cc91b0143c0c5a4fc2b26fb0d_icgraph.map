@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Log::cpp}::FunctionCache::reservePool_" name="anonymous_namespace{Log::cpp}::FunctionCache::reservePool_">
+<area shape="rect" id="Node000001" title="Atomically reserves a unique contiguous range in the fixed text pool." alt="" coords="765,20,1251,46"/>
+<area shape="rect" id="Node000002" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#ac2b31e82f1f4a192616d50ace26d38f6" title="Finds or inserts the normalized function value and returns its slot." alt="" coords="496,5,717,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="755,33,717,36,717,31,760,33"/>
+<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="227,13,448,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="485,33,448,36,448,31,490,33"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,13,179,54"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,33,178,36,178,31,221,33"/>
+</map>

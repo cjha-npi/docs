@@ -1,0 +1,18 @@
+<map id="anonymous_namespace{Log::cpp}::TextBuffer::appendText_" name="anonymous_namespace{Log::cpp}::TextBuffer::appendText_">
+<area shape="rect" id="Node000001" title="Sanitizes and appends bounded null&#45;terminated narrow text." alt="" coords="797,148,1251,174"/>
+<area shape="rect" id="Node000002" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a37079754f4a9ab17ea9b87bcba12f9a7" title="Handles an invalid Microsoft CRT parameter as an unrecoverable failure." alt="" coords="512,29,741,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="964,147,733,88,734,82,969,146"/>
+<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="231,206,452,247"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="942,175,750,204,594,217,452,225,451,220,593,211,749,199,936,175"/>
+<area shape="rect" id="Node000006" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a76d9092d69e836e0e7969d64383344a2" title="Handles an uncaught C++ exception or explicit terminate request." alt="" coords="504,133,749,189"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="787,161,749,164,749,159,792,161"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="677,21,673,17,663,12,627,8,601,10,584,15,577,21,576,31,572,28,572,19,582,10,600,5,627,3,664,7,676,13,682,22"/>
+<area shape="rect" id="Node000003" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="227,127,456,182"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="535,87,505,100,421,129,419,124,503,95,530,88"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="385,118,381,114,373,110,341,105,319,107,305,112,298,119,298,128,293,125,293,117,302,108,318,102,341,100,375,105,385,110,390,119"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,170,179,211"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="216,173,179,181,178,175,221,171"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="220,210,178,206,178,200,226,209"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="494,158,456,160,456,155,499,158"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="677,124,673,121,663,116,627,112,601,114,584,119,577,125,576,135,572,132,572,123,582,114,600,109,627,107,664,111,676,117,682,126"/>
+</map>

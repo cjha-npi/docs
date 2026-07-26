@@ -1,0 +1,17 @@
+<map id="anonymous_namespace{Log.cpp}::LeakedState::CrashState" name="anonymous_namespace{Log.cpp}::LeakedState::CrashState">
+<area shape="rect" id="Node000001" title="Stores crash ownership flags and allocation&#45;free emergency buffers." alt="" coords="25,570,471,596"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,401,147,427"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,432,76,460,79,489,87,519,103,544,129,557,171,570,166,570,127,562,100,548,82,521,74,490,71,460,73,437"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,401,311,427"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="250,433,251,571,245,569,246,436"/>
+<area shape="rect" id="Node000004" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html" title=" " alt="" coords="335,386,524,442"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="411,447,375,499,326,548,281,573,280,568,322,544,371,496,407,450"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="239,5,308,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="265,36,244,90,222,162,217,201,216,241,223,279,239,315,258,339,282,358,308,374,338,389,332,389,306,379,278,363,254,342,234,318,218,281,211,241,211,201,217,161,239,89,262,40"/>
+<area shape="rect" id="Node000007" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html" title="Provides a fixed&#45;capacity, allocation&#45;free text buffer." alt="" coords="327,229,532,285"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="282,35,315,99,359,172,406,229,400,229,354,175,310,101,281,41"/>
+<area shape="rect" id="Node000006" href="$d0/deb/namespace_3global_scope_4.html#da/d7d/classchar" title=" " alt="" coords="503,5,556,31"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="550,34,564,54,585,126,589,157,588,187,575,247,546,317,534,339,517,359,479,389,476,384,514,355,530,336,542,315,570,245,583,186,584,157,580,127,559,56,549,39"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="501,37,485,57,463,101,447,148,433,231,429,228,442,147,458,99,481,53,505,33"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="431,290,432,388,427,385,428,295"/>
+</map>

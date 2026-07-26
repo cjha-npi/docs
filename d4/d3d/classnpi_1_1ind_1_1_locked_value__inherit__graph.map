@@ -1,0 +1,9 @@
+<map id="npi::ind::LockedValue&lt; T &gt;" name="npi::ind::LockedValue&lt; T &gt;">
+<area shape="rect" id="Node000001" title="Stores a value protected by a QReadWriteLock." alt="" coords="5,112,235,137"/>
+<area shape="rect" id="Node000002" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html" title=" " alt="" coords="459,9,656,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,107,258,94,461,59,457,62,259,99,191,113"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="463,104,652,145"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,122,465,123,461,126,243,127"/>
+<area shape="rect" id="Node000004" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html" title=" " alt="" coords="463,169,652,210"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="189,136,259,149,465,178,460,181,258,154,189,141"/>
+</map>

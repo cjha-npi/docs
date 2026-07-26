@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{npiImpLog::cpp}::openAppendFileWithParentDir" name="anonymous_namespace{npiImpLog::cpp}::openAppendFileWithParentDir">
+<area shape="rect" id="Node000001" title="Opens a file for appending after ensuring its parent directory exists." alt="" coords="5,56,539,82"/>
+<area shape="rect" id="Node000002" href="$da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#ac01a2b4c7db154e8169f0c1040d74e78" title="Ensures that the parent directory of a file path exists." alt="" coords="595,5,856,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="433,54,590,44,584,44,434,59"/>
+<area shape="rect" id="Node000005" href="$da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#a527cbed54a6c0a8cc4217423e882eea5" title="Opens a file for append&#45;only writing." alt="" coords="587,85,864,126"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="434,79,581,93,576,94,433,85"/>
+<area shape="rect" id="Node000003" href="$da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#aaf022adf431f14f5611beb9f7ced3331" title="Checks whether a path uses drive&#45;letter absolute syntax." alt="" coords="912,13,1229,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="856,31,907,33,901,33,856,36"/>
+<area shape="rect" id="Node000004" href="$da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#ad6d841340500905d8ce6ca8fe67a0bc5" title="Checks whether a character is an ASCII alphabetic drive letter." alt="" coords="1277,5,1539,61"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1229,31,1272,33,1267,33,1229,36"/>
+</map>

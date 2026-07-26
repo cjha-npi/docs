@@ -139,7 +139,7 @@ $(function(){initNavTree('dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_l
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01599">1599</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01618">1618</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for anonymous_namespace{Log.cpp}::LogCore::FixedStrings:</div>
 <div class="dyncontent">
@@ -231,83 +231,83 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01659">1659</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1660</span>      {</div>
-<div class="line"><span class="lineno"> 1661</span>        <span class="keywordflow">if</span>(category &amp;&amp; *category)</div>
-<div class="line"><span class="lineno"> 1662</span>          <a class="code hl_function" href="#ad3c900f4bfc5104a58eac1ad7c31778c">assign_</a>(<a class="code hl_variable" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, <a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>, std::string_view(category));</div>
-<div class="line"><span class="lineno"> 1663</span> </div>
-<div class="line"><span class="lineno"> 1664</span>        <span class="keywordflow">if</span>(fileName &amp;&amp; *fileName) {</div>
-<div class="line"><span class="lineno"> 1665</span>          <span class="keyword">const</span> std::string_view s{fileName};</div>
-<div class="line"><span class="lineno"> 1666</span>          <span class="keyword">const</span> <span class="keyword">auto</span> lastWin = s.rfind(<span class="charliteral">&#39;\\&#39;</span>);</div>
-<div class="line"><span class="lineno"> 1667</span>          <span class="keyword">const</span> <span class="keyword">auto</span> lastUnix = s.rfind(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno"> 1668</span>          <span class="keyword">const</span> <span class="keyword">auto</span> last = (lastWin == std::string_view::npos)</div>
-<div class="line"><span class="lineno"> 1669</span>                              ? lastUnix</div>
-<div class="line"><span class="lineno"> 1670</span>                              : (lastUnix == std::string_view::npos)</div>
-<div class="line"><span class="lineno"> 1671</span>                              ? lastWin</div>
-<div class="line"><span class="lineno"> 1672</span>                              : std::max(lastWin, lastUnix);</div>
-<div class="line"><span class="lineno"> 1673</span>          <span class="keyword">const</span> <span class="keyword">auto</span> begin = (last == std::string_view::npos) ? 0 : last + 1;</div>
-<div class="line"><span class="lineno"> 1674</span>          <span class="keywordflow">if</span>(begin &lt; s.size())</div>
-<div class="line"><span class="lineno"> 1675</span>            <a class="code hl_function" href="#ad3c900f4bfc5104a58eac1ad7c31778c">assign_</a>(<a class="code hl_variable" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, <a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>, s.substr(begin));</div>
-<div class="line"><span class="lineno"> 1676</span>        }</div>
-<div class="line"><span class="lineno"> 1677</span> </div>
-<div class="line"><span class="lineno"> 1678</span>        <span class="keywordflow">if</span>(funcName &amp;&amp; *funcName) {</div>
-<div class="line"><span class="lineno"> 1679</span> </div>
-<div class="line"><span class="lineno"> 1680</span>          <span class="keywordtype">size_t</span> endIdx = 0;</div>
-<div class="line"><span class="lineno"> 1681</span>          <span class="keywordflow">while</span>(endIdx &lt; 2048 &amp;&amp; funcName[endIdx] != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; funcName[endIdx] != <span class="charliteral">&#39;(&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1682</span>            ++endIdx;</div>
-<div class="line"><span class="lineno"> 1683</span> </div>
-<div class="line"><span class="lineno"> 1684</span>          <span class="keywordtype">bool</span> opeFound{<span class="keyword">false</span>};</div>
-<div class="line"><span class="lineno"> 1685</span>          <span class="keywordtype">size_t</span> opeIdx = 0;</div>
-<div class="line"><span class="lineno"> 1686</span>          <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> ii = 0; ii &lt; endIdx; ++ii) {</div>
-<div class="line"><span class="lineno"> 1687</span>            <span class="keywordflow">if</span>(endIdx - ii &lt; 8) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1688</span>            <span class="keywordflow">if</span>(funcName[ii + 0] == <span class="charliteral">&#39;o&#39;</span> &amp;&amp; funcName[ii + 1] == <span class="charliteral">&#39;p&#39;</span> &amp;&amp; funcName[ii + 2] == <span class="charliteral">&#39;e&#39;</span> &amp;&amp; funcName[ii + 3] == <span class="charliteral">&#39;r&#39;</span> &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1689</span>               funcName[ii + 4] == <span class="charliteral">&#39;a&#39;</span> &amp;&amp; funcName[ii + 5] == <span class="charliteral">&#39;t&#39;</span> &amp;&amp; funcName[ii + 6] == <span class="charliteral">&#39;o&#39;</span> &amp;&amp; funcName[ii + 7] == <span class="charliteral">&#39;r&#39;</span>) {</div>
-<div class="line"><span class="lineno"> 1690</span>              <span class="keyword">const</span> <span class="keywordtype">bool</span> lftOk = (ii == 0) || <a class="code hl_function" href="#a8ed9f249e7504829fc96b3f80a39d59d">isSpaceChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(funcName[ii - 1])) || (funcName[ii - 1] == <span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><span class="lineno"> 1691</span>              <span class="keyword">const</span> <span class="keywordtype">bool</span> ritOk = ((ii + 8) == endIdx) || !<a class="code hl_function" href="#a2d185efc4e84fc0f11add0d6cddc6f5d">isIdentifierChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(funcName[ii + 8]));</div>
-<div class="line"><span class="lineno"> 1692</span>              <span class="keywordflow">if</span>(lftOk &amp;&amp; ritOk) {</div>
-<div class="line"><span class="lineno"> 1693</span>                opeFound = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1694</span>                opeIdx = ii;</div>
-<div class="line"><span class="lineno"> 1695</span>              }</div>
-<div class="line"><span class="lineno"> 1696</span>            }</div>
-<div class="line"><span class="lineno"> 1697</span>          }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01678">1678</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1679</span>      {</div>
+<div class="line"><span class="lineno"> 1680</span>        <span class="keywordflow">if</span>(category &amp;&amp; *category)</div>
+<div class="line"><span class="lineno"> 1681</span>          <a class="code hl_function" href="#ad3c900f4bfc5104a58eac1ad7c31778c">assign_</a>(<a class="code hl_variable" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, <a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>, std::string_view(category));</div>
+<div class="line"><span class="lineno"> 1682</span> </div>
+<div class="line"><span class="lineno"> 1683</span>        <span class="keywordflow">if</span>(fileName &amp;&amp; *fileName) {</div>
+<div class="line"><span class="lineno"> 1684</span>          <span class="keyword">const</span> std::string_view s{fileName};</div>
+<div class="line"><span class="lineno"> 1685</span>          <span class="keyword">const</span> <span class="keyword">auto</span> lastWin = s.rfind(<span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"><span class="lineno"> 1686</span>          <span class="keyword">const</span> <span class="keyword">auto</span> lastUnix = s.rfind(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno"> 1687</span>          <span class="keyword">const</span> <span class="keyword">auto</span> last = (lastWin == std::string_view::npos)</div>
+<div class="line"><span class="lineno"> 1688</span>                              ? lastUnix</div>
+<div class="line"><span class="lineno"> 1689</span>                              : (lastUnix == std::string_view::npos)</div>
+<div class="line"><span class="lineno"> 1690</span>                              ? lastWin</div>
+<div class="line"><span class="lineno"> 1691</span>                              : std::max(lastWin, lastUnix);</div>
+<div class="line"><span class="lineno"> 1692</span>          <span class="keyword">const</span> <span class="keyword">auto</span> begin = (last == std::string_view::npos) ? 0 : last + 1;</div>
+<div class="line"><span class="lineno"> 1693</span>          <span class="keywordflow">if</span>(begin &lt; s.size())</div>
+<div class="line"><span class="lineno"> 1694</span>            <a class="code hl_function" href="#ad3c900f4bfc5104a58eac1ad7c31778c">assign_</a>(<a class="code hl_variable" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, <a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>, s.substr(begin));</div>
+<div class="line"><span class="lineno"> 1695</span>        }</div>
+<div class="line"><span class="lineno"> 1696</span> </div>
+<div class="line"><span class="lineno"> 1697</span>        <span class="keywordflow">if</span>(funcName &amp;&amp; *funcName) {</div>
 <div class="line"><span class="lineno"> 1698</span> </div>
-<div class="line"><span class="lineno"> 1699</span>          <span class="keywordtype">size_t</span> begIdx = 0;</div>
-<div class="line"><span class="lineno"> 1700</span> </div>
-<div class="line"><span class="lineno"> 1701</span>          <span class="keywordtype">size_t</span> ignoreSpace = 0;</div>
-<div class="line"><span class="lineno"> 1702</span>          <span class="keywordtype">size_t</span> tmpIdx = opeFound ? opeIdx : endIdx;</div>
-<div class="line"><span class="lineno"> 1703</span>          <span class="keywordflow">while</span>(tmpIdx &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1704</span>            --tmpIdx;</div>
-<div class="line"><span class="lineno"> 1705</span>            <span class="keywordflow">if</span>(funcName[tmpIdx] == <span class="charliteral">&#39;&gt;&#39;</span>) {</div>
-<div class="line"><span class="lineno"> 1706</span>              ++ignoreSpace;</div>
-<div class="line"><span class="lineno"> 1707</span>            }</div>
-<div class="line"><span class="lineno"> 1708</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(funcName[tmpIdx] == <span class="charliteral">&#39;&lt;&#39;</span>) {</div>
-<div class="line"><span class="lineno"> 1709</span>              <span class="keywordflow">if</span>(ignoreSpace &gt; 0)</div>
-<div class="line"><span class="lineno"> 1710</span>                --ignoreSpace;</div>
-<div class="line"><span class="lineno"> 1711</span>            }</div>
-<div class="line"><span class="lineno"> 1712</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ignoreSpace == 0 &amp;&amp; <a class="code hl_function" href="#a8ed9f249e7504829fc96b3f80a39d59d">isSpaceChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(funcName[tmpIdx]))) {</div>
-<div class="line"><span class="lineno"> 1713</span>              begIdx = tmpIdx + 1;</div>
-<div class="line"><span class="lineno"> 1714</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1699</span>          <span class="keywordtype">size_t</span> endIdx = 0;</div>
+<div class="line"><span class="lineno"> 1700</span>          <span class="keywordflow">while</span>(endIdx &lt; 2048 &amp;&amp; funcName[endIdx] != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; funcName[endIdx] != <span class="charliteral">&#39;(&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1701</span>            ++endIdx;</div>
+<div class="line"><span class="lineno"> 1702</span> </div>
+<div class="line"><span class="lineno"> 1703</span>          <span class="keywordtype">bool</span> opeFound{<span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno"> 1704</span>          <span class="keywordtype">size_t</span> opeIdx = 0;</div>
+<div class="line"><span class="lineno"> 1705</span>          <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> ii = 0; ii &lt; endIdx; ++ii) {</div>
+<div class="line"><span class="lineno"> 1706</span>            <span class="keywordflow">if</span>(endIdx - ii &lt; 8) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1707</span>            <span class="keywordflow">if</span>(funcName[ii + 0] == <span class="charliteral">&#39;o&#39;</span> &amp;&amp; funcName[ii + 1] == <span class="charliteral">&#39;p&#39;</span> &amp;&amp; funcName[ii + 2] == <span class="charliteral">&#39;e&#39;</span> &amp;&amp; funcName[ii + 3] == <span class="charliteral">&#39;r&#39;</span> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1708</span>               funcName[ii + 4] == <span class="charliteral">&#39;a&#39;</span> &amp;&amp; funcName[ii + 5] == <span class="charliteral">&#39;t&#39;</span> &amp;&amp; funcName[ii + 6] == <span class="charliteral">&#39;o&#39;</span> &amp;&amp; funcName[ii + 7] == <span class="charliteral">&#39;r&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 1709</span>              <span class="keyword">const</span> <span class="keywordtype">bool</span> lftOk = (ii == 0) || <a class="code hl_function" href="#a8ed9f249e7504829fc96b3f80a39d59d">isSpaceChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(funcName[ii - 1])) || (funcName[ii - 1] == <span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><span class="lineno"> 1710</span>              <span class="keyword">const</span> <span class="keywordtype">bool</span> ritOk = ((ii + 8) == endIdx) || !<a class="code hl_function" href="#a2d185efc4e84fc0f11add0d6cddc6f5d">isIdentifierChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(funcName[ii + 8]));</div>
+<div class="line"><span class="lineno"> 1711</span>              <span class="keywordflow">if</span>(lftOk &amp;&amp; ritOk) {</div>
+<div class="line"><span class="lineno"> 1712</span>                opeFound = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1713</span>                opeIdx = ii;</div>
+<div class="line"><span class="lineno"> 1714</span>              }</div>
 <div class="line"><span class="lineno"> 1715</span>            }</div>
 <div class="line"><span class="lineno"> 1716</span>          }</div>
 <div class="line"><span class="lineno"> 1717</span> </div>
-<div class="line"><span class="lineno"> 1718</span>          <span class="keywordflow">while</span>(begIdx &lt; endIdx &amp;&amp; <a class="code hl_function" href="#a8ed9f249e7504829fc96b3f80a39d59d">isSpaceChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(funcName[begIdx])))</div>
-<div class="line"><span class="lineno"> 1719</span>            ++begIdx;</div>
-<div class="line"><span class="lineno"> 1720</span> </div>
-<div class="line"><span class="lineno"> 1721</span>          <span class="keywordflow">if</span>(begIdx &lt; endIdx) {</div>
-<div class="line"><span class="lineno"> 1722</span>            <span class="keyword">const</span> std::string_view sv(funcName + begIdx, endIdx - begIdx);</div>
-<div class="line"><span class="lineno"> 1723</span>            <a class="code hl_function" href="#ad3c900f4bfc5104a58eac1ad7c31778c">assign_</a>(<a class="code hl_variable" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, <a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>, sv);</div>
-<div class="line"><span class="lineno"> 1724</span>          }</div>
-<div class="line"><span class="lineno"> 1725</span>        }</div>
-<div class="line"><span class="lineno"> 1726</span>      }</div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a2d185efc4e84fc0f11add0d6cddc6f5d"><div class="ttname"><a href="#a2d185efc4e84fc0f11add0d6cddc6f5d">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::isIdentifierChar_</a></div><div class="ttdeci">bool isIdentifierChar_(unsigned char ch) noexcept</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01616">Log.cpp:1616</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a49f15cda0bc392132a9bfb1241e7a51c"><div class="ttname"><a href="#a49f15cda0bc392132a9bfb1241e7a51c">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::category_</a></div><div class="ttdeci">char category_[24]</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01607">Log.cpp:1607</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a7c2503d683cf2a34a0d6e5f273fa3ed3"><div class="ttname"><a href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::funcName_</a></div><div class="ttdeci">char funcName_[56]</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01609">Log.cpp:1609</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a8ed9f249e7504829fc96b3f80a39d59d"><div class="ttname"><a href="#a8ed9f249e7504829fc96b3f80a39d59d">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::isSpaceChar_</a></div><div class="ttdeci">bool isSpaceChar_(unsigned char ch) noexcept</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01611">Log.cpp:1611</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a9628968902c0daa309c4dd557e5574dc"><div class="ttname"><a href="#a9628968902c0daa309c4dd557e5574dc">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::fileName_</a></div><div class="ttdeci">char fileName_[32]</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01608">Log.cpp:1608</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_abb17d77222a5b1fef0e04f11c2e4a0ca"><div class="ttname"><a href="#abb17d77222a5b1fef0e04f11c2e4a0ca">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::categoryLen_</a></div><div class="ttdeci">uint16_t categoryLen_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01603">Log.cpp:1603</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_abce3dd89e978cea38e697fe990095bfa"><div class="ttname"><a href="#abce3dd89e978cea38e697fe990095bfa">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::fileNameLen_</a></div><div class="ttdeci">uint16_t fileNameLen_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01604">Log.cpp:1604</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_ad3c900f4bfc5104a58eac1ad7c31778c"><div class="ttname"><a href="#ad3c900f4bfc5104a58eac1ad7c31778c">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::assign_</a></div><div class="ttdeci">constexpr void assign_(char(&amp;buf)[N], LenT &amp;lenOut, std::string_view sv) noexcept</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01626">Log.cpp:1626</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_af4401d948f8c6e2d370469e772480cf2"><div class="ttname"><a href="#af4401d948f8c6e2d370469e772480cf2">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::funcNameLen_</a></div><div class="ttdeci">uint32_t funcNameLen_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01602">Log.cpp:1602</a></div></div>
+<div class="line"><span class="lineno"> 1718</span>          <span class="keywordtype">size_t</span> begIdx = 0;</div>
+<div class="line"><span class="lineno"> 1719</span> </div>
+<div class="line"><span class="lineno"> 1720</span>          <span class="keywordtype">size_t</span> ignoreSpace = 0;</div>
+<div class="line"><span class="lineno"> 1721</span>          <span class="keywordtype">size_t</span> tmpIdx = opeFound ? opeIdx : endIdx;</div>
+<div class="line"><span class="lineno"> 1722</span>          <span class="keywordflow">while</span>(tmpIdx &gt; 0) {</div>
+<div class="line"><span class="lineno"> 1723</span>            --tmpIdx;</div>
+<div class="line"><span class="lineno"> 1724</span>            <span class="keywordflow">if</span>(funcName[tmpIdx] == <span class="charliteral">&#39;&gt;&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 1725</span>              ++ignoreSpace;</div>
+<div class="line"><span class="lineno"> 1726</span>            }</div>
+<div class="line"><span class="lineno"> 1727</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(funcName[tmpIdx] == <span class="charliteral">&#39;&lt;&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 1728</span>              <span class="keywordflow">if</span>(ignoreSpace &gt; 0)</div>
+<div class="line"><span class="lineno"> 1729</span>                --ignoreSpace;</div>
+<div class="line"><span class="lineno"> 1730</span>            }</div>
+<div class="line"><span class="lineno"> 1731</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ignoreSpace == 0 &amp;&amp; <a class="code hl_function" href="#a8ed9f249e7504829fc96b3f80a39d59d">isSpaceChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(funcName[tmpIdx]))) {</div>
+<div class="line"><span class="lineno"> 1732</span>              begIdx = tmpIdx + 1;</div>
+<div class="line"><span class="lineno"> 1733</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1734</span>            }</div>
+<div class="line"><span class="lineno"> 1735</span>          }</div>
+<div class="line"><span class="lineno"> 1736</span> </div>
+<div class="line"><span class="lineno"> 1737</span>          <span class="keywordflow">while</span>(begIdx &lt; endIdx &amp;&amp; <a class="code hl_function" href="#a8ed9f249e7504829fc96b3f80a39d59d">isSpaceChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(funcName[begIdx])))</div>
+<div class="line"><span class="lineno"> 1738</span>            ++begIdx;</div>
+<div class="line"><span class="lineno"> 1739</span> </div>
+<div class="line"><span class="lineno"> 1740</span>          <span class="keywordflow">if</span>(begIdx &lt; endIdx) {</div>
+<div class="line"><span class="lineno"> 1741</span>            <span class="keyword">const</span> std::string_view sv(funcName + begIdx, endIdx - begIdx);</div>
+<div class="line"><span class="lineno"> 1742</span>            <a class="code hl_function" href="#ad3c900f4bfc5104a58eac1ad7c31778c">assign_</a>(<a class="code hl_variable" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, <a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>, sv);</div>
+<div class="line"><span class="lineno"> 1743</span>          }</div>
+<div class="line"><span class="lineno"> 1744</span>        }</div>
+<div class="line"><span class="lineno"> 1745</span>      }</div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a2d185efc4e84fc0f11add0d6cddc6f5d"><div class="ttname"><a href="#a2d185efc4e84fc0f11add0d6cddc6f5d">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::isIdentifierChar_</a></div><div class="ttdeci">bool isIdentifierChar_(unsigned char ch) noexcept</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01635">Log.cpp:1635</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a49f15cda0bc392132a9bfb1241e7a51c"><div class="ttname"><a href="#a49f15cda0bc392132a9bfb1241e7a51c">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::category_</a></div><div class="ttdeci">char category_[24]</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01626">Log.cpp:1626</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a7c2503d683cf2a34a0d6e5f273fa3ed3"><div class="ttname"><a href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::funcName_</a></div><div class="ttdeci">char funcName_[56]</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01628">Log.cpp:1628</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a8ed9f249e7504829fc96b3f80a39d59d"><div class="ttname"><a href="#a8ed9f249e7504829fc96b3f80a39d59d">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::isSpaceChar_</a></div><div class="ttdeci">bool isSpaceChar_(unsigned char ch) noexcept</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01630">Log.cpp:1630</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_a9628968902c0daa309c4dd557e5574dc"><div class="ttname"><a href="#a9628968902c0daa309c4dd557e5574dc">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::fileName_</a></div><div class="ttdeci">char fileName_[32]</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01627">Log.cpp:1627</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_abb17d77222a5b1fef0e04f11c2e4a0ca"><div class="ttname"><a href="#abb17d77222a5b1fef0e04f11c2e4a0ca">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::categoryLen_</a></div><div class="ttdeci">uint16_t categoryLen_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01622">Log.cpp:1622</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_abce3dd89e978cea38e697fe990095bfa"><div class="ttname"><a href="#abce3dd89e978cea38e697fe990095bfa">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::fileNameLen_</a></div><div class="ttdeci">uint16_t fileNameLen_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01623">Log.cpp:1623</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_ad3c900f4bfc5104a58eac1ad7c31778c"><div class="ttname"><a href="#ad3c900f4bfc5104a58eac1ad7c31778c">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::assign_</a></div><div class="ttdeci">constexpr void assign_(char(&amp;buf)[N], LenT &amp;lenOut, std::string_view sv) noexcept</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01645">Log.cpp:1645</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings_html_af4401d948f8c6e2d370469e772480cf2"><div class="ttname"><a href="#af4401d948f8c6e2d370469e772480cf2">anonymous_namespace{Log.cpp}::LogCore::FixedStrings::funcNameLen_</a></div><div class="ttdeci">uint32_t funcNameLen_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01621">Log.cpp:1621</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ad3c900f4bfc5104a58eac1ad7c31778c">assign_()</a>, <a class="el" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, <a class="el" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>, <a class="el" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, <a class="el" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>, <a class="el" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, <a class="el" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>, <a class="el" href="#a2d185efc4e84fc0f11add0d6cddc6f5d">isIdentifierChar_()</a>, and <a class="el" href="#a8ed9f249e7504829fc96b3f80a39d59d">isSpaceChar_()</a>.</p>
 <div class="dynheader">
@@ -342,11 +342,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01729">1729</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1730</span>      {</div>
-<div class="line"><span class="lineno"> 1731</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1732</span>        buffer.append(<a class="code hl_variable" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, <a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>);</div>
-<div class="line"><span class="lineno"> 1733</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01748">1748</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1749</span>      {</div>
+<div class="line"><span class="lineno"> 1750</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1751</span>        buffer.append(<a class="code hl_variable" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, <a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>);</div>
+<div class="line"><span class="lineno"> 1752</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, and <a class="el" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>.</p>
 
@@ -382,13 +382,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01736">1736</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1737</span>      {</div>
-<div class="line"><span class="lineno"> 1738</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1739</span>        <span class="comment">// operator+= with QUtf8StringView is optimized in Qt 6 to avoid </span></div>
-<div class="line"><span class="lineno"> 1740</span>        <span class="comment">// creating a temporary QString object before appending.</span></div>
-<div class="line"><span class="lineno"> 1741</span>        buffer += QUtf8StringView(<a class="code hl_variable" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, <a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>);</div>
-<div class="line"><span class="lineno"> 1742</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01755">1755</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1756</span>      {</div>
+<div class="line"><span class="lineno"> 1757</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1758</span>        <span class="comment">// operator+= with QUtf8StringView is optimized in Qt 6 to avoid </span></div>
+<div class="line"><span class="lineno"> 1759</span>        <span class="comment">// creating a temporary QString object before appending.</span></div>
+<div class="line"><span class="lineno"> 1760</span>        buffer += QUtf8StringView(<a class="code hl_variable" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, <a class="code hl_variable" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>);</div>
+<div class="line"><span class="lineno"> 1761</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a49f15cda0bc392132a9bfb1241e7a51c">category_</a>, and <a class="el" href="#abb17d77222a5b1fef0e04f11c2e4a0ca">categoryLen_</a>.</p>
 
@@ -417,11 +417,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01745">1745</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1746</span>      {</div>
-<div class="line"><span class="lineno"> 1747</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1748</span>        buffer.append(<a class="code hl_variable" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, <a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>);</div>
-<div class="line"><span class="lineno"> 1749</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01764">1764</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1765</span>      {</div>
+<div class="line"><span class="lineno"> 1766</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1767</span>        buffer.append(<a class="code hl_variable" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, <a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>);</div>
+<div class="line"><span class="lineno"> 1768</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, and <a class="el" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>.</p>
 
@@ -457,13 +457,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01752">1752</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1753</span>      {</div>
-<div class="line"><span class="lineno"> 1754</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1755</span>        <span class="comment">// operator+= with QUtf8StringView is optimized in Qt 6 to avoid </span></div>
-<div class="line"><span class="lineno"> 1756</span>        <span class="comment">// creating a temporary QString object before appending.</span></div>
-<div class="line"><span class="lineno"> 1757</span>        buffer += QUtf8StringView(<a class="code hl_variable" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, <a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>);</div>
-<div class="line"><span class="lineno"> 1758</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01771">1771</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1772</span>      {</div>
+<div class="line"><span class="lineno"> 1773</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1774</span>        <span class="comment">// operator+= with QUtf8StringView is optimized in Qt 6 to avoid </span></div>
+<div class="line"><span class="lineno"> 1775</span>        <span class="comment">// creating a temporary QString object before appending.</span></div>
+<div class="line"><span class="lineno"> 1776</span>        buffer += QUtf8StringView(<a class="code hl_variable" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, <a class="code hl_variable" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>);</div>
+<div class="line"><span class="lineno"> 1777</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a9628968902c0daa309c4dd557e5574dc">fileName_</a>, and <a class="el" href="#abce3dd89e978cea38e697fe990095bfa">fileNameLen_</a>.</p>
 
@@ -492,11 +492,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01761">1761</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1762</span>      {</div>
-<div class="line"><span class="lineno"> 1763</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1764</span>        buffer.append(<a class="code hl_variable" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, <a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>);</div>
-<div class="line"><span class="lineno"> 1765</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01780">1780</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1781</span>      {</div>
+<div class="line"><span class="lineno"> 1782</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1783</span>        buffer.append(<a class="code hl_variable" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, <a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>);</div>
+<div class="line"><span class="lineno"> 1784</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, and <a class="el" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>.</p>
 
@@ -532,13 +532,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01768">1768</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1769</span>      {</div>
-<div class="line"><span class="lineno"> 1770</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1771</span>        <span class="comment">// operator+= with QUtf8StringView is optimized in Qt 6 to avoid </span></div>
-<div class="line"><span class="lineno"> 1772</span>        <span class="comment">// creating a temporary QString object before appending.</span></div>
-<div class="line"><span class="lineno"> 1773</span>        buffer += QUtf8StringView(<a class="code hl_variable" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, <a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>);</div>
-<div class="line"><span class="lineno"> 1774</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01787">1787</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1788</span>      {</div>
+<div class="line"><span class="lineno"> 1789</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a> &lt; 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1790</span>        <span class="comment">// operator+= with QUtf8StringView is optimized in Qt 6 to avoid </span></div>
+<div class="line"><span class="lineno"> 1791</span>        <span class="comment">// creating a temporary QString object before appending.</span></div>
+<div class="line"><span class="lineno"> 1792</span>        buffer += QUtf8StringView(<a class="code hl_variable" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, <a class="code hl_variable" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>);</div>
+<div class="line"><span class="lineno"> 1793</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a7c2503d683cf2a34a0d6e5f273fa3ed3">funcName_</a>, and <a class="el" href="#af4401d948f8c6e2d370469e772480cf2">funcNameLen_</a>.</p>
 
@@ -578,35 +578,35 @@ template&lt;typename LenT, size_t N&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01626">1626</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1627</span>      {</div>
-<div class="line"><span class="lineno"> 1628</span>        <span class="keywordflow">if</span>(sv.empty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1629</span> </div>
-<div class="line"><span class="lineno"> 1630</span>        <span class="keywordtype">size_t</span> beg{0};</div>
-<div class="line"><span class="lineno"> 1631</span>        <span class="keywordtype">size_t</span> cpy = sv.size();</div>
-<div class="line"><span class="lineno"> 1632</span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> MaxLen = N - 1; <span class="comment">// Reserve 1 for null terminator</span></div>
-<div class="line"><span class="lineno"> 1633</span> </div>
-<div class="line"><span class="lineno"> 1634</span>        <span class="keywordflow">if</span>(cpy &gt; MaxLen) {</div>
-<div class="line"><span class="lineno"> 1635</span>          buf[0] = <span class="charliteral">&#39;~&#39;</span>;</div>
-<div class="line"><span class="lineno"> 1636</span>          buf[MaxLen] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno"> 1637</span>          beg = 1;</div>
-<div class="line"><span class="lineno"> 1638</span>          cpy = MaxLen - 1; <span class="comment">// Truncate logic: Max capacity minus tilde</span></div>
-<div class="line"><span class="lineno"> 1639</span>          lenOut = <span class="keyword">static_cast&lt;</span>LenT<span class="keyword">&gt;</span>(MaxLen);</div>
-<div class="line"><span class="lineno"> 1640</span>        }</div>
-<div class="line"><span class="lineno"> 1641</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 1642</span>          buf[cpy] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno"> 1643</span>          lenOut = <span class="keyword">static_cast&lt;</span>LenT<span class="keyword">&gt;</span>(cpy);</div>
-<div class="line"><span class="lineno"> 1644</span>        }</div>
-<div class="line"><span class="lineno"> 1645</span> </div>
-<div class="line"><span class="lineno"> 1646</span>        <span class="keywordflow">if</span>(cpy &gt; 0) {</div>
-<div class="line"><span class="lineno"> 1647</span>          <span class="comment">// Logic: copy the *end* of the string (suffix)</span></div>
-<div class="line"><span class="lineno"> 1648</span>          <span class="keyword">const</span> <span class="keywordtype">char</span>* srcStart = sv.data() + sv.size() - cpy;</div>
-<div class="line"><span class="lineno"> 1649</span>          <span class="keywordflow">if</span>(std::is_constant_evaluated())</div>
-<div class="line"><span class="lineno"> 1650</span>            std::copy_n(srcStart, cpy, buf + beg);</div>
-<div class="line"><span class="lineno"> 1651</span>          <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1652</span>            std::memcpy(buf + beg, srcStart, cpy);</div>
-<div class="line"><span class="lineno"> 1653</span>        }</div>
-<div class="line"><span class="lineno"> 1654</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01645">1645</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1646</span>      {</div>
+<div class="line"><span class="lineno"> 1647</span>        <span class="keywordflow">if</span>(sv.empty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1648</span> </div>
+<div class="line"><span class="lineno"> 1649</span>        <span class="keywordtype">size_t</span> beg{0};</div>
+<div class="line"><span class="lineno"> 1650</span>        <span class="keywordtype">size_t</span> cpy = sv.size();</div>
+<div class="line"><span class="lineno"> 1651</span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> MaxLen = N - 1; <span class="comment">// Reserve 1 for null terminator</span></div>
+<div class="line"><span class="lineno"> 1652</span> </div>
+<div class="line"><span class="lineno"> 1653</span>        <span class="keywordflow">if</span>(cpy &gt; MaxLen) {</div>
+<div class="line"><span class="lineno"> 1654</span>          buf[0] = <span class="charliteral">&#39;~&#39;</span>;</div>
+<div class="line"><span class="lineno"> 1655</span>          buf[MaxLen] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno"> 1656</span>          beg = 1;</div>
+<div class="line"><span class="lineno"> 1657</span>          cpy = MaxLen - 1; <span class="comment">// Truncate logic: Max capacity minus tilde</span></div>
+<div class="line"><span class="lineno"> 1658</span>          lenOut = <span class="keyword">static_cast&lt;</span>LenT<span class="keyword">&gt;</span>(MaxLen);</div>
+<div class="line"><span class="lineno"> 1659</span>        }</div>
+<div class="line"><span class="lineno"> 1660</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1661</span>          buf[cpy] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno"> 1662</span>          lenOut = <span class="keyword">static_cast&lt;</span>LenT<span class="keyword">&gt;</span>(cpy);</div>
+<div class="line"><span class="lineno"> 1663</span>        }</div>
+<div class="line"><span class="lineno"> 1664</span> </div>
+<div class="line"><span class="lineno"> 1665</span>        <span class="keywordflow">if</span>(cpy &gt; 0) {</div>
+<div class="line"><span class="lineno"> 1666</span>          <span class="comment">// Logic: copy the *end* of the string (suffix)</span></div>
+<div class="line"><span class="lineno"> 1667</span>          <span class="keyword">const</span> <span class="keywordtype">char</span>* srcStart = sv.data() + sv.size() - cpy;</div>
+<div class="line"><span class="lineno"> 1668</span>          <span class="keywordflow">if</span>(std::is_constant_evaluated())</div>
+<div class="line"><span class="lineno"> 1669</span>            std::copy_n(srcStart, cpy, buf + beg);</div>
+<div class="line"><span class="lineno"> 1670</span>          <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1671</span>            std::memcpy(buf + beg, srcStart, cpy);</div>
+<div class="line"><span class="lineno"> 1672</span>        }</div>
+<div class="line"><span class="lineno"> 1673</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>.</p>
 <div class="dynheader">
@@ -640,13 +640,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01616">1616</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1617</span>      {</div>
-<div class="line"><span class="lineno"> 1618</span>        <span class="keywordflow">return</span> (ch &gt;= <span class="charliteral">&#39;a&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;z&#39;</span>) ||</div>
-<div class="line"><span class="lineno"> 1619</span>               (ch &gt;= <span class="charliteral">&#39;A&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;Z&#39;</span>) ||</div>
-<div class="line"><span class="lineno"> 1620</span>               (ch &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;9&#39;</span>) ||</div>
-<div class="line"><span class="lineno"> 1621</span>               (ch == <span class="charliteral">&#39;_&#39;</span>);</div>
-<div class="line"><span class="lineno"> 1622</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01635">1635</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1636</span>      {</div>
+<div class="line"><span class="lineno"> 1637</span>        <span class="keywordflow">return</span> (ch &gt;= <span class="charliteral">&#39;a&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;z&#39;</span>) ||</div>
+<div class="line"><span class="lineno"> 1638</span>               (ch &gt;= <span class="charliteral">&#39;A&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;Z&#39;</span>) ||</div>
+<div class="line"><span class="lineno"> 1639</span>               (ch &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; ch &lt;= <span class="charliteral">&#39;9&#39;</span>) ||</div>
+<div class="line"><span class="lineno"> 1640</span>               (ch == <span class="charliteral">&#39;_&#39;</span>);</div>
+<div class="line"><span class="lineno"> 1641</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>.</p>
 <div class="dynheader">
@@ -680,10 +680,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01611">1611</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1612</span>      {</div>
-<div class="line"><span class="lineno"> 1613</span>        <span class="keywordflow">return</span> ch == <span class="charliteral">&#39; &#39;</span> || ch == <span class="charliteral">&#39;\t&#39;</span> || ch == <span class="charliteral">&#39;\r&#39;</span> || ch == <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno"> 1614</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01630">1630</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1631</span>      {</div>
+<div class="line"><span class="lineno"> 1632</span>        <span class="keywordflow">return</span> ch == <span class="charliteral">&#39; &#39;</span> || ch == <span class="charliteral">&#39;\t&#39;</span> || ch == <span class="charliteral">&#39;\r&#39;</span> || ch == <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno"> 1633</span>      }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>.</p>
 <div class="dynheader">
@@ -715,8 +715,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01607">1607</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1607</span>{};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01626">1626</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1626</span>{};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>, <a class="el" href="#a3a000d7c183750a49f0cfce9fa6926a3">appendCategoryTo_()</a>, and <a class="el" href="#a9762b2b63a8949638dbf81559ed0edae">appendCategoryTo_()</a>.</p>
 
@@ -742,8 +742,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01603">1603</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1603</span>{0};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01622">1622</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1622</span>{0};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>, <a class="el" href="#a3a000d7c183750a49f0cfce9fa6926a3">appendCategoryTo_()</a>, and <a class="el" href="#a9762b2b63a8949638dbf81559ed0edae">appendCategoryTo_()</a>.</p>
 
@@ -769,8 +769,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01608">1608</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1608</span>{};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01627">1627</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1627</span>{};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>, <a class="el" href="#a10410013e62e5adfa34cf8b32ca58ff1">appendFileNameTo_()</a>, and <a class="el" href="#affa433b158c2ec41b74c699e8e143369">appendFileNameTo_()</a>.</p>
 
@@ -796,8 +796,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01604">1604</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1604</span>{0};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01623">1623</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1623</span>{0};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>, <a class="el" href="#a10410013e62e5adfa34cf8b32ca58ff1">appendFileNameTo_()</a>, and <a class="el" href="#affa433b158c2ec41b74c699e8e143369">appendFileNameTo_()</a>.</p>
 
@@ -823,8 +823,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01609">1609</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1609</span>{};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01628">1628</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1628</span>{};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>, <a class="el" href="#a32b722c7a4c1269ef2d88bbafd0eb59c">appendFuncNameTo_()</a>, and <a class="el" href="#a06f203b12695e2fcdf01577f18206ecc">appendFuncNameTo_()</a>.</p>
 
@@ -850,8 +850,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01602">1602</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1602</span>{0};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01621">1621</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1621</span>{0};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa6b36bd00b33419231c54be815716664">FixedStrings()</a>, <a class="el" href="#a32b722c7a4c1269ef2d88bbafd0eb59c">appendFuncNameTo_()</a>, and <a class="el" href="#a06f203b12695e2fcdf01577f18206ecc">appendFuncNameTo_()</a>.</p>
 

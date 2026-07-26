@@ -3,18 +3,19 @@ var dp_dep_dir_dependencies =
     [ "Imp Log Process", "de/d99/dp_dep_imp_log_process.html", [
       [ "Introduction", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__intro", null ],
       [ "Details", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__details", null ],
-      [ "Host Application Integration", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__host_integration", null ],
-      [ "Startup Contract", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__startup_contract", null ],
-      [ "Pipe and Process Wiring", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__pipe_wiring", null ],
-      [ "Data Contract", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__data_contract", null ],
-      [ "Log Selection in the Host", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__host_log_selection", null ],
-      [ "Runtime Behavior", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__runtime_behavior", null ],
-      [ "Shutdown Behavior", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__shutdown_behavior", null ],
-      [ "Error Handling", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__error_handling", null ],
-      [ "Recommended Host Responsibilities", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__host_responsibilities", null ],
-      [ "Limitations", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__limitations", null ],
-      [ "Summary", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__summary", null ],
+      [ "Exit Codes", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__exit_codes", null ],
+      [ "Setup", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__setup", null ],
       [ "Code", "de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__code", null ]
+    ] ],
+    [ "Msg Box Process", "d1/da3/dp_dep_msg_box_process.html", [
+      [ "Introduction", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__intro", null ],
+      [ "Requirements", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__requirements", null ],
+      [ "Executable", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__exe", null ],
+      [ "Parent Side", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side", null ],
+      [ "Limitations", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__limitations", null ],
+      [ "Helper Code", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__helper_code", null ],
+      [ "Parent Side Header", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_header", null ],
+      [ "Parent Side Source", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_source", null ]
     ] ],
     [ "MoodyCamel Queue", "d7/d7b/dp_dep_moody_camel_queue.html", [
       [ "Introduction", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__intro", null ],

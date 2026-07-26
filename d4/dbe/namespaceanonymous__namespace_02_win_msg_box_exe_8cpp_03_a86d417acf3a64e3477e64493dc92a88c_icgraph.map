@@ -1,0 +1,129 @@
+<map id="anonymous_namespace{WinMsgBoxExe::cpp}::claimStopOwnership" name="anonymous_namespace{WinMsgBoxExe::cpp}::claimStopOwnership">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2296,822,2781,848"/>
+<area shape="rect" id="Node000002" href="$dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="2043,797,2248,822"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2329,822,2248,819,2248,814,2334,821"/>
+<area shape="rect" id="Node000049" href="$dc/dba/namespacenpi_1_1app.html#a0c346cf1a9d6d2fa7164ea2af9b3bd7d" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="2043,846,2248,872"/>
+<area shape="poly" id="edge78_Node000001_Node000049" title=" " alt="" coords="2318,849,2248,855,2247,850,2324,848"/>
+<area shape="rect" id="Node000003" href="$dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#ab185145d09a2a38b2213db9c648e7eb0" title="Create or open a session&#45;local named mutex and acquire it." alt="" coords="1745,139,1991,179"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2139,788,2125,707,2098,583,2079,513,2055,440,2026,368,1992,300,1969,265,1942,232,1892,182,1893,176,1946,228,1973,262,1997,298,2031,366,2060,438,2084,511,2103,582,2130,706,2144,790"/>
+<area shape="rect" id="Node000008" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1757,311,1979,351"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="2132,789,2075,677,1992,526,1931,428,1883,354,1884,348,1936,425,1997,523,2080,674,2137,790"/>
+<area shape="rect" id="Node000011" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="837,763,1011,819"/>
+<area shape="poly" id="edge34_Node000002_Node000011" title=" " alt="" coords="2032,807,1995,808,1011,794,1010,789,1995,803,2037,806"/>
+<area shape="rect" id="Node000019" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a60cf08a266458e16cf3c38b1b46f0cba" title="Starts a new npiImpLog.exe helper for the supplied directory and file base name." alt="" coords="833,867,1015,923"/>
+<area shape="poly" id="edge77_Node000002_Node000019" title=" " alt="" coords="2068,824,2044,836,2030,845,2021,855,2011,864,1996,872,1911,892,1797,905,1664,912,1521,915,1236,911,1015,902,1014,897,1236,906,1521,910,1664,907,1797,900,1910,887,1994,867,2008,860,2017,851,2027,841,2041,831,2063,826"/>
+<area shape="rect" id="Node000023" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a32d797b01b934be33adc2c7b5b728ff6" title="Create subdirectory under base path." alt="" coords="1741,817,1995,858"/>
+<area shape="poly" id="edge33_Node000002_Node000023" title=" " alt="" coords="2032,821,1995,828,1994,822,2037,820"/>
+<area shape="rect" id="Node000024" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="813,1027,1035,1067"/>
+<area shape="poly" id="edge35_Node000002_Node000024" title=" " alt="" coords="2058,825,2044,836,2029,854,2022,874,2014,895,1996,913,1933,946,1874,969,1817,982,1762,988,1709,987,1657,982,1555,962,1453,940,1400,932,1345,927,1288,927,1229,934,1166,949,1100,973,1085,983,1076,994,1067,1006,1052,1017,1025,1029,1023,1024,1049,1013,1063,1002,1072,990,1082,979,1097,969,1165,944,1228,929,1288,922,1345,922,1400,926,1454,935,1557,957,1658,976,1709,982,1762,982,1816,977,1872,964,1931,941,1993,909,2010,892,2017,873,2024,851,2041,832,2054,827"/>
+<area shape="rect" id="Node000025" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae0f74e4fc893caff483e47bcc8f799c1" title="Detects and configures the console attached during initialization." alt="" coords="1765,536,1971,592"/>
+<area shape="poly" id="edge37_Node000002_Node000025" title=" " alt="" coords="2121,792,1900,595,1901,589,2127,792"/>
+<area shape="rect" id="Node000040" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" title="Writes a complete byte range to the current important&#45;log pipe." alt="" coords="1468,1214,1649,1270"/>
+<area shape="poly" id="edge52_Node000002_Node000040" title=" " alt="" coords="2055,825,2044,836,2031,851,2024,865,2018,897,2015,930,2008,948,1997,966,1956,1011,1911,1052,1862,1089,1812,1122,1715,1177,1631,1217,1629,1211,1712,1173,1810,1118,1859,1085,1908,1048,1953,1007,1993,963,2004,945,2009,929,2013,896,2019,864,2027,848,2041,832,2051,827"/>
+<area shape="rect" id="Node000004" href="$dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#a12ec9c899d5f7b2ccd8ff412f0415cee" title="Deleted Copy Constructor." alt="" coords="1436,73,1681,114"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1761,138,1656,117,1655,111,1766,136"/>
+<area shape="rect" id="Node000005" href="$dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#aae52964ca45a142b32827dcc80679d1d" title="Deleted Move Constructor." alt="" coords="1436,139,1681,179"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="1735,160,1682,162,1680,156,1740,158"/>
+<area shape="rect" id="Node000006" href="$dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#acc40bc9f86d6324dba13ba767702561c" title="Deleted Copy Assignment." alt="" coords="1436,204,1681,245"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="1761,182,1656,206,1654,202,1766,180"/>
+<area shape="rect" id="Node000007" href="$dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#afc5bc3a19f2d3ffd56718b9427b564c9" title="Deleted Move Assignment." alt="" coords="1436,8,1681,49"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="1827,135,1766,100,1692,64,1655,51,1654,46,1694,59,1769,95,1833,134"/>
+<area shape="rect" id="Node000009" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Organization ProgramData path: C:/ProgramData/[organization]." alt="" coords="1440,318,1677,344"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1747,332,1678,334,1676,328,1752,330"/>
+<area shape="rect" id="Node000021" href="$dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9" title="Organization Public/Documents path: C:/Users/Public/Documents/[organization]." alt="" coords="1424,269,1693,294"/>
+<area shape="poly" id="edge30_Node000008_Node000021" title=" " alt="" coords="1747,313,1640,297,1639,292,1752,311"/>
+<area shape="rect" id="Node000010" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Application ProgramData path: C:/ProgramData/[organization]/[Application]." alt="" coords="1119,97,1356,122"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1431,314,1422,309,1405,288,1397,265,1396,243,1397,220,1399,198,1398,176,1390,156,1374,136,1356,123,1355,117,1378,132,1395,153,1403,175,1404,198,1403,220,1401,243,1403,264,1410,285,1426,305,1436,314"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1110,126,1101,135,1088,163,1069,225,1019,412,934,764,929,762,1014,411,1064,224,1083,161,1097,132,1114,122"/>
+<area shape="rect" id="Node000013" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#aaa3ef86b0bde2d695263c99035301b1c" title="Removes one persistent logging setting under the cross&#45;process lock." alt="" coords="837,198,1011,254"/>
+<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="1128,126,1100,136,1075,149,1052,164,983,200,979,196,1049,159,1073,144,1098,131,1132,123"/>
+<area shape="rect" id="Node000017" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a07969a1c7e4498118828e463456c5d1e" title="Writes one persistent logging setting under the cross&#45;process lock." alt="" coords="837,94,1011,150"/>
+<area shape="poly" id="edge21_Node000010_Node000017" title=" " alt="" coords="1109,116,1011,121,1009,116,1113,113"/>
+<area shape="rect" id="Node000018" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a18d742d7cfbf3028262fb1dc81b61386" title="Schedules the initialization of application meta paths." alt="" coords="797,5,1051,46"/>
+<area shape="poly" id="edge24_Node000010_Node000018" title=" " alt="" coords="1181,96,1050,60,1007,48,1005,43,1051,55,1186,94"/>
+<area shape="poly" id="edge25_Node000010_Node000019" title=" " alt="" coords="1110,124,1101,135,1084,160,1073,192,1066,230,1062,273,1063,371,1070,477,1079,584,1082,684,1076,769,1067,804,1053,832,1034,853,1011,869,1008,865,1031,849,1048,830,1062,802,1070,768,1077,684,1073,584,1065,477,1058,371,1057,273,1060,229,1068,191,1080,158,1097,132,1114,120"/>
+<area shape="poly" id="edge11_Node000011_Node000011" title=" " alt="" coords="977,755,973,751,962,746,924,742,897,744,879,749,871,755,871,764,866,762,866,753,877,744,896,738,924,737,964,741,976,747,982,755"/>
+<area shape="rect" id="Node000012" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="251,987,424,1027"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="828,811,672,852,583,880,497,913,426,951,368,989,365,985,423,946,495,909,582,875,671,847,832,808"/>
+<area shape="poly" id="edge14_Node000013_Node000013" title=" " alt="" coords="977,190,973,186,962,181,924,176,897,178,879,183,871,190,871,199,866,197,866,188,877,179,896,173,924,171,964,176,976,181,982,190"/>
+<area shape="rect" id="Node000014" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a0938589db255e4657d8917ad5958f388" title="Persists the most recently scheduled maximum&#45;folder&#45;size value." alt="" coords="496,146,749,202"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="827,211,750,198,748,193,832,208"/>
+<area shape="poly" id="edge16_Node000014_Node000014" title=" " alt="" coords="673,138,669,134,659,129,623,124,597,126,580,131,573,138,573,146,568,145,568,136,578,127,596,121,623,119,660,124,672,129,678,137"/>
+<area shape="rect" id="Node000015" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc" title="Debounces persistence of a non&#45;temporary maximum&#45;folder&#45;size change." alt="" coords="227,146,448,202"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="486,175,449,176,446,171,490,172"/>
+<area shape="poly" id="edge18_Node000015_Node000015" title=" " alt="" coords="380,138,376,133,368,129,337,124,315,126,301,131,295,138,295,146,290,146,290,136,298,127,314,121,337,119,370,124,380,129,385,137"/>
+<area shape="rect" id="Node000016" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287" title="Updates the runtime maximum&#45;folder&#45;size setting." alt="" coords="5,146,179,202"/>
+<area shape="poly" id="edge19_Node000015_Node000016" title=" " alt="" coords="217,175,180,176,177,172,221,172"/>
+<area shape="poly" id="edge20_Node000016_Node000016" title=" " alt="" coords="135,139,131,133,123,129,92,124,70,126,56,131,49,138,50,146,44,146,44,136,53,127,69,121,92,119,125,124,135,129,140,137"/>
+<area shape="poly" id="edge22_Node000017_Node000014" title=" " alt="" coords="828,139,750,154,747,150,832,136"/>
+<area shape="poly" id="edge23_Node000017_Node000017" title=" " alt="" coords="977,86,973,82,962,77,924,72,897,74,879,79,871,86,871,95,866,93,866,84,877,75,896,69,924,67,964,72,976,77,982,86"/>
+<area shape="poly" id="edge26_Node000019_Node000019" title=" " alt="" coords="977,859,973,855,962,850,924,846,897,848,879,853,871,859,871,868,866,866,866,857,877,848,896,842,924,841,964,845,976,851,982,859"/>
+<area shape="rect" id="Node000020" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a" title="Transitions both normal and important logging to a new directory." alt="" coords="536,947,709,1003"/>
+<area shape="poly" id="edge27_Node000019_Node000020" title=" " alt="" coords="823,922,710,955,708,950,828,920"/>
+<area shape="poly" id="edge28_Node000020_Node000012" title=" " alt="" coords="526,987,425,1000,423,995,530,984"/>
+<area shape="poly" id="edge29_Node000020_Node000020" title=" " alt="" coords="673,939,669,935,659,930,623,926,597,928,580,933,573,939,573,948,568,946,568,937,578,928,596,923,623,921,660,925,672,931,678,939"/>
+<area shape="rect" id="Node000022" href="$dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Application Public/Documents path: C:/Users/Public/Documents/[organization]/[Application]." alt="" coords="1103,25,1372,50"/>
+<area shape="poly" id="edge31_Node000021_Node000022" title=" " alt="" coords="1433,265,1422,258,1405,237,1397,215,1396,172,1396,128,1389,107,1374,86,1348,66,1318,53,1317,48,1350,62,1378,82,1394,105,1401,128,1401,172,1402,214,1410,235,1426,254,1438,265"/>
+<area shape="poly" id="edge32_Node000022_Node000018" title=" " alt="" coords="1092,33,1051,33,1049,28,1097,31"/>
+<area shape="poly" id="edge36_Node000024_Node000012" title=" " alt="" coords="803,1041,424,1015,423,1010,807,1037"/>
+<area shape="rect" id="Node000026" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title=" " alt="" coords="1456,452,1661,508"/>
+<area shape="poly" id="edge38_Node000025_Node000026" title=" " alt="" coords="1755,535,1661,511,1661,505,1760,534"/>
+<area shape="rect" id="Node000027" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="1131,656,1344,681"/>
+<area shape="poly" id="edge39_Node000026_Node000027" title=" " alt="" coords="1532,512,1467,583,1424,617,1377,645,1344,658,1341,653,1375,641,1421,613,1463,579,1528,515"/>
+<area shape="rect" id="Node000028" href="$d5/ddd/namespacenpi_1_1log.html#ae641f0801f76d9024013c1d201b7d4fa" title="Restores the default displayed log fields." alt="" coords="1115,705,1360,730"/>
+<area shape="poly" id="edge40_Node000026_Node000028" title=" " alt="" coords="1540,513,1514,559,1477,608,1431,656,1377,696,1352,707,1350,703,1375,691,1428,652,1473,604,1510,556,1537,517"/>
+<area shape="rect" id="Node000029" href="$d5/ddd/namespacenpi_1_1log.html#a015e6cf2735c059ebad3d94c4f69d884" title="Restores the default normal log file fields." alt="" coords="1127,754,1348,780"/>
+<area shape="poly" id="edge41_Node000026_Node000029" title=" " alt="" coords="1546,513,1522,569,1486,631,1438,694,1409,722,1377,745,1349,759,1347,754,1375,741,1405,718,1434,690,1481,628,1517,566,1542,517"/>
+<area shape="rect" id="Node000030" href="$d5/ddd/namespacenpi_1_1log.html#a4a5b29dcb269f47a4ef69ee7fe39bfb6" title="Removes all custom category filter rules." alt="" coords="1123,146,1352,172"/>
+<area shape="poly" id="edge42_Node000026_Node000030" title=" " alt="" coords="1508,448,1463,409,1441,384,1422,358,1410,332,1405,308,1404,264,1404,244,1400,224,1391,205,1374,185,1352,170,1351,165,1378,181,1396,202,1405,222,1409,243,1409,264,1410,308,1415,331,1426,355,1445,381,1467,405,1514,448"/>
+<area shape="rect" id="Node000031" href="$d5/ddd/namespacenpi_1_1log.html#af093553629bec17031b18b4835c2fbb2" title="Enables or disables console colors based on log level." alt="" coords="1119,196,1356,221"/>
+<area shape="poly" id="edge43_Node000026_Node000031" title=" " alt="" coords="1511,448,1465,409,1422,358,1412,340,1406,322,1402,291,1396,262,1388,248,1374,234,1356,222,1355,217,1378,230,1392,245,1401,260,1407,290,1412,321,1417,337,1426,355,1469,405,1516,448"/>
+<area shape="rect" id="Node000032" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="1139,245,1336,270"/>
+<area shape="poly" id="edge44_Node000026_Node000032" title=" " alt="" coords="1515,448,1469,408,1422,358,1408,336,1400,317,1392,300,1375,284,1336,267,1336,262,1377,279,1396,297,1405,315,1413,334,1426,355,1473,404,1520,448"/>
+<area shape="rect" id="Node000033" href="$d5/ddd/namespacenpi_1_1log.html#a1c8be170c09e71630d3e61964c5681dc" title="Changes the fields included in displayed logs." alt="" coords="1123,294,1352,320"/>
+<area shape="poly" id="edge45_Node000026_Node000033" title=" " alt="" coords="1525,447,1460,388,1419,358,1375,333,1345,322,1344,317,1377,329,1422,354,1463,384,1530,447"/>
+<area shape="rect" id="Node000034" href="$d5/ddd/namespacenpi_1_1log.html#a314e1bbd60d0d23d037fdb863ad706fd" title="Changes the fields included in normal log files." alt="" coords="1135,344,1340,369"/>
+<area shape="poly" id="edge46_Node000026_Node000034" title=" " alt="" coords="1507,448,1446,415,1375,383,1336,372,1335,367,1377,378,1449,410,1512,448"/>
+<area shape="rect" id="Node000035" href="$d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc" title="Changes the custom Qt logging category filter rules." alt="" coords="1131,393,1344,418"/>
+<area shape="poly" id="edge47_Node000026_Node000035" title=" " alt="" coords="1454,451,1375,432,1321,421,1319,416,1377,427,1459,450"/>
+<area shape="rect" id="Node000036" href="$d5/ddd/namespacenpi_1_1log.html#a7cef00f1da1eed6bc0afca56fe9cfb0e" title="Enables or disables debug log display." alt="" coords="1127,442,1348,468"/>
+<area shape="poly" id="edge48_Node000026_Node000036" title=" " alt="" coords="1445,473,1349,466,1347,461,1450,471"/>
+<area shape="rect" id="Node000037" href="$d5/ddd/namespacenpi_1_1log.html#a462603ec8bccd8b4cb3abc387fd6cc33" title="Enables or disables information log display." alt="" coords="1131,492,1344,517"/>
+<area shape="poly" id="edge49_Node000026_Node000037" title=" " alt="" coords="1446,490,1344,499,1343,494,1450,488"/>
+<area shape="rect" id="Node000038" href="$d5/ddd/namespacenpi_1_1log.html#aa8f2d23ad1c757d005b28864d17b6ba7" title="Enables or disables warning log display." alt="" coords="1131,541,1344,566"/>
+<area shape="poly" id="edge50_Node000026_Node000038" title=" " alt="" coords="1452,511,1377,532,1320,543,1318,538,1375,527,1456,509"/>
+<area shape="rect" id="Node000039" href="$d5/ddd/namespacenpi_1_1log.html#a780d5155d9059b348224270ef35f1af1" title="Enables or disables important&#45;log forwarding for warning logs." alt="" coords="1111,591,1364,631"/>
+<area shape="poly" id="edge51_Node000026_Node000039" title=" " alt="" coords="1505,514,1447,549,1377,581,1341,593,1339,588,1375,577,1445,545,1510,511"/>
+<area shape="poly" id="edge58_Node000040_Node000024" title=" " alt="" coords="1514,1209,1452,1167,1414,1146,1375,1128,1247,1104,1035,1068,1034,1062,1248,1098,1377,1123,1416,1141,1454,1163,1520,1210"/>
+<area shape="poly" id="edge62_Node000040_Node000040" title=" " alt="" coords="1613,1205,1609,1202,1598,1197,1559,1192,1531,1194,1513,1199,1504,1206,1504,1216,1500,1212,1499,1204,1510,1195,1530,1189,1559,1187,1600,1192,1612,1197,1619,1207"/>
+<area shape="rect" id="Node000041" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a37079754f4a9ab17ea9b87bcba12f9a7" title="Handles an invalid Microsoft CRT parameter as an unrecoverable failure." alt="" coords="1123,1370,1352,1426"/>
+<area shape="poly" id="edge53_Node000040_Node000041" title=" " alt="" coords="1499,1272,1377,1336,1300,1372,1299,1367,1375,1331,1494,1274"/>
+<area shape="rect" id="Node000043" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a55ad9393d4587b1cd0f2fe64bd7efd00" title="Handles a pure virtual function call as an unrecoverable failure." alt="" coords="1119,1474,1356,1530"/>
+<area shape="poly" id="edge59_Node000040_Node000043" title=" " alt="" coords="1535,1274,1468,1357,1425,1400,1378,1440,1346,1460,1313,1476,1311,1471,1343,1455,1374,1436,1421,1397,1464,1353,1530,1277"/>
+<area shape="rect" id="Node000044" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a0ad3876154f2b818add3875e77f95303" title="Writes important&#45;log data while coordinating normal, fatal, and crash senders." alt="" coords="1147,1007,1328,1063"/>
+<area shape="poly" id="edge63_Node000040_Node000044" title=" " alt="" coords="1525,1208,1460,1147,1419,1113,1375,1084,1328,1062,1328,1057,1377,1079,1422,1109,1463,1143,1530,1209"/>
+<area shape="rect" id="Node000046" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ab9aade053d28c916bf856e1876e60778" title="Formats a supported C signal and terminates through the crash path." alt="" coords="1099,1577,1376,1618"/>
+<area shape="poly" id="edge68_Node000040_Node000046" title=" " alt="" coords="1547,1275,1523,1335,1487,1406,1438,1479,1409,1513,1378,1544,1347,1564,1313,1580,1312,1575,1344,1560,1374,1540,1405,1509,1434,1476,1482,1403,1518,1333,1543,1278"/>
+<area shape="rect" id="Node000047" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a76d9092d69e836e0e7969d64383344a2" title="Handles an uncaught C++ exception or explicit terminate request." alt="" coords="1115,1162,1360,1218"/>
+<area shape="poly" id="edge71_Node000040_Node000047" title=" " alt="" coords="1457,1226,1360,1212,1359,1207,1463,1226"/>
+<area shape="rect" id="Node000048" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ad04d833e641507640d81486a4accb05f" title="Handles an unhandled Windows structured exception." alt="" coords="1123,1266,1352,1322"/>
+<area shape="poly" id="edge74_Node000040_Node000048" title=" " alt="" coords="1457,1258,1352,1278,1351,1273,1463,1257"/>
+<area shape="poly" id="edge57_Node000041_Node000041" title=" " alt="" coords="1293,1361,1288,1358,1277,1353,1237,1348,1209,1350,1191,1355,1182,1362,1182,1372,1178,1368,1177,1360,1188,1351,1208,1345,1237,1343,1279,1348,1291,1353,1298,1363"/>
+<area shape="rect" id="Node000042" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="809,1318,1039,1374"/>
+<area shape="poly" id="edge54_Node000041_Node000042" title=" " alt="" coords="1112,1378,1038,1367,1038,1362,1118,1377"/>
+<area shape="poly" id="edge56_Node000042_Node000012" title=" " alt="" coords="866,1315,373,1030,374,1025,870,1312"/>
+<area shape="poly" id="edge55_Node000042_Node000042" title=" " alt="" coords="977,1309,973,1306,962,1301,924,1296,897,1298,879,1303,871,1310,871,1319,866,1316,866,1308,877,1299,896,1293,924,1291,964,1296,976,1301,982,1311"/>
+<area shape="poly" id="edge60_Node000043_Node000042" title=" " alt="" coords="1165,1470,1097,1440,975,1376,976,1371,1100,1435,1170,1471"/>
+<area shape="poly" id="edge61_Node000043_Node000043" title=" " alt="" coords="1293,1465,1288,1462,1277,1457,1237,1452,1209,1454,1191,1459,1182,1466,1182,1476,1178,1472,1177,1464,1188,1455,1208,1449,1237,1447,1279,1452,1291,1457,1298,1467"/>
+<area shape="poly" id="edge66_Node000044_Node000024" title=" " alt="" coords="1137,1040,1035,1045,1034,1040,1142,1038"/>
+<area shape="poly" id="edge67_Node000044_Node000044" title=" " alt="" coords="1293,999,1288,995,1277,990,1237,986,1209,988,1191,993,1182,999,1182,1009,1177,1006,1177,997,1188,988,1208,982,1237,981,1279,985,1291,991,1298,1000"/>
+<area shape="rect" id="Node000045" href="$dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920" title="Starts the primary file worker if it is currently inactive." alt="" coords="837,947,1011,1003"/>
+<area shape="poly" id="edge64_Node000044_Node000045" title=" " alt="" coords="1136,1017,1011,994,1010,989,1141,1016"/>
+<area shape="poly" id="edge65_Node000045_Node000020" title=" " alt="" coords="827,976,710,978,709,972,832,974"/>
+<area shape="poly" id="edge69_Node000046_Node000042" title=" " alt="" coords="1159,1574,1128,1562,1097,1544,1048,1503,1004,1457,942,1376,945,1371,1009,1453,1052,1499,1100,1539,1131,1558,1164,1575"/>
+<area shape="poly" id="edge70_Node000046_Node000046" title=" " alt="" coords="1294,1569,1291,1566,1281,1561,1237,1556,1206,1558,1188,1563,1181,1569,1185,1579,1180,1576,1176,1568,1185,1559,1206,1553,1237,1551,1283,1556,1295,1562,1298,1572"/>
+<area shape="poly" id="edge72_Node000047_Node000042" title=" " alt="" coords="1124,1219,1100,1232,1024,1276,961,1321,958,1316,1021,1271,1097,1227,1119,1221"/>
+<area shape="poly" id="edge73_Node000047_Node000047" title=" " alt="" coords="1293,1153,1288,1150,1277,1145,1237,1140,1209,1142,1191,1147,1182,1154,1182,1163,1178,1160,1177,1152,1188,1143,1208,1137,1237,1135,1279,1140,1291,1145,1298,1154"/>
+<area shape="poly" id="edge75_Node000048_Node000042" title=" " alt="" coords="1113,1314,1039,1329,1038,1324,1118,1313"/>
+<area shape="poly" id="edge76_Node000048_Node000048" title=" " alt="" coords="1293,1257,1288,1254,1277,1249,1237,1244,1209,1246,1191,1251,1182,1258,1182,1268,1178,1264,1177,1256,1188,1247,1208,1241,1237,1239,1279,1244,1291,1249,1298,1259"/>
+</map>

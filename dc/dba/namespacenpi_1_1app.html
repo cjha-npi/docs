@@ -140,36 +140,99 @@ $(function(){initNavTree('dc/dba/namespacenpi_1_1app.html','../../',''); });
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
 <div class="textblock"><p>Application-wide cross-cutting non-domain specific code. </p>
 <p>This namespace contains application-wide classes, structs, constants, variables, and functions that are not specific to any module or domain.</p>
-<dl class="section note"><dt>Note</dt><dd>Place domain-specific code in a dedicated namespace, such as <span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html">npi::log</a></span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Place domain-specific code in a dedicated namespace, such as <span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html" title="Declares the logging category used for logging-system diagnostics.">npi::log</a></span>. </dd></dl>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:CrossProcessLocker" id="r_CrossProcessLocker"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html">CrossProcessLocker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped owner of a session-local Windows named mutex.  <a href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ad428b42182419c38ca08ba10a78f90a9" id="r_ad428b42182419c38ca08ba10a78f90a9"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ad428b42182419c38ca08ba10a78f90a9">Status</a> : std::uint8_t { <a class="el" href="#ad428b42182419c38ca08ba10a78f90a9a0c6ad70beb3a7e76c3fc7adab7c46acc">Good</a>
+, <a class="el" href="#ad428b42182419c38ca08ba10a78f90a9a4059b0251f66a18cb56f544728796875">Info</a>
+, <a class="el" href="#ad428b42182419c38ca08ba10a78f90a9a3b0649c72650c313a357338dcdfb64ec">Note</a>
+, <a class="el" href="#ad428b42182419c38ca08ba10a78f90a9aceaa0734f0b3c738120c67344d8f3ec1">Fail</a>
+ }</td></tr>
+<tr class="memdesc:ad428b42182419c38ca08ba10a78f90a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines common application status categories.  <a href="#ad428b42182419c38ca08ba10a78f90a9">More...</a><br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a40a2a28831f2f410c995f0657baf6544" id="r_a40a2a28831f2f410c995f0657baf6544"><td class="memItemLeft">const QString &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir</a> () noexcept</td></tr>
-<tr class="memdesc:a40a2a28831f2f410c995f0657baf6544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application ProgramData path: <span class="tt">C:/ProgramData/[organization]/[Application]</span>.  <br /></td></tr>
+<tr class="memdesc:a40a2a28831f2f410c995f0657baf6544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application ProgramData path: <span class="tt">C:/ProgramData/[<a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7" title="Organization name.">organization</a>]/[Application]</span>.  <br /></td></tr>
 <tr class="memitem:aff4c7482e4417f59ede04e359548a542" id="r_aff4c7482e4417f59ede04e359548a542"><td class="memItemLeft">const QString &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir</a> () noexcept</td></tr>
-<tr class="memdesc:aff4c7482e4417f59ede04e359548a542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application Public/Documents path: <span class="tt">C:/Users/Public/Documents/[organization]/[Application]</span>.  <br /></td></tr>
+<tr class="memdesc:aff4c7482e4417f59ede04e359548a542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application Public/Documents path: <span class="tt">C:/Users/Public/Documents/[<a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7" title="Organization name.">organization</a>]/[Application]</span>.  <br /></td></tr>
 <tr class="memitem:a30836be8b9337a64733a6e05594b23c8" id="r_a30836be8b9337a64733a6e05594b23c8"><td class="memItemLeft">const QString &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir</a> () noexcept</td></tr>
-<tr class="memdesc:a30836be8b9337a64733a6e05594b23c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization ProgramData path: <span class="tt">C:/ProgramData/[organization]</span>.  <br /></td></tr>
+<tr class="memdesc:a30836be8b9337a64733a6e05594b23c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization ProgramData path: <span class="tt">C:/ProgramData/[<a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7" title="Organization name.">organization</a>]</span>.  <br /></td></tr>
 <tr class="memitem:ac0dca24602a75822c6f7fcf63f8781d9" id="r_ac0dca24602a75822c6f7fcf63f8781d9"><td class="memItemLeft">const QString &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir</a> () noexcept</td></tr>
-<tr class="memdesc:ac0dca24602a75822c6f7fcf63f8781d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization Public/Documents path: <span class="tt">C:/Users/Public/Documents/[organization]</span>.  <br /></td></tr>
-<tr class="memitem:a2a7d7ff8fc3a71350a1d640be744c1f9" id="r_a2a7d7ff8fc3a71350a1d640be744c1f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2a7d7ff8fc3a71350a1d640be744c1f9">winFatalMsg</a> (const QString &amp;title, const QString &amp;message) noexcept</td></tr>
-<tr class="memdesc:a2a7d7ff8fc3a71350a1d640be744c1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a Windows-native fatal error message box.  <br /></td></tr>
+<tr class="memdesc:ac0dca24602a75822c6f7fcf63f8781d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization Public/Documents path: <span class="tt">C:/Users/Public/Documents/[<a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7" title="Organization name.">organization</a>]</span>.  <br /></td></tr>
+<tr class="memitem:a76f61f6f05584c1db8ccf46554ef09ba" id="r_a76f61f6f05584c1db8ccf46554ef09ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a76f61f6f05584c1db8ccf46554ef09ba">winCritMsgExe</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *message) noexcept</td></tr>
+<tr class="memdesc:a76f61f6f05584c1db8ccf46554ef09ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches <span class="tt">npiMsgBox.exe</span> to show a critical message box.  <br /></td></tr>
+<tr class="memitem:a7c5a02f0ef6ae67460ccc731fead320a" id="r_a7c5a02f0ef6ae67460ccc731fead320a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7c5a02f0ef6ae67460ccc731fead320a">winCritMsgExe</a> (QStringView message) noexcept</td></tr>
+<tr class="memdesc:a7c5a02f0ef6ae67460ccc731fead320a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches <span class="tt">npiMsgBox.exe</span> to show a critical message box.  <br /></td></tr>
+<tr class="memitem:a89f688c2bb6926db560092e32b1136e9" id="r_a89f688c2bb6926db560092e32b1136e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89f688c2bb6926db560092e32b1136e9">winInfoMsgExe</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *message) noexcept</td></tr>
+<tr class="memdesc:a89f688c2bb6926db560092e32b1136e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches <span class="tt">npiMsgBox.exe</span> to show an information message box.  <br /></td></tr>
+<tr class="memitem:a26ab9bc918675860c15c4ab3b5b1fc8e" id="r_a26ab9bc918675860c15c4ab3b5b1fc8e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a26ab9bc918675860c15c4ab3b5b1fc8e">winInfoMsgExe</a> (QStringView message) noexcept</td></tr>
+<tr class="memdesc:a26ab9bc918675860c15c4ab3b5b1fc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches <span class="tt">npiMsgBox.exe</span> to show an information message box.  <br /></td></tr>
+<tr class="memitem:ab43cdd42223150fbfc70f9a9f02a9019" id="r_ab43cdd42223150fbfc70f9a9f02a9019"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab43cdd42223150fbfc70f9a9f02a9019">winStopMsgExe</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *message) noexcept</td></tr>
+<tr class="memdesc:ab43cdd42223150fbfc70f9a9f02a9019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches <span class="tt">npiMsgBox.exe</span> to show a stop/error message box and terminates this process.  <br /></td></tr>
+<tr class="memitem:a0c346cf1a9d6d2fa7164ea2af9b3bd7d" id="r_a0c346cf1a9d6d2fa7164ea2af9b3bd7d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0c346cf1a9d6d2fa7164ea2af9b3bd7d">winStopMsgExe</a> (QStringView message) noexcept</td></tr>
+<tr class="memdesc:a0c346cf1a9d6d2fa7164ea2af9b3bd7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches <span class="tt">npiMsgBox.exe</span> to show a stop/error message box and terminates this process.  <br /></td></tr>
+<tr class="memitem:a8a8a5a1bb6702937ac0df7ce82143606" id="r_a8a8a5a1bb6702937ac0df7ce82143606"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8a8a5a1bb6702937ac0df7ce82143606">winWarnMsgExe</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *message) noexcept</td></tr>
+<tr class="memdesc:a8a8a5a1bb6702937ac0df7ce82143606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches <span class="tt">npiMsgBox.exe</span> to show a warning message box.  <br /></td></tr>
+<tr class="memitem:a845a9ebda220b0ec23964700b6858444" id="r_a845a9ebda220b0ec23964700b6858444"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a845a9ebda220b0ec23964700b6858444">winWarnMsgExe</a> (QStringView message) noexcept</td></tr>
+<tr class="memdesc:a845a9ebda220b0ec23964700b6858444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches <span class="tt">npiMsgBox.exe</span> to show a warning message box.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa7971e0e3a9b505a07176e5ac7aacbd6" id="r_aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#aa7971e0e3a9b505a07176e5ac7aacbd6">appDirName</a> {&quot;E109_Log&quot;}</td></tr>
-<tr class="memdesc:aa7971e0e3a9b505a07176e5ac7aacbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application directory name.  <br /></td></tr>
-<tr class="memitem:ae72448eb4df90eb2813db4202ac81bef" id="r_ae72448eb4df90eb2813db4202ac81bef"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a> {&quot;E109 Log&quot;}</td></tr>
-<tr class="memdesc:ae72448eb4df90eb2813db4202ac81bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application name.  <br /></td></tr>
-<tr class="memitem:aebf26d13197e68f0ad3e05d82bb5f31d" id="r_aebf26d13197e68f0ad3e05d82bb5f31d"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#aebf26d13197e68f0ad3e05d82bb5f31d">appVersion</a> {&quot;0.1.0&quot;}</td></tr>
-<tr class="memdesc:aebf26d13197e68f0ad3e05d82bb5f31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application version.  <br /></td></tr>
-<tr class="memitem:a786b074c596617d18abb1957f26d3156" id="r_a786b074c596617d18abb1957f26d3156"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a> {&quot;npi_electronic_GmbH&quot;}</td></tr>
-<tr class="memdesc:a786b074c596617d18abb1957f26d3156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization directory name.  <br /></td></tr>
-<tr class="memitem:a306977cd103a3449007db1e926e213e8" id="r_a306977cd103a3449007db1e926e213e8"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#a306977cd103a3449007db1e926e213e8">orgDomain</a> {&quot;npielectronic.com&quot;}</td></tr>
-<tr class="memdesc:a306977cd103a3449007db1e926e213e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization domain.  <br /></td></tr>
-<tr class="memitem:adc67984091da507784ab70eca8975491" id="r_adc67984091da507784ab70eca8975491"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#adc67984091da507784ab70eca8975491">orgName</a> {&quot;npi electronic GmbH&quot;}</td></tr>
-<tr class="memdesc:adc67984091da507784ab70eca8975491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization name.  <br /></td></tr>
+<tr class="memitem:ac99e931bbefcb61feb46dba0819e996a" id="r_ac99e931bbefcb61feb46dba0819e996a"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#ac99e931bbefcb61feb46dba0819e996a">name</a> {&quot;D143_Log&quot;}</td></tr>
+<tr class="memdesc:ac99e931bbefcb61feb46dba0819e996a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application name.  <br /></td></tr>
+<tr class="memitem:aa911b67ddc94ce902ba75acd2cd259c7" id="r_aa911b67ddc94ce902ba75acd2cd259c7"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7">organization</a> {&quot;npi electronic GmbH&quot;}</td></tr>
+<tr class="memdesc:aa911b67ddc94ce902ba75acd2cd259c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization name.  <br /></td></tr>
+<tr class="memitem:a173e8e685ccbdabd1914be9354c675e5" id="r_a173e8e685ccbdabd1914be9354c675e5"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#a173e8e685ccbdabd1914be9354c675e5">organizationDomain</a> {&quot;npielectronic.com&quot;}</td></tr>
+<tr class="memdesc:a173e8e685ccbdabd1914be9354c675e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organization domain.  <br /></td></tr>
+<tr class="memitem:ae7820aa42829cc12ab153001b330ad9b" id="r_ae7820aa42829cc12ab153001b330ad9b"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#ae7820aa42829cc12ab153001b330ad9b">version</a> {&quot;0.1.0&quot;}</td></tr>
+<tr class="memdesc:ae7820aa42829cc12ab153001b330ad9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application version.  <br /></td></tr>
 </table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad428b42182419c38ca08ba10a78f90a9" name="ad428b42182419c38ca08ba10a78f90a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad428b42182419c38ca08ba10a78f90a9">&#9670;&#160;</a></span>Status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ad428b42182419c38ca08ba10a78f90a9">npi::app::Status</a> : std::uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defines common application status categories. </p>
+<p>Represents the category of an event, operation result, or user-facing message. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad428b42182419c38ca08ba10a78f90a9a0c6ad70beb3a7e76c3fc7adab7c46acc" name="ad428b42182419c38ca08ba10a78f90a9a0c6ad70beb3a7e76c3fc7adab7c46acc"></a>Good&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad428b42182419c38ca08ba10a78f90a9a4059b0251f66a18cb56f544728796875" name="ad428b42182419c38ca08ba10a78f90a9a4059b0251f66a18cb56f544728796875"></a>Info&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad428b42182419c38ca08ba10a78f90a9a3b0649c72650c313a357338dcdfb64ec" name="ad428b42182419c38ca08ba10a78f90a9a3b0649c72650c313a357338dcdfb64ec"></a>Note&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad428b42182419c38ca08ba10a78f90a9aceaa0734f0b3c738120c67344d8f3ec1" name="ad428b42182419c38ca08ba10a78f90a9aceaa0734f0b3c738120c67344d8f3ec1"></a>Fail&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d34/_app_types_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../dd/d34/_app_types_8hpp_source.html">AppTypes.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>: std::uint8_t { <a class="code hl_enumvalue" href="#ad428b42182419c38ca08ba10a78f90a9a0c6ad70beb3a7e76c3fc7adab7c46acc">Good</a>, <a class="code hl_enumvalue" href="#ad428b42182419c38ca08ba10a78f90a9a4059b0251f66a18cb56f544728796875">Info</a>, <a class="code hl_enumvalue" href="#ad428b42182419c38ca08ba10a78f90a9a3b0649c72650c313a357338dcdfb64ec">Note</a>, <a class="code hl_enumvalue" href="#ad428b42182419c38ca08ba10a78f90a9aceaa0734f0b3c738120c67344d8f3ec1">Fail</a> };</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ad428b42182419c38ca08ba10a78f90a9a0c6ad70beb3a7e76c3fc7adab7c46acc"><div class="ttname"><a href="#ad428b42182419c38ca08ba10a78f90a9a0c6ad70beb3a7e76c3fc7adab7c46acc">npi::app::Status::Good</a></div><div class="ttdeci">@ Good</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d34/_app_types_8hpp_source.html#l00022">AppTypes.hpp:22</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ad428b42182419c38ca08ba10a78f90a9a3b0649c72650c313a357338dcdfb64ec"><div class="ttname"><a href="#ad428b42182419c38ca08ba10a78f90a9a3b0649c72650c313a357338dcdfb64ec">npi::app::Status::Note</a></div><div class="ttdeci">@ Note</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d34/_app_types_8hpp_source.html#l00022">AppTypes.hpp:22</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ad428b42182419c38ca08ba10a78f90a9a4059b0251f66a18cb56f544728796875"><div class="ttname"><a href="#ad428b42182419c38ca08ba10a78f90a9a4059b0251f66a18cb56f544728796875">npi::app::Status::Info</a></div><div class="ttdeci">@ Info</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d34/_app_types_8hpp_source.html#l00022">AppTypes.hpp:22</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ad428b42182419c38ca08ba10a78f90a9aceaa0734f0b3c738120c67344d8f3ec1"><div class="ttname"><a href="#ad428b42182419c38ca08ba10a78f90a9aceaa0734f0b3c738120c67344d8f3ec1">npi::app::Status::Fail</a></div><div class="ttdeci">@ Fail</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d34/_app_types_8hpp_source.html#l00022">AppTypes.hpp:22</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a40a2a28831f2f410c995f0657baf6544" name="a40a2a28831f2f410c995f0657baf6544"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40a2a28831f2f410c995f0657baf6544">&#9670;&#160;</a></span>appProgramDataDir()</h2>
@@ -194,7 +257,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Application ProgramData path: <span class="tt">C:/ProgramData/[organization]/[Application]</span>. </p>
+<p>Application ProgramData path: <span class="tt">C:/ProgramData/[<a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7" title="Organization name.">organization</a>]/[Application]</span>. </p>
 <ul>
 <li>The result is cached in a function-local static and reused on subsequent calls.</li>
 <li>Paths use forward slashes for Qt friendliness; call QDir::toNativeSeparators(...) before passing to Win32 APIs.</li>
@@ -203,24 +266,24 @@ Variables</h2></td></tr>
 </ul>
 <dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure, a native dialog is shown and the process is terminated (no return). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html#l00147">147</a> of file <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html">MetaInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  148</span>{</div>
-<div class="line"><span class="lineno">  149</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  150</span>    <span class="keyword">const</span> QString&amp; base = <a class="code hl_function" href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a>();</div>
-<div class="line"><span class="lineno">  151</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">npi::app::appName</a>));</div>
-<div class="line"><span class="lineno">  152</span>  }();</div>
-<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  154</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a30836be8b9337a64733a6e05594b23c8"><div class="ttname"><a href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a></div><div class="ttdeci">const QString &amp; orgProgramDataDir() noexcept</div><div class="ttdoc">Organization ProgramData path: C:/ProgramData/[organization].</div><div class="ttdef"><b>Definition</b> <a href="../../d3/dac/_meta_info_8cpp_source.html#l00129">MetaInfo.cpp:129</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1app_html_ae72448eb4df90eb2813db4202ac81bef"><div class="ttname"><a href="#ae72448eb4df90eb2813db4202ac81bef">npi::app::appName</a></div><div class="ttdeci">constexpr QLatin1StringView appName</div><div class="ttdoc">Application name.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d0d/_meta_info_8h_source.html#l00041">MetaInfo.h:41</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html#l00141">141</a> of file <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html">MetaInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>{</div>
+<div class="line"><span class="lineno">  143</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keyword">const</span> QString&amp; base = <a class="code hl_function" href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a>();</div>
+<div class="line"><span class="lineno">  145</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>));</div>
+<div class="line"><span class="lineno">  146</span>  }();</div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  148</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_a30836be8b9337a64733a6e05594b23c8"><div class="ttname"><a href="#a30836be8b9337a64733a6e05594b23c8">npi::app::orgProgramDataDir</a></div><div class="ttdeci">const QString &amp; orgProgramDataDir() noexcept</div><div class="ttdoc">Organization ProgramData path: C:/ProgramData/[organization].</div><div class="ttdef"><b>Definition</b> <a href="../../d3/dac/_meta_info_8cpp_source.html#l00123">MetaInfo.cpp:123</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ac99e931bbefcb61feb46dba0819e996a"><div class="ttname"><a href="#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a></div><div class="ttdeci">constexpr QLatin1StringView name</div><div class="ttdoc">Application name.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d0d/_meta_info_8h_source.html#l00040">MetaInfo.h:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>, and <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>.</p>
+<p class="reference">References <a class="el" href="#ac99e931bbefcb61feb46dba0819e996a">name</a>, and <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#aec0c49d654f69ba240eded5dee4bbc8b">anonymous_namespace{Log.cpp}::LogCore::getFutureDir_()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a953bdf43ab1e0d48f1225fe1dcccfbd4">anonymous_namespace{Log.cpp}::LogCore::getMaxFolderSizeMb_()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af4273441409e88d841adc86974b49c75">anonymous_namespace{Log.cpp}::LogCore::getStartupSettings_()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5fa684811c33eea49f63593fea332de4">anonymous_namespace{Log.cpp}::LogCore::saveSettings_()</a>, <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a18d742d7cfbf3028262fb1dc81b61386">anonymous_namespace{MetaInfo.cpp}::scheduleInit()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a78f2c370e9ec632af877fe1dd49ef478">anonymous_namespace{Log.cpp}::LogCore::startImpLogProcess_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#aaa3ef86b0bde2d695263c99035301b1c">anonymous_namespace{Log.cpp}::control::removeSettings()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a07969a1c7e4498118828e463456c5d1e">anonymous_namespace{Log.cpp}::control::saveSettings()</a>, <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a18d742d7cfbf3028262fb1dc81b61386">anonymous_namespace{MetaInfo.cpp}::scheduleInit()</a>, and <a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a60cf08a266458e16cf3c38b1b46f0cba">anonymous_namespace{Log.cpp}::bridge::startProcess()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a40a2a28831f2f410c995f0657baf6544_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a40a2a28831f2f410c995f0657baf6544_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -253,7 +316,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Application Public/Documents path: <span class="tt">C:/Users/Public/Documents/[organization]/[Application]</span>. </p>
+<p>Application Public/Documents path: <span class="tt">C:/Users/Public/Documents/[<a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7" title="Organization name.">organization</a>]/[Application]</span>. </p>
 <ul>
 <li>The result is cached in a function-local static and reused on subsequent calls.</li>
 <li>Paths use forward slashes for Qt friendliness; call QDir::toNativeSeparators(...) before passing to Win32 APIs.</li>
@@ -262,23 +325,23 @@ Here is the caller graph for this function:</div>
 </ul>
 <dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure, a native dialog is shown and the process is terminated (no return). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html#l00156">156</a> of file <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html">MetaInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>{</div>
-<div class="line"><span class="lineno">  158</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  159</span>    <span class="keyword">const</span> QString&amp; base = <a class="code hl_function" href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a>();</div>
-<div class="line"><span class="lineno">  160</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">npi::app::appName</a>));</div>
-<div class="line"><span class="lineno">  161</span>  }();</div>
-<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  163</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_ac0dca24602a75822c6f7fcf63f8781d9"><div class="ttname"><a href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; orgPublicDocumentsDir() noexcept</div><div class="ttdoc">Organization Public/Documents path: C:/Users/Public/Documents/[organization].</div><div class="ttdef"><b>Definition</b> <a href="../../d3/dac/_meta_info_8cpp_source.html#l00138">MetaInfo.cpp:138</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html#l00150">150</a> of file <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html">MetaInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  151</span>{</div>
+<div class="line"><span class="lineno">  152</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keyword">const</span> QString&amp; base = <a class="code hl_function" href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a>();</div>
+<div class="line"><span class="lineno">  154</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>));</div>
+<div class="line"><span class="lineno">  155</span>  }();</div>
+<div class="line"><span class="lineno">  156</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  157</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ac0dca24602a75822c6f7fcf63f8781d9"><div class="ttname"><a href="#ac0dca24602a75822c6f7fcf63f8781d9">npi::app::orgPublicDocumentsDir</a></div><div class="ttdeci">const QString &amp; orgPublicDocumentsDir() noexcept</div><div class="ttdoc">Organization Public/Documents path: C:/Users/Public/Documents/[organization].</div><div class="ttdef"><b>Definition</b> <a href="../../d3/dac/_meta_info_8cpp_source.html#l00132">MetaInfo.cpp:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
+<p class="reference">References <a class="el" href="#ac99e931bbefcb61feb46dba0819e996a">name</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a18d742d7cfbf3028262fb1dc81b61386">anonymous_namespace{MetaInfo.cpp}::scheduleInit()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_aff4c7482e4417f59ede04e359548a542_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_aff4c7482e4417f59ede04e359548a542_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -311,7 +374,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Organization ProgramData path: <span class="tt">C:/ProgramData/[organization]</span>. </p>
+<p>Organization ProgramData path: <span class="tt">C:/ProgramData/[<a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7" title="Organization name.">organization</a>]</span>. </p>
 <ul>
 <li>The result is cached in a function-local static and reused on subsequent calls.</li>
 <li>Paths use forward slashes for Qt friendliness; call QDir::toNativeSeparators(...) before passing to Win32 APIs.</li>
@@ -320,23 +383,23 @@ Here is the caller graph for this function:</div>
 </ul>
 <dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure, a native dialog is shown and the process is terminated (no return). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html#l00129">129</a> of file <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html">MetaInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>{</div>
-<div class="line"><span class="lineno">  131</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  132</span>    <span class="keyword">const</span> QString base = ::basePath(FOLDERID_ProgramData, <span class="stringliteral">&quot;PROGRAMDATA&quot;</span>, QString{}, QStringLiteral(<span class="stringliteral">&quot;ProgramData&quot;</span>));</div>
-<div class="line"><span class="lineno">  133</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a>));</div>
-<div class="line"><span class="lineno">  134</span>  }();</div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  136</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1app_html_a786b074c596617d18abb1957f26d3156"><div class="ttname"><a href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a></div><div class="ttdeci">constexpr QLatin1StringView orgDirName</div><div class="ttdoc">Organization directory name.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d0d/_meta_info_8h_source.html#l00037">MetaInfo.h:37</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html#l00123">123</a> of file <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html">MetaInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
+<div class="line"><span class="lineno">  125</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keyword">const</span> QString base = ::basePath(FOLDERID_ProgramData, <span class="stringliteral">&quot;PROGRAMDATA&quot;</span>, QString{}, QStringLiteral(<span class="stringliteral">&quot;ProgramData&quot;</span>));</div>
+<div class="line"><span class="lineno">  127</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="#aa911b67ddc94ce902ba75acd2cd259c7">npi::app::organization</a>));</div>
+<div class="line"><span class="lineno">  128</span>  }();</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  130</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1app_html_aa911b67ddc94ce902ba75acd2cd259c7"><div class="ttname"><a href="#aa911b67ddc94ce902ba75acd2cd259c7">npi::app::organization</a></div><div class="ttdeci">constexpr QLatin1StringView organization</div><div class="ttdoc">Organization name.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d0d/_meta_info_8h_source.html#l00036">MetaInfo.h:36</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1">anonymous_namespace{MetaInfo.cpp}::basePath()</a>, and <a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1">anonymous_namespace{MetaInfo.cpp}::basePath()</a>, and <a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7">organization</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a30836be8b9337a64733a6e05594b23c8_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -369,7 +432,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Organization Public/Documents path: <span class="tt">C:/Users/Public/Documents/[organization]</span>. </p>
+<p>Organization Public/Documents path: <span class="tt">C:/Users/Public/Documents/[<a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7" title="Organization name.">organization</a>]</span>. </p>
 <ul>
 <li>The result is cached in a function-local static and reused on subsequent calls.</li>
 <li>Paths use forward slashes for Qt friendliness; call QDir::toNativeSeparators(...) before passing to Win32 APIs.</li>
@@ -378,22 +441,22 @@ Here is the caller graph for this function:</div>
 </ul>
 <dl class="section warning"><dt>Warning</dt><dd>On unrecoverable failure, a native dialog is shown and the process is terminated (no return). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html">MetaInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>{</div>
-<div class="line"><span class="lineno">  140</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
-<div class="line"><span class="lineno">  141</span>    <span class="keyword">const</span> QString base = ::basePath(FOLDERID_PublicDocuments, <span class="stringliteral">&quot;PUBLIC&quot;</span>, QStringLiteral(<span class="stringliteral">&quot;Documents&quot;</span>), QStringLiteral(<span class="stringliteral">&quot;Public/Documents&quot;</span>));</div>
-<div class="line"><span class="lineno">  142</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="#a786b074c596617d18abb1957f26d3156">npi::app::orgDirName</a>));</div>
-<div class="line"><span class="lineno">  143</span>  }();</div>
-<div class="line"><span class="lineno">  144</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  145</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html#l00132">132</a> of file <a class="el" href="../../d3/dac/_meta_info_8cpp_source.html">MetaInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>{</div>
+<div class="line"><span class="lineno">  134</span>  <span class="keyword">static</span> <span class="keyword">const</span> QString path = []() -&gt; QString {</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keyword">const</span> QString base = ::basePath(FOLDERID_PublicDocuments, <span class="stringliteral">&quot;PUBLIC&quot;</span>, QStringLiteral(<span class="stringliteral">&quot;Documents&quot;</span>), QStringLiteral(<span class="stringliteral">&quot;Public/Documents&quot;</span>));</div>
+<div class="line"><span class="lineno">  136</span>    return ::createSubDir(base, QString::fromLatin1(<a class="code hl_variable" href="#aa911b67ddc94ce902ba75acd2cd259c7">npi::app::organization</a>));</div>
+<div class="line"><span class="lineno">  137</span>  }();</div>
+<div class="line"><span class="lineno">  138</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  139</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1">anonymous_namespace{MetaInfo.cpp}::basePath()</a>, and <a class="el" href="#a786b074c596617d18abb1957f26d3156">orgDirName</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1">anonymous_namespace{MetaInfo.cpp}::basePath()</a>, and <a class="el" href="#aa911b67ddc94ce902ba75acd2cd259c7">organization</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ac0dca24602a75822c6f7fcf63f8781d9_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -403,8 +466,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2a7d7ff8fc3a71350a1d640be744c1f9" name="a2a7d7ff8fc3a71350a1d640be744c1f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a7d7ff8fc3a71350a1d640be744c1f9">&#9670;&#160;</a></span>winFatalMsg()</h2>
+<a id="a76f61f6f05584c1db8ccf46554ef09ba" name="a76f61f6f05584c1db8ccf46554ef09ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f61f6f05584c1db8ccf46554ef09ba">&#9670;&#160;</a></span>winCritMsgExe() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,61 +476,399 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void npi::app::winFatalMsg </td>
+          <td class="memname">void npi::app::winCritMsgExe </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Displays a Windows-native fatal error message box. </p>
-<p>This function displays a modal Windows message box for fatal errors when QApplication might not be available, for example during application startup. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">title</td><td>The title of the message box, "[AppName] Fatal Error:" is prepended to this. </td></tr>
-    <tr><td class="paramname">message</td><td>The message to display in the message box. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function does not return; it calls std::abort() after displaying the message box. </dd></dl>
+<p>Launches <span class="tt">npiMsgBox.exe</span> to show a critical message box. </p>
+<p>The message box is shown in a separate process, so the caller is not blocked. If <span class="tt">message</span> is <span class="tt">nullptr</span>, no message box is launched. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/da7/_win_fatal_msg_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d7/da7/_win_fatal_msg_8hpp_source.html">WinFatalMsg.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>  {</div>
-<div class="line"><span class="lineno">   40</span>    QString fullTitle{<a class="code hl_variable" href="#ae72448eb4df90eb2813db4202ac81bef">npi::app::appName</a>};</div>
-<div class="line"><span class="lineno">   41</span>    fullTitle.append(QStringLiteral(<span class="stringliteral">&quot; Fatal Error&quot;</span>));</div>
-<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">if</span>(!title.isEmpty())</div>
-<div class="line"><span class="lineno">   43</span>      fullTitle.append(QStringLiteral(<span class="stringliteral">&quot;: &quot;</span>)).append(title);</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>    <span class="keyword">const</span> std::wstring t = fullTitle.toStdWString();</div>
-<div class="line"><span class="lineno">   46</span>    <span class="keyword">const</span> std::wstring m = message.toStdWString();</div>
-<div class="line"><span class="lineno">   47</span>    ::MessageBoxW(<span class="keyword">nullptr</span>, m.c_str(), t.c_str(), MB_OK | MB_ICONERROR | MB_TOPMOST | MB_SETFOREGROUND);</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>    std::abort();</div>
-<div class="line"><span class="lineno">   50</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00380">380</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  381</span>{</div>
+<div class="line"><span class="lineno">  382</span>  <span class="keywordflow">if</span>(message != <span class="keyword">nullptr</span> &amp;&amp; prepare()) {</div>
+<div class="line"><span class="lineno">  383</span>    <span class="keywordtype">wchar_t</span> buf[cmdLineMax]{};</div>
+<div class="line"><span class="lineno">  384</span>    <span class="keywordtype">size_t</span> pos{0};</div>
+<div class="line"><span class="lineno">  385</span>    copyCmdLineBuf(buf, pos);</div>
+<div class="line"><span class="lineno">  386</span>    bufAppendMsg(buf, pos, message);</div>
+<div class="line"><span class="lineno">  387</span>    launch(buf, pos, 2);</div>
+<div class="line"><span class="lineno">  388</span>  }</div>
+<div class="line"><span class="lineno">  389</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ae72448eb4df90eb2813db4202ac81bef">appName</a>.</p>
+<p class="reference">References <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsg()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ab8f0527db00d3bffc20804c52cae2393">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineMax</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03">anonymous_namespace{WinMsgBoxExe.cpp}::copyCmdLineBuf()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64">anonymous_namespace{WinMsgBoxExe.cpp}::launch()</a>, and <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761">anonymous_namespace{WinMsgBoxExe.cpp}::prepare()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1">anonymous_namespace{MetaInfo.cpp}::basePath()</a>, and <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a32d797b01b934be33adc2c7b5b728ff6">anonymous_namespace{MetaInfo.cpp}::createSubDir()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#af368724ec58d19d8bfc230468251e183">anonymous_namespace{Log.cpp}::control::showCritMsg()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a76f61f6f05584c1db8ccf46554ef09ba_cgraph.svg" width="100%" height="590"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a2a7d7ff8fc3a71350a1d640be744c1f9_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a76f61f6f05584c1db8ccf46554ef09ba_icgraph.svg" width="438" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7c5a02f0ef6ae67460ccc731fead320a" name="a7c5a02f0ef6ae67460ccc731fead320a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c5a02f0ef6ae67460ccc731fead320a">&#9670;&#160;</a></span>winCritMsgExe() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npi::app::winCritMsgExe </td>
+          <td>(</td>
+          <td class="paramtype">QStringView</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Launches <span class="tt">npiMsgBox.exe</span> to show a critical message box. </p>
+<p>The message box is shown in a separate process, so the caller is not blocked. If <span class="tt">message</span> is empty, no message box is launched. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00391">391</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  392</span>{</div>
+<div class="line"><span class="lineno">  393</span>  <span class="keywordflow">if</span>(!message.isEmpty() &amp;&amp; prepare()) {</div>
+<div class="line"><span class="lineno">  394</span>    <span class="keywordtype">wchar_t</span> buf[cmdLineMax]{};</div>
+<div class="line"><span class="lineno">  395</span>    <span class="keywordtype">size_t</span> pos{0};</div>
+<div class="line"><span class="lineno">  396</span>    copyCmdLineBuf(buf, pos);</div>
+<div class="line"><span class="lineno">  397</span>    bufAppendMsg(buf, pos, message);</div>
+<div class="line"><span class="lineno">  398</span>    launch(buf, pos, 2);</div>
+<div class="line"><span class="lineno">  399</span>  }</div>
+<div class="line"><span class="lineno">  400</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsg()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ab8f0527db00d3bffc20804c52cae2393">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineMax</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03">anonymous_namespace{WinMsgBoxExe.cpp}::copyCmdLineBuf()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64">anonymous_namespace{WinMsgBoxExe.cpp}::launch()</a>, and <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761">anonymous_namespace{WinMsgBoxExe.cpp}::prepare()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a7c5a02f0ef6ae67460ccc731fead320a_cgraph.svg" width="100%" height="590"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a89f688c2bb6926db560092e32b1136e9" name="a89f688c2bb6926db560092e32b1136e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f688c2bb6926db560092e32b1136e9">&#9670;&#160;</a></span>winInfoMsgExe() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npi::app::winInfoMsgExe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Launches <span class="tt">npiMsgBox.exe</span> to show an information message box. </p>
+<p>The message box is shown in a separate process, so the caller is not blocked. If <span class="tt">message</span> is <span class="tt">nullptr</span>, no message box is launched. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00336">336</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>{</div>
+<div class="line"><span class="lineno">  338</span>  <span class="keywordflow">if</span>(message != <span class="keyword">nullptr</span> &amp;&amp; prepare()) {</div>
+<div class="line"><span class="lineno">  339</span>    <span class="keywordtype">wchar_t</span> buf[cmdLineMax]{};</div>
+<div class="line"><span class="lineno">  340</span>    <span class="keywordtype">size_t</span> pos{0};</div>
+<div class="line"><span class="lineno">  341</span>    copyCmdLineBuf(buf, pos);</div>
+<div class="line"><span class="lineno">  342</span>    bufAppendMsg(buf, pos, message);</div>
+<div class="line"><span class="lineno">  343</span>    launch(buf, pos, 0);</div>
+<div class="line"><span class="lineno">  344</span>  }</div>
+<div class="line"><span class="lineno">  345</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsg()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ab8f0527db00d3bffc20804c52cae2393">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineMax</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03">anonymous_namespace{WinMsgBoxExe.cpp}::copyCmdLineBuf()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64">anonymous_namespace{WinMsgBoxExe.cpp}::launch()</a>, and <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761">anonymous_namespace{WinMsgBoxExe.cpp}::prepare()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a85b95e041e71a7bb69e5310ee4d47834">anonymous_namespace{Log.cpp}::control::showInfoMsg()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a89f688c2bb6926db560092e32b1136e9_cgraph.svg" width="100%" height="590"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a89f688c2bb6926db560092e32b1136e9_icgraph.svg" width="438" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a26ab9bc918675860c15c4ab3b5b1fc8e" name="a26ab9bc918675860c15c4ab3b5b1fc8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ab9bc918675860c15c4ab3b5b1fc8e">&#9670;&#160;</a></span>winInfoMsgExe() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npi::app::winInfoMsgExe </td>
+          <td>(</td>
+          <td class="paramtype">QStringView</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Launches <span class="tt">npiMsgBox.exe</span> to show an information message box. </p>
+<p>The message box is shown in a separate process, so the caller is not blocked. If <span class="tt">message</span> is empty, no message box is launched. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00347">347</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  348</span>{</div>
+<div class="line"><span class="lineno">  349</span>  <span class="keywordflow">if</span>(!message.isEmpty() &amp;&amp; prepare()) {</div>
+<div class="line"><span class="lineno">  350</span>    <span class="keywordtype">wchar_t</span> buf[cmdLineMax]{};</div>
+<div class="line"><span class="lineno">  351</span>    <span class="keywordtype">size_t</span> pos{0};</div>
+<div class="line"><span class="lineno">  352</span>    copyCmdLineBuf(buf, pos);</div>
+<div class="line"><span class="lineno">  353</span>    bufAppendMsg(buf, pos, message);</div>
+<div class="line"><span class="lineno">  354</span>    launch(buf, pos, 0);</div>
+<div class="line"><span class="lineno">  355</span>  }</div>
+<div class="line"><span class="lineno">  356</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsg()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ab8f0527db00d3bffc20804c52cae2393">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineMax</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03">anonymous_namespace{WinMsgBoxExe.cpp}::copyCmdLineBuf()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64">anonymous_namespace{WinMsgBoxExe.cpp}::launch()</a>, and <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761">anonymous_namespace{WinMsgBoxExe.cpp}::prepare()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a26ab9bc918675860c15c4ab3b5b1fc8e_cgraph.svg" width="100%" height="590"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ab43cdd42223150fbfc70f9a9f02a9019" name="ab43cdd42223150fbfc70f9a9f02a9019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43cdd42223150fbfc70f9a9f02a9019">&#9670;&#160;</a></span>winStopMsgExe() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npi::app::winStopMsgExe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Launches <span class="tt">npiMsgBox.exe</span> to show a stop/error message box and terminates this process. </p>
+<p>The message box is shown in a separate process before the current process is terminated. If <span class="tt">message</span> is <span class="tt">nullptr</span>, the current process is still terminated. </p><dl class="section warning"><dt>Warning</dt><dd>Terminates the current process. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00402">402</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  403</span>{</div>
+<div class="line"><span class="lineno">  404</span>  claimStopOwnership();</div>
+<div class="line"><span class="lineno">  405</span>  <span class="keywordflow">if</span>(message != <span class="keyword">nullptr</span> &amp;&amp; prepare()) {</div>
+<div class="line"><span class="lineno">  406</span>    <span class="keywordtype">size_t</span> pos{0};</div>
+<div class="line"><span class="lineno">  407</span>    copyCmdLineBuf(stopCmdLineBuf, pos);</div>
+<div class="line"><span class="lineno">  408</span>    bufAppendMsg(stopCmdLineBuf, pos, message);</div>
+<div class="line"><span class="lineno">  409</span>    launch(stopCmdLineBuf, pos, 2);</div>
+<div class="line"><span class="lineno">  410</span>  }</div>
+<div class="line"><span class="lineno">  411</span>  ::TerminateProcess(::GetCurrentProcess(), EXIT_FAILURE);</div>
+<div class="line"><span class="lineno">  412</span>  std::abort(); <span class="comment">// fallback to satisfy the [[noreturn]] contract.</span></div>
+<div class="line"><span class="lineno">  413</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsg()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c">anonymous_namespace{WinMsgBoxExe.cpp}::claimStopOwnership()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03">anonymous_namespace{WinMsgBoxExe.cpp}::copyCmdLineBuf()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64">anonymous_namespace{WinMsgBoxExe.cpp}::launch()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761">anonymous_namespace{WinMsgBoxExe.cpp}::prepare()</a>, and <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a32d1cd94364d7012bc039a6ca4389006">anonymous_namespace{WinMsgBoxExe.cpp}::stopCmdLineBuf</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#ab185145d09a2a38b2213db9c648e7eb0">npi::app::CrossProcessLocker::CrossProcessLocker()</a>, <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1">anonymous_namespace{MetaInfo.cpp}::basePath()</a>, <a class="el" href="../../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a32d797b01b934be33adc2c7b5b728ff6">anonymous_namespace{MetaInfo.cpp}::createSubDir()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler()</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae0f74e4fc893caff483e47bcc8f799c1">anonymous_namespace{Log.cpp}::LeakedState::PermConsoleHandle_()</a>, <a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba">anonymous_namespace{Log.cpp}::bridge::sendData()</a>, and <a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a60cf08a266458e16cf3c38b1b46f0cba">anonymous_namespace{Log.cpp}::bridge::startProcess()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ab43cdd42223150fbfc70f9a9f02a9019_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_ab43cdd42223150fbfc70f9a9f02a9019_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a0c346cf1a9d6d2fa7164ea2af9b3bd7d" name="a0c346cf1a9d6d2fa7164ea2af9b3bd7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c346cf1a9d6d2fa7164ea2af9b3bd7d">&#9670;&#160;</a></span>winStopMsgExe() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npi::app::winStopMsgExe </td>
+          <td>(</td>
+          <td class="paramtype">QStringView</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Launches <span class="tt">npiMsgBox.exe</span> to show a stop/error message box and terminates this process. </p>
+<p>The message box is shown in a separate process before the current process is terminated. If <span class="tt">message</span> is empty, the current process is still terminated. </p><dl class="section warning"><dt>Warning</dt><dd>Terminates the current process. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00415">415</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  416</span>{</div>
+<div class="line"><span class="lineno">  417</span>  claimStopOwnership();</div>
+<div class="line"><span class="lineno">  418</span>  <span class="keywordflow">if</span>(!message.isEmpty() &amp;&amp; prepare()) {</div>
+<div class="line"><span class="lineno">  419</span>    <span class="keywordtype">size_t</span> pos{0};</div>
+<div class="line"><span class="lineno">  420</span>    copyCmdLineBuf(stopCmdLineBuf, pos);</div>
+<div class="line"><span class="lineno">  421</span>    bufAppendMsg(stopCmdLineBuf, pos, message);</div>
+<div class="line"><span class="lineno">  422</span>    launch(stopCmdLineBuf, pos, 2);</div>
+<div class="line"><span class="lineno">  423</span>  }</div>
+<div class="line"><span class="lineno">  424</span>  ::TerminateProcess(::GetCurrentProcess(), EXIT_FAILURE);</div>
+<div class="line"><span class="lineno">  425</span>  std::abort(); <span class="comment">// fallback to satisfy the [[noreturn]] contract.</span></div>
+<div class="line"><span class="lineno">  426</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsg()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c">anonymous_namespace{WinMsgBoxExe.cpp}::claimStopOwnership()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03">anonymous_namespace{WinMsgBoxExe.cpp}::copyCmdLineBuf()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64">anonymous_namespace{WinMsgBoxExe.cpp}::launch()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761">anonymous_namespace{WinMsgBoxExe.cpp}::prepare()</a>, and <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a32d1cd94364d7012bc039a6ca4389006">anonymous_namespace{WinMsgBoxExe.cpp}::stopCmdLineBuf</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a0c346cf1a9d6d2fa7164ea2af9b3bd7d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a8a8a5a1bb6702937ac0df7ce82143606" name="a8a8a5a1bb6702937ac0df7ce82143606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8a5a1bb6702937ac0df7ce82143606">&#9670;&#160;</a></span>winWarnMsgExe() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npi::app::winWarnMsgExe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Launches <span class="tt">npiMsgBox.exe</span> to show a warning message box. </p>
+<p>The message box is shown in a separate process, so the caller is not blocked. If <span class="tt">message</span> is <span class="tt">nullptr</span>, no message box is launched. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00358">358</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  359</span>{</div>
+<div class="line"><span class="lineno">  360</span>  <span class="keywordflow">if</span>(message != <span class="keyword">nullptr</span> &amp;&amp; prepare()) {</div>
+<div class="line"><span class="lineno">  361</span>    <span class="keywordtype">wchar_t</span> buf[cmdLineMax]{};</div>
+<div class="line"><span class="lineno">  362</span>    <span class="keywordtype">size_t</span> pos{0};</div>
+<div class="line"><span class="lineno">  363</span>    copyCmdLineBuf(buf, pos);</div>
+<div class="line"><span class="lineno">  364</span>    bufAppendMsg(buf, pos, message);</div>
+<div class="line"><span class="lineno">  365</span>    launch(buf, pos, 1);</div>
+<div class="line"><span class="lineno">  366</span>  }</div>
+<div class="line"><span class="lineno">  367</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsg()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ab8f0527db00d3bffc20804c52cae2393">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineMax</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03">anonymous_namespace{WinMsgBoxExe.cpp}::copyCmdLineBuf()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64">anonymous_namespace{WinMsgBoxExe.cpp}::launch()</a>, and <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761">anonymous_namespace{WinMsgBoxExe.cpp}::prepare()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1d722dbe548810e26de6526339f7db0a">anonymous_namespace{Log.cpp}::workers::directoryCleanup()</a>, <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a151b634635a35cd3feb2de126611e850">anonymous_namespace{Log.cpp}::workers::dispWorkerStart()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc">anonymous_namespace{Log.cpp}::control::scheduleMaxFolderMbSave()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287">anonymous_namespace{Log.cpp}::control::setMaxFolderMb()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ac2b824ac899ce94ad3251f16688adfd6">anonymous_namespace{Log.cpp}::control::showWarnMsg()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a8a8a5a1bb6702937ac0df7ce82143606_cgraph.svg" width="100%" height="590"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a8a8a5a1bb6702937ac0df7ce82143606_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a845a9ebda220b0ec23964700b6858444" name="a845a9ebda220b0ec23964700b6858444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845a9ebda220b0ec23964700b6858444">&#9670;&#160;</a></span>winWarnMsgExe() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void npi::app::winWarnMsgExe </td>
+          <td>(</td>
+          <td class="paramtype">QStringView</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Launches <span class="tt">npiMsgBox.exe</span> to show a warning message box. </p>
+<p>The message box is shown in a separate process, so the caller is not blocked. If <span class="tt">message</span> is empty, no message box is launched. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00369">369</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  370</span>{</div>
+<div class="line"><span class="lineno">  371</span>  <span class="keywordflow">if</span>(!message.isEmpty() &amp;&amp; prepare()) {</div>
+<div class="line"><span class="lineno">  372</span>    <span class="keywordtype">wchar_t</span> buf[cmdLineMax]{};</div>
+<div class="line"><span class="lineno">  373</span>    <span class="keywordtype">size_t</span> pos{0};</div>
+<div class="line"><span class="lineno">  374</span>    copyCmdLineBuf(buf, pos);</div>
+<div class="line"><span class="lineno">  375</span>    bufAppendMsg(buf, pos, message);</div>
+<div class="line"><span class="lineno">  376</span>    launch(buf, pos, 1);</div>
+<div class="line"><span class="lineno">  377</span>  }</div>
+<div class="line"><span class="lineno">  378</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsg()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ab8f0527db00d3bffc20804c52cae2393">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineMax</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03">anonymous_namespace{WinMsgBoxExe.cpp}::copyCmdLineBuf()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64">anonymous_namespace{WinMsgBoxExe.cpp}::launch()</a>, and <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761">anonymous_namespace{WinMsgBoxExe.cpp}::prepare()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dba/namespacenpi_1_1app_a845a9ebda220b0ec23964700b6858444_cgraph.svg" width="100%" height="590"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="aa7971e0e3a9b505a07176e5ac7aacbd6" name="aa7971e0e3a9b505a07176e5ac7aacbd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7971e0e3a9b505a07176e5ac7aacbd6">&#9670;&#160;</a></span>appDirName</h2>
+<a id="ac99e931bbefcb61feb46dba0819e996a" name="ac99e931bbefcb61feb46dba0819e996a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac99e931bbefcb61feb46dba0819e996a">&#9670;&#160;</a></span>name</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,34 +877,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QLatin1StringView npi::app::appDirName {&quot;E109_Log&quot;}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Application directory name. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00042">42</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>{<span class="stringliteral">&quot;E109_Log&quot;</span>}; <span class="comment">///&lt; Application directory name.</span></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ae72448eb4df90eb2813db4202ac81bef" name="ae72448eb4df90eb2813db4202ac81bef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae72448eb4df90eb2813db4202ac81bef">&#9670;&#160;</a></span>appName</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QLatin1StringView npi::app::appName {&quot;E109 Log&quot;}</td>
+          <td class="memname">QLatin1StringView npi::app::name {&quot;D143_Log&quot;}</td>
         </tr>
       </table>
   </td>
@@ -515,15 +889,15 @@ Here is the caller graph for this function:</div>
 
 <p>Application name. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00041">41</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>{<span class="stringliteral">&quot;E109 Log&quot;</span>};    <span class="comment">///&lt; Application name.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00040">40</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{<span class="stringliteral">&quot;D143_Log&quot;</span>}; <span class="comment">///&lt; Application name.</span></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir()</a>, <a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir()</a>, and <a class="el" href="#a2a7d7ff8fc3a71350a1d640be744c1f9">winFatalMsg()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#ab185145d09a2a38b2213db9c648e7eb0">npi::app::CrossProcessLocker::CrossProcessLocker()</a>, <a class="el" href="#a40a2a28831f2f410c995f0657baf6544">appProgramDataDir()</a>, <a class="el" href="#aff4c7482e4417f59ede04e359548a542">appPublicDocumentsDir()</a>, <a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineBufAppendTitle()</a>, <a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a6d5df5e0f792d0d69ad12ee313419388">anonymous_namespace{Log.cpp}::console::open()</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae0f74e4fc893caff483e47bcc8f799c1">anonymous_namespace{Log.cpp}::LeakedState::PermConsoleHandle_()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#af368724ec58d19d8bfc230468251e183">anonymous_namespace{Log.cpp}::control::showCritMsg()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a85b95e041e71a7bb69e5310ee4d47834">anonymous_namespace{Log.cpp}::control::showInfoMsg()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ac2b824ac899ce94ad3251f16688adfd6">anonymous_namespace{Log.cpp}::control::showWarnMsg()</a>.</p>
 
 </div>
 </div>
-<a id="aebf26d13197e68f0ad3e05d82bb5f31d" name="aebf26d13197e68f0ad3e05d82bb5f31d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebf26d13197e68f0ad3e05d82bb5f31d">&#9670;&#160;</a></span>appVersion</h2>
+<a id="aa911b67ddc94ce902ba75acd2cd259c7" name="aa911b67ddc94ce902ba75acd2cd259c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa911b67ddc94ce902ba75acd2cd259c7">&#9670;&#160;</a></span>organization</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,90 +906,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QLatin1StringView npi::app::appVersion {&quot;0.1.0&quot;}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Application version. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00043">43</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>{<span class="stringliteral">&quot;0.1.0&quot;</span>};    <span class="comment">///&lt; Application version.</span></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a786b074c596617d18abb1957f26d3156" name="a786b074c596617d18abb1957f26d3156"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a786b074c596617d18abb1957f26d3156">&#9670;&#160;</a></span>orgDirName</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QLatin1StringView npi::app::orgDirName {&quot;npi_electronic_GmbH&quot;}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Organization directory name. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00037">37</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>{<span class="stringliteral">&quot;npi_electronic_GmbH&quot;</span>}; <span class="comment">///&lt; Organization directory name.</span></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
-
-</div>
-</div>
-<a id="a306977cd103a3449007db1e926e213e8" name="a306977cd103a3449007db1e926e213e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a306977cd103a3449007db1e926e213e8">&#9670;&#160;</a></span>orgDomain</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QLatin1StringView npi::app::orgDomain {&quot;npielectronic.com&quot;}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Organization domain. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00038">38</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>{<span class="stringliteral">&quot;npielectronic.com&quot;</span>};    <span class="comment">///&lt; Organization domain.</span></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="adc67984091da507784ab70eca8975491" name="adc67984091da507784ab70eca8975491"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc67984091da507784ab70eca8975491">&#9670;&#160;</a></span>orgName</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QLatin1StringView npi::app::orgName {&quot;npi electronic GmbH&quot;}</td>
+          <td class="memname">QLatin1StringView npi::app::organization {&quot;npi electronic GmbH&quot;}</td>
         </tr>
       </table>
   </td>
@@ -628,7 +919,63 @@ Here is the caller graph for this function:</div>
 <p>Organization name. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00036">36</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>{<span class="stringliteral">&quot;npi electronic GmbH&quot;</span>};    <span class="comment">///&lt; Organization name.</span></div>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>{<span class="stringliteral">&quot;npi electronic GmbH&quot;</span>};     <span class="comment">///&lt; Organization name.</span></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#a30836be8b9337a64733a6e05594b23c8">orgProgramDataDir()</a>, and <a class="el" href="#ac0dca24602a75822c6f7fcf63f8781d9">orgPublicDocumentsDir()</a>.</p>
+
+</div>
+</div>
+<a id="a173e8e685ccbdabd1914be9354c675e5" name="a173e8e685ccbdabd1914be9354c675e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173e8e685ccbdabd1914be9354c675e5">&#9670;&#160;</a></span>organizationDomain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLatin1StringView npi::app::organizationDomain {&quot;npielectronic.com&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Organization domain. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00037">37</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{<span class="stringliteral">&quot;npielectronic.com&quot;</span>}; <span class="comment">///&lt; Organization domain.</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae7820aa42829cc12ab153001b330ad9b" name="ae7820aa42829cc12ab153001b330ad9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7820aa42829cc12ab153001b330ad9b">&#9670;&#160;</a></span>version</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLatin1StringView npi::app::version {&quot;0.1.0&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Application version. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/_meta_info_8h_source.html#l00041">41</a> of file <a class="el" href="../../db/d0d/_meta_info_8h_source.html">MetaInfo.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>{<span class="stringliteral">&quot;0.1.0&quot;</span>}; <span class="comment">///&lt; Application version.</span></div>
 </div><!-- fragment -->
 </div>
 </div>

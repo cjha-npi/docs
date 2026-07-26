@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Log::cpp}::format::appendCategory" name="anonymous_namespace{Log::cpp}::format::appendCategory">
+<area shape="rect" id="Node000001" title="Appends cached logging&#45;category text." alt="" coords="5,60,451,86"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="167,61,154,52,161,42,186,36,228,34,267,35,291,40,302,49,295,59,292,55,297,50,289,45,266,41,228,39,186,41,164,46,159,51,172,60"/>
+<area shape="rect" id="Node000002" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a10bc796c3898193fe3c9490efc1a4478" title="Returns the immutable text and length associated with a cache slot." alt="" coords="499,5,720,61"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="350,58,493,45,488,46,351,63"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="507,85,712,141"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="351,83,502,101,496,102,351,89"/>
+<area shape="rect" id="Node000004" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="768,85,973,141"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="712,111,763,113,758,113,712,116"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="821,84,820,75,829,66,846,61,871,59,905,63,916,69,922,78,917,76,913,73,904,68,871,64,847,66,832,71,825,77,825,87"/>
+</map>

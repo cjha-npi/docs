@@ -1,0 +1,10 @@
+<map id="anonymous_namespace{Log::cpp}::TextBuffer::appendChar_" name="anonymous_namespace{Log::cpp}::TextBuffer::appendChar_">
+<area shape="rect" id="Node000001" title="Sanitizes and appends one character." alt="" coords="5,60,459,86"/>
+<area shape="rect" id="Node000002" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a0663052a99e9b2a0bf0b2c0cb9e75b7b" title="Sanitizes and appends one character." alt="" coords="507,5,704,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="352,58,502,44,496,45,353,63"/>
+<area shape="rect" id="Node000004" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b" title="Appends one byte without sanitization." alt="" coords="507,85,704,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="352,83,502,102,496,102,352,89"/>
+<area shape="rect" id="Node000003" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40" title="Checks whether the current line has room for the requested bytes and its terminator." alt="" coords="752,45,949,101"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="704,47,747,56,742,56,704,52"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="704,94,742,91,747,90,704,100"/>
+</map>

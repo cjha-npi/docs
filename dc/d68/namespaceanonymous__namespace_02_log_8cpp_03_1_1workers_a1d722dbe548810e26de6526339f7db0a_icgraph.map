@@ -1,0 +1,8 @@
+<map id="anonymous_namespace{Log::cpp}::workers::directoryCleanup" name="anonymous_namespace{Log::cpp}::workers::directoryCleanup">
+<area shape="rect" id="Node000001" title="Starts a detached cleanup operation for managed normal log files." alt="" coords="227,80,696,106"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287" title="Updates the runtime maximum&#45;folder&#45;size setting." alt="" coords="5,29,179,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,81,179,68,179,63,324,78"/>
+<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,109,179,150"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="319,107,179,123,178,118,325,106"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="158,21,152,17,139,13,92,8,59,10,37,15,27,22,27,30,21,29,22,19,34,10,58,5,92,3,141,7,155,13,163,21"/>
+</map>

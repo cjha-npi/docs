@@ -159,7 +159,18 @@ Browsing Database Location</h1>
 <li>The option <span class="tt">Do Not Warn If Fallback Location Used</span> is not available in VS 2026. Instead, when the custom location is used for the first time, a popup appears with a <span class="tt">Do not prompt again</span> checkbox. Enable this checkbox to prevent the popup from appearing again. The same popup is also available in VS 2022.</li>
 </ul>
 </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects the parent folder of <span class="tt">VS_Caches</span> to exist. For example, if the cache location is <span class="tt">F:\Misc\VS_Caches</span>, then <span class="tt">F:\Misc</span> must already exist. Visual Studio can recreate the <span class="tt">VS_Caches</span> folder itself, but it does not create the missing parent folder. If the parent folder is missing, the browsing database and IntelliSense may stop working. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects the parent folder of <span class="tt">VS_Caches</span> to exist. For example, if the cache location is <span class="tt">F:\Misc\VS_Caches</span>, then <span class="tt">F:\Misc</span> must already exist. Visual Studio can recreate the <span class="tt">VS_Caches</span> folder itself, but it does not create the missing parent folder. If the parent folder is missing, the browsing database and IntelliSense may stop working.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__bug_sophos_dll"></a>
+BUG: Sophos DLL</h1>
+<p> <div class="dp-hidden-xrefitem"> </p>
+<dl class="dp_dh_bugs"><dt><b><a class="el" href="../../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000002">BUG</a></b></dt><dd><a class="el" href="#dp_dh_vs_setup__bug_sophos_dll" title="BUG: Sophos DLL">std::system_error due to Sophos Endpoint Agent</a></dd></dl>
+<p> </div> </p>
+<p>The <span class="tt">Sophos Endpoint Agent</span> may inject <span class="tt">SophosED.dll</span> into a process started under the Visual Studio debugger. In the observed case, <span class="tt">SophosED.dll</span> throws and catches <span class="tt">std::system_error</span> internally. Visual Studio reports this as a first-chance exception, so the Debug Output window may show messages similar to this:</p>
+<div class="fragment"><div class="line">Exception thrown at 0x00007FFFB5691B6A in &lt;project name&gt;.exe: Microsoft C++ exception: std::system_error at memory location 0x000000F4F98FE950.</div>
+<div class="line">Exception thrown at 0x00007FFFB5691B6A in &lt;project name&gt;.exe: Microsoft C++ exception: std::system_error at memory location 0x000000F4F98FEA80.</div>
+<div class="line">Exception thrown at 0x00007FFFB5691B6A in &lt;project name&gt;.exe: Microsoft C++ exception: std::system_error at memory location 0x000000F4F98FE9F0.</div>
+</div><!-- fragment --><p>This was observed three times during startup. If the application continues normally, there is no <span class="tt">Unhandled exception</span>, and the process exits with code <span class="tt">0</span>, this is debugger noise and can be ignored.</p>
+<p>The messages can be hidden from the Visual Studio Output window, but doing so hides all exception messages in that window. A better fix is to add a narrow Sophos exclusion for the affected development/debug output folder, if that is allowed by the system administrator. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

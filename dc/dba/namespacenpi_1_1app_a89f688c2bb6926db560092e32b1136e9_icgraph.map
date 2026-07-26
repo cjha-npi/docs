@@ -1,0 +1,6 @@
+<map id="npi::app::winInfoMsgExe" name="npi::app::winInfoMsgExe">
+<area shape="rect" id="Node000001" title="Launches npiMsgBox.exe to show an information message box." alt="" coords="227,44,432,70"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a85b95e041e71a7bb69e5310ee4d47834" title="Displays an informational message through Qt or the executable fallback." alt="" coords="5,29,179,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="133,21,122,12,92,8,71,10,57,15,51,21,51,30,46,29,46,19,54,10,70,5,92,3,124,7,139,21"/>
+</map>

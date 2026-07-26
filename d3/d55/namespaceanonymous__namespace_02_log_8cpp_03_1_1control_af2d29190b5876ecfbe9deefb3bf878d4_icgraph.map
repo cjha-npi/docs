@@ -1,0 +1,8 @@
+<map id="anonymous_namespace{Log::cpp}::control::nextThreadIndex" name="anonymous_namespace{Log::cpp}::control::nextThreadIndex">
+<area shape="rect" id="Node000001" title="Allocates the next compact thread index with saturation." alt="" coords="496,29,957,55"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="792,24,797,19,790,14,766,10,727,8,684,10,661,15,657,18,656,20,670,30,665,29,652,22,652,15,659,11,683,5,727,3,767,4,792,9,802,18,795,29"/>
+<area shape="rect" id="Node000002" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="227,22,448,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="486,42,448,45,448,40,491,42"/>
+<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,22,179,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,42,178,45,178,40,221,42"/>
+</map>

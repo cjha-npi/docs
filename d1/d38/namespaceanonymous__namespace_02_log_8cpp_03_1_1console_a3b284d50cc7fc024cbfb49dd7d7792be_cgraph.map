@@ -1,0 +1,12 @@
+<map id="anonymous_namespace{Log::cpp}::console::close" name="anonymous_namespace{Log::cpp}::console::close">
+<area shape="rect" id="Node000001" title="Releases the temporary console while preserving a permanent console." alt="" coords="5,44,387,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="144,44,133,36,138,26,160,20,196,18,229,19,250,24,259,32,254,43,251,38,254,33,248,29,228,25,196,23,161,25,142,30,138,35,149,45"/>
+<area shape="rect" id="Node000002" href="$d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#af1e8c4c76f88dcb941823751b89636b9" title="Checks whether a console was attached during initialization." alt="" coords="435,29,608,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="386,55,430,57,424,57,387,60"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="476,28,475,19,484,10,499,5,521,3,553,7,568,22,563,21,551,12,521,8,500,10,487,15,480,21,480,31"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="656,29,861,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="607,55,651,57,646,57,607,60"/>
+<area shape="rect" id="Node000004" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="909,29,1115,85"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="861,55,904,57,899,57,861,60"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="963,28,963,19,972,10,988,5,1012,3,1046,7,1056,13,1061,22,1057,20,1053,17,1044,12,1012,8,989,10,975,15,968,21,967,31"/>
+</map>

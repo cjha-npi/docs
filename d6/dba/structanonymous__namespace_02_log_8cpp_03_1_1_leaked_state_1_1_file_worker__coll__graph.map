@@ -1,0 +1,27 @@
+<map id="anonymous_namespace{Log.cpp}::LeakedState::FileWorker" name="anonymous_namespace{Log.cpp}::LeakedState::FileWorker">
+<area shape="rect" id="Node000001" title="File worker with normal&#45;log file information and drop counting." alt="" coords="981,262,1427,288"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker" title="Provides queue, wake&#45;up, field&#45;layout, and thread state shared by workers." alt="" coords="637,108,834,164"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="838,164,1163,262,1157,263,838,169"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="237,5,490,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="497,40,557,53,614,70,654,87,692,109,687,109,652,92,612,75,555,58,498,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="309,205,418,230"/>
+<area shape="poly" id="edge12_Node000001_Node000004" title=" " alt="" coords="426,219,1017,260,1014,265,426,225"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="425,210,514,200,612,180,673,163,668,165,614,186,515,205,426,216"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="293,70,434,96"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="441,88,613,110,640,116,634,117,613,115,442,93"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="325,124,402,149"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="409,134,640,135,635,138,410,139"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="641,300,830,341"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="838,308,1074,288,1068,288,839,313"/>
+<area shape="rect" id="Node000008" href="$d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock" title=" " alt="" coords="5,298,139,324"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="146,304,356,297,485,297,613,302,644,307,638,307,613,307,484,302,356,302,147,309"/>
+<area shape="rect" id="Node000010" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html" title="Stores a value protected by a QReadWriteLock." alt="" coords="249,384,478,409"/>
+<area shape="poly" id="edge10_Node000010_Node000008" title=" " alt="" coords="110,324,170,347,237,370,287,383,281,384,236,375,168,352,110,329"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="325,334,402,360"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="410,341,644,327,638,328,410,346"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="485,385,549,376,612,361,636,350,666,341,672,340,638,355,614,366,550,381,486,391"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="53,384,91,409"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="99,394,249,394,249,399,99,399"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="665,365,806,390"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="814,361,957,333,1152,288,1157,287,958,338,814,367"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Log::cpp}::TextBuffer::appendDec_" name="anonymous_namespace{Log::cpp}::TextBuffer::appendDec_">
+<area shape="rect" id="Node000001" title="Appends an unsigned decimal value." alt="" coords="5,60,451,86"/>
+<area shape="rect" id="Node000002" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a60a241f708f9aafe54b0c8421b0396fa" title="Appends a fixed&#45;width unsigned decimal value." alt="" coords="499,5,696,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="346,58,494,44,488,45,347,63"/>
+<area shape="rect" id="Node000004" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#aa05e98766c94ca93f5bc37a0b8328942" title="Returns the decimal digit count of a 32&#45;bit unsigned value." alt="" coords="499,85,696,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="347,83,494,101,488,102,347,89"/>
+<area shape="rect" id="Node000003" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40" title="Checks whether the current line has room for the requested bytes and its terminator." alt="" coords="744,5,941,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="696,31,738,33,733,33,696,36"/>
+</map>

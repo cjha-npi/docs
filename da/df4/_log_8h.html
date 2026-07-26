@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Log.h File Reference</title>
+<title>Main Project: Root/Log.h File Reference</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -137,104 +137,121 @@ $(function(){initNavTree('da/df4/_log_8h.html','../../',''); });
   <div class="headertitle"><div class="title">Log.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;QString&gt;</code><br />
-<code>#include &lt;QtGlobal&gt;</code><br />
-<code>#include &lt;QStringList&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;QLoggingCategory&gt;</code><br />
+<code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;QStringList&gt;</code><br />
+<code>#include &lt;QtGlobal&gt;</code><br />
+</div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><p>Declares runtime configuration and console controls for the logging system. </p>
+<p>The logging system installs a Qt message handler during application startup and processes non-fatal messages using dedicated file and display workers. Non-fatal records are written to <span class="tt">*.log</span> files. Configured warnings and all critical records are additionally forwarded to an <span class="tt">*.imp.log</span> file through a helper process. Fatal records bypass the asynchronous normal-file queue and use the synchronous important-log path.</p>
+<p>This file provides functions for querying and changing the log directory, folder size limit, output fields, category filter rules, display-level settings, warning importance, console colors, display muting, and temporary console state.</p>
+<p>Runtime configuration changes are persisted unless temporary mode is enabled. Display muting and temporary console state are always runtime-only. </p>
+
+<p class="definition">Definition in file <a class="el" href="../../da/df4/_log_8h_source.html">Log.h</a>.</p>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Log.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d81/_log_8h__incl.svg" width="504" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d81/_log_8h__incl.svg" width="606" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d29/_log_8h__dep__incl.svg" width="128" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="../../da/df4/_log_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:npi_3A_3Alog_3A_3ADirResult_5Fd3_2Fd52_2Fstructnpi_5F1_5F1log_5F1_5F1_5Fdir_5Fresult" id="r_npi_3A_3Alog_3A_3ADirResult_5Fd3_2Fd52_2Fstructnpi_5F1_5F1log_5F1_5F1_5Fdir_5Fresult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#d3/d52/structnpi_1_1log_1_1_dir_result">npi::log::DirResult</a></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:npi" id="r_npi"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
 <tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for npi electronic GmbH code. <br /></td></tr>
 <tr class="memitem:npi_3A_3Alog" id="r_npi_3A_3Alog"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html">npi::log</a></td></tr>
+<tr class="memdesc:d5/ddd/namespacenpi_1_1log"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the logging category used for logging-system diagnostics. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae6eac236972f24cbb4bc02759093004f" id="r_ae6eac236972f24cbb4bc02759093004f"><td class="memItemLeft">const QStringList &amp;&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ae6eac236972f24cbb4bc02759093004f">npi::log::availableFieldNames</a> ()</td></tr>
-<tr class="memitem:a319c34d8ed40528b056e304206305abc" id="r_a319c34d8ed40528b056e304206305abc"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a319c34d8ed40528b056e304206305abc">npi::log::categories</a> ()</td></tr>
-<tr class="memitem:ae0e278f0a3f2618e1fff9b05fdcc0f9f" id="r_ae0e278f0a3f2618e1fff9b05fdcc0f9f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ae0e278f0a3f2618e1fff9b05fdcc0f9f">npi::log::clearFilterRules</a> (const bool temp=false)</td></tr>
+<tr class="memitem:a2357fd8efc3511b85c79fbab4159e343" id="r_a2357fd8efc3511b85c79fbab4159e343"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a2357fd8efc3511b85c79fbab4159e343">npi::log::allCategories</a> ()</td></tr>
+<tr class="memdesc:a2357fd8efc3511b85c79fbab4159e343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all logging categories encountered since startup.  <br /></td></tr>
+<tr class="memitem:a91fb4e6b1ccc56c014f684204cdb9f5c" id="r_a91fb4e6b1ccc56c014f684204cdb9f5c"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a91fb4e6b1ccc56c014f684204cdb9f5c">npi::log::allFields</a> ()</td></tr>
+<tr class="memdesc:a91fb4e6b1ccc56c014f684204cdb9f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all available log field names.  <br /></td></tr>
+<tr class="memitem:a7e2a77a5c59eb0b1925509a5a81bd285" id="r_a7e2a77a5c59eb0b1925509a5a81bd285"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7e2a77a5c59eb0b1925509a5a81bd285">npi::log::baseFilterRules</a> ()</td></tr>
+<tr class="memdesc:a7e2a77a5c59eb0b1925509a5a81bd285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the built-in Qt logging category filter rules.  <br /></td></tr>
 <tr class="memitem:a7b8c87cac5cee3c9c4ad9f19aebc8c02" id="r_a7b8c87cac5cee3c9c4ad9f19aebc8c02"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7b8c87cac5cee3c9c4ad9f19aebc8c02">npi::log::closeConsole</a> ()</td></tr>
-<tr class="memitem:acfa8a9ddc1a942cad8917f1682fcac43" id="r_acfa8a9ddc1a942cad8917f1682fcac43"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#acfa8a9ddc1a942cad8917f1682fcac43">npi::log::dir</a> ()</td></tr>
-<tr class="memitem:a90cd97a57be7cb3a82198fcf86a00d76" id="r_a90cd97a57be7cb3a82198fcf86a00d76"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a90cd97a57be7cb3a82198fcf86a00d76">npi::log::futureDir</a> ()</td></tr>
-<tr class="memitem:af3bcbeee12b96cb6b320ea17c88fa2f6" id="r_af3bcbeee12b96cb6b320ea17c88fa2f6"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#af3bcbeee12b96cb6b320ea17c88fa2f6">npi::log::getFilterBaseRules</a> ()</td></tr>
-<tr class="memitem:aeadaa3f61d4092e9eff5ebbaf5a54a40" id="r_aeadaa3f61d4092e9eff5ebbaf5a54a40"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#aeadaa3f61d4092e9eff5ebbaf5a54a40">npi::log::getFilterRules</a> ()</td></tr>
-<tr class="memitem:a1a3b70a28f0fc27903397e8c656608e2" id="r_a1a3b70a28f0fc27903397e8c656608e2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a1a3b70a28f0fc27903397e8c656608e2">npi::log::getFilterRulesTempState</a> ()</td></tr>
-<tr class="memitem:a4f702965e4b61a0ab9624ddfc1c30263" id="r_a4f702965e4b61a0ab9624ddfc1c30263"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a4f702965e4b61a0ab9624ddfc1c30263">npi::log::getLogFields</a> ()</td></tr>
-<tr class="memitem:a1fbc9f3d07f2b95bfe81eb6b122f35c8" id="r_a1fbc9f3d07f2b95bfe81eb6b122f35c8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a1fbc9f3d07f2b95bfe81eb6b122f35c8">npi::log::getLogFieldsTempState</a> ()</td></tr>
-<tr class="memitem:adc61cc2e549a6e3c924cd00f18646d83" id="r_adc61cc2e549a6e3c924cd00f18646d83"><td class="memItemLeft">qint64&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#adc61cc2e549a6e3c924cd00f18646d83">npi::log::getMaxFolderSizeMb</a> ()</td></tr>
-<tr class="memitem:a63edb871cc7861984b4eb600071cec08" id="r_a63edb871cc7861984b4eb600071cec08"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a63edb871cc7861984b4eb600071cec08">npi::log::getMsgFields</a> ()</td></tr>
-<tr class="memitem:a5858ddda7eca3da2df64248a6c50f5af" id="r_a5858ddda7eca3da2df64248a6c50f5af"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a5858ddda7eca3da2df64248a6c50f5af">npi::log::getMsgFieldsTempState</a> ()</td></tr>
-<tr class="memitem:a890d624071d5e2e26743288d3ce2d79b" id="r_a890d624071d5e2e26743288d3ce2d79b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a890d624071d5e2e26743288d3ce2d79b">npi::log::isConsoleColored</a> ()</td></tr>
+<tr class="memdesc:a7b8c87cac5cee3c9c4ad9f19aebc8c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the temporary console.  <br /></td></tr>
+<tr class="memitem:acab2a981f6895642ea4a515d1b549d27" id="r_acab2a981f6895642ea4a515d1b549d27"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#acab2a981f6895642ea4a515d1b549d27">npi::log::coloredConsole</a> ()</td></tr>
+<tr class="memdesc:acab2a981f6895642ea4a515d1b549d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether colored console output is enabled.  <br /></td></tr>
+<tr class="memitem:ab87128eb4f97a8ec0c47815e4f57ac0f" id="r_ab87128eb4f97a8ec0c47815e4f57ac0f"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ab87128eb4f97a8ec0c47815e4f57ac0f">npi::log::defaultDirectory</a> ()</td></tr>
+<tr class="memdesc:ab87128eb4f97a8ec0c47815e4f57ac0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default log directory.  <br /></td></tr>
+<tr class="memitem:a519607f2aa309cc7106690d802d0a2e2" id="r_a519607f2aa309cc7106690d802d0a2e2"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a519607f2aa309cc7106690d802d0a2e2">npi::log::directory</a> ()</td></tr>
+<tr class="memdesc:a519607f2aa309cc7106690d802d0a2e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current log directory.  <br /></td></tr>
+<tr class="memitem:a7bf7d13d470046ebec195214324bbf5b" id="r_a7bf7d13d470046ebec195214324bbf5b"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7bf7d13d470046ebec195214324bbf5b">npi::log::displayFields</a> ()</td></tr>
+<tr class="memdesc:a7bf7d13d470046ebec195214324bbf5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fields currently included in displayed logs.  <br /></td></tr>
+<tr class="memitem:a331d48d2161c89178f381178ace2e0ee" id="r_a331d48d2161c89178f381178ace2e0ee"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a331d48d2161c89178f381178ace2e0ee">npi::log::fileBaseName</a> ()</td></tr>
+<tr class="memdesc:a331d48d2161c89178f381178ace2e0ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the base name shared by the current log files.  <br /></td></tr>
+<tr class="memitem:add16ea189b135b7e9620adc74ab2e676" id="r_add16ea189b135b7e9620adc74ab2e676"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#add16ea189b135b7e9620adc74ab2e676">npi::log::fileFields</a> ()</td></tr>
+<tr class="memdesc:add16ea189b135b7e9620adc74ab2e676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fields currently included in normal log files.  <br /></td></tr>
+<tr class="memitem:a706cfc14aff0e14a0a79cbe3d9dd0c43" id="r_a706cfc14aff0e14a0a79cbe3d9dd0c43"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a706cfc14aff0e14a0a79cbe3d9dd0c43">npi::log::filterRules</a> ()</td></tr>
+<tr class="memdesc:a706cfc14aff0e14a0a79cbe3d9dd0c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the currently configured custom category filter rules.  <br /></td></tr>
 <tr class="memitem:a3f5453b25bfa7808da0fa9c48d5a0b01" id="r_a3f5453b25bfa7808da0fa9c48d5a0b01"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a3f5453b25bfa7808da0fa9c48d5a0b01">npi::log::isConsoleOpen</a> ()</td></tr>
-<tr class="memitem:a03944c7d993d8f35806987a67f25a67d" id="r_a03944c7d993d8f35806987a67f25a67d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a03944c7d993d8f35806987a67f25a67d">npi::log::isConsolePermanent</a> ()</td></tr>
+<tr class="memdesc:a3f5453b25bfa7808da0fa9c48d5a0b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether any console is currently attached to the application.  <br /></td></tr>
 <tr class="memitem:a887220e01a8730efd359ff7d59eea478" id="r_a887220e01a8730efd359ff7d59eea478"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a887220e01a8730efd359ff7d59eea478">npi::log::isDisplayMuted</a> ()</td></tr>
-<tr class="memitem:a5d120ddbdc6cf5c3ecd4b7d8bd0a22a3" id="r_a5d120ddbdc6cf5c3ecd4b7d8bd0a22a3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a5d120ddbdc6cf5c3ecd4b7d8bd0a22a3">npi::log::isWarnImpLog</a> ()</td></tr>
+<tr class="memdesc:a887220e01a8730efd359ff7d59eea478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether all log display output is temporarily muted.  <br /></td></tr>
+<tr class="memitem:ad54369e851cae6d6b5e146ee35fbcc35" id="r_ad54369e851cae6d6b5e146ee35fbcc35"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ad54369e851cae6d6b5e146ee35fbcc35">npi::log::isPermanentConsole</a> ()</td></tr>
+<tr class="memdesc:ad54369e851cae6d6b5e146ee35fbcc35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the application started with a permanent console.  <br /></td></tr>
+<tr class="memitem:a2029add9e80a962b68bb147f9fd47f35" id="r_a2029add9e80a962b68bb147f9fd47f35"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a2029add9e80a962b68bb147f9fd47f35">npi::log::isWarnLogImportant</a> ()</td></tr>
+<tr class="memdesc:a2029add9e80a962b68bb147f9fd47f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether warning logs are treated as important logs.  <br /></td></tr>
+<tr class="memitem:abba1ff20c6dcb414b50c5546af517c73" id="r_abba1ff20c6dcb414b50c5546af517c73"><td class="memItemLeft">std::uint32_t&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#abba1ff20c6dcb414b50c5546af517c73">npi::log::maxFolderSizeMib</a> ()</td></tr>
+<tr class="memdesc:abba1ff20c6dcb414b50c5546af517c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the configured normal-log cleanup target.  <br /></td></tr>
+<tr class="memitem:af28603358fca7f71c4be70cda3557b9f" id="r_af28603358fca7f71c4be70cda3557b9f"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#af28603358fca7f71c4be70cda3557b9f">npi::log::nonQtCategories</a> ()</td></tr>
+<tr class="memdesc:af28603358fca7f71c4be70cda3557b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all encountered non-Qt logging categories.  <br /></td></tr>
 <tr class="memitem:a35a969078b211913c70a3289d579181f" id="r_a35a969078b211913c70a3289d579181f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a35a969078b211913c70a3289d579181f">npi::log::openConsole</a> ()</td></tr>
-<tr class="memitem:a93f5626ee4252ae8bd940774a8e585ee" id="r_a93f5626ee4252ae8bd940774a8e585ee"><td class="memItemLeft"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#d3/d52/structnpi_1_1log_1_1_dir_result">DirResult</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a93f5626ee4252ae8bd940774a8e585ee">npi::log::restoreDefaultDir</a> ()</td></tr>
-<tr class="memitem:a7b3479756b1c17fcc8305b593cbb4f45" id="r_a7b3479756b1c17fcc8305b593cbb4f45"><td class="memItemLeft">qint64&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7b3479756b1c17fcc8305b593cbb4f45">npi::log::restoreDefaultMaxFolderSizeMb</a> ()</td></tr>
-<tr class="memitem:aa9c7f1de08a88a0dcac316127c1d384b" id="r_aa9c7f1de08a88a0dcac316127c1d384b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#aa9c7f1de08a88a0dcac316127c1d384b">npi::log::setColoredConsole</a> (const bool state)</td></tr>
-<tr class="memitem:a5529e95c9cfaa835aea5d5328e2027c9" id="r_a5529e95c9cfaa835aea5d5328e2027c9"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a5529e95c9cfaa835aea5d5328e2027c9">npi::log::setDefaultLogFields</a> (const bool temp=false)</td></tr>
-<tr class="memitem:ae079f1ca47b8170ab407d0ae3a7d020c" id="r_ae079f1ca47b8170ab407d0ae3a7d020c"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ae079f1ca47b8170ab407d0ae3a7d020c">npi::log::setDefaultMsgFields</a> (const bool temp=false)</td></tr>
-<tr class="memitem:a844684c1ed04bc4583bfd4e85fa23695" id="r_a844684c1ed04bc4583bfd4e85fa23695"><td class="memItemLeft"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#d3/d52/structnpi_1_1log_1_1_dir_result">DirResult</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a844684c1ed04bc4583bfd4e85fa23695">npi::log::setDir</a> (const QString &amp;path)</td></tr>
-<tr class="memitem:a0704c734d5b5222ded83d80dc014eca4" id="r_a0704c734d5b5222ded83d80dc014eca4"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a0704c734d5b5222ded83d80dc014eca4">npi::log::setFilterRules</a> (const QStringList &amp;rules={}, const bool temp=false)</td></tr>
-<tr class="memitem:aba705d06746719c37cc3fed16385546d" id="r_aba705d06746719c37cc3fed16385546d"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#aba705d06746719c37cc3fed16385546d">npi::log::setLogFields</a> (const QStringList &amp;fieldList={}, const bool temp=false)</td></tr>
-<tr class="memitem:ae818c9177e7ef5b2f0e5eec5991eecd4" id="r_ae818c9177e7ef5b2f0e5eec5991eecd4"><td class="memItemLeft">qint64&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ae818c9177e7ef5b2f0e5eec5991eecd4">npi::log::setMaxFolderSizeMb</a> (const qint64 size)</td></tr>
-<tr class="memitem:a935baa9c547b845d992d535ca5f59198" id="r_a935baa9c547b845d992d535ca5f59198"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a935baa9c547b845d992d535ca5f59198">npi::log::setMsgFields</a> (const QStringList &amp;fieldList={}, const bool temp=false)</td></tr>
-<tr class="memitem:a976d8ed596c3a4571209d46c933b5bbe" id="r_a976d8ed596c3a4571209d46c933b5bbe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a976d8ed596c3a4571209d46c933b5bbe">npi::log::setMuteDisplay</a> (const bool state)</td></tr>
-<tr class="memitem:a9be9faae3670cc6af86285afecfb3e58" id="r_a9be9faae3670cc6af86285afecfb3e58"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a9be9faae3670cc6af86285afecfb3e58">npi::log::setWarnAsImpLog</a> (bool state, bool temp=false)</td></tr>
+<tr class="memdesc:a35a969078b211913c70a3289d579181f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a temporary console when no console is currently attached.  <br /></td></tr>
+<tr class="memitem:aecacbd05b8c19542926b9d07b16435ba" id="r_aecacbd05b8c19542926b9d07b16435ba"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#aecacbd05b8c19542926b9d07b16435ba">npi::log::qtCategories</a> ()</td></tr>
+<tr class="memdesc:aecacbd05b8c19542926b9d07b16435ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all encountered Qt logging categories.  <br /></td></tr>
+<tr class="memitem:ab26e1ac5aef4345c9676101f3cd9877f" id="r_ab26e1ac5aef4345c9676101f3cd9877f"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f">npi::log::resetDirectory</a> ()</td></tr>
+<tr class="memdesc:ab26e1ac5aef4345c9676101f3cd9877f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the default log directory.  <br /></td></tr>
+<tr class="memitem:ae641f0801f76d9024013c1d201b7d4fa" id="r_ae641f0801f76d9024013c1d201b7d4fa"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ae641f0801f76d9024013c1d201b7d4fa">npi::log::resetDisplayFields</a> ()</td></tr>
+<tr class="memdesc:ae641f0801f76d9024013c1d201b7d4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the default displayed log fields.  <br /></td></tr>
+<tr class="memitem:a015e6cf2735c059ebad3d94c4f69d884" id="r_a015e6cf2735c059ebad3d94c4f69d884"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a015e6cf2735c059ebad3d94c4f69d884">npi::log::resetFileFields</a> ()</td></tr>
+<tr class="memdesc:a015e6cf2735c059ebad3d94c4f69d884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the default normal log file fields.  <br /></td></tr>
+<tr class="memitem:a4a5b29dcb269f47a4ef69ee7fe39bfb6" id="r_a4a5b29dcb269f47a4ef69ee7fe39bfb6"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a4a5b29dcb269f47a4ef69ee7fe39bfb6">npi::log::resetFilterRules</a> ()</td></tr>
+<tr class="memdesc:a4a5b29dcb269f47a4ef69ee7fe39bfb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all custom category filter rules.  <br /></td></tr>
+<tr class="memitem:a82c9393d9e86743df96071dd5dda1fb6" id="r_a82c9393d9e86743df96071dd5dda1fb6"><td class="memItemLeft">std::uint32_t&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a82c9393d9e86743df96071dd5dda1fb6">npi::log::resetMaxFolderSizeMib</a> ()</td></tr>
+<tr class="memdesc:a82c9393d9e86743df96071dd5dda1fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the default maximum log folder size.  <br /></td></tr>
+<tr class="memitem:af093553629bec17031b18b4835c2fbb2" id="r_af093553629bec17031b18b4835c2fbb2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#af093553629bec17031b18b4835c2fbb2">npi::log::setColoredConsole</a> (bool state)</td></tr>
+<tr class="memdesc:af093553629bec17031b18b4835c2fbb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables console colors based on log level.  <br /></td></tr>
+<tr class="memitem:ac894ac9b7f01f578c3b8696c765fb3aa" id="r_ac894ac9b7f01f578c3b8696c765fb3aa"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa">npi::log::setDirectory</a> (const QString &amp;path)</td></tr>
+<tr class="memdesc:ac894ac9b7f01f578c3b8696c765fb3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the directory used for log files.  <br /></td></tr>
+<tr class="memitem:a1c8be170c09e71630d3e61964c5681dc" id="r_a1c8be170c09e71630d3e61964c5681dc"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a1c8be170c09e71630d3e61964c5681dc">npi::log::setDisplayFields</a> (const QString &amp;fields)</td></tr>
+<tr class="memdesc:a1c8be170c09e71630d3e61964c5681dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the fields included in displayed logs.  <br /></td></tr>
+<tr class="memitem:a314e1bbd60d0d23d037fdb863ad706fd" id="r_a314e1bbd60d0d23d037fdb863ad706fd"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a314e1bbd60d0d23d037fdb863ad706fd">npi::log::setFileFields</a> (const QString &amp;fields)</td></tr>
+<tr class="memdesc:a314e1bbd60d0d23d037fdb863ad706fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the fields included in normal log files.  <br /></td></tr>
+<tr class="memitem:a204797419f5e1681a159d1eef6f401bc" id="r_a204797419f5e1681a159d1eef6f401bc"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc">npi::log::setFilterRules</a> (const QStringList &amp;rules)</td></tr>
+<tr class="memdesc:a204797419f5e1681a159d1eef6f401bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the custom Qt logging category filter rules.  <br /></td></tr>
+<tr class="memitem:a44c3ab1ead08f699085787d44d37ae11" id="r_a44c3ab1ead08f699085787d44d37ae11"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a44c3ab1ead08f699085787d44d37ae11">npi::log::setMaxFolderSizeMib</a> (std::uint32_t size)</td></tr>
+<tr class="memdesc:a44c3ab1ead08f699085787d44d37ae11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the normal-log cleanup target.  <br /></td></tr>
+<tr class="memitem:aa75c518a9a8f60e6ac8b5fc04ccf63a9" id="r_aa75c518a9a8f60e6ac8b5fc04ccf63a9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#aa75c518a9a8f60e6ac8b5fc04ccf63a9">npi::log::setMutedDisplay</a> (bool state)</td></tr>
+<tr class="memdesc:aa75c518a9a8f60e6ac8b5fc04ccf63a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporarily mutes or unmutes all log display output.  <br /></td></tr>
+<tr class="memitem:a7cef00f1da1eed6bc0afca56fe9cfb0e" id="r_a7cef00f1da1eed6bc0afca56fe9cfb0e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7cef00f1da1eed6bc0afca56fe9cfb0e">npi::log::setShowDebugLog</a> (bool state)</td></tr>
+<tr class="memdesc:a7cef00f1da1eed6bc0afca56fe9cfb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables debug log display.  <br /></td></tr>
+<tr class="memitem:a462603ec8bccd8b4cb3abc387fd6cc33" id="r_a462603ec8bccd8b4cb3abc387fd6cc33"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a462603ec8bccd8b4cb3abc387fd6cc33">npi::log::setShowInfoLog</a> (bool state)</td></tr>
+<tr class="memdesc:a462603ec8bccd8b4cb3abc387fd6cc33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables information log display.  <br /></td></tr>
+<tr class="memitem:aa8f2d23ad1c757d005b28864d17b6ba7" id="r_aa8f2d23ad1c757d005b28864d17b6ba7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#aa8f2d23ad1c757d005b28864d17b6ba7">npi::log::setShowWarnLog</a> (bool state)</td></tr>
+<tr class="memdesc:aa8f2d23ad1c757d005b28864d17b6ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables warning log display.  <br /></td></tr>
+<tr class="memitem:abaa1d855a740947aa15448a584ab6ae4" id="r_abaa1d855a740947aa15448a584ab6ae4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#abaa1d855a740947aa15448a584ab6ae4">npi::log::setTempMode</a> (bool state)</td></tr>
+<tr class="memdesc:abaa1d855a740947aa15448a584ab6ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables temporary configuration mode.  <br /></td></tr>
+<tr class="memitem:a780d5155d9059b348224270ef35f1af1" id="r_a780d5155d9059b348224270ef35f1af1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a780d5155d9059b348224270ef35f1af1">npi::log::setWarnLogImportantState</a> (bool state)</td></tr>
+<tr class="memdesc:a780d5155d9059b348224270ef35f1af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables important-log forwarding for warning logs.  <br /></td></tr>
+<tr class="memitem:ae10816ac3a1bfeb44e75e33a094aa716" id="r_ae10816ac3a1bfeb44e75e33a094aa716"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ae10816ac3a1bfeb44e75e33a094aa716">npi::log::showDebugLog</a> ()</td></tr>
+<tr class="memdesc:ae10816ac3a1bfeb44e75e33a094aa716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether debug logs are enabled for display.  <br /></td></tr>
+<tr class="memitem:a77f60d80e451122614983a4dcd42597d" id="r_a77f60d80e451122614983a4dcd42597d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a77f60d80e451122614983a4dcd42597d">npi::log::showInfoLog</a> ()</td></tr>
+<tr class="memdesc:a77f60d80e451122614983a4dcd42597d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether information logs are enabled for display.  <br /></td></tr>
+<tr class="memitem:a95f11cd009de5a42cff56b7812649fc6" id="r_a95f11cd009de5a42cff56b7812649fc6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a95f11cd009de5a42cff56b7812649fc6">npi::log::showWarnLog</a> ()</td></tr>
+<tr class="memdesc:a95f11cd009de5a42cff56b7812649fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether warning logs are enabled for display.  <br /></td></tr>
+<tr class="memitem:a8f436e718db364f62c2ee32f8e7d3409" id="r_a8f436e718db364f62c2ee32f8e7d3409"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a8f436e718db364f62c2ee32f8e7d3409">npi::log::tempMode</a> ()</td></tr>
+<tr class="memdesc:a8f436e718db364f62c2ee32f8e7d3409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether temporary configuration mode is enabled.  <br /></td></tr>
 </table>
-<hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
-<a name="d3/d52/structnpi_1_1log_1_1_dir_result" id="d3/d52/structnpi_1_1log_1_1_dir_result"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#d3/d52/structnpi_1_1log_1_1_dir_result">&#9670;&#160;</a></span>npi::log::DirResult</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct npi::log::DirResult</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Collaboration diagram for npi::log::DirResult:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d01/structnpi_1_1log_1_1_dir_result__coll__graph.svg" width="194" height="152"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
-<table class="fieldtable">
-<tr><th colspan="3">Class Members</th></tr>
-<tr><td class="fieldtype">
-<a id="a3e8568552a07004c1e722f1281bbdb0d" name="a3e8568552a07004c1e722f1281bbdb0d"></a>bool</td>
-<td class="fieldname">
-error_ {false}</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="aed1e31b79e19cf60da4c57b0f5ef9e92" name="aed1e31b79e19cf60da4c57b0f5ef9e92"></a>QString</td>
-<td class="fieldname">
-message_</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a6fab4ff772f04223cc0c473d8d2d2a9b" name="a6fab4ff772f04223cc0c473d8d2d2a9b"></a>QString</td>
-<td class="fieldname">
-newPath_</td>
-<td class="fielddoc">
-</td></tr>
-</table>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -249,7 +266,7 @@ newPath_</td>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../da/df4/_log_8h.html">Log.h</a></li>
+    <li class="navelem"><a href="../../dir_176b74ca7fe251e8ce5a9c9ccf88d4ec.html">Root</a></li><li class="navelem"><a href="../../da/df4/_log_8h.html">Log.h</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

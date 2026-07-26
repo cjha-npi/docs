@@ -1,0 +1,13 @@
+<map id="npi::ind::LockedValue::LockedValue" name="npi::ind::LockedValue::LockedValue">
+<area shape="rect" id="Node000001" title="Default&#45;constructs the protected value." alt="" coords="243,144,536,169"/>
+<area shape="rect" id="Node000002" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html#a4104b6bc59aca7167b61380f25ea56d3" title="Disables copying because each object owns an independent lock." alt="" coords="5,5,195,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="356,140,283,104,194,61,162,49,161,43,196,57,286,99,361,139"/>
+<area shape="rect" id="Node000003" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html#abe6bd0dc2dc7767c5fa57d74119f1cd5" title="Copy&#45;constructs the protected value." alt="" coords="5,71,195,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="322,143,190,114,190,109,326,140"/>
+<area shape="rect" id="Node000004" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html#af3068b5522890e2a7ef899262941d95c" title="Disables moving because the internal lock has a fixed identity." alt="" coords="5,136,195,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="232,157,195,159,194,154,237,155"/>
+<area shape="rect" id="Node000005" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html#a314e74992e724bc8c7910c32dfd00da9" title="Disables copy assignment because lock ownership cannot be copied." alt="" coords="5,201,195,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="322,172,191,204,189,199,326,169"/>
+<area shape="rect" id="Node000006" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html#a278bd1fca37c2b7dee74f2761d293260" title="Disables move assignment because the internal lock cannot be transferred." alt="" coords="5,267,195,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="361,172,286,214,196,256,162,269,161,264,194,251,283,209,356,174"/>
+</map>

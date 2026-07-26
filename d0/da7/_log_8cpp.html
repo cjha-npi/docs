@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Log.cpp File Reference</title>
+<title>Main Project: Root/Log.cpp File Reference</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -137,396 +137,1282 @@ $(function(){initNavTree('d0/da7/_log_8cpp.html','../../',''); });
   <div class="headertitle"><div class="title">Log.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;npi/PlatformCheck.hpp&quot;</code><br />
-<code>#include &lt;windows.h&gt;</code><br />
-<code>#include &lt;atomic&gt;</code><br />
-<code>#include &lt;array&gt;</code><br />
+<div class="textblock"><code>#include &lt;Windows.h&gt;</code><br />
+<code>#include &lt;crtdbg.h&gt;</code><br />
+<code>#include &lt;eh.h&gt;</code><br />
+<code>#include &lt;intrin.h&gt;</code><br />
+<code>#include &lt;malloc.h&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;bit&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;condition_variable&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
 <code>#include &lt;csignal&gt;</code><br />
-<code>#include &lt;cstdint&gt;</code><br />
-<code>#include &lt;crtdbg.h&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;cwchar&gt;</code><br />
 <code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;format&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;ranges&gt;</code><br />
+<code>#include &lt;semaphore&gt;</code><br />
 <code>#include &lt;stop_token&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;cwchar&gt;</code><br />
-<code>#include &lt;semaphore&gt;</code><br />
-<code>#include &lt;format&gt;</code><br />
-<code>#include &lt;ctime&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
-<code>#include &lt;bit&gt;</code><br />
-<code>#include &lt;malloc.h&gt;</code><br />
-<code>#include &lt;intrin.h&gt;</code><br />
-<code>#include &lt;eh.h&gt;</code><br />
-<code>#include &quot;npi/Log.h&quot;</code><br />
+<code>#include &lt;QApplication&gt;</code><br />
 <code>#include &lt;QByteArray&gt;</code><br />
+<code>#include &lt;QChar&gt;</code><br />
 <code>#include &lt;QCoreApplication&gt;</code><br />
 <code>#include &lt;QDateTime&gt;</code><br />
 <code>#include &lt;QDir&gt;</code><br />
 <code>#include &lt;QFile&gt;</code><br />
 <code>#include &lt;QFileInfo&gt;</code><br />
 <code>#include &lt;QHash&gt;</code><br />
+<code>#include &lt;QList&gt;</code><br />
 <code>#include &lt;QLoggingCategory&gt;</code><br />
+<code>#include &lt;QMessageBox&gt;</code><br />
+<code>#include &lt;QMessageLogContext&gt;</code><br />
+<code>#include &lt;QMetaObject&gt;</code><br />
 <code>#include &lt;QReadLocker&gt;</code><br />
 <code>#include &lt;QReadWriteLock&gt;</code><br />
+<code>#include &lt;QRegularExpression&gt;</code><br />
 <code>#include &lt;QSettings&gt;</code><br />
 <code>#include &lt;QString&gt;</code><br />
 <code>#include &lt;QStringBuilder&gt;</code><br />
 <code>#include &lt;QStringList&gt;</code><br />
+<code>#include &lt;QStringView&gt;</code><br />
 <code>#include &lt;QTemporaryFile&gt;</code><br />
+<code>#include &lt;QThread&gt;</code><br />
+<code>#include &lt;QTimer&gt;</code><br />
 <code>#include &lt;QTimeZone&gt;</code><br />
 <code>#include &lt;QtGlobal&gt;</code><br />
 <code>#include &lt;QtLogging&gt;</code><br />
 <code>#include &lt;QVariant&gt;</code><br />
 <code>#include &lt;QWriteLocker&gt;</code><br />
-<code>#include &lt;QElapsedTimer&gt;</code><br />
-<code>#include &quot;npi/AppMetaData.hpp&quot;</code><br />
-<code>#include &quot;npi/GlobalLocker.hpp&quot;</code><br />
-<code>#include &quot;npi/MetaPaths.h&quot;</code><br />
-<code>#include &quot;npi/NativeFatalMessage.hpp&quot;</code><br />
-<code>#include &quot;ext/magic_enum.hpp&quot;</code><br />
 <code>#include &quot;ext/concurrentqueue.h&quot;</code><br />
+<code>#include &quot;ext/magic_enum.hpp&quot;</code><br />
+<code>#include &quot;src/Ind/LockedValue.hpp&quot;</code><br />
+<code>#include &quot;src/Ind/WinErrorText.hpp&quot;</code><br />
+<code>#include &quot;src/Root/MetaInfo.h&quot;</code><br />
+<code>#include &quot;src/Util/CrossProcessLocker.hpp&quot;</code><br />
+<code>#include &quot;src/Util/WinMsgBoxExe.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/df4/_log_8h_source.html">Log.h</a>&quot;</code><br />
+</div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><p>Implements the asynchronous application logging system. </p>
+<p>This translation unit installs the Qt message handler, captures and normalizes message context, formats normal and important log records, manages file and display worker threads, controls permanent and temporary consoles, persists runtime configuration, performs log-directory cleanup, and installs fatal and crash handlers. Important records are forwarded to the external npiImpLog helper process so that critical information can still be written during fatal failures and abnormal termination.</p>
+<p>The implementation is Windows-specific and intentionally keeps its central state alive until process termination so that logging remains available during static destruction and emergency handling.</p>
+<dl class="section note"><dt>Note</dt><dd>This implementation is intentionally documented selectively. Because the file is large, comments focus on architecture, ownership, synchronization, invariants, failure handling, and other non-obvious design decisions. Straightforward code is generally left uncommented to avoid obscuring the implementation with comments that merely repeat what the code already expresses. </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Log.cpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/d68/_log_8cpp__incl.svg" width="100%" height="383"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/d68/_log_8cpp__incl.svg" width="100%" height="438"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="../../d0/da7/_log_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html">anonymous_namespace{Log.cpp}::LogCore</a></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AFieldConfig_5Fd5_2Fd42_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Ffield_5Fconfig" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AFieldConfig_5Fd5_2Fd42_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Ffield_5Fconfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d5/d42/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_field_config">anonymous_namespace{Log.cpp}::LogCore::FieldConfig</a></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AFixedStrings" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AFixedStrings"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html">anonymous_namespace{Log.cpp}::LogCore::FixedStrings</a></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AInitialLog_5Fda_2Fdfa_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Finitial_5Flog" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AInitialLog_5Fda_2Fdfa_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Finitial_5Flog"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#da/dfa/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_initial_log">anonymous_namespace{Log.cpp}::LogCore::InitialLog</a></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AOneLog_5Fd0_2Fd89_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Fone_5Flog" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AOneLog_5Fd0_2Fd89_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Fone_5Flog"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d0/d89/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_one_log">anonymous_namespace{Log.cpp}::LogCore::OneLog</a></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AStartupSettings_5Fd7_2Fdb8_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Fstartup_5Fsettings" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AStartupSettings_5Fd7_2Fdb8_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Fstartup_5Fsettings"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d7/db8/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_startup_settings">anonymous_namespace{Log.cpp}::LogCore::StartupSettings</a></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AUnitInfo_5Fd8_2Fdb4_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Funit_5Finfo" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALogCore_3A_3AUnitInfo_5Fd8_2Fdb4_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Flog_5Fcore_5F1_5F1_5Funit_5Finfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d8/db4/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_unit_info">anonymous_namespace{Log.cpp}::LogCore::UnitInfo</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ACategoryCache" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ACategoryCache"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html">anonymous_namespace{Log.cpp}::CategoryCache</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches normalized logging-category text.  <a href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#details">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ACategoryCache_3A_3AEntry_5Fdf_2Fd07_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fcategory_5Fcache_5F1_5F1_5Fentry" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ACategoryCache_3A_3AEntry_5Fdf_2Fd07_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fcategory_5Fcache_5F1_5F1_5Fentry"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry">anonymous_namespace{Log.cpp}::CategoryCache::Entry</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ACategoryCache_3A_3AKey_5Fda_2Fd37_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fcategory_5Fcache_5F1_5F1_5Fkey" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ACategoryCache_3A_3AKey_5Fda_2Fd37_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fcategory_5Fcache_5F1_5F1_5Fkey"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">anonymous_namespace{Log.cpp}::CategoryCache::Key</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ACategoryCache_3A_3ATextHash_5Fd8_2Fd32_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fcategory_5Fcache_5F1_5F1_5Ftext_5Fhash" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ACategoryCache_3A_3ATextHash_5Fd8_2Fd32_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fcategory_5Fcache_5F1_5F1_5Ftext_5Fhash"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">anonymous_namespace{Log.cpp}::CategoryCache::TextHash</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html">anonymous_namespace{Log.cpp}::FileLineCache</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches normalized source-file and line-number text.  <a href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#details">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache_3A_3AEntry_5Fd7_2Fd6d_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffile_5Fline_5Fcache_5F1_5F1_5Fentry" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache_3A_3AEntry_5Fd7_2Fd6d_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffile_5Fline_5Fcache_5F1_5F1_5Fentry"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry">anonymous_namespace{Log.cpp}::FileLineCache::Entry</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache_3A_3AKey_5Fdf_2Fd64_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffile_5Fline_5Fcache_5F1_5F1_5Fkey" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache_3A_3AKey_5Fdf_2Fd64_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffile_5Fline_5Fcache_5F1_5F1_5Fkey"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">anonymous_namespace{Log.cpp}::FileLineCache::Key</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache_3A_3ATextHash_5Fdf_2Fdc8_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffile_5Fline_5Fcache_5F1_5F1_5Ftext_5Fhash" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache_3A_3ATextHash_5Fdf_2Fdc8_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffile_5Fline_5Fcache_5F1_5F1_5Ftext_5Fhash"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">anonymous_namespace{Log.cpp}::FileLineCache::TextHash</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat_3A_3ADateTimeCache_5Fd0_2Fd1c_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1format_5F1_5F1_5Fdate_5Ftime_5Fcache" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat_3A_3ADateTimeCache_5Fd0_2Fd1c_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1format_5F1_5F1_5Fdate_5Ftime_5Fcache"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">anonymous_namespace{Log.cpp}::format::DateTimeCache</a></td></tr>
+<tr class="memdesc:d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches the formatted local date and timezone for repeated timestamps.  <a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat_3A_3AUnitInfo_5Fd4_2Fdaa_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1format_5F1_5F1_5Funit_5Finfo" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat_3A_3AUnitInfo_5Fd4_2Fdaa_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1format_5F1_5F1_5Funit_5Finfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">anonymous_namespace{Log.cpp}::format::UnitInfo</a></td></tr>
+<tr class="memdesc:d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes one elapsed-time unit during fixed-width formatting of time delta.  <a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html">anonymous_namespace{Log.cpp}::FunctionCache</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches normalized function names from Qt message contexts.  <a href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#details">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache_3A_3AEntry_5Fd9_2Fdc2_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffunction_5Fcache_5F1_5F1_5Fentry" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache_3A_3AEntry_5Fd9_2Fdc2_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffunction_5Fcache_5F1_5F1_5Fentry"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#d9/dc2/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_entry">anonymous_namespace{Log.cpp}::FunctionCache::Entry</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache_3A_3AKey_5Fd4_2Fd3f_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffunction_5Fcache_5F1_5F1_5Fkey" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache_3A_3AKey_5Fd4_2Fd3f_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffunction_5Fcache_5F1_5F1_5Fkey"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#d4/d3f/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_key">anonymous_namespace{Log.cpp}::FunctionCache::Key</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache_3A_3ATextHash_5Fda_2Fd53_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffunction_5Fcache_5F1_5F1_5Ftext_5Fhash" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache_3A_3ATextHash_5Fda_2Fd53_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffunction_5Fcache_5F1_5F1_5Ftext_5Fhash"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#da/d53/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_text_hash">anonymous_namespace{Log.cpp}::FunctionCache::TextHash</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">anonymous_namespace{Log.cpp}::LeakedState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owns all process-lifetime logging state.  <a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#details">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3ABridgeState_5Fd1_2Fdf0_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fbridge_5Fstate" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3ABridgeState_5Fd1_2Fdf0_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fbridge_5Fstate"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/df0/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_bridge_state">anonymous_namespace{Log.cpp}::LeakedState::BridgeState</a></td></tr>
+<tr class="memdesc:d1/df0/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_bridge_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores synchronization and handles for the important-log helper process.  <a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/df0/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_bridge_state">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3AConfig_5Fd1_2Fdbc_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fconfig" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3AConfig_5Fd1_2Fdbc_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fconfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config">anonymous_namespace{Log.cpp}::LeakedState::Config</a></td></tr>
+<tr class="memdesc:d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the current synchronized runtime configuration.  <a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3ACrashState_5Fd8_2Fde1_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fcrash_5Fstate" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3ACrashState_5Fd8_2Fde1_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fcrash_5Fstate"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state">anonymous_namespace{Log.cpp}::LeakedState::CrashState</a></td></tr>
+<tr class="memdesc:d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores crash ownership flags and allocation-free emergency buffers.  <a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3ADispWorker_5Fd1_2Fd3b_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fdisp_5Fworker" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3ADispWorker_5Fd1_2Fd3b_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fdisp_5Fworker"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker">anonymous_namespace{Log.cpp}::LeakedState::DispWorker</a></td></tr>
+<tr class="memdesc:d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display worker with display muting and failure information.  <a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3AFileWorker_5Fd2_2Fdef_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Ffile_5Fworker" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3AFileWorker_5Fd2_2Fdef_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Ffile_5Fworker"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker">anonymous_namespace{Log.cpp}::LeakedState::FileWorker</a></td></tr>
+<tr class="memdesc:d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">File worker with normal-log file information and drop counting.  <a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3ARuntime_5Fd2_2Fd25_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fruntime" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3ARuntime_5Fd2_2Fd25_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fruntime"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime">anonymous_namespace{Log.cpp}::LeakedState::Runtime</a></td></tr>
+<tr class="memdesc:d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores mutable process state that is not part of the user configuration.  <a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3AWorker_5Fd0_2Fded_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fworker" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ALeakedState_3A_3AWorker_5Fd0_2Fded_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fworker"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">anonymous_namespace{Log.cpp}::LeakedState::Worker</a></td></tr>
+<tr class="memdesc:d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides queue, wake-up, field-layout, and thread state shared by workers.  <a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AOneLog" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AOneLog"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">anonymous_namespace{Log.cpp}::OneLog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores one captured log record for asynchronous processing.  <a href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html#details">More...</a><br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ATextBuffer_3C_20LineSize_2C_20LineCount_20_3E" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3ATextBuffer_3C_20LineSize_2C_20LineCount_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a fixed-capacity, allocation-free text buffer.  <a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html">anonymous_namespace{Log.cpp}</a></td></tr>
-<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Asafe" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Asafe"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html">anonymous_namespace{Log.cpp}::safe</a></td></tr>
+<tr class="memdesc:dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the private implementation of the logging system. <br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Abridge" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Abridge"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html">anonymous_namespace{Log.cpp}::bridge</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aconsole" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aconsole"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html">anonymous_namespace{Log.cpp}::console</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Acontrol" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Acontrol"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html">anonymous_namespace{Log.cpp}::control</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Acrash" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Acrash"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html">anonymous_namespace{Log.cpp}::crash</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html">anonymous_namespace{Log.cpp}::format</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Alayout" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Alayout"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html">anonymous_namespace{Log.cpp}::layout</a></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aworkers" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aworkers"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html">anonymous_namespace{Log.cpp}::workers</a></td></tr>
+<tr class="memitem:bridge" id="r_bridge"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../da/dc9/namespacebridge.html">bridge</a></td></tr>
+<tr class="memdesc:da/dc9/namespacebridge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages the external helper process used for important logs. <br /></td></tr>
+<tr class="memitem:console" id="r_console"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dc/daa/namespaceconsole.html">console</a></td></tr>
+<tr class="memdesc:dc/daa/namespaceconsole"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects, opens, configures, and closes Windows console output. <br /></td></tr>
+<tr class="memitem:control" id="r_control"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d7b/namespacecontrol.html">control</a></td></tr>
+<tr class="memdesc:dd/d7b/namespacecontrol"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements validation, persistence, filtering, and configuration changes. <br /></td></tr>
+<tr class="memitem:crash" id="r_crash"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d93/namespacecrash.html">crash</a></td></tr>
+<tr class="memdesc:dc/d93/namespacecrash"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs and implements fatal and abnormal-termination handling. <br /></td></tr>
+<tr class="memitem:format" id="r_format"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../da/ddb/namespaceformat.html">format</a></td></tr>
+<tr class="memdesc:da/ddb/namespaceformat"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts captured records into sanitized normal and important log lines. <br /></td></tr>
+<tr class="memitem:layout" id="r_layout"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d83/namespacelayout.html">layout</a></td></tr>
+<tr class="memdesc:d5/d83/namespacelayout"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes field lists and packs field order into atomic values. <br /></td></tr>
+<tr class="memitem:workers" id="r_workers"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d8a/namespaceworkers.html">workers</a></td></tr>
+<tr class="memdesc:d8/d8a/namespaceworkers"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owns asynchronous file and display processing and directory cleanup. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a9f918755b601cf4bffca775992e6fb90" id="r_a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9f918755b601cf4bffca775992e6fb90">NOMINMAX</a></td></tr>
 <tr class="memitem:a489b218ba63dc7f5434988420437df4f" id="r_a489b218ba63dc7f5434988420437df4f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a489b218ba63dc7f5434988420437df4f">npiCrit</a>&#160;&#160;&#160;qCCritical(npi_log).noquote()</td></tr>
+<tr class="memdesc:a489b218ba63dc7f5434988420437df4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal critical diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:aba900325c5211dc8d74fe8653bfd7a05" id="r_aba900325c5211dc8d74fe8653bfd7a05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aba900325c5211dc8d74fe8653bfd7a05">npiDbug</a>&#160;&#160;&#160;qCDebug(npi_log).noquote()</td></tr>
+<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the logging category used for logging-system diagnostics.  <br /></td></tr>
 <tr class="memitem:acfd217143f12c58fa5be9bd51908a231" id="r_acfd217143f12c58fa5be9bd51908a231"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acfd217143f12c58fa5be9bd51908a231">npiFatl</a>&#160;&#160;&#160;qCFatal(npi_log).noquote()</td></tr>
+<tr class="memdesc:acfd217143f12c58fa5be9bd51908a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal fatal diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:ae7f5f25fa0583792bf1a5f409b3ea9ab" id="r_ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae7f5f25fa0583792bf1a5f409b3ea9ab">npiInfo</a>&#160;&#160;&#160;qCInfo(npi_log).noquote()</td></tr>
+<tr class="memdesc:ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal informational diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:a29523bd69971206d80a3109b7bba0eea" id="r_a29523bd69971206d80a3109b7bba0eea"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>&#160;&#160;&#160;qCWarning(npi_log).noquote()</td></tr>
+<tr class="memdesc:a29523bd69971206d80a3109b7bba0eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal warning diagnostic through the logging-system category.  <br /></td></tr>
+<tr class="memitem:a8a7c30a576d5706b6c0821834d01cbbc" id="r_a8a7c30a576d5706b6c0821834d01cbbc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8a7c30a576d5706b6c0821834d01cbbc">STRICT</a></td></tr>
 <tr class="memitem:ac7bef5d85e3dcd73eef56ad39ffc84a9" id="r_ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">WIN32_LEAN_AND_MEAN</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a7b5eb1dcfee464df06dac16a042bb856" id="r_a7b5eb1dcfee464df06dac16a042bb856"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a7b5eb1dcfee464df06dac16a042bb856">anonymous_namespace{Log.cpp}::layout::FieldArray</a> = std::array&lt;std::uint8_t, <a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>&gt;</td></tr>
+<tr class="memdesc:a7b5eb1dcfee464df06dac16a042bb856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores one unpacked field identifier for each supported field position.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:afe9aa0cf855e48e873f1abd6020f7c0d" id="r_afe9aa0cf855e48e873f1abd6020f7c0d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">anonymous_namespace{Log.cpp}::Field</a> : std::uint8_t { <br />
+&#160;&#160;<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da8cf10d2341ed01492506085688270c1e">anonymous_namespace{Log.cpp}::DateTime</a> = 0
+, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3ff39d3acb327553070a64ef0cb321d5">anonymous_namespace{Log.cpp}::Sequence</a> = 1
+, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">anonymous_namespace{Log.cpp}::Level</a> = 2
+, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa9d531fcd1481d2d382c2a9a64f34ef0">anonymous_namespace{Log.cpp}::ThreadIndex</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da693e7589872f7acd3e69d831d022d6ea">anonymous_namespace{Log.cpp}::ThreadId</a> = 4
+, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daabd5d15a9bd1e36bb6facd60952a2b69">anonymous_namespace{Log.cpp}::AppTime</a> = 5
+, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da0ce36ae8214564ac9d5d1a680d766f92">anonymous_namespace{Log.cpp}::ThreadTime</a> = 6
+, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0dac5d8045e54ebee5518a150789acae284">anonymous_namespace{Log.cpp}::ThreadDelta</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873">anonymous_namespace{Log.cpp}::Category</a> = 8
+, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da995f116e75809666864045a846c51ae0">anonymous_namespace{Log.cpp}::FileLine</a> = 9
+, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da86408593c34af77fdd90df932f8b5261">anonymous_namespace{Log.cpp}::Function</a> = 10
+<br />
+ }</td></tr>
+<tr class="memdesc:afe9aa0cf855e48e873f1abd6020f7c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies a field that can be included in formatted log output.  <a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac8e06193aa953194d78cd55baf2151d8" id="r_ac8e06193aa953194d78cd55baf2151d8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#ac8e06193aa953194d78cd55baf2151d8">anonymous_namespace{Log.cpp}::safe::append2Digits</a> (char *out, size_t &amp;pos, const unsigned num) noexcept</td></tr>
-<tr class="memitem:a1138ca08d0d8b5a0482ee827987b024f" id="r_a1138ca08d0d8b5a0482ee827987b024f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a1138ca08d0d8b5a0482ee827987b024f">anonymous_namespace{Log.cpp}::safe::append3Digits</a> (char *out, size_t &amp;pos, const unsigned num) noexcept</td></tr>
-<tr class="memitem:a99008cbbcf5923943b42b8788667114a" id="r_a99008cbbcf5923943b42b8788667114a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a99008cbbcf5923943b42b8788667114a">anonymous_namespace{Log.cpp}::safe::append4Digits</a> (char *out, size_t &amp;pos, const unsigned num) noexcept</td></tr>
-<tr class="memitem:a65353ac3c8d675a9a827bed9e11acc17" id="r_a65353ac3c8d675a9a827bed9e11acc17"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a65353ac3c8d675a9a827bed9e11acc17">anonymous_namespace{Log.cpp}::safe::appendChr</a> (char *out, size_t &amp;pos, const char chr) noexcept</td></tr>
-<tr class="memitem:a25864f33cd8ec830e37bce42cf9c7140" id="r_a25864f33cd8ec830e37bce42cf9c7140"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a25864f33cd8ec830e37bce42cf9c7140">anonymous_namespace{Log.cpp}::safe::appendChr</a> (char *out, size_t &amp;pos, const wchar_t chr) noexcept</td></tr>
-<tr class="memitem:a0b4f620e950ef2e9f44027327f4bd27f" id="r_a0b4f620e950ef2e9f44027327f4bd27f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a0b4f620e950ef2e9f44027327f4bd27f">anonymous_namespace{Log.cpp}::safe::appendDec</a> (char *out, size_t &amp;pos, const int num) noexcept</td></tr>
-<tr class="memitem:aa526b57e73a9ee9e95150b61a18d6489" id="r_aa526b57e73a9ee9e95150b61a18d6489"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aa526b57e73a9ee9e95150b61a18d6489">anonymous_namespace{Log.cpp}::safe::appendFileName</a> (char *out, size_t &amp;pos, const char *file) noexcept</td></tr>
-<tr class="memitem:a0007f4a1265f5b0c790d25e74cd93713" id="r_a0007f4a1265f5b0c790d25e74cd93713"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a0007f4a1265f5b0c790d25e74cd93713">anonymous_namespace{Log.cpp}::safe::appendFuncName</a> (char *out, size_t &amp;pos, const char *func) noexcept</td></tr>
-<tr class="memitem:a75a945c8f2e5d069f7c6f13667c2ee57" id="r_a75a945c8f2e5d069f7c6f13667c2ee57"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a75a945c8f2e5d069f7c6f13667c2ee57">anonymous_namespace{Log.cpp}::safe::appendHex</a> (char *out, size_t &amp;pos, const uint32_t val) noexcept</td></tr>
-<tr class="memitem:a7927803dc42a56944e7bf39eae31f330" id="r_a7927803dc42a56944e7bf39eae31f330"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a7927803dc42a56944e7bf39eae31f330">anonymous_namespace{Log.cpp}::safe::appendLvl</a> (char *out, size_t &amp;pos, const QtMsgType typ) noexcept</td></tr>
-<tr class="memitem:a70f8ae638e66e98804ee3dbd8772433a" id="r_a70f8ae638e66e98804ee3dbd8772433a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a70f8ae638e66e98804ee3dbd8772433a">anonymous_namespace{Log.cpp}::safe::appendMsg</a> (char *out, size_t &amp;pos, const QString &amp;msg) noexcept</td></tr>
-<tr class="memitem:aa8d11c260254c761c7437280b4284d17" id="r_aa8d11c260254c761c7437280b4284d17"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aa8d11c260254c761c7437280b4284d17">anonymous_namespace{Log.cpp}::safe::appendTxt</a> (char *out, size_t &amp;pos, const char *txt) noexcept</td></tr>
-<tr class="memitem:afe624b9c8f583070f229333403693a5b" id="r_afe624b9c8f583070f229333403693a5b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#afe624b9c8f583070f229333403693a5b">anonymous_namespace{Log.cpp}::safe::appendTxt</a> (char *out, size_t &amp;pos, const wchar_t *txt) noexcept</td></tr>
-<tr class="memitem:ab261e5125e925c910ea977d0ac217ab6" id="r_ab261e5125e925c910ea977d0ac217ab6"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#ab261e5125e925c910ea977d0ac217ab6">anonymous_namespace{Log.cpp}::safe::decDigits</a> (const unsigned num) noexcept</td></tr>
-<tr class="memitem:aee2abc51c02c7af63c137ba0ea58c71a" id="r_aee2abc51c02c7af63c137ba0ea58c71a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aee2abc51c02c7af63c137ba0ea58c71a">anonymous_namespace{Log.cpp}::safe::hardFailFast</a> () noexcept</td></tr>
-<tr class="memitem:a97522aab6ec53ce2693cf4a5432927bf" id="r_a97522aab6ec53ce2693cf4a5432927bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a97522aab6ec53ce2693cf4a5432927bf">anonymous_namespace{Log.cpp}::safe::impLogWrite</a> (const char *data, size_t len, bool crash)</td></tr>
-<tr class="memitem:a7a82c11accb191c2f06849f6d13db39a" id="r_a7a82c11accb191c2f06849f6d13db39a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a7a82c11accb191c2f06849f6d13db39a">anonymous_namespace{Log.cpp}::initLogging</a> ()</td></tr>
-<tr class="memitem:a5383dc98204ed88af64a0de8fb17de7f" id="r_a5383dc98204ed88af64a0de8fb17de7f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a5383dc98204ed88af64a0de8fb17de7f">anonymous_namespace{Log.cpp}::safe::installCrashHandlers</a> () noexcept</td></tr>
-<tr class="memitem:a110b11e90b5bb8ae5c8a1521e33eec21" id="r_a110b11e90b5bb8ae5c8a1521e33eec21"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a110b11e90b5bb8ae5c8a1521e33eec21">anonymous_namespace{Log.cpp}::safe::invalidParamHandler</a> (const wchar_t *expression, const wchar_t *function, const wchar_t *file, unsigned int line, uintptr_t) noexcept</td></tr>
-<tr class="memitem:a0fe54293fedacd10e31e2ee3542c331e" id="r_a0fe54293fedacd10e31e2ee3542c331e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a0fe54293fedacd10e31e2ee3542c331e">anonymous_namespace{Log.cpp}::safe::isIdentifierChar</a> (unsigned char ch) noexcept</td></tr>
-<tr class="memitem:a1e4219749cab61533a6faf773fe7cddb" id="r_a1e4219749cab61533a6faf773fe7cddb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a1e4219749cab61533a6faf773fe7cddb">anonymous_namespace{Log.cpp}::safe::isSpaceChar</a> (unsigned char ch) noexcept</td></tr>
-<tr class="memitem:acf34371ee9cd3beb546b7f2c21dd2844" id="r_acf34371ee9cd3beb546b7f2c21dd2844"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#acf34371ee9cd3beb546b7f2c21dd2844">anonymous_namespace{Log.cpp}::loggingCategoryFilter</a> (QLoggingCategory *category)</td></tr>
-<tr class="memitem:a0c2edb98e44610adcc75724bbf4edfb8" id="r_a0c2edb98e44610adcc75724bbf4edfb8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a0c2edb98e44610adcc75724bbf4edfb8">anonymous_namespace{Log.cpp}::msgHandler</a> (QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg)</td></tr>
-<tr class="memitem:a460f691136cced36ea40b2595c18d0a8" id="r_a460f691136cced36ea40b2595c18d0a8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a460f691136cced36ea40b2595c18d0a8">anonymous_namespace{Log.cpp}::safe::msgHandler</a> (QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg, bool late=false) noexcept</td></tr>
-<tr class="memitem:a2ccdd616a9266b8ac0b03f18feb92c0a" id="r_a2ccdd616a9266b8ac0b03f18feb92c0a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a2ccdd616a9266b8ac0b03f18feb92c0a">anonymous_namespace{Log.cpp}::safe::pureCallHandler</a> () noexcept</td></tr>
-<tr class="memitem:aace4c2e1632cdc24f1bf5e597c0f6be6" id="r_aace4c2e1632cdc24f1bf5e597c0f6be6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aace4c2e1632cdc24f1bf5e597c0f6be6">anonymous_namespace{Log.cpp}::safe::reraiseDefault</a> (int signum) noexcept</td></tr>
-<tr class="memitem:a9e0fadcfb2f6334dde67322028dc7676" id="r_a9e0fadcfb2f6334dde67322028dc7676"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9e0fadcfb2f6334dde67322028dc7676">anonymous_namespace{Log.cpp}::shuttingDown</a> ()</td></tr>
-<tr class="memitem:a05dd8955535418321e297dbbc885a56d" id="r_a05dd8955535418321e297dbbc885a56d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a05dd8955535418321e297dbbc885a56d">anonymous_namespace{Log.cpp}::safe::signalHandler</a> (int signum) noexcept</td></tr>
-<tr class="memitem:a79b9de042466028e5c2c32bdf0635cb5" id="r_a79b9de042466028e5c2c32bdf0635cb5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a79b9de042466028e5c2c32bdf0635cb5">anonymous_namespace{Log.cpp}::safe::startImpLogProcess</a> (const std::wstring &amp;primaryFullPath, const std::wstring &amp;backupFullPath)</td></tr>
-<tr class="memitem:ad3395aac6f72b3cacf47edce1bffd16d" id="r_ad3395aac6f72b3cacf47edce1bffd16d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#ad3395aac6f72b3cacf47edce1bffd16d">anonymous_namespace{Log.cpp}::safe::terminateHandler</a> () noexcept</td></tr>
-<tr class="memitem:abc25ab769b48a34eb27ff7c789822b7e" id="r_abc25ab769b48a34eb27ff7c789822b7e"><td class="memItemLeft">std::wstring&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#abc25ab769b48a34eb27ff7c789822b7e">anonymous_namespace{Log.cpp}::safe::win32ErrorText</a> (DWORD err)</td></tr>
-<tr class="memitem:acee0c3f06b3d9996946c9c55104868c4" id="r_acee0c3f06b3d9996946c9c55104868c4"><td class="memItemLeft">std::wstring&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#acee0c3f06b3d9996946c9c55104868c4">anonymous_namespace{Log.cpp}::safe::win32LastError</a> ()</td></tr>
-<tr class="memitem:a2fc634cd009955d042c53cb5f5eebcb5" id="r_a2fc634cd009955d042c53cb5f5eebcb5"><td class="memItemLeft">LONG WINAPI&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a2fc634cd009955d042c53cb5f5eebcb5">anonymous_namespace{Log.cpp}::safe::windowsExceptionFilter</a> (EXCEPTION_POINTERS *ep)</td></tr>
+<tr class="memitem:a041932e18af5e28399ff242898eaa4ae" id="r_a041932e18af5e28399ff242898eaa4ae"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a041932e18af5e28399ff242898eaa4ae template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a041932e18af5e28399ff242898eaa4ae">anonymous_namespace{Log.cpp}::format::appendAppTime</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:a041932e18af5e28399ff242898eaa4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends elapsed time since logging-system startup.  <br /></td></tr>
+<tr class="memitem:adf8d080876ce9a9fa7a073d24747340c" id="r_adf8d080876ce9a9fa7a073d24747340c"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:adf8d080876ce9a9fa7a073d24747340c template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#adf8d080876ce9a9fa7a073d24747340c">anonymous_namespace{Log.cpp}::format::appendCategory</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:adf8d080876ce9a9fa7a073d24747340c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends cached logging-category text.  <br /></td></tr>
+<tr class="memitem:a00a4b756fe1aad5c9ea2f9b064d55f92" id="r_a00a4b756fe1aad5c9ea2f9b064d55f92"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a00a4b756fe1aad5c9ea2f9b064d55f92 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a00a4b756fe1aad5c9ea2f9b064d55f92">anonymous_namespace{Log.cpp}::format::appendDateTime</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep, <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">DateTimeCache</a> *cache=nullptr) noexcept</td></tr>
+<tr class="memdesc:a00a4b756fe1aad5c9ea2f9b064d55f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a local timestamp with millisecond precision and timezone text.  <br /></td></tr>
+<tr class="memitem:a48f5e179365e3fde46caca3fdfec8b1b" id="r_a48f5e179365e3fde46caca3fdfec8b1b"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a48f5e179365e3fde46caca3fdfec8b1b template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a48f5e179365e3fde46caca3fdfec8b1b">anonymous_namespace{Log.cpp}::format::appendElapsedTime</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, std::uint32_t timeMs) noexcept</td></tr>
+<tr class="memdesc:a48f5e179365e3fde46caca3fdfec8b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a saturated fixed-width elapsed-time value in format <span class="tt">hhh:mm:ss.zzz</span>, where <span class="tt">zzz</span> is milliseconds.  <br /></td></tr>
+<tr class="memitem:a1ab72ec10a06d8bb5b1d465f2d52803f" id="r_a1ab72ec10a06d8bb5b1d465f2d52803f"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a1ab72ec10a06d8bb5b1d465f2d52803f template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a1ab72ec10a06d8bb5b1d465f2d52803f">anonymous_namespace{Log.cpp}::format::appendFileLine</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:a1ab72ec10a06d8bb5b1d465f2d52803f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends cached file and line text.  <br /></td></tr>
+<tr class="memitem:a5d4c3aaa1f776827c7219cf823733709" id="r_a5d4c3aaa1f776827c7219cf823733709"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a5d4c3aaa1f776827c7219cf823733709 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a5d4c3aaa1f776827c7219cf823733709">anonymous_namespace{Log.cpp}::format::appendFunction</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:a5d4c3aaa1f776827c7219cf823733709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends cached normalized function text.  <br /></td></tr>
+<tr class="memitem:aefc5c137066cf04255fe3d69659cc033" id="r_aefc5c137066cf04255fe3d69659cc033"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:aefc5c137066cf04255fe3d69659cc033 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#aefc5c137066cf04255fe3d69659cc033">anonymous_namespace{Log.cpp}::format::appendLevel</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:aefc5c137066cf04255fe3d69659cc033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the normalized log-level field.  <br /></td></tr>
+<tr class="memitem:a37dd5e6904a48e1b8801bbd26475f413" id="r_a37dd5e6904a48e1b8801bbd26475f413"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a37dd5e6904a48e1b8801bbd26475f413 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a37dd5e6904a48e1b8801bbd26475f413">anonymous_namespace{Log.cpp}::format::appendMessage</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep, bool late=false) noexcept</td></tr>
+<tr class="memdesc:a37dd5e6904a48e1b8801bbd26475f413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the sanitized message and optional late-record marker.  <br /></td></tr>
+<tr class="memitem:ad1632efa9e85619851da9b312f9e0002" id="r_ad1632efa9e85619851da9b312f9e0002"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:ad1632efa9e85619851da9b312f9e0002 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#ad1632efa9e85619851da9b312f9e0002">anonymous_namespace{Log.cpp}::format::appendSequence</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:ad1632efa9e85619851da9b312f9e0002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the fixed-width log sequence field.  <br /></td></tr>
+<tr class="memitem:a561b6d2df11f8bde43c85f0fbec12779" id="r_a561b6d2df11f8bde43c85f0fbec12779"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a561b6d2df11f8bde43c85f0fbec12779 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a561b6d2df11f8bde43c85f0fbec12779">anonymous_namespace{Log.cpp}::format::appendThreadDelta</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:a561b6d2df11f8bde43c85f0fbec12779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the time delta since the thread's previous log record.  <br /></td></tr>
+<tr class="memitem:aea52c76e987fbb87ea142e7346b124f1" id="r_aea52c76e987fbb87ea142e7346b124f1"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:aea52c76e987fbb87ea142e7346b124f1 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#aea52c76e987fbb87ea142e7346b124f1">anonymous_namespace{Log.cpp}::format::appendThreadId</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:aea52c76e987fbb87ea142e7346b124f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the Windows thread identifier field.  <br /></td></tr>
+<tr class="memitem:a03811d4a9e93e9b5c0927feaff4224ef" id="r_a03811d4a9e93e9b5c0927feaff4224ef"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a03811d4a9e93e9b5c0927feaff4224ef template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a03811d4a9e93e9b5c0927feaff4224ef">anonymous_namespace{Log.cpp}::format::appendThreadIndex</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:a03811d4a9e93e9b5c0927feaff4224ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends the compact per-thread index field.  <br /></td></tr>
+<tr class="memitem:a6fdc84681e63fd618969b01f9565ff4c" id="r_a6fdc84681e63fd618969b01f9565ff4c"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a6fdc84681e63fd618969b01f9565ff4c template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a6fdc84681e63fd618969b01f9565ff4c">anonymous_namespace{Log.cpp}::format::appendThreadTime</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:a6fdc84681e63fd618969b01f9565ff4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends elapsed time since the current thread first logged.  <br /></td></tr>
+<tr class="memitem:a2bec914d05bd447bb12f800640913bac" id="r_a2bec914d05bd447bb12f800640913bac"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a2bec914d05bd447bb12f800640913bac template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a2bec914d05bd447bb12f800640913bac">anonymous_namespace{Log.cpp}::format::bridgeLog</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool late=false) noexcept</td></tr>
+<tr class="memdesc:a2bec914d05bd447bb12f800640913bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats the fixed important-log record sent to the helper process.  <br /></td></tr>
+<tr class="memitem:ac9345b400b3cab13c1c46b049c0f3723" id="r_ac9345b400b3cab13c1c46b049c0f3723"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ac9345b400b3cab13c1c46b049c0f3723">anonymous_namespace{Log.cpp}::control::checkAndValidateDir</a> (const QString &amp;path, QString *errorText)</td></tr>
+<tr class="memdesc:ac9345b400b3cab13c1c46b049c0f3723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes, validates, creates, and write-tests a log directory.  <br /></td></tr>
+<tr class="memitem:a51d7168bd1bc376fadad171333f0c9b3" id="r_a51d7168bd1bc376fadad171333f0c9b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a51d7168bd1bc376fadad171333f0c9b3">anonymous_namespace{Log.cpp}::crash::claimFatalOwnership</a> (<a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state">LeakedState::CrashState</a> &amp;crashState, DWORD curThreadId)</td></tr>
+<tr class="memdesc:a51d7168bd1bc376fadad171333f0c9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Claims fatal ownership or gives the existing owner a brief reporting period.  <br /></td></tr>
+<tr class="memitem:a027c61d8dc60f13ad2a0e0be6e917a6e" id="r_a027c61d8dc60f13ad2a0e0be6e917a6e"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a027c61d8dc60f13ad2a0e0be6e917a6e">anonymous_namespace{Log.cpp}::control::cleanedFilterRulesList</a> (const QStringList &amp;list)</td></tr>
+<tr class="memdesc:a027c61d8dc60f13ad2a0e0be6e917a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes and validates custom Qt category-filter rules.  <br /></td></tr>
+<tr class="memitem:acce06e15c0cb54f327204ed7f65005d0" id="r_acce06e15c0cb54f327204ed7f65005d0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#acce06e15c0cb54f327204ed7f65005d0">anonymous_namespace{Log.cpp}::workers::cleanup</a> (<a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">LeakedState::Worker</a> &amp;worker)</td></tr>
+<tr class="memdesc:acce06e15c0cb54f327204ed7f65005d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discards remaining queued logs and marks the worker inactive.  <br /></td></tr>
+<tr class="memitem:a3b284d50cc7fc024cbfb49dd7d7792be" id="r_a3b284d50cc7fc024cbfb49dd7d7792be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a3b284d50cc7fc024cbfb49dd7d7792be">anonymous_namespace{Log.cpp}::console::close</a> ()</td></tr>
+<tr class="memdesc:a3b284d50cc7fc024cbfb49dd7d7792be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the temporary console while preserving a permanent console.  <br /></td></tr>
+<tr class="memitem:a0a4a9a6776429cc07b1afc2c2ec5ef57" id="r_a0a4a9a6776429cc07b1afc2c2ec5ef57"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a0a4a9a6776429cc07b1afc2c2ec5ef57">anonymous_namespace{Log.cpp}::control::comparePaths</a> (const QString &amp;a, const QString &amp;b)</td></tr>
+<tr class="memdesc:a0a4a9a6776429cc07b1afc2c2ec5ef57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two Windows paths using normalized case-insensitive semantics.  <br /></td></tr>
+<tr class="memitem:a1d722dbe548810e26de6526339f7db0a" id="r_a1d722dbe548810e26de6526339f7db0a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1d722dbe548810e26de6526339f7db0a">anonymous_namespace{Log.cpp}::workers::directoryCleanup</a> (QString directoryPath, std::uint32_t maximumSize)</td></tr>
+<tr class="memdesc:a1d722dbe548810e26de6526339f7db0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a detached cleanup operation for managed normal log files.  <br /></td></tr>
+<tr class="memitem:a151b634635a35cd3feb2de126611e850" id="r_a151b634635a35cd3feb2de126611e850"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a151b634635a35cd3feb2de126611e850">anonymous_namespace{Log.cpp}::workers::dispWorkerStart</a> ()</td></tr>
+<tr class="memdesc:a151b634635a35cd3feb2de126611e850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the optional display worker if it is currently inactive.  <br /></td></tr>
+<tr class="memitem:ad9a9c0c17f8f330fc36da938d8494920" id="r_ad9a9c0c17f8f330fc36da938d8494920"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920">anonymous_namespace{Log.cpp}::workers::fileWorkerStart</a> ()</td></tr>
+<tr class="memdesc:ad9a9c0c17f8f330fc36da938d8494920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the primary file worker if it is currently inactive.  <br /></td></tr>
+<tr class="memitem:a78d365c25a1a6a3fad98d83106f859ce" id="r_a78d365c25a1a6a3fad98d83106f859ce"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">anonymous_namespace{Log.cpp}::console::handle</a> ()</td></tr>
+<tr class="memdesc:a78d365c25a1a6a3fad98d83106f859ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the active console output handle when one is available.  <br /></td></tr>
+<tr class="memitem:a7e16fa7a62fe985ef460f5b49dc2074a" id="r_a7e16fa7a62fe985ef460f5b49dc2074a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a7e16fa7a62fe985ef460f5b49dc2074a">anonymous_namespace{Log.cpp}::crash::hardFailFast</a> () noexcept</td></tr>
+<tr class="memdesc:a7e16fa7a62fe985ef460f5b49dc2074a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates the process immediately without invoking normal cleanup.  <br /></td></tr>
+<tr class="memitem:adc07d589655d02a16cf3567703c87cb5" id="r_adc07d589655d02a16cf3567703c87cb5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5">anonymous_namespace{Log.cpp}::crash::installCrashHandlers</a> () noexcept</td></tr>
+<tr class="memdesc:adc07d589655d02a16cf3567703c87cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs Windows, C++, CRT, and signal-level crash handlers.  <br /></td></tr>
+<tr class="memitem:a37079754f4a9ab17ea9b87bcba12f9a7" id="r_a37079754f4a9ab17ea9b87bcba12f9a7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a37079754f4a9ab17ea9b87bcba12f9a7">anonymous_namespace{Log.cpp}::crash::invalidParamHandler</a> (const wchar_t *expression, const wchar_t *function, const wchar_t *file, unsigned int line, uintptr_t) noexcept</td></tr>
+<tr class="memdesc:a37079754f4a9ab17ea9b87bcba12f9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles an invalid Microsoft CRT parameter as an unrecoverable failure.  <br /></td></tr>
+<tr class="memitem:af19dcb3f84dff6b5cf0e2bcc3ccf6edb" id="r_af19dcb3f84dff6b5cf0e2bcc3ccf6edb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#af19dcb3f84dff6b5cf0e2bcc3ccf6edb">anonymous_namespace{Log.cpp}::console::isOpen</a> ()</td></tr>
+<tr class="memdesc:af19dcb3f84dff6b5cf0e2bcc3ccf6edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a console window is currently attached.  <br /></td></tr>
+<tr class="memitem:af1e8c4c76f88dcb941823751b89636b9" id="r_af1e8c4c76f88dcb941823751b89636b9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#af1e8c4c76f88dcb941823751b89636b9">anonymous_namespace{Log.cpp}::console::isPermanent</a> ()</td></tr>
+<tr class="memdesc:af1e8c4c76f88dcb941823751b89636b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a console was attached during initialization.  <br /></td></tr>
+<tr class="memitem:a49f23e2414522446fe0dffc4154b6794" id="r_a49f23e2414522446fe0dffc4154b6794"><td class="memItemLeft"><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config">LeakedState::Config</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings</a> ()</td></tr>
+<tr class="memdesc:a49f23e2414522446fe0dffc4154b6794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and validates the complete persisted logging configuration.  <br /></td></tr>
+<tr class="memitem:a5da8171f010665732253b33284e2c28d" id="r_a5da8171f010665732253b33284e2c28d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a5da8171f010665732253b33284e2c28d">anonymous_namespace{Log.cpp}::logCategoryFilter</a> (QLoggingCategory *category)</td></tr>
+<tr class="memdesc:a5da8171f010665732253b33284e2c28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records encountered categories and forwards filtering to the previous handler.  <br /></td></tr>
+<tr class="memitem:ae42f26a3b2327af9cd201c13e96c0349" id="r_ae42f26a3b2327af9cd201c13e96c0349"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler</a> (QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</td></tr>
+<tr class="memdesc:ae42f26a3b2327af9cd201c13e96c0349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures and routes one message delivered by Qt.  <br /></td></tr>
+<tr class="memitem:af2d29190b5876ecfbe9deefb3bf878d4" id="r_af2d29190b5876ecfbe9deefb3bf878d4"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#af2d29190b5876ecfbe9deefb3bf878d4">anonymous_namespace{Log.cpp}::control::nextThreadIndex</a> (std::atomic_uint16_t &amp;generator) noexcept</td></tr>
+<tr class="memdesc:af2d29190b5876ecfbe9deefb3bf878d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates the next compact thread index with saturation.  <br /></td></tr>
+<tr class="memitem:a2f8305be7a08f7bd6252a3d9cc9a074c" id="r_a2f8305be7a08f7bd6252a3d9cc9a074c"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a2f8305be7a08f7bd6252a3d9cc9a074c">anonymous_namespace{Log.cpp}::layout::normalizeAndPackFields</a> (const QString &amp;source, const QList&lt; <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a> &gt; &amp;defFields, std::atomic_uint64_t *destination=nullptr)</td></tr>
+<tr class="memdesc:a2f8305be7a08f7bd6252a3d9cc9a074c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes user field text and optionally publishes its packed layout.  <br /></td></tr>
+<tr class="memitem:a7fc03e94650e6022574acfcd5d3bf5dc" id="r_a7fc03e94650e6022574acfcd5d3bf5dc"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a7fc03e94650e6022574acfcd5d3bf5dc template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a7fc03e94650e6022574acfcd5d3bf5dc">anonymous_namespace{Log.cpp}::format::normalLog</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, const <a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a7b5eb1dcfee464df06dac16a042bb856">layout::FieldArray</a> &amp;fieldArray, <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">DateTimeCache</a> &amp;dateTimeCache, bool pipeSep) noexcept</td></tr>
+<tr class="memdesc:a7fc03e94650e6022574acfcd5d3bf5dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats one record using the active normal or display field layout.  <br /></td></tr>
+<tr class="memitem:a6d5df5e0f792d0d69ad12ee313419388" id="r_a6d5df5e0f792d0d69ad12ee313419388"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a6d5df5e0f792d0d69ad12ee313419388">anonymous_namespace{Log.cpp}::console::open</a> ()</td></tr>
+<tr class="memdesc:a6d5df5e0f792d0d69ad12ee313419388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and configures a temporary console when necessary.  <br /></td></tr>
+<tr class="memitem:a2232d0647d1eb054474d09dca2ba633e" id="r_a2232d0647d1eb054474d09dca2ba633e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a2232d0647d1eb054474d09dca2ba633e">anonymous_namespace{Log.cpp}::layout::packField</a> (std::uint8_t field, std::uint32_t &amp;index, std::uint32_t &amp;seen, std::uint64_t &amp;destination) noexcept</td></tr>
+<tr class="memdesc:a2232d0647d1eb054474d09dca2ba633e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs one unique field into the next four-bit layout slot.  <br /></td></tr>
+<tr class="memitem:a64e6b530b8b3e6eb1891bbb6df1dd11c" id="r_a64e6b530b8b3e6eb1891bbb6df1dd11c"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a64e6b530b8b3e6eb1891bbb6df1dd11c">anonymous_namespace{Log.cpp}::bridge::processExitText</a> (DWORD code)</td></tr>
+<tr class="memdesc:a64e6b530b8b3e6eb1891bbb6df1dd11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an important-log helper exit code to explanatory text.  <br /></td></tr>
+<tr class="memitem:a55ad9393d4587b1cd0f2fe64bd7efd00" id="r_a55ad9393d4587b1cd0f2fe64bd7efd00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a55ad9393d4587b1cd0f2fe64bd7efd00">anonymous_namespace{Log.cpp}::crash::pureCallHandler</a> () noexcept</td></tr>
+<tr class="memdesc:a55ad9393d4587b1cd0f2fe64bd7efd00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a pure virtual function call as an unrecoverable failure.  <br /></td></tr>
+<tr class="memitem:aaa3ef86b0bde2d695263c99035301b1c" id="r_aaa3ef86b0bde2d695263c99035301b1c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#aaa3ef86b0bde2d695263c99035301b1c">anonymous_namespace{Log.cpp}::control::removeSettings</a> (const QLatin1StringView &amp;view)</td></tr>
+<tr class="memdesc:aaa3ef86b0bde2d695263c99035301b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one persistent logging setting under the cross-process lock.  <br /></td></tr>
+<tr class="memitem:a1ac87d854822698e0cf4ff8613878f19" id="r_a1ac87d854822698e0cf4ff8613878f19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a1ac87d854822698e0cf4ff8613878f19">anonymous_namespace{Log.cpp}::crash::reraiseDefault</a> (int signum) noexcept</td></tr>
+<tr class="memdesc:a1ac87d854822698e0cf4ff8613878f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the default signal action and raises the signal again.  <br /></td></tr>
+<tr class="memitem:a0938589db255e4657d8917ad5958f388" id="r_a0938589db255e4657d8917ad5958f388"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a0938589db255e4657d8917ad5958f388">anonymous_namespace{Log.cpp}::control::saveMaxFolderMbPendingValue</a> ()</td></tr>
+<tr class="memdesc:a0938589db255e4657d8917ad5958f388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persists the most recently scheduled maximum-folder-size value.  <br /></td></tr>
+<tr class="memitem:a07969a1c7e4498118828e463456c5d1e" id="r_a07969a1c7e4498118828e463456c5d1e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a07969a1c7e4498118828e463456c5d1e">anonymous_namespace{Log.cpp}::control::saveSettings</a> (const QLatin1StringView &amp;view, const QVariant &amp;value)</td></tr>
+<tr class="memdesc:a07969a1c7e4498118828e463456c5d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes one persistent logging setting under the cross-process lock.  <br /></td></tr>
+<tr class="memitem:a996434c89cac4d2843386149824314dc" id="r_a996434c89cac4d2843386149824314dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc">anonymous_namespace{Log.cpp}::control::scheduleMaxFolderMbSave</a> (std::uint32_t maxFolderMb)</td></tr>
+<tr class="memdesc:a996434c89cac4d2843386149824314dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debounces persistence of a non-temporary maximum-folder-size change.  <br /></td></tr>
+<tr class="memitem:a7d1aecaff8b806303e9f2166caeec8ba" id="r_a7d1aecaff8b806303e9f2166caeec8ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba">anonymous_namespace{Log.cpp}::bridge::sendData</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *data, size_t len, bool <a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html">crash</a>) noexcept</td></tr>
+<tr class="memdesc:a7d1aecaff8b806303e9f2166caeec8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a complete byte range to the current important-log pipe.  <br /></td></tr>
+<tr class="memitem:a0ad3876154f2b818add3875e77f95303" id="r_a0ad3876154f2b818add3875e77f95303"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a0ad3876154f2b818add3875e77f95303">anonymous_namespace{Log.cpp}::bridge::sendDataLocked</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *data, size_t len, bool fatal) noexcept</td></tr>
+<tr class="memdesc:a0ad3876154f2b818add3875e77f95303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes important-log data while coordinating normal, fatal, and crash senders.  <br /></td></tr>
+<tr class="memitem:a4b266529f52b5d050ba76fbd66ed3b02" id="r_a4b266529f52b5d050ba76fbd66ed3b02"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a4b266529f52b5d050ba76fbd66ed3b02">anonymous_namespace{Log.cpp}::control::setFilterRules</a> (const QStringList &amp;cleanedFilterRules={})</td></tr>
+<tr class="memdesc:a4b266529f52b5d050ba76fbd66ed3b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs the built-in and normalized custom Qt category filters.  <br /></td></tr>
+<tr class="memitem:adfc01277f4204633f077a8035629f287" id="r_adfc01277f4204633f077a8035629f287"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287">anonymous_namespace{Log.cpp}::control::setMaxFolderMb</a> (std::uint32_t maxFolderMb)</td></tr>
+<tr class="memdesc:adfc01277f4204633f077a8035629f287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the runtime maximum-folder-size setting.  <br /></td></tr>
+<tr class="memitem:a3a8077999c13c0cee65f995122e46196" id="r_a3a8077999c13c0cee65f995122e46196"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a3a8077999c13c0cee65f995122e46196">anonymous_namespace{Log.cpp}::control::settingsStatusText</a> (QSettings::Status status)</td></tr>
+<tr class="memdesc:a3a8077999c13c0cee65f995122e46196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a QSettings status to explanatory user-facing text.  <br /></td></tr>
+<tr class="memitem:af368724ec58d19d8bfc230468251e183" id="r_af368724ec58d19d8bfc230468251e183"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#af368724ec58d19d8bfc230468251e183">anonymous_namespace{Log.cpp}::control::showCritMsg</a> (const QString &amp;message)</td></tr>
+<tr class="memdesc:af368724ec58d19d8bfc230468251e183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a critical message through Qt or the executable fallback.  <br /></td></tr>
+<tr class="memitem:a85b95e041e71a7bb69e5310ee4d47834" id="r_a85b95e041e71a7bb69e5310ee4d47834"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a85b95e041e71a7bb69e5310ee4d47834">anonymous_namespace{Log.cpp}::control::showInfoMsg</a> (const QString &amp;message)</td></tr>
+<tr class="memdesc:a85b95e041e71a7bb69e5310ee4d47834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays an informational message through Qt or the executable fallback.  <br /></td></tr>
+<tr class="memitem:ac2b824ac899ce94ad3251f16688adfd6" id="r_ac2b824ac899ce94ad3251f16688adfd6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ac2b824ac899ce94ad3251f16688adfd6">anonymous_namespace{Log.cpp}::control::showWarnMsg</a> (const QString &amp;message)</td></tr>
+<tr class="memdesc:ac2b824ac899ce94ad3251f16688adfd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a warning message through Qt or the executable fallback.  <br /></td></tr>
+<tr class="memitem:a9f63c6d09e2e6a4d4bda91624e99645d" id="r_a9f63c6d09e2e6a4d4bda91624e99645d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a9f63c6d09e2e6a4d4bda91624e99645d">anonymous_namespace{Log.cpp}::workers::shutdown</a> ()</td></tr>
+<tr class="memdesc:a9f63c6d09e2e6a4d4bda91624e99645d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops and joins workers in producer-before-consumer order.  <br /></td></tr>
+<tr class="memitem:ab9aade053d28c916bf856e1876e60778" id="r_ab9aade053d28c916bf856e1876e60778"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ab9aade053d28c916bf856e1876e60778">anonymous_namespace{Log.cpp}::crash::signalHandler</a> (int signum) noexcept</td></tr>
+<tr class="memdesc:ab9aade053d28c916bf856e1876e60778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a supported C signal and terminates through the crash path.  <br /></td></tr>
+<tr class="memitem:a60cf08a266458e16cf3c38b1b46f0cba" id="r_a60cf08a266458e16cf3c38b1b46f0cba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a60cf08a266458e16cf3c38b1b46f0cba">anonymous_namespace{Log.cpp}::bridge::startProcess</a> (const QString &amp;directory, const QString &amp;fileBaseName)</td></tr>
+<tr class="memdesc:a60cf08a266458e16cf3c38b1b46f0cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a new <span class="tt">npiImpLog.exe</span> helper for the supplied directory and file base name.  <br /></td></tr>
+<tr class="memitem:a9dbdeefab4ed0fe490efd90425689d7a" id="r_a9dbdeefab4ed0fe490efd90425689d7a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a">anonymous_namespace{Log.cpp}::startup</a> ()</td></tr>
+<tr class="memdesc:a9dbdeefab4ed0fe490efd90425689d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the logging system during process startup.  <br /></td></tr>
+<tr class="memitem:a926d3f4c96d81c126df53add6ff3e041" id="r_a926d3f4c96d81c126df53add6ff3e041"><td class="memItemLeft"><a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a>&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a926d3f4c96d81c126df53add6ff3e041">anonymous_namespace{Log.cpp}::workers::syntheticLog</a> (QtMsgType lvl, const QString &amp;msg)</td></tr>
+<tr class="memdesc:a926d3f4c96d81c126df53add6ff3e041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an internal logging-system record to be appended to file queue without re-entering Qt logging.  <br /></td></tr>
+<tr class="memitem:a76d9092d69e836e0e7969d64383344a2" id="r_a76d9092d69e836e0e7969d64383344a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a76d9092d69e836e0e7969d64383344a2">anonymous_namespace{Log.cpp}::crash::terminateHandler</a> () noexcept</td></tr>
+<tr class="memdesc:a76d9092d69e836e0e7969d64383344a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles an uncaught C++ exception or explicit terminate request.  <br /></td></tr>
+<tr class="memitem:a5e5a80526fbb07e172fa4ea3e4e4bfe3" id="r_a5e5a80526fbb07e172fa4ea3e4e4bfe3"><td class="memItemLeft">std::uint8_t&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a5e5a80526fbb07e172fa4ea3e4e4bfe3">anonymous_namespace{Log.cpp}::layout::unpackField</a> (std::uint32_t index, std::uint32_t &amp;seen, std::uint64_t source) noexcept</td></tr>
+<tr class="memdesc:a5e5a80526fbb07e172fa4ea3e4e4bfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads one packed field while rejecting duplicates and invalid values.  <br /></td></tr>
+<tr class="memitem:af9b51b1a2645ae21e0a7ca6bd39e4178" id="r_af9b51b1a2645ae21e0a7ca6bd39e4178"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#af9b51b1a2645ae21e0a7ca6bd39e4178">anonymous_namespace{Log.cpp}::layout::unpackFields</a> (const std::atomic_uint64_t &amp;source, <a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a7b5eb1dcfee464df06dac16a042bb856">FieldArray</a> &amp;destination) noexcept</td></tr>
+<tr class="memdesc:af9b51b1a2645ae21e0a7ca6bd39e4178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands the current packed field layout for worker-side formatting.  <br /></td></tr>
+<tr class="memitem:a21d28d4dc1e0f827575b17f576af195a" id="r_a21d28d4dc1e0f827575b17f576af195a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a">anonymous_namespace{Log.cpp}::control::useDirectory</a> (const QString &amp;directory)</td></tr>
+<tr class="memdesc:a21d28d4dc1e0f827575b17f576af195a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transitions both normal and important logging to a new directory.  <br /></td></tr>
+<tr class="memitem:acfb506c0fed366bd1c03b1b880b303b0" id="r_acfb506c0fed366bd1c03b1b880b303b0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#acfb506c0fed366bd1c03b1b880b303b0">anonymous_namespace{Log.cpp}::workers::wakeup</a> (<a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">LeakedState::Worker</a> &amp;worker) noexcept</td></tr>
+<tr class="memdesc:acfb506c0fed366bd1c03b1b880b303b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signals a worker that queued work or a state change is available.  <br /></td></tr>
+<tr class="memitem:ad04d833e641507640d81486a4accb05f" id="r_ad04d833e641507640d81486a4accb05f"><td class="memItemLeft">LONG WINAPI&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ad04d833e641507640d81486a4accb05f">anonymous_namespace{Log.cpp}::crash::windowsExceptionFilter</a> (EXCEPTION_POINTERS *ep) noexcept</td></tr>
+<tr class="memdesc:ad04d833e641507640d81486a4accb05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles an unhandled Windows structured exception.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a51df948e5fa3868b91f8b698cbe1b58e" id="r_a51df948e5fa3868b91f8b698cbe1b58e"><td class="memItemLeft">volatile LONG&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a51df948e5fa3868b91f8b698cbe1b58e">anonymous_namespace{Log.cpp}::safe::crashing</a> = 0</td></tr>
-<tr class="memitem:aeeb137a2c9cda360c642a9f465b4fd0c" id="r_aeeb137a2c9cda360c642a9f465b4fd0c"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aeeb137a2c9cda360c642a9f465b4fd0c">anonymous_namespace{Log.cpp}::safe::cTxtBuf</a> [<a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a1d9bd24cd125679bcaa1aff3dbb87d11">txtCap</a>] {}</td></tr>
-<tr class="memitem:a9b1e6370f161f0e3cb2fab8ed0c23417" id="r_a9b1e6370f161f0e3cb2fab8ed0c23417"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a9b1e6370f161f0e3cb2fab8ed0c23417">anonymous_namespace{Log.cpp}::safe::cTxtPos</a> = 0</td></tr>
-<tr class="memitem:a90ee115ec17070c2ea37967d864702fb" id="r_a90ee115ec17070c2ea37967d864702fb"><td class="memItemLeft">volatile LONG&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a90ee115ec17070c2ea37967d864702fb">anonymous_namespace{Log.cpp}::safe::fatalLog</a> = 0</td></tr>
-<tr class="memitem:a305c8b2db3c0358ff6fd4863450fde35" id="r_a305c8b2db3c0358ff6fd4863450fde35"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a305c8b2db3c0358ff6fd4863450fde35">anonymous_namespace{Log.cpp}::fileNameMaxLen</a> = 4096</td></tr>
-<tr class="memitem:a75f37e97f418c07255e5d291419b4951" id="r_a75f37e97f418c07255e5d291419b4951"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a75f37e97f418c07255e5d291419b4951">anonymous_namespace{Log.cpp}::safe::hImpLogPipe</a> = INVALID_HANDLE_VALUE</td></tr>
-<tr class="memitem:a7b9ca54d0332982c503c224cd9371f3b" id="r_a7b9ca54d0332982c503c224cd9371f3b"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a7b9ca54d0332982c503c224cd9371f3b">anonymous_namespace{Log.cpp}::safe::hImpLogProc</a> = nullptr</td></tr>
-<tr class="memitem:a1d9bd24cd125679bcaa1aff3dbb87d11" id="r_a1d9bd24cd125679bcaa1aff3dbb87d11"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a1d9bd24cd125679bcaa1aff3dbb87d11">anonymous_namespace{Log.cpp}::safe::txtCap</a> = 2048</td></tr>
+<tr class="memitem:aecd01b93f64dd84fcf5e9c599a532d0c" id="r_aecd01b93f64dd84fcf5e9c599a532d0c"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#aecd01b93f64dd84fcf5e9c599a532d0c">anonymous_namespace{Log.cpp}::control::baseFilterRule</a></td></tr>
+<tr class="memdesc:aecd01b93f64dd84fcf5e9c599a532d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base filter rules, always applied.  <br /></td></tr>
+<tr class="memitem:a875fd6902b635d56ec76c81a5b6e9c6f" id="r_a875fd6902b635d56ec76c81a5b6e9c6f"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a875fd6902b635d56ec76c81a5b6e9c6f">anonymous_namespace{Log.cpp}::workers::batchFormatLineSize</a> = 2048u</td></tr>
+<tr class="memdesc:a875fd6902b635d56ec76c81a5b6e9c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum size of a single formatted line in batch processing.  <br /></td></tr>
+<tr class="memitem:ad0970b7473176e081bdd1ca7e5968e79" id="r_ad0970b7473176e081bdd1ca7e5968e79"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ad0970b7473176e081bdd1ca7e5968e79">anonymous_namespace{Log.cpp}::defColoredConsole</a> {false}</td></tr>
+<tr class="memdesc:ad0970b7473176e081bdd1ca7e5968e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default colored console state.  <br /></td></tr>
+<tr class="memitem:afe53871654bdafb363794008605fee3f" id="r_afe53871654bdafb363794008605fee3f"><td class="memItemLeft">constexpr std::uint32_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe53871654bdafb363794008605fee3f">anonymous_namespace{Log.cpp}::defMaxFolderMb</a> {4096}</td></tr>
+<tr class="memdesc:afe53871654bdafb363794008605fee3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default max folder value in MB.  <br /></td></tr>
+<tr class="memitem:a0fa4f711453765b16b6ac1bd01ef4249" id="r_a0fa4f711453765b16b6ac1bd01ef4249"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a0fa4f711453765b16b6ac1bd01ef4249">anonymous_namespace{Log.cpp}::defShowDbugLog</a> {true}</td></tr>
+<tr class="memdesc:a0fa4f711453765b16b6ac1bd01ef4249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default show debug logs state.  <br /></td></tr>
+<tr class="memitem:ad3a5f1d0302fc62fbd00651d929a5b50" id="r_ad3a5f1d0302fc62fbd00651d929a5b50"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ad3a5f1d0302fc62fbd00651d929a5b50">anonymous_namespace{Log.cpp}::defShowInfoLog</a> {true}</td></tr>
+<tr class="memdesc:ad3a5f1d0302fc62fbd00651d929a5b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default show info logs state.  <br /></td></tr>
+<tr class="memitem:a2facf127f1e284b14de1a6bbbc60f74d" id="r_a2facf127f1e284b14de1a6bbbc60f74d"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a2facf127f1e284b14de1a6bbbc60f74d">anonymous_namespace{Log.cpp}::defShowWarnLog</a> {true}</td></tr>
+<tr class="memdesc:a2facf127f1e284b14de1a6bbbc60f74d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default show warning logs state.  <br /></td></tr>
+<tr class="memitem:a94b3fe6c196b55dfd00ce4d1b317702e" id="r_a94b3fe6c196b55dfd00ce4d1b317702e"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a94b3fe6c196b55dfd00ce4d1b317702e">anonymous_namespace{Log.cpp}::defWarnIsImp</a> {false}</td></tr>
+<tr class="memdesc:a94b3fe6c196b55dfd00ce4d1b317702e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default warning log is important state.  <br /></td></tr>
+<tr class="memitem:a25d73999d17ece5b691e3cbb6ba8013e" id="r_a25d73999d17ece5b691e3cbb6ba8013e"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">UnitInfo</a>, 5 &gt;&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a25d73999d17ece5b691e3cbb6ba8013e">anonymous_namespace{Log.cpp}::format::deltaUnits</a></td></tr>
+<tr class="memdesc:a25d73999d17ece5b691e3cbb6ba8013e"><td class="mdescLeft">&#160;</td><td class="mdescRight">All available time-delta units and their scales.  <br /></td></tr>
+<tr class="memitem:a274e86ed27d45616cf8805e32b688cbb" id="r_a274e86ed27d45616cf8805e32b688cbb"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a274e86ed27d45616cf8805e32b688cbb">anonymous_namespace{Log.cpp}::workers::dequeueBatchSize</a> = 128u</td></tr>
+<tr class="memdesc:a274e86ed27d45616cf8805e32b688cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of logs to dequeue in one batch.  <br /></td></tr>
+<tr class="memitem:ae3321dba63334328ded0d2b4e9479c15" id="r_ae3321dba63334328ded0d2b4e9479c15"><td class="memItemLeft">constexpr DWORD&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ae3321dba63334328ded0d2b4e9479c15">anonymous_namespace{Log.cpp}::crash::fatalOwnerWaitMs</a> = 5000u</td></tr>
+<tr class="memdesc:ae3321dba63334328ded0d2b4e9479c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait time for a fatal/crash log for the first owner to show a popup.  <br /></td></tr>
+<tr class="memitem:aa9606f8fe6dc14d1eba2f7f62c97014a" id="r_aa9606f8fe6dc14d1eba2f7f62c97014a"><td class="memItemLeft">constexpr std::uint32_t&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#aa9606f8fe6dc14d1eba2f7f62c97014a">anonymous_namespace{Log.cpp}::layout::fieldBits</a> = 4u</td></tr>
+<tr class="memdesc:aa9606f8fe6dc14d1eba2f7f62c97014a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Each field uses 4 bits.  <br /></td></tr>
+<tr class="memitem:aa0a3392ffea43dd47c99acfc307f8545" id="r_aa0a3392ffea43dd47c99acfc307f8545"><td class="memItemLeft">constexpr std::uint64_t&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#aa0a3392ffea43dd47c99acfc307f8545">anonymous_namespace{Log.cpp}::layout::fieldMask</a> = 0xFULL</td></tr>
+<tr class="memdesc:aa0a3392ffea43dd47c99acfc307f8545"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d" title="Identifies a field that can be included in formatted log output.">Field</a> mask to read one 4-bit field from packed fields.  <br /></td></tr>
+<tr class="memitem:ae8d0e12dcebf85fb9c88a985e424e5f3" id="r_ae8d0e12dcebf85fb9c88a985e424e5f3"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#ae8d0e12dcebf85fb9c88a985e424e5f3">anonymous_namespace{Log.cpp}::bridge::filePathMaxLen</a> = 4096u</td></tr>
+<tr class="memdesc:ae8d0e12dcebf85fb9c88a985e424e5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max length for file path, 4096 is generous but safe.  <br /></td></tr>
+<tr class="memitem:a813e7979db63f011980407b078faa0d8" id="r_a813e7979db63f011980407b078faa0d8"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a813e7979db63f011980407b078faa0d8">anonymous_namespace{Log.cpp}::workers::finalDispDrainIdleLoopCount</a> = 3u</td></tr>
+<tr class="memdesc:a813e7979db63f011980407b078faa0d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of idle loop counts before display worker quits after shutdown is initiated.  <br /></td></tr>
+<tr class="memitem:a565f495b23b988688c2af474e2aab4d3" id="r_a565f495b23b988688c2af474e2aab4d3"><td class="memItemLeft">constexpr std::chrono::milliseconds&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a565f495b23b988688c2af474e2aab4d3">anonymous_namespace{Log.cpp}::workers::finalDrainIdleLoopSleep</a> {50}</td></tr>
+<tr class="memdesc:a565f495b23b988688c2af474e2aab4d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep time for file and display threads in between final drain after shutdown is initiated.  <br /></td></tr>
+<tr class="memitem:ad3cfd532b6b08ad984f6b2c3c7139dd5" id="r_ad3cfd532b6b08ad984f6b2c3c7139dd5"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad3cfd532b6b08ad984f6b2c3c7139dd5">anonymous_namespace{Log.cpp}::workers::finalFileDrainIdleLoopCount</a> = 10u</td></tr>
+<tr class="memdesc:ad3cfd532b6b08ad984f6b2c3c7139dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of idle loop counts before file worker quits after shutdown is initiated.  <br /></td></tr>
+<tr class="memitem:a1f7083adbe3229b2f6fa4295150f8f18" id="r_a1f7083adbe3229b2f6fa4295150f8f18"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a1f7083adbe3229b2f6fa4295150f8f18">anonymous_namespace{Log.cpp}::format::invalidDateTime</a> [] = &quot;----.--.-- --:--:--.---&quot;</td></tr>
+<tr class="memdesc:a1f7083adbe3229b2f6fa4295150f8f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text for invalid date time value.  <br /></td></tr>
+<tr class="memitem:abc875262bc94ebb4526e882a65a2cfa4" id="r_abc875262bc94ebb4526e882a65a2cfa4"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#abc875262bc94ebb4526e882a65a2cfa4">anonymous_namespace{Log.cpp}::format::invalidTimeDelta</a> [] = &quot;---.--&quot;</td></tr>
+<tr class="memdesc:abc875262bc94ebb4526e882a65a2cfa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text for invalid time delta value.  <br /></td></tr>
+<tr class="memitem:a1077be522006274056f2cec2dce3e3cb" id="r_a1077be522006274056f2cec2dce3e3cb"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1077be522006274056f2cec2dce3e3cb">anonymous_namespace{Log.cpp}::workers::maxDisplayLinesPerSec</a> = 4096u</td></tr>
+<tr class="memdesc:a1077be522006274056f2cec2dce3e3cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of lines to display per second.  <br /></td></tr>
+<tr class="memitem:aab3be01ab4a3a34814b07c2bab368ee5" id="r_aab3be01ab4a3a34814b07c2bab368ee5"><td class="memItemLeft">constexpr std::uint32_t&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#aab3be01ab4a3a34814b07c2bab368ee5">anonymous_namespace{Log.cpp}::format::maxElapsedTimeMs</a> {((999U * 60U * 60U) + (59U * 60U) + 59U) * 1000U + 999U}</td></tr>
+<tr class="memdesc:aab3be01ab4a3a34814b07c2bab368ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum possible elapsed time, used for AppTime and ThreadTime.  <br /></td></tr>
+<tr class="memitem:ae93be58f05fd0b94562ec92f1f4056d9" id="r_ae93be58f05fd0b94562ec92f1f4056d9"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#ae93be58f05fd0b94562ec92f1f4056d9">anonymous_namespace{Log.cpp}::format::maxElapsedTimeMsText</a> [] = &quot;999:59:59.999&quot;</td></tr>
+<tr class="memdesc:ae93be58f05fd0b94562ec92f1f4056d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text for maximum elapsed time.  <br /></td></tr>
+<tr class="memitem:a07460c2a8adf32ac03fe1f8cb1b3603d" id="r_a07460c2a8adf32ac03fe1f8cb1b3603d"><td class="memItemLeft">constexpr std::uint32_t&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a07460c2a8adf32ac03fe1f8cb1b3603d">anonymous_namespace{Log.cpp}::layout::maxFields</a> = static_cast&lt;std::uint32_t&gt;(magic_enum::enum_count&lt;<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a>&gt;())</td></tr>
+<tr class="memdesc:a07460c2a8adf32ac03fe1f8cb1b3603d"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum number of fields, depends on <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d" title="Identifies a field that can be included in formatted log output.">Field</a> enum size  <br /></td></tr>
+<tr class="memitem:ae3ee8870abef76b439c48f93f96014e8" id="r_ae3ee8870abef76b439c48f93f96014e8"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ae3ee8870abef76b439c48f93f96014e8">anonymous_namespace{Log.cpp}::control::maxFolderTimerTimeoutMs</a> {2500}</td></tr>
+<tr class="memdesc:ae3ee8870abef76b439c48f93f96014e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer timeout value for applying directory cleanup and saving its value.  <br /></td></tr>
+<tr class="memitem:a85a4fe9c4b2342b1b7947cdc979c1ae2" id="r_a85a4fe9c4b2342b1b7947cdc979c1ae2"><td class="memItemLeft">constexpr std::uint32_t&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a85a4fe9c4b2342b1b7947cdc979c1ae2">anonymous_namespace{Log.cpp}::layout::maxPackedSlots</a> = 64u / <a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#aa9606f8fe6dc14d1eba2f7f62c97014a">fieldBits</a></td></tr>
+<tr class="memdesc:a85a4fe9c4b2342b1b7947cdc979c1ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum slots for a packed 64-bit value (16 slots).  <br /></td></tr>
+<tr class="memitem:aee9856ced7cc9fbf87590eba0fba808f" id="r_aee9856ced7cc9fbf87590eba0fba808f"><td class="memItemLeft">constexpr std::chrono::milliseconds&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#aee9856ced7cc9fbf87590eba0fba808f">anonymous_namespace{Log.cpp}::workers::minSyncInterval</a> {500}</td></tr>
+<tr class="memdesc:aee9856ced7cc9fbf87590eba0fba808f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum interval for syncing data with <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html" title="Owns all process-lifetime logging state.">LeakedState</a>.  <br /></td></tr>
+<tr class="memitem:ae16c37f54346449f63ae45e384e8f1d4" id="r_ae16c37f54346449f63ae45e384e8f1d4"><td class="memItemLeft">constexpr std::chrono::milliseconds&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ae16c37f54346449f63ae45e384e8f1d4">anonymous_namespace{Log.cpp}::workers::normalIdleLoopSleep</a> {10}</td></tr>
+<tr class="memdesc:ae16c37f54346449f63ae45e384e8f1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep time between idle loops.  <br /></td></tr>
+<tr class="memitem:a1bf2c1ea887602eced8886ac52bb279f" id="r_a1bf2c1ea887602eced8886ac52bb279f"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1bf2c1ea887602eced8886ac52bb279f">anonymous_namespace{Log.cpp}::workers::normalMaxIdleLoopCount</a> = 3u</td></tr>
+<tr class="memdesc:a1bf2c1ea887602eced8886ac52bb279f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum idle loop before worker goes to permanent sleep to be woken up only by its wakeup_ variable.  <br /></td></tr>
+<tr class="memitem:af4698033979c3faec5c6cd3ea5f9e470" id="r_af4698033979c3faec5c6cd3ea5f9e470"><td class="memItemLeft">constexpr std::chrono::system_clock::time_point&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#af4698033979c3faec5c6cd3ea5f9e470">anonymous_namespace{Log.cpp}::nullDateTime</a> = std::chrono::system_clock::time_point::min()</td></tr>
+<tr class="memdesc:af4698033979c3faec5c6cd3ea5f9e470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sentinel timestamp used before a log record has a valid wall-clock time.  <br /></td></tr>
+<tr class="memitem:a74792b6d352eb4ffd343c105504ce1ac" id="r_a74792b6d352eb4ffd343c105504ce1ac"><td class="memItemLeft">constexpr std::uint8_t&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a74792b6d352eb4ffd343c105504ce1ac">anonymous_namespace{Log.cpp}::layout::nullField</a> = static_cast&lt;std::uint8_t&gt;(<a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#aa0a3392ffea43dd47c99acfc307f8545">fieldMask</a>)</td></tr>
+<tr class="memdesc:a74792b6d352eb4ffd343c105504ce1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unused/empty packed field slot, 0xF = bin 1111 = dec 15.  <br /></td></tr>
+<tr class="memitem:a3a3522ad525d65aa3ff98ce80c877b31" id="r_a3a3522ad525d65aa3ff98ce80c877b31"><td class="memItemLeft">constexpr std::uint64_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a3a3522ad525d65aa3ff98ce80c877b31">anonymous_namespace{Log.cpp}::nullPackedFields</a> = std::numeric_limits&lt;std::uint64_t&gt;::max()</td></tr>
+<tr class="memdesc:a3a3522ad525d65aa3ff98ce80c877b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sentinel used before a worker field layout has been published.  <br /></td></tr>
+<tr class="memitem:a256186d3fab5ac98654b8783e67185e1" id="r_a256186d3fab5ac98654b8783e67185e1"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a256186d3fab5ac98654b8783e67185e1">anonymous_namespace{Log.cpp}::control::settingsColoredConsoleKey</a> {&quot;ColoredConsole&quot;}</td></tr>
+<tr class="memdesc:a256186d3fab5ac98654b8783e67185e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Colored Console.  <br /></td></tr>
+<tr class="memitem:ae2fda0d3bd720fbf196ec64a3183f57f" id="r_ae2fda0d3bd720fbf196ec64a3183f57f"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ae2fda0d3bd720fbf196ec64a3183f57f">anonymous_namespace{Log.cpp}::control::settingsDirectoryKey</a> {&quot;CurrentDirectory&quot;}</td></tr>
+<tr class="memdesc:ae2fda0d3bd720fbf196ec64a3183f57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Directory.  <br /></td></tr>
+<tr class="memitem:aeefe5070b3d86f41377828e3ef2a59d7" id="r_aeefe5070b3d86f41377828e3ef2a59d7"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#aeefe5070b3d86f41377828e3ef2a59d7">anonymous_namespace{Log.cpp}::control::settingsDispFieldsKey</a> {&quot;DispFields&quot;}</td></tr>
+<tr class="memdesc:aeefe5070b3d86f41377828e3ef2a59d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Display Fields.  <br /></td></tr>
+<tr class="memitem:afe8377e08bdd1216775e1f176c1bee4c" id="r_afe8377e08bdd1216775e1f176c1bee4c"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#afe8377e08bdd1216775e1f176c1bee4c">anonymous_namespace{Log.cpp}::control::settingsFileFieldsKey</a> {&quot;FileFields&quot;}</td></tr>
+<tr class="memdesc:afe8377e08bdd1216775e1f176c1bee4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: File Fields.  <br /></td></tr>
+<tr class="memitem:a0fdd1d479b571fc0aae6c061a6d0acb6" id="r_a0fdd1d479b571fc0aae6c061a6d0acb6"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a0fdd1d479b571fc0aae6c061a6d0acb6">anonymous_namespace{Log.cpp}::control::settingsFileName</a> {&quot;log_config.ini&quot;}</td></tr>
+<tr class="memdesc:a0fdd1d479b571fc0aae6c061a6d0acb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings file name.  <br /></td></tr>
+<tr class="memitem:a680094063c9be8744ddd97c973ce2523" id="r_a680094063c9be8744ddd97c973ce2523"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a680094063c9be8744ddd97c973ce2523">anonymous_namespace{Log.cpp}::control::settingsFilterRulesKey</a> {&quot;FilterRules&quot;}</td></tr>
+<tr class="memdesc:a680094063c9be8744ddd97c973ce2523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Filter Rules.  <br /></td></tr>
+<tr class="memitem:a602f54eb362451bbcc2d663c98ffcf52" id="r_a602f54eb362451bbcc2d663c98ffcf52"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a602f54eb362451bbcc2d663c98ffcf52">anonymous_namespace{Log.cpp}::control::settingsMaxFolderSizeKey</a> {&quot;MaxFolderSizeMB&quot;}</td></tr>
+<tr class="memdesc:a602f54eb362451bbcc2d663c98ffcf52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Max Folder Size MB.  <br /></td></tr>
+<tr class="memitem:a15bd5870fb5bc0453a9a1ea12a6ec521" id="r_a15bd5870fb5bc0453a9a1ea12a6ec521"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a15bd5870fb5bc0453a9a1ea12a6ec521">anonymous_namespace{Log.cpp}::control::settingsShowDbugLogKey</a> {&quot;ShowDbugLog&quot;}</td></tr>
+<tr class="memdesc:a15bd5870fb5bc0453a9a1ea12a6ec521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Show Debug Logs in Display.  <br /></td></tr>
+<tr class="memitem:abcb88ac6aec3a340c5eb78ac6fac7af4" id="r_abcb88ac6aec3a340c5eb78ac6fac7af4"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#abcb88ac6aec3a340c5eb78ac6fac7af4">anonymous_namespace{Log.cpp}::control::settingsShowInfoLogKey</a> {&quot;ShowInfoLog&quot;}</td></tr>
+<tr class="memdesc:abcb88ac6aec3a340c5eb78ac6fac7af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Show Info Logs in Display.  <br /></td></tr>
+<tr class="memitem:a31286333775310b4794a57c9bf10aab2" id="r_a31286333775310b4794a57c9bf10aab2"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a31286333775310b4794a57c9bf10aab2">anonymous_namespace{Log.cpp}::control::settingsShowWarnLogKey</a> {&quot;ShowWarnLog&quot;}</td></tr>
+<tr class="memdesc:a31286333775310b4794a57c9bf10aab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Show warning Logs in Display.  <br /></td></tr>
+<tr class="memitem:a9a020e58df3c0ce2b4181c9d37ca0612" id="r_a9a020e58df3c0ce2b4181c9d37ca0612"><td class="memItemLeft">constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a9a020e58df3c0ce2b4181c9d37ca0612">anonymous_namespace{Log.cpp}::control::settingsWarnIsImpKey</a> {&quot;WarnIsImp&quot;}</td></tr>
+<tr class="memdesc:a9a020e58df3c0ce2b4181c9d37ca0612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings Key: Warning Log is Important.  <br /></td></tr>
+<tr class="memitem:aaa2014923c0727e9fe5e4f7b08af3581" id="r_aaa2014923c0727e9fe5e4f7b08af3581"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#aaa2014923c0727e9fe5e4f7b08af3581">anonymous_namespace{Log.cpp}::workerQueueSize</a> = 16384u</td></tr>
+<tr class="memdesc:aaa2014923c0727e9fe5e4f7b08af3581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial capacity of each concurrent worker queue.  <br /></td></tr>
 </table>
 <hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
-<a name="d5/d42/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_field_config" id="d5/d42/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_field_config"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#d5/d42/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_field_config">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LogCore::FieldConfig</h2>
+<a name="df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry" id="df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::CategoryCache::Entry</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct anonymous_namespace{Log.cpp}::LogCore::FieldConfig</td>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::CategoryCache::Entry</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
-Collaboration diagram for anonymous_namespace{Log.cpp}::LogCore::FieldConfig:</div>
+Collaboration diagram for anonymous_namespace{Log.cpp}::CategoryCache::Entry:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d69/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_field_config__coll__graph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d26/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry__coll__graph.svg" width="100%" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
-<a id="aa21ed2b823fa9be1517a188dca8032af" name="aa21ed2b823fa9be1517a188dca8032af"></a>QList&lt; <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36">Field</a> &gt;</td>
+<a id="a9ae9861f3849020c485a9e80bbec2f28" name="a9ae9861f3849020c485a9e80bbec2f28"></a><a class="el" href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">Key</a></td>
 <td class="fieldname">
-fields_</td>
+key_ {}</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3977a2bad8b8500a5e88f2b5c9b8fe23" name="a3977a2bad8b8500a5e88f2b5c9b8fe23"></a>QReadWriteLock</td>
+<a id="a7b1680b37c030257bbfe9fe22b9d8982" name="a7b1680b37c030257bbfe9fe22b9d8982"></a>uint16_t</td>
 <td class="fieldname">
-lock_</td>
+length_ {0}</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a833eceed3271ed7208f8610a1e9f2d37" name="a833eceed3271ed7208f8610a1e9f2d37"></a>QStringList</td>
+<a id="af1cfc4f6ae5b77b96f17d5ecc981c345" name="af1cfc4f6ae5b77b96f17d5ecc981c345"></a>uint32_t</td>
 <td class="fieldname">
-strings_</td>
+offset_ {0}</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a37e0e3ad9464c361c0b860aa7cded6ce" name="a37e0e3ad9464c361c0b860aa7cded6ce"></a>bool</td>
+<a id="a9b1119e02b099a720e4e706c228728c0" name="a9b1119e02b099a720e4e706c228728c0"></a>atomic&lt; uint8_t &gt;</td>
 <td class="fieldname">
-temp_ {false}</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="ae7d5457c9ce0c798a0b58fee1f4b1f37" name="ae7d5457c9ce0c798a0b58fee1f4b1f37"></a>atomic_uint64_t</td>
-<td class="fieldname">
-version_ {0}</td>
+state_ {<a class="el" href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a5955ff6dbec4d6a22a31341908921a2d">StateEmpty_</a>}</td>
 <td class="fielddoc">
 </td></tr>
 </table>
 
 </div>
 </div>
-<a name="da/dfa/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_initial_log" id="da/dfa/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_initial_log"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#da/dfa/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_initial_log">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LogCore::InitialLog</h2>
+<a name="da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key" id="da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::CategoryCache::Key</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct anonymous_namespace{Log.cpp}::LogCore::InitialLog</td>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::CategoryCache::Key</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
-Collaboration diagram for anonymous_namespace{Log.cpp}::LogCore::InitialLog:</div>
+Collaboration diagram for anonymous_namespace{Log.cpp}::CategoryCache::Key:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d96/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_initial_log__coll__graph.svg" width="424" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/dd5/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key__coll__graph.svg" width="416" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
-<a id="a49c402d82b1c2aa200cf0087c3cc95f2" name="a49c402d82b1c2aa200cf0087c3cc95f2"></a>QtMsgType</td>
+<a id="ae0654e9b8b9646771a8881d24b3e1525" name="ae0654e9b8b9646771a8881d24b3e1525"></a>uint64_t</td>
 <td class="fieldname">
-level_ {QtInfoMsg}</td>
+hash_ {0}</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aa9e55dfdaa3c15c32fa1b6f17db5ac66" name="aa9e55dfdaa3c15c32fa1b6f17db5ac66"></a>QString</td>
+<a id="a7c6e8bbff9f5756a76322717f5d5ddb4" name="a7c6e8bbff9f5756a76322717f5d5ddb4"></a>uint32_t</td>
 <td class="fieldname">
-message_</td>
+length_ {0}</td>
 <td class="fielddoc">
 </td></tr>
 </table>
 
 </div>
 </div>
-<a name="d0/d89/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_one_log" id="d0/d89/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_one_log"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#d0/d89/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_one_log">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LogCore::OneLog</h2>
+<a name="d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash" id="d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::CategoryCache::TextHash</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct anonymous_namespace{Log.cpp}::LogCore::OneLog</td>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::CategoryCache::TextHash</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
-Collaboration diagram for anonymous_namespace{Log.cpp}::LogCore::OneLog:</div>
+Collaboration diagram for anonymous_namespace{Log.cpp}::CategoryCache::TextHash:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/dd2/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_one_log__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash__coll__graph.svg" width="456" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
-<a id="ae62614689a80d34533e97aca8325d559" name="ae62614689a80d34533e97aca8325d559"></a>time_point</td>
+<a id="ada445903c60517fc0302fb0e757a1fb9" name="ada445903c60517fc0302fb0e757a1fb9"></a>uint64_t</td>
 <td class="fieldname">
-dateTime_ = std::chrono::system_clock::time_point::min()</td>
+hash_ {0}</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="add39743d8cf794798222e7e507fd3564" name="add39743d8cf794798222e7e507fd3564"></a>int</td>
+<a id="a0f0ce91d2e0f57dba0df0705c12c3741" name="a0f0ce91d2e0f57dba0df0705c12c3741"></a>uint32_t</td>
 <td class="fieldname">
-fileLine_ {-1}</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a702395ba22ec763667dfc96108a4ee4f" name="a702395ba22ec763667dfc96108a4ee4f"></a><a class="el" href="../../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html">FixedStrings</a></td>
-<td class="fieldname">
-fixedStrings_</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a0bca06dc2e02fb585e29bcad3cb6c1c1" name="a0bca06dc2e02fb585e29bcad3cb6c1c1"></a>QtMsgType</td>
-<td class="fieldname">
-level_ {QtInfoMsg}</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a40e63646cb22daf927f0f93e7ae4c816" name="a40e63646cb22daf927f0f93e7ae4c816"></a>QString</td>
-<td class="fieldname">
-message_</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a627f77722a16ceb4c230a0a9123bd3fe" name="a627f77722a16ceb4c230a0a9123bd3fe"></a>quint32</td>
-<td class="fieldname">
-thread_ {0}</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a7929fa8f9996256d5da0ce03794a46fb" name="a7929fa8f9996256d5da0ce03794a46fb"></a>qint64</td>
-<td class="fieldname">
-threadDelta_ {-1}</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a2300936269befb4429d59febb2afe82a" name="a2300936269befb4429d59febb2afe82a"></a>DWORD</td>
-<td class="fieldname">
-threadId_ {0}</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a0cf7e2934788f5f2828e0a977d2471c9" name="a0cf7e2934788f5f2828e0a977d2471c9"></a>qint64</td>
-<td class="fieldname">
-threadTime_ {-1}</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="ae607f386555664619e7a6e02110f7a8c" name="ae607f386555664619e7a6e02110f7a8c"></a>qint64</td>
-<td class="fieldname">
-upTime_ {-1}</td>
+length_ {0}</td>
 <td class="fielddoc">
 </td></tr>
 </table>
 
 </div>
 </div>
-<a name="d7/db8/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_startup_settings" id="d7/db8/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_startup_settings"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#d7/db8/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_startup_settings">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LogCore::StartupSettings</h2>
+<a name="d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry" id="d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::FileLineCache::Entry</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct anonymous_namespace{Log.cpp}::LogCore::StartupSettings</td>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::FileLineCache::Entry</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
-Collaboration diagram for anonymous_namespace{Log.cpp}::LogCore::StartupSettings:</div>
+Collaboration diagram for anonymous_namespace{Log.cpp}::FileLineCache::Entry:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d8/d0e/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_startup_settings__coll__graph.svg" width="464" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/dfe/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry__coll__graph.svg" width="100%" height="524"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
-<a id="a8804f99ed3b7e42b98e0016294c7daad" name="a8804f99ed3b7e42b98e0016294c7daad"></a>QString</td>
+<a id="a07d2ad9c7a2768d7b6833dde310c4b0d" name="a07d2ad9c7a2768d7b6833dde310c4b0d"></a><a class="el" href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">Key</a></td>
 <td class="fieldname">
-dir_</td>
+key_ {}</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="af14ca6a177d99ba4ee4da9a550121aaa" name="af14ca6a177d99ba4ee4da9a550121aaa"></a>QStringList</td>
+<a id="a724008c222b14420c93431227507ff61" name="a724008c222b14420c93431227507ff61"></a>uint16_t</td>
+<td class="fieldname">
+length_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9428ae642c6c9019ef5998f7ccfe6239" name="a9428ae642c6c9019ef5998f7ccfe6239"></a>uint32_t</td>
+<td class="fieldname">
+offset_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a199b82e1c703846c884e9d30de7950e8" name="a199b82e1c703846c884e9d30de7950e8"></a>atomic&lt; uint8_t &gt;</td>
+<td class="fieldname">
+state_ {<a class="el" href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a57d6b24dc1a39d73983a73fd8afbd2b6">StateEmpty_</a>}</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key" id="df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::FileLineCache::Key</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::FileLineCache::Key</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::FileLineCache::Key:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/d9d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key__coll__graph.svg" width="416" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a1f5ecf489a7c6ac3f9124cef20c4cb15" name="a1f5ecf489a7c6ac3f9124cef20c4cb15"></a>uint64_t</td>
+<td class="fieldname">
+fileHash_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a4be539cf0c688be65c5d4bb518933136" name="a4be539cf0c688be65c5d4bb518933136"></a>uint32_t</td>
+<td class="fieldname">
+fileLength_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="af13034a46616348d9fd5fa6285b41198" name="af13034a46616348d9fd5fa6285b41198"></a>int32_t</td>
+<td class="fieldname">
+line_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash" id="df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::FileLineCache::TextHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::FileLineCache::TextHash</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::FileLineCache::TextHash:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/dcc/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash__coll__graph.svg" width="456" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a77bd26fd2088a1b038c666a7b5284ac7" name="a77bd26fd2088a1b038c666a7b5284ac7"></a>uint64_t</td>
+<td class="fieldname">
+hash_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ab1fac38ad7055c8ae67d267e82186276" name="ab1fac38ad7055c8ae67d267e82186276"></a>uint32_t</td>
+<td class="fieldname">
+length_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache" id="d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::format::DateTimeCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::format::DateTimeCache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::format::DateTimeCache:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/dc4/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache__coll__graph.svg" width="440" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a5c45b8be2daa0650b039df94f9c4bb02" name="a5c45b8be2daa0650b039df94f9c4bb02"></a>time_t</td>
+<td class="fieldname">
+sec_ {}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9d543fb0704eb9e6078c6a172e6ecc46" name="a9d543fb0704eb9e6078c6a172e6ecc46"></a><a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a></td>
+<td class="fieldname">
+text_[20] {}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aedd437bf6d9a2d764b930018061ddfd3" name="aedd437bf6d9a2d764b930018061ddfd3"></a>bool</td>
+<td class="fieldname">
+valid_ {false}</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info" id="d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::format::UnitInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::format::UnitInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::format::UnitInfo:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d17/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info__coll__graph.svg" width="400" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="acdbcaa50e906e365c0eaa351508f5f1c" name="acdbcaa50e906e365c0eaa351508f5f1c"></a>int64_t</td>
+<td class="fieldname">
+scaleNs_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8a56f91ba31daa7f54a3355e3bf1bc77" name="a8a56f91ba31daa7f54a3355e3bf1bc77"></a><a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a></td>
+<td class="fieldname">
+suffix_</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d9/dc2/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_entry" id="d9/dc2/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_entry"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d9/dc2/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_entry">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::FunctionCache::Entry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::FunctionCache::Entry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::FunctionCache::Entry:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d4a/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_entry__coll__graph.svg" width="100%" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a598a67cd10bf833bc29faef39f2e3686" name="a598a67cd10bf833bc29faef39f2e3686"></a><a class="el" href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#d4/d3f/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_key">Key</a></td>
+<td class="fieldname">
+key_ {}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a076b2d23594a9534f16657325d0002ba" name="a076b2d23594a9534f16657325d0002ba"></a>uint16_t</td>
+<td class="fieldname">
+length_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ae52b25356ef075cff32ee56f63190329" name="ae52b25356ef075cff32ee56f63190329"></a>uint32_t</td>
+<td class="fieldname">
+offset_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a941dad315a374b531f4b7427c3346704" name="a941dad315a374b531f4b7427c3346704"></a>atomic&lt; uint8_t &gt;</td>
+<td class="fieldname">
+state_ {<a class="el" href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#ac03b48efe55a23b49811bc425565cb67">StateEmpty_</a>}</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d4/d3f/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_key" id="d4/d3f/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_key"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d4/d3f/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_key">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::FunctionCache::Key</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::FunctionCache::Key</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::FunctionCache::Key:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_key__coll__graph.svg" width="416" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a7640731d2d668f8f95851f3ab4d6534d" name="a7640731d2d668f8f95851f3ab4d6534d"></a>uint64_t</td>
+<td class="fieldname">
+hash_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8bb3882ef33b0176c368c87b21334987" name="a8bb3882ef33b0176c368c87b21334987"></a>uint32_t</td>
+<td class="fieldname">
+length_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="da/d53/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_text_hash" id="da/d53/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_text_hash"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#da/d53/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_text_hash">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::FunctionCache::TextHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::FunctionCache::TextHash</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::FunctionCache::TextHash:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d44/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_text_hash__coll__graph.svg" width="456" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a01bdea81a976f4b7b6ece3ff5f90e9ae" name="a01bdea81a976f4b7b6ece3ff5f90e9ae"></a>uint64_t</td>
+<td class="fieldname">
+hash_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ab4a65d60486576eb7d52cb113792a8b2" name="ab4a65d60486576eb7d52cb113792a8b2"></a>uint32_t</td>
+<td class="fieldname">
+length_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d1/df0/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_bridge_state" id="d1/df0/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_bridge_state"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d1/df0/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_bridge_state">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LeakedState::BridgeState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::LeakedState::BridgeState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::LeakedState::BridgeState:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d66/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_bridge_state__coll__graph.svg" width="464" height="152"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="ab0c62c5920ad435ef7e06f520daf5480" name="ab0c62c5920ad435ef7e06f520daf5480"></a>HANDLE</td>
+<td class="fieldname">
+hLogPipe_ = INVALID_HANDLE_VALUE</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a00d8b5fce58842fa89e1ef00dc64cbb9" name="a00d8b5fce58842fa89e1ef00dc64cbb9"></a>atomic_bool</td>
+<td class="fieldname">
+hold_ {false}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aa2af451e37148badf7713b39f4109f31" name="aa2af451e37148badf7713b39f4109f31"></a>HANDLE</td>
+<td class="fieldname">
+hProcess_ = nullptr</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aa51366d4eb149c9632b88a624e00d50b" name="aa51366d4eb149c9632b88a624e00d50b"></a>SRWLOCK</td>
+<td class="fieldname">
+pipeLock_ = SRWLOCK_INIT</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config" id="d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LeakedState::Config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::LeakedState::Config</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::LeakedState::Config:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/df6/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config__coll__graph.svg" width="526" height="210"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a76b45c827f28221a7771d511f0e0b649" name="a76b45c827f28221a7771d511f0e0b649"></a>bool</td>
+<td class="fieldname">
+coloredConsole_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ad0970b7473176e081bdd1ca7e5968e79">defColoredConsole</a>}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="af5c863e4eda72447bf672c5e5ed2b05f" name="af5c863e4eda72447bf672c5e5ed2b05f"></a>QString</td>
+<td class="fieldname">
+directory_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a0204ccec3cfcb7cec4adc63a9c78bf6b" name="a0204ccec3cfcb7cec4adc63a9c78bf6b"></a>QString</td>
+<td class="fieldname">
+dispFields_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ab5ff69bf8f78dd4cb164e80a688d7d02" name="ab5ff69bf8f78dd4cb164e80a688d7d02"></a>QString</td>
+<td class="fieldname">
+fileFields_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9f0a137296541ca8aae61cb5694493d9" name="a9f0a137296541ca8aae61cb5694493d9"></a>QStringList</td>
 <td class="fieldname">
 filterRules_</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5f003ce1b85bfccdf6fa35f14aa9e73f" name="a5f003ce1b85bfccdf6fa35f14aa9e73f"></a>QStringList</td>
+<a id="a7a07b9f46cbd3e50e2df447cf2633aa5" name="a7a07b9f46cbd3e50e2df447cf2633aa5"></a>uint32_t</td>
 <td class="fieldname">
-logFields_</td>
+maxFolderMb_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe53871654bdafb363794008605fee3f">defMaxFolderMb</a>}</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5cc3ae0ec42ef0dfd54879644fb3efe7" name="a5cc3ae0ec42ef0dfd54879644fb3efe7"></a>qint64</td>
+<a id="a705367302ce1bbdbf85b5a65195613c9" name="a705367302ce1bbdbf85b5a65195613c9"></a>bool</td>
 <td class="fieldname">
-maxFolderMb_</td>
+showDbugLog_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a0fa4f711453765b16b6ac1bd01ef4249">defShowDbugLog</a>}</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a997c3d0950cbff0b95f392fb0d299368" name="a997c3d0950cbff0b95f392fb0d299368"></a>QStringList</td>
+<a id="ac1f9191bbe8fbcd7b20c56487680960e" name="ac1f9191bbe8fbcd7b20c56487680960e"></a>bool</td>
 <td class="fieldname">
-msgFields_</td>
+showInfoLog_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ad3a5f1d0302fc62fbd00651d929a5b50">defShowInfoLog</a>}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a403b70af3a0646f894ce5ecf67797661" name="a403b70af3a0646f894ce5ecf67797661"></a>bool</td>
+<td class="fieldname">
+showWarnLog_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a2facf127f1e284b14de1a6bbbc60f74d">defShowWarnLog</a>}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a01ecd0e5a4ce36824d3ddfa077462957" name="a01ecd0e5a4ce36824d3ddfa077462957"></a>bool</td>
+<td class="fieldname">
+warnIsImp_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a94b3fe6c196b55dfd00ce4d1b317702e">defWarnIsImp</a>}</td>
 <td class="fielddoc">
 </td></tr>
 </table>
 
 </div>
 </div>
-<a name="d8/db4/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_unit_info" id="d8/db4/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_unit_info"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#d8/db4/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_unit_info">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LogCore::UnitInfo</h2>
+<a name="d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state" id="d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LeakedState::CrashState</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct anonymous_namespace{Log.cpp}::LogCore::UnitInfo</td>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::LeakedState::CrashState</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
-Collaboration diagram for anonymous_namespace{Log.cpp}::LogCore::UnitInfo:</div>
+Collaboration diagram for anonymous_namespace{Log.cpp}::LeakedState::CrashState:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/dc7/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_unit_info__coll__graph.svg" width="408" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/dda/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
-<a id="a4538ccb055f2dcbcb49ce9654ada469a" name="a4538ccb055f2dcbcb49ce9654ada469a"></a>qint64</td>
+<a id="a8adbbf5f18976a3e411f87360ab0d2a0" name="a8adbbf5f18976a3e411f87360ab0d2a0"></a><a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; 4096u &gt;</td>
 <td class="fieldname">
-scale_</td>
+crashBuf_</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad559142620776398f3898712f4bd5063" name="ad559142620776398f3898712f4bd5063"></a>char</td>
+<a id="aa86ec3715622a7a47c91d45641cc65ef" name="aa86ec3715622a7a47c91d45641cc65ef"></a>volatile LONG</td>
 <td class="fieldname">
-suffix_</td>
+crashing_ = 0</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a43a88c468a70d84a209929f3ef0c3db3" name="a43a88c468a70d84a209929f3ef0c3db3"></a><a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; 4096u &gt;</td>
+<td class="fieldname">
+fatalBuf_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="acba42fdda96833048a00972f52daa0f3" name="acba42fdda96833048a00972f52daa0f3"></a><a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; 4096u &gt;</td>
+<td class="fieldname">
+fatalDebugBuf_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a3c86372a5b3448a7b1de1c99ade51911" name="a3c86372a5b3448a7b1de1c99ade51911"></a>atomic_uint32_t</td>
+<td class="fieldname">
+fatalOwnerThreadId_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aa5f6fc1933dd24e1503171c60427f1c1" name="aa5f6fc1933dd24e1503171c60427f1c1"></a><a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; 4096u &gt;</td>
+<td class="fieldname">
+fatalPopupBuf_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a0e545b41d039c742e05b0a70436928f2" name="a0e545b41d039c742e05b0a70436928f2"></a>volatile LONG</td>
+<td class="fieldname">
+inSignal_ = 0</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker" id="d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LeakedState::DispWorker</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::LeakedState::DispWorker</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::LeakedState::DispWorker:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d57/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker__coll__graph.svg" width="100%" height="519"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="aaad05bad6b7a74b74233f8ade123fbbb" name="aaad05bad6b7a74b74233f8ade123fbbb"></a>atomic_bool</td>
+<td class="fieldname">
+failed_ {false}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="afe218675193d24f1b731895c18a13dcb" name="afe218675193d24f1b731895c18a13dcb"></a>atomic_bool</td>
+<td class="fieldname">
+mute_ {false}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a7ab8fc2e51be653615b80be305786fda" name="a7ab8fc2e51be653615b80be305786fda"></a><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">Worker</a></td>
+<td class="fieldname">
+worker_</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker" id="d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LeakedState::FileWorker</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::LeakedState::FileWorker</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::LeakedState::FileWorker:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/dba/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a08879be319b1cfb791b4c7e20b5ba62e" name="a08879be319b1cfb791b4c7e20b5ba62e"></a>atomic_uint32_t</td>
+<td class="fieldname">
+droppedLogs_ {0}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aee27d00c7cd36bed568f8bff19605fc0" name="aee27d00c7cd36bed568f8bff19605fc0"></a>LockedValue&lt; QString &gt;</td>
+<td class="fieldname">
+fileFullPath_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="af92e7bff19105fc26e626a237d0befd9" name="af92e7bff19105fc26e626a237d0befd9"></a>atomic_bool</td>
+<td class="fieldname">
+fileReady_ {false}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="afb40025cdcf0a86206b916fef24680fa" name="afb40025cdcf0a86206b916fef24680fa"></a><a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">Worker</a></td>
+<td class="fieldname">
+worker_</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime" id="d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LeakedState::Runtime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::LeakedState::Runtime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::LeakedState::Runtime:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d6f/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="ab0fc95195529e0240d2bb02a5ceaa3a3" name="ab0fc95195529e0240d2bb02a5ceaa3a3"></a>LockedValue&lt; QStringList &gt;</td>
+<td class="fieldname">
+categories_</td>
+<td class="fielddoc">
+Locked list of all categories. </td></tr>
+<tr><td class="fieldtype">
+<a id="ac6165f6c8ce44db086c7d3ac87cebf3b" name="ac6165f6c8ce44db086c7d3ac87cebf3b"></a>atomic_uint64_t</td>
+<td class="fieldname">
+dirCleanupSeq_ {0}</td>
+<td class="fielddoc">
+Atomic sequence generation to ensure only the latest call gets to execute directory cleanup. </td></tr>
+<tr><td class="fieldtype">
+<a id="a458cf3bfc85923bc242cb24bcdaa469a" name="a458cf3bfc85923bc242cb24bcdaa469a"></a>mutex</td>
+<td class="fieldname">
+directoryChangeMutex_</td>
+<td class="fielddoc">
+Mutex to stop multiple threads changing the directory simultaneously. </td></tr>
+<tr><td class="fieldtype">
+<a id="acfd641a11d0091c0a1a117cedb976d72" name="acfd641a11d0091c0a1a117cedb976d72"></a>LockedValue&lt; QString &gt;</td>
+<td class="fieldname">
+fileBaseName_</td>
+<td class="fielddoc">
+Log file base name without .log or .imp.log suffix (for UI use only). </td></tr>
+<tr><td class="fieldtype">
+<a id="a3beb865131876ef1ca39bce0ecbfae20" name="a3beb865131876ef1ca39bce0ecbfae20"></a>atomic_uint32_t</td>
+<td class="fieldname">
+logSequence_ {1}</td>
+<td class="fielddoc">
+Log sequence number generator. </td></tr>
+<tr><td class="fieldtype">
+<a id="ad8b0b0cc281a4c0940f27a73fa7c67d4" name="ad8b0b0cc281a4c0940f27a73fa7c67d4"></a>unique_ptr&lt; QTimer &gt;</td>
+<td class="fieldname">
+maxFolderMbCleanupTimer_</td>
+<td class="fielddoc">
+Timer to debounce directory cleanup. </td></tr>
+<tr><td class="fieldtype">
+<a id="aaef15095315ac37c082189d9563c73f1" name="aaef15095315ac37c082189d9563c73f1"></a>atomic_uint32_t</td>
+<td class="fieldname">
+maxFolderMbPendingSaveValue_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe53871654bdafb363794008605fee3f">defMaxFolderMb</a>}</td>
+<td class="fielddoc">
+Value saved after debounced timeout for max folder size. </td></tr>
+<tr><td class="fieldtype">
+<a id="a38623ae2dde18c15fa8158cb7ea9d329" name="a38623ae2dde18c15fa8158cb7ea9d329"></a>unique_ptr&lt; QTimer &gt;</td>
+<td class="fieldname">
+maxFolderMbSaveTimer_</td>
+<td class="fielddoc">
+Timer to debounce max folder value save. </td></tr>
+<tr><td class="fieldtype">
+<a id="af15bacce9da529fdb42a3557e7731b4b" name="af15bacce9da529fdb42a3557e7731b4b"></a>atomic&lt; <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2b380887c96684457d43d06fc18be6c">TypeCatFilter</a> &gt;</td>
+<td class="fieldname">
+prevCategoryFilter_ = nullptr</td>
+<td class="fielddoc">
+Qt's log category filter pointer. </td></tr>
+<tr><td class="fieldtype">
+<a id="a431e23f5d76469fcfbbb2839c29b232c" name="a431e23f5d76469fcfbbb2839c29b232c"></a>atomic_bool</td>
+<td class="fieldname">
+shutdownMode_ {false}</td>
+<td class="fielddoc">
+Flag to re-route late logs to important log bridge. </td></tr>
+<tr><td class="fieldtype">
+<a id="af17f1634d559218072686dcdc831b024" name="af17f1634d559218072686dcdc831b024"></a>atomic_bool</td>
+<td class="fieldname">
+tempMode_ {false}</td>
+<td class="fielddoc">
+To enable/disable config storage to settings file. </td></tr>
+<tr><td class="fieldtype">
+<a id="a3c7e727d0dca9cfe688e990798469dca" name="a3c7e727d0dca9cfe688e990798469dca"></a>atomic_uint16_t</td>
+<td class="fieldname">
+threadIndexGenerator_ {2}</td>
+<td class="fielddoc">
+Thread index number generator. </td></tr>
+<tr><td class="fieldtype">
+<a id="a16fbba24e30e4859cec2c69b2c7a4430" name="a16fbba24e30e4859cec2c69b2c7a4430"></a>once_flag</td>
+<td class="fieldname">
+workersShutdownInitiated_</td>
+<td class="fielddoc">
+Flag to ensure the workers shutdown only happens once. </td></tr>
+</table>
+
+</div>
+</div>
+<a name="d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker" id="d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">&#9670;&#160;</a></span>anonymous_namespace{Log.cpp}::LeakedState::Worker</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct anonymous_namespace{Log.cpp}::LeakedState::Worker</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Collaboration diagram for anonymous_namespace{Log.cpp}::LeakedState::Worker:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/d02/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker__coll__graph.svg" width="100%" height="467"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a98222dfb7c6f733841c0b92c6702b3c5" name="a98222dfb7c6f733841c0b92c6702b3c5"></a>atomic_bool</td>
+<td class="fieldname">
+active_ {false}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a608fc64cda1ad2a7c033b9d454ca2ed5" name="a608fc64cda1ad2a7c033b9d454ca2ed5"></a>atomic_uint64_t</td>
+<td class="fieldname">
+packedFields_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a3a3522ad525d65aa3ff98ce80c877b31">nullPackedFields</a>}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9bf7b12c8c0111daf328f7ca67234650" name="a9bf7b12c8c0111daf328f7ca67234650"></a>ConcurrentQueue&lt; <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &gt;</td>
+<td class="fieldname">
+queue_ {<a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#aaa2014923c0727e9fe5e4f7b08af3581">workerQueueSize</a>}</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a5378519d5b4e2beb70d2d1de89e1fdb5" name="a5378519d5b4e2beb70d2d1de89e1fdb5"></a>jthread</td>
+<td class="fieldname">
+thread_</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a89ad73405847474215643311d6b56832" name="a89ad73405847474215643311d6b56832"></a>atomic_bool</td>
+<td class="fieldname">
+wakeup_ {false}</td>
 <td class="fielddoc">
 </td></tr>
 </table>
@@ -546,7 +1432,7 @@ suffix_</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -562,9 +1448,11 @@ suffix_</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00081">81</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p>Emits an internal critical diagnostic through the logging-system category. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ab25a4996d5ead7b5656de343421f6788">anonymous_namespace{Log.cpp}::LogCore::insertLogMessage_()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a137b0a08d3ab0aa10f902110216127f4">anonymous_namespace{Log.cpp}::LogCore::writeInitialLogs_()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00134">134</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1d722dbe548810e26de6526339f7db0a">anonymous_namespace{Log.cpp}::workers::directoryCleanup()</a>, <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a151b634635a35cd3feb2de126611e850">anonymous_namespace{Log.cpp}::workers::dispWorkerStart()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a">anonymous_namespace{Log.cpp}::startup()</a>.</p>
 
 </div>
 </div>
@@ -580,9 +1468,10 @@ suffix_</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00078">78</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p>Defines the logging category used for logging-system diagnostics. </p>
+<p>Emits an internal debug diagnostic through the logging-system category. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ab25a4996d5ead7b5656de343421f6788">anonymous_namespace{Log.cpp}::LogCore::insertLogMessage_()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a137b0a08d3ab0aa10f902110216127f4">anonymous_namespace{Log.cpp}::LogCore::writeInitialLogs_()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00125">125</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -598,9 +1487,11 @@ suffix_</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00082">82</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p>Emits an internal fatal diagnostic through the logging-system category. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ab25a4996d5ead7b5656de343421f6788">anonymous_namespace{Log.cpp}::LogCore::insertLogMessage_()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a137b0a08d3ab0aa10f902110216127f4">anonymous_namespace{Log.cpp}::LogCore::writeInitialLogs_()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00137">137</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920">anonymous_namespace{Log.cpp}::workers::fileWorkerStart()</a>.</p>
 
 </div>
 </div>
@@ -616,9 +1507,9 @@ suffix_</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00079">79</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p>Emits an internal informational diagnostic through the logging-system category. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac81e3393bfb7545e17c9fd8ea4cb4aa6">anonymous_namespace{Log.cpp}::LogCore::LogCore()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ab25a4996d5ead7b5656de343421f6788">anonymous_namespace{Log.cpp}::LogCore::insertLogMessage_()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a137b0a08d3ab0aa10f902110216127f4">anonymous_namespace{Log.cpp}::LogCore::writeInitialLogs_()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -634,9 +1525,27 @@ suffix_</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00080">80</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p>Emits an internal warning diagnostic through the logging-system category. </p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a7a82c11accb191c2f06849f6d13db39a">anonymous_namespace{Log.cpp}::initLogging()</a>, <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ab25a4996d5ead7b5656de343421f6788">anonymous_namespace{Log.cpp}::LogCore::insertLogMessage_()</a>, and <a class="el" href="../../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a137b0a08d3ab0aa10f902110216127f4">anonymous_namespace{Log.cpp}::LogCore::writeInitialLogs_()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00131">131</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc">anonymous_namespace{Log.cpp}::control::scheduleMaxFolderMbSave()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287">anonymous_namespace{Log.cpp}::control::setMaxFolderMb()</a>.</p>
+
+</div>
+</div>
+<a id="a8a7c30a576d5706b6c0821834d01cbbc" name="a8a7c30a576d5706b6c0821834d01cbbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7c30a576d5706b6c0821834d01cbbc">&#9670;&#160;</a></span>STRICT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRICT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -652,7 +1561,7 @@ suffix_</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -670,7 +1579,7 @@ suffix_</td>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../d0/da7/_log_8cpp.html">Log.cpp</a></li>
+    <li class="navelem"><a href="../../dir_176b74ca7fe251e8ce5a9c9ccf88d4ec.html">Root</a></li><li class="navelem"><a href="../../d0/da7/_log_8cpp.html">Log.cpp</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

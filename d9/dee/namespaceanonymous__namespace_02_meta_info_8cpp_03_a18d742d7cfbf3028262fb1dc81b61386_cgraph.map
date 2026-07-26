@@ -1,16 +1,36 @@
 <map id="anonymous_namespace{MetaInfo::cpp}::scheduleInit" name="anonymous_namespace{MetaInfo::cpp}::scheduleInit">
-<area shape="rect" id="Node000001" title="Schedules the initialization of application meta paths." alt="" coords="5,31,411,56"/>
-<area shape="rect" id="Node000002" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Application ProgramData path: C:/ProgramData/[organization]/[Application]." alt="" coords="475,5,712,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,28,470,26,464,27,403,33"/>
-<area shape="rect" id="Node000006" href="$dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Application Public/Documents path: C:/Users/Public/Documents/[organization]/[Application]." alt="" coords="459,55,728,80"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="410,53,453,59,448,59,410,59"/>
-<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Organization ProgramData path: C:/ProgramData/[organization]." alt="" coords="792,5,1029,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="712,16,787,18,781,18,712,21"/>
-<area shape="rect" id="Node000004" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1093,23,1315,64"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1029,26,1088,33,1083,33,1029,31"/>
-<area shape="rect" id="Node000005" href="$dc/dba/namespacenpi_1_1app.html#a2a7d7ff8fc3a71350a1d640be744c1f9" title="Displays a Windows&#45;native fatal error message box." alt="" coords="1363,31,1552,56"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1315,41,1357,43,1352,44,1315,46"/>
-<area shape="rect" id="Node000007" href="$dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9" title="Organization Public/Documents path: C:/Users/Public/Documents/[organization]." alt="" coords="776,55,1045,80"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="728,65,771,67,766,68,728,70"/>
-<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="1045,54,1083,53,1088,53,1045,59"/>
+<area shape="rect" id="Node000001" title="Schedules the initialization of application meta paths." alt="" coords="5,180,411,206"/>
+<area shape="rect" id="Node000002" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Application ProgramData path: C:/ProgramData/[organization]/[Application]." alt="" coords="475,155,712,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,178,469,175,464,177,404,183"/>
+<area shape="rect" id="Node000016" href="$dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542" title="Application Public/Documents path: C:/Users/Public/Documents/[organization]/[Application]." alt="" coords="459,204,728,230"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="410,203,453,208,448,209,411,208"/>
+<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Organization ProgramData path: C:/ProgramData/[organization]." alt="" coords="792,155,1029,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="711,165,787,167,781,168,712,170"/>
+<area shape="rect" id="Node000004" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1093,173,1315,214"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1029,175,1088,183,1083,183,1029,181"/>
+<area shape="rect" id="Node000005" href="$dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="1363,180,1568,206"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1314,191,1357,193,1352,193,1315,196"/>
+<area shape="rect" id="Node000006" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="1620,5,1793,61"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1479,178,1535,129,1615,71,1629,65,1634,64,1617,75,1538,133,1481,183"/>
+<area shape="rect" id="Node000008" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="1616,85,1797,141"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="1504,178,1613,144,1618,143,1505,183"/>
+<area shape="rect" id="Node000009" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="1620,165,1793,221"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="1568,191,1615,193,1609,193,1568,196"/>
+<area shape="rect" id="Node000010" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64" title="Finalizes the command line and launches npiMsgBox.exe." alt="" coords="1620,245,1793,301"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="1505,203,1618,243,1612,243,1504,208"/>
+<area shape="rect" id="Node000011" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761" title="Builds the helper executable path and reusable command&#45;line prefix. The command&#45;line prefix buffer is..." alt="" coords="1620,325,1793,381"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="1481,203,1538,254,1617,311,1634,322,1629,321,1615,315,1535,258,1479,208"/>
+<area shape="rect" id="Node000007" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a587867f118701093b97cc8ccaf37a239" title="Sanitizes and appends one message character." alt="" coords="1861,5,2035,61"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1793,31,1856,33,1851,33,1793,36"/>
+<area shape="rect" id="Node000012" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a7c36613e6219d885c2b5c949ce285c60" title="Appends one character to the prepared command&#45;line prefix buffer." alt="" coords="1861,245,2035,301"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="1790,323,1854,304,1859,303,1791,328"/>
+<area shape="rect" id="Node000013" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60" title="Appends the application title used as the message&#45;box title to the command&#45;line prefix." alt="" coords="1845,325,2051,381"/>
+<area shape="poly" id="edge12_Node000011_Node000013" title=" " alt="" coords="1793,351,1840,353,1835,353,1793,356"/>
+<area shape="rect" id="Node000015" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ae9382129e5c68748dfb4d7ca8056cd94" title="Appends one character to the prepared executable path buffer." alt="" coords="1861,405,2035,461"/>
+<area shape="poly" id="edge14_Node000011_Node000015" title=" " alt="" coords="1791,378,1859,403,1854,402,1790,384"/>
+<area shape="rect" id="Node000014" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="2099,325,2336,381"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="2050,351,2094,353,2088,353,2051,356"/>
+<area shape="rect" id="Node000017" href="$dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9" title="Organization Public/Documents path: C:/Users/Public/Documents/[organization]." alt="" coords="776,204,1045,230"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="727,215,771,217,766,218,728,220"/>
+<area shape="poly" id="edge17_Node000017_Node000004" title=" " alt="" coords="1045,204,1088,202,1083,203,1045,209"/>
 </map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['textspec_0',['TextSpec',['../d2/db7/classnpi_1_1_text_spec.html',1,'npi']]]
+  ['slotgate_0',['SlotGate',['../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html',1,'npi::ind']]],
+  ['stagewindow_1',['StageWindow',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html',1,'npi::ind']]]
 ];

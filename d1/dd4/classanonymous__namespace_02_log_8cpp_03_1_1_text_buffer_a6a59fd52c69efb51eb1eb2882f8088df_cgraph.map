@@ -1,0 +1,8 @@
+<map id="anonymous_namespace{Log::cpp}::TextBuffer::appendDelimiter_" name="anonymous_namespace{Log::cpp}::TextBuffer::appendDelimiter_">
+<area shape="rect" id="Node000001" title="Appends the configured field separator when the current line is not empty." alt="" coords="5,54,499,79"/>
+<area shape="rect" id="Node000002" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b" title="Appends one byte without sanitization." alt="" coords="547,5,744,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,51,541,42,536,42,403,56"/>
+<area shape="rect" id="Node000003" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40" title="Checks whether the current line has room for the requested bytes and its terminator." alt="" coords="792,39,989,94"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="499,71,744,71,781,72,787,72,744,76,499,76"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="744,44,786,52,781,52,744,49"/>
+</map>

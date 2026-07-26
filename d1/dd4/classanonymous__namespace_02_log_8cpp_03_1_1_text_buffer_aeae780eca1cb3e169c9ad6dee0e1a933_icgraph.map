@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Log::cpp}::TextBuffer::appendHex_" name="anonymous_namespace{Log::cpp}::TextBuffer::appendHex_">
+<area shape="rect" id="Node000001" title="Appends a 32&#45;bit value as fixed&#45;width hexadecimal text." alt="" coords="781,44,1227,70"/>
+<area shape="rect" id="Node000002" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ad04d833e641507640d81486a4accb05f" title="Handles an unhandled Windows structured exception." alt="" coords="504,29,733,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="771,57,733,60,733,55,776,57"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="668,20,663,17,654,12,619,8,594,10,578,15,570,21,570,31,566,28,565,19,575,10,593,5,619,3,655,7,667,13,673,22"/>
+<area shape="rect" id="Node000003" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="227,29,456,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="493,57,456,60,456,55,498,57"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="385,20,381,17,373,12,341,8,319,10,305,15,298,21,298,31,293,28,293,19,302,10,318,5,341,3,375,7,385,13,390,22"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+</map>

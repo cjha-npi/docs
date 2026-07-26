@@ -1,0 +1,5 @@
+<map id="npi::ind::SlotGate::tryEnter_" name="npi::ind::SlotGate::tryEnter_">
+<area shape="rect" id="Node000001" title="Enters the gate only when it is currently unblocked." alt="" coords="5,13,259,38"/>
+<area shape="rect" id="Node000002" href="$d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a96147c9c4eac3f20a7d484104fbd0efe" title="Checks whether the gate is currently blocked." alt="" coords="307,5,472,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,23,302,26,296,26,259,28"/>
+</map>

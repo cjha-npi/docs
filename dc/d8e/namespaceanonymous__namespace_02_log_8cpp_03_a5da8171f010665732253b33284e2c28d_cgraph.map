@@ -1,0 +1,10 @@
+<map id="anonymous_namespace{Log::cpp}::logCategoryFilter" name="anonymous_namespace{Log::cpp}::logCategoryFilter">
+<area shape="rect" id="Node000001" title="Records encountered categories and forwards filtering to the previous handler." alt="" coords="5,80,411,106"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="459,29,664,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="334,78,454,68,448,69,334,83"/>
+<area shape="rect" id="Node000004" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html#a1ab48ac5d60e628381eb5f7cd13bb974" title="Acquires scoped mutable access to the complete protected value." alt="" coords="467,109,656,150"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="334,103,462,119,456,119,334,109"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="712,29,917,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="664,55,707,57,701,57,664,60"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="766,28,766,19,775,10,791,5,815,3,848,7,859,13,864,22,859,20,855,17,847,12,815,8,792,10,777,15,771,21,770,31"/>
+</map>

@@ -1,0 +1,40 @@
+<map id="anonymous_namespace{Log::cpp}::bridge::sendDataLocked" name="anonymous_namespace{Log::cpp}::bridge::sendDataLocked">
+<area shape="rect" id="Node000001" title="Writes important&#45;log data while coordinating normal, fatal, and crash senders." alt="" coords="5,110,451,135"/>
+<area shape="poly" id="edge21_Node000001_Node000001" title=" " alt="" coords="170,111,158,102,164,91,188,85,228,83,265,85,288,90,298,98,292,108,288,105,293,99,286,94,264,90,228,88,189,90,167,96,163,101,175,109"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="728,35,933,90"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="357,107,722,71,719,75,358,112"/>
+<area shape="rect" id="Node000004" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" title="Writes a complete byte range to the current important&#45;log pipe." alt="" coords="499,139,680,194"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="333,133,493,153,489,156,334,138"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="981,29,1187,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="933,58,976,59,971,60,934,63"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="1035,28,1035,19,1044,10,1060,5,1084,3,1118,7,1128,13,1134,22,1128,21,1125,17,1116,12,1084,8,1061,10,1047,15,1040,21,1040,31"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="647,136,727,100,753,92,748,94,729,105,649,141"/>
+<area shape="poly" id="edge8_Node000004_Node000004" title=" " alt="" coords="543,138,543,129,551,120,567,114,589,112,622,117,631,122,637,131,631,130,628,126,620,122,589,117,568,119,554,124,547,131,547,140"/>
+<area shape="rect" id="Node000005" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a64e6b530b8b3e6eb1891bbb6df1dd11c" title="Converts an important&#45;log helper exit code to explanatory text." alt="" coords="740,139,921,194"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="679,164,735,166,730,167,681,169"/>
+<area shape="rect" id="Node000006" href="$da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019" title="Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;." alt="" coords="732,219,929,245"/>
+<area shape="poly" id="edge9_Node000004_Node000006" title=" " alt="" coords="680,190,729,204,771,217,766,217,727,209,680,196"/>
+<area shape="rect" id="Node000007" href="$dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="728,274,933,299"/>
+<area shape="poly" id="edge10_Node000004_Node000007" title=" " alt="" coords="626,192,675,225,729,255,769,271,764,272,727,260,672,229,626,197"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="784,137,784,129,792,120,808,114,831,112,863,117,873,122,878,131,873,130,869,126,861,122,831,117,809,119,795,124,789,131,789,140"/>
+<area shape="rect" id="Node000008" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="997,109,1171,165"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="901,271,932,255,948,236,955,217,963,196,979,175,990,171,994,168,983,179,967,199,960,219,953,239,935,259,903,276"/>
+<area shape="rect" id="Node000010" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="993,189,1175,245"/>
+<area shape="poly" id="edge13_Node000007_Node000010" title=" " alt="" coords="877,271,988,243,983,245,879,276"/>
+<area shape="rect" id="Node000011" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="997,269,1171,325"/>
+<area shape="poly" id="edge14_Node000007_Node000011" title=" " alt="" coords="933,288,992,293,987,294,934,293"/>
+<area shape="rect" id="Node000012" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64" title="Finalizes the command line and launches npiMsgBox.exe." alt="" coords="997,349,1171,405"/>
+<area shape="poly" id="edge15_Node000007_Node000012" title=" " alt="" coords="868,297,1001,347,996,347,867,302"/>
+<area shape="rect" id="Node000013" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761" title="Builds the helper executable path and reusable command&#45;line prefix. The command&#45;line prefix buffer is..." alt="" coords="997,429,1171,485"/>
+<area shape="poly" id="edge16_Node000007_Node000013" title=" " alt="" coords="844,297,902,353,941,385,983,415,1000,426,994,425,980,419,937,390,898,357,843,302"/>
+<area shape="rect" id="Node000009" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a587867f118701093b97cc8ccaf37a239" title="Sanitizes and appends one message character." alt="" coords="1251,109,1424,165"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="1170,135,1246,137,1240,138,1171,140"/>
+<area shape="rect" id="Node000014" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a7c36613e6219d885c2b5c949ce285c60" title="Appends one character to the prepared command&#45;line prefix buffer." alt="" coords="1251,349,1424,405"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="1170,427,1241,407,1246,406,1171,433"/>
+<area shape="rect" id="Node000015" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60" title="Appends the application title used as the message&#45;box title to the command&#45;line prefix." alt="" coords="1235,429,1440,485"/>
+<area shape="poly" id="edge18_Node000013_Node000015" title=" " alt="" coords="1170,455,1230,457,1224,457,1171,460"/>
+<area shape="rect" id="Node000017" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ae9382129e5c68748dfb4d7ca8056cd94" title="Appends one character to the prepared executable path buffer." alt="" coords="1251,509,1424,565"/>
+<area shape="poly" id="edge20_Node000013_Node000017" title=" " alt="" coords="1171,482,1246,508,1241,507,1170,487"/>
+<area shape="rect" id="Node000016" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="1488,429,1725,485"/>
+<area shape="poly" id="edge19_Node000015_Node000016" title=" " alt="" coords="1440,455,1483,457,1478,457,1440,460"/>
+</map>

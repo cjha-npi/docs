@@ -1,0 +1,13 @@
+<map id="anonymous_namespace{Log::cpp}::layout::packField" name="anonymous_namespace{Log::cpp}::layout::packField">
+<area shape="rect" id="Node000001" title="Packs one unique field into the next four&#45;bit layout slot." alt="" coords="693,78,1099,103"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="955,72,959,67,952,62,931,58,896,56,858,58,837,64,833,69,845,79,840,77,828,70,834,59,857,53,896,51,931,53,954,58,964,66,958,76"/>
+<area shape="rect" id="Node000002" href="$de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a2f8305be7a08f7bd6252a3d9cc9a074c" title="Normalizes user field text and optionally publishes its packed layout." alt="" coords="448,63,645,118"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="683,91,645,93,645,88,688,90"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="587,54,576,46,547,41,526,43,512,48,506,55,506,65,502,61,501,53,510,44,525,38,547,36,578,41,592,55"/>
+<area shape="rect" id="Node000003" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="227,29,400,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,75,400,72,400,67,443,75"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,70,179,111"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="437,96,400,100,227,100,179,98,179,93,227,95,400,95,443,96"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="352,21,341,12,313,8,294,10,281,15,275,21,275,31,270,28,270,19,278,10,292,5,313,3,343,8,357,22"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="216,72,179,80,178,75,222,71"/>
+</map>

@@ -134,60 +134,53 @@ $(function(){initNavTree('dc/d71/classnpi_1_1app_1_1_cross_process_locker.html',
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">npi::app::CrossProcessLocker Class Reference</div></div>
+  <div class="headertitle"><div class="title">npi::app::CrossProcessLocker Class Reference<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
-<div class="textblock"><p>RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization. </p>
-<p>Constructs or opens a named mutex, waits to acquire ownership, and releases it on destruction. The name is qualified with the "Local\\" prefix to scope the mutex to the current session. This class therefore acts as a lock between:</p><ul>
-<li>Multiple threads of the same process, and</li>
-<li>Multiple processes/applications in the same Windows logon session.</li>
-</ul>
-<p>Key points:</p><ul>
-<li>Constructor blocks until the mutex is acquired, unless CreateMutexW fails.</li>
-<li>Destructor safely releases and closes the handle if owned/opened.</li>
-<li>Copy and move are disabled to prevent double-release issues.</li>
-<li>WAIT_ABANDONED is treated as successful acquisition as per Win32 semantics. </li>
-</ul>
+<div class="textblock"><p>Scoped owner of a session-local Windows named mutex. </p>
+<p>Creates or opens a named mutex, waits indefinitely to acquire ownership, and releases ownership during destruction. The mutex name is prefixed with "Local\\", limiting synchronization to the current Windows session.</p>
+<p>Copying and moving are disabled so that exactly one locker object owns and releases the acquired mutex handle.</p>
+<p>WAIT_ABANDONED is treated as successful acquisition. In that case, <span class="tt"><a class="el" href="#a9028eb4ff7b0317e392a012731c66729" title="Function to query if the mutex was abandoned by its previous owner.">wasAbandoned_()</a></span> returns true so the caller can validate or repair the protected resource when necessary.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Invalid input or failure to create or acquire the mutex causes immediate application termination. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for npi::app::CrossProcessLocker:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/de1/classnpi_1_1app_1_1_cross_process_locker__coll__graph.svg" width="256" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/de1/classnpi_1_1app_1_1_cross_process_locker__coll__graph.svg" width="434" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a12ec9c899d5f7b2ccd8ff412f0415cee" id="r_a12ec9c899d5f7b2ccd8ff412f0415cee"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a12ec9c899d5f7b2ccd8ff412f0415cee">CrossProcessLocker</a> (const CrossProcessLocker &amp;other)=delete</td></tr>
 <tr class="memdesc:a12ec9c899d5f7b2ccd8ff412f0415cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted Copy Constructor.  <br /></td></tr>
-<tr class="memitem:ab185145d09a2a38b2213db9c648e7eb0" id="r_ab185145d09a2a38b2213db9c648e7eb0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker</a> (const QString &amp;name)</td></tr>
+<tr class="memitem:ab185145d09a2a38b2213db9c648e7eb0" id="r_ab185145d09a2a38b2213db9c648e7eb0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker</a> (const QString &amp;<a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>)</td></tr>
 <tr class="memdesc:ab185145d09a2a38b2213db9c648e7eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create or open a session-local named mutex and acquire it.  <br /></td></tr>
 <tr class="memitem:aae52964ca45a142b32827dcc80679d1d" id="r_aae52964ca45a142b32827dcc80679d1d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aae52964ca45a142b32827dcc80679d1d">CrossProcessLocker</a> (CrossProcessLocker &amp;&amp;other)=delete</td></tr>
 <tr class="memdesc:aae52964ca45a142b32827dcc80679d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted Move Constructor.  <br /></td></tr>
-<tr class="memitem:a6156b1e9ef6306f05a0002f8c5631c1c" id="r_a6156b1e9ef6306f05a0002f8c5631c1c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6156b1e9ef6306f05a0002f8c5631c1c">~CrossProcessLocker</a> ()</td></tr>
-<tr class="memdesc:a6156b1e9ef6306f05a0002f8c5631c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the mutex (if owned) and close the HANDLE.  <br /></td></tr>
-<tr class="memitem:adc670affe8400b8562e4066ecd18ac69" id="r_adc670affe8400b8562e4066ecd18ac69"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#adc670affe8400b8562e4066ecd18ac69">isLocked_</a> () const noexcept</td></tr>
-<tr class="memdesc:adc670affe8400b8562e4066ecd18ac69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query whether this instance currently holds the mutex.  <br /></td></tr>
-<tr class="memitem:a5e5ae7710ada899ccb908a6fdd3f28a9" id="r_a5e5ae7710ada899ccb908a6fdd3f28a9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5e5ae7710ada899ccb908a6fdd3f28a9">lock_</a> () noexcept</td></tr>
-<tr class="memdesc:a5e5ae7710ada899ccb908a6fdd3f28a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to acquire the mutex after construction.  <br /></td></tr>
-<tr class="memitem:acb66606a71953eb3f2e2d71851978d02" id="r_acb66606a71953eb3f2e2d71851978d02"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acb66606a71953eb3f2e2d71851978d02">operator bool</a> () const noexcept</td></tr>
-<tr class="memdesc:acb66606a71953eb3f2e2d71851978d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean conversion for convenient checks.  <br /></td></tr>
+<tr class="memitem:a23e0c4e9bc769fb99b2b3d9c13cdc058" id="r_a23e0c4e9bc769fb99b2b3d9c13cdc058"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a23e0c4e9bc769fb99b2b3d9c13cdc058">~CrossProcessLocker</a> () noexcept</td></tr>
+<tr class="memdesc:a23e0c4e9bc769fb99b2b3d9c13cdc058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release ownership of the mutex and close its handle.  <br /></td></tr>
 <tr class="memitem:acc40bc9f86d6324dba13ba767702561c" id="r_acc40bc9f86d6324dba13ba767702561c"><td class="memItemLeft"><a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#acc40bc9f86d6324dba13ba767702561c">operator=</a> (const <a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker</a> &amp;other)=delete</td></tr>
 <tr class="memdesc:acc40bc9f86d6324dba13ba767702561c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted Copy Assignment.  <br /></td></tr>
 <tr class="memitem:afc5bc3a19f2d3ffd56718b9427b564c9" id="r_afc5bc3a19f2d3ffd56718b9427b564c9"><td class="memItemLeft"><a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afc5bc3a19f2d3ffd56718b9427b564c9">operator=</a> (<a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker</a> &amp;&amp;other)=delete</td></tr>
 <tr class="memdesc:afc5bc3a19f2d3ffd56718b9427b564c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted Move Assignment.  <br /></td></tr>
-<tr class="memitem:a1fa463a6ff3d32c7f293442bea7afa7b" id="r_a1fa463a6ff3d32c7f293442bea7afa7b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1fa463a6ff3d32c7f293442bea7afa7b">unlock_</a> () noexcept</td></tr>
-<tr class="memdesc:a1fa463a6ff3d32c7f293442bea7afa7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the mutex if currently owned by this instance.  <br /></td></tr>
+<tr class="memitem:a9028eb4ff7b0317e392a012731c66729" id="r_a9028eb4ff7b0317e392a012731c66729"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9028eb4ff7b0317e392a012731c66729">wasAbandoned_</a> () const noexcept</td></tr>
+<tr class="memdesc:a9028eb4ff7b0317e392a012731c66729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to query if the mutex was abandoned by its previous owner.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a802459724adc7c78e21677bae7741030" id="r_a802459724adc7c78e21677bae7741030"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a802459724adc7c78e21677bae7741030">abandoned_</a> {false}</td></tr>
+<tr class="memdesc:a802459724adc7c78e21677bae7741030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether acquisition returned WAIT_ABANDONED.  <br /></td></tr>
 <tr class="memitem:ae0d20424385615fc2cd5cd78a5c7e798" id="r_ae0d20424385615fc2cd5cd78a5c7e798"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a> {nullptr}</td></tr>
-<tr class="memdesc:ae0d20424385615fc2cd5cd78a5c7e798"><td class="mdescLeft">&#160;</td><td class="mdescRight">HANDLE to the named mutex returned by CreateMutexW; nullptr if creation/open failed.  <br /></td></tr>
-<tr class="memitem:a50406d07d19b7bcbaeab1a66635e6168" id="r_a50406d07d19b7bcbaeab1a66635e6168"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a> {false}</td></tr>
-<tr class="memdesc:a50406d07d19b7bcbaeab1a66635e6168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks whether this instance currently owns the mutex (true) or not (false).  <br /></td></tr>
+<tr class="memdesc:ae0d20424385615fc2cd5cd78a5c7e798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle to the acquired named mutex.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:acd283e842b10b822be8a15d9495b7aee" id="r_acd283e842b10b822be8a15d9495b7aee"><td class="memItemLeft">static constexpr QLatin1StringView&#160;</td><td class="memItemRight"><a class="el" href="#acd283e842b10b822be8a15d9495b7aee">ErrMsgPrefix_</a> {&quot;Cross Process Locker:&quot;}</td></tr>
+<tr class="memdesc:acd283e842b10b822be8a15d9495b7aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name for log and popup messages.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab185145d09a2a38b2213db9c648e7eb0" name="ab185145d09a2a38b2213db9c648e7eb0"></a>
@@ -216,34 +209,118 @@ Private Attributes</h2></td></tr>
 <p>Create or open a session-local named mutex and acquire it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>Logical mutex name without "Local\\" and without backslashes. Example: "npi-SharedFileLock".</td></tr>
+    <tr><td class="paramname"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a" title="Application name.">name</a></td><td>Logical mutex name without "Local\\" and without backslashes. Example: "npi-SharedFileLock".</td></tr>
   </table>
   </dd>
 </dl>
 <p>Internally, the name is converted to UTF-16 and prefixed with "Local\\". This constructor:
-    1) Calls CreateMutexW(nullptr, FALSE, L"Local\{name}"). Passing FALSE means the mutex is not acquired at creation time. 2) If the handle is valid, calls WaitForSingleObject(h, INFINITE). On WAIT_OBJECT_0 or WAIT_ABANDONED, the lock is considered acquired. Otherwise, the handle is closed and the locker remains invalid. If another thread/process already owns the mutex, this call blocks until it becomes available. </p>
+    1) Calls CreateMutexW(nullptr, FALSE, L"Local\{name}"). Passing FALSE means the mutex is not acquired at creation time. 2) If the handle is valid, calls WaitForSingleObject(h, INFINITE). On WAIT_OBJECT_0 or WAIT_ABANDONED, the lock is considered acquired. If another thread/process already owns the mutex, this call blocks until it becomes available. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>      <span class="comment">// Build &quot;Local\{name}&quot; so the mutex is scoped to the current logon session.</span></div>
-<div class="line"><span class="lineno">   81</span>      <span class="keyword">const</span> std::wstring wLockName = (QStringLiteral(<span class="stringliteral">&quot;Local\\&quot;</span>) + name).toStdWString();</div>
-<div class="line"><span class="lineno">   82</span>      HANDLE h = ::CreateMutexW(<span class="keyword">nullptr</span>, FALSE, wLockName.c_str());</div>
-<div class="line"><span class="lineno">   83</span>      <span class="keywordflow">if</span>(!h) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   84</span>      DWORD w = ::WaitForSingleObject(h, INFINITE);</div>
-<div class="line"><span class="lineno">   85</span>      <span class="keywordflow">if</span>(w == WAIT_OBJECT_0 || w == WAIT_ABANDONED) {</div>
-<div class="line"><span class="lineno">   86</span>        <a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a> = h;</div>
-<div class="line"><span class="lineno">   87</span>        <a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   88</span>      }</div>
-<div class="line"><span class="lineno">   89</span>      <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   90</span>        ::CloseHandle(h); <span class="comment">// Avoid handle leak on failure.</span></div>
-<div class="line"><span class="lineno">   91</span>      }</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="ttc" id="aclassnpi_1_1app_1_1_cross_process_locker_html_a50406d07d19b7bcbaeab1a66635e6168"><div class="ttname"><a href="#a50406d07d19b7bcbaeab1a66635e6168">npi::app::CrossProcessLocker::locked_</a></div><div class="ttdeci">bool locked_</div><div class="ttdoc">Tracks whether this instance currently owns the mutex (true) or not (false).</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00166">CrossProcessLocker.hpp:166</a></div></div>
-<div class="ttc" id="aclassnpi_1_1app_1_1_cross_process_locker_html_ae0d20424385615fc2cd5cd78a5c7e798"><div class="ttname"><a href="#ae0d20424385615fc2cd5cd78a5c7e798">npi::app::CrossProcessLocker::handle_</a></div><div class="ttdeci">HANDLE handle_</div><div class="ttdoc">HANDLE to the named mutex returned by CreateMutexW; nullptr if creation/open failed.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00165">CrossProcessLocker.hpp:165</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00092">92</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>      <span class="comment">// Trim the name only for validation; preserve the original name for the mutex.</span></div>
+<div class="line"><span class="lineno">   95</span>      <span class="keyword">const</span> QString cleaned = <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.trimmed();</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>      <span class="keywordflow">if</span>(cleaned.isEmpty()) {</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno">   99</span>          QStringLiteral(</div>
+<div class="line"><span class="lineno">  100</span>            <span class="stringliteral">&quot;%1 Empty Name!\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  101</span>            <span class="stringliteral">&quot;A locker object cannot be created with an empty or &quot;</span></div>
+<div class="line"><span class="lineno">  102</span>            <span class="stringliteral">&quot;whitespace-only name.\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  103</span>            <span class="stringliteral">&quot;The application cannot continue without the locker &quot;</span></div>
+<div class="line"><span class="lineno">  104</span>            <span class="stringliteral">&quot;object and will now exit.&quot;</span>)</div>
+<div class="line"><span class="lineno">  105</span>         .arg(<a class="code hl_variable" href="#acd283e842b10b822be8a15d9495b7aee">ErrMsgPrefix_</a>.toString()));</div>
+<div class="line"><span class="lineno">  106</span>      }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>      <span class="keywordflow">if</span>(cleaned.contains(<span class="charliteral">&#39;\\&#39;</span>)) {</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno">  110</span>          QStringLiteral(</div>
+<div class="line"><span class="lineno">  111</span>            <span class="stringliteral">&quot;%1 Invalid Name!\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  112</span>            <span class="stringliteral">&quot;&#39;%2&#39; is an invalid locker-object name. Windows named &quot;</span></div>
+<div class="line"><span class="lineno">  113</span>            <span class="stringliteral">&quot;mutexes do not allow names containing &#39;\\&#39;.\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  114</span>            <span class="stringliteral">&quot;The application cannot continue without the locker &quot;</span></div>
+<div class="line"><span class="lineno">  115</span>            <span class="stringliteral">&quot;object and will now exit.&quot;</span>)</div>
+<div class="line"><span class="lineno">  116</span>         .arg(<a class="code hl_variable" href="#acd283e842b10b822be8a15d9495b7aee">ErrMsgPrefix_</a>.toString(), <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>));</div>
+<div class="line"><span class="lineno">  117</span>      }</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>      <span class="keyword">const</span> std::wstring lockName = (QStringLiteral(<span class="stringliteral">&quot;Local\\&quot;</span>) + <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>).toStdWString();</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>      <span class="comment">// Obtain a handle to the mutex object, it does not lock it. If we pass here</span></div>
+<div class="line"><span class="lineno">  122</span>      <span class="comment">// TRUE instead of FALSE then it locks but only when the mutex is newly created.</span></div>
+<div class="line"><span class="lineno">  123</span>      <span class="comment">// If the named mutex already exists, then passing TRUE instead of FALSE will</span></div>
+<div class="line"><span class="lineno">  124</span>      <span class="comment">// result in ownership request being ignored and so no lock.</span></div>
+<div class="line"><span class="lineno">  125</span>      <span class="keyword">const</span> HANDLE <a class="code hl_function" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">handle</a> = ::CreateMutexW(<span class="keyword">nullptr</span>, FALSE, lockName.c_str());</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>      <span class="comment">// CreateMutexW returns nullptr if it is unable to create the mutex handle.</span></div>
+<div class="line"><span class="lineno">  128</span>      <span class="keywordflow">if</span>(handle == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keyword">const</span> DWORD error = ::GetLastError();</div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno">  131</span>          QStringLiteral(</div>
+<div class="line"><span class="lineno">  132</span>            <span class="stringliteral">&quot;%1 Unable to Create Mutex!\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  133</span>            <span class="stringliteral">&quot;CreateMutexW failed for &#39;%2&#39;. The application cannot &quot;</span></div>
+<div class="line"><span class="lineno">  134</span>            <span class="stringliteral">&quot;continue without the locker object and will now exit.\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  135</span>            <span class="stringliteral">&quot;Error: %3&quot;</span>)</div>
+<div class="line"><span class="lineno">  136</span>         .arg(<a class="code hl_variable" href="#acd283e842b10b822be8a15d9495b7aee">ErrMsgPrefix_</a>.toString(), <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>, <a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(error)));</div>
+<div class="line"><span class="lineno">  137</span>      }</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>      <span class="comment">// Acquire the lock, we wait for as long as needed.</span></div>
+<div class="line"><span class="lineno">  140</span>      <span class="keyword">const</span> DWORD waitResult = ::WaitForSingleObject(handle, INFINITE);</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>      <span class="comment">// The mutex was available and acquired.</span></div>
+<div class="line"><span class="lineno">  143</span>      <span class="keywordflow">if</span>(waitResult == WAIT_OBJECT_0) {</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a> = <a class="code hl_function" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">handle</a>;</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  146</span>      }</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>      <span class="comment">// The previous owning thread or process terminated without releasing it.</span></div>
+<div class="line"><span class="lineno">  149</span>      <span class="comment">// We have acquired the mutex, but the protected data may be inconsistent.</span></div>
+<div class="line"><span class="lineno">  150</span>      <span class="comment">// We treat it as success but provide abandoned info to caller, if inquired.</span></div>
+<div class="line"><span class="lineno">  151</span>      <span class="keywordflow">if</span>(waitResult == WAIT_ABANDONED) {</div>
+<div class="line"><span class="lineno">  152</span>        <a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a> = <a class="code hl_function" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">handle</a>;</div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_variable" href="#a802459724adc7c78e21677bae7741030">abandoned_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>        qWarning().noquote()</div>
+<div class="line"><span class="lineno">  156</span>        &lt;&lt; QStringLiteral(</div>
+<div class="line"><span class="lineno">  157</span>          <span class="stringliteral">&quot;%1 Mutex &#39;%2&#39; was abandoned by its previous owner. &quot;</span></div>
+<div class="line"><span class="lineno">  158</span>          <span class="stringliteral">&quot;Ownership was acquired, but the protected data &quot;</span></div>
+<div class="line"><span class="lineno">  159</span>          <span class="stringliteral">&quot;may be inconsistent.&quot;</span>).arg(<a class="code hl_variable" href="#acd283e842b10b822be8a15d9495b7aee">ErrMsgPrefix_</a>.toString(), <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>);</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  162</span>      }</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>      <span class="comment">// Preserve the wait error before calling another Windows API function.</span></div>
+<div class="line"><span class="lineno">  165</span>      <span class="keyword">const</span> DWORD error = waitResult == WAIT_FAILED</div>
+<div class="line"><span class="lineno">  166</span>                            ? ::GetLastError()</div>
+<div class="line"><span class="lineno">  167</span>                            : ERROR_GEN_FAILURE;</div>
+<div class="line"><span class="lineno">  168</span> </div>
+<div class="line"><span class="lineno">  169</span>      <span class="comment">// Close the local handle.</span></div>
+<div class="line"><span class="lineno">  170</span>      ::CloseHandle(handle);</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>      <span class="comment">// Failure to acquire the mutex, we show it and terminate the application.</span></div>
+<div class="line"><span class="lineno">  173</span>      <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno">  174</span>        QStringLiteral(</div>
+<div class="line"><span class="lineno">  175</span>          <span class="stringliteral">&quot;%1 Unable to Acquire Mutex!\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  176</span>          <span class="stringliteral">&quot;Waiting for mutex &#39;%2&#39; failed. The application cannot &quot;</span></div>
+<div class="line"><span class="lineno">  177</span>          <span class="stringliteral">&quot;continue without the locker object and will now exit.\n\n&quot;</span></div>
+<div class="line"><span class="lineno">  178</span>          <span class="stringliteral">&quot;Error: %3&quot;</span>)</div>
+<div class="line"><span class="lineno">  179</span>       .arg(<a class="code hl_variable" href="#acd283e842b10b822be8a15d9495b7aee">ErrMsgPrefix_</a>.toString(), <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>, <a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(error)));</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="ttc" id="aclassnpi_1_1app_1_1_cross_process_locker_html_a802459724adc7c78e21677bae7741030"><div class="ttname"><a href="#a802459724adc7c78e21677bae7741030">npi::app::CrossProcessLocker::abandoned_</a></div><div class="ttdeci">bool abandoned_</div><div class="ttdoc">Whether acquisition returned WAIT_ABANDONED.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00213">CrossProcessLocker.hpp:213</a></div></div>
+<div class="ttc" id="aclassnpi_1_1app_1_1_cross_process_locker_html_acd283e842b10b822be8a15d9495b7aee"><div class="ttname"><a href="#acd283e842b10b822be8a15d9495b7aee">npi::app::CrossProcessLocker::ErrMsgPrefix_</a></div><div class="ttdeci">static constexpr QLatin1StringView ErrMsgPrefix_</div><div class="ttdoc">Name for log and popup messages.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00210">CrossProcessLocker.hpp:210</a></div></div>
+<div class="ttc" id="aclassnpi_1_1app_1_1_cross_process_locker_html_ae0d20424385615fc2cd5cd78a5c7e798"><div class="ttname"><a href="#ae0d20424385615fc2cd5cd78a5c7e798">npi::app::CrossProcessLocker::handle_</a></div><div class="ttdeci">HANDLE handle_</div><div class="ttdoc">Handle to the acquired named mutex.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00212">CrossProcessLocker.hpp:212</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1console_html_a78d365c25a1a6a3fad98d83106f859ce"><div class="ttname"><a href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">anonymous_namespace{Log.cpp}::console::handle</a></div><div class="ttdeci">HANDLE handle()</div><div class="ttdoc">Returns the active console output handle when one is available.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l03247">Log.cpp:3247</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ab43cdd42223150fbfc70f9a9f02a9019"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a></div><div class="ttdeci">void winStopMsgExe(const char *message) noexcept</div><div class="ttdoc">Launches npiMsgBox.exe to show a stop/error message box and terminates this process.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00402">WinMsgBoxExe.cpp:402</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ac99e931bbefcb61feb46dba0819e996a"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a></div><div class="ttdeci">constexpr QLatin1StringView name</div><div class="ttdoc">Application name.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d0d/_meta_info_8h_source.html#l00040">MetaInfo.h:40</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1ind_html_a36235e7ddba2a265d60b240df5134019"><div class="ttname"><a href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a></div><div class="ttdeci">std::wstring winErrorText(DWORD errorCode)</div><div class="ttdoc">Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d43/_win_error_text_8hpp_source.html#l00058">WinErrorText.hpp:58</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>, and <a class="el" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>.</p>
+<p class="reference">References <a class="el" href="#a802459724adc7c78e21677bae7741030">abandoned_</a>, <a class="el" href="#acd283e842b10b822be8a15d9495b7aee">ErrMsgPrefix_</a>, <a class="el" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>, <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>, <a class="el" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText()</a>, and <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a12ec9c899d5f7b2ccd8ff412f0415cee">CrossProcessLocker()</a>, <a class="el" href="#aae52964ca45a142b32827dcc80679d1d">CrossProcessLocker()</a>, <a class="el" href="#acc40bc9f86d6324dba13ba767702561c">operator=()</a>, and <a class="el" href="#afc5bc3a19f2d3ffd56718b9427b564c9">operator=()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_ab185145d09a2a38b2213db9c648e7eb0_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -252,8 +329,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a6156b1e9ef6306f05a0002f8c5631c1c" name="a6156b1e9ef6306f05a0002f8c5631c1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6156b1e9ef6306f05a0002f8c5631c1c">&#9670;&#160;</a></span>~CrossProcessLocker()</h2>
+<a id="a23e0c4e9bc769fb99b2b3d9c13cdc058" name="a23e0c4e9bc769fb99b2b3d9c13cdc058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e0c4e9bc769fb99b2b3d9c13cdc058">&#9670;&#160;</a></span>~CrossProcessLocker()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,26 +347,21 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Release the mutex (if owned) and close the HANDLE. </p>
-<p>Calls ReleaseMutex only if this instance previously acquired the lock (locked_ == true). The HANDLE is then closed. This guarantees no handle leak even if acquisition failed. </p>
+<p>Release ownership of the mutex and close its handle. </p>
+<p>This class provides scoped RAII ownership and therefore has no explicit lock or unlock member functions. The mutex remains owned throughout the lifetime of the locker and is released during destruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
-<div class="line"><span class="lineno">  100</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>) {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>) {</div>
-<div class="line"><span class="lineno">  102</span>          ::ReleaseMutex(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>);</div>
-<div class="line"><span class="lineno">  103</span>          <a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        ::CloseHandle(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>);</div>
-<div class="line"><span class="lineno">  106</span>      }</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>    {</div>
+<div class="line"><span class="lineno">  189</span>      ::ReleaseMutex(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>);</div>
+<div class="line"><span class="lineno">  190</span>      ::CloseHandle(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>);</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>, and <a class="el" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>.</p>
+<p class="reference">References <a class="el" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>.</p>
 
 </div>
 </div>
@@ -322,7 +394,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_aae52964ca45a142b32827dcc80679d1d_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_aae52964ca45a142b32827dcc80679d1d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -356,123 +428,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_a12ec9c899d5f7b2ccd8ff412f0415cee_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_a12ec9c899d5f7b2ccd8ff412f0415cee_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="adc670affe8400b8562e4066ecd18ac69" name="adc670affe8400b8562e4066ecd18ac69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc670affe8400b8562e4066ecd18ac69">&#9670;&#160;</a></span>isLocked_()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool npi::app::CrossProcessLocker::isLocked_ </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Query whether this instance currently holds the mutex. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the mutex is owned by this instance; false otherwise. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00116">116</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>; }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>.</p>
-
-</div>
-</div>
-<a id="a5e5ae7710ada899ccb908a6fdd3f28a9" name="a5e5ae7710ada899ccb908a6fdd3f28a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e5ae7710ada899ccb908a6fdd3f28a9">&#9670;&#160;</a></span>lock_()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool npi::app::CrossProcessLocker::lock_ </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempt to acquire the mutex after construction. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the mutex becomes owned by this instance; false otherwise.</dd></dl>
-<p>If a HANDLE exists but the lock is not currently held, this method blocks with INFINITE timeout until the mutex is available. WAIT_OBJECT_0 and WAIT_ABANDONED are treated as success. If WaitForSingleObject fails (e.g., WAIT_FAILED), the lock is not acquired and this method returns false. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>    {</div>
-<div class="line"><span class="lineno">  137</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a> &amp;&amp; !<a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>) {</div>
-<div class="line"><span class="lineno">  138</span>        DWORD w = ::WaitForSingleObject(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>, INFINITE);</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span>(w == WAIT_OBJECT_0 || w == WAIT_ABANDONED) {</div>
-<div class="line"><span class="lineno">  140</span>          <a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>      }</div>
-<div class="line"><span class="lineno">  143</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>, and <a class="el" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>.</p>
-
-</div>
-</div>
-<a id="acb66606a71953eb3f2e2d71851978d02" name="acb66606a71953eb3f2e2d71851978d02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb66606a71953eb3f2e2d71851978d02">&#9670;&#160;</a></span>operator bool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">npi::app::CrossProcessLocker::operator bool </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Boolean conversion for convenient checks. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the mutex is owned by this instance; false otherwise.</dd></dl>
-<p>Enables patterns like: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker</a> lock(...);</div>
-<div class="line"><span class="keywordflow">if</span>(!lock) <span class="keywordflow">return</span>;</div>
-<div class="ttc" id="aclassnpi_1_1app_1_1_cross_process_locker_html_ab185145d09a2a38b2213db9c648e7eb0"><div class="ttname"><a href="#ab185145d09a2a38b2213db9c648e7eb0">npi::app::CrossProcessLocker::CrossProcessLocker</a></div><div class="ttdeci">CrossProcessLocker(const QString &amp;name)</div><div class="ttdoc">Create or open a session-local named mutex and acquire it.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00078">CrossProcessLocker.hpp:78</a></div></div>
-</div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>; }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>.</p>
-
-</div>
-</div>
 <a id="acc40bc9f86d6324dba13ba767702561c" name="acc40bc9f86d6324dba13ba767702561c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc40bc9f86d6324dba13ba767702561c">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -502,7 +463,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_acc40bc9f86d6324dba13ba767702561c_cgraph.svg" width="638" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_acc40bc9f86d6324dba13ba767702561c_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -536,13 +497,13 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_afc5bc3a19f2d3ffd56718b9427b564c9_cgraph.svg" width="638" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker_afc5bc3a19f2d3ffd56718b9427b564c9_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a1fa463a6ff3d32c7f293442bea7afa7b" name="a1fa463a6ff3d32c7f293442bea7afa7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fa463a6ff3d32c7f293442bea7afa7b">&#9670;&#160;</a></span>unlock_()</h2>
+<a id="a9028eb4ff7b0317e392a012731c66729" name="a9028eb4ff7b0317e392a012731c66729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9028eb4ff7b0317e392a012731c66729">&#9670;&#160;</a></span>wasAbandoned_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -551,39 +512,91 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void npi::app::CrossProcessLocker::unlock_ </td>
+          <td class="memname">bool npi::app::CrossProcessLocker::wasAbandoned_ </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Release the mutex if currently owned by this instance. </p>
-<p>Calls ReleaseMutex(handle_) only when locked_ == true. After a successful release, sets locked_ to false. It does not close the HANDLE; the destructor will close the HANDLE. Note: ReleaseMutex must be called exactly once for each successful acquisition on the same thread. This class ensures that by tracking locked_. </p>
+<p>Function to query if the mutex was abandoned by its previous owner. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the mutex was abandoned by its previous owner; otherwise false.</dd></dl>
+<p>This function is provided for convenience, so that the caller can check if the previous owner did not release the mutex correctly and perform any checks or cleanups as required for the shared resource. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>    {</div>
-<div class="line"><span class="lineno">  154</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a> &amp;&amp; <a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>) {</div>
-<div class="line"><span class="lineno">  155</span>        <span class="comment">// We are releasing ownership, so we MUST set locked_ as false</span></div>
-<div class="line"><span class="lineno">  156</span>        <span class="comment">// to prevent the destructor from trying again.</span></div>
-<div class="line"><span class="lineno">  157</span>        <span class="comment">// ReleaseMutex fails if the calling thread does not own the mutex.</span></div>
-<div class="line"><span class="lineno">  158</span>        <span class="comment">// This class assumes lock/unlock/destruction happen on the owning thread.</span></div>
-<div class="line"><span class="lineno">  159</span>        ::ReleaseMutex(<a class="code hl_variable" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>);</div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  161</span>      }</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>    {</div>
+<div class="line"><span class="lineno">  205</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#a802459724adc7c78e21677bae7741030">abandoned_</a>;</div>
+<div class="line"><span class="lineno">  206</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ae0d20424385615fc2cd5cd78a5c7e798">handle_</a>, and <a class="el" href="#a50406d07d19b7bcbaeab1a66635e6168">locked_</a>.</p>
+<p class="reference">References <a class="el" href="#a802459724adc7c78e21677bae7741030">abandoned_</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a802459724adc7c78e21677bae7741030" name="a802459724adc7c78e21677bae7741030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a802459724adc7c78e21677bae7741030">&#9670;&#160;</a></span>abandoned_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool npi::app::CrossProcessLocker::abandoned_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether acquisition returned WAIT_ABANDONED. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00213">213</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>{<span class="keyword">false</span>};  <span class="comment">///&lt; Whether acquisition returned WAIT_ABANDONED.</span></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker()</a>, and <a class="el" href="#a9028eb4ff7b0317e392a012731c66729">wasAbandoned_()</a>.</p>
+
+</div>
+</div>
+<a id="acd283e842b10b822be8a15d9495b7aee" name="acd283e842b10b822be8a15d9495b7aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd283e842b10b822be8a15d9495b7aee">&#9670;&#160;</a></span>ErrMsgPrefix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLatin1StringView npi::app::CrossProcessLocker::ErrMsgPrefix_ {&quot;Cross Process Locker:&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Name for log and popup messages. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00210">210</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>{<span class="stringliteral">&quot;Cross Process Locker:&quot;</span>};</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker()</a>.</p>
+
+</div>
+</div>
 <a id="ae0d20424385615fc2cd5cd78a5c7e798" name="ae0d20424385615fc2cd5cd78a5c7e798"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0d20424385615fc2cd5cd78a5c7e798">&#9670;&#160;</a></span>handle_</h2>
 
@@ -604,41 +617,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>HANDLE to the named mutex returned by CreateMutexW; nullptr if creation/open failed. </p>
+<p>Handle to the acquired named mutex. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00165">165</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>{<span class="keyword">nullptr</span>}; <span class="comment">///&lt; HANDLE to the named mutex returned by CreateMutexW; nullptr if creation/open failed.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00212">212</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>{<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Handle to the acquired named mutex.</span></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker()</a>, <a class="el" href="#a6156b1e9ef6306f05a0002f8c5631c1c">~CrossProcessLocker()</a>, <a class="el" href="#a5e5ae7710ada899ccb908a6fdd3f28a9">lock_()</a>, and <a class="el" href="#a1fa463a6ff3d32c7f293442bea7afa7b">unlock_()</a>.</p>
-
-</div>
-</div>
-<a id="a50406d07d19b7bcbaeab1a66635e6168" name="a50406d07d19b7bcbaeab1a66635e6168"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50406d07d19b7bcbaeab1a66635e6168">&#9670;&#160;</a></span>locked_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool npi::app::CrossProcessLocker::locked_ {false}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Tracks whether this instance currently owns the mutex (true) or not (false). </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00166">166</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>{<span class="keyword">false</span>};     <span class="comment">///&lt; Tracks whether this instance currently owns the mutex (true) or not (false).</span></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker()</a>, <a class="el" href="#a6156b1e9ef6306f05a0002f8c5631c1c">~CrossProcessLocker()</a>, <a class="el" href="#adc670affe8400b8562e4066ecd18ac69">isLocked_()</a>, <a class="el" href="#a5e5ae7710ada899ccb908a6fdd3f28a9">lock_()</a>, <a class="el" href="#acb66606a71953eb3f2e2d71851978d02">operator bool()</a>, and <a class="el" href="#a1fa463a6ff3d32c7f293442bea7afa7b">unlock_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ab185145d09a2a38b2213db9c648e7eb0">CrossProcessLocker()</a>, and <a class="el" href="#a23e0c4e9bc769fb99b2b3d9c13cdc058">~CrossProcessLocker()</a>.</p>
 
 </div>
 </div>

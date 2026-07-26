@@ -1,0 +1,29 @@
+<map id="anonymous_namespace{Log::cpp}::FunctionCache::slot_" name="anonymous_namespace{Log::cpp}::FunctionCache::slot_">
+<area shape="rect" id="Node000001" title="Finds or inserts the normalized function value and returns its slot." alt="" coords="5,300,435,326"/>
+<area shape="rect" id="Node000002" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ae25159be3ca4845a11faf9b51e5fe88f" title="Returns the beginning of the accumulated byte buffer." alt="" coords="495,5,692,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,299,267,256,326,196,399,130,481,71,501,63,497,66,484,75,403,134,330,199,271,260,234,302"/>
+<area shape="rect" id="Node000003" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#af2d7aa51ccae7087bb4dee5786309c27" title="Finalizes a cache key into the 32&#45;bit probe hash." alt="" coords="483,85,704,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,299,339,231,408,189,481,151,505,142,501,146,484,156,411,194,342,236,241,303"/>
+<area shape="rect" id="Node000005" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#aa1e76f9d85cb3e11d4e0a63eaa66a6dc" title="Compares 2 keys for strict equality." alt="" coords="483,165,704,221"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="260,298,500,221,497,226,262,303"/>
+<area shape="rect" id="Node000006" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a3811d33788f541bca6fa5817da03d906" title="Builds the cache key from the relevant message&#45;context data." alt="" coords="483,245,704,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="339,298,478,284,473,287,341,303"/>
+<area shape="rect" id="Node000008" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a96da5a472f207f037b7763b581fe3395" title="Normalizes source text into the cache storage format." alt="" coords="483,325,704,381"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="340,323,478,339,473,342,341,329"/>
+<area shape="rect" id="Node000012" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#afdc3d50cc91b0143c0c5a4fc2b26fb0d" title="Atomically reserves a unique contiguous range in the fixed text pool." alt="" coords="483,405,704,461"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="261,323,500,401,496,404,260,329"/>
+<area shape="rect" id="Node000013" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ab7bba778ac4a5104350c8dd82a117cc9" title="Returns the number of accumulated bytes." alt="" coords="495,485,692,541"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="239,323,342,391,411,432,484,471,506,482,500,482,481,476,408,437,339,395,239,328"/>
+<area shape="rect" id="Node000014" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#ac7bc8436d483823443ba5b060e53c5b4" title="Waits briefly for an entry insertion to finish and returns its observed state." alt="" coords="483,565,704,621"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="232,323,271,367,330,427,403,492,484,551,502,563,496,562,481,555,399,497,326,431,267,370,232,329"/>
+<area shape="rect" id="Node000004" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a3fb410d8db761f74d448418bc448e486" title="Combines another value into a 64&#45;bit hash state." alt="" coords="752,93,1021,134"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="703,111,747,112,742,114,704,116"/>
+<area shape="rect" id="Node000007" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a8ca65c8af729c6ef4049687107acbe84" title="Hashes bounded null&#45;terminated text and records the scanned length." alt="" coords="776,245,997,301"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="703,271,771,273,766,274,704,276"/>
+<area shape="rect" id="Node000009" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a770514f089d7e726049b295fa262efcc" title="Extracts and appends the display form of a C++ function name." alt="" coords="776,325,997,381"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="703,351,771,353,766,354,704,356"/>
+<area shape="rect" id="Node000010" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a872027417e6090339ea2be18456ff876" title="Checks whether a byte can occur in a C++ identifier." alt="" coords="1069,285,1291,341"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="997,336,1064,329,1059,330,998,341"/>
+<area shape="rect" id="Node000011" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a1303eb4fd0e6844b3267555f0190b0bd" title="Checks whether a byte is recognized as whitespace." alt="" coords="1069,365,1291,421"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="997,366,1064,377,1059,377,997,371"/>
+</map>

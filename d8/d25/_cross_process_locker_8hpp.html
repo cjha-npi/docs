@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Ind/CrossProcessLocker.hpp File Reference</title>
+<title>Main Project: Util/CrossProcessLocker.hpp File Reference</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -140,45 +140,53 @@ $(function(){initNavTree('d8/d25/_cross_process_locker_8hpp.html','../../',''); 
 <div class="textblock"><code>#include &lt;Windows.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;QDebug&gt;</code><br />
+<code>#include &quot;src/Util/WinMsgBoxExe.h&quot;</code><br />
+<code>#include &quot;src/Ind/WinErrorText.hpp&quot;</code><br />
 </div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
-<div class="textblock"><p>RAII locker for a Windows named mutex for both inter-process and inter-thread synchronization. </p>
-<p>This header defines <a class="el" href="../../d0/d9b/classnpi_1_1ind_1_1_cross_process_locker.html" title="RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.">npi::ind::CrossProcessLocker</a>, a small RAII helper that acquires and releases a Windows named mutex using CreateMutexW/WaitForSingleObject/ReleaseMutex. Because it uses a named mutex, it can synchronize:</p><ul>
-<li>Threads within the same process (intra-process), and</li>
-<li>Different processes/applications (inter-process) running on the same machine/session.</li>
+<div class="textblock"><p>RAII locker for a session-local Windows named mutex. </p>
+<p>Defines <span class="tt"><a class="el" href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html" title="Scoped owner of a session-local Windows named mutex.">npi::app::CrossProcessLocker</a></span>, a small RAII helper that creates or opens a Windows named mutex, waits for ownership, releases ownership, and closes the mutex handle.</p>
+<p>A named mutex can synchronize access between:</p><ul>
+<li>Multiple threads within one process.</li>
+<li>Multiple processes running in the same Windows session.</li>
 </ul>
-<p>Scope and visibility:</p><ul>
-<li>The constructor prepends "Local\\" to the provided name. This limits visibility to the
-      current logon session. Use "Global\" (not provided here) for a machine-wide namespace requiring appropriate privileges and Terminal Services mutex namespace support.</li>
+<p>Scope:</p><ul>
+<li>The constructor prepends "Local\\" to the provided name, limiting
+      visibility to the current Windows session.
+    - A "Global\" prefix would place the mutex in the global namespace, subject to the mutex object's access-control settings.</li>
 </ul>
-<p>Ownership and lifetime:</p><ul>
-<li>On success, the constructor blocks until the mutex can be acquired. Destruction releases the mutex and closes the HANDLE.</li>
-<li>ReleaseMutex is called only if this instance actually holds the lock.</li>
-<li>CloseHandle is always called if a HANDLE was created to avoid handle leaks.</li>
+<p>Ownership:</p><ul>
+<li>Successful construction guarantees ownership of the mutex.</li>
+<li>Invalid input or any mutex creation/acquisition failure terminates the application through an out-of-process stop-message helper.</li>
+<li>Destruction releases ownership and closes the mutex handle.</li>
 </ul>
-<p>WAIT_ABANDONED handling:</p><ul>
-<li>If a previous owner terminated without releasing the mutex, WaitForSingleObject returns WAIT_ABANDONED. This class treats it as a successful acquisition (Windows semantics) and sets locked_ = true. Validate any shared state guarded by the mutex if needed. </li>
+<p>Abandoned mutexes:</p><ul>
+<li>WAIT_ABANDONED is treated as successful acquisition, as required by Windows mutex semantics.</li>
+<li>A warning is logged because the protected resource may be inconsistent.</li>
+<li><span class="tt">wasAbandoned_()</span> allows the caller to detect this condition and perform any required validation or recovery.</li>
 </ul>
+<dl class="section warning"><dt>Warning</dt><dd>Invalid input or failure to create or acquire the mutex causes immediate application termination. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for CrossProcessLocker.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d1f/_cross_process_locker_8hpp__incl.svg" width="299" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d1f/_cross_process_locker_8hpp__incl.svg" width="100%" height="383"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="../../d8/d25/_cross_process_locker_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:npi_3A_3Aind_3A_3ACrossProcessLocker" id="r_npi_3A_3Aind_3A_3ACrossProcessLocker"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d9b/classnpi_1_1ind_1_1_cross_process_locker.html">npi::ind::CrossProcessLocker</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.  <a href="../../d0/d9b/classnpi_1_1ind_1_1_cross_process_locker.html#details">More...</a><br /></td></tr>
+<tr class="memitem:npi_3A_3Aapp_3A_3ACrossProcessLocker" id="r_npi_3A_3Aapp_3A_3ACrossProcessLocker"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html">npi::app::CrossProcessLocker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped owner of a session-local Windows named mutex.  <a href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:npi" id="r_npi"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
 <tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for npi electronic GmbH code. <br /></td></tr>
-<tr class="memitem:npi_3A_3Aind" id="r_npi_3A_3Aind"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../da/d14/namespacenpi_1_1ind.html">npi::ind</a></td></tr>
-<tr class="memdesc:da/d14/namespacenpi_1_1ind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strictly self-contained and application-independent utility code. <br /></td></tr>
+<tr class="memitem:npi_3A_3Aapp" id="r_npi_3A_3Aapp"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dc/dba/namespacenpi_1_1app.html">npi::app</a></td></tr>
+<tr class="memdesc:dc/dba/namespacenpi_1_1app"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application-wide cross-cutting non-domain specific code. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -199,7 +207,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00031">31</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
 
 </div>
 </div>
@@ -215,7 +223,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
 
 </div>
 </div>
@@ -231,7 +239,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d8/d25/_cross_process_locker_8hpp_source.html">CrossProcessLocker.hpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +257,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../dir_290f5a3eb922098cdf36f256b80a24b4.html">Ind</a></li><li class="navelem"><a href="../../d8/d25/_cross_process_locker_8hpp.html">CrossProcessLocker.hpp</a></li>
+    <li class="navelem"><a href="../../dir_15ac8d7393b6689f8d83180e50b0b9fa.html">Util</a></li><li class="navelem"><a href="../../d8/d25/_cross_process_locker_8hpp.html">CrossProcessLocker.hpp</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

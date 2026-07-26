@@ -1,0 +1,7 @@
+<map id="anonymous_namespace{Log::cpp}::format::appendThreadTime" name="anonymous_namespace{Log::cpp}::format::appendThreadTime">
+<area shape="rect" id="Node000001" title="Appends elapsed time since the current thread first logged." alt="" coords="5,44,467,70"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="177,44,164,36,171,26,195,20,236,18,274,19,297,24,308,33,301,43,298,39,303,34,295,29,273,25,236,23,196,25,174,30,170,35,182,45"/>
+<area shape="rect" id="Node000002" href="$d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a48f5e179365e3fde46caca3fdfec8b1b" title="Appends a saturated fixed&#45;width elapsed&#45;time value in format hhh:mm:ss.zzz, where zzz is milliseconds..." alt="" coords="515,29,696,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="466,55,510,57,504,57,466,60"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="535,28,535,19,548,10,571,5,605,3,654,7,668,13,676,22,671,20,666,17,653,13,605,8,572,10,550,15,540,22,539,31"/>
+</map>

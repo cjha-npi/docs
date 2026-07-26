@@ -1,0 +1,4 @@
+<map id="npi::ind::LockedValue::ReadAccess::ReadAccess" name="npi::ind::LockedValue::ReadAccess::ReadAccess">
+<area shape="rect" id="Node000001" title="Disables copying because each access object owns one read lock." alt="" coords="5,29,387,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="135,29,122,21,129,11,154,5,196,3,235,4,259,9,270,18,263,28,260,24,265,19,257,14,234,10,196,8,154,10,132,15,127,20,140,30"/>
+</map>

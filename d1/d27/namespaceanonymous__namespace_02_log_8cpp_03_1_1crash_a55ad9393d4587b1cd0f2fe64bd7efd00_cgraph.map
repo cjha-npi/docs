@@ -1,0 +1,55 @@
+<map id="anonymous_namespace{Log::cpp}::crash::pureCallHandler" name="anonymous_namespace{Log::cpp}::crash::pureCallHandler">
+<area shape="rect" id="Node000001" title="Handles a pure virtual function call as an unrecoverable failure." alt="" coords="5,308,451,334"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="164,310,150,301,151,294,157,290,183,284,228,282,270,283,296,288,307,297,300,307,295,304,301,298,294,293,269,289,228,287,184,289,159,295,155,297,155,299,168,307"/>
+<area shape="rect" id="Node000002" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a9de64045520458e033a5531e9d945949" title="Appends a bounded byte sequence without sanitization." alt="" coords="535,5,732,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,307,275,263,335,199,411,131,453,99,497,71,529,58,525,61,500,75,456,103,415,135,339,203,279,266,241,310"/>
+<area shape="rect" id="Node000004" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#abed2362a4e8ea962a8d864906eff393c" title="Resets the buffer to its first empty line." alt="" coords="535,85,732,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,307,348,234,421,190,498,151,529,140,525,143,500,156,423,195,351,239,248,310"/>
+<area shape="rect" id="Node000005" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ae25159be3ca4845a11faf9b51e5fe88f" title="Returns the beginning of the accumulated byte buffer." alt="" coords="535,165,732,221"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="266,306,498,231,533,222,529,225,499,236,269,311"/>
+<area shape="rect" id="Node000006" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a46b52e95f4db87245237769af7192a77" title="Terminates the current line with CRLF and prepares the next segment." alt="" coords="535,245,732,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="336,306,529,284,525,287,338,311"/>
+<area shape="rect" id="Node000007" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a7e16fa7a62fe985ef460f5b49dc2074a" title="Terminates the process immediately without invoking normal cleanup." alt="" coords="499,349,768,390"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="336,331,493,351,489,354,337,337"/>
+<area shape="rect" id="Node000008" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="816,384,1021,440"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="261,331,367,367,432,385,499,399,579,408,661,413,811,416,806,418,661,419,579,414,498,404,431,390,365,372,263,336"/>
+<area shape="rect" id="Node000010" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" title="Writes a complete byte range to the current important&#45;log pipe." alt="" coords="543,488,724,544"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="256,331,570,483,565,486,256,337"/>
+<area shape="rect" id="Node000024" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ab7bba778ac4a5104350c8dd82a117cc9" title="Returns the number of accumulated bytes." alt="" coords="535,568,732,624"/>
+<area shape="poly" id="edge29_Node000001_Node000024" title=" " alt="" coords="240,331,281,374,341,434,416,498,457,527,500,553,530,569,525,569,497,558,454,532,413,502,337,438,277,378,241,337"/>
+<area shape="rect" id="Node000003" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40" title="Checks whether the current line has room for the requested bytes and its terminator." alt="" coords="820,5,1017,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="731,31,815,32,810,34,733,36"/>
+<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="581,349,577,340,586,330,604,324,633,322,675,327,686,334,689,343,684,342,682,337,673,332,633,327,605,329,588,335,583,341,586,350"/>
+<area shape="rect" id="Node000009" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="1069,379,1275,434"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1021,407,1064,408,1059,409,1022,412"/>
+<area shape="poly" id="edge10_Node000009_Node000009" title=" " alt="" coords="1123,377,1123,369,1132,360,1148,354,1172,352,1206,357,1216,362,1222,371,1216,370,1213,366,1204,362,1172,357,1149,359,1135,364,1128,371,1128,380"/>
+<area shape="poly" id="edge13_Node000010_Node000008" title=" " alt="" coords="709,486,837,441,832,444,711,491"/>
+<area shape="poly" id="edge16_Node000010_Node000010" title=" " alt="" coords="579,487,579,478,588,469,607,463,633,461,671,466,683,472,689,480,684,480,679,476,670,471,633,467,608,469,591,474,583,480,583,489"/>
+<area shape="rect" id="Node000011" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a64e6b530b8b3e6eb1891bbb6df1dd11c" title="Converts an important&#45;log helper exit code to explanatory text." alt="" coords="828,488,1009,544"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="723,513,823,515,817,517,724,518"/>
+<area shape="rect" id="Node000012" href="$da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019" title="Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;." alt="" coords="820,568,1017,594"/>
+<area shape="poly" id="edge17_Node000010_Node000012" title=" " alt="" coords="724,534,857,566,851,567,724,539"/>
+<area shape="rect" id="Node000013" href="$dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="816,623,1021,649"/>
+<area shape="poly" id="edge18_Node000010_Node000013" title=" " alt="" coords="724,533,769,554,785,567,794,580,803,592,817,604,849,621,844,621,815,609,799,596,790,583,781,570,767,558,724,538"/>
+<area shape="poly" id="edge15_Node000011_Node000011" title=" " alt="" coords="870,487,870,478,879,469,895,463,919,461,952,466,963,472,968,481,963,479,959,476,951,471,919,467,896,469,881,473,875,480,874,490"/>
+<area shape="rect" id="Node000014" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="1085,459,1259,514"/>
+<area shape="poly" id="edge19_Node000013_Node000014" title=" " alt="" coords="989,621,1020,604,1036,586,1043,566,1051,545,1067,525,1078,520,1082,517,1071,528,1055,548,1048,568,1041,588,1023,609,991,626"/>
+<area shape="rect" id="Node000016" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="1081,539,1263,594"/>
+<area shape="poly" id="edge21_Node000013_Node000016" title=" " alt="" coords="965,621,1076,593,1071,594,967,626"/>
+<area shape="rect" id="Node000017" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="1085,619,1259,674"/>
+<area shape="poly" id="edge22_Node000013_Node000017" title=" " alt="" coords="1021,637,1080,642,1075,643,1021,643"/>
+<area shape="rect" id="Node000018" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64" title="Finalizes the command line and launches npiMsgBox.exe." alt="" coords="1085,699,1259,754"/>
+<area shape="poly" id="edge23_Node000013_Node000018" title=" " alt="" coords="956,646,1089,696,1084,696,955,651"/>
+<area shape="rect" id="Node000019" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761" title="Builds the helper executable path and reusable command&#45;line prefix. The command&#45;line prefix buffer is..." alt="" coords="1085,779,1259,834"/>
+<area shape="poly" id="edge24_Node000013_Node000019" title=" " alt="" coords="932,646,990,702,1029,735,1071,764,1088,776,1082,775,1068,769,1025,739,986,706,931,651"/>
+<area shape="rect" id="Node000015" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a587867f118701093b97cc8ccaf37a239" title="Sanitizes and appends one message character." alt="" coords="1339,459,1512,514"/>
+<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="1258,484,1334,486,1328,487,1259,489"/>
+<area shape="rect" id="Node000020" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a7c36613e6219d885c2b5c949ce285c60" title="Appends one character to the prepared command&#45;line prefix buffer." alt="" coords="1339,699,1512,754"/>
+<area shape="poly" id="edge25_Node000019_Node000020" title=" " alt="" coords="1258,777,1329,757,1334,755,1259,782"/>
+<area shape="rect" id="Node000021" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60" title="Appends the application title used as the message&#45;box title to the command&#45;line prefix." alt="" coords="1323,779,1528,834"/>
+<area shape="poly" id="edge26_Node000019_Node000021" title=" " alt="" coords="1258,804,1318,806,1312,807,1259,809"/>
+<area shape="rect" id="Node000023" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ae9382129e5c68748dfb4d7ca8056cd94" title="Appends one character to the prepared executable path buffer." alt="" coords="1339,859,1512,914"/>
+<area shape="poly" id="edge28_Node000019_Node000023" title=" " alt="" coords="1259,831,1334,857,1329,857,1258,836"/>
+<area shape="rect" id="Node000022" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="1576,779,1813,834"/>
+<area shape="poly" id="edge27_Node000021_Node000022" title=" " alt="" coords="1528,804,1571,806,1566,807,1528,809"/>
+</map>

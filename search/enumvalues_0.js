@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['category_0',['Category',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2f555bb219ab85820cfcadc07a450a36a3adbdb3ac060038aa0e6e6c138ef9873',1,'anonymous_namespace{Log.cpp}::LogCore']]]
+  ['apptime_0',['AppTime',['../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daabd5d15a9bd1e36bb6facd60952a2b69',1,'anonymous_namespace{Log.cpp}']]]
 ];

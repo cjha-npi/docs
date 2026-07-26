@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker.html" title="Provides queue, wake&#45;up, field&#45;layout, and thread state shared by workers." alt="" coords="5,45,203,101"/>
+<area shape="rect" id="Node000001" href="$d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker.html" title="Extends worker state with display muting and failure information." alt="" coords="251,5,448,61"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="210,53,253,48,248,50,211,58"/>
+<area shape="rect" id="Node000002" href="$d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker.html" title="Extends worker state with normal&#45;log file information and drop counting." alt="" coords="251,85,448,141"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="211,88,253,97,248,97,210,93"/>
+</map>

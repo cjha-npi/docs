@@ -139,6 +139,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="contents">
 <div class="textblock"><p>Filename: </p><div class="fragment"><div class="line">doxy-plus.js</div>
 </div><!-- fragment --><p>Contents: </p><div class="fragment"><div class="line">// file: doxy-plus.js</div>
+<div class="line">// version: 6</div>
 <div class="line"> </div>
 <div class="line">// #region ⚠️ WARNING: DO NOT CREATE CUSTOM HASH/HREF</div>
 <div class="line">// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
@@ -393,41 +394,6 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">  function prettierAnon(text) {</div>
 <div class="line">    if (typeof text !== &#39;string&#39;) return text;</div>
 <div class="line">    return text.replace(/anonymous_namespace\{([^}]+)\}/g, &#39;&lt;$1&gt;&#39;);</div>
-<div class="line">  }</div>
-<div class="line"> </div>
-<div class="line">  // Compares two strings and provides highest priority to alphabets.</div>
-<div class="line">  function compareAlphaBeforePunctuation(a, b) {</div>
-<div class="line">    // Provided for sorting anonymous namespace after normal normal ones.</div>
-<div class="line">    // Anonymous namespace is often replaced using &#39;prettierAnon()&#39; function</div>
-<div class="line">    // above. Then the sorting happens and so normal namespace that starts</div>
-<div class="line">    // with alphabets will be sorted above anonymous namespaces. For example</div>
-<div class="line">    // &#39;some_ns&#39; will be above &#39;&lt;anon_ns&gt;&#39;.</div>
-<div class="line"> </div>
-<div class="line">    if (typeof a !== &#39;string&#39; || typeof b !== &#39;string&#39;) return 0;</div>
-<div class="line"> </div>
-<div class="line">    const aLen = a.length;</div>
-<div class="line">    const bLen = b.length;</div>
-<div class="line">    const minLen = Math.min(aLen, bLen);</div>
-<div class="line"> </div>
-<div class="line">    // Compare each character till the length of the shorter string</div>
-<div class="line">    for (let ii = 0; ii &lt; minLen; ++ii) {</div>
-<div class="line">      const aCh = a[ii].toUpperCase();</div>
-<div class="line">      const bCh = b[ii].toUpperCase();</div>
-<div class="line"> </div>
-<div class="line">      const aIsAlpha = (aCh &gt;= &#39;A&#39; &amp;&amp; aCh &lt;= &#39;Z&#39;);</div>
-<div class="line">      const bIsAlpha = (bCh &gt;= &#39;A&#39; &amp;&amp; bCh &lt;= &#39;Z&#39;);</div>
-<div class="line"> </div>
-<div class="line">      if (aIsAlpha &amp;&amp; !bIsAlpha) return -1;</div>
-<div class="line">      if (!aIsAlpha &amp;&amp; bIsAlpha) return 1;</div>
-<div class="line"> </div>
-<div class="line">      // If both characters are alphabets then use native compare</div>
-<div class="line">      const cmpResult = aCh.localeCompare(bCh, undefined, { sensitivity: &#39;base&#39; });</div>
-<div class="line">      if (cmpResult !== 0) return cmpResult;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    // In case of one string is a sub-string of another, e.g. a = &#39;Some&#39; and</div>
-<div class="line">    // b = &#39;SomeFunc&#39;, then sort shorter string before longer string.</div>
-<div class="line">    return aLen - bLen;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  // Recursively freezes the given value and everything nested inside it.</div>
@@ -1150,7 +1116,9 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      LEAF_PANE_AUTO_HIDE_THRESHOLD: 1500, // Threshold (px) width for leaf pane auto hide</div>
 <div class="line">      PANE_WIDTH_SAVE_DEBOUNCE_MS: 500,    // Timeout (ms) to save pane widths when dragging/resizing</div>
 <div class="line">      TIMEOUT_MS: 2000,                    // Timeout (ms) for waiting (not used in waitFor() helper)</div>
-<div class="line">      BUCKET_THRESHOLD: 20                 // Max count of flat list after which Alphabetic groups are formed</div>
+<div class="line">      MIN_CLASS_FOR_BRANCH: 3,             // Minimum number of classes in a namespace to form a branch</div>
+<div class="line">      MAX_TOP_LEVEL_CLASS_BRANCH: 11,      // Maximum number of top-level namespace based class branches</div>
+<div class="line">      BUCKET_THRESHOLD: 50                 // Max count of flat list after which Alphabetic groups are formed</div>
 <div class="line">    });</div>
 <div class="line"> </div>
 <div class="line">    // Common DOM selectors used throughout the script.</div>
@@ -2297,14 +2265,101 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      return out;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
+<div class="line">    // Special sorting for concepts and classes</div>
+<div class="line">    function specialSort(flatList) {</div>
+<div class="line">      if (!Array.isArray(flatList) || flatList.length === 0) return;</div>
+<div class="line"> </div>
+<div class="line">      flatList.sort((a, b) =&gt; {</div>
+<div class="line">        const nameA = a[0] || &#39;&#39;;</div>
+<div class="line">        const nameB = b[0] || &#39;&#39;;</div>
+<div class="line"> </div>
+<div class="line">        const nsA = a[1] || null;</div>
+<div class="line">        const nsB = b[1] || null;</div>
+<div class="line"> </div>
+<div class="line">        const aHasNs = typeof nsA === &#39;string&#39; &amp;&amp; nsA.length &gt; 0;</div>
+<div class="line">        const bHasNs = typeof nsB === &#39;string&#39; &amp;&amp; nsB.length &gt; 0;</div>
+<div class="line"> </div>
+<div class="line">        // 1. Classes without namespace first.</div>
+<div class="line">        if (!aHasNs &amp;&amp; bHasNs) return -1;</div>
+<div class="line">        if (aHasNs &amp;&amp; !bHasNs) return 1;</div>
+<div class="line"> </div>
+<div class="line">        // 2. If both have no namespace, sort by name.</div>
+<div class="line">        if (!aHasNs &amp;&amp; !bHasNs) {</div>
+<div class="line">          const cmpName = nameA.localeCompare(nameB, undefined, { sensitivity: &#39;base&#39; });</div>
+<div class="line">          if (cmpName !== 0) return cmpName;</div>
+<div class="line"> </div>
+<div class="line">          return (a[2] || &#39;&#39;).localeCompare(b[2] || &#39;&#39;, undefined, { sensitivity: &#39;base&#39; });</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        // 3. If both have namespace, sort by namespace first.</div>
+<div class="line">        const cmpNs = nsA.localeCompare(nsB, undefined, { sensitivity: &#39;base&#39; });</div>
+<div class="line">        if (cmpNs !== 0) return cmpNs;</div>
+<div class="line"> </div>
+<div class="line">        // 4. Then sort by name.</div>
+<div class="line">        const cmpName = nameA.localeCompare(nameB, undefined, { sensitivity: &#39;base&#39; });</div>
+<div class="line">        if (cmpName !== 0) return cmpName;</div>
+<div class="line"> </div>
+<div class="line">        // 5. Final tie-breaker.</div>
+<div class="line">        return (a[2] || &#39;&#39;).localeCompare(b[2] || &#39;&#39;, undefined, { sensitivity: &#39;base&#39; });</div>
+<div class="line">      });</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // Finds anonymous namespace filename</div>
+<div class="line">    function anonNamespaceFileName(prefix, label = null) {</div>
+<div class="line">      const parts = [];</div>
+<div class="line">      if (typeof prefix === &#39;string&#39; &amp;&amp; prefix.length &gt; 0) parts.push(prefix);</div>
+<div class="line">      if (typeof label === &#39;string&#39; &amp;&amp; label.length &gt; 0) parts.push(label);</div>
+<div class="line">      if (parts.length === 0) return null;</div>
+<div class="line"> </div>
+<div class="line">      const text = parts.join(&#39;::&#39;);</div>
+<div class="line"> </div>
+<div class="line">      const matches = [...text.matchAll(/(?:^|::)&lt;([^&lt;&gt;]+)&gt;(?=::|$)/g)].map(match =&gt; match[1]);</div>
+<div class="line"> </div>
+<div class="line">      if (matches.length === 0) return null;</div>
+<div class="line"> </div>
+<div class="line">      const fileName = matches[0];</div>
+<div class="line">      for (let ii = 1; ii &lt; matches.length; ++ii) {</div>
+<div class="line">        if (matches[ii] !== fileName) {</div>
+<div class="line">          dispFatalError(`&#39;${text}&#39; contains more than one filename as anonymous namespace: [${matches.join(&#39;, &#39;)}]`);</div>
+<div class="line">          return null;</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      return fileName;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // Normalize anonymous namespace prefix entries</div>
+<div class="line">    function normalizeAnonPrefix(text, nsName) {</div>
+<div class="line">      if (typeof text !== &#39;string&#39; || typeof nsName !== &#39;string&#39; || nsName.length === 0) {</div>
+<div class="line">        return text;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      let result = text;</div>
+<div class="line">      if (result.startsWith(nsName)) {</div>
+<div class="line">        result = result.slice(nsName.length);</div>
+<div class="line">      }</div>
+<div class="line">      if (result.startsWith(&#39;::&#39;)) {</div>
+<div class="line">        result = result.slice(2);</div>
+<div class="line">      }</div>
+<div class="line">      result = result.replaceAll(nsName, &#39;&lt;anon&gt;&#39;);</div>
+<div class="line"> </div>
+<div class="line">      if (result.length === 0) return null;</div>
+<div class="line">      return result;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // Maps for sorting accoring to file and according to namespace</div>
+<div class="line">    const fileLocalMap = new Map();</div>
+<div class="line">    const classListMap = new Map();</div>
+<div class="line"> </div>
 <div class="line">    // The main top nodes for the doxy-plus root pane.</div>
 <div class="line">    const theProject = [&#39;Project&#39;, null, []];</div>
 <div class="line">    const theDependencies = [&#39;Dependencies&#39;, null, []];</div>
 <div class="line">    const theArchitecture = [&#39;Architecture&#39;, null, []];</div>
 <div class="line">    const theNamespaces = [&#39;Namespaces&#39;, null, []];</div>
 <div class="line">    const theConcepts = [&#39;Concepts&#39;, null, []];</div>
-<div class="line">    const theClasses = [&#39;Classes&#39;, null, []];</div>
+<div class="line">    const theOtherClasses = [&#39;Other Classes&#39;, null, []];</div>
+<div class="line">    const theFileLocals = [&#39;File-Local&#39;, null, []];</div>
 <div class="line">    const theFiles = [&#39;Files&#39;, null, []];</div>
+<div class="line">    const theMembers = [&#39;Members&#39;, null, []];</div>
 <div class="line">    const theExamples = [&#39;Examples&#39;, null, []];</div>
 <div class="line">    const theDevHub = [&#39;Dev Hub&#39;, null, []];</div>
 <div class="line"> </div>
@@ -2346,45 +2401,42 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      // Populate</div>
 <div class="line">      (function processNamespaceListBranch(branch, path = null) {</div>
 <div class="line">        if (!Array.isArray(branch) || branch.length === 0) return;</div>
-<div class="line"> </div>
-<div class="line">        // Separate normal and anonymous namespace first, on same</div>
-<div class="line">        // level anonymous namespace always goes below normal ones.</div>
-<div class="line">        const nsNormList = [];</div>
-<div class="line">        const nsAnonList = [];</div>
 <div class="line">        for (const node of branch) {</div>
 <div class="line">          const href = node[1] ? node[1].split(&#39;/&#39;).pop() : null;</div>
 <div class="line">          if (href &amp;&amp; /^namespace/.test(href)) {</div>
 <div class="line">            const pName = prettierAnon(node[0]);</div>
-<div class="line">            if (pName === node[0]) nsNormList.push([pName, node[1], node[2]]);</div>
-<div class="line">            else nsAnonList.push([pName, node[1], node[2]]);</div>
-<div class="line">          }</div>
-<div class="line">        }</div>
+<div class="line">            const anonName = anonNamespaceFileName(path, pName);</div>
+<div class="line">            if (anonName) {</div>
+<div class="line">              if (!fileLocalMap.has(anonName)) fileLocalMap.set(anonName, []);</div>
+<div class="line">              fileLocalMap.get(anonName).push([pName, path, node[1]]);</div>
+<div class="line">            }</div>
+<div class="line">            else {</div>
+<div class="line">              theNamespaces[2].push([pName, path, node[1]]);</div>
+<div class="line">            }</div>
 <div class="line"> </div>
-<div class="line">        // Push normal namespace to namespace list branch.</div>
-<div class="line">        for (const node of nsNormList) {</div>
-<div class="line">          theNamespaces[2].push([node[0], path, node[1]]);</div>
-<div class="line">          if (node[2]) {</div>
-<div class="line">            const childPath = path ? `${path}::${node[0]}` : node[0];</div>
-<div class="line">            processNamespaceListBranch(node[2], childPath);</div>
-<div class="line">          }</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        // Push anonymous namespace to namespace list branch.</div>
-<div class="line">        for (const node of nsAnonList) {</div>
-<div class="line">          theNamespaces[2].push([node[0], path, node[1]]);</div>
-<div class="line">          if (node[2]) {</div>
-<div class="line">            const childPath = path ? `${path}::${node[0]}` : node[0];</div>
-<div class="line">            processNamespaceListBranch(node[2], childPath);</div>
+<div class="line">            if (node[2]) {</div>
+<div class="line">              const childPath = path ? `${path}::${pName}` : pName;</div>
+<div class="line">              processNamespaceListBranch(node[2], childPath);</div>
+<div class="line">            }</div>
 <div class="line">          }</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">      })(found.namespaceList[2]);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
+<div class="line">    // Normalize the namespace name</div>
+<div class="line">    for (const [key, val] of fileLocalMap) {</div>
+<div class="line">      const nsName = `&lt;${key}&gt;`;</div>
+<div class="line">      for (const node of val) {</div>
+<div class="line">        if (node[0] === nsName) node[0] = &#39;&lt;anon&gt;&#39;;</div>
+<div class="line">        if (!node[0].endsWith(&#39;::&#39;)) node[0] = `${node[0]}::`;</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
 <div class="line">    // Namespace Members</div>
 <div class="line">    if (found.namespaceMems &amp;&amp; found.namespaceMems[2]) {</div>
 <div class="line">      const converted = convertBranch(found.namespaceMems[2], &#39;Namespaces &gt; Namespace Members&#39;);</div>
-<div class="line">      if (converted.length &gt; 0) theNamespaces[2].push([&#39;[Members]&#39;, null, converted]);</div>
+<div class="line">      if (converted.length &gt; 0) theMembers[2].push([&#39;Namespace Members&#39;, null, converted]);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Concepts</div>
@@ -2401,7 +2453,14 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line"> </div>
 <div class="line">          const href = node[1] ? node[1].split(&#39;/&#39;).pop() : null;</div>
 <div class="line">          if (href &amp;&amp; /^concept/.test(href)) {</div>
-<div class="line">            theConcepts[2].push([pName, prefix, node[1]]);</div>
+<div class="line">            const anonName = anonNamespaceFileName(prefix);</div>
+<div class="line">            if (anonName) {</div>
+<div class="line">              if (!fileLocalMap.has(anonName)) fileLocalMap.set(anonName, []);</div>
+<div class="line">              fileLocalMap.get(anonName).push([pName, prefix, node[1]]);</div>
+<div class="line">            }</div>
+<div class="line">            else {</div>
+<div class="line">              theConcepts[2].push([pName, prefix, node[1]]);</div>
+<div class="line">            }</div>
 <div class="line">          }</div>
 <div class="line"> </div>
 <div class="line">          if (node[2]) {</div>
@@ -2412,19 +2471,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      })(found.concepts[2]);</div>
 <div class="line"> </div>
 <div class="line">      // Sort</div>
-<div class="line">      theConcepts[2].sort((a, b) =&gt; {</div>
-<div class="line"> </div>
-<div class="line">        // 1. Concept name.</div>
-<div class="line">        let cmpResult = a[0].localeCompare(b[0], undefined, { sensitivity: &#39;base&#39; });</div>
-<div class="line">        if (cmpResult !== 0) return cmpResult;</div>
-<div class="line"> </div>
-<div class="line">        // 2. Path, but keep alphabetic namespaces before &lt;file.cpp&gt;-style ones.</div>
-<div class="line">        cmpResult = compareAlphaBeforePunctuation(a[1] || &#39;&#39;, b[1] || &#39;&#39;);</div>
-<div class="line">        if (cmpResult !== 0) return cmpResult;</div>
-<div class="line"> </div>
-<div class="line">        // 3. Final tie-breaker.</div>
-<div class="line">        return a[2].localeCompare(b[2], undefined, { sensitivity: &#39;base&#39; });</div>
-<div class="line">      });</div>
+<div class="line">      specialSort(theConcepts[2]);</div>
 <div class="line"> </div>
 <div class="line">      // Change to alphabetic buckets if needed</div>
 <div class="line">      if (theConcepts[2].length &gt; CONSTS.VAL.BUCKET_THRESHOLD) {</div>
@@ -2437,6 +2484,10 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line"> </div>
 <div class="line">      // Add main page to project node</div>
 <div class="line">      theProject[2].push([&#39;Class List&#39;, null, found.classList[1]]);</div>
+<div class="line"> </div>
+<div class="line">      // temp holders</div>
+<div class="line">      const tempClassMap = new Map();</div>
+<div class="line">      const tempOtherCls = [];</div>
 <div class="line"> </div>
 <div class="line">      // Populate</div>
 <div class="line">      (function processClassListBranch(branch, namespacePath = null, classPath = null) {</div>
@@ -2451,7 +2502,28 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">            const pName = prettierAnon(node[0]);</div>
 <div class="line">            if (/^(?:class|struct)/.test(href)) {</div>
 <div class="line">              className = classPath ? `${classPath}::${pName}` : pName;</div>
-<div class="line">              theClasses[2].push([className, namespaceName, node[1]]);</div>
+<div class="line">              const anonName = anonNamespaceFileName(namespaceName);</div>
+<div class="line">              if (anonName) {</div>
+<div class="line">                if (!fileLocalMap.has(anonName)) fileLocalMap.set(anonName, []);</div>
+<div class="line">                fileLocalMap.get(anonName).push([className, namespaceName, node[1]]);</div>
+<div class="line">              }</div>
+<div class="line">              else {</div>
+<div class="line">                if (typeof namespaceName === &#39;string&#39; &amp;&amp; namespaceName.length &gt; 0) {</div>
+<div class="line">                  const nsParts = namespaceName.split(&#39;::&#39;);</div>
+<div class="line">                  if (nsParts.length === 1) {</div>
+<div class="line">                    if (!tempClassMap.has(nsParts[0])) tempClassMap.set(nsParts[0], []);</div>
+<div class="line">                    tempClassMap.get(nsParts[0]).push([className, namespaceName, node[1]]);</div>
+<div class="line">                  }</div>
+<div class="line">                  else {</div>
+<div class="line">                    const grpName = `${nsParts[0]}::${nsParts[1]}`;</div>
+<div class="line">                    if (!tempClassMap.has(grpName)) tempClassMap.set(grpName, []);</div>
+<div class="line">                    tempClassMap.get(grpName).push([className, namespaceName, node[1]]);</div>
+<div class="line">                  }</div>
+<div class="line">                }</div>
+<div class="line">                else {</div>
+<div class="line">                  tempOtherCls.push([className, null, node[1]]);</div>
+<div class="line">                }</div>
+<div class="line">              }</div>
 <div class="line">            }</div>
 <div class="line">            else if (/^namespace/.test(href)) {</div>
 <div class="line">              namespaceName = namespacePath ? `${namespacePath}::${pName}` : pName;</div>
@@ -2462,52 +2534,94 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">        }</div>
 <div class="line">      })(found.classList[2]);</div>
 <div class="line"> </div>
-<div class="line">      // Sort</div>
-<div class="line">      theClasses[2].sort((a, b) =&gt; {</div>
-<div class="line">        // split class names</div>
-<div class="line">        const aClasses = a[0].split(&#39;::&#39;);</div>
-<div class="line">        const bClasses = b[0].split(&#39;::&#39;);</div>
+<div class="line">      // filter out lists which has less than minimum for creating a separate branch</div>
+<div class="line">      const filteredMap = new Map();</div>
+<div class="line">      if (tempClassMap.size &gt; 0) {</div>
+<div class="line">        for (const [key, val] of tempClassMap) {</div>
+<div class="line">          if (val.length &lt; CONSTS.VAL.MIN_CLASS_FOR_BRANCH) {</div>
+<div class="line">            for (const node of val) {</div>
+<div class="line">              tempOtherCls.push(node);</div>
+<div class="line">            }</div>
+<div class="line">          }</div>
+<div class="line">          else {</div>
+<div class="line">            const tempList = [];</div>
+<div class="line">            for (const node of val) {</div>
+<div class="line">              const nsSpliced = node[1].slice(key.length + 2);</div>
+<div class="line">              const nsTempName = nsSpliced.length &gt; 0 ? nsSpliced : null;</div>
+<div class="line">              tempList.push([node[0], nsTempName, node[2]]);</div>
+<div class="line">            }</div>
+<div class="line">            specialSort(tempList);</div>
+<div class="line">            if (tempList &gt; CONSTS.VAL.BUCKET_THRESHOLD) {</div>
+<div class="line">              tempList = putInAlphabeticBuckets(tempList);</div>
+<div class="line">            }</div>
+<div class="line">            else filteredMap.set(key, tempList);</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
 <div class="line"> </div>
-<div class="line">        // 1. Outermost class name.</div>
-<div class="line">        let cmpResult = aClasses[0].localeCompare(bClasses[0], undefined, { sensitivity: &#39;base&#39; });</div>
-<div class="line">        if (cmpResult !== 0) return cmpResult;</div>
+<div class="line">      // If filtered map has more than maximum number of top-level branches</div>
+<div class="line">      // then we divide it into two categories: one for top-level and another</div>
+<div class="line">      // that will go in &#39;Other Classes&#39;. This filtering is based on array</div>
+<div class="line">      // length. Then we sort based on key name and assign to correct map/array.</div>
+<div class="line">      if (filteredMap.size &gt; 0) {</div>
+<div class="line">        const sortedFilteredMap = new Map([...filteredMap.entries()].sort(([, valA], [, valB]) =&gt; valB.length - valA.length));</div>
 <div class="line"> </div>
-<div class="line">        // 2. Namespace path, but keep alphabetic namespaces before &lt;file.cpp&gt;-style ones.</div>
-<div class="line">        cmpResult = compareAlphaBeforePunctuation(a[1] || &#39;&#39;, b[1] || &#39;&#39;);</div>
-<div class="line">        if (cmpResult !== 0) return cmpResult;</div>
-<div class="line"> </div>
-<div class="line">        // 3. Inner class segments.</div>
-<div class="line">        const minLen = Math.min(aClasses.length, bClasses.length);</div>
-<div class="line">        for (let ii = 1; ii &lt; minLen; ++ii) {</div>
-<div class="line">          cmpResult = aClasses[ii].localeCompare(bClasses[ii], undefined, { sensitivity: &#39;base&#39; });</div>
-<div class="line">          if (cmpResult !== 0) return cmpResult;</div>
+<div class="line">        let idx = 0;</div>
+<div class="line">        const lvlOneCls = new Map();</div>
+<div class="line">        const lvlTwoCls = new Map();</div>
+<div class="line">        for (const [key, val] of sortedFilteredMap) {</div>
+<div class="line">          ++idx;</div>
+<div class="line">          if (idx &gt; CONSTS.VAL.MAX_TOP_LEVEL_CLASS_BRANCH) lvlTwoCls.set(key, val);</div>
+<div class="line">          else lvlOneCls.set(key, val);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        // 4. Shorter path first if one is a prefix of the other.</div>
-<div class="line">        cmpResult = aClasses.length - bClasses.length;</div>
-<div class="line">        if (cmpResult !== 0) return cmpResult;</div>
+<div class="line">        if (lvlOneCls.size &gt; 0) {</div>
+<div class="line">          const lvlOneStored = new Map([...lvlOneCls.entries()].sort(([keyA], [keyB]) =&gt; keyA.localeCompare(keyB)));</div>
+<div class="line">          for (const [key, val] of lvlOneStored) {</div>
+<div class="line">            classListMap.set(key, val);</div>
+<div class="line">          }</div>
 <div class="line"> </div>
-<div class="line">        // 5. Final tie-breaker.</div>
-<div class="line">        return a[2].localeCompare(b[2], undefined, { sensitivity: &#39;base&#39; });</div>
-<div class="line">      });</div>
+<div class="line">          if (lvlTwoCls.size &gt; 0) {</div>
+<div class="line">            const lvlTwoStored = new Map([...lvlTwoCls.entries()].sort(([keyA], [keyB]) =&gt; keyA.localeCompare(keyB)));</div>
+<div class="line">            for (const [key, val] of lvlTwoStored) {</div>
+<div class="line">              theOtherClasses[2].push([key, null, val]);</div>
+<div class="line">            }</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
 <div class="line"> </div>
-<div class="line">      // Change to alphabetic buckets if needed</div>
-<div class="line">      if (theClasses[2].length &gt; CONSTS.VAL.BUCKET_THRESHOLD) {</div>
-<div class="line">        theClasses[2] = putInAlphabeticBuckets(theClasses[2]);</div>
+<div class="line">      // We first assign any sub-branch in the other classes so that it appears</div>
+<div class="line">      // on top (done above). Then we sort the rest of the classes and assign it</div>
+<div class="line">      // to the other classes top-level.</div>
+<div class="line">      if (tempOtherCls.length &gt; 0) {</div>
+<div class="line">        specialSort(tempOtherCls);</div>
+<div class="line">        if (tempOtherCls.length &gt; CONSTS.VAL.BUCKET_THRESHOLD) {</div>
+<div class="line">          tempOtherCls = putInAlphabeticBuckets(tempOtherCls);</div>
+<div class="line">        }</div>
+<div class="line">        for (const node of tempOtherCls) {</div>
+<div class="line">          theOtherClasses[2].push(node);</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // If file local size is more than 0 then sort it based on key name</div>
+<div class="line">    // i.e. file name and assign it to the file local array.</div>
+<div class="line">    if (fileLocalMap.size &gt; 0) {</div>
+<div class="line">      const sortedEntries = new Map([...fileLocalMap.entries()].sort(([keyA], [keyB]) =&gt; keyA.localeCompare(keyB)));</div>
+<div class="line">      for (const [key, val] of sortedEntries) {</div>
+<div class="line">        const nsName = `&lt;${key}&gt;`;</div>
+<div class="line">        for (const node of val) {</div>
+<div class="line">          node[1] = normalizeAnonPrefix(node[1], nsName);</div>
+<div class="line">        }</div>
+<div class="line">        theFileLocals[2].push([key, null, val]);</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Class Members</div>
 <div class="line">    if (found.classMems &amp;&amp; found.classMems[2]) {</div>
 <div class="line">      const converted = convertBranch(found.classMems[2], &#39;Classes &gt; Class Members&#39;);</div>
-<div class="line">      if (converted.length &gt; 0) theClasses[2].push([&#39;[Members]&#39;, null, converted]);</div>
+<div class="line">      if (converted.length &gt; 0) theMembers[2].push([&#39;Class Members&#39;, null, converted]);</div>
 <div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    // Class Hierarchy</div>
-<div class="line">    if (found.classHierarchy) theClasses[2].push([&#39;[Hierarchy]&#39;, null, found.classHierarchy[1]]);</div>
-<div class="line"> </div>
-<div class="line">    // Class Index</div>
-<div class="line">    if (found.classIndex) theClasses[2].push([&#39;[Index]&#39;, null, found.classIndex[1]]);</div>
 <div class="line"> </div>
 <div class="line">    // File List</div>
 <div class="line">    if (found.fileList) {</div>
@@ -2518,7 +2632,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    // File Members</div>
 <div class="line">    if (found.fileMems &amp;&amp; found.fileMems[2]) {</div>
 <div class="line">      const converted = convertBranch(found.fileMems[2], &#39;Files &gt; File Members&#39;);</div>
-<div class="line">      if (converted.length &gt; 0) theFiles[2].push([&#39;[Members]&#39;, null, converted]);</div>
+<div class="line">      if (converted.length &gt; 0) theMembers[2].push([&#39;File Members&#39;, null, converted]);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Example List</div>
@@ -2560,14 +2674,34 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    // Test List</div>
 <div class="line">    if (found.testList) theProject[2].push([&#39;Test List&#39;, null, found.testList[1]]);</div>
 <div class="line"> </div>
+<div class="line">    // Class Hierarchy</div>
+<div class="line">    if (found.classHierarchy) theProject[2].push([&#39;Class Hierarchy&#39;, null, found.classHierarchy[1]]);</div>
+<div class="line"> </div>
+<div class="line">    // Class Index</div>
+<div class="line">    if (found.classIndex) theProject[2].push([&#39;Class Index&#39;, null, found.classIndex[1]]);</div>
+<div class="line"> </div>
 <div class="line">    // Assigning to vars.htmlData array</div>
 <div class="line">    if (theProject[2].length &gt; 0) vars.htmlData.push(theProject);</div>
 <div class="line">    if (theDependencies[2].length &gt; 0) vars.htmlData.push(theDependencies);</div>
 <div class="line">    if (theArchitecture[2].length &gt; 0) vars.htmlData.push(theArchitecture);</div>
 <div class="line">    if (theNamespaces[2].length &gt; 0) vars.htmlData.push(theNamespaces);</div>
 <div class="line">    if (theConcepts[2].length &gt; 0) vars.htmlData.push(theConcepts);</div>
-<div class="line">    if (theClasses[2].length &gt; 0) vars.htmlData.push(theClasses);</div>
+<div class="line"> </div>
+<div class="line">    // If there are no other class list than `Other Classes` then</div>
+<div class="line">    // name `Other Classes` to `Classes`</div>
+<div class="line">    if (classListMap.size &gt; 0) {</div>
+<div class="line">      for (const [key, val] of classListMap) {</div>
+<div class="line">        vars.htmlData.push([`${key} Classes`, null, val]);</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line">    else{</div>
+<div class="line">      theOtherClasses[0] = &#39;Classes&#39;;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    if (theOtherClasses[2].length &gt; 0) vars.htmlData.push(theOtherClasses);</div>
+<div class="line">    if (theFileLocals[2].length &gt; 0) vars.htmlData.push(theFileLocals);</div>
 <div class="line">    if (theFiles[2].length &gt; 0) vars.htmlData.push(theFiles);</div>
+<div class="line">    if (theMembers[2].length &gt; 0) vars.htmlData.push(theMembers);</div>
 <div class="line">    if (theExamples[2].length &gt; 0) vars.htmlData.push(theExamples);</div>
 <div class="line">    if (theDevHub[2].length &gt; 0) vars.htmlData.push(theDevHub);</div>
 <div class="line"> </div>

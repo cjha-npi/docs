@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Log::cpp}::console::isPermanent" name="anonymous_namespace{Log::cpp}::console::isPermanent">
+<area shape="rect" id="Node000001" title="Checks whether a console was attached during initialization." alt="" coords="5,44,435,70"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="161,44,149,36,156,26,179,20,220,18,257,19,281,24,291,33,284,43,282,39,286,34,279,29,257,25,220,23,180,25,159,30,154,35,167,45"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="483,29,688,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="434,55,478,57,472,57,434,60"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="736,29,941,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="688,55,731,57,725,57,688,60"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="790,28,790,19,799,10,815,5,839,3,872,7,883,13,888,22,883,20,879,17,871,12,839,8,816,10,801,15,795,21,794,31"/>
+</map>

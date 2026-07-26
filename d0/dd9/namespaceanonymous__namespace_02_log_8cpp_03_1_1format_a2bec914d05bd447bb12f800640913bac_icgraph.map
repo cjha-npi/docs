@@ -1,0 +1,14 @@
+<map id="anonymous_namespace{Log::cpp}::format::bridgeLog" name="anonymous_namespace{Log::cpp}::format::bridgeLog">
+<area shape="rect" id="Node000001" title="Formats the fixed important&#45;log record sent to the helper process." alt="" coords="717,82,1123,107"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="977,76,980,71,974,66,954,62,920,60,883,62,863,68,860,73,871,83,866,81,854,74,860,63,882,57,920,55,954,57,976,62,986,70,980,80"/>
+<area shape="rect" id="Node000002" href="$dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920" title="Starts the primary file worker if it is currently inactive." alt="" coords="496,32,669,88"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="784,81,669,71,669,66,790,81"/>
+<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="227,109,448,150"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="707,107,448,125,448,120,712,107"/>
+<area shape="rect" id="Node000003" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a" title="Transitions both normal and important logging to a new directory." alt="" coords="251,29,424,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="486,59,424,61,423,55,491,58"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="380,21,376,17,368,12,337,8,315,10,301,15,295,21,294,31,290,28,290,19,298,10,314,5,337,3,370,7,380,13,385,22"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,73,179,114"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="240,72,179,83,178,78,246,70"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="216,112,178,108,178,103,221,111"/>
+</map>

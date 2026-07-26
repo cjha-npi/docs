@@ -1,0 +1,10 @@
+<map id="npi::ind::LockedValue::WriteAccess::WriteAccess" name="npi::ind::LockedValue::WriteAccess::WriteAccess">
+<area shape="rect" id="Node000001" title="Disables copying because each access object owns one write lock." alt="" coords="283,78,680,104"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="542,73,546,68,539,63,518,59,481,57,442,59,421,64,417,69,429,79,423,78,411,70,418,60,441,54,481,52,518,53,542,58,552,67,545,77"/>
+<area shape="rect" id="Node000002" href="$dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a2757e70304e07fe74e0017423be1cadb" title="Disables moving because QWriteLocker does not transfer ownership." alt="" coords="5,5,235,46"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="399,78,233,49,233,43,404,75"/>
+<area shape="rect" id="Node000003" href="$dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a7bc80e34eb24b836e7b76041dc3f22e8" title="Disables copy assignment because lock ownership cannot be copied." alt="" coords="13,71,227,111"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="272,92,227,94,226,88,277,90"/>
+<area shape="rect" id="Node000004" href="$dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a859d8e7f177c89aff0b801efdb3305fa" title="Disables move assignment because lock ownership cannot be transferred." alt="" coords="13,136,227,177"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="404,105,227,140,226,135,399,106"/>
+</map>

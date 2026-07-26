@@ -2288,7 +2288,10 @@
     for (const [key, val] of fileLocalMap) {
       const nsName = `<${key}>`;
       for (const node of val) {
-        if (node[0] === nsName) node[0] = '<anon>';
+        if (node[0] === nsName) {
+          if(node[1]) node[0] = '<anon>';
+          else node[0] = '';
+        }
         if (!node[0].endsWith('::')) node[0] = `${node[0]}::`;
       }
     }

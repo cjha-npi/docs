@@ -1,0 +1,6 @@
+<map id="npi::ind::LockedValue::ReadAccess::ReadAccess" name="npi::ind::LockedValue::ReadAccess::ReadAccess">
+<area shape="rect" id="Node000001" title="Disables moving because QReadLocker does not transfer ownership." alt="" coords="5,37,387,62"/>
+<area shape="rect" id="Node000002" href="$d1/d6e/classnpi_1_1ind_1_1_locked_value_1_1_read_access.html#aa3dfd36c33f375a19f81d48065229790" title="Disables copying because each access object owns one read lock." alt="" coords="435,29,648,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="386,47,429,50,424,50,386,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="479,28,474,20,484,10,506,5,541,3,592,8,605,14,608,24,604,21,601,18,590,13,541,8,507,10,487,15,479,21,483,31"/>
+</map>

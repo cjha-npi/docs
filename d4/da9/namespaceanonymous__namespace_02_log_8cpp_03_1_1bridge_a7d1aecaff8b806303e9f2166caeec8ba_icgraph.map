@@ -1,0 +1,41 @@
+<map id="anonymous_namespace{Log::cpp}::bridge::sendData" name="anonymous_namespace{Log::cpp}::bridge::sendData">
+<area shape="rect" id="Node000001" title="Writes a complete byte range to the current important&#45;log pipe." alt="" coords="1051,340,1448,366"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="1314,335,1319,330,1312,325,1288,321,1249,319,1207,321,1184,326,1180,329,1180,331,1193,341,1188,340,1175,333,1176,326,1182,322,1207,316,1249,314,1289,315,1314,320,1324,329,1317,339"/>
+<area shape="rect" id="Node000002" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a37079754f4a9ab17ea9b87bcba12f9a7" title="Handles an invalid Microsoft CRT parameter as an unrecoverable failure." alt="" coords="749,29,979,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1233,334,1198,288,1145,224,1078,157,1041,126,1001,99,978,87,978,82,1004,95,1044,122,1082,153,1149,221,1203,285,1238,335"/>
+<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="452,502,673,543"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="1229,370,1189,402,1135,438,1071,473,1003,500,919,519,831,530,748,534,673,533,673,528,748,528,831,525,918,514,1002,495,1069,468,1132,433,1186,398,1224,372"/>
+<area shape="rect" id="Node000006" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a55ad9393d4587b1cd0f2fe64bd7efd00" title="Handles a pure virtual function call as an unrecoverable failure." alt="" coords="745,133,983,189"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="1222,335,1129,274,1067,237,1002,204,971,192,971,186,1004,199,1069,232,1132,269,1227,336"/>
+<area shape="rect" id="Node000007" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a0ad3876154f2b818add3875e77f95303" title="Writes important&#45;log data while coordinating normal, fatal, and crash senders." alt="" coords="773,584,955,640"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="1230,370,1135,450,1071,498,1004,543,926,587,924,582,1001,539,1068,494,1131,446,1225,372"/>
+<area shape="rect" id="Node000010" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ab9aade053d28c916bf856e1876e60778" title="Formats a supported C signal and terminates through the crash path." alt="" coords="725,237,1003,278"/>
+<area shape="poly" id="edge19_Node000001_Node000010" title=" " alt="" coords="1190,339,1002,292,954,280,954,275,1003,287,1196,338"/>
+<area shape="rect" id="Node000011" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a76d9092d69e836e0e7969d64383344a2" title="Handles an uncaught C++ exception or explicit terminate request." alt="" coords="741,325,987,381"/>
+<area shape="poly" id="edge22_Node000001_Node000011" title=" " alt="" coords="1040,354,987,356,986,351,1045,353"/>
+<area shape="rect" id="Node000012" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ad04d833e641507640d81486a4accb05f" title="Handles an unhandled Windows structured exception." alt="" coords="749,429,979,485"/>
+<area shape="poly" id="edge25_Node000001_Node000012" title=" " alt="" coords="1196,367,968,432,967,427,1191,369"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="917,21,913,17,902,12,864,8,837,10,819,15,811,21,811,31,806,28,806,19,817,10,836,5,864,3,904,7,916,13,922,22"/>
+<area shape="rect" id="Node000003" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="448,277,677,333"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="740,89,727,99,678,141,637,190,604,238,580,279,576,276,599,236,632,187,674,137,724,95,744,86"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="606,269,603,265,594,260,563,256,540,258,526,263,519,269,519,279,514,276,514,267,523,258,539,253,563,251,596,255,606,261,611,270"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,502,179,543"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="495,339,138,505,136,500,493,334"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="443,525,179,525,178,520,445,520"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="746,193,726,204,659,241,602,280,599,275,656,236,724,199,751,190"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="917,125,913,121,902,116,864,112,837,114,819,119,811,125,811,135,806,132,806,123,817,114,836,109,864,107,904,111,916,117,922,126"/>
+<area shape="poly" id="edge17_Node000007_Node000005" title=" " alt="" coords="763,583,632,545,632,540,769,583"/>
+<area shape="poly" id="edge18_Node000007_Node000007" title=" " alt="" coords="917,575,913,572,902,567,864,563,837,565,819,570,811,576,811,586,807,582,806,574,817,565,836,559,864,557,904,562,916,568,922,577"/>
+<area shape="rect" id="Node000008" href="$dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920" title="Starts the primary file worker if it is currently inactive." alt="" coords="476,584,649,640"/>
+<area shape="poly" id="edge13_Node000007_Node000008" title=" " alt="" coords="763,612,649,614,649,609,768,612"/>
+<area shape="rect" id="Node000009" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a" title="Transitions both normal and important logging to a new directory." alt="" coords="227,584,400,640"/>
+<area shape="poly" id="edge14_Node000008_Node000009" title=" " alt="" coords="465,612,400,614,400,609,471,612"/>
+<area shape="poly" id="edge15_Node000009_Node000004" title=" " alt="" coords="234,582,142,545,143,540,239,580"/>
+<area shape="poly" id="edge16_Node000009_Node000009" title=" " alt="" coords="352,575,341,567,313,563,294,565,281,569,275,576,275,586,271,582,270,574,278,565,292,559,313,557,343,562,357,577"/>
+<area shape="poly" id="edge20_Node000010_Node000003" title=" " alt="" coords="726,280,678,290,676,284,731,278"/>
+<area shape="poly" id="edge21_Node000010_Node000010" title=" " alt="" coords="918,229,916,225,906,220,864,215,834,218,816,223,810,229,814,238,809,236,805,228,814,218,833,212,864,210,908,215,920,222,923,231"/>
+<area shape="poly" id="edge23_Node000011_Node000003" title=" " alt="" coords="731,333,677,326,677,321,736,332"/>
+<area shape="poly" id="edge24_Node000011_Node000011" title=" " alt="" coords="917,317,913,313,902,308,864,304,837,306,819,311,811,317,811,327,806,324,806,315,817,306,836,301,864,299,904,303,916,309,922,318"/>
+<area shape="poly" id="edge26_Node000012_Node000003" title=" " alt="" coords="791,426,724,396,613,336,613,330,727,391,796,426"/>
+<area shape="poly" id="edge27_Node000012_Node000012" title=" " alt="" coords="917,421,913,417,902,412,864,408,837,410,819,415,811,421,811,431,806,428,806,419,817,410,836,405,864,403,904,407,916,413,922,422"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="npi::ind::LockedValue::ReadAccess::operator=" name="npi::ind::LockedValue::ReadAccess::operator=">
+<area shape="rect" id="Node000001" title="Disables copy assignment because lock ownership cannot be copied." alt="" coords="5,37,379,62"/>
+<area shape="rect" id="Node000002" href="$d1/d6e/classnpi_1_1ind_1_1_locked_value_1_1_read_access.html#aa3dfd36c33f375a19f81d48065229790" title="Disables copying because each access object owns one read lock." alt="" coords="427,29,640,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="378,47,421,50,416,50,379,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="472,28,467,20,477,10,499,5,533,3,583,8,596,14,600,24,595,21,592,18,582,13,533,8,500,10,479,15,472,21,476,31"/>
+</map>

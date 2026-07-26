@@ -1,25 +1,7 @@
 var searchData=
 [
-  ['implogwrite_0',['impLogWrite',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a97522aab6ec53ce2693cf4a5432927bf',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['initiateshutdown_5f_1',['initiateShutdown_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a26a241a862fcd7dfd89667433d7e4bd1',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['initlogging_2',['initLogging',['../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a7a82c11accb191c2f06849f6d13db39a',1,'anonymous_namespace{Log.cpp}']]],
-  ['insertlogmessage_5f_3',['insertLogMessage_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ab25a4996d5ead7b5656de343421f6788',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['inst_5f_4',['Inst_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af85854d22c95e86c8802d7d864fcd350',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['installcrashhandlers_5',['installCrashHandlers',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a5383dc98204ed88af64a0de8fb17de7f',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['invalidparamhandler_6',['invalidParamHandler',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a110b11e90b5bb8ae5c8a1521e33eec21',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['isconsolecolored_7',['isConsoleColored',['../d5/ddd/namespacenpi_1_1log.html#a890d624071d5e2e26743288d3ce2d79b',1,'npi::log']]],
-  ['isconsolecolored_5f_8',['isConsoleColored_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a2642a951ac935c577058a2986c6b75f9',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['isconsoleopen_9',['isConsoleOpen',['../d5/ddd/namespacenpi_1_1log.html#a3f5453b25bfa7808da0fa9c48d5a0b01',1,'npi::log']]],
-  ['isconsoleopen_5f_10',['isConsoleOpen_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#acc79e18b0a8472ad63533edc0cad32f8',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['isconsolepermanent_11',['isConsolePermanent',['../d5/ddd/namespacenpi_1_1log.html#a03944c7d993d8f35806987a67f25a67d',1,'npi::log']]],
-  ['isdisplaymuted_12',['isDisplayMuted',['../d5/ddd/namespacenpi_1_1log.html#a887220e01a8730efd359ff7d59eea478',1,'npi::log']]],
-  ['isdisplaymuted_5f_13',['isDisplayMuted_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a02bba2baa1fd47b8a74778204bed7aed',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['isidentifierchar_14',['isIdentifierChar',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a0fe54293fedacd10e31e2ee3542c331e',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['isidentifierchar_5f_15',['isIdentifierChar_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a2d185efc4e84fc0f11add0d6cddc6f5d',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
-  ['islocked_5f_16',['isLocked_',['../d0/d9b/classnpi_1_1ind_1_1_cross_process_locker.html#a085483b5ecbf9375f0e42452ba987aa1',1,'npi::ind::CrossProcessLocker']]],
-  ['ispermanentconsole_5f_17',['isPermanentConsole_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af72ec4207bb7c4bd6752f9fdfd6f914f',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['isspacechar_18',['isSpaceChar',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a1e4219749cab61533a6faf773fe7cddb',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['isspacechar_5f_19',['isSpaceChar_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a8ed9f249e7504829fc96b3f80a39d59d',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
-  ['iswarnimp_5f_20',['isWarnImp_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a548b80afcae8b12691b0e7aa004e0414',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['iswarnimplog_21',['isWarnImpLog',['../d5/ddd/namespacenpi_1_1log.html#a5d120ddbdc6cf5c3ecd4b7d8bd0a22a3',1,'npi::log']]]
+  ['handle_0',['handle',['../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce',1,'anonymous_namespace{Log.cpp}::console']]],
+  ['hardfailfast_1',['hardFailFast',['../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a7e16fa7a62fe985ef460f5b49dc2074a',1,'anonymous_namespace{Log.cpp}::crash']]],
+  ['hashkey_5f_2',['HashKey_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a0c3664a82b33e321bfcc24ac0b00313e',1,'anonymous_namespace{Log.cpp}::CategoryCache::HashKey_()'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a9dc613bb097339af32c1af783547447c',1,'anonymous_namespace{Log.cpp}::FileLineCache::HashKey_()'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#af2d7aa51ccae7087bb4dee5786309c27',1,'anonymous_namespace{Log.cpp}::FunctionCache::HashKey_()']]],
+  ['hashtext_5f_3',['HashText_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a0ddbefb697054b557edac786761d4238',1,'anonymous_namespace{Log.cpp}::CategoryCache::HashText_()'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#aab94c7116b206b9f46e015b043c082ce',1,'anonymous_namespace{Log.cpp}::FileLineCache::HashText_()'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a8ca65c8af729c6ef4049687107acbe84',1,'anonymous_namespace{Log.cpp}::FunctionCache::HashText_()']]]
 ];

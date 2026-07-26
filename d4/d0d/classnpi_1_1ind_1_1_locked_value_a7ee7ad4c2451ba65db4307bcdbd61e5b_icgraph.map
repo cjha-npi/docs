@@ -1,0 +1,9 @@
+<map id="npi::ind::LockedValue::read_" name="npi::ind::LockedValue::read_">
+<area shape="rect" id="Node000001" title="Returns a snapshot copy of the complete protected value." alt="" coords="275,55,520,80"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#a2357fd8efc3511b85c79fbab4159e343" title="Returns all logging categories encountered since startup." alt="" coords="13,5,219,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="313,54,189,34,190,28,318,52"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#af28603358fca7f71c4be70cda3557b9f" title="Returns all encountered non&#45;Qt logging categories." alt="" coords="5,55,227,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="264,68,227,70,226,65,270,67"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#aecacbd05b8c19542926b9d07b16435ba" title="Returns all encountered Qt logging categories." alt="" coords="17,104,215,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="318,81,190,107,189,101,313,82"/>
+</map>

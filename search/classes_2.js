@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fieldconfig_0',['FieldConfig',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#d5/d42/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_field_config',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['fixedstrings_1',['FixedStrings',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html',1,'anonymous_namespace{Log.cpp}::LogCore']]]
+  ['datetimecache_0',['DateTimeCache',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache',1,'anonymous_namespace{Log.cpp}::format']]],
+  ['dispworker_1',['DispWorker',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker',1,'anonymous_namespace{Log.cpp}::LeakedState']]]
 ];

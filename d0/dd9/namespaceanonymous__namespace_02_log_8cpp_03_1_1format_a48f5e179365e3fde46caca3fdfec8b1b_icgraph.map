@@ -1,0 +1,33 @@
+<map id="anonymous_namespace{Log::cpp}::format::appendElapsedTime" name="anonymous_namespace{Log::cpp}::format::appendElapsedTime">
+<area shape="rect" id="Node000001" title="Appends a saturated fixed&#45;width elapsed&#45;time value in format hhh:mm:ss.zzz, where zzz is milliseconds..." alt="" coords="1397,96,1867,122"/>
+<area shape="poly" id="edge17_Node000001_Node000001" title=" " alt="" coords="1695,91,1699,86,1692,81,1669,77,1632,75,1591,77,1569,82,1565,87,1578,97,1572,96,1560,88,1566,78,1591,72,1632,70,1670,71,1694,76,1705,85,1698,95"/>
+<area shape="rect" id="Node000002" href="$d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a041932e18af5e28399ff242898eaa4ae" title="Appends elapsed time since logging&#45;system startup." alt="" coords="1168,29,1349,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1529,95,1349,72,1349,67,1534,95"/>
+<area shape="rect" id="Node000010" href="$d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a6fdc84681e63fd618969b01f9565ff4c" title="Appends elapsed time since the current thread first logged." alt="" coords="1168,133,1349,189"/>
+<area shape="poly" id="edge18_Node000001_Node000010" title=" " alt="" coords="1534,123,1349,151,1349,146,1529,123"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="1299,21,1287,12,1259,8,1238,10,1225,15,1219,21,1219,31,1214,28,1214,19,1222,10,1237,5,1259,3,1290,7,1304,22"/>
+<area shape="rect" id="Node000003" href="$d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a2bec914d05bd447bb12f800640913bac" title="Formats the fixed important&#45;log record sent to the helper process." alt="" coords="939,29,1120,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="1158,57,1120,60,1120,55,1163,57"/>
+<area shape="rect" id="Node000008" href="$d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a7fc03e94650e6022574acfcd5d3bf5dc" title="Formats one record using the active normal or display field layout." alt="" coords="939,133,1120,189"/>
+<area shape="poly" id="edge11_Node000002_Node000008" title=" " alt="" coords="1191,87,1169,100,1090,136,1089,131,1167,95,1185,89"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="1069,21,1057,12,1029,8,1009,10,996,15,990,21,990,31,986,28,985,19,993,10,1008,5,1029,3,1060,8,1074,22"/>
+<area shape="rect" id="Node000004" href="$dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920" title="Starts the primary file worker if it is currently inactive." alt="" coords="472,105,645,161"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="928,73,646,122,645,117,933,73"/>
+<area shape="rect" id="Node000007" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="448,16,669,56"/>
+<area shape="poly" id="edge9_Node000003_Node000007" title=" " alt="" coords="928,53,669,43,669,38,933,52"/>
+<area shape="rect" id="Node000005" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a" title="Transitions both normal and important logging to a new directory." alt="" coords="227,105,400,161"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="462,134,400,136,399,131,467,133"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="352,97,341,88,313,84,294,86,281,91,275,97,275,107,270,104,270,95,278,86,292,81,313,79,343,84,357,98"/>
+<area shape="rect" id="Node000006" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,113,179,154"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="216,134,179,136,178,131,221,132"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="438,39,336,50,281,59,227,72,174,92,129,115,126,111,172,87,226,67,280,54,335,45,443,37"/>
+<area shape="poly" id="edge15_Node000008_Node000004" title=" " alt="" coords="928,156,645,141,645,136,933,155"/>
+<area shape="poly" id="edge16_Node000008_Node000008" title=" " alt="" coords="1069,125,1057,116,1029,112,1009,114,996,119,990,125,990,135,986,132,985,123,993,114,1008,109,1029,107,1060,112,1074,126"/>
+<area shape="rect" id="Node000009" href="$dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a151b634635a35cd3feb2de126611e850" title="Starts the optional display worker if it is currently inactive." alt="" coords="717,171,891,226"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="934,177,891,187,890,182,928,178"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="707,173,645,159,645,153,712,174"/>
+<area shape="poly" id="edge14_Node000009_Node000006" title=" " alt="" coords="707,202,609,205,488,201,357,193,226,176,150,156,150,151,227,171,357,187,488,196,609,199,712,201"/>
+<area shape="poly" id="edge20_Node000010_Node000003" title=" " alt="" coords="1188,130,1119,100,1092,87,1093,82,1121,95,1193,130"/>
+<area shape="poly" id="edge21_Node000010_Node000008" title=" " alt="" coords="1158,161,1120,164,1120,159,1163,161"/>
+<area shape="poly" id="edge19_Node000010_Node000010" title=" " alt="" coords="1299,124,1287,116,1259,112,1238,114,1225,119,1219,125,1218,135,1215,132,1214,123,1222,114,1237,109,1259,107,1290,111,1304,126"/>
+</map>

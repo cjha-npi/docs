@@ -1,0 +1,20 @@
+<map id="anonymous_namespace{Log::cpp}::format::appendMessage" name="anonymous_namespace{Log::cpp}::format::appendMessage">
+<area shape="rect" id="Node000001" title="Appends the sanitized message and optional late&#45;record marker." alt="" coords="5,151,443,177"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="166,152,153,143,160,133,183,127,224,124,261,126,285,131,295,140,289,150,285,146,290,140,283,136,261,131,224,130,184,132,163,137,158,142,171,151"/>
+<area shape="rect" id="Node000002" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a0663052a99e9b2a0bf0b2c0cb9e75b7b" title="Sanitizes and appends one character." alt="" coords="736,5,933,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,149,352,102,420,76,490,56,551,44,613,37,730,32,725,33,613,42,552,50,491,61,421,81,354,107,251,153"/>
+<area shape="rect" id="Node000004" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a6a59fd52c69efb51eb1eb2882f8088df" title="Appends the configured field separator when the current line is not empty." alt="" coords="491,71,688,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="296,148,485,116,481,119,297,154"/>
+<area shape="rect" id="Node000005" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b" title="Appends one byte without sanitization." alt="" coords="736,136,933,192"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="442,161,731,163,726,165,442,166"/>
+<area shape="rect" id="Node000006" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a9de64045520458e033a5531e9d945949" title="Appends a bounded byte sequence without sanitization." alt="" coords="736,216,933,272"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="323,174,730,228,727,232,323,179"/>
+<area shape="rect" id="Node000007" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ab7bba778ac4a5104350c8dd82a117cc9" title="Returns the number of accumulated bytes." alt="" coords="491,252,688,308"/>
+<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="266,174,496,248,491,251,265,179"/>
+<area shape="rect" id="Node000003" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40" title="Checks whether the current line has room for the requested bytes and its terminator." alt="" coords="981,104,1179,160"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="905,58,1006,101,1000,101,904,64"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="688,102,976,124,971,125,688,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="688,122,731,135,726,136,688,127"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="933,148,976,145,971,146,934,154"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="905,213,932,201,1015,164,1020,163,934,206,906,219"/>
+</map>

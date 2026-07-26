@@ -1,0 +1,38 @@
+var hierarchy =
+[
+    [ "anonymous_namespace{Log.cpp}::CategoryCache", "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html", null ],
+    [ "anonymous_namespace{Log.cpp}::CategoryCache::Entry", "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry", null ],
+    [ "anonymous_namespace{Log.cpp}::CategoryCache::Key", "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key", null ],
+    [ "anonymous_namespace{Log.cpp}::CategoryCache::TextHash", "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash", null ],
+    [ "anonymous_namespace{Log.cpp}::FileLineCache", "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html", null ],
+    [ "anonymous_namespace{Log.cpp}::FileLineCache::Entry", "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry", null ],
+    [ "anonymous_namespace{Log.cpp}::FileLineCache::Key", "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key", null ],
+    [ "anonymous_namespace{Log.cpp}::FileLineCache::TextHash", "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash", null ],
+    [ "anonymous_namespace{Log.cpp}::format::DateTimeCache", "d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache", null ],
+    [ "anonymous_namespace{Log.cpp}::format::UnitInfo", "d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info", null ],
+    [ "anonymous_namespace{Log.cpp}::FunctionCache", "da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html", null ],
+    [ "anonymous_namespace{Log.cpp}::FunctionCache::Entry", "da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#d9/dc2/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_entry", null ],
+    [ "anonymous_namespace{Log.cpp}::FunctionCache::Key", "da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#d4/d3f/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_key", null ],
+    [ "anonymous_namespace{Log.cpp}::FunctionCache::TextHash", "da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#da/d53/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_text_hash", null ],
+    [ "anonymous_namespace{Log.cpp}::LeakedState", "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html", null ],
+    [ "anonymous_namespace{Log.cpp}::LeakedState::BridgeState", "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/df0/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_bridge_state", null ],
+    [ "anonymous_namespace{Log.cpp}::LeakedState::Config", "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config", null ],
+    [ "anonymous_namespace{Log.cpp}::LeakedState::CrashState", "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state", null ],
+    [ "anonymous_namespace{Log.cpp}::LeakedState::Runtime", "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime", null ],
+    [ "anonymous_namespace{Log.cpp}::LeakedState::Worker", "d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker.html", [
+      [ "anonymous_namespace{Log.cpp}::LeakedState::DispWorker", "d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker.html", null ],
+      [ "anonymous_namespace{Log.cpp}::LeakedState::FileWorker", "d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker.html", null ]
+    ] ],
+    [ "anonymous_namespace{Log.cpp}::OneLog", "d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html", null ],
+    [ "anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;", "d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html", null ],
+    [ "anonymous_namespace{StageWindow.cpp}::OpacityGuard", "de/d5c/classanonymous__namespace_02_stage_window_8cpp_03_1_1_opacity_guard.html", null ],
+    [ "npi::app::CrossProcessLocker", "dc/d71/classnpi_1_1app_1_1_cross_process_locker.html", null ],
+    [ "npi::ind::LockedValue&lt; T &gt;", "d4/d0d/classnpi_1_1ind_1_1_locked_value.html", null ],
+    [ "npi::ind::LockedValue&lt; T &gt;::ReadAccess", "d1/d6e/classnpi_1_1ind_1_1_locked_value_1_1_read_access.html", null ],
+    [ "npi::ind::LockedValue&lt; T &gt;::WriteAccess", "dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html", null ],
+    [ "npi::ind::SlotGate", "d7/dbf/classnpi_1_1ind_1_1_slot_gate.html", null ],
+    [ "npi::ind::SlotGate::Blocker", "d6/d53/classnpi_1_1ind_1_1_slot_gate_1_1_blocker.html", null ],
+    [ "npi::ind::StageWindow", "dd/d54/classnpi_1_1ind_1_1_stage_window.html", null ],
+    [ "char", "d0/deb/namespace_3global_scope_4.html#da/d7d/classchar", null ],
+    [ "QReadWriteLock", "d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock", null ]
+];

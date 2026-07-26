@@ -1,14 +1,20 @@
 var searchData=
 [
   ['caller_5f_0',['caller_',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#a24bc8bd2405f777e8e57aa0255005ff4',1,'npi::ind::StageWindow']]],
-  ['category_5f_1',['category_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#a49f15cda0bc392132a9bfb1241e7a51c',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
-  ['categorylen_5f_2',['categoryLen_',['../dc/d58/structanonymous__namespace_02_log_8cpp_03_1_1_log_core_1_1_fixed_strings.html#abb17d77222a5b1fef0e04f11c2e4a0ca',1,'anonymous_namespace{Log.cpp}::LogCore::FixedStrings']]],
-  ['center_5f_3',['center_',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#a389624bc248e5893f7e6b7026d172023',1,'npi::ind::StageWindow']]],
-  ['coloredconsole_5f_4',['coloredConsole_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a989c65d62ca31643fa45bbeebb883f94',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['configfilename_5f_5',['ConfigFileName_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a0e45c59af20a7ce4d05bf1d372898bfe',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['configlockname_5f_6',['configLockName_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a46d228e5245a5d9516ab1d656117f13c',1,'anonymous_namespace{Log.cpp}::LogCore']]],
-  ['crashing_7',['crashing',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a51df948e5fa3868b91f8b698cbe1b58e',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['ctxtbuf_8',['cTxtBuf',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aeeb137a2c9cda360c642a9f465b4fd0c',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['ctxtpos_9',['cTxtPos',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a9b1e6370f161f0e3cb2fab8ed0c23417',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['currentmaxmb_5f_10',['currentMaxMb_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#af6b15133755e33b4315dee951e3c3cf2',1,'anonymous_namespace{Log.cpp}::LogCore']]]
+  ['capacity_5f_1',['Capacity_',['../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#aba2b84825aafb76ba1a93da27891ba0c',1,'anonymous_namespace{Log.cpp}::TextBuffer::Capacity_'],['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a03356cf8d3547efc665cf418a45b2908',1,'anonymous_namespace{Log.cpp}::CategoryCache::Capacity_'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a2671ca19ec9fff53029b3fcab99b0c84',1,'anonymous_namespace{Log.cpp}::FileLineCache::Capacity_'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a438566ffa9e358e7301de7da5860615a',1,'anonymous_namespace{Log.cpp}::FunctionCache::Capacity_']]],
+  ['categories_5f_2',['categories_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0fc95195529e0240d2bb02a5ceaa3a3',1,'anonymous_namespace{Log.cpp}::LeakedState::Runtime']]],
+  ['category_5f_3',['category_',['../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html#a040fad513d726ae7ca37e07f9dff7171',1,'anonymous_namespace{Log.cpp}::OneLog']]],
+  ['categorycache_5f_4',['categoryCache_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a760d6f3c0180e7ab893e0978b435d944',1,'anonymous_namespace{Log.cpp}::LeakedState']]],
+  ['center_5f_5',['center_',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#a389624bc248e5893f7e6b7026d172023',1,'npi::ind::StageWindow']]],
+  ['cfg_5f_6',['cfg_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af1cbbbe45f885f654531a56c949d61dd',1,'anonymous_namespace{Log.cpp}::LeakedState']]],
+  ['cmdlinebuf_7',['cmdLineBuf',['../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#afd27f331b67b92be914630ec2ce4f35e',1,'anonymous_namespace{WinMsgBoxExe.cpp}']]],
+  ['cmdlinemax_8',['cmdLineMax',['../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ab8f0527db00d3bffc20804c52cae2393',1,'anonymous_namespace{WinMsgBoxExe.cpp}']]],
+  ['cmdlinepos_9',['cmdLinePos',['../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a6629b0ad0afdefbfd682f35c35b4bb79',1,'anonymous_namespace{WinMsgBoxExe.cpp}']]],
+  ['coloredconsole_5f_10',['coloredConsole_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a76b45c827f28221a7771d511f0e0b649',1,'anonymous_namespace{Log.cpp}::LeakedState::Config']]],
+  ['contextscanmax_5f_11',['ContextScanMax_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a351cae4cc82d6775c3fe329c3415e542',1,'anonymous_namespace{Log.cpp}::CategoryCache::ContextScanMax_'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a1e7dd49474b39d30ed972f18e5444bff',1,'anonymous_namespace{Log.cpp}::FileLineCache::ContextScanMax_'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#ad1a5c6a68a01709b52a43fe9c3abc77d',1,'anonymous_namespace{Log.cpp}::FunctionCache::ContextScanMax_']]],
+  ['count_5f_12',['count_',['../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#ae638140789d6d6a20aa9bd26740b21e8',1,'npi::ind::SlotGate']]],
+  ['countref_5f_13',['countRef_',['../d6/d53/classnpi_1_1ind_1_1_slot_gate_1_1_blocker.html#a23602dc8e83ba53d952426a57dc880fe',1,'npi::ind::SlotGate::Blocker']]],
+  ['crash_5f_14',['crash_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6',1,'anonymous_namespace{Log.cpp}::LeakedState']]],
+  ['crashbuf_5f_15',['crashBuf_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a8adbbf5f18976a3e411f87360ab0d2a0',1,'anonymous_namespace{Log.cpp}::LeakedState::CrashState']]],
+  ['crashing_5f_16',['crashing_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa86ec3715622a7a47c91d45641cc65ef',1,'anonymous_namespace{Log.cpp}::LeakedState::CrashState']]]
 ];

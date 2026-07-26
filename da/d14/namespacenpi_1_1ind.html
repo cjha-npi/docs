@@ -157,15 +157,160 @@ $(function(){initNavTree('da/d14/namespacenpi_1_1ind.html','../../',''); });
 </ul>
 </li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>Use this namespace only for standalone utility code. Domain-specific code belongs in a dedicated namespace, such as <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html">npi::log</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Use this namespace only for standalone utility code. Domain-specific code belongs in a dedicated namespace, such as <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html" title="Declares the logging category used for logging-system diagnostics.">npi::log</a>. </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:CrossProcessLocker" id="r_CrossProcessLocker"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d9b/classnpi_1_1ind_1_1_cross_process_locker.html">CrossProcessLocker</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.  <a href="../../d0/d9b/classnpi_1_1ind_1_1_cross_process_locker.html#details">More...</a><br /></td></tr>
+<tr class="memitem:LockedValue" id="r_LockedValue"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d0d/classnpi_1_1ind_1_1_locked_value.html">LockedValue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a value protected by a <span class="tt"><a class="el" href="../../d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock">QReadWriteLock</a></span>.  <a href="../../d4/d0d/classnpi_1_1ind_1_1_locked_value.html#details">More...</a><br /></td></tr>
+<tr class="memitem:SlotGate" id="r_SlotGate"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html">SlotGate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls scoped suppression of reentrant or unwanted slot handling.  <a href="../../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#details">More...</a><br /></td></tr>
 <tr class="memitem:StageWindow" id="r_StageWindow"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d54/classnpi_1_1ind_1_1_stage_window.html">StageWindow</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to display a top-level widget with optional animation and robust on-screen positioning.  <a href="../../dd/d54/classnpi_1_1ind_1_1_stage_window.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a36235e7ddba2a265d60b240df5134019" id="r_a36235e7ddba2a265d60b240df5134019"><td class="memItemLeft">std::wstring&#160;</td><td class="memItemRight"><a class="el" href="#a36235e7ddba2a265d60b240df5134019">winErrorText</a> (DWORD errorCode)</td></tr>
+<tr class="memdesc:a36235e7ddba2a265d60b240df5134019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts Windows <span class="tt">DWORD</span> error code into format "&lt;text&gt; (Code &lt;number&gt;).".  <br /></td></tr>
+<tr class="memitem:aa39430d1ea046bf744a0004ec2373cee" id="r_aa39430d1ea046bf744a0004ec2373cee"><td class="memItemLeft">std::wstring&#160;</td><td class="memItemRight"><a class="el" href="#aa39430d1ea046bf744a0004ec2373cee">winLastErrorText</a> ()</td></tr>
+<tr class="memdesc:aa39430d1ea046bf744a0004ec2373cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">GetLastError()</span> and returns error in format "&lt;text&gt; (Code &lt;number&gt;).".  <br /></td></tr>
 </table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a36235e7ddba2a265d60b240df5134019" name="a36235e7ddba2a265d60b240df5134019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36235e7ddba2a265d60b240df5134019">&#9670;&#160;</a></span>winErrorText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::wstring npi::ind::winErrorText </td>
+          <td>(</td>
+          <td class="paramtype">DWORD</td>          <td class="paramname"><span class="paramname"><em>errorCode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts Windows <span class="tt">DWORD</span> error code into format "&lt;text&gt; (Code &lt;number&gt;).". </p>
+<p>The function uses <span class="tt">FormatMessageW()</span> with the system message table to retrieve the description associated with <span class="tt">DWORD</span> error code. Windows allocates the message buffer internally, and the function releases that buffer using <span class="tt">LocalFree()</span> before returning.</p>
+<p>Windows system messages commonly contain trailing carriage returns, line feeds, spaces, or tabs. These trailing characters are removed so the returned text can be embedded cleanly into log messages, dialogs, and exception descriptions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">errorCode</td><td>Windows system error code to convert. This is commonly the value captured from <span class="tt">GetLastError()</span> immediately after a failed Windows API call.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns <span class="tt">std::wstring</span> human-readable system message without trailing whitespace. If supplied code is <span class="tt">0</span> then it returns "No error (Code 0)." If no system message is available or if <span class="tt">FormatMessageW()</span> fails, it returns "Unknown error, FormatMessageW failed (Code &lt;number&gt;)."</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call <span class="tt">GetLastError()</span> before invoking this function and store its result locally. Calling other Windows API functions first may overwrite the thread's last-error value. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d43/_win_error_text_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../d9/d43/_win_error_text_8hpp_source.html">WinErrorText.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>  {</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">if</span>(errorCode == 0)</div>
+<div class="line"><span class="lineno">   61</span>      <span class="keywordflow">return</span> L<span class="stringliteral">&quot;No error (Code 0).&quot;</span>;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="keyword">constexpr</span> DWORD flags =</div>
+<div class="line"><span class="lineno">   64</span>    FORMAT_MESSAGE_ALLOCATE_BUFFER |</div>
+<div class="line"><span class="lineno">   65</span>    FORMAT_MESSAGE_FROM_SYSTEM |</div>
+<div class="line"><span class="lineno">   66</span>    FORMAT_MESSAGE_IGNORE_INSERTS;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment">// Buffer to hold text</span></div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordtype">wchar_t</span>* buf = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="comment">// Ask Windows to allocate and fill the message buffer.</span></div>
+<div class="line"><span class="lineno">   72</span>    <span class="comment">// The buffer must be released with LocalFree().</span></div>
+<div class="line"><span class="lineno">   73</span>    <span class="keyword">const</span> DWORD len = ::FormatMessageW(</div>
+<div class="line"><span class="lineno">   74</span>      flags, <span class="keyword">nullptr</span>, errorCode, 0, <span class="keyword">reinterpret_cast&lt;</span>LPWSTR<span class="keyword">&gt;</span>(&amp;buf), 0, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="comment">// Construct message from buffer</span></div>
+<div class="line"><span class="lineno">   77</span>    std::wstring msg;</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span>(len != 0 &amp;&amp; buf != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   79</span>      msg.assign(buf, len);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>      <span class="comment">// FormatMessageW commonly appends CR/LF and spaces.</span></div>
+<div class="line"><span class="lineno">   82</span>      <span class="comment">// Remove them so the text is safe to embed in one-line diagnostics.</span></div>
+<div class="line"><span class="lineno">   83</span>      <span class="keywordflow">while</span>(!msg.empty()</div>
+<div class="line"><span class="lineno">   84</span>            &amp;&amp; (msg.back() == L<span class="charliteral">&#39;\r&#39;</span></div>
+<div class="line"><span class="lineno">   85</span>                || msg.back() == L<span class="charliteral">&#39;\n&#39;</span></div>
+<div class="line"><span class="lineno">   86</span>                || msg.back() == L<span class="charliteral">&#39; &#39;</span></div>
+<div class="line"><span class="lineno">   87</span>                || msg.back() == L<span class="charliteral">&#39;\t&#39;</span>)) {</div>
+<div class="line"><span class="lineno">   88</span>        msg.pop_back();</div>
+<div class="line"><span class="lineno">   89</span>      }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   92</span>      <span class="comment">// Formatting failed</span></div>
+<div class="line"><span class="lineno">   93</span>      msg = L<span class="stringliteral">&quot;Unknown error, FormatMessageW failed&quot;</span>;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <span class="comment">// Append error code</span></div>
+<div class="line"><span class="lineno">   97</span>    msg.append(L<span class="stringliteral">&quot; (Code &quot;</span>)</div>
+<div class="line"><span class="lineno">   98</span>       .append(std::to_wstring(errorCode))</div>
+<div class="line"><span class="lineno">   99</span>       .append(L<span class="stringliteral">&quot;).&quot;</span>);</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <span class="comment">// buffer must be released</span></div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span>(buf != <span class="keyword">nullptr</span>) </div>
+<div class="line"><span class="lineno">  103</span>      ::LocalFree(buf);</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> msg;</div>
+<div class="line"><span class="lineno">  106</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#ab185145d09a2a38b2213db9c648e7eb0">npi::app::CrossProcessLocker::CrossProcessLocker()</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae0f74e4fc893caff483e47bcc8f799c1">anonymous_namespace{Log.cpp}::LeakedState::PermConsoleHandle_()</a>, <a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba">anonymous_namespace{Log.cpp}::bridge::sendData()</a>, <a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a60cf08a266458e16cf3c38b1b46f0cba">anonymous_namespace{Log.cpp}::bridge::startProcess()</a>, and <a class="el" href="#aa39430d1ea046bf744a0004ec2373cee">winLastErrorText()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/d14/namespacenpi_1_1ind_a36235e7ddba2a265d60b240df5134019_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="aa39430d1ea046bf744a0004ec2373cee" name="aa39430d1ea046bf744a0004ec2373cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39430d1ea046bf744a0004ec2373cee">&#9670;&#160;</a></span>winLastErrorText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::wstring npi::ind::winLastErrorText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls <span class="tt">GetLastError()</span> and returns error in format "&lt;text&gt; (Code &lt;number&gt;).". </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns <span class="tt">std::wstring</span> human-readable system message without trailing whitespace. If <span class="tt">GetLastError()</span> is <span class="tt">0</span> then it returns "No error (Code 0)." If no system message is available or if <span class="tt">FormatMessageW()</span> fails, it returns "Unknown error, FormatMessageW failed (Code &lt;number&gt;)." </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d43/_win_error_text_8hpp_source.html#l00114">114</a> of file <a class="el" href="../../d9/d43/_win_error_text_8hpp_source.html">WinErrorText.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>  {</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a36235e7ddba2a265d60b240df5134019">winErrorText</a>(::GetLastError());</div>
+<div class="line"><span class="lineno">  117</span>  }</div>
+<div class="ttc" id="anamespacenpi_1_1ind_html_a36235e7ddba2a265d60b240df5134019"><div class="ttname"><a href="#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a></div><div class="ttdeci">std::wstring winErrorText(DWORD errorCode)</div><div class="ttdoc">Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d43/_win_error_text_8hpp_source.html#l00058">WinErrorText.hpp:58</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a36235e7ddba2a265d60b240df5134019">winErrorText()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/d14/namespacenpi_1_1ind_aa39430d1ea046bf744a0004ec2373cee_cgraph.svg" width="486" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

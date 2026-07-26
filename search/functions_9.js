@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'Main.cpp']]],
-  ['msghandler_1',['msgHandler',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#a460f691136cced36ea40b2595c18d0a8',1,'anonymous_namespace{Log.cpp}::safe::msgHandler()'],['../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a0c2edb98e44610adcc75724bbf4edfb8',1,'anonymous_namespace{Log.cpp}::msgHandler()']]],
-  ['msghandler_5f_2',['msgHandler_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#ac83f155438d4a0447ac048d50c7b1a47',1,'anonymous_namespace{Log.cpp}::LogCore']]]
+  ['keysequal_5f_0',['KeysEqual_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a435efdf570bf14b59b57ac13434102b9',1,'anonymous_namespace{Log.cpp}::CategoryCache::KeysEqual_()'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#ae8746397035000686a4a24c41692d0dd',1,'anonymous_namespace{Log.cpp}::FileLineCache::KeysEqual_()'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#aa1e76f9d85cb3e11d4e0a63eaa66a6dc',1,'anonymous_namespace{Log.cpp}::FunctionCache::KeysEqual_()']]]
 ];

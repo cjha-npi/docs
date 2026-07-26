@@ -1,0 +1,8 @@
+<map id="npi::log::directory" name="npi::log::directory">
+<area shape="rect" id="Node000001" title="Returns the current log directory." alt="" coords="5,44,179,70"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="227,29,432,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,55,222,57,216,57,178,60"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="480,29,685,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,55,475,57,469,57,432,60"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="534,28,534,19,543,10,559,5,583,3,616,7,627,13,632,22,627,20,623,17,615,12,583,8,560,10,545,15,539,21,538,31"/>
+</map>

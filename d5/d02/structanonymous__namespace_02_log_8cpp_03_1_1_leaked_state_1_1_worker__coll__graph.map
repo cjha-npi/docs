@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Log.cpp}::LeakedState::Worker" name="anonymous_namespace{Log.cpp}::LeakedState::Worker">
+<area shape="rect" id="Node000001" title="Provides queue, wake&#45;up, field&#45;layout, and thread state shared by workers." alt="" coords="406,112,819,137"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,259,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,37,382,56,486,83,575,111,570,112,485,88,381,62,266,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="77,85,187,110"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,98,407,111,404,115,194,104"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="61,138,203,164"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,145,382,136,409,137,403,137,382,141,210,150"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="93,192,171,217"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="178,196,381,168,550,137,555,137,382,173,179,202"/>
+</map>

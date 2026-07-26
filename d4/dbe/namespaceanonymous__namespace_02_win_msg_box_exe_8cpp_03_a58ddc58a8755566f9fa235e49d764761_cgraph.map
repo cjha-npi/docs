@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{WinMsgBoxExe::cpp}::prepare" name="anonymous_namespace{WinMsgBoxExe::cpp}::prepare">
+<area shape="rect" id="Node000001" title="Builds the helper executable path and reusable command&#45;line prefix. The command&#45;line prefix buffer is..." alt="" coords="5,100,403,126"/>
+<area shape="rect" id="Node000002" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a7c36613e6219d885c2b5c949ce285c60" title="Appends one character to the prepared command&#45;line prefix buffer." alt="" coords="467,5,640,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,98,461,53,457,56,261,103"/>
+<area shape="rect" id="Node000003" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60" title="Appends the application title used as the message&#45;box title to the command&#45;line prefix." alt="" coords="451,85,656,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="402,111,445,113,440,114,403,116"/>
+<area shape="rect" id="Node000005" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ae9382129e5c68748dfb4d7ca8056cd94" title="Appends one character to the prepared executable path buffer." alt="" coords="467,165,640,221"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="261,123,461,170,457,173,260,129"/>
+<area shape="rect" id="Node000004" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="704,85,941,141"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="656,111,699,113,694,113,656,116"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="anonymous_namespace{Log::cpp}::workers::fileWorkerStart" name="anonymous_namespace{Log::cpp}::workers::fileWorkerStart">
+<area shape="rect" id="Node000001" title="Starts the primary file worker if it is currently inactive." alt="" coords="448,44,909,70"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a" title="Transitions both normal and important logging to a new directory." alt="" coords="227,29,400,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="437,57,400,60,400,55,443,57"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="352,21,341,12,313,8,294,10,281,15,275,21,275,31,271,28,270,19,278,10,292,5,313,3,343,8,357,22"/>
+<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+</map>

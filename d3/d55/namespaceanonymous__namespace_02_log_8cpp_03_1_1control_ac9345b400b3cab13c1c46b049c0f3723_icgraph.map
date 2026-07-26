@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Log::cpp}::control::checkAndValidateDir" name="anonymous_namespace{Log::cpp}::control::checkAndValidateDir">
+<area shape="rect" id="Node000001" title="Normalizes, validates, creates, and write&#45;tests a log directory." alt="" coords="448,44,941,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="759,39,763,34,756,29,733,25,695,23,653,25,630,30,626,35,639,45,634,44,621,36,627,26,652,20,695,18,734,19,758,24,769,33,762,43"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="227,29,400,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="437,57,400,60,400,55,443,57"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="352,21,341,12,313,8,294,10,281,15,275,21,275,31,271,28,270,19,278,10,292,5,313,3,343,8,357,22"/>
+<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+</map>

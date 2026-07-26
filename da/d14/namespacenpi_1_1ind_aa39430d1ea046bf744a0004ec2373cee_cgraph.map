@@ -1,0 +1,5 @@
+<map id="npi::ind::winLastErrorText" name="npi::ind::winLastErrorText">
+<area shape="rect" id="Node000001" title="Calls GetLastError() and returns error in format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;." alt="" coords="5,5,235,31"/>
+<area shape="rect" id="Node000002" href="$da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019" title="Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;." alt="" coords="283,5,480,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,16,277,18,272,18,234,21"/>
+</map>

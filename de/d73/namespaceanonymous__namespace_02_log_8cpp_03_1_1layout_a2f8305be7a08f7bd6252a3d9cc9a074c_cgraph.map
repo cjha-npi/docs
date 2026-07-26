@@ -1,0 +1,7 @@
+<map id="anonymous_namespace{Log::cpp}::layout::normalizeAndPackFields" name="anonymous_namespace{Log::cpp}::layout::normalizeAndPackFields">
+<area shape="rect" id="Node000001" title="Normalizes user field text and optionally publishes its packed layout." alt="" coords="5,44,515,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="197,44,184,37,185,30,191,26,216,20,260,18,300,19,326,24,336,33,329,44,326,39,331,34,324,29,300,25,260,23,217,25,193,30,189,33,189,35,203,45"/>
+<area shape="rect" id="Node000002" href="$de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a2232d0647d1eb054474d09dca2ba633e" title="Packs one unique field into the next four&#45;bit layout slot." alt="" coords="563,29,744,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="514,55,557,57,552,57,514,60"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="579,28,579,19,592,10,617,5,653,3,705,7,720,13,729,22,724,21,718,17,704,13,653,8,618,10,594,15,583,22,583,31"/>
+</map>

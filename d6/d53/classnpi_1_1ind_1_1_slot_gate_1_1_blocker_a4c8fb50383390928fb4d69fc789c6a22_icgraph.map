@@ -1,0 +1,10 @@
+<map id="npi::ind::SlotGate::Blocker::Blocker" name="npi::ind::SlotGate::Blocker::Blocker">
+<area shape="rect" id="Node000001" title="Blocker objects cannot be copied." alt="" coords="235,78,544,104"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="439,72,442,67,435,63,418,58,389,57,358,59,340,64,337,69,347,79,342,78,332,70,337,60,357,54,389,52,419,53,438,58,447,66,443,76"/>
+<area shape="rect" id="Node000002" href="$d6/d53/classnpi_1_1ind_1_1_slot_gate_1_1_blocker.html#ad351dbe6181bde197f430790d61efdfb" title="Transfers ownership of an active blocking scope." alt="" coords="13,5,179,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="321,78,178,47,179,41,325,75"/>
+<area shape="rect" id="Node000003" href="$d6/d53/classnpi_1_1ind_1_1_slot_gate_1_1_blocker.html#ac018dac3e27baef438c877ce1b8fb656" title="Blocker objects cannot be move&#45;assigned." alt="" coords="5,71,187,111"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="224,92,187,94,186,88,229,90"/>
+<area shape="rect" id="Node000004" href="$d6/d53/classnpi_1_1ind_1_1_slot_gate_1_1_blocker.html#a1ad14a8999d238735a79fc3b14d20b2d" title="Blocker objects cannot be copy&#45;assigned." alt="" coords="5,136,187,177"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="326,105,187,139,186,134,320,106"/>
+</map>

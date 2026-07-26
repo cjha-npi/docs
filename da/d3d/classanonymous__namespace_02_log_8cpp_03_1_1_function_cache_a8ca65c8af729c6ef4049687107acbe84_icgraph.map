@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Log::cpp}::FunctionCache::HashText_" name="anonymous_namespace{Log::cpp}::FunctionCache::HashText_">
+<area shape="rect" id="Node000001" title="Hashes bounded null&#45;terminated text and records the scanned length." alt="" coords="1035,20,1496,46"/>
+<area shape="rect" id="Node000002" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a3811d33788f541bca6fa5817da03d906" title="Builds the cache key from the relevant message&#45;context data." alt="" coords="765,5,987,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1024,33,986,36,986,31,1030,33"/>
+<area shape="rect" id="Node000003" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#ac2b31e82f1f4a192616d50ace26d38f6" title="Finds or inserts the normalized function value and returns its slot." alt="" coords="496,5,717,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="754,33,717,36,717,31,760,33"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="227,13,448,54"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="485,33,448,36,448,31,490,33"/>
+<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,13,179,54"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="216,33,178,36,178,31,221,33"/>
+</map>

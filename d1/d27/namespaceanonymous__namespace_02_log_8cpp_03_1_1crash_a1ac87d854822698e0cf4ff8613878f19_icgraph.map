@@ -1,0 +1,12 @@
+<map id="anonymous_namespace{Log::cpp}::crash::reraiseDefault" name="anonymous_namespace{Log::cpp}::crash::reraiseDefault">
+<area shape="rect" id="Node000001" title="Restores the default signal action and raises the signal again." alt="" coords="829,44,1267,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1116,39,1121,34,1114,29,1089,25,1048,23,1004,25,979,31,975,33,975,35,989,45,983,44,970,37,971,30,977,26,1003,20,1048,18,1090,19,1116,24,1127,33,1119,44"/>
+<area shape="rect" id="Node000002" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ab9aade053d28c916bf856e1876e60778" title="Formats a supported C signal and terminates through the crash path." alt="" coords="504,37,781,78"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="819,57,781,60,781,55,824,57"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="697,29,694,25,685,20,643,15,613,18,595,23,589,29,592,38,588,36,584,28,592,18,612,12,643,10,687,15,698,22,701,32"/>
+<area shape="rect" id="Node000003" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="227,29,456,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="494,57,456,60,456,55,499,57"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="385,20,381,17,373,12,341,8,319,10,305,15,298,21,298,31,293,28,293,19,302,10,318,5,341,3,375,7,385,13,390,22"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+</map>

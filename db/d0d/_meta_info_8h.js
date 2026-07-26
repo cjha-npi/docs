@@ -4,10 +4,8 @@ var _meta_info_8h =
     [ "npi::app::appPublicDocumentsDir", "dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542", null ],
     [ "npi::app::orgProgramDataDir", "dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8", null ],
     [ "npi::app::orgPublicDocumentsDir", "dc/dba/namespacenpi_1_1app.html#ac0dca24602a75822c6f7fcf63f8781d9", null ],
-    [ "npi::app::appDirName", "dc/dba/namespacenpi_1_1app.html#aa7971e0e3a9b505a07176e5ac7aacbd6", null ],
-    [ "npi::app::appName", "dc/dba/namespacenpi_1_1app.html#ae72448eb4df90eb2813db4202ac81bef", null ],
-    [ "npi::app::appVersion", "dc/dba/namespacenpi_1_1app.html#aebf26d13197e68f0ad3e05d82bb5f31d", null ],
-    [ "npi::app::orgDirName", "dc/dba/namespacenpi_1_1app.html#a786b074c596617d18abb1957f26d3156", null ],
-    [ "npi::app::orgDomain", "dc/dba/namespacenpi_1_1app.html#a306977cd103a3449007db1e926e213e8", null ],
-    [ "npi::app::orgName", "dc/dba/namespacenpi_1_1app.html#adc67984091da507784ab70eca8975491", null ]
+    [ "npi::app::name", "dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a", null ],
+    [ "npi::app::organization", "dc/dba/namespacenpi_1_1app.html#aa911b67ddc94ce902ba75acd2cd259c7", null ],
+    [ "npi::app::organizationDomain", "dc/dba/namespacenpi_1_1app.html#a173e8e685ccbdabd1914be9354c675e5", null ],
+    [ "npi::app::version", "dc/dba/namespacenpi_1_1app.html#ae7820aa42829cc12ab153001b330ad9b", null ]
 ];

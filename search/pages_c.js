@@ -5,5 +5,6 @@ var searchData=
   ['new_20line_2',['Force New Line',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_new_line',1,'']]],
   ['non_20blocking_20behavior_3',['Non-blocking behavior',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__non_block_behavior',1,'']]],
   ['non_20heading_20texts_4',['Big Non-Heading Texts',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text',1,'']]],
-  ['npi_20main_20project_5',['NPI Main Project',['../index.html',1,'']]]
+  ['normal_20log_20files_5',['Normal Log Files',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__normal_log_files',1,'']]],
+  ['npi_20main_20project_6',['NPI Main Project',['../index.html',1,'']]]
 ];

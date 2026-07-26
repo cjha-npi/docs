@@ -1,7 +1,9 @@
 <map id="npi::app::CrossProcessLocker" name="npi::app::CrossProcessLocker">
-<area shape="rect" id="Node000001" title="RAII wrapper around a Windows named mutex for both inter&#45;process and inter&#45;thread synchronization." alt="" coords="5,101,251,127"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="49,5,119,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,37,83,58,88,76,98,89,111,101,106,101,94,92,83,78,78,58,79,41"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="145,5,199,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,37,136,103,131,99,161,39"/>
+<area shape="rect" id="Node000001" title="Scoped owner of a session&#45;local Windows named mutex." alt="" coords="155,116,400,142"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,219,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,50,152,71,174,90,201,104,230,116,225,116,199,108,172,94,148,75,130,55"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="243,13,312,38"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="279,44,280,117,275,115,275,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="339,13,392,38"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="362,44,353,70,338,94,322,108,304,119,302,114,319,104,334,90,348,68,358,47"/>
 </map>

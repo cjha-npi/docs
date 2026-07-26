@@ -1,0 +1,8 @@
+<map id="npi::log::maxFolderSizeMib" name="npi::log::maxFolderSizeMib">
+<area shape="rect" id="Node000001" title="Returns the configured normal&#45;log cleanup target." alt="" coords="5,44,235,70"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="283,29,488,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,55,278,57,272,57,235,60"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="536,29,741,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,55,531,57,525,57,488,60"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="590,28,590,19,599,10,615,5,639,3,672,7,683,13,688,22,683,20,679,17,671,12,639,8,616,10,601,15,595,21,594,31"/>
+</map>

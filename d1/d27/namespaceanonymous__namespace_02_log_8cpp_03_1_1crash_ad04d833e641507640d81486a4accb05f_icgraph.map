@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Log::cpp}::crash::windowsExceptionFilter" name="anonymous_namespace{Log::cpp}::crash::windowsExceptionFilter">
+<area shape="rect" id="Node000001" title="Handles an unhandled Windows structured exception." alt="" coords="504,44,1005,70"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="824,39,829,34,822,29,796,25,755,23,710,25,685,31,680,33,680,35,694,45,689,44,675,37,676,30,682,26,709,20,755,18,797,19,824,24,835,33,827,44"/>
+<area shape="rect" id="Node000002" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="227,29,456,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="493,57,456,60,455,55,499,57"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="385,20,381,17,373,12,341,8,319,10,305,15,298,21,298,31,293,28,293,19,302,10,318,5,341,3,375,7,385,13,390,22"/>
+<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+</map>

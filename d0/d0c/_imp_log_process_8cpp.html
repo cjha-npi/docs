@@ -146,6 +146,10 @@ Include dependency graph for ImpLogProcess.cpp:</div>
 </div>
 <p><a href="../../d0/d0c/_imp_log_process_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BImpLogProcess_2Ecpp_7D" id="r_anonymous_5Fnamespace_7BImpLogProcess_2Ecpp_7D"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d0/da6/namespaceanonymous__namespace_02_imp_log_process_8cpp_03.html">anonymous_namespace{ImpLogProcess.cpp}</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a9f918755b601cf4bffca775992e6fb90" id="r_a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9f918755b601cf4bffca775992e6fb90">NOMINMAX</a></td></tr>
@@ -153,6 +157,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a57dc9f3306929ea42264ac776b9586d3" id="r_a57dc9f3306929ea42264ac776b9586d3"><td class="memItemLeft">std::wstring&#160;</td><td class="memItemRight"><a class="el" href="../../d0/da6/namespaceanonymous__namespace_02_imp_log_process_8cpp_03.html#a57dc9f3306929ea42264ac776b9586d3">anonymous_namespace{ImpLogProcess.cpp}::normalizedPath</a> (const wchar_t *filePath)</td></tr>
+<tr class="memdesc:a57dc9f3306929ea42264ac776b9586d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a <span class="tt">test</span> function.  <br /></td></tr>
 <tr class="memitem:ae1325efcce4a4b1b4ea52247f0a0a0c1" id="r_ae1325efcce4a4b1b4ea52247f0a0a0c1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae1325efcce4a4b1b4ea52247f0a0a0c1">wmain</a> (int argc, wchar_t *argv[])</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -208,90 +214,90 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d0c/_imp_log_process_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../d0/d0c/_imp_log_process_8cpp_source.html">ImpLogProcess.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>{</div>
-<div class="line"><span class="lineno">    7</span>  <span class="keywordflow">if</span>(argc &lt; 2 || argv[1] == <span class="keyword">nullptr</span> || argv[1][0] == L<span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">return</span> 1; <span class="comment">// Missing/invalid primary log file path argument</span></div>
-<div class="line"><span class="lineno">    9</span> </div>
-<div class="line"><span class="lineno">   10</span>  <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* priPath = argv[1];</div>
-<div class="line"><span class="lineno">   11</span>  <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* secPath = (argc &gt;= 3 &amp;&amp; argv[2] != <span class="keyword">nullptr</span> &amp;&amp; argv[2][0] != L<span class="charliteral">&#39;\0&#39;</span>) ? argv[2] : nullptr;</div>
-<div class="line"><span class="lineno">   12</span> </div>
-<div class="line"><span class="lineno">   13</span>  <span class="keyword">const</span> HANDLE hStdIn = ::GetStdHandle(STD_INPUT_HANDLE);</div>
-<div class="line"><span class="lineno">   14</span>  <span class="keywordflow">if</span>(hStdIn == INVALID_HANDLE_VALUE || hStdIn == <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">return</span> 2; <span class="comment">// Missing/invalid STDIN handle (pipe not redirected/inherited)</span></div>
-<div class="line"><span class="lineno">   16</span> </div>
-<div class="line"><span class="lineno">   17</span>  HANDLE hLogFile = INVALID_HANDLE_VALUE;</div>
-<div class="line"><span class="lineno">   18</span> </div>
-<div class="line"><span class="lineno">   19</span>  <span class="keyword">constexpr</span> DWORD bufSize = 64u * 1024u; <span class="comment">// 64 KiB</span></div>
-<div class="line"><span class="lineno">   20</span>  <span class="keywordtype">char</span> buffer[bufSize]{};</div>
-<div class="line"><span class="lineno">   21</span> </div>
-<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><span class="lineno">   23</span>    DWORD bytesRead = 0;</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keyword">const</span> BOOL readSuccess = ::ReadFile(hStdIn, buffer, bufSize, &amp;bytesRead, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   25</span> </div>
-<div class="line"><span class="lineno">   26</span>    <span class="keywordflow">if</span>(!readSuccess) {</div>
-<div class="line"><span class="lineno">   27</span>      <span class="keyword">const</span> DWORD e = ::GetLastError();</div>
-<div class="line"><span class="lineno">   28</span>      <span class="keywordflow">if</span>(e == ERROR_BROKEN_PIPE || e == ERROR_HANDLE_EOF)</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">break</span>; <span class="comment">// Normal termination: parent closed/crashed and pipe ended.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/d0c/_imp_log_process_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../d0/d0c/_imp_log_process_8cpp_source.html">ImpLogProcess.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{</div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordflow">if</span>(argc &lt; 2 || argv[1] == <span class="keyword">nullptr</span> || argv[1][0] == L<span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">return</span> 1; <span class="comment">// Missing/invalid primary log file path argument</span></div>
 <div class="line"><span class="lineno">   30</span> </div>
-<div class="line"><span class="lineno">   31</span>      <span class="keywordflow">if</span>(hLogFile != INVALID_HANDLE_VALUE)</div>
-<div class="line"><span class="lineno">   32</span>        ::CloseHandle(hLogFile);</div>
+<div class="line"><span class="lineno">   31</span>  <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* priPath = argv[1];</div>
+<div class="line"><span class="lineno">   32</span>  <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* secPath = (argc &gt;= 3 &amp;&amp; argv[2] != <span class="keyword">nullptr</span> &amp;&amp; argv[2][0] != L<span class="charliteral">&#39;\0&#39;</span>) ? argv[2] : nullptr;</div>
 <div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>      <span class="keywordflow">return</span> 3; <span class="comment">// Read failed (unexpected error)</span></div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">if</span>(bytesRead == 0)</div>
-<div class="line"><span class="lineno">   38</span>      <span class="keywordflow">break</span>; <span class="comment">// EOF (End of File) i.e. Main application closed</span></div>
+<div class="line"><span class="lineno">   34</span>  <span class="keyword">const</span> HANDLE hStdIn = ::GetStdHandle(STD_INPUT_HANDLE);</div>
+<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">if</span>(hStdIn == INVALID_HANDLE_VALUE || hStdIn == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">return</span> 2; <span class="comment">// Missing/invalid STDIN handle (pipe not redirected/inherited)</span></div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>  HANDLE hLogFile = INVALID_HANDLE_VALUE;</div>
 <div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE) {</div>
-<div class="line"><span class="lineno">   41</span>      hLogFile = ::CreateFileW(priPath, FILE_APPEND_DATA, FILE_SHARE_READ, <span class="keyword">nullptr</span>, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   42</span>      <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE &amp;&amp; secPath != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   43</span>        hLogFile = ::CreateFileW(secPath, FILE_APPEND_DATA, FILE_SHARE_READ, <span class="keyword">nullptr</span>, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE)</div>
-<div class="line"><span class="lineno">   45</span>          <span class="keywordflow">return</span> 4; <span class="comment">// Failed to open/create both primary and backup</span></div>
-<div class="line"><span class="lineno">   46</span>      }</div>
-<div class="line"><span class="lineno">   47</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE) {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> 5; <span class="comment">// Failed to open/create primary (no backup provided)</span></div>
-<div class="line"><span class="lineno">   49</span>      }</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keyword">constexpr</span> DWORD bufSize = 64u * 1024u; <span class="comment">// 64 KiB</span></div>
+<div class="line"><span class="lineno">   41</span>  <span class="keywordtype">char</span> buffer[bufSize]{};</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><span class="lineno">   44</span>    DWORD bytesRead = 0;</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keyword">const</span> BOOL readSuccess = ::ReadFile(hStdIn, buffer, bufSize, &amp;bytesRead, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span>(!readSuccess) {</div>
+<div class="line"><span class="lineno">   48</span>      <span class="keyword">const</span> DWORD e = ::GetLastError();</div>
+<div class="line"><span class="lineno">   49</span>      <span class="keywordflow">if</span>(e == ERROR_BROKEN_PIPE || e == ERROR_HANDLE_EOF)</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">break</span>; <span class="comment">// Normal termination: parent closed/crashed and pipe ended.</span></div>
 <div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>    DWORD remains = bytesRead;</div>
-<div class="line"><span class="lineno">   53</span>    DWORD offset = 0;</div>
+<div class="line"><span class="lineno">   52</span>      <span class="keywordflow">if</span>(hLogFile != INVALID_HANDLE_VALUE)</div>
+<div class="line"><span class="lineno">   53</span>        ::CloseHandle(hLogFile);</div>
 <div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordtype">int</span> noProgressTries = 0;</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">while</span>(remains &gt; 0) {</div>
-<div class="line"><span class="lineno">   57</span>      DWORD written = 0;</div>
-<div class="line"><span class="lineno">   58</span>      <span class="keyword">const</span> BOOL writeSuccess = ::WriteFile(hLogFile, buffer + offset, remains, &amp;written, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>      <span class="keywordflow">if</span>(!writeSuccess) {</div>
-<div class="line"><span class="lineno">   61</span>        ::CloseHandle(hLogFile);</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> 6; <span class="comment">// Write failed</span></div>
-<div class="line"><span class="lineno">   63</span>      }</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>      <span class="keywordflow">if</span>(written == 0) {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="comment">// No progress. Retry a few times, then give up.</span></div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span>(++noProgressTries &gt;= 16) {</div>
-<div class="line"><span class="lineno">   68</span>          ::CloseHandle(hLogFile);</div>
-<div class="line"><span class="lineno">   69</span>          <span class="keywordflow">return</span> 7; <span class="comment">// No progress after many tries</span></div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        ::SwitchToThread(); <span class="comment">// brief yield</span></div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   73</span>      }</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>      <span class="comment">// Progress</span></div>
-<div class="line"><span class="lineno">   76</span>      noProgressTries = 0;</div>
-<div class="line"><span class="lineno">   77</span>      offset += written;</div>
-<div class="line"><span class="lineno">   78</span>      remains -= written;</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-<div class="line"><span class="lineno">   80</span>  }</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">if</span>(hLogFile != INVALID_HANDLE_VALUE) {</div>
-<div class="line"><span class="lineno">   83</span>    ::FlushFileBuffers(hLogFile);</div>
-<div class="line"><span class="lineno">   84</span>    ::CloseHandle(hLogFile);</div>
-<div class="line"><span class="lineno">   85</span>  }</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>  <span class="keywordflow">return</span> 0; <span class="comment">// Normal shutdown</span></div>
-<div class="line"><span class="lineno">   88</span>}</div>
+<div class="line"><span class="lineno">   55</span>      <span class="keywordflow">return</span> 3; <span class="comment">// Read failed (unexpected error)</span></div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span>(bytesRead == 0)</div>
+<div class="line"><span class="lineno">   59</span>      <span class="keywordflow">break</span>; <span class="comment">// EOF (End of File) i.e. Main application closed</span></div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE) {</div>
+<div class="line"><span class="lineno">   62</span>      hLogFile = ::CreateFileW(priPath, FILE_APPEND_DATA, FILE_SHARE_READ, <span class="keyword">nullptr</span>, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   63</span>      <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE &amp;&amp; secPath != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   64</span>        hLogFile = ::CreateFileW(secPath, FILE_APPEND_DATA, FILE_SHARE_READ, <span class="keyword">nullptr</span>, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE)</div>
+<div class="line"><span class="lineno">   66</span>          <span class="keywordflow">return</span> 4; <span class="comment">// Failed to open/create both primary and backup</span></div>
+<div class="line"><span class="lineno">   67</span>      }</div>
+<div class="line"><span class="lineno">   68</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(hLogFile == INVALID_HANDLE_VALUE) {</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> 5; <span class="comment">// Failed to open/create primary (no backup provided)</span></div>
+<div class="line"><span class="lineno">   70</span>      }</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    DWORD remains = bytesRead;</div>
+<div class="line"><span class="lineno">   74</span>    DWORD offset = 0;</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordtype">int</span> noProgressTries = 0;</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">while</span>(remains &gt; 0) {</div>
+<div class="line"><span class="lineno">   78</span>      DWORD written = 0;</div>
+<div class="line"><span class="lineno">   79</span>      <span class="keyword">const</span> BOOL writeSuccess = ::WriteFile(hLogFile, buffer + offset, remains, &amp;written, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>      <span class="keywordflow">if</span>(!writeSuccess) {</div>
+<div class="line"><span class="lineno">   82</span>        ::CloseHandle(hLogFile);</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> 6; <span class="comment">// Write failed</span></div>
+<div class="line"><span class="lineno">   84</span>      }</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>      <span class="keywordflow">if</span>(written == 0) {</div>
+<div class="line"><span class="lineno">   87</span>        <span class="comment">// No progress. Retry a few times, then give up.</span></div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span>(++noProgressTries &gt;= 16) {</div>
+<div class="line"><span class="lineno">   89</span>          ::CloseHandle(hLogFile);</div>
+<div class="line"><span class="lineno">   90</span>          <span class="keywordflow">return</span> 7; <span class="comment">// No progress after many tries</span></div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        ::SwitchToThread(); <span class="comment">// brief yield</span></div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   94</span>      }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>      <span class="comment">// Progress</span></div>
+<div class="line"><span class="lineno">   97</span>      noProgressTries = 0;</div>
+<div class="line"><span class="lineno">   98</span>      offset += written;</div>
+<div class="line"><span class="lineno">   99</span>      remains -= written;</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">  101</span>  }</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">if</span>(hLogFile != INVALID_HANDLE_VALUE) {</div>
+<div class="line"><span class="lineno">  104</span>    ::FlushFileBuffers(hLogFile);</div>
+<div class="line"><span class="lineno">  105</span>    ::CloseHandle(hLogFile);</div>
+<div class="line"><span class="lineno">  106</span>  }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">return</span> 0; <span class="comment">// Normal shutdown</span></div>
+<div class="line"><span class="lineno">  109</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

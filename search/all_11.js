@@ -1,25 +1,8 @@
 var searchData=
 [
-  ['rainmeter_0',['Rainmeter',['../d1/d79/dp_dh_dir_rainmeter.html',1,'dp_dh_dir_misc']]],
-  ['rainmeter_20settings_1',['Rainmeter Settings',['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__rainmeter_settings',1,'']]],
-  ['rainmeter_20skin_20file_2',['Rainmeter Skin File',['../d5/da9/dp_dh_rm_sys_graphs_skin_file.html',1,'dp_dh_dir_rm_sys_graphs']]],
-  ['range_20and_20customization_3',['Reflection Range and Customization',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__reflection_customization',1,'']]],
-  ['recommended_20host_20responsibilities_4',['Recommended Host Responsibilities',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__host_responsibilities',1,'']]],
-  ['recommended_20usage_5',['Tokens and Recommended Usage',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__tokens_recommended_usage',1,'']]],
-  ['recommended_20usage_20in_20the_20codebase_6',['Recommended Usage in the Codebase',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__recommended_usage',1,'']]],
-  ['reflection_20range_20and_20customization_7',['Reflection Range and Customization',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__reflection_customization',1,'']]],
-  ['release_5f_8',['release_',['../de/d5c/classanonymous__namespace_02_stage_window_8cpp_03_1_1_opacity_guard.html#ae1d0bda5796df4491b861c0f35d7bca5',1,'anonymous_namespace{StageWindow.cpp}::OpacityGuard']]],
-  ['required_9',['Required',['../d5/d96/dp_dh_required.html',1,'']]],
-  ['required_20page_10',['Required Page',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_required_page',1,'Dev Hub Required Page'],['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__project_required_page',1,'Project Required Page']]],
-  ['requirements_11',['Requirements',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__compiler_lang_requirements',1,'Compiler and Language Requirements'],['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__lifetime_correctness_requirements',1,'Lifetime and Correctness Requirements'],['../index.html#autotoc_md2',1,'Requirements'],['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__requirements',1,'Requirements']]],
-  ['requirements_20assumptions_12',['Requirements &amp;amp; assumptions',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__reqs_assumptions',1,'']]],
-  ['reraisedefault_13',['reraiseDefault',['../dd/df2/namespaceanonymous__namespace_02_log_8cpp_03_1_1safe.html#aace4c2e1632cdc24f1bf5e597c0f6be6',1,'anonymous_namespace{Log.cpp}::safe']]],
-  ['responsibilities_14',['Recommended Host Responsibilities',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__host_responsibilities',1,'']]],
-  ['restoredefaultdir_15',['restoreDefaultDir',['../d5/ddd/namespacenpi_1_1log.html#a93f5626ee4252ae8bd940774a8e585ee',1,'npi::log']]],
-  ['restoredefaultmaxfoldersizemb_16',['restoreDefaultMaxFolderSizeMb',['../d5/ddd/namespacenpi_1_1log.html#a7b3479756b1c17fcc8305b593cbb4f45',1,'npi::log']]],
-  ['robocopy_20configuration_17',['Robocopy configuration',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__robocopy_config',1,'']]],
-  ['rules_18',['Rules',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__rules',1,'Rules'],['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__rules',1,'Rules'],['../d5/d96/dp_dh_required.html#_dp_dh_required000001',1,'Rules']]],
-  ['rules_19',['File selection rules',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__file_selection_rules',1,'']]],
-  ['runtime_20behavior_20',['Runtime Behavior',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__runtime_behavior',1,'']]],
-  ['runtimelogs_5f_21',['runtimeLogs_',['../d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a4b3fa1cde2be15f6d4da853b16fd7509',1,'anonymous_namespace{Log.cpp}::LogCore']]]
+  ['qtcategories_0',['qtCategories',['../d5/ddd/namespacenpi_1_1log.html#aecacbd05b8c19542926b9d07b16435ba',1,'npi::log']]],
+  ['queue_1',['MoodyCamel Queue',['../d7/d7b/dp_dep_moody_camel_queue.html',1,'dp_dep_dir_dependencies']]],
+  ['queue_20ownership_2',['Worker Threads and Queue Ownership',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__workers_and_queue',1,'']]],
+  ['queue_5f_3',['queue_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a9bf7b12c8c0111daf328f7ca67234650',1,'anonymous_namespace{Log.cpp}::LeakedState::Worker']]],
+  ['quick_5f_4',['quick_',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#afeef661f8416fd37feae7a340ab458ab',1,'npi::ind::StageWindow']]]
 ];

@@ -26,7 +26,8 @@ var dp_dh_dir_dev_hub =
       ] ]
     ] ],
     [ "VS Setup", "d7/d3c/dp_dh_vs_setup.html", [
-      [ "Browsing Database Location", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location", null ]
+      [ "Browsing Database Location", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location", null ],
+      [ "BUG: Sophos DLL", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll", null ]
     ] ],
     [ "Project Setup", "d4/d3b/dp_dh_project_setup.html", [
       [ "Rules", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__rules", null ],

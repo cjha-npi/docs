@@ -1,0 +1,36 @@
+<map id="anonymous_namespace{Log.cpp}::LeakedState::Runtime" name="anonymous_namespace{Log.cpp}::LeakedState::Runtime">
+<area shape="rect" id="Node000001" title="Stores mutable process state that is not part of the user configuration." alt="" coords="1063,411,1485,436"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="635,64,824,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="831,76,883,79,937,86,990,100,1041,123,1086,154,1127,191,1163,233,1195,276,1243,355,1270,412,1265,410,1238,358,1190,279,1159,236,1123,195,1083,158,1038,127,989,105,936,91,882,84,833,82"/>
+<area shape="rect" id="Node000003" href="$d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock" title=" " alt="" coords="5,124,139,150"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,120,162,112,290,96,418,87,637,82,633,86,419,92,291,101,163,117,126,124"/>
+<area shape="rect" id="Node000005" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html" title="Stores a value protected by a QReadWriteLock." alt="" coords="237,140,466,166"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="145,139,239,145,235,148,148,143"/>
+<area shape="rect" id="Node000008" href="$d4/d0d/classnpi_1_1ind_1_1_locked_value.html" title=" " alt="" coords="635,200,824,241"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="116,150,140,163,170,190,188,218,206,243,220,253,238,263,295,281,356,290,417,292,478,287,536,277,589,265,679,240,674,242,590,270,537,282,478,292,417,297,355,296,294,287,236,268,217,258,202,246,183,221,166,194,137,167,118,155"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="313,5,390,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="397,22,603,56,638,64,633,65,603,61,398,27"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="469,137,602,115,659,104,654,106,604,120,472,141"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="431,164,638,203,633,205,432,170"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="53,177,91,203"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="98,185,212,170,262,164,258,167,213,175,100,189"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="627,147,832,172"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="840,150,889,151,940,157,992,168,1040,186,1081,210,1120,238,1186,302,1236,365,1267,412,1262,410,1232,368,1182,306,1116,242,1078,214,1038,191,990,173,939,162,888,156,841,155"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="832,212,935,217,988,227,1040,242,1077,259,1113,280,1178,327,1230,374,1264,412,1259,410,1226,378,1174,331,1110,284,1075,264,1038,247,987,232,934,223,833,217"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="297,205,406,231"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="413,219,490,222,603,222,638,223,633,225,603,227,490,227,414,224"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="639,292,820,318"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="828,306,931,315,1040,334,1099,351,1156,371,1248,411,1243,411,1154,376,1097,356,1039,339,930,321,828,311"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="659,384,800,410"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="808,398,1066,413,1061,414,808,403"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="699,437,760,463"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="768,447,1039,436,1087,436,1082,437,1039,441,768,452"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="659,491,800,516"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="808,496,918,486,1039,471,1136,453,1218,437,1224,436,1137,458,1040,476,918,491,809,501"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="659,544,800,570"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="808,551,918,541,979,532,1039,519,1099,500,1157,477,1246,437,1251,436,1159,482,1101,505,1040,524,980,537,919,547,808,557"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="683,597,776,623"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="784,609,838,609,903,604,972,593,1038,575,1107,543,1169,504,1221,465,1256,437,1261,435,1225,469,1172,508,1109,548,1040,580,973,599,903,609,839,614,784,615"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="675,669,784,695"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="792,686,847,689,910,686,976,675,1038,654,1078,632,1116,604,1182,541,1232,479,1263,438,1267,435,1236,482,1186,544,1120,608,1081,636,1040,659,977,681,910,691,847,694,792,692"/>
+</map>

@@ -1,13 +1,29 @@
 <map id="anonymous_namespace{Log::cpp}::LogCore::setColoredConsole_" name="anonymous_namespace{Log::cpp}::LogCore::setColoredConsole_">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,20,491,46"/>
-<area shape="rect" id="Node000002" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5fa684811c33eea49f63593fea332de4" title=" " alt="" coords="539,5,712,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="490,31,533,33,528,33,490,36"/>
-<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Application ProgramData path: C:/ProgramData/[organization]/[Application]." alt="" coords="760,20,997,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="712,31,755,33,750,33,712,36"/>
-<area shape="rect" id="Node000004" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Organization ProgramData path: C:/ProgramData/[organization]." alt="" coords="1045,20,1283,46"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="997,31,1040,33,1035,33,997,36"/>
-<area shape="rect" id="Node000005" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1331,13,1552,54"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1283,31,1325,33,1320,33,1283,36"/>
-<area shape="rect" id="Node000006" href="$dc/dba/namespacenpi_1_1app.html#a2a7d7ff8fc3a71350a1d640be744c1f9" title="Displays a Windows&#45;native fatal error message box." alt="" coords="1600,20,1789,46"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1552,31,1595,33,1589,33,1552,36"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,100,491,126"/>
+<area shape="rect" id="Node000002" href="$d0/d61/classanonymous__namespace_02_log_8cpp_03_1_1_log_core.html#a5fa684811c33eea49f63593fea332de4" title=" " alt="" coords="539,85,712,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="490,111,533,113,528,114,491,116"/>
+<area shape="rect" id="Node000003" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Application ProgramData path: C:/ProgramData/[organization]/[Application]." alt="" coords="760,100,997,126"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="712,111,755,113,750,114,712,116"/>
+<area shape="rect" id="Node000004" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Organization ProgramData path: C:/ProgramData/[organization]." alt="" coords="1045,100,1283,126"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="997,111,1040,113,1035,113,997,116"/>
+<area shape="rect" id="Node000005" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1331,93,1552,134"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1282,111,1325,113,1320,113,1283,116"/>
+<area shape="rect" id="Node000006" href="$dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="1600,100,1805,126"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1552,111,1595,113,1589,113,1552,116"/>
+<area shape="rect" id="Node000007" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="1853,5,2027,61"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1741,98,1847,64,1853,63,1742,103"/>
+<area shape="rect" id="Node000009" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64" title="Finalizes the command line and launches npiMsgBox.exe." alt="" coords="1853,85,2027,141"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="1805,111,1848,113,1843,113,1805,116"/>
+<area shape="rect" id="Node000010" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761" title="Builds the helper executable path and reusable command&#45;line prefix. The command&#45;line prefix buffer is..." alt="" coords="1853,165,2027,221"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="1742,123,1853,163,1847,163,1741,128"/>
+<area shape="rect" id="Node000008" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a587867f118701093b97cc8ccaf37a239" title="Sanitizes and appends one message character." alt="" coords="2091,5,2264,61"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="2026,31,2086,33,2080,33,2026,36"/>
+<area shape="rect" id="Node000011" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a7c36613e6219d885c2b5c949ce285c60" title="Appends one character to the prepared command&#45;line prefix buffer." alt="" coords="2091,85,2264,141"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="2022,163,2084,144,2090,143,2023,168"/>
+<area shape="rect" id="Node000012" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60" title="Appends the application title used as the message&#45;box title to the command&#45;line prefix." alt="" coords="2075,165,2280,221"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="2026,191,2070,193,2064,193,2026,196"/>
+<area shape="rect" id="Node000014" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ae9382129e5c68748dfb4d7ca8056cd94" title="Appends one character to the prepared executable path buffer." alt="" coords="2091,245,2264,301"/>
+<area shape="poly" id="edge13_Node000010_Node000014" title=" " alt="" coords="2023,218,2090,243,2084,242,2022,224"/>
+<area shape="rect" id="Node000013" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="2328,165,2565,221"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="2280,191,2323,193,2318,193,2280,196"/>
 </map>

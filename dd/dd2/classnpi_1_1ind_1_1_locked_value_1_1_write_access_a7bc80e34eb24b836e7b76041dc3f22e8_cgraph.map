@@ -1,0 +1,6 @@
+<map id="npi::ind::LockedValue::WriteAccess::operator=" name="npi::ind::LockedValue::WriteAccess::operator=">
+<area shape="rect" id="Node000001" title="Disables copy assignment because lock ownership cannot be copied." alt="" coords="5,37,387,62"/>
+<area shape="rect" id="Node000002" href="$dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a31fad3f92d48c86c82741c3ef556c0d8" title="Disables copying because each access object owns one write lock." alt="" coords="435,29,664,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="386,47,430,50,424,50,387,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="485,28,481,20,491,10,514,5,549,3,601,8,614,14,618,24,613,21,610,18,599,13,549,8,514,10,493,15,486,21,490,31"/>
+</map>

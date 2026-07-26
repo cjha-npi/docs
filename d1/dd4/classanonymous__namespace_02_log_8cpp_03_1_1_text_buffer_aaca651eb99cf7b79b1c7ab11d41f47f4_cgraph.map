@@ -1,0 +1,7 @@
+<map id="anonymous_namespace{Log::cpp}::TextBuffer::appendText_" name="anonymous_namespace{Log::cpp}::TextBuffer::appendText_">
+<area shape="rect" id="Node000001" title="Sanitizes and appends a QStringView without allocation." alt="" coords="5,20,459,46"/>
+<area shape="rect" id="Node000002" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a0663052a99e9b2a0bf0b2c0cb9e75b7b" title="Sanitizes and appends one character." alt="" coords="507,5,704,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,31,502,33,496,33,459,36"/>
+<area shape="rect" id="Node000003" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40" title="Checks whether the current line has room for the requested bytes and its terminator." alt="" coords="752,5,949,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="704,31,746,33,741,33,704,36"/>
+</map>

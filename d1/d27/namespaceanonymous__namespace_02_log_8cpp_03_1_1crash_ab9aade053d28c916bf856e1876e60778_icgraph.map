@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Log::cpp}::crash::signalHandler" name="anonymous_namespace{Log::cpp}::crash::signalHandler">
+<area shape="rect" id="Node000001" title="Formats a supported C signal and terminates through the crash path." alt="" coords="504,44,933,70"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="782,39,787,34,779,29,756,25,719,23,678,25,655,30,651,35,664,45,658,44,646,36,652,26,677,20,719,18,757,19,781,24,792,33,785,43"/>
+<area shape="rect" id="Node000002" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="227,29,456,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="493,57,456,60,456,55,499,57"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="385,20,381,17,373,12,341,8,319,10,305,15,298,21,298,31,293,28,293,19,302,10,318,5,341,3,375,7,385,13,390,22"/>
+<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="npi::ind::SlotGate::SlotGate" name="npi::ind::SlotGate::SlotGate">
+<area shape="rect" id="Node000001" title="Constructs an initially unblocked slot gate." alt="" coords="219,112,464,137"/>
+<area shape="rect" id="Node000002" href="$d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a302b6b10140a0a73ed7d0ffdc6adc891" title="SlotGate objects cannot be copied." alt="" coords="5,5,171,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="298,110,140,48,141,43,303,107"/>
+<area shape="rect" id="Node000003" href="$d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a216b83c28eac3dc95e074c766b9d4f5a" title="SlotGate objects cannot be moved." alt="" coords="5,71,171,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,112,171,104,170,99,238,109"/>
+<area shape="rect" id="Node000004" href="$d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a1f992a65588c1657e2594f1862c730b6" title="SlotGate objects cannot be copy&#45;assigned." alt="" coords="5,136,171,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="229,139,171,149,170,143,234,137"/>
+<area shape="rect" id="Node000005" href="$d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a4af6f8f6c4383deac6c809f4be7d6972" title="SlotGate objects cannot be move&#45;assigned." alt="" coords="5,201,171,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="301,142,142,204,140,199,299,138"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="anonymous_namespace{Log::cpp}::format::normalLog" name="anonymous_namespace{Log::cpp}::format::normalLog">
+<area shape="rect" id="Node000001" title="Formats one record using the active normal or display field layout." alt="" coords="891,78,1296,103"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="1150,72,1154,67,1147,62,1127,58,1093,56,1057,58,1037,64,1033,69,1044,79,1039,77,1028,70,1034,59,1056,53,1093,51,1128,53,1149,58,1159,66,1153,76"/>
+<area shape="rect" id="Node000002" href="$dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a151b634635a35cd3feb2de126611e850" title="Starts the optional display worker if it is currently inactive." alt="" coords="669,95,843,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="952,104,843,117,842,112,947,104"/>
+<area shape="rect" id="Node000003" href="$dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920" title="Starts the primary file worker if it is currently inactive." alt="" coords="448,29,621,85"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="880,78,621,65,621,60,885,78"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="659,95,621,85,622,80,664,95"/>
+<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,70,179,111"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="661,121,227,100,179,97,178,92,227,95,662,115"/>
+<area shape="rect" id="Node000004" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a" title="Transitions both normal and important logging to a new directory." alt="" coords="227,29,400,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="437,58,400,60,400,55,443,57"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="352,21,341,12,313,8,294,10,281,15,275,21,275,31,270,28,270,19,278,10,292,5,313,3,343,8,357,22"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="216,72,179,80,178,75,222,71"/>
+</map>
