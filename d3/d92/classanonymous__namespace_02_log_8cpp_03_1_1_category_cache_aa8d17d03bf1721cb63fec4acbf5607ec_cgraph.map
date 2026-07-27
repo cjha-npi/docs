@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,299,267,256,326,196,399,130,481,71,501,63,497,66,484,75,403,134,330,199,271,260,234,302"/>
 <area shape="rect" id="Node000003" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a0c3664a82b33e321bfcc24ac0b00313e" title="Finalizes a cache key into the 32&#45;bit probe hash." alt="" coords="483,85,704,141"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,299,339,231,408,189,481,151,505,142,501,146,484,156,411,194,342,236,241,303"/>
-<area shape="rect" id="Node000005" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a435efdf570bf14b59b57ac13434102b9" title="Compares 2 keys for strict equality." alt="" coords="483,165,704,221"/>
+<area shape="rect" id="Node000005" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a435efdf570bf14b59b57ac13434102b9" title="Compares 2 keys for equality." alt="" coords="483,165,704,221"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="260,298,500,221,497,226,262,303"/>
 <area shape="rect" id="Node000006" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a3a83a9d55b098fd17d4c632b0aca30ba" title="Builds the cache key from the relevant message&#45;context data." alt="" coords="483,245,704,301"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="339,298,478,284,473,287,341,303"/>

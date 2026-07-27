@@ -149,7 +149,7 @@ class anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;</div
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00267">267</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00266">266</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 </div><div class="dynheader">
 Inheritance diagram for anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;:</div>
 <div class="dyncontent">
@@ -274,9 +274,9 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Constructs an empty buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00279">279</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  279</span>{ <a class="code hl_function" href="#abed2362a4e8ea962a8d864906eff393c">clear_</a>(); }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_abed2362a4e8ea962a8d864906eff393c"><div class="ttname"><a href="#abed2362a4e8ea962a8d864906eff393c">anonymous_namespace{Log.cpp}::TextBuffer::clear_</a></div><div class="ttdeci">void clear_() noexcept</div><div class="ttdoc">Resets the buffer to its first empty line.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00282">Log.cpp:282</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00278">278</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  278</span>{ <a class="code hl_function" href="#abed2362a4e8ea962a8d864906eff393c">clear_</a>(); }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_abed2362a4e8ea962a8d864906eff393c"><div class="ttname"><a href="#abed2362a4e8ea962a8d864906eff393c">anonymous_namespace{Log.cpp}::TextBuffer::clear_</a></div><div class="ttdeci">void clear_() noexcept</div><div class="ttdoc">Resets the buffer to its first empty line.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00281">Log.cpp:281</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#abed2362a4e8ea962a8d864906eff393c">clear_()</a>.</p>
 <div class="dynheader">
@@ -315,35 +315,35 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Sanitizes and appends one character. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00314">314</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  315</span>    {</div>
-<div class="line"><span class="lineno">  316</span>      <span class="comment">// UTF-8 encodes non-ASCII Unicode characters using two to four bytes, all above</span></div>
-<div class="line"><span class="lineno">  317</span>      <span class="comment">// 127. Since this function sanitizes one byte at a time, one Unicode character</span></div>
-<div class="line"><span class="lineno">  318</span>      <span class="comment">// may therefore appear as &quot;??&quot;, &quot;???&quot;, or &quot;????&quot;.</span></div>
-<div class="line"><span class="lineno">  319</span> </div>
-<div class="line"><span class="lineno">  320</span>      <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uChr</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>);</div>
-<div class="line"><span class="lineno">  321</span> </div>
-<div class="line"><span class="lineno">  322</span>      <span class="comment">// Multiple consecutive whitespaces are collapsed into one space.</span></div>
-<div class="line"><span class="lineno">  323</span>      <span class="comment">// Space is only added if not at the beginning of the line.</span></div>
-<div class="line"><span class="lineno">  324</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39; &#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\t&#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\r&#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\n&#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\v&#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\f&#39;</span>) {</div>
-<div class="line"><span class="lineno">  325</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> &amp;&amp; <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1] != <span class="charliteral">&#39; &#39;</span> &amp;&amp; <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1] != <span class="charliteral">&#39;\n&#39;</span>) {</div>
-<div class="line"><span class="lineno">  326</span>          <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(1u)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  327</span>          <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  328</span>        }</div>
-<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  330</span>      }</div>
-<div class="line"><span class="lineno">  331</span> </div>
-<div class="line"><span class="lineno">  332</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(1u)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  333</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;|&#39;</span>) <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;/&#39;</span>; <span class="comment">// replace | with / since | is designated as delimiter for log file.</span></div>
-<div class="line"><span class="lineno">  334</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uChr</a> &gt;= 32u &amp;&amp; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uChr</a> &lt;= 126u) <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>;</div>
-<div class="line"><span class="lineno">  335</span>      <span class="keywordflow">else</span> <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;?&#39;</span>;</div>
-<div class="line"><span class="lineno">  336</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  337</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html"><div class="ttname"><a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">anonymous_namespace{Log.cpp}::TextBuffer</a></div><div class="ttdoc">Provides a fixed-capacity, allocation-free text buffer.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00267">Log.cpp:267</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a19df0131e9e9edccb034d766d274f236"><div class="ttname"><a href="#a19df0131e9e9edccb034d766d274f236">anonymous_namespace{Log.cpp}::TextBuffer::pos_</a></div><div class="ttdeci">size_t pos_</div><div class="ttdoc">Index of the next character to be written.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00567">Log.cpp:567</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a390904fd8dc6421e81205e01050f8593"><div class="ttname"><a href="#a390904fd8dc6421e81205e01050f8593">anonymous_namespace{Log.cpp}::TextBuffer::buf_</a></div><div class="ttdeci">char buf_[Capacity_]</div><div class="ttdoc">Fixed-capacity storage for all buffered lines.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00566">Log.cpp:566</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a436c62ddeb6c541a2d297a50ecadd647"><div class="ttname"><a href="#a436c62ddeb6c541a2d297a50ecadd647">anonymous_namespace{Log.cpp}::TextBuffer::beg_</a></div><div class="ttdeci">size_t beg_</div><div class="ttdoc">Starting index of the current line.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00568">Log.cpp:568</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a55bcfada4f8f9e501746cff658700e40"><div class="ttname"><a href="#a55bcfada4f8f9e501746cff658700e40">anonymous_namespace{Log.cpp}::TextBuffer::canAppend_</a></div><div class="ttdeci">bool canAppend_(size_t len) const noexcept</div><div class="ttdoc">Checks whether the current line has room for the requested bytes and its terminator.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00300">Log.cpp:300</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00313">313</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>    {</div>
+<div class="line"><span class="lineno">  315</span>      <span class="comment">// UTF-8 encodes non-ASCII Unicode characters using two to four bytes, all above</span></div>
+<div class="line"><span class="lineno">  316</span>      <span class="comment">// 127. Since this function sanitizes one byte at a time, one Unicode character</span></div>
+<div class="line"><span class="lineno">  317</span>      <span class="comment">// may therefore appear as &quot;??&quot;, &quot;???&quot;, or &quot;????&quot;.</span></div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>      <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uChr</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>);</div>
+<div class="line"><span class="lineno">  320</span> </div>
+<div class="line"><span class="lineno">  321</span>      <span class="comment">// Multiple consecutive whitespaces are collapsed into one space.</span></div>
+<div class="line"><span class="lineno">  322</span>      <span class="comment">// Space is only added if not at the beginning of the line.</span></div>
+<div class="line"><span class="lineno">  323</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39; &#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\t&#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\r&#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\n&#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\v&#39;</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;\f&#39;</span>) {</div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> &amp;&amp; <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1] != <span class="charliteral">&#39; &#39;</span> &amp;&amp; <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1] != <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><span class="lineno">  325</span>          <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(1u)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  326</span>          <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  327</span>        }</div>
+<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  329</span>      }</div>
+<div class="line"><span class="lineno">  330</span> </div>
+<div class="line"><span class="lineno">  331</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(1u)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  332</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> == <span class="charliteral">&#39;|&#39;</span>) <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;/&#39;</span>; <span class="comment">// replace | with / since | is designated as delimiter for log file.</span></div>
+<div class="line"><span class="lineno">  333</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uChr</a> &gt;= 32u &amp;&amp; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uChr</a> &lt;= 126u) <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>;</div>
+<div class="line"><span class="lineno">  334</span>      <span class="keywordflow">else</span> <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><span class="lineno">  335</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  336</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html"><div class="ttname"><a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">anonymous_namespace{Log.cpp}::TextBuffer</a></div><div class="ttdoc">Provides a fixed-capacity, allocation-free text buffer.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00266">Log.cpp:266</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a19df0131e9e9edccb034d766d274f236"><div class="ttname"><a href="#a19df0131e9e9edccb034d766d274f236">anonymous_namespace{Log.cpp}::TextBuffer::pos_</a></div><div class="ttdeci">size_t pos_</div><div class="ttdoc">Index of the next character to be written.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00566">Log.cpp:566</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a390904fd8dc6421e81205e01050f8593"><div class="ttname"><a href="#a390904fd8dc6421e81205e01050f8593">anonymous_namespace{Log.cpp}::TextBuffer::buf_</a></div><div class="ttdeci">char buf_[Capacity_]</div><div class="ttdoc">Fixed-capacity storage for all buffered lines.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00565">Log.cpp:565</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a436c62ddeb6c541a2d297a50ecadd647"><div class="ttname"><a href="#a436c62ddeb6c541a2d297a50ecadd647">anonymous_namespace{Log.cpp}::TextBuffer::beg_</a></div><div class="ttdeci">size_t beg_</div><div class="ttdoc">Starting index of the current line.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00567">Log.cpp:567</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a55bcfada4f8f9e501746cff658700e40"><div class="ttname"><a href="#a55bcfada4f8f9e501746cff658700e40">anonymous_namespace{Log.cpp}::TextBuffer::canAppend_</a></div><div class="ttdeci">bool canAppend_(size_t len) const noexcept</div><div class="ttdoc">Checks whether the current line has room for the requested bytes and its terminator.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00299">Log.cpp:299</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>, <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -388,15 +388,15 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Sanitizes and appends one character. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00340">340</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  341</span>    {</div>
-<div class="line"><span class="lineno">  342</span>      <span class="comment">// ReSharper disable once CppUnsignedZeroComparison</span></div>
-<div class="line"><span class="lineno">  343</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> &gt;= 0 &amp;&amp; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> &lt;= 126)</div>
-<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>));</div>
-<div class="line"><span class="lineno">  345</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno">  346</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a0663052a99e9b2a0bf0b2c0cb9e75b7b"><div class="ttname"><a href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">anonymous_namespace{Log.cpp}::TextBuffer::appendChar_</a></div><div class="ttdeci">bool appendChar_(char chr) noexcept</div><div class="ttdoc">Sanitizes and appends one character.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00314">Log.cpp:314</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_ac3a56861f1ee6397d83a5598a17e632b"><div class="ttname"><a href="#ac3a56861f1ee6397d83a5598a17e632b">anonymous_namespace{Log.cpp}::TextBuffer::appendRawChar_</a></div><div class="ttdeci">bool appendRawChar_(char chr) noexcept</div><div class="ttdoc">Appends one byte without sanitization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00306">Log.cpp:306</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00339">339</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  340</span>    {</div>
+<div class="line"><span class="lineno">  341</span>      <span class="comment">// ReSharper disable once CppUnsignedZeroComparison</span></div>
+<div class="line"><span class="lineno">  342</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> &gt;= 0 &amp;&amp; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> &lt;= 126)</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>));</div>
+<div class="line"><span class="lineno">  344</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno">  345</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a0663052a99e9b2a0bf0b2c0cb9e75b7b"><div class="ttname"><a href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">anonymous_namespace{Log.cpp}::TextBuffer::appendChar_</a></div><div class="ttdeci">bool appendChar_(char chr) noexcept</div><div class="ttdoc">Sanitizes and appends one character.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00313">Log.cpp:313</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_ac3a56861f1ee6397d83a5598a17e632b"><div class="ttname"><a href="#ac3a56861f1ee6397d83a5598a17e632b">anonymous_namespace{Log.cpp}::TextBuffer::appendRawChar_</a></div><div class="ttdeci">bool appendRawChar_(char chr) noexcept</div><div class="ttdoc">Appends one byte without sanitization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00305">Log.cpp:305</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>, and <a class="el" href="#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_()</a>.</p>
 <div class="dynheader">
@@ -434,23 +434,23 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Appends a signed decimal value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00496">496</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  497</span>    {</div>
-<div class="line"><span class="lineno">  498</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">neg</a> = (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &lt; 0);</div>
-<div class="line"><span class="lineno">  499</span> </div>
-<div class="line"><span class="lineno">  500</span>      <span class="comment">// Safe absolute value for INT_MIN using unsigned modulo arithmetic.</span></div>
-<div class="line"><span class="lineno">  501</span>      <span class="keyword">const</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::uint32_t</a> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uNum</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">neg</a></div>
-<div class="line"><span class="lineno">  502</span>                                   ? (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::uint32_t</a>{0} - <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::uint32_t</a><span class="keyword">&gt;</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a>))</div>
-<div class="line"><span class="lineno">  503</span>                                   : <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">static_cast</a>&lt;<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std</a>::<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uint32_t</a>&gt;(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a>);</div>
-<div class="line"><span class="lineno">  504</span> </div>
-<div class="line"><span class="lineno">  505</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a> = <a class="code hl_function" href="#aa05e98766c94ca93f5bc37a0b8328942">DecDigits_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uNum</a>);</div>
-<div class="line"><span class="lineno">  506</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a> + (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">neg</a> ? 1U : 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">U</a>);</div>
-<div class="line"><span class="lineno">  507</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  508</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">neg</a>) <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line"><span class="lineno">  509</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a60a241f708f9aafe54b0c8421b0396fa">appendDigits_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uNum</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>);</div>
-<div class="line"><span class="lineno">  510</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a60a241f708f9aafe54b0c8421b0396fa"><div class="ttname"><a href="#a60a241f708f9aafe54b0c8421b0396fa">anonymous_namespace{Log.cpp}::TextBuffer::appendDigits_</a></div><div class="ttdeci">bool appendDigits_(std::uint64_t num, size_t digits, char pad=&#39;0&#39;) noexcept</div><div class="ttdoc">Appends a fixed-width unsigned decimal value.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00467">Log.cpp:467</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_aa05e98766c94ca93f5bc37a0b8328942"><div class="ttname"><a href="#aa05e98766c94ca93f5bc37a0b8328942">anonymous_namespace{Log.cpp}::TextBuffer::DecDigits_</a></div><div class="ttdeci">static constexpr size_t DecDigits_(std::uint32_t num) noexcept</div><div class="ttdoc">Returns the decimal digit count of a 32-bit unsigned value.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00574">Log.cpp:574</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00495">495</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  496</span>    {</div>
+<div class="line"><span class="lineno">  497</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">neg</a> = (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &lt; 0);</div>
+<div class="line"><span class="lineno">  498</span> </div>
+<div class="line"><span class="lineno">  499</span>      <span class="comment">// Safe absolute value for INT_MIN using unsigned modulo arithmetic.</span></div>
+<div class="line"><span class="lineno">  500</span>      <span class="keyword">const</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::uint32_t</a> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uNum</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">neg</a></div>
+<div class="line"><span class="lineno">  501</span>                                   ? (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::uint32_t</a>{0} - <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::uint32_t</a><span class="keyword">&gt;</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a>))</div>
+<div class="line"><span class="lineno">  502</span>                                   : <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">static_cast</a>&lt;<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std</a>::<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uint32_t</a>&gt;(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a>);</div>
+<div class="line"><span class="lineno">  503</span> </div>
+<div class="line"><span class="lineno">  504</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a> = <a class="code hl_function" href="#aa05e98766c94ca93f5bc37a0b8328942">DecDigits_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uNum</a>);</div>
+<div class="line"><span class="lineno">  505</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a> + (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">neg</a> ? 1U : 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">U</a>);</div>
+<div class="line"><span class="lineno">  506</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  507</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">neg</a>) <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><span class="lineno">  508</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a60a241f708f9aafe54b0c8421b0396fa">appendDigits_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">uNum</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>);</div>
+<div class="line"><span class="lineno">  509</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a60a241f708f9aafe54b0c8421b0396fa"><div class="ttname"><a href="#a60a241f708f9aafe54b0c8421b0396fa">anonymous_namespace{Log.cpp}::TextBuffer::appendDigits_</a></div><div class="ttdeci">bool appendDigits_(std::uint64_t num, size_t digits, char pad=&#39;0&#39;) noexcept</div><div class="ttdoc">Appends a fixed-width unsigned decimal value.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00466">Log.cpp:466</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_aa05e98766c94ca93f5bc37a0b8328942"><div class="ttname"><a href="#aa05e98766c94ca93f5bc37a0b8328942">anonymous_namespace{Log.cpp}::TextBuffer::DecDigits_</a></div><div class="ttdeci">static constexpr size_t DecDigits_(std::uint32_t num) noexcept</div><div class="ttdoc">Returns the decimal digit count of a 32-bit unsigned value.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00573">Log.cpp:573</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a60a241f708f9aafe54b0c8421b0396fa">appendDigits_()</a>, <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, <a class="el" href="#aa05e98766c94ca93f5bc37a0b8328942">DecDigits_()</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 <div class="dynheader">
@@ -488,11 +488,11 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Appends an unsigned decimal value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00489">489</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  490</span>    {</div>
-<div class="line"><span class="lineno">  491</span>      <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a> = <a class="code hl_function" href="#aa05e98766c94ca93f5bc37a0b8328942">DecDigits_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a>);</div>
-<div class="line"><span class="lineno">  492</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a60a241f708f9aafe54b0c8421b0396fa">appendDigits_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>);</div>
-<div class="line"><span class="lineno">  493</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00488">488</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  489</span>    {</div>
+<div class="line"><span class="lineno">  490</span>      <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a> = <a class="code hl_function" href="#aa05e98766c94ca93f5bc37a0b8328942">DecDigits_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a>);</div>
+<div class="line"><span class="lineno">  491</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a60a241f708f9aafe54b0c8421b0396fa">appendDigits_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>);</div>
+<div class="line"><span class="lineno">  492</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a60a241f708f9aafe54b0c8421b0396fa">appendDigits_()</a>, and <a class="el" href="#aa05e98766c94ca93f5bc37a0b8328942">DecDigits_()</a>.</p>
 
@@ -543,26 +543,26 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00350">350</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  351</span>    {</div>
-<div class="line"><span class="lineno">  352</span>      <span class="comment">// In case pipeSep is false i.e. for display, we use single space as delimiter.</span></div>
-<div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> == <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  355</span> </div>
-<div class="line"><span class="lineno">  356</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">needSpace</a> = <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1u] != <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  357</span> </div>
-<div class="line"><span class="lineno">  358</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">pipeSep</a>) {</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">needSpace</a> ? 3u : 2u;</div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">needSpace</a>) <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  362</span>        <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;|&#39;</span>;</div>
-<div class="line"><span class="lineno">  363</span>        <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  365</span>      }</div>
-<div class="line"><span class="lineno">  366</span> </div>
-<div class="line"><span class="lineno">  367</span>      <span class="keywordflow">if</span>(!<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">needSpace</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  368</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno">  369</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00349">349</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  350</span>    {</div>
+<div class="line"><span class="lineno">  351</span>      <span class="comment">// In case pipeSep is false i.e. for display, we use single space as delimiter.</span></div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> == <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">needSpace</a> = <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1u] != <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">pipeSep</a>) {</div>
+<div class="line"><span class="lineno">  358</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">needSpace</a> ? 3u : 2u;</div>
+<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">needSpace</a>) <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  361</span>        <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;|&#39;</span>;</div>
+<div class="line"><span class="lineno">  362</span>        <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  364</span>      }</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>      <span class="keywordflow">if</span>(!<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">needSpace</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  367</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">  368</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_()</a>, <a class="el" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>, <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -575,7 +575,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_a6a59fd52c69efb51eb1eb2882f8088df_icgraph.svg" width="100%" height="483"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_a6a59fd52c69efb51eb1eb2882f8088df_icgraph.svg" width="100%" height="489"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -625,26 +625,26 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00467">467</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  468</span>    {</div>
-<div class="line"><span class="lineno">  469</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a> == 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  470</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  471</span>      <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> += <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>;</div>
-<div class="line"><span class="lineno">  472</span>      <span class="keywordtype">bool</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">hasDigit</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  473</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
-<div class="line"><span class="lineno">  474</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">idx</a> = <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1U - <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>;</div>
-<div class="line"><span class="lineno">  475</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">hasDigit</a>) {</div>
-<div class="line"><span class="lineno">  476</span>          <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">idx</a>] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> % 10U));</div>
-<div class="line"><span class="lineno">  477</span>          <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> /= 10U;</div>
-<div class="line"><span class="lineno">  478</span>          <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> == 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">U</a>)</div>
-<div class="line"><span class="lineno">  479</span>            <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">hasDigit</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  480</span>        }</div>
-<div class="line"><span class="lineno">  481</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  482</span>          <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">idx</a>] = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">pad</a>;</div>
-<div class="line"><span class="lineno">  483</span>        }</div>
-<div class="line"><span class="lineno">  484</span>      }</div>
-<div class="line"><span class="lineno">  485</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  486</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00466">466</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  467</span>    {</div>
+<div class="line"><span class="lineno">  468</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a> == 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  469</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  470</span>      <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> += <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>;</div>
+<div class="line"><span class="lineno">  471</span>      <span class="keywordtype">bool</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">hasDigit</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  472</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">digits</a>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
+<div class="line"><span class="lineno">  473</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">idx</a> = <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1U - <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>;</div>
+<div class="line"><span class="lineno">  474</span>        <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">hasDigit</a>) {</div>
+<div class="line"><span class="lineno">  475</span>          <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">idx</a>] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> % 10U));</div>
+<div class="line"><span class="lineno">  476</span>          <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> /= 10U;</div>
+<div class="line"><span class="lineno">  477</span>          <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> == 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">U</a>)</div>
+<div class="line"><span class="lineno">  478</span>            <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">hasDigit</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  479</span>        }</div>
+<div class="line"><span class="lineno">  480</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  481</span>          <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">idx</a>] = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">pad</a>;</div>
+<div class="line"><span class="lineno">  482</span>        }</div>
+<div class="line"><span class="lineno">  483</span>      }</div>
+<div class="line"><span class="lineno">  484</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  485</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -689,18 +689,18 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Appends a 32-bit value as fixed-width hexadecimal text. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00513">513</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  514</span>    {</div>
-<div class="line"><span class="lineno">  515</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(10u)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  516</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><span class="lineno">  517</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;x&#39;</span>;</div>
-<div class="line"><span class="lineno">  518</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 7; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &gt;= 0; --<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
-<div class="line"><span class="lineno">  519</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::uint32_t</a> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">nib</a> = (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">val</a> &gt;&gt; (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> * 4)) &amp; 0xFU;</div>
-<div class="line"><span class="lineno">  520</span>        <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <a class="code hl_variable" href="#ad165af7fa18c0032db92d69ae2af41f5">HexDigits_</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">nib</a>];</div>
-<div class="line"><span class="lineno">  521</span>      }</div>
-<div class="line"><span class="lineno">  522</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  523</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_ad165af7fa18c0032db92d69ae2af41f5"><div class="ttname"><a href="#ad165af7fa18c0032db92d69ae2af41f5">anonymous_namespace{Log.cpp}::TextBuffer::HexDigits_</a></div><div class="ttdeci">static constexpr char HexDigits_[]</div><div class="ttdoc">Lookup table for uppercase hexadecimal digits.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00571">Log.cpp:571</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00512">512</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  513</span>    {</div>
+<div class="line"><span class="lineno">  514</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(10u)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  515</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><span class="lineno">  516</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;x&#39;</span>;</div>
+<div class="line"><span class="lineno">  517</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 7; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &gt;= 0; --<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
+<div class="line"><span class="lineno">  518</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::uint32_t</a> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">nib</a> = (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">val</a> &gt;&gt; (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> * 4)) &amp; 0xFU;</div>
+<div class="line"><span class="lineno">  519</span>        <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <a class="code hl_variable" href="#ad165af7fa18c0032db92d69ae2af41f5">HexDigits_</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">nib</a>];</div>
+<div class="line"><span class="lineno">  520</span>      }</div>
+<div class="line"><span class="lineno">  521</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  522</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_ad165af7fa18c0032db92d69ae2af41f5"><div class="ttname"><a href="#ad165af7fa18c0032db92d69ae2af41f5">anonymous_namespace{Log.cpp}::TextBuffer::HexDigits_</a></div><div class="ttdeci">static constexpr char HexDigits_[]</div><div class="ttdoc">Lookup table for uppercase hexadecimal digits.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00570">Log.cpp:570</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, <a class="el" href="#ad165af7fa18c0032db92d69ae2af41f5">HexDigits_</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -745,12 +745,12 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Appends one byte without sanitization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00306">306</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  307</span>    {</div>
-<div class="line"><span class="lineno">  308</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(1u)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  309</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>;</div>
-<div class="line"><span class="lineno">  310</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  311</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00305">305</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  306</span>    {</div>
+<div class="line"><span class="lineno">  307</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(1u)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  308</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>;</div>
+<div class="line"><span class="lineno">  309</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  310</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -763,7 +763,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_ac3a56861f1ee6397d83a5598a17e632b_icgraph.svg" width="100%" height="571"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_ac3a56861f1ee6397d83a5598a17e632b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -799,14 +799,14 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Appends a bounded byte sequence without sanitization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00372">372</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  373</span>    {</div>
-<div class="line"><span class="lineno">  374</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> == 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  375</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  376</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>)</div>
-<div class="line"><span class="lineno">  377</span>        <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>];</div>
-<div class="line"><span class="lineno">  378</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  379</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00371">371</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  372</span>    {</div>
+<div class="line"><span class="lineno">  373</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> == 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  374</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  375</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>)</div>
+<div class="line"><span class="lineno">  376</span>        <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>];</div>
+<div class="line"><span class="lineno">  377</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  378</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -853,12 +853,12 @@ template&lt;size_t Len&gt; </div>
 
 <p>Appends a bounded byte sequence without sanitization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00383">383</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  384</span>    {</div>
-<div class="line"><span class="lineno">  385</span>      <span class="comment">// Len cannot be 0 here, at minimum it will be 1</span></div>
-<div class="line"><span class="lineno">  386</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a9de64045520458e033a5531e9d945949">appendRawText_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">Len</a> - 1u);</div>
-<div class="line"><span class="lineno">  387</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a9de64045520458e033a5531e9d945949"><div class="ttname"><a href="#a9de64045520458e033a5531e9d945949">anonymous_namespace{Log.cpp}::TextBuffer::appendRawText_</a></div><div class="ttdeci">bool appendRawText_(const char *txt, size_t len) noexcept</div><div class="ttdoc">Appends a bounded byte sequence without sanitization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00372">Log.cpp:372</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00382">382</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  383</span>    {</div>
+<div class="line"><span class="lineno">  384</span>      <span class="comment">// Len cannot be 0 here, at minimum it will be 1</span></div>
+<div class="line"><span class="lineno">  385</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a9de64045520458e033a5531e9d945949">appendRawText_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">Len</a> - 1u);</div>
+<div class="line"><span class="lineno">  386</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a9de64045520458e033a5531e9d945949"><div class="ttname"><a href="#a9de64045520458e033a5531e9d945949">anonymous_namespace{Log.cpp}::TextBuffer::appendRawText_</a></div><div class="ttdeci">bool appendRawText_(const char *txt, size_t len) noexcept</div><div class="ttdoc">Appends a bounded byte sequence without sanitization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00371">Log.cpp:371</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a9de64045520458e033a5531e9d945949">appendRawText_()</a>.</p>
 <div class="dynheader">
@@ -900,14 +900,14 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Copies a bounded byte sequence without per-byte processing. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00390">390</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  391</span>    {</div>
-<div class="line"><span class="lineno">  392</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> == 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  393</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  394</span>      <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::memcpy</a>(<a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a> + <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>);</div>
-<div class="line"><span class="lineno">  395</span>      <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> += <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>;</div>
-<div class="line"><span class="lineno">  396</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  397</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00389">389</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  390</span>    {</div>
+<div class="line"><span class="lineno">  391</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span> || <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> == 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  392</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  393</span>      <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">std::memcpy</a>(<a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a> + <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>);</div>
+<div class="line"><span class="lineno">  394</span>      <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> += <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>;</div>
+<div class="line"><span class="lineno">  395</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  396</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -954,12 +954,12 @@ template&lt;size_t Len&gt; </div>
 
 <p>Copies a bounded byte sequence without per-byte processing. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00401">401</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  402</span>    {</div>
-<div class="line"><span class="lineno">  403</span>      <span class="comment">// Len cannot be 0 here, at minimum it will be 1</span></div>
-<div class="line"><span class="lineno">  404</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a30d33f2a3403ed3c2391cbb36af43f2a">appendRawTextFast_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">Len</a> - 1u);</div>
-<div class="line"><span class="lineno">  405</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a30d33f2a3403ed3c2391cbb36af43f2a"><div class="ttname"><a href="#a30d33f2a3403ed3c2391cbb36af43f2a">anonymous_namespace{Log.cpp}::TextBuffer::appendRawTextFast_</a></div><div class="ttdeci">bool appendRawTextFast_(const char *txt, size_t len) noexcept</div><div class="ttdoc">Copies a bounded byte sequence without per-byte processing.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00390">Log.cpp:390</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00400">400</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  401</span>    {</div>
+<div class="line"><span class="lineno">  402</span>      <span class="comment">// Len cannot be 0 here, at minimum it will be 1</span></div>
+<div class="line"><span class="lineno">  403</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="#a30d33f2a3403ed3c2391cbb36af43f2a">appendRawTextFast_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>, <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">Len</a> - 1u);</div>
+<div class="line"><span class="lineno">  404</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a30d33f2a3403ed3c2391cbb36af43f2a"><div class="ttname"><a href="#a30d33f2a3403ed3c2391cbb36af43f2a">anonymous_namespace{Log.cpp}::TextBuffer::appendRawTextFast_</a></div><div class="ttdeci">bool appendRawTextFast_(const char *txt, size_t len) noexcept</div><div class="ttdoc">Copies a bounded byte sequence without per-byte processing.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00389">Log.cpp:389</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a30d33f2a3403ed3c2391cbb36af43f2a">appendRawTextFast_()</a>.</p>
 <div class="dynheader">
@@ -1001,14 +1001,14 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Sanitizes and appends bounded null-terminated narrow text. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00408">408</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  409</span>    {</div>
-<div class="line"><span class="lineno">  410</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  411</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a> &amp;&amp; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>] != <span class="charliteral">&#39;\0&#39;</span>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
-<div class="line"><span class="lineno">  412</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  413</span>      }</div>
-<div class="line"><span class="lineno">  414</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  415</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00407">407</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  408</span>    {</div>
+<div class="line"><span class="lineno">  409</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  410</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a> &amp;&amp; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>] != <span class="charliteral">&#39;\0&#39;</span>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  412</span>      }</div>
+<div class="line"><span class="lineno">  413</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  414</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>.</p>
 
@@ -1057,14 +1057,14 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Sanitizes and appends bounded null-terminated wide text. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00418">418</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  419</span>    {</div>
-<div class="line"><span class="lineno">  420</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  421</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a> &amp;&amp; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>] != <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">L</a><span class="charliteral">&#39;\0&#39;</span>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  423</span>      }</div>
-<div class="line"><span class="lineno">  424</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  425</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00417">417</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  418</span>    {</div>
+<div class="line"><span class="lineno">  419</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  420</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a> &amp;&amp; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>] != <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">L</a><span class="charliteral">&#39;\0&#39;</span>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
+<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  422</span>      }</div>
+<div class="line"><span class="lineno">  423</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  424</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>.</p>
 <div class="dynheader">
@@ -1103,14 +1103,14 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 <p>Sanitizes and appends a <span class="tt">QStringView</span> without allocation. </p>
 <p>The <span class="tt">QStringView</span> is especially useful to append text from a QString without allocation. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00430">430</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  431</span>    {</div>
-<div class="line"><span class="lineno">  432</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">QChar</a> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> : <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>) {</div>
-<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">wchar_t</span><span class="keyword">&gt;</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>.unicode())))</div>
-<div class="line"><span class="lineno">  434</span>          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  435</span>      }</div>
-<div class="line"><span class="lineno">  436</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  437</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00429">429</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  430</span>    {</div>
+<div class="line"><span class="lineno">  431</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">QChar</a> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a> : <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>) {</div>
+<div class="line"><span class="lineno">  432</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">wchar_t</span><span class="keyword">&gt;</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">chr</a>.unicode())))</div>
+<div class="line"><span class="lineno">  433</span>          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  434</span>      }</div>
+<div class="line"><span class="lineno">  435</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  436</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>.</p>
 <div class="dynheader">
@@ -1157,15 +1157,15 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Sanitizes and appends a bounded character range. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00440">440</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  441</span>    {</div>
-<div class="line"><span class="lineno">  442</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  443</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">scanLen</a> = (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a>) ? <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> : <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a>;</div>
-<div class="line"><span class="lineno">  444</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">scanLen</a>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
-<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  446</span>      }</div>
-<div class="line"><span class="lineno">  447</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  448</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00439">439</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>    {</div>
+<div class="line"><span class="lineno">  441</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  442</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">scanLen</a> = (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a>) ? <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> : <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a>;</div>
+<div class="line"><span class="lineno">  443</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">scanLen</a>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
+<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  445</span>      }</div>
+<div class="line"><span class="lineno">  446</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  447</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>.</p>
 <div class="dynheader">
@@ -1212,15 +1212,15 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Sanitizes and appends a bounded character range. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00451">451</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  452</span>    {</div>
-<div class="line"><span class="lineno">  453</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  454</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">scanLen</a> = (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a>) ? <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> : <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a>;</div>
-<div class="line"><span class="lineno">  455</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">scanLen</a>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
-<div class="line"><span class="lineno">  456</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  457</span>      }</div>
-<div class="line"><span class="lineno">  458</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  459</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00450">450</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  451</span>    {</div>
+<div class="line"><span class="lineno">  452</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  453</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">scanLen</a> = (<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a>) ? <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a> : <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">maxScan</a>;</div>
+<div class="line"><span class="lineno">  454</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> = 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a> &lt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">scanLen</a>; ++<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>) {</div>
+<div class="line"><span class="lineno">  455</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_</a>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">txt</a>[<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">ii</a>])) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  456</span>      }</div>
+<div class="line"><span class="lineno">  457</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  458</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>.</p>
 <div class="dynheader">
@@ -1258,11 +1258,11 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Checks whether the current line has room for the requested bytes and its terminator. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00300">300</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  301</span>    {</div>
-<div class="line"><span class="lineno">  302</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &lt; <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> &amp;&amp; <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>;</div>
-<div class="line"><span class="lineno">  303</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a1cc06991538ccce0ab9a5d22216d9317"><div class="ttname"><a href="#a1cc06991538ccce0ab9a5d22216d9317">anonymous_namespace{Log.cpp}::TextBuffer::end_</a></div><div class="ttdeci">size_t end_</div><div class="ttdoc">One-past-end index of the current line storage, including space for the terminating &#39;\0&#39;.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00569">Log.cpp:569</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00299">299</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>    {</div>
+<div class="line"><span class="lineno">  301</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &lt; <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> &amp;&amp; <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">len</a>;</div>
+<div class="line"><span class="lineno">  302</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a1cc06991538ccce0ab9a5d22216d9317"><div class="ttname"><a href="#a1cc06991538ccce0ab9a5d22216d9317">anonymous_namespace{Log.cpp}::TextBuffer::end_</a></div><div class="ttdeci">size_t end_</div><div class="ttdoc">One-past-end index of the current line storage, including space for the terminating &#39;\0&#39;.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00568">Log.cpp:568</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -1302,14 +1302,14 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Resets the buffer to its first empty line. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00282">282</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  283</span>    {</div>
-<div class="line"><span class="lineno">  284</span>      <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> = 0;</div>
-<div class="line"><span class="lineno">  285</span>      <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> = 0;</div>
-<div class="line"><span class="lineno">  286</span>      <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> = <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a>; <span class="comment">// The line can contain at most LineSize - 1 payload bytes.</span></div>
-<div class="line"><span class="lineno">  287</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  288</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_afd5157d9c69ecff175eacebdd0867d1c"><div class="ttname"><a href="#afd5157d9c69ecff175eacebdd0867d1c">anonymous_namespace{Log.cpp}::TextBuffer::LineSize_</a></div><div class="ttdeci">static constexpr size_t LineSize_</div><div class="ttdoc">Line Size of this template instantiation.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00274">Log.cpp:274</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00281">281</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  282</span>    {</div>
+<div class="line"><span class="lineno">  283</span>      <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> = 0;</div>
+<div class="line"><span class="lineno">  284</span>      <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> = 0;</div>
+<div class="line"><span class="lineno">  285</span>      <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> = <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a>; <span class="comment">// The line can contain at most LineSize - 1 payload bytes.</span></div>
+<div class="line"><span class="lineno">  286</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_afd5157d9c69ecff175eacebdd0867d1c"><div class="ttname"><a href="#afd5157d9c69ecff175eacebdd0867d1c">anonymous_namespace{Log.cpp}::TextBuffer::LineSize_</a></div><div class="ttdeci">static constexpr size_t LineSize_</div><div class="ttdoc">Line Size of this template instantiation.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00273">Log.cpp:273</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>, <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a>, <a class="el" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -1349,8 +1349,8 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Returns the beginning of the accumulated byte buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00291">291</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  291</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00290">290</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  290</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>.</p>
 
@@ -1390,19 +1390,19 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Returns the decimal digit count of a 32-bit unsigned value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00574">574</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  575</span>    {</div>
-<div class="line"><span class="lineno">  576</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 1000000000U)<span class="keywordflow">return</span> 10;</div>
-<div class="line"><span class="lineno">  577</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 100000000U)<span class="keywordflow">return</span> 9;</div>
-<div class="line"><span class="lineno">  578</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 10000000U)<span class="keywordflow">return</span> 8;</div>
-<div class="line"><span class="lineno">  579</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 1000000U)<span class="keywordflow">return</span> 7;</div>
-<div class="line"><span class="lineno">  580</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 100000U)<span class="keywordflow">return</span> 6;</div>
-<div class="line"><span class="lineno">  581</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 10000U)<span class="keywordflow">return</span> 5;</div>
-<div class="line"><span class="lineno">  582</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 1000U)<span class="keywordflow">return</span> 4;</div>
-<div class="line"><span class="lineno">  583</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 100U)<span class="keywordflow">return</span> 3;</div>
-<div class="line"><span class="lineno">  584</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 10U)<span class="keywordflow">return</span> 2;</div>
-<div class="line"><span class="lineno">  585</span>      <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  586</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00573">573</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  574</span>    {</div>
+<div class="line"><span class="lineno">  575</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 1000000000U)<span class="keywordflow">return</span> 10;</div>
+<div class="line"><span class="lineno">  576</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 100000000U)<span class="keywordflow">return</span> 9;</div>
+<div class="line"><span class="lineno">  577</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 10000000U)<span class="keywordflow">return</span> 8;</div>
+<div class="line"><span class="lineno">  578</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 1000000U)<span class="keywordflow">return</span> 7;</div>
+<div class="line"><span class="lineno">  579</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 100000U)<span class="keywordflow">return</span> 6;</div>
+<div class="line"><span class="lineno">  580</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 10000U)<span class="keywordflow">return</span> 5;</div>
+<div class="line"><span class="lineno">  581</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 1000U)<span class="keywordflow">return</span> 4;</div>
+<div class="line"><span class="lineno">  582</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 100U)<span class="keywordflow">return</span> 3;</div>
+<div class="line"><span class="lineno">  583</span>      <span class="keywordflow">if</span>(<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">num</a> &gt;= 10U)<span class="keywordflow">return</span> 2;</div>
+<div class="line"><span class="lineno">  584</span>      <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  585</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#abb49b79380a272b2ef97b90868b131fa">appendDec_()</a>, and <a class="el" href="#a411777f046c330f0e4baeadc1cbe7a37">appendDec_()</a>.</p>
 <div class="dynheader">
@@ -1440,8 +1440,8 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Checks whether the buffer contains no accumulated bytes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00297">297</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  297</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> == 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00296">296</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  296</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> == 0<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">u</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -1474,24 +1474,24 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Terminates the current line and prepares the next fixed-size segment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00526">526</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  527</span>    {</div>
-<div class="line"><span class="lineno">  528</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> &lt;= <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  529</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt;= <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a>) <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> = <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - 1u;</div>
-<div class="line"><span class="lineno">  530</span> </div>
-<div class="line"><span class="lineno">  531</span>      <span class="comment">// Remove the trailing spaces</span></div>
-<div class="line"><span class="lineno">  532</span>      <span class="keywordflow">while</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> &amp;&amp; <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1u] == <span class="charliteral">&#39; &#39;</span>)</div>
-<div class="line"><span class="lineno">  533</span>        --<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>;</div>
-<div class="line"><span class="lineno">  534</span> </div>
-<div class="line"><span class="lineno">  535</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  536</span>      <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> = <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>;</div>
-<div class="line"><span class="lineno">  537</span> </div>
-<div class="line"><span class="lineno">  538</span>      <span class="comment">// If the buffer contains less than line size bytes then</span></div>
-<div class="line"><span class="lineno">  539</span>      <span class="comment">// assign end as beg so that no new characters could be added.</span></div>
-<div class="line"><span class="lineno">  540</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">remaining</a> = <a class="code hl_variable" href="#aba2b84825aafb76ba1a93da27891ba0c">Capacity_</a> - <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>;</div>
-<div class="line"><span class="lineno">  541</span>      <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">remaining</a> &gt;= <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a> ? <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> + <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a> : <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>;</div>
-<div class="line"><span class="lineno">  542</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_aba2b84825aafb76ba1a93da27891ba0c"><div class="ttname"><a href="#aba2b84825aafb76ba1a93da27891ba0c">anonymous_namespace{Log.cpp}::TextBuffer::Capacity_</a></div><div class="ttdeci">static constexpr size_t Capacity_</div><div class="ttdoc">Total capacity in bytes for this template instantiation.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00276">Log.cpp:276</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00525">525</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  526</span>    {</div>
+<div class="line"><span class="lineno">  527</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> &lt;= <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  528</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt;= <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a>) <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> = <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - 1u;</div>
+<div class="line"><span class="lineno">  529</span> </div>
+<div class="line"><span class="lineno">  530</span>      <span class="comment">// Remove the trailing spaces</span></div>
+<div class="line"><span class="lineno">  531</span>      <span class="keywordflow">while</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> &amp;&amp; <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1u] == <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><span class="lineno">  532</span>        --<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>;</div>
+<div class="line"><span class="lineno">  533</span> </div>
+<div class="line"><span class="lineno">  534</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  535</span>      <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> = <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>;</div>
+<div class="line"><span class="lineno">  536</span> </div>
+<div class="line"><span class="lineno">  537</span>      <span class="comment">// If the buffer contains less than line size bytes then</span></div>
+<div class="line"><span class="lineno">  538</span>      <span class="comment">// assign end as beg so that no new characters could be added.</span></div>
+<div class="line"><span class="lineno">  539</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">remaining</a> = <a class="code hl_variable" href="#aba2b84825aafb76ba1a93da27891ba0c">Capacity_</a> - <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>;</div>
+<div class="line"><span class="lineno">  540</span>      <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">remaining</a> &gt;= <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a> ? <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> + <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a> : <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>;</div>
+<div class="line"><span class="lineno">  541</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_aba2b84825aafb76ba1a93da27891ba0c"><div class="ttname"><a href="#aba2b84825aafb76ba1a93da27891ba0c">anonymous_namespace{Log.cpp}::TextBuffer::Capacity_</a></div><div class="ttdeci">static constexpr size_t Capacity_</div><div class="ttdoc">Total capacity in bytes for this template instantiation.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00275">Log.cpp:275</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>, <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#aba2b84825aafb76ba1a93da27891ba0c">Capacity_</a>, <a class="el" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a>, <a class="el" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -1531,25 +1531,25 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Terminates the current line with CRLF and prepares the next segment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00545">545</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  546</span>    {</div>
-<div class="line"><span class="lineno">  547</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> &lt;= <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> || <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> &lt; 3u) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  548</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - 3u) <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> = <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - 3u;</div>
-<div class="line"><span class="lineno">  549</span> </div>
-<div class="line"><span class="lineno">  550</span>      <span class="comment">// Remove the trailing spaces</span></div>
-<div class="line"><span class="lineno">  551</span>      <span class="keywordflow">while</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> &amp;&amp; <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1u] == <span class="charliteral">&#39; &#39;</span>)</div>
-<div class="line"><span class="lineno">  552</span>        --<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>;</div>
-<div class="line"><span class="lineno">  553</span> </div>
-<div class="line"><span class="lineno">  554</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;\r&#39;</span>;</div>
-<div class="line"><span class="lineno">  555</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  556</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  557</span>      <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> = <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>;</div>
-<div class="line"><span class="lineno">  558</span> </div>
-<div class="line"><span class="lineno">  559</span>      <span class="comment">// If the buffer contains less than line size bytes then</span></div>
-<div class="line"><span class="lineno">  560</span>      <span class="comment">// assign end as beg so that no new characters could be added.</span></div>
-<div class="line"><span class="lineno">  561</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">remaining</a> = <a class="code hl_variable" href="#aba2b84825aafb76ba1a93da27891ba0c">Capacity_</a> - <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>;</div>
-<div class="line"><span class="lineno">  562</span>      <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">remaining</a> &gt;= <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a> ? <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> + <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a> : <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>;</div>
-<div class="line"><span class="lineno">  563</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00544">544</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  545</span>    {</div>
+<div class="line"><span class="lineno">  546</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> &lt;= <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> || <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> &lt; 3u) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  547</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - 3u) <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> = <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> - 3u;</div>
+<div class="line"><span class="lineno">  548</span> </div>
+<div class="line"><span class="lineno">  549</span>      <span class="comment">// Remove the trailing spaces</span></div>
+<div class="line"><span class="lineno">  550</span>      <span class="keywordflow">while</span>(<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> &gt; <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> &amp;&amp; <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a> - 1u] == <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><span class="lineno">  551</span>        --<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>;</div>
+<div class="line"><span class="lineno">  552</span> </div>
+<div class="line"><span class="lineno">  553</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><span class="lineno">  554</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>++] = <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  555</span>      <a class="code hl_variable" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>[<a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  556</span>      <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> = <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>;</div>
+<div class="line"><span class="lineno">  557</span> </div>
+<div class="line"><span class="lineno">  558</span>      <span class="comment">// If the buffer contains less than line size bytes then</span></div>
+<div class="line"><span class="lineno">  559</span>      <span class="comment">// assign end as beg so that no new characters could be added.</span></div>
+<div class="line"><span class="lineno">  560</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">remaining</a> = <a class="code hl_variable" href="#aba2b84825aafb76ba1a93da27891ba0c">Capacity_</a> - <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>;</div>
+<div class="line"><span class="lineno">  561</span>      <a class="code hl_variable" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a> = <a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">remaining</a> &gt;= <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a> ? <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a> + <a class="code hl_variable" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a> : <a class="code hl_variable" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>;</div>
+<div class="line"><span class="lineno">  562</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a436c62ddeb6c541a2d297a50ecadd647">beg_</a>, <a class="el" href="#a390904fd8dc6421e81205e01050f8593">buf_</a>, <a class="el" href="#aba2b84825aafb76ba1a93da27891ba0c">Capacity_</a>, <a class="el" href="#a1cc06991538ccce0ab9a5d22216d9317">end_</a>, <a class="el" href="#afd5157d9c69ecff175eacebdd0867d1c">LineSize_</a>, and <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -1589,8 +1589,8 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Returns the number of accumulated bytes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00294">294</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  294</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00293">293</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  293</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a19df0131e9e9edccb034d766d274f236">pos_</a>.</p>
 
@@ -1628,8 +1628,8 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Starting index of the current line. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00568">568</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  568</span>{0};        <span class="comment">///&lt; Starting index of the current line.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00567">567</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  567</span>{0};        <span class="comment">///&lt; Starting index of the current line.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>, <a class="el" href="#a6a59fd52c69efb51eb1eb2882f8088df">appendDelimiter_()</a>, <a class="el" href="#abed2362a4e8ea962a8d864906eff393c">clear_()</a>, <a class="el" href="#a8a6974587fc471542ddeebf02fc5eed1">finalize_()</a>, and <a class="el" href="#a46b52e95f4db87245237769af7192a77">finalizeAsNewLine_()</a>.</p>
 
@@ -1659,7 +1659,7 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Fixed-capacity storage for all buffered lines. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00566">566</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00565">565</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>, <a class="el" href="#abb49b79380a272b2ef97b90868b131fa">appendDec_()</a>, <a class="el" href="#a6a59fd52c69efb51eb1eb2882f8088df">appendDelimiter_()</a>, <a class="el" href="#a60a241f708f9aafe54b0c8421b0396fa">appendDigits_()</a>, <a class="el" href="#aeae780eca1cb3e169c9ad6dee0e1a933">appendHex_()</a>, <a class="el" href="#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_()</a>, <a class="el" href="#a9de64045520458e033a5531e9d945949">appendRawText_()</a>, <a class="el" href="#a30d33f2a3403ed3c2391cbb36af43f2a">appendRawTextFast_()</a>, <a class="el" href="#abed2362a4e8ea962a8d864906eff393c">clear_()</a>, <a class="el" href="#ae25159be3ca4845a11faf9b51e5fe88f">data_()</a>, <a class="el" href="#a8a6974587fc471542ddeebf02fc5eed1">finalize_()</a>, and <a class="el" href="#a46b52e95f4db87245237769af7192a77">finalizeAsNewLine_()</a>.</p>
 
@@ -1689,7 +1689,7 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Total capacity in bytes for this template instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00276">276</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00275">275</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a8a6974587fc471542ddeebf02fc5eed1">finalize_()</a>, and <a class="el" href="#a46b52e95f4db87245237769af7192a77">finalizeAsNewLine_()</a>.</p>
 
@@ -1719,8 +1719,8 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>One-past-end index of the current line storage, including space for the terminating '\0'. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00569">569</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  569</span>{<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">LineSize</a>}; <span class="comment">///&lt; One-past-end index of the current line storage, including space for the terminating &#39;\0&#39;.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00568">568</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  568</span>{<a class="code hl_class" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">LineSize</a>}; <span class="comment">///&lt; One-past-end index of the current line storage, including space for the terminating &#39;\0&#39;.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, <a class="el" href="#abed2362a4e8ea962a8d864906eff393c">clear_()</a>, <a class="el" href="#a8a6974587fc471542ddeebf02fc5eed1">finalize_()</a>, and <a class="el" href="#a46b52e95f4db87245237769af7192a77">finalizeAsNewLine_()</a>.</p>
 
@@ -1750,7 +1750,7 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Lookup table for uppercase hexadecimal digits. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00571">571</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00570">570</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aeae780eca1cb3e169c9ad6dee0e1a933">appendHex_()</a>.</p>
 
@@ -1780,7 +1780,7 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Line Count of this template instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00275">275</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00274">274</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1808,7 +1808,7 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Line Size of this template instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00274">274</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00273">273</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#abed2362a4e8ea962a8d864906eff393c">clear_()</a>, <a class="el" href="#a8a6974587fc471542ddeebf02fc5eed1">finalize_()</a>, and <a class="el" href="#a46b52e95f4db87245237769af7192a77">finalizeAsNewLine_()</a>.</p>
 
@@ -1838,8 +1838,8 @@ template&lt;size_t LineSize, size_t LineCount = 1u&gt; </div>
 
 <p>Index of the next character to be written. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00567">567</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  567</span>{0};        <span class="comment">///&lt; Index of the next character to be written.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00566">566</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  566</span>{0};        <span class="comment">///&lt; Index of the next character to be written.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0663052a99e9b2a0bf0b2c0cb9e75b7b">appendChar_()</a>, <a class="el" href="#abb49b79380a272b2ef97b90868b131fa">appendDec_()</a>, <a class="el" href="#a6a59fd52c69efb51eb1eb2882f8088df">appendDelimiter_()</a>, <a class="el" href="#a60a241f708f9aafe54b0c8421b0396fa">appendDigits_()</a>, <a class="el" href="#aeae780eca1cb3e169c9ad6dee0e1a933">appendHex_()</a>, <a class="el" href="#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_()</a>, <a class="el" href="#a9de64045520458e033a5531e9d945949">appendRawText_()</a>, <a class="el" href="#a30d33f2a3403ed3c2391cbb36af43f2a">appendRawTextFast_()</a>, <a class="el" href="#a55bcfada4f8f9e501746cff658700e40">canAppend_()</a>, <a class="el" href="#abed2362a4e8ea962a8d864906eff393c">clear_()</a>, <a class="el" href="#a2284bfec557c5707397680b0f998c207">empty_()</a>, <a class="el" href="#a8a6974587fc471542ddeebf02fc5eed1">finalize_()</a>, <a class="el" href="#a46b52e95f4db87245237769af7192a77">finalizeAsNewLine_()</a>, and <a class="el" href="#ab7bba778ac4a5104350c8dd82a117cc9">size_()</a>.</p>
 

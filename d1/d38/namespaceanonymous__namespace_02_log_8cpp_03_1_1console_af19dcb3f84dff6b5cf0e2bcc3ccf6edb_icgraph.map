@@ -1,4 +1,8 @@
 <map id="anonymous_namespace{Log::cpp}::console::isOpen" name="anonymous_namespace{Log::cpp}::console::isOpen">
-<area shape="rect" id="Node000001" title="Checks whether a console window is currently attached." alt="" coords="5,29,395,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="265,24,270,19,263,14,239,10,200,8,158,10,134,15,130,18,130,20,143,30,138,29,125,22,126,15,132,11,157,5,200,3,240,4,265,9,276,18,268,29"/>
+<area shape="rect" id="Node000001" title="Checks whether a console window is currently attached." alt="" coords="259,31,648,56"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="512,25,515,20,508,15,488,11,453,9,416,11,395,17,392,22,403,31,398,30,386,23,392,12,415,6,453,4,488,6,511,11,521,19,515,29"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#a7b8c87cac5cee3c9c4ad9f19aebc8c02" title="Closes the temporary console." alt="" coords="9,5,207,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="268,31,206,28,206,23,273,30"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#a3f5453b25bfa7808da0fa9c48d5a0b01" title="Checks whether any console is currently attached to the application." alt="" coords="5,55,211,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="258,57,211,63,210,58,264,57"/>
 </map>

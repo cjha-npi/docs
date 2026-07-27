@@ -1,6 +1,6 @@
 <map id="anonymous_namespace{Log.cpp}::LeakedState::FileWorker" name="anonymous_namespace{Log.cpp}::LeakedState::FileWorker">
-<area shape="rect" id="Node000001" title="File worker with normal&#45;log file information and drop counting." alt="" coords="981,262,1427,288"/>
-<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker" title="Provides queue, wake&#45;up, field&#45;layout, and thread state shared by workers." alt="" coords="637,108,834,164"/>
+<area shape="rect" id="Node000001" title="Stores file worker state plus normal&#45;log file information and drop counting." alt="" coords="981,262,1427,288"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker" title="Provides common queue, wake&#45;up, field&#45;layout, and thread state for workers." alt="" coords="637,108,834,164"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="838,164,1163,262,1157,263,838,169"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="237,5,490,46"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="497,40,557,53,614,70,654,87,692,109,687,109,652,92,612,75,555,58,498,46"/>

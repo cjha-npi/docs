@@ -1,9 +1,13 @@
 <map id="anonymous_namespace{Log::cpp}::control::comparePaths" name="anonymous_namespace{Log::cpp}::control::comparePaths">
-<area shape="rect" id="Node000001" title="Compares two Windows paths using normalized case&#45;insensitive semantics." alt="" coords="448,44,885,70"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="727,38,730,34,723,29,702,25,667,23,628,25,607,30,603,35,615,45,610,44,598,36,604,26,627,20,667,18,702,19,725,24,735,33,729,43"/>
-<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="227,29,400,85"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="438,57,400,60,400,55,443,57"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="352,21,341,12,313,8,294,10,281,15,275,21,275,31,271,28,270,19,278,10,292,5,313,3,343,8,357,22"/>
+<area shape="rect" id="Node000001" title="Compares two Windows paths using normalized case&#45;insensitive semantics." alt="" coords="488,110,925,135"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="770,104,774,99,767,94,744,90,707,88,666,90,644,96,640,101,652,110,647,109,634,102,641,91,665,85,707,83,745,85,769,90,779,98,772,109"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="247,29,420,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="622,109,419,75,420,69,627,108"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="227,110,440,135"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="477,123,440,125,440,120,483,122"/>
+<area shape="rect" id="Node000005" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="235,159,432,185"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="604,136,431,162,430,156,598,137"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="375,21,372,17,364,12,333,8,312,10,298,15,291,21,291,31,287,28,287,19,295,10,311,5,333,3,366,7,375,13,381,22"/>
 <area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
-<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="237,58,179,60,178,55,241,56"/>
 </map>

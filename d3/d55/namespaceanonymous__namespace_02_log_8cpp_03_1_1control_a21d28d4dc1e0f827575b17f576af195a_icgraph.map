@@ -1,6 +1,10 @@
 <map id="anonymous_namespace{Log::cpp}::control::useDirectory" name="anonymous_namespace{Log::cpp}::control::useDirectory">
-<area shape="rect" id="Node000001" title="Transitions both normal and important logging to a new directory." alt="" coords="227,29,664,55"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="505,23,509,19,502,14,480,10,445,8,407,10,386,15,382,20,394,30,389,29,377,21,383,11,406,5,445,3,481,4,504,9,514,18,508,28"/>
-<area shape="rect" id="Node000002" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,22,179,62"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,42,178,45,178,40,222,42"/>
+<area shape="rect" id="Node000001" title="Transitions both normal and important logging to a new directory." alt="" coords="267,55,704,80"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="548,49,553,44,545,39,523,35,485,33,445,35,423,41,418,46,431,55,426,54,413,47,420,36,444,30,485,28,523,30,547,35,558,43,551,54"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="5,5,219,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="378,55,209,34,209,28,382,52"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="13,55,211,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,68,211,70,210,65,261,67"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="25,104,199,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="392,84,199,114,198,109,395,79"/>
 </map>

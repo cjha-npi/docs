@@ -41,12 +41,5 @@ var namespaces_dup =
       [ "stopCallOwnerThreadId", "d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aeb03db5280e598e55f4c0c6dc2e2c0c6", null ],
       [ "stopCmdLineBuf", "d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a32d1cd94364d7012bc039a6ca4389006", null ]
     ] ],
-    [ "bridge", "da/dc9/namespacebridge.html", null ],
-    [ "console", "dc/daa/namespaceconsole.html", null ],
-    [ "control", "dd/d7b/namespacecontrol.html", null ],
-    [ "crash", "dc/d93/namespacecrash.html", null ],
-    [ "format", "da/ddb/namespaceformat.html", null ],
-    [ "layout", "d5/d83/namespacelayout.html", null ],
-    [ "npi", "d6/d57/namespacenpi.html", "d6/d57/namespacenpi" ],
-    [ "workers", "d8/d8a/namespaceworkers.html", null ]
+    [ "npi", "d6/d57/namespacenpi.html", "d6/d57/namespacenpi" ]
 ];

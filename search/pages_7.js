@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['handler_20time_0',['Log Message Handler Time',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__log_msg_handler_time',1,'']]],
+  ['handler_20time_0',['Test: Handler Time',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_handler_time',1,'']]],
   ['hash_20with_20inline_5fsimple_5fstructs_1',['Hash with INLINE_SIMPLE_STRUCTS',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__bugs_fixes__broken_hash',1,'Broken Hash with INLINE_SIMPLE_STRUCTS'],['../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000001',1,'Broken Hash with INLINE_SIMPLE_STRUCTS']]],
   ['header_2',['Parent Side Header',['../d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_header',1,'']]],
   ['header_20html_3',['Header HTML',['../df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__head',1,'']]],

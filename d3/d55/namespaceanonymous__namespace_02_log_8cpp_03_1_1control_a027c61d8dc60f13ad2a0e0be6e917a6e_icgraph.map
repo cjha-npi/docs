@@ -1,9 +1,11 @@
 <map id="anonymous_namespace{Log::cpp}::control::cleanedFilterRulesList" name="anonymous_namespace{Log::cpp}::control::cleanedFilterRulesList">
-<area shape="rect" id="Node000001" title="Normalizes and validates custom Qt category&#45;filter rules." alt="" coords="448,44,965,70"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="773,39,778,34,770,29,746,25,707,23,664,25,640,30,636,33,636,35,649,45,644,44,631,37,631,30,638,26,663,20,707,18,747,19,772,24,783,33,775,44"/>
-<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="227,29,400,85"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="437,57,400,60,400,55,443,57"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="352,21,341,12,313,8,294,10,281,15,275,21,275,31,271,28,270,19,278,10,292,5,313,3,343,8,357,22"/>
+<area shape="rect" id="Node000001" title="Normalizes and validates custom Qt category&#45;filter rules." alt="" coords="488,78,1005,103"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="816,72,821,67,814,63,788,58,747,56,702,58,677,64,672,66,672,68,686,78,681,77,667,70,668,64,674,59,701,53,747,51,789,53,816,58,827,67,819,77"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="247,29,420,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="577,77,419,67,420,61,582,77"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc" title="Changes the custom Qt logging category filter rules." alt="" coords="227,110,440,135"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="576,104,440,117,440,112,570,104"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="376,21,372,17,364,12,333,8,312,10,298,15,291,21,291,31,287,28,287,19,295,10,311,5,333,3,366,7,375,13,381,22"/>
 <area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
-<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="236,58,179,60,178,55,242,56"/>
 </map>

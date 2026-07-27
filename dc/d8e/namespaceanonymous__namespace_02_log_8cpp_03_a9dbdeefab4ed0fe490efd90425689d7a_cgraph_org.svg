@@ -3185,7 +3185,7 @@
 <!-- Node90 -->
 <g id="Node000090" class="node">
 <title>Node90</title>
-<g id="a_Node000090"><a xlink:href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a435efdf570bf14b59b57ac13434102b9" target="_top" xlink:title="Compares 2 keys for strict equality.">
+<g id="a_Node000090"><a xlink:href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a435efdf570bf14b59b57ac13434102b9" target="_top" xlink:title="Compares 2 keys for equality.">
 <polygon fill="white" stroke="none" points="1534,-2815.75 1368,-2815.75 1368,-2774 1534,-2774 1534,-2815.75"/>
 <text xml:space="preserve" text-anchor="start" x="1376" y="-2801.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1376" y="-2790.05" font-family="Consolas" font-size="11.00">{Log::cpp}::CategoryCache</text>
@@ -3362,7 +3362,7 @@
 <!-- Node99 -->
 <g id="Node000099" class="node">
 <title>Node99</title>
-<g id="a_Node000099"><a xlink:href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#ae8746397035000686a4a24c41692d0dd" target="_top" xlink:title="Compares 2 keys for strict equality.">
+<g id="a_Node000099"><a xlink:href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#ae8746397035000686a4a24c41692d0dd" target="_top" xlink:title="Compares 2 keys for equality.">
 <polygon fill="white" stroke="none" points="1534,-2335.75 1368,-2335.75 1368,-2294 1534,-2294 1534,-2335.75"/>
 <text xml:space="preserve" text-anchor="start" x="1376" y="-2321.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1376" y="-2310.05" font-family="Consolas" font-size="11.00">{Log::cpp}::FileLineCache</text>
@@ -3559,7 +3559,7 @@
 <!-- Node109 -->
 <g id="Node000109" class="node">
 <title>Node109</title>
-<g id="a_Node000109"><a xlink:href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#aa1e76f9d85cb3e11d4e0a63eaa66a6dc" target="_top" xlink:title="Compares 2 keys for strict equality.">
+<g id="a_Node000109"><a xlink:href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#aa1e76f9d85cb3e11d4e0a63eaa66a6dc" target="_top" xlink:title="Compares 2 keys for equality.">
 <polygon fill="white" stroke="none" points="1534,-2035.75 1368,-2035.75 1368,-1994 1534,-1994 1534,-2035.75"/>
 <text xml:space="preserve" text-anchor="start" x="1376" y="-2021.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1376" y="-2010.05" font-family="Consolas" font-size="11.00">{Log::cpp}::FunctionCache</text>

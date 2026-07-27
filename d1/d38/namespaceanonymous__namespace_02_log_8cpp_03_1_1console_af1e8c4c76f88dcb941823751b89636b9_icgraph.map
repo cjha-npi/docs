@@ -1,7 +1,12 @@
 <map id="anonymous_namespace{Log::cpp}::console::isPermanent" name="anonymous_namespace{Log::cpp}::console::isPermanent">
-<area shape="rect" id="Node000001" title="Checks whether a console was attached during initialization." alt="" coords="227,44,656,70"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="501,38,504,34,497,29,476,25,441,23,403,25,383,30,379,35,391,45,385,44,374,36,380,26,402,20,441,18,477,19,499,24,509,33,503,43"/>
-<area shape="rect" id="Node000002" href="$d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a3b284d50cc7fc024cbfb49dd7d7792be" title="Releases the temporary console while preserving a permanent console." alt="" coords="5,29,179,85"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="154,21,149,17,137,12,92,8,60,10,40,15,30,21,30,30,25,29,26,19,37,10,60,5,92,3,138,7,152,13,159,22"/>
+<area shape="rect" id="Node000001" title="Checks whether a console was attached during initialization." alt="" coords="544,110,973,135"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="823,104,828,99,821,95,798,90,759,88,717,90,693,96,690,98,689,100,702,110,697,109,684,102,685,96,691,91,716,85,759,83,798,85,823,90,834,99,826,109"/>
+<area shape="rect" id="Node000002" href="$d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a3b284d50cc7fc024cbfb49dd7d7792be" title="Releases the temporary console while preserving a permanent console." alt="" coords="287,29,460,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="672,109,460,74,460,69,677,108"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#a7b8c87cac5cee3c9c4ad9f19aebc8c02" title="Closes the temporary console." alt="" coords="5,78,203,103"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="535,114,203,98,203,93,537,109"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#ad54369e851cae6d6b5e146ee35fbcc35" title="Checks whether the application started with a permanent console." alt="" coords="251,160,496,186"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="656,136,471,163,471,158,650,137"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="421,21,417,17,408,12,373,8,349,10,334,15,326,21,326,31,322,28,321,19,331,10,348,5,373,3,409,7,420,13,426,22"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="277,70,203,81,202,76,282,68"/>
 </map>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c_20language_20standard_0',['C Language Standard',['../d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__props_to_change__c_lang_standard',1,'C Language Standard'],['../d1/dd4/dp_dh_vs_proj_props.html#dp_dh_vs_proj_props__props_to_change__cpp_lang_standard',1,'C++ Language Standard']]],
-  ['cache_20text_1',['Cache Text',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__context_cache',1,'']]],
+  ['cache_20text_1',['Test: Cache Text',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_context_cache',1,'']]],
   ['caches_2',['Log Records and Context Caches',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__log_records_and_context_caches',1,'']]],
   ['capabilities_3',['Core Capabilities',['../dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__core_capabilities',1,'']]],
   ['capacity_20behavior_4',['Allocation and Capacity Behavior',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__allocation_and_capacity',1,'']]],

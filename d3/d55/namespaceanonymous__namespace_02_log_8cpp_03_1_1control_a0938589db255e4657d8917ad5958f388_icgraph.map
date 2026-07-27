@@ -1,10 +1,14 @@
 <map id="anonymous_namespace{Log::cpp}::control::saveMaxFolderMbPendingValue" name="anonymous_namespace{Log::cpp}::control::saveMaxFolderMbPendingValue">
-<area shape="rect" id="Node000001" title="Persists the most recently scheduled maximum&#45;folder&#45;size value." alt="" coords="496,44,1053,70"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="848,39,854,34,846,29,819,25,775,23,727,25,700,31,696,33,695,35,710,45,705,44,691,37,691,30,698,26,726,20,775,18,820,19,848,24,859,33,850,44"/>
-<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc" title="Debounces persistence of a non&#45;temporary maximum&#45;folder&#45;size change." alt="" coords="227,29,448,85"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="485,57,448,60,448,55,491,57"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="380,20,376,17,368,12,337,8,315,10,301,15,295,21,294,31,290,28,290,19,298,10,314,5,337,3,370,7,380,13,385,22"/>
-<area shape="rect" id="Node000003" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287" title="Updates the runtime maximum&#45;folder&#45;size setting." alt="" coords="5,29,179,85"/>
-<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="216,57,178,60,178,55,221,57"/>
-<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="135,21,131,17,123,12,92,8,70,10,56,15,49,21,49,30,44,29,44,19,53,10,69,5,92,3,125,7,135,13,140,22"/>
+<area shape="rect" id="Node000001" title="Persists the most recently scheduled maximum&#45;folder&#45;size value." alt="" coords="797,44,1355,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1149,39,1155,34,1147,29,1121,25,1076,23,1028,25,1002,31,997,33,997,35,1012,45,1007,44,992,37,993,30,1000,26,1028,20,1076,18,1121,19,1149,24,1161,33,1151,44"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc" title="Debounces persistence of a non&#45;temporary maximum&#45;folder&#45;size change." alt="" coords="528,29,749,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="787,57,749,60,749,55,792,57"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="682,20,678,17,670,12,639,8,617,10,603,15,596,21,596,31,592,28,591,19,600,10,616,5,639,3,671,7,681,13,687,22"/>
+<area shape="rect" id="Node000003" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287" title="Updates the runtime maximum&#45;folder&#45;size setting." alt="" coords="307,29,480,85"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="517,57,480,60,480,55,523,57"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="436,20,432,17,424,12,393,8,371,10,357,15,351,21,350,31,346,28,346,19,354,10,370,5,393,3,426,7,436,13,441,22"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#a82c9393d9e86743df96071dd5dda1fb6" title="Restores the default maximum log folder size." alt="" coords="25,8,239,48"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="297,47,238,42,238,37,302,46"/>
+<area shape="rect" id="Node000005" href="$d5/ddd/namespacenpi_1_1log.html#a44c3ab1ead08f699085787d44d37ae11" title="Changes the normal&#45;log cleanup target." alt="" coords="5,72,259,98"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="302,67,252,75,251,70,296,68"/>
 </map>

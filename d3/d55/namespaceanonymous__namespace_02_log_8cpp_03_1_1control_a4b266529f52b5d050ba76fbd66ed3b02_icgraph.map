@@ -1,6 +1,10 @@
 <map id="anonymous_namespace{Log::cpp}::control::setFilterRules" name="anonymous_namespace{Log::cpp}::control::setFilterRules">
-<area shape="rect" id="Node000001" title="Installs the built&#45;in and normalized custom Qt category filters." alt="" coords="227,29,680,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="514,24,518,19,511,14,490,10,453,8,414,10,393,15,389,20,401,30,396,29,383,21,390,11,413,5,453,3,490,4,514,9,524,18,517,28"/>
-<area shape="rect" id="Node000002" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,22,179,62"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="216,42,179,45,179,40,221,42"/>
+<area shape="rect" id="Node000001" title="Installs the built&#45;in and normalized custom Qt category filters." alt="" coords="283,55,736,80"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="575,49,580,44,572,40,549,35,509,33,467,35,443,41,439,43,439,45,452,55,447,54,434,47,435,41,441,36,466,30,509,28,549,30,574,35,585,44,577,54"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#a4a5b29dcb269f47a4ef69ee7fe39bfb6" title="Removes all custom category filter rules." alt="" coords="5,5,235,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="397,55,222,34,222,28,402,52"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc" title="Changes the custom Qt logging category filter rules." alt="" coords="13,55,227,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="272,68,227,70,226,65,277,67"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="33,104,207,145"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="413,84,206,115,206,110,414,79"/>
 </map>

@@ -9,7 +9,7 @@ var searchData=
   ['entries_5f_6',['entries_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a51048ed6742aaaca083412c9b3d65a7e',1,'anonymous_namespace{Log.cpp}::CategoryCache::entries_'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a96141b67cc2ce7d708c14de9b6a0f295',1,'anonymous_namespace{Log.cpp}::FileLineCache::entries_'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a813f5fd4eb6db36fc73fda1d9c714d52',1,'anonymous_namespace{Log.cpp}::FunctionCache::entries_']]],
   ['entry_7',['Entry',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry',1,'anonymous_namespace{Log.cpp}::CategoryCache::Entry'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry',1,'anonymous_namespace{Log.cpp}::FileLineCache::Entry'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#d9/dc2/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_entry',1,'anonymous_namespace{Log.cpp}::FunctionCache::Entry']]],
   ['enum_8',['Magic Enum',['../dc/d55/dp_dep_magic_enum.html',1,'dp_dep_dir_dependencies']]],
-  ['environment_9',['Test Environment',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__environment',1,'']]],
+  ['environment_9',['Test: Environment',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_environment',1,'']]],
   ['errmsgprefix_5f_10',['ErrMsgPrefix_',['../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#acd283e842b10b822be8a15d9495b7aee',1,'npi::app::CrossProcessLocker']]],
   ['example_20structure_11',['Example Structure',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__example_structure',1,'']]],
   ['examples_12',['Doxygen Examples',['../d6/d8f/dp_dh_doxy_examples.html',1,'dp_dh_dir_misc']]],
@@ -21,5 +21,5 @@ var searchData=
   ['exepathpos_18',['exePathPos',['../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e0972520c2ec7b80185d8951ac7d37f',1,'anonymous_namespace{WinMsgBoxExe.cpp}']]],
   ['exit_20codes_19',['Exit Codes',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__exit_codes',1,'']]],
   ['extension_20setup_20',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]],
-  ['extreme_20stress_21',['Extreme Stress',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__extreme_stress',1,'']]]
+  ['extreme_20stress_21',['Test: Extreme Stress',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_extreme_stress',1,'']]]
 ];

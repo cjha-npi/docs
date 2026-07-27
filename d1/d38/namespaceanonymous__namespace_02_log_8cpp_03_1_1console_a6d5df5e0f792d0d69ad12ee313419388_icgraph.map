@@ -1,4 +1,6 @@
 <map id="anonymous_namespace{Log::cpp}::console::open" name="anonymous_namespace{Log::cpp}::console::open">
-<area shape="rect" id="Node000001" title="Allocates and configures a temporary console when necessary." alt="" coords="5,29,379,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="255,24,259,19,252,14,229,10,192,8,151,10,129,15,125,20,138,30,132,29,120,21,126,11,151,5,192,3,230,4,254,9,265,18,258,28"/>
+<area shape="rect" id="Node000001" title="Allocates and configures a temporary console when necessary." alt="" coords="243,29,616,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="485,23,488,18,482,14,462,10,429,8,394,10,374,15,371,20,382,30,376,29,365,21,371,11,393,5,429,3,463,4,484,9,494,17,488,28"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#a35a969078b211913c70a3289d579181f" title="Opens a temporary console when no console is currently attached." alt="" coords="5,29,195,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="232,42,195,45,195,40,237,42"/>
 </map>

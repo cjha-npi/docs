@@ -137,7 +137,10 @@ $(function(){initNavTree('d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_
   <div class="headertitle"><div class="title">anonymous_namespace{Log.cpp}::console Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
+<div class="textblock"><p>Detects, opens, configures, and closes Windows console output. </p>
+<p>A console attached at startup is treated as permanent. A temporary console can be allocated and released at runtime without affecting debugger output. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3b284d50cc7fc024cbfb49dd7d7792be" id="r_a3b284d50cc7fc024cbfb49dd7d7792be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b284d50cc7fc024cbfb49dd7d7792be">close</a> ()</td></tr>
@@ -169,28 +172,28 @@ Functions</h2></td></tr>
 
 <p>Releases the temporary console while preserving a permanent console. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03350">3350</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3351</span>    {</div>
-<div class="line"><span class="lineno"> 3352</span>      <span class="comment">// Never detach the permanent console.</span></div>
-<div class="line"><span class="lineno"> 3353</span>      <span class="keywordflow">if</span>(<a class="code hl_function" href="#af1e8c4c76f88dcb941823751b89636b9">isPermanent</a>())</div>
-<div class="line"><span class="lineno"> 3354</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 3355</span> </div>
-<div class="line"><span class="lineno"> 3356</span>      <span class="comment">// Redirect CRT streams to NUL for safety</span></div>
-<div class="line"><span class="lineno"> 3357</span>      FILE* dummy;</div>
-<div class="line"><span class="lineno"> 3358</span>      (void)::freopen_s(&amp;dummy, <span class="stringliteral">&quot;NUL&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>, stdout);</div>
-<div class="line"><span class="lineno"> 3359</span>      (void)::freopen_s(&amp;dummy, <span class="stringliteral">&quot;NUL&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>, stderr);</div>
-<div class="line"><span class="lineno"> 3360</span> </div>
-<div class="line"><span class="lineno"> 3361</span>      <span class="keywordflow">if</span>(<span class="keyword">const</span> HWND hwnd = ::GetConsoleWindow(); hwnd != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno"> 3362</span>        ::GetSystemMenu(hwnd, TRUE); <span class="comment">// Revert menu to default state</span></div>
-<div class="line"><span class="lineno"> 3363</span> </div>
-<div class="line"><span class="lineno"> 3364</span>      <span class="comment">// Free the Console Window</span></div>
-<div class="line"><span class="lineno"> 3365</span>      ::FreeConsole();</div>
-<div class="line"><span class="lineno"> 3366</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1console_html_af1e8c4c76f88dcb941823751b89636b9"><div class="ttname"><a href="#af1e8c4c76f88dcb941823751b89636b9">anonymous_namespace{Log.cpp}::console::isPermanent</a></div><div class="ttdeci">bool isPermanent()</div><div class="ttdoc">Checks whether a console was attached during initialization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l03235">Log.cpp:3235</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03344">3344</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3345</span>    {</div>
+<div class="line"><span class="lineno"> 3346</span>      <span class="comment">// Never detach the permanent console.</span></div>
+<div class="line"><span class="lineno"> 3347</span>      <span class="keywordflow">if</span>(<a class="code hl_function" href="#af1e8c4c76f88dcb941823751b89636b9">isPermanent</a>())</div>
+<div class="line"><span class="lineno"> 3348</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 3349</span> </div>
+<div class="line"><span class="lineno"> 3350</span>      <span class="comment">// Redirect CRT streams to NUL for safety</span></div>
+<div class="line"><span class="lineno"> 3351</span>      FILE* dummy;</div>
+<div class="line"><span class="lineno"> 3352</span>      (void)::freopen_s(&amp;dummy, <span class="stringliteral">&quot;NUL&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>, stdout);</div>
+<div class="line"><span class="lineno"> 3353</span>      (void)::freopen_s(&amp;dummy, <span class="stringliteral">&quot;NUL&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>, stderr);</div>
+<div class="line"><span class="lineno"> 3354</span> </div>
+<div class="line"><span class="lineno"> 3355</span>      <span class="keywordflow">if</span>(<span class="keyword">const</span> HWND hwnd = ::GetConsoleWindow(); hwnd != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 3356</span>        ::GetSystemMenu(hwnd, TRUE); <span class="comment">// Revert menu to default state</span></div>
+<div class="line"><span class="lineno"> 3357</span> </div>
+<div class="line"><span class="lineno"> 3358</span>      <span class="comment">// Free the Console Window</span></div>
+<div class="line"><span class="lineno"> 3359</span>      ::FreeConsole();</div>
+<div class="line"><span class="lineno"> 3360</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1console_html_af1e8c4c76f88dcb941823751b89636b9"><div class="ttname"><a href="#af1e8c4c76f88dcb941823751b89636b9">anonymous_namespace{Log.cpp}::console::isPermanent</a></div><div class="ttdeci">bool isPermanent()</div><div class="ttdoc">Checks whether a console was attached during initialization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l03229">Log.cpp:3229</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a3b284d50cc7fc024cbfb49dd7d7792be">close()</a>, and <a class="el" href="#af1e8c4c76f88dcb941823751b89636b9">isPermanent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a3b284d50cc7fc024cbfb49dd7d7792be">close()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a3b284d50cc7fc024cbfb49dd7d7792be">close()</a>, and <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7b8c87cac5cee3c9c4ad9f19aebc8c02">npi::log::closeConsole()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -199,7 +202,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_a3b284d50cc7fc024cbfb49dd7d7792be_icgraph.svg" width="392" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_a3b284d50cc7fc024cbfb49dd7d7792be_icgraph.svg" width="638" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -221,27 +224,27 @@ Here is the caller graph for this function:</div>
 
 <p>Returns the active console output handle when one is available. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03247">3247</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3248</span>    {</div>
-<div class="line"><span class="lineno"> 3249</span>      <span class="comment">// Permanent console uses the dedicated CONOUT$ handle, independently</span></div>
-<div class="line"><span class="lineno"> 3250</span>      <span class="comment">// of redirected stdout or stderr.</span></div>
-<div class="line"><span class="lineno"> 3251</span>      <span class="keywordflow">if</span>(<span class="keyword">const</span> HANDLE permConsole = <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>().permConsole_;</div>
-<div class="line"><span class="lineno"> 3252</span>        permConsole != INVALID_HANDLE_VALUE)</div>
-<div class="line"><span class="lineno"> 3253</span>        <span class="keywordflow">return</span> permConsole;</div>
-<div class="line"><span class="lineno"> 3254</span> </div>
-<div class="line"><span class="lineno"> 3255</span>      <span class="comment">// Temporary console uses the standard error handle established by</span></div>
-<div class="line"><span class="lineno"> 3256</span>      <span class="comment">// AllocConsole().</span></div>
-<div class="line"><span class="lineno"> 3257</span>      <span class="keyword">const</span> HANDLE <a class="code hl_namespace" href="../../dc/daa/namespaceconsole.html">console</a> = ::GetStdHandle(STD_ERROR_HANDLE);</div>
-<div class="line"><span class="lineno"> 3258</span>      <span class="keywordflow">if</span>(<a class="code hl_namespace" href="../../dc/daa/namespaceconsole.html">console</a> != <span class="keyword">nullptr</span> &amp;&amp; <a class="code hl_namespace" href="../../dc/daa/namespaceconsole.html">console</a> != INVALID_HANDLE_VALUE) {</div>
-<div class="line"><span class="lineno"> 3259</span>        DWORD outMode = 0;</div>
-<div class="line"><span class="lineno"> 3260</span>        <span class="comment">// if console is a redirect, this check will fail</span></div>
-<div class="line"><span class="lineno"> 3261</span>        <span class="keywordflow">if</span>(::GetConsoleMode(<a class="code hl_namespace" href="../../dc/daa/namespaceconsole.html">console</a>, &amp;outMode) != 0)</div>
-<div class="line"><span class="lineno"> 3262</span>          <span class="keywordflow">return</span> <a class="code hl_namespace" href="../../dc/daa/namespaceconsole.html">console</a>;</div>
-<div class="line"><span class="lineno"> 3263</span>      }</div>
-<div class="line"><span class="lineno"> 3264</span>      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 3265</span>    }</div>
-<div class="ttc" id="anamespaceconsole_html"><div class="ttname"><a href="../../dc/daa/namespaceconsole.html">console</a></div><div class="ttdoc">Detects, opens, configures, and closes Windows console output.</div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ae28ae1e0989c84468f1c7dd17981e5e4"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_</a></div><div class="ttdeci">static LeakedState &amp; Inst_() noexcept</div><div class="ttdoc">Returns the intentionally leaked process-wide logging state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01709">Log.cpp:1709</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03241">3241</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3242</span>    {</div>
+<div class="line"><span class="lineno"> 3243</span>      <span class="comment">// Permanent console uses the dedicated CONOUT$ handle, independently</span></div>
+<div class="line"><span class="lineno"> 3244</span>      <span class="comment">// of redirected stdout or stderr.</span></div>
+<div class="line"><span class="lineno"> 3245</span>      <span class="keywordflow">if</span>(<span class="keyword">const</span> HANDLE permConsole = <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>().permConsole_;</div>
+<div class="line"><span class="lineno"> 3246</span>        permConsole != INVALID_HANDLE_VALUE)</div>
+<div class="line"><span class="lineno"> 3247</span>        <span class="keywordflow">return</span> permConsole;</div>
+<div class="line"><span class="lineno"> 3248</span> </div>
+<div class="line"><span class="lineno"> 3249</span>      <span class="comment">// Temporary console uses the standard error handle established by</span></div>
+<div class="line"><span class="lineno"> 3250</span>      <span class="comment">// AllocConsole().</span></div>
+<div class="line"><span class="lineno"> 3251</span>      <span class="keyword">const</span> HANDLE <a class="code hl_namespace" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html">console</a> = ::GetStdHandle(STD_ERROR_HANDLE);</div>
+<div class="line"><span class="lineno"> 3252</span>      <span class="keywordflow">if</span>(<a class="code hl_namespace" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html">console</a> != <span class="keyword">nullptr</span> &amp;&amp; <a class="code hl_namespace" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html">console</a> != INVALID_HANDLE_VALUE) {</div>
+<div class="line"><span class="lineno"> 3253</span>        DWORD outMode = 0;</div>
+<div class="line"><span class="lineno"> 3254</span>        <span class="comment">// if console is a redirect, this check will fail</span></div>
+<div class="line"><span class="lineno"> 3255</span>        <span class="keywordflow">if</span>(::GetConsoleMode(<a class="code hl_namespace" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html">console</a>, &amp;outMode) != 0)</div>
+<div class="line"><span class="lineno"> 3256</span>          <span class="keywordflow">return</span> <a class="code hl_namespace" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html">console</a>;</div>
+<div class="line"><span class="lineno"> 3257</span>      }</div>
+<div class="line"><span class="lineno"> 3258</span>      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 3259</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1console_html"><div class="ttname"><a href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html">anonymous_namespace{Log.cpp}::console</a></div><div class="ttdoc">Detects, opens, configures, and closes Windows console output.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l03226">Log.cpp:3227</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ae28ae1e0989c84468f1c7dd17981e5e4"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_</a></div><div class="ttdeci">static LeakedState &amp; Inst_() noexcept</div><div class="ttdoc">Returns the intentionally leaked process-wide logging state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01708">Log.cpp:1708</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a78d365c25a1a6a3fad98d83106f859ce">handle()</a>, and <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_()</a>.</p>
 
@@ -254,7 +257,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_a78d365c25a1a6a3fad98d83106f859ce_icgraph.svg" width="100%" height="417"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_a78d365c25a1a6a3fad98d83106f859ce_icgraph.svg" width="100%" height="449"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -276,14 +279,14 @@ Here is the caller graph for this function:</div>
 
 <p>Checks whether a console window is currently attached. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03241">3241</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3242</span>    {</div>
-<div class="line"><span class="lineno"> 3243</span>      return ::GetConsoleWindow() != <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 3244</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03235">3235</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3236</span>    {</div>
+<div class="line"><span class="lineno"> 3237</span>      return ::GetConsoleWindow() != <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 3238</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#af19dcb3f84dff6b5cf0e2bcc3ccf6edb">isOpen()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#af19dcb3f84dff6b5cf0e2bcc3ccf6edb">isOpen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7b8c87cac5cee3c9c4ad9f19aebc8c02">npi::log::closeConsole()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a3f5453b25bfa7808da0fa9c48d5a0b01">npi::log::isConsoleOpen()</a>, and <a class="el" href="#af19dcb3f84dff6b5cf0e2bcc3ccf6edb">isOpen()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -292,7 +295,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_af19dcb3f84dff6b5cf0e2bcc3ccf6edb_icgraph.svg" width="400" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_af19dcb3f84dff6b5cf0e2bcc3ccf6edb_icgraph.svg" width="654" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -314,15 +317,15 @@ Here is the caller graph for this function:</div>
 
 <p>Checks whether a console was attached during initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03235">3235</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3236</span>    {</div>
-<div class="line"><span class="lineno"> 3237</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>().<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af7d1962996cb559dd8b9e50d45c2aba4">permConsole_</a> != INVALID_HANDLE_VALUE;</div>
-<div class="line"><span class="lineno"> 3238</span>    }</div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_af7d1962996cb559dd8b9e50d45c2aba4"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af7d1962996cb559dd8b9e50d45c2aba4">anonymous_namespace{Log.cpp}::LeakedState::permConsole_</a></div><div class="ttdeci">const HANDLE permConsole_</div><div class="ttdoc">Handle to permanent console if available.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01602">Log.cpp:1602</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03229">3229</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3230</span>    {</div>
+<div class="line"><span class="lineno"> 3231</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>().<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af7d1962996cb559dd8b9e50d45c2aba4">permConsole_</a> != INVALID_HANDLE_VALUE;</div>
+<div class="line"><span class="lineno"> 3232</span>    }</div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_af7d1962996cb559dd8b9e50d45c2aba4"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af7d1962996cb559dd8b9e50d45c2aba4">anonymous_namespace{Log.cpp}::LeakedState::permConsole_</a></div><div class="ttdeci">const HANDLE permConsole_</div><div class="ttdoc">Handle to permanent console if available.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01601">Log.cpp:1601</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_()</a>, <a class="el" href="#af1e8c4c76f88dcb941823751b89636b9">isPermanent()</a>, and <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af7d1962996cb559dd8b9e50d45c2aba4">anonymous_namespace{Log.cpp}::LeakedState::permConsole_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a3b284d50cc7fc024cbfb49dd7d7792be">close()</a>, and <a class="el" href="#af1e8c4c76f88dcb941823751b89636b9">isPermanent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a3b284d50cc7fc024cbfb49dd7d7792be">close()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7b8c87cac5cee3c9c4ad9f19aebc8c02">npi::log::closeConsole()</a>, <a class="el" href="#af1e8c4c76f88dcb941823751b89636b9">isPermanent()</a>, and <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ad54369e851cae6d6b5e146ee35fbcc35">npi::log::isPermanentConsole()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -331,7 +334,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_af1e8c4c76f88dcb941823751b89636b9_icgraph.svg" width="662" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_af1e8c4c76f88dcb941823751b89636b9_icgraph.svg" width="100%" height="444"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -353,91 +356,91 @@ Here is the caller graph for this function:</div>
 
 <p>Allocates and configures a temporary console when necessary. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03268">3268</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3269</span>    {</div>
-<div class="line"><span class="lineno"> 3270</span>      <span class="comment">// If any console is already attached, do not allocate another.</span></div>
-<div class="line"><span class="lineno"> 3271</span>      <span class="comment">// This covers both permanent console and already-open temporary console.</span></div>
-<div class="line"><span class="lineno"> 3272</span>      <span class="keywordflow">if</span>(::GetConsoleWindow() != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno"> 3273</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 3274</span> </div>
-<div class="line"><span class="lineno"> 3275</span>      <span class="keywordflow">if</span>(!::AllocConsole())</div>
-<div class="line"><span class="lineno"> 3276</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 3277</span> </div>
-<div class="line"><span class="lineno"> 3278</span>      <span class="comment">// Configure OUTPUT Handle (STD_ERROR_HANDLE) ----</span></div>
-<div class="line"><span class="lineno"> 3279</span> </div>
-<div class="line"><span class="lineno"> 3280</span>      <span class="comment">// This handles text wrapping and newline processing.</span></div>
-<div class="line"><span class="lineno"> 3281</span>      <span class="keyword">const</span> HANDLE hOut = ::GetStdHandle(STD_ERROR_HANDLE);</div>
-<div class="line"><span class="lineno"> 3282</span>      <span class="keywordflow">if</span>(hOut == INVALID_HANDLE_VALUE || hOut == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno"> 3283</span>        ::FreeConsole();</div>
-<div class="line"><span class="lineno"> 3284</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 3285</span>      }</div>
-<div class="line"><span class="lineno"> 3286</span> </div>
-<div class="line"><span class="lineno"> 3287</span>      <span class="comment">// If h is a file redirect, GetConsoleMode fails. </span></div>
-<div class="line"><span class="lineno"> 3288</span>      <span class="comment">// We want to fail in that case because WriteConsoleW won&#39;t work on files.</span></div>
-<div class="line"><span class="lineno"> 3289</span>      DWORD outMode = 0;</div>
-<div class="line"><span class="lineno"> 3290</span>      <span class="keywordflow">if</span>(::GetConsoleMode(hOut, &amp;outMode) == 0) {</div>
-<div class="line"><span class="lineno"> 3291</span>        <span class="comment">// Not a real console</span></div>
-<div class="line"><span class="lineno"> 3292</span>        ::FreeConsole();</div>
-<div class="line"><span class="lineno"> 3293</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 3294</span>      }</div>
-<div class="line"><span class="lineno"> 3295</span> </div>
-<div class="line"><span class="lineno"> 3296</span>      <span class="comment">// Set desired properties</span></div>
-<div class="line"><span class="lineno"> 3297</span>      <span class="keyword">const</span> DWORD desiredOutMode = outMode | ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT;</div>
-<div class="line"><span class="lineno"> 3298</span>      <span class="keywordflow">if</span>(outMode != desiredOutMode)</div>
-<div class="line"><span class="lineno"> 3299</span>        ::SetConsoleMode(hOut, desiredOutMode);</div>
-<div class="line"><span class="lineno"> 3300</span> </div>
-<div class="line"><span class="lineno"> 3301</span>      <span class="comment">// Configure INPUT Handle (STD_INPUT_HANDLE) ----</span></div>
-<div class="line"><span class="lineno"> 3302</span> </div>
-<div class="line"><span class="lineno"> 3303</span>      <span class="comment">// This handles Mouse Clicks and Quick Edit Mode.</span></div>
-<div class="line"><span class="lineno"> 3304</span>      <span class="keyword">const</span> HANDLE hIn = ::GetStdHandle(STD_INPUT_HANDLE);</div>
-<div class="line"><span class="lineno"> 3305</span>      <span class="keywordflow">if</span>(hIn != INVALID_HANDLE_VALUE &amp;&amp; hIn != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno"> 3306</span>        DWORD inMode = 0;</div>
-<div class="line"><span class="lineno"> 3307</span>        <span class="keywordflow">if</span>(::GetConsoleMode(hIn, &amp;inMode)) {</div>
-<div class="line"><span class="lineno"> 3308</span>          <span class="comment">// ENABLE_EXTENDED_FLAGS is required to change Quick Edit settings</span></div>
-<div class="line"><span class="lineno"> 3309</span>          DWORD desiredInMode = inMode | ENABLE_EXTENDED_FLAGS;</div>
-<div class="line"><span class="lineno"> 3310</span> </div>
-<div class="line"><span class="lineno"> 3311</span>          <span class="comment">// DISABLE Quick Edit Mode (stops mouse clicks from pausing execution)</span></div>
-<div class="line"><span class="lineno"> 3312</span>          desiredInMode &amp;= ~ENABLE_QUICK_EDIT_MODE;</div>
-<div class="line"><span class="lineno"> 3313</span>          <span class="comment">// DISABLE Insert Mode</span></div>
-<div class="line"><span class="lineno"> 3314</span>          desiredInMode &amp;= ~ENABLE_INSERT_MODE;</div>
-<div class="line"><span class="lineno"> 3315</span>          <span class="comment">// DISABLE Mouse Input (Prevents accidental processing overhead)</span></div>
-<div class="line"><span class="lineno"> 3316</span>          desiredInMode &amp;= ~ENABLE_MOUSE_INPUT;</div>
-<div class="line"><span class="lineno"> 3317</span> </div>
-<div class="line"><span class="lineno"> 3318</span>          <span class="keywordflow">if</span>(inMode != desiredInMode)</div>
-<div class="line"><span class="lineno"> 3319</span>            ::SetConsoleMode(hIn, desiredInMode);</div>
-<div class="line"><span class="lineno"> 3320</span>        }</div>
-<div class="line"><span class="lineno"> 3321</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l03262">3262</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3263</span>    {</div>
+<div class="line"><span class="lineno"> 3264</span>      <span class="comment">// If any console is already attached, do not allocate another.</span></div>
+<div class="line"><span class="lineno"> 3265</span>      <span class="comment">// This covers both permanent console and already-open temporary console.</span></div>
+<div class="line"><span class="lineno"> 3266</span>      <span class="keywordflow">if</span>(::GetConsoleWindow() != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 3267</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3268</span> </div>
+<div class="line"><span class="lineno"> 3269</span>      <span class="keywordflow">if</span>(!::AllocConsole())</div>
+<div class="line"><span class="lineno"> 3270</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3271</span> </div>
+<div class="line"><span class="lineno"> 3272</span>      <span class="comment">// Configure OUTPUT Handle (STD_ERROR_HANDLE) ----</span></div>
+<div class="line"><span class="lineno"> 3273</span> </div>
+<div class="line"><span class="lineno"> 3274</span>      <span class="comment">// This handles text wrapping and newline processing.</span></div>
+<div class="line"><span class="lineno"> 3275</span>      <span class="keyword">const</span> HANDLE hOut = ::GetStdHandle(STD_ERROR_HANDLE);</div>
+<div class="line"><span class="lineno"> 3276</span>      <span class="keywordflow">if</span>(hOut == INVALID_HANDLE_VALUE || hOut == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno"> 3277</span>        ::FreeConsole();</div>
+<div class="line"><span class="lineno"> 3278</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3279</span>      }</div>
+<div class="line"><span class="lineno"> 3280</span> </div>
+<div class="line"><span class="lineno"> 3281</span>      <span class="comment">// If h is a file redirect, GetConsoleMode fails. </span></div>
+<div class="line"><span class="lineno"> 3282</span>      <span class="comment">// We want to fail in that case because WriteConsoleW won&#39;t work on files.</span></div>
+<div class="line"><span class="lineno"> 3283</span>      DWORD outMode = 0;</div>
+<div class="line"><span class="lineno"> 3284</span>      <span class="keywordflow">if</span>(::GetConsoleMode(hOut, &amp;outMode) == 0) {</div>
+<div class="line"><span class="lineno"> 3285</span>        <span class="comment">// Not a real console</span></div>
+<div class="line"><span class="lineno"> 3286</span>        ::FreeConsole();</div>
+<div class="line"><span class="lineno"> 3287</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3288</span>      }</div>
+<div class="line"><span class="lineno"> 3289</span> </div>
+<div class="line"><span class="lineno"> 3290</span>      <span class="comment">// Set desired properties</span></div>
+<div class="line"><span class="lineno"> 3291</span>      <span class="keyword">const</span> DWORD desiredOutMode = outMode | ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT;</div>
+<div class="line"><span class="lineno"> 3292</span>      <span class="keywordflow">if</span>(outMode != desiredOutMode)</div>
+<div class="line"><span class="lineno"> 3293</span>        ::SetConsoleMode(hOut, desiredOutMode);</div>
+<div class="line"><span class="lineno"> 3294</span> </div>
+<div class="line"><span class="lineno"> 3295</span>      <span class="comment">// Configure INPUT Handle (STD_INPUT_HANDLE) ----</span></div>
+<div class="line"><span class="lineno"> 3296</span> </div>
+<div class="line"><span class="lineno"> 3297</span>      <span class="comment">// This handles Mouse Clicks and Quick Edit Mode.</span></div>
+<div class="line"><span class="lineno"> 3298</span>      <span class="keyword">const</span> HANDLE hIn = ::GetStdHandle(STD_INPUT_HANDLE);</div>
+<div class="line"><span class="lineno"> 3299</span>      <span class="keywordflow">if</span>(hIn != INVALID_HANDLE_VALUE &amp;&amp; hIn != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno"> 3300</span>        DWORD inMode = 0;</div>
+<div class="line"><span class="lineno"> 3301</span>        <span class="keywordflow">if</span>(::GetConsoleMode(hIn, &amp;inMode)) {</div>
+<div class="line"><span class="lineno"> 3302</span>          <span class="comment">// ENABLE_EXTENDED_FLAGS is required to change Quick Edit settings</span></div>
+<div class="line"><span class="lineno"> 3303</span>          DWORD desiredInMode = inMode | ENABLE_EXTENDED_FLAGS;</div>
+<div class="line"><span class="lineno"> 3304</span> </div>
+<div class="line"><span class="lineno"> 3305</span>          <span class="comment">// DISABLE Quick Edit Mode (stops mouse clicks from pausing execution)</span></div>
+<div class="line"><span class="lineno"> 3306</span>          desiredInMode &amp;= ~ENABLE_QUICK_EDIT_MODE;</div>
+<div class="line"><span class="lineno"> 3307</span>          <span class="comment">// DISABLE Insert Mode</span></div>
+<div class="line"><span class="lineno"> 3308</span>          desiredInMode &amp;= ~ENABLE_INSERT_MODE;</div>
+<div class="line"><span class="lineno"> 3309</span>          <span class="comment">// DISABLE Mouse Input (Prevents accidental processing overhead)</span></div>
+<div class="line"><span class="lineno"> 3310</span>          desiredInMode &amp;= ~ENABLE_MOUSE_INPUT;</div>
+<div class="line"><span class="lineno"> 3311</span> </div>
+<div class="line"><span class="lineno"> 3312</span>          <span class="keywordflow">if</span>(inMode != desiredInMode)</div>
+<div class="line"><span class="lineno"> 3313</span>            ::SetConsoleMode(hIn, desiredInMode);</div>
+<div class="line"><span class="lineno"> 3314</span>        }</div>
+<div class="line"><span class="lineno"> 3315</span>      }</div>
+<div class="line"><span class="lineno"> 3316</span> </div>
+<div class="line"><span class="lineno"> 3317</span>      <span class="comment">// Configure Console Window ----</span></div>
+<div class="line"><span class="lineno"> 3318</span> </div>
+<div class="line"><span class="lineno"> 3319</span>      <span class="comment">// Set the console title</span></div>
+<div class="line"><span class="lineno"> 3320</span>      QString title{QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>).append(<span class="stringliteral">&quot; Console&quot;</span>)};</div>
+<div class="line"><span class="lineno"> 3321</span>      ::SetConsoleTitleW(<span class="keyword">reinterpret_cast&lt;</span>LPCWSTR<span class="keyword">&gt;</span>(title.utf16()));</div>
 <div class="line"><span class="lineno"> 3322</span> </div>
-<div class="line"><span class="lineno"> 3323</span>      <span class="comment">// Configure Console Window ----</span></div>
-<div class="line"><span class="lineno"> 3324</span> </div>
-<div class="line"><span class="lineno"> 3325</span>      <span class="comment">// Set the console title</span></div>
-<div class="line"><span class="lineno"> 3326</span>      QString title{QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>).append(<span class="stringliteral">&quot; Console&quot;</span>)};</div>
-<div class="line"><span class="lineno"> 3327</span>      ::SetConsoleTitleW(<span class="keyword">reinterpret_cast&lt;</span>LPCWSTR<span class="keyword">&gt;</span>(title.utf16()));</div>
-<div class="line"><span class="lineno"> 3328</span> </div>
-<div class="line"><span class="lineno"> 3329</span>      <span class="comment">// Disable the Close Button (Prevent user from killing app via Console X)</span></div>
-<div class="line"><span class="lineno"> 3330</span>      <span class="keyword">const</span> HWND consoleWindow = ::GetConsoleWindow();</div>
-<div class="line"><span class="lineno"> 3331</span>      <span class="keywordflow">if</span>(consoleWindow != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno"> 3332</span>        <span class="keyword">const</span> HMENU hMenu = ::GetSystemMenu(consoleWindow, FALSE);</div>
-<div class="line"><span class="lineno"> 3333</span>        <span class="keywordflow">if</span>(hMenu != <span class="keyword">nullptr</span> &amp;&amp; ::DeleteMenu(hMenu, SC_CLOSE, MF_BYCOMMAND))</div>
-<div class="line"><span class="lineno"> 3334</span>          ::DrawMenuBar(consoleWindow);</div>
-<div class="line"><span class="lineno"> 3335</span>      }</div>
+<div class="line"><span class="lineno"> 3323</span>      <span class="comment">// Disable the Close Button (Prevent user from killing app via Console X)</span></div>
+<div class="line"><span class="lineno"> 3324</span>      <span class="keyword">const</span> HWND consoleWindow = ::GetConsoleWindow();</div>
+<div class="line"><span class="lineno"> 3325</span>      <span class="keywordflow">if</span>(consoleWindow != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno"> 3326</span>        <span class="keyword">const</span> HMENU hMenu = ::GetSystemMenu(consoleWindow, FALSE);</div>
+<div class="line"><span class="lineno"> 3327</span>        <span class="keywordflow">if</span>(hMenu != <span class="keyword">nullptr</span> &amp;&amp; ::DeleteMenu(hMenu, SC_CLOSE, MF_BYCOMMAND))</div>
+<div class="line"><span class="lineno"> 3328</span>          ::DrawMenuBar(consoleWindow);</div>
+<div class="line"><span class="lineno"> 3329</span>      }</div>
+<div class="line"><span class="lineno"> 3330</span> </div>
+<div class="line"><span class="lineno"> 3331</span>      <span class="comment">// Redirect standard C streams to the new console</span></div>
+<div class="line"><span class="lineno"> 3332</span>      <span class="comment">// This allows 3rd party libs using printf/std::cout to work.</span></div>
+<div class="line"><span class="lineno"> 3333</span>      FILE* f = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 3334</span>      <span class="keywordflow">if</span>(::freopen_s(&amp;f, <span class="stringliteral">&quot;CONOUT$&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>, stdout) == 0)</div>
+<div class="line"><span class="lineno"> 3335</span>        (void)std::setvbuf(stdout, <span class="keyword">nullptr</span>, _IONBF, 0);</div>
 <div class="line"><span class="lineno"> 3336</span> </div>
-<div class="line"><span class="lineno"> 3337</span>      <span class="comment">// Redirect standard C streams to the new console</span></div>
-<div class="line"><span class="lineno"> 3338</span>      <span class="comment">// This allows 3rd party libs using printf/std::cout to work.</span></div>
-<div class="line"><span class="lineno"> 3339</span>      FILE* f = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 3340</span>      <span class="keywordflow">if</span>(::freopen_s(&amp;f, <span class="stringliteral">&quot;CONOUT$&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>, stdout) == 0)</div>
-<div class="line"><span class="lineno"> 3341</span>        (void)std::setvbuf(stdout, <span class="keyword">nullptr</span>, _IONBF, 0);</div>
-<div class="line"><span class="lineno"> 3342</span> </div>
-<div class="line"><span class="lineno"> 3343</span>      <span class="keywordflow">if</span>(::freopen_s(&amp;f, <span class="stringliteral">&quot;CONOUT$&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>, stderr) == 0)</div>
-<div class="line"><span class="lineno"> 3344</span>        (void)std::setvbuf(stderr, <span class="keyword">nullptr</span>, _IONBF, 0);</div>
-<div class="line"><span class="lineno"> 3345</span> </div>
-<div class="line"><span class="lineno"> 3346</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 3347</span>    }</div>
+<div class="line"><span class="lineno"> 3337</span>      <span class="keywordflow">if</span>(::freopen_s(&amp;f, <span class="stringliteral">&quot;CONOUT$&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>, stderr) == 0)</div>
+<div class="line"><span class="lineno"> 3338</span>        (void)std::setvbuf(stderr, <span class="keyword">nullptr</span>, _IONBF, 0);</div>
+<div class="line"><span class="lineno"> 3339</span> </div>
+<div class="line"><span class="lineno"> 3340</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3341</span>    }</div>
 <div class="ttc" id="anamespacenpi_1_1app_html_ac99e931bbefcb61feb46dba0819e996a"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a></div><div class="ttdeci">constexpr QLatin1StringView name</div><div class="ttdoc">Application name.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d0d/_meta_info_8h_source.html#l00040">MetaInfo.h:40</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>, and <a class="el" href="#a6d5df5e0f792d0d69ad12ee313419388">open()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a6d5df5e0f792d0d69ad12ee313419388">open()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a6d5df5e0f792d0d69ad12ee313419388">open()</a>, and <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a35a969078b211913c70a3289d579181f">npi::log::openConsole()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -446,7 +449,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_a6d5df5e0f792d0d69ad12ee313419388_icgraph.svg" width="384" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console_a6d5df5e0f792d0d69ad12ee313419388_icgraph.svg" width="622" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

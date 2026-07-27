@@ -1,4 +1,6 @@
 <map id="anonymous_namespace{Log::cpp}::console::close" name="anonymous_namespace{Log::cpp}::console::close">
-<area shape="rect" id="Node000001" title="Releases the temporary console while preserving a permanent console." alt="" coords="5,29,387,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="260,24,265,19,257,14,234,10,196,8,154,10,132,15,127,20,140,30,135,29,122,21,129,11,154,5,196,3,235,4,259,9,270,18,263,28"/>
+<area shape="rect" id="Node000001" title="Releases the temporary console while preserving a permanent console." alt="" coords="251,29,632,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="498,23,502,19,495,14,475,10,441,8,405,10,385,15,381,20,392,30,387,29,376,21,382,11,404,5,441,3,476,4,497,9,507,18,501,28"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#a7b8c87cac5cee3c9c4ad9f19aebc8c02" title="Closes the temporary console." alt="" coords="5,29,203,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="240,42,203,45,202,40,246,42"/>
 </map>

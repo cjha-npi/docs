@@ -141,7 +141,7 @@ $(function(){initNavTree('d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_l
 <div class="textblock"><p>Owns all process-lifetime logging state. </p>
 <p>The singleton is intentionally allocated once and never destroyed. This avoids static-destruction ordering problems and keeps queues, caches, handles, and emergency buffers available to fatal and crash handlers until the process exits. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01552">1552</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01551">1551</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for anonymous_namespace{Log.cpp}::LeakedState:</div>
 <div class="dyncontent">
@@ -157,13 +157,13 @@ Classes</h2></td></tr>
 <tr class="memitem:CrashState_5Fd8_2Fde1_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fcrash_5Fstate" id="r_CrashState_5Fd8_2Fde1_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fcrash_5Fstate"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="#d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state">CrashState</a></td></tr>
 <tr class="memdesc:d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores crash ownership flags and allocation-free emergency buffers.  <a href="#d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state">More...</a><br /></td></tr>
 <tr class="memitem:DispWorker_5Fd1_2Fd3b_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fdisp_5Fworker" id="r_DispWorker_5Fd1_2Fd3b_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fdisp_5Fworker"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker">DispWorker</a></td></tr>
-<tr class="memdesc:d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display worker with display muting and failure information.  <a href="#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker">More...</a><br /></td></tr>
+<tr class="memdesc:d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores display worker plus display muting and failure information.  <a href="#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker">More...</a><br /></td></tr>
 <tr class="memitem:FileWorker_5Fd2_2Fdef_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Ffile_5Fworker" id="r_FileWorker_5Fd2_2Fdef_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Ffile_5Fworker"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker">FileWorker</a></td></tr>
-<tr class="memdesc:d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">File worker with normal-log file information and drop counting.  <a href="#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker">More...</a><br /></td></tr>
+<tr class="memdesc:d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores file worker state plus normal-log file information and drop counting.  <a href="#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker">More...</a><br /></td></tr>
 <tr class="memitem:Runtime_5Fd2_2Fd25_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fruntime" id="r_Runtime_5Fd2_2Fd25_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fruntime"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="#d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime">Runtime</a></td></tr>
 <tr class="memdesc:d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores mutable process state that is not part of the user configuration.  <a href="#d2/d25/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_runtime">More...</a><br /></td></tr>
 <tr class="memitem:Worker_5Fd0_2Fded_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fworker" id="r_Worker_5Fd0_2Fded_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Fleaked_5Fstate_5F1_5F1_5Fworker"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">Worker</a></td></tr>
-<tr class="memdesc:d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides queue, wake-up, field-layout, and thread state shared by workers.  <a href="#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">More...</a><br /></td></tr>
+<tr class="memdesc:d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides common queue, wake-up, field-layout, and thread state for workers.  <a href="#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -677,7 +677,7 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01675">1675</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01674">1674</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -801,20 +801,20 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01716">1716</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1716</span>                  : <a class="code hl_variable" href="#a6df3eff6860870e5ee56b0cefb957cc8">allFields_</a>{<a class="code hl_function" href="#af445fc06eca56a41e21e49cd943a261b">GenAllFieldsText_</a>()},</div>
-<div class="line"><span class="lineno"> 1717</span>                    <a class="code hl_variable" href="#a7856efbd552f82b826a44e906ecc4fbb">defFileFieldsText_</a>{<a class="code hl_function" href="#afa860e5f805566dfb6d3b74cadbf826d">GenTextFromFieldsList_</a>(<a class="code hl_variable" href="#a7d5484fa7364c50d3a11d949c483de94">defFileFields_</a>)},</div>
-<div class="line"><span class="lineno"> 1718</span>                    <a class="code hl_variable" href="#ad24d31c03c2f60692bf4b84db97bed20">defDispFieldsText_</a>{<a class="code hl_function" href="#afa860e5f805566dfb6d3b74cadbf826d">GenTextFromFieldsList_</a>(<a class="code hl_variable" href="#ac2dd8bd912d715fc03996a181dfde180">defDispFields_</a>)},</div>
-<div class="line"><span class="lineno"> 1719</span>                    <a class="code hl_variable" href="#af7d1962996cb559dd8b9e50d45c2aba4">permConsole_</a>{<a class="code hl_function" href="#ae0f74e4fc893caff483e47bcc8f799c1">PermConsoleHandle_</a>()} {}</div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a6df3eff6860870e5ee56b0cefb957cc8"><div class="ttname"><a href="#a6df3eff6860870e5ee56b0cefb957cc8">anonymous_namespace{Log.cpp}::LeakedState::allFields_</a></div><div class="ttdeci">const QString allFields_</div><div class="ttdoc">All fields text.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01598">Log.cpp:1598</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a7856efbd552f82b826a44e906ecc4fbb"><div class="ttname"><a href="#a7856efbd552f82b826a44e906ecc4fbb">anonymous_namespace{Log.cpp}::LeakedState::defFileFieldsText_</a></div><div class="ttdeci">const QString defFileFieldsText_</div><div class="ttdoc">Default file fields text (generated from default file fields above).</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01599">Log.cpp:1599</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a7d5484fa7364c50d3a11d949c483de94"><div class="ttname"><a href="#a7d5484fa7364c50d3a11d949c483de94">anonymous_namespace{Log.cpp}::LeakedState::defFileFields_</a></div><div class="ttdeci">const QList&lt; Field &gt; defFileFields_</div><div class="ttdoc">Default file fields.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01581">Log.cpp:1581</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ac2dd8bd912d715fc03996a181dfde180"><div class="ttname"><a href="#ac2dd8bd912d715fc03996a181dfde180">anonymous_namespace{Log.cpp}::LeakedState::defDispFields_</a></div><div class="ttdeci">const QList&lt; Field &gt; defDispFields_</div><div class="ttdoc">Default display fields.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01592">Log.cpp:1592</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ad24d31c03c2f60692bf4b84db97bed20"><div class="ttname"><a href="#ad24d31c03c2f60692bf4b84db97bed20">anonymous_namespace{Log.cpp}::LeakedState::defDispFieldsText_</a></div><div class="ttdeci">const QString defDispFieldsText_</div><div class="ttdoc">Default display fields text (generated from default display fields above).</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01600">Log.cpp:1600</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ae0f74e4fc893caff483e47bcc8f799c1"><div class="ttname"><a href="#ae0f74e4fc893caff483e47bcc8f799c1">anonymous_namespace{Log.cpp}::LeakedState::PermConsoleHandle_</a></div><div class="ttdeci">static HANDLE PermConsoleHandle_()</div><div class="ttdoc">Detects and configures the console attached during initialization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01753">Log.cpp:1753</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_af445fc06eca56a41e21e49cd943a261b"><div class="ttname"><a href="#af445fc06eca56a41e21e49cd943a261b">anonymous_namespace{Log.cpp}::LeakedState::GenAllFieldsText_</a></div><div class="ttdeci">static QString GenAllFieldsText_()</div><div class="ttdoc">Generates the space-separated list of every supported output field.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01722">Log.cpp:1722</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_af7d1962996cb559dd8b9e50d45c2aba4"><div class="ttname"><a href="#af7d1962996cb559dd8b9e50d45c2aba4">anonymous_namespace{Log.cpp}::LeakedState::permConsole_</a></div><div class="ttdeci">const HANDLE permConsole_</div><div class="ttdoc">Handle to permanent console if available.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01602">Log.cpp:1602</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_afa860e5f805566dfb6d3b74cadbf826d"><div class="ttname"><a href="#afa860e5f805566dfb6d3b74cadbf826d">anonymous_namespace{Log.cpp}::LeakedState::GenTextFromFieldsList_</a></div><div class="ttdeci">static QString GenTextFromFieldsList_(const QList&lt; Field &gt; &amp;fields)</div><div class="ttdoc">Converts an ordered field list to normalized field text.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01737">Log.cpp:1737</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01715">1715</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1715</span>                  : <a class="code hl_variable" href="#a6df3eff6860870e5ee56b0cefb957cc8">allFields_</a>{<a class="code hl_function" href="#af445fc06eca56a41e21e49cd943a261b">GenAllFieldsText_</a>()},</div>
+<div class="line"><span class="lineno"> 1716</span>                    <a class="code hl_variable" href="#a7856efbd552f82b826a44e906ecc4fbb">defFileFieldsText_</a>{<a class="code hl_function" href="#afa860e5f805566dfb6d3b74cadbf826d">GenTextFromFieldsList_</a>(<a class="code hl_variable" href="#a7d5484fa7364c50d3a11d949c483de94">defFileFields_</a>)},</div>
+<div class="line"><span class="lineno"> 1717</span>                    <a class="code hl_variable" href="#ad24d31c03c2f60692bf4b84db97bed20">defDispFieldsText_</a>{<a class="code hl_function" href="#afa860e5f805566dfb6d3b74cadbf826d">GenTextFromFieldsList_</a>(<a class="code hl_variable" href="#ac2dd8bd912d715fc03996a181dfde180">defDispFields_</a>)},</div>
+<div class="line"><span class="lineno"> 1718</span>                    <a class="code hl_variable" href="#af7d1962996cb559dd8b9e50d45c2aba4">permConsole_</a>{<a class="code hl_function" href="#ae0f74e4fc893caff483e47bcc8f799c1">PermConsoleHandle_</a>()} {}</div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a6df3eff6860870e5ee56b0cefb957cc8"><div class="ttname"><a href="#a6df3eff6860870e5ee56b0cefb957cc8">anonymous_namespace{Log.cpp}::LeakedState::allFields_</a></div><div class="ttdeci">const QString allFields_</div><div class="ttdoc">All fields text.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01597">Log.cpp:1597</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a7856efbd552f82b826a44e906ecc4fbb"><div class="ttname"><a href="#a7856efbd552f82b826a44e906ecc4fbb">anonymous_namespace{Log.cpp}::LeakedState::defFileFieldsText_</a></div><div class="ttdeci">const QString defFileFieldsText_</div><div class="ttdoc">Default file fields text (generated from default file fields above).</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01598">Log.cpp:1598</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a7d5484fa7364c50d3a11d949c483de94"><div class="ttname"><a href="#a7d5484fa7364c50d3a11d949c483de94">anonymous_namespace{Log.cpp}::LeakedState::defFileFields_</a></div><div class="ttdeci">const QList&lt; Field &gt; defFileFields_</div><div class="ttdoc">Default file fields.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01580">Log.cpp:1580</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ac2dd8bd912d715fc03996a181dfde180"><div class="ttname"><a href="#ac2dd8bd912d715fc03996a181dfde180">anonymous_namespace{Log.cpp}::LeakedState::defDispFields_</a></div><div class="ttdeci">const QList&lt; Field &gt; defDispFields_</div><div class="ttdoc">Default display fields.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01591">Log.cpp:1591</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ad24d31c03c2f60692bf4b84db97bed20"><div class="ttname"><a href="#ad24d31c03c2f60692bf4b84db97bed20">anonymous_namespace{Log.cpp}::LeakedState::defDispFieldsText_</a></div><div class="ttdeci">const QString defDispFieldsText_</div><div class="ttdoc">Default display fields text (generated from default display fields above).</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01599">Log.cpp:1599</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ae0f74e4fc893caff483e47bcc8f799c1"><div class="ttname"><a href="#ae0f74e4fc893caff483e47bcc8f799c1">anonymous_namespace{Log.cpp}::LeakedState::PermConsoleHandle_</a></div><div class="ttdeci">static HANDLE PermConsoleHandle_()</div><div class="ttdoc">Detects and configures the console attached during initialization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01752">Log.cpp:1752</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_af445fc06eca56a41e21e49cd943a261b"><div class="ttname"><a href="#af445fc06eca56a41e21e49cd943a261b">anonymous_namespace{Log.cpp}::LeakedState::GenAllFieldsText_</a></div><div class="ttdeci">static QString GenAllFieldsText_()</div><div class="ttdoc">Generates the space-separated list of every supported output field.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01721">Log.cpp:1721</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_af7d1962996cb559dd8b9e50d45c2aba4"><div class="ttname"><a href="#af7d1962996cb559dd8b9e50d45c2aba4">anonymous_namespace{Log.cpp}::LeakedState::permConsole_</a></div><div class="ttdeci">const HANDLE permConsole_</div><div class="ttdoc">Handle to permanent console if available.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01601">Log.cpp:1601</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_afa860e5f805566dfb6d3b74cadbf826d"><div class="ttname"><a href="#afa860e5f805566dfb6d3b74cadbf826d">anonymous_namespace{Log.cpp}::LeakedState::GenTextFromFieldsList_</a></div><div class="ttdeci">static QString GenTextFromFieldsList_(const QList&lt; Field &gt; &amp;fields)</div><div class="ttdoc">Converts an ordered field list to normalized field text.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01736">Log.cpp:1736</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a6df3eff6860870e5ee56b0cefb957cc8">allFields_</a>, <a class="el" href="#ac2dd8bd912d715fc03996a181dfde180">defDispFields_</a>, <a class="el" href="#ad24d31c03c2f60692bf4b84db97bed20">defDispFieldsText_</a>, <a class="el" href="#a7d5484fa7364c50d3a11d949c483de94">defFileFields_</a>, <a class="el" href="#a7856efbd552f82b826a44e906ecc4fbb">defFileFieldsText_</a>, <a class="el" href="#af445fc06eca56a41e21e49cd943a261b">GenAllFieldsText_()</a>, <a class="el" href="#afa860e5f805566dfb6d3b74cadbf826d">GenTextFromFieldsList_()</a>, <a class="el" href="#af7d1962996cb559dd8b9e50d45c2aba4">permConsole_</a>, and <a class="el" href="#ae0f74e4fc893caff483e47bcc8f799c1">PermConsoleHandle_()</a>.</p>
 
@@ -858,19 +858,19 @@ Here is the caller graph for this function:</div>
 
 <p>Generates the space-separated list of every supported output field. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01722">1722</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1723</span>    {</div>
-<div class="line"><span class="lineno"> 1724</span>      <span class="keyword">constexpr</span> <span class="keyword">auto</span> allNames = magic_enum::enum_names&lt;Field&gt;();</div>
-<div class="line"><span class="lineno"> 1725</span>      QString str;</div>
-<div class="line"><span class="lineno"> 1726</span>      <span class="keywordflow">for</span>(<span class="keyword">auto</span> name : allNames) {</div>
-<div class="line"><span class="lineno"> 1727</span>        <span class="keywordflow">if</span>(!str.isEmpty()) str.append(<span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno"> 1728</span>        str.append(QLatin1StringView{</div>
-<div class="line"><span class="lineno"> 1729</span>          <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.data(),</div>
-<div class="line"><span class="lineno"> 1730</span>          <span class="keyword">static_cast&lt;</span>qsizetype<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.size())</div>
-<div class="line"><span class="lineno"> 1731</span>        });</div>
-<div class="line"><span class="lineno"> 1732</span>      }</div>
-<div class="line"><span class="lineno"> 1733</span>      <span class="keywordflow">return</span> str;</div>
-<div class="line"><span class="lineno"> 1734</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01721">1721</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1722</span>    {</div>
+<div class="line"><span class="lineno"> 1723</span>      <span class="keyword">constexpr</span> <span class="keyword">auto</span> allNames = magic_enum::enum_names&lt;Field&gt;();</div>
+<div class="line"><span class="lineno"> 1724</span>      QString str;</div>
+<div class="line"><span class="lineno"> 1725</span>      <span class="keywordflow">for</span>(<span class="keyword">auto</span> name : allNames) {</div>
+<div class="line"><span class="lineno"> 1726</span>        <span class="keywordflow">if</span>(!str.isEmpty()) str.append(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno"> 1727</span>        str.append(QLatin1StringView{</div>
+<div class="line"><span class="lineno"> 1728</span>          <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.data(),</div>
+<div class="line"><span class="lineno"> 1729</span>          <span class="keyword">static_cast&lt;</span>qsizetype<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.size())</div>
+<div class="line"><span class="lineno"> 1730</span>        });</div>
+<div class="line"><span class="lineno"> 1731</span>      }</div>
+<div class="line"><span class="lineno"> 1732</span>      <span class="keywordflow">return</span> str;</div>
+<div class="line"><span class="lineno"> 1733</span>    }</div>
 <div class="ttc" id="anamespacenpi_1_1app_html_ac99e931bbefcb61feb46dba0819e996a"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a></div><div class="ttdeci">constexpr QLatin1StringView name</div><div class="ttdoc">Application name.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d0d/_meta_info_8h_source.html#l00040">MetaInfo.h:40</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a7a843782348b647c13a98ef04223d7b2">LeakedState()</a>.</p>
@@ -907,21 +907,21 @@ Here is the caller graph for this function:</div>
 
 <p>Converts an ordered field list to normalized field text. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01737">1737</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1738</span>    {</div>
-<div class="line"><span class="lineno"> 1739</span>      QString str;</div>
-<div class="line"><span class="lineno"> 1740</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_enumeration" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a> field : fields) {</div>
-<div class="line"><span class="lineno"> 1741</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a> = magic_enum::enum_name(field);</div>
-<div class="line"><span class="lineno"> 1742</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.empty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1743</span>        <span class="keywordflow">if</span>(!str.isEmpty()) str.append(<span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno"> 1744</span>        str.append(QLatin1StringView{</div>
-<div class="line"><span class="lineno"> 1745</span>          <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.data(),</div>
-<div class="line"><span class="lineno"> 1746</span>          <span class="keyword">static_cast&lt;</span>qsizetype<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.size())</div>
-<div class="line"><span class="lineno"> 1747</span>        });</div>
-<div class="line"><span class="lineno"> 1748</span>      }</div>
-<div class="line"><span class="lineno"> 1749</span>      <span class="keywordflow">return</span> str;</div>
-<div class="line"><span class="lineno"> 1750</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0d"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">anonymous_namespace{Log.cpp}::Field</a></div><div class="ttdeci">Field</div><div class="ttdoc">Identifies a field that can be included in formatted log output.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00190">Log.cpp:190</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01736">1736</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1737</span>    {</div>
+<div class="line"><span class="lineno"> 1738</span>      QString str;</div>
+<div class="line"><span class="lineno"> 1739</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_enumeration" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a> field : fields) {</div>
+<div class="line"><span class="lineno"> 1740</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a> = magic_enum::enum_name(field);</div>
+<div class="line"><span class="lineno"> 1741</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.empty()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1742</span>        <span class="keywordflow">if</span>(!str.isEmpty()) str.append(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno"> 1743</span>        str.append(QLatin1StringView{</div>
+<div class="line"><span class="lineno"> 1744</span>          <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.data(),</div>
+<div class="line"><span class="lineno"> 1745</span>          <span class="keyword">static_cast&lt;</span>qsizetype<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.size())</div>
+<div class="line"><span class="lineno"> 1746</span>        });</div>
+<div class="line"><span class="lineno"> 1747</span>      }</div>
+<div class="line"><span class="lineno"> 1748</span>      <span class="keywordflow">return</span> str;</div>
+<div class="line"><span class="lineno"> 1749</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0d"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">anonymous_namespace{Log.cpp}::Field</a></div><div class="ttdeci">Field</div><div class="ttdoc">Identifies a field that can be included in formatted log output.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00189">Log.cpp:189</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a7a843782348b647c13a98ef04223d7b2">LeakedState()</a>.</p>
 <div class="dynheader">
@@ -957,11 +957,11 @@ Here is the caller graph for this function:</div>
 
 <p>Returns the intentionally leaked process-wide logging state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01709">1709</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1710</span>    {</div>
-<div class="line"><span class="lineno"> 1711</span>      <span class="keyword">static</span> <span class="keyword">auto</span>* inst = <span class="keyword">new</span> <a class="code hl_function" href="#aa17c6f240dd55f157216265327935ac5">LeakedState</a>;</div>
-<div class="line"><span class="lineno"> 1712</span>      <span class="keywordflow">return</span> *inst;</div>
-<div class="line"><span class="lineno"> 1713</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01708">1708</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1709</span>    {</div>
+<div class="line"><span class="lineno"> 1710</span>      <span class="keyword">static</span> <span class="keyword">auto</span>* inst = <span class="keyword">new</span> <a class="code hl_function" href="#aa17c6f240dd55f157216265327935ac5">LeakedState</a>;</div>
+<div class="line"><span class="lineno"> 1711</span>      <span class="keywordflow">return</span> *inst;</div>
+<div class="line"><span class="lineno"> 1712</span>    }</div>
 <div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_aa17c6f240dd55f157216265327935ac5"><div class="ttname"><a href="#aa17c6f240dd55f157216265327935ac5">anonymous_namespace{Log.cpp}::LeakedState::LeakedState</a></div><div class="ttdeci">LeakedState(const LeakedState &amp;)=delete</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#aa17c6f240dd55f157216265327935ac5">LeakedState()</a>.</p>
@@ -1069,81 +1069,81 @@ Here is the call graph for this function:</div>
 
 <p>Detects and configures the console attached during initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01753">1753</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1754</span>    {</div>
-<div class="line"><span class="lineno"> 1755</span>      <span class="comment">// No console was attached when LeakedState was created.</span></div>
-<div class="line"><span class="lineno"> 1756</span>      <span class="keywordflow">if</span>(::GetConsoleWindow() == <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno"> 1757</span>        <span class="keywordflow">return</span> INVALID_HANDLE_VALUE;</div>
-<div class="line"><span class="lineno"> 1758</span> </div>
-<div class="line"><span class="lineno"> 1759</span>      <span class="comment">// Open the attached console directly, independently of redirected</span></div>
-<div class="line"><span class="lineno"> 1760</span>      <span class="comment">// STD_OUTPUT_HANDLE or STD_ERROR_HANDLE.</span></div>
-<div class="line"><span class="lineno"> 1761</span>      <span class="keyword">const</span> HANDLE consoleHandle = ::CreateFileW(</div>
-<div class="line"><span class="lineno"> 1762</span>        L<span class="stringliteral">&quot;CONOUT$&quot;</span>,</div>
-<div class="line"><span class="lineno"> 1763</span>        GENERIC_READ | GENERIC_WRITE,</div>
-<div class="line"><span class="lineno"> 1764</span>        FILE_SHARE_READ | FILE_SHARE_WRITE,</div>
-<div class="line"><span class="lineno"> 1765</span>        <span class="keyword">nullptr</span>,</div>
-<div class="line"><span class="lineno"> 1766</span>        OPEN_EXISTING,</div>
-<div class="line"><span class="lineno"> 1767</span>        0,</div>
-<div class="line"><span class="lineno"> 1768</span>        <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno"> 1769</span> </div>
-<div class="line"><span class="lineno"> 1770</span>      <span class="keywordflow">if</span>(consoleHandle == INVALID_HANDLE_VALUE) {</div>
-<div class="line"><span class="lineno"> 1771</span>        <span class="keyword">const</span> DWORD error = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 1772</span> </div>
-<div class="line"><span class="lineno"> 1773</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 1774</span>          QStringLiteral(</div>
-<div class="line"><span class="lineno"> 1775</span>            <span class="stringliteral">&quot;Fatal Error:\n&quot;</span></div>
-<div class="line"><span class="lineno"> 1776</span>            <span class="stringliteral">&quot;Permanent Console Initialization Failed.\n\n&quot;</span></div>
-<div class="line"><span class="lineno"> 1777</span>            <span class="stringliteral">&quot;&#39;CreateFileW(CONOUT$)&#39; failed.\n\n&quot;</span></div>
-<div class="line"><span class="lineno"> 1778</span>            <span class="stringliteral">&quot;Error: %1\n\n&quot;</span></div>
-<div class="line"><span class="lineno"> 1779</span>            <span class="stringliteral">&quot;The application cannot continue safely and will now exit.&quot;</span>)</div>
-<div class="line"><span class="lineno"> 1780</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(error))));</div>
-<div class="line"><span class="lineno"> 1781</span>      }</div>
-<div class="line"><span class="lineno"> 1782</span> </div>
-<div class="line"><span class="lineno"> 1783</span>      <span class="comment">// Configure console output.</span></div>
-<div class="line"><span class="lineno"> 1784</span>      DWORD outMode = 0;</div>
-<div class="line"><span class="lineno"> 1785</span>      <span class="keywordflow">if</span>(::GetConsoleMode(consoleHandle, &amp;outMode) == 0) {</div>
-<div class="line"><span class="lineno"> 1786</span>        <span class="keyword">const</span> DWORD error = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 1787</span>        ::CloseHandle(consoleHandle);</div>
-<div class="line"><span class="lineno"> 1788</span> </div>
-<div class="line"><span class="lineno"> 1789</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 1790</span>          QStringLiteral(</div>
-<div class="line"><span class="lineno"> 1791</span>            <span class="stringliteral">&quot;Fatal Error:\n&quot;</span></div>
-<div class="line"><span class="lineno"> 1792</span>            <span class="stringliteral">&quot;Permanent Console Initialization Failed.\n\n&quot;</span></div>
-<div class="line"><span class="lineno"> 1793</span>            <span class="stringliteral">&quot;&#39;GetConsoleMode&#39; failed for the CONOUT$ handle.\n\n&quot;</span></div>
-<div class="line"><span class="lineno"> 1794</span>            <span class="stringliteral">&quot;Error: %1\n\n&quot;</span></div>
-<div class="line"><span class="lineno"> 1795</span>            <span class="stringliteral">&quot;The application cannot continue safely and will now exit.&quot;</span>)</div>
-<div class="line"><span class="lineno"> 1796</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(error))));</div>
-<div class="line"><span class="lineno"> 1797</span>      }</div>
-<div class="line"><span class="lineno"> 1798</span> </div>
-<div class="line"><span class="lineno"> 1799</span>      <span class="keyword">const</span> DWORD desiredOutMode =</div>
-<div class="line"><span class="lineno"> 1800</span>      outMode | ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT;</div>
-<div class="line"><span class="lineno"> 1801</span> </div>
-<div class="line"><span class="lineno"> 1802</span>      <span class="keywordflow">if</span>(outMode != desiredOutMode)</div>
-<div class="line"><span class="lineno"> 1803</span>        (void)::SetConsoleMode(consoleHandle, desiredOutMode);</div>
-<div class="line"><span class="lineno"> 1804</span> </div>
-<div class="line"><span class="lineno"> 1805</span>      <span class="comment">// Configure console input when STD_INPUT_HANDLE still refers to</span></div>
-<div class="line"><span class="lineno"> 1806</span>      <span class="comment">// the console rather than a redirected file or pipe.</span></div>
-<div class="line"><span class="lineno"> 1807</span>      <span class="keyword">const</span> HANDLE input = ::GetStdHandle(STD_INPUT_HANDLE);</div>
-<div class="line"><span class="lineno"> 1808</span>      <span class="keywordflow">if</span>(input != <span class="keyword">nullptr</span> &amp;&amp; input != INVALID_HANDLE_VALUE) {</div>
-<div class="line"><span class="lineno"> 1809</span>        DWORD inMode = 0;</div>
-<div class="line"><span class="lineno"> 1810</span> </div>
-<div class="line"><span class="lineno"> 1811</span>        <span class="keywordflow">if</span>(::GetConsoleMode(input, &amp;inMode)) {</div>
-<div class="line"><span class="lineno"> 1812</span>          DWORD desiredInMode = inMode | ENABLE_EXTENDED_FLAGS;</div>
-<div class="line"><span class="lineno"> 1813</span>          desiredInMode &amp;= ~ENABLE_QUICK_EDIT_MODE;</div>
-<div class="line"><span class="lineno"> 1814</span>          desiredInMode &amp;= ~ENABLE_INSERT_MODE;</div>
-<div class="line"><span class="lineno"> 1815</span>          desiredInMode &amp;= ~ENABLE_MOUSE_INPUT;</div>
-<div class="line"><span class="lineno"> 1816</span> </div>
-<div class="line"><span class="lineno"> 1817</span>          <span class="keywordflow">if</span>(inMode != desiredInMode)</div>
-<div class="line"><span class="lineno"> 1818</span>            (void)::SetConsoleMode(input, desiredInMode);</div>
-<div class="line"><span class="lineno"> 1819</span>        }</div>
-<div class="line"><span class="lineno"> 1820</span>      }</div>
-<div class="line"><span class="lineno"> 1821</span> </div>
-<div class="line"><span class="lineno"> 1822</span>      QString title{QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>).append(<span class="stringliteral">&quot; Console&quot;</span>)};</div>
-<div class="line"><span class="lineno"> 1823</span>      (void)::SetConsoleTitleW(</div>
-<div class="line"><span class="lineno"> 1824</span>        <span class="keyword">reinterpret_cast&lt;</span>LPCWSTR<span class="keyword">&gt;</span>(title.utf16()));</div>
-<div class="line"><span class="lineno"> 1825</span> </div>
-<div class="line"><span class="lineno"> 1826</span>      <span class="keywordflow">return</span> consoleHandle;</div>
-<div class="line"><span class="lineno"> 1827</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01752">1752</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1753</span>    {</div>
+<div class="line"><span class="lineno"> 1754</span>      <span class="comment">// No console was attached when LeakedState was created.</span></div>
+<div class="line"><span class="lineno"> 1755</span>      <span class="keywordflow">if</span>(::GetConsoleWindow() == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1756</span>        <span class="keywordflow">return</span> INVALID_HANDLE_VALUE;</div>
+<div class="line"><span class="lineno"> 1757</span> </div>
+<div class="line"><span class="lineno"> 1758</span>      <span class="comment">// Open the attached console directly, independently of redirected</span></div>
+<div class="line"><span class="lineno"> 1759</span>      <span class="comment">// STD_OUTPUT_HANDLE or STD_ERROR_HANDLE.</span></div>
+<div class="line"><span class="lineno"> 1760</span>      <span class="keyword">const</span> HANDLE consoleHandle = ::CreateFileW(</div>
+<div class="line"><span class="lineno"> 1761</span>        L<span class="stringliteral">&quot;CONOUT$&quot;</span>,</div>
+<div class="line"><span class="lineno"> 1762</span>        GENERIC_READ | GENERIC_WRITE,</div>
+<div class="line"><span class="lineno"> 1763</span>        FILE_SHARE_READ | FILE_SHARE_WRITE,</div>
+<div class="line"><span class="lineno"> 1764</span>        <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno"> 1765</span>        OPEN_EXISTING,</div>
+<div class="line"><span class="lineno"> 1766</span>        0,</div>
+<div class="line"><span class="lineno"> 1767</span>        <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno"> 1768</span> </div>
+<div class="line"><span class="lineno"> 1769</span>      <span class="keywordflow">if</span>(consoleHandle == INVALID_HANDLE_VALUE) {</div>
+<div class="line"><span class="lineno"> 1770</span>        <span class="keyword">const</span> DWORD error = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 1771</span> </div>
+<div class="line"><span class="lineno"> 1772</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 1773</span>          QStringLiteral(</div>
+<div class="line"><span class="lineno"> 1774</span>            <span class="stringliteral">&quot;Fatal Error:\n&quot;</span></div>
+<div class="line"><span class="lineno"> 1775</span>            <span class="stringliteral">&quot;Permanent Console Initialization Failed.\n\n&quot;</span></div>
+<div class="line"><span class="lineno"> 1776</span>            <span class="stringliteral">&quot;&#39;CreateFileW(CONOUT$)&#39; failed.\n\n&quot;</span></div>
+<div class="line"><span class="lineno"> 1777</span>            <span class="stringliteral">&quot;Error: %1\n\n&quot;</span></div>
+<div class="line"><span class="lineno"> 1778</span>            <span class="stringliteral">&quot;The application cannot continue safely and will now exit.&quot;</span>)</div>
+<div class="line"><span class="lineno"> 1779</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(error))));</div>
+<div class="line"><span class="lineno"> 1780</span>      }</div>
+<div class="line"><span class="lineno"> 1781</span> </div>
+<div class="line"><span class="lineno"> 1782</span>      <span class="comment">// Configure console output.</span></div>
+<div class="line"><span class="lineno"> 1783</span>      DWORD outMode = 0;</div>
+<div class="line"><span class="lineno"> 1784</span>      <span class="keywordflow">if</span>(::GetConsoleMode(consoleHandle, &amp;outMode) == 0) {</div>
+<div class="line"><span class="lineno"> 1785</span>        <span class="keyword">const</span> DWORD error = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 1786</span>        ::CloseHandle(consoleHandle);</div>
+<div class="line"><span class="lineno"> 1787</span> </div>
+<div class="line"><span class="lineno"> 1788</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 1789</span>          QStringLiteral(</div>
+<div class="line"><span class="lineno"> 1790</span>            <span class="stringliteral">&quot;Fatal Error:\n&quot;</span></div>
+<div class="line"><span class="lineno"> 1791</span>            <span class="stringliteral">&quot;Permanent Console Initialization Failed.\n\n&quot;</span></div>
+<div class="line"><span class="lineno"> 1792</span>            <span class="stringliteral">&quot;&#39;GetConsoleMode&#39; failed for the CONOUT$ handle.\n\n&quot;</span></div>
+<div class="line"><span class="lineno"> 1793</span>            <span class="stringliteral">&quot;Error: %1\n\n&quot;</span></div>
+<div class="line"><span class="lineno"> 1794</span>            <span class="stringliteral">&quot;The application cannot continue safely and will now exit.&quot;</span>)</div>
+<div class="line"><span class="lineno"> 1795</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(error))));</div>
+<div class="line"><span class="lineno"> 1796</span>      }</div>
+<div class="line"><span class="lineno"> 1797</span> </div>
+<div class="line"><span class="lineno"> 1798</span>      <span class="keyword">const</span> DWORD desiredOutMode =</div>
+<div class="line"><span class="lineno"> 1799</span>      outMode | ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT;</div>
+<div class="line"><span class="lineno"> 1800</span> </div>
+<div class="line"><span class="lineno"> 1801</span>      <span class="keywordflow">if</span>(outMode != desiredOutMode)</div>
+<div class="line"><span class="lineno"> 1802</span>        (void)::SetConsoleMode(consoleHandle, desiredOutMode);</div>
+<div class="line"><span class="lineno"> 1803</span> </div>
+<div class="line"><span class="lineno"> 1804</span>      <span class="comment">// Configure console input when STD_INPUT_HANDLE still refers to</span></div>
+<div class="line"><span class="lineno"> 1805</span>      <span class="comment">// the console rather than a redirected file or pipe.</span></div>
+<div class="line"><span class="lineno"> 1806</span>      <span class="keyword">const</span> HANDLE input = ::GetStdHandle(STD_INPUT_HANDLE);</div>
+<div class="line"><span class="lineno"> 1807</span>      <span class="keywordflow">if</span>(input != <span class="keyword">nullptr</span> &amp;&amp; input != INVALID_HANDLE_VALUE) {</div>
+<div class="line"><span class="lineno"> 1808</span>        DWORD inMode = 0;</div>
+<div class="line"><span class="lineno"> 1809</span> </div>
+<div class="line"><span class="lineno"> 1810</span>        <span class="keywordflow">if</span>(::GetConsoleMode(input, &amp;inMode)) {</div>
+<div class="line"><span class="lineno"> 1811</span>          DWORD desiredInMode = inMode | ENABLE_EXTENDED_FLAGS;</div>
+<div class="line"><span class="lineno"> 1812</span>          desiredInMode &amp;= ~ENABLE_QUICK_EDIT_MODE;</div>
+<div class="line"><span class="lineno"> 1813</span>          desiredInMode &amp;= ~ENABLE_INSERT_MODE;</div>
+<div class="line"><span class="lineno"> 1814</span>          desiredInMode &amp;= ~ENABLE_MOUSE_INPUT;</div>
+<div class="line"><span class="lineno"> 1815</span> </div>
+<div class="line"><span class="lineno"> 1816</span>          <span class="keywordflow">if</span>(inMode != desiredInMode)</div>
+<div class="line"><span class="lineno"> 1817</span>            (void)::SetConsoleMode(input, desiredInMode);</div>
+<div class="line"><span class="lineno"> 1818</span>        }</div>
+<div class="line"><span class="lineno"> 1819</span>      }</div>
+<div class="line"><span class="lineno"> 1820</span> </div>
+<div class="line"><span class="lineno"> 1821</span>      QString title{QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>).append(<span class="stringliteral">&quot; Console&quot;</span>)};</div>
+<div class="line"><span class="lineno"> 1822</span>      (void)::SetConsoleTitleW(</div>
+<div class="line"><span class="lineno"> 1823</span>        <span class="keyword">reinterpret_cast&lt;</span>LPCWSTR<span class="keyword">&gt;</span>(title.utf16()));</div>
+<div class="line"><span class="lineno"> 1824</span> </div>
+<div class="line"><span class="lineno"> 1825</span>      <span class="keywordflow">return</span> consoleHandle;</div>
+<div class="line"><span class="lineno"> 1826</span>    }</div>
 <div class="ttc" id="anamespacenpi_1_1app_html_ab43cdd42223150fbfc70f9a9f02a9019"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a></div><div class="ttdeci">void winStopMsgExe(const char *message) noexcept</div><div class="ttdoc">Launches npiMsgBox.exe to show a stop/error message box and terminates this process.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00402">WinMsgBoxExe.cpp:402</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1ind_html_a36235e7ddba2a265d60b240df5134019"><div class="ttname"><a href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a></div><div class="ttdeci">std::wstring winErrorText(DWORD errorCode)</div><div class="ttdoc">Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d43/_win_error_text_8hpp_source.html#l00058">WinErrorText.hpp:58</a></div></div>
 </div><!-- fragment -->
@@ -1178,7 +1178,7 @@ Here is the caller graph for this function:</div>
 
 <p>All fields text. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01598">1598</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01597">1597</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a7a843782348b647c13a98ef04223d7b2">LeakedState()</a>, and <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a91fb4e6b1ccc56c014f684204cdb9f5c">npi::log::allFields()</a>.</p>
 
@@ -1214,7 +1214,7 @@ Here is the caller graph for this function:</div>
 
 <p>category cache object. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01604">1604</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01603">1603</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#adf8d080876ce9a9fa7a073d24747340c">anonymous_namespace{Log.cpp}::format::appendCategory()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler()</a>.</p>
 
@@ -1234,7 +1234,7 @@ Here is the caller graph for this function:</div>
 
 <p>Configuration is used as a locked value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01669">1669</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01668">1668</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#acab2a981f6895642ea4a515d1b549d27">npi::log::coloredConsole()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a519607f2aa309cc7106690d802d0a2e2">npi::log::directory()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7bf7d13d470046ebec195214324bbf5b">npi::log::displayFields()</a>, <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a151b634635a35cd3feb2de126611e850">anonymous_namespace{Log.cpp}::workers::dispWorkerStart()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#add16ea189b135b7e9620adc74ab2e676">npi::log::fileFields()</a>, <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920">anonymous_namespace{Log.cpp}::workers::fileWorkerStart()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a706cfc14aff0e14a0a79cbe3d9dd0c43">npi::log::filterRules()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a2029add9e80a962b68bb147f9fd47f35">npi::log::isWarnLogImportant()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#abba1ff20c6dcb414b50c5546af517c73">npi::log::maxFolderSizeMib()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287">anonymous_namespace{Log.cpp}::control::setMaxFolderMb()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ae10816ac3a1bfeb44e75e33a094aa716">npi::log::showDebugLog()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a77f60d80e451122614983a4dcd42597d">npi::log::showInfoLog()</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a95f11cd009de5a42cff56b7812649fc6">npi::log::showWarnLog()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a">anonymous_namespace{Log.cpp}::startup()</a>.</p>
 
@@ -1276,12 +1276,12 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p>Default log directory for the application. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01574">1574</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1574</span>                               {</div>
-<div class="line"><span class="lineno"> 1575</span>      QDir::cleanPath(</div>
-<div class="line"><span class="lineno"> 1576</span>        QDir(<a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a>())</div>
-<div class="line"><span class="lineno"> 1577</span>       .filePath(QStringLiteral(<span class="stringliteral">&quot;logs&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 1578</span>    };</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01573">1573</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1573</span>                               {</div>
+<div class="line"><span class="lineno"> 1574</span>      QDir::cleanPath(</div>
+<div class="line"><span class="lineno"> 1575</span>        QDir(<a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542">npi::app::appPublicDocumentsDir</a>())</div>
+<div class="line"><span class="lineno"> 1576</span>       .filePath(QStringLiteral(<span class="stringliteral">&quot;logs&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 1577</span>    };</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ab87128eb4f97a8ec0c47815e4f57ac0f">npi::log::defaultDirectory()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>.</p>
 
@@ -1303,18 +1303,18 @@ Here is the caller graph for this function:</div>
 <div class="line">      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa9d531fcd1481d2d382c2a9a64f34ef0">Field::ThreadIndex</a>,</div>
 <div class="line">      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0dac5d8045e54ebee5518a150789acae284">Field::ThreadDelta</a></div>
 <div class="line">    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">anonymous_namespace{Log.cpp}::Field::Level</a></div><div class="ttdeci">@ Level</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00193">Log.cpp:193</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0daa9d531fcd1481d2d382c2a9a64f34ef0"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa9d531fcd1481d2d382c2a9a64f34ef0">anonymous_namespace{Log.cpp}::Field::ThreadIndex</a></div><div class="ttdeci">@ ThreadIndex</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00194">Log.cpp:194</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0dac5d8045e54ebee5518a150789acae284"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0dac5d8045e54ebee5518a150789acae284">anonymous_namespace{Log.cpp}::Field::ThreadDelta</a></div><div class="ttdeci">@ ThreadDelta</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00198">Log.cpp:198</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">anonymous_namespace{Log.cpp}::Field::Level</a></div><div class="ttdeci">@ Level</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00192">Log.cpp:192</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0daa9d531fcd1481d2d382c2a9a64f34ef0"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa9d531fcd1481d2d382c2a9a64f34ef0">anonymous_namespace{Log.cpp}::Field::ThreadIndex</a></div><div class="ttdeci">@ ThreadIndex</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00193">Log.cpp:193</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0dac5d8045e54ebee5518a150789acae284"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0dac5d8045e54ebee5518a150789acae284">anonymous_namespace{Log.cpp}::Field::ThreadDelta</a></div><div class="ttdeci">@ ThreadDelta</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00197">Log.cpp:197</a></div></div>
 </div><!-- fragment -->
 <p>Default display fields. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01592">1592</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1592</span>                                     {</div>
-<div class="line"><span class="lineno"> 1593</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">Field::Level</a>,</div>
-<div class="line"><span class="lineno"> 1594</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa9d531fcd1481d2d382c2a9a64f34ef0">Field::ThreadIndex</a>,</div>
-<div class="line"><span class="lineno"> 1595</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0dac5d8045e54ebee5518a150789acae284">Field::ThreadDelta</a></div>
-<div class="line"><span class="lineno"> 1596</span>    };</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01591">1591</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1591</span>                                     {</div>
+<div class="line"><span class="lineno"> 1592</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">Field::Level</a>,</div>
+<div class="line"><span class="lineno"> 1593</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa9d531fcd1481d2d382c2a9a64f34ef0">Field::ThreadIndex</a>,</div>
+<div class="line"><span class="lineno"> 1594</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0dac5d8045e54ebee5518a150789acae284">Field::ThreadDelta</a></div>
+<div class="line"><span class="lineno"> 1595</span>    };</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a7a843782348b647c13a98ef04223d7b2">LeakedState()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a">anonymous_namespace{Log.cpp}::startup()</a>.</p>
 
@@ -1334,7 +1334,7 @@ Here is the caller graph for this function:</div>
 
 <p>Default display fields text (generated from default display fields above). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01600">1600</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01599">1599</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a7a843782348b647c13a98ef04223d7b2">LeakedState()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>.</p>
 
@@ -1360,25 +1360,25 @@ Here is the caller graph for this function:</div>
 <div class="line">      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873">Field::Category</a>,</div>
 <div class="line">      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da86408593c34af77fdd90df932f8b5261">Field::Function</a></div>
 <div class="line">    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873">anonymous_namespace{Log.cpp}::Field::Category</a></div><div class="ttdeci">@ Category</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00199">Log.cpp:199</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da3ff39d3acb327553070a64ef0cb321d5"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3ff39d3acb327553070a64ef0cb321d5">anonymous_namespace{Log.cpp}::Field::Sequence</a></div><div class="ttdeci">@ Sequence</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00192">Log.cpp:192</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da693e7589872f7acd3e69d831d022d6ea"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da693e7589872f7acd3e69d831d022d6ea">anonymous_namespace{Log.cpp}::Field::ThreadId</a></div><div class="ttdeci">@ ThreadId</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00195">Log.cpp:195</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da86408593c34af77fdd90df932f8b5261"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da86408593c34af77fdd90df932f8b5261">anonymous_namespace{Log.cpp}::Field::Function</a></div><div class="ttdeci">@ Function</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00201">Log.cpp:201</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da8cf10d2341ed01492506085688270c1e"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da8cf10d2341ed01492506085688270c1e">anonymous_namespace{Log.cpp}::Field::DateTime</a></div><div class="ttdeci">@ DateTime</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00191">Log.cpp:191</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0daabd5d15a9bd1e36bb6facd60952a2b69"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daabd5d15a9bd1e36bb6facd60952a2b69">anonymous_namespace{Log.cpp}::Field::AppTime</a></div><div class="ttdeci">@ AppTime</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00196">Log.cpp:196</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873">anonymous_namespace{Log.cpp}::Field::Category</a></div><div class="ttdeci">@ Category</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00198">Log.cpp:198</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da3ff39d3acb327553070a64ef0cb321d5"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3ff39d3acb327553070a64ef0cb321d5">anonymous_namespace{Log.cpp}::Field::Sequence</a></div><div class="ttdeci">@ Sequence</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00191">Log.cpp:191</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da693e7589872f7acd3e69d831d022d6ea"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da693e7589872f7acd3e69d831d022d6ea">anonymous_namespace{Log.cpp}::Field::ThreadId</a></div><div class="ttdeci">@ ThreadId</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00194">Log.cpp:194</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da86408593c34af77fdd90df932f8b5261"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da86408593c34af77fdd90df932f8b5261">anonymous_namespace{Log.cpp}::Field::Function</a></div><div class="ttdeci">@ Function</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00200">Log.cpp:200</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0da8cf10d2341ed01492506085688270c1e"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da8cf10d2341ed01492506085688270c1e">anonymous_namespace{Log.cpp}::Field::DateTime</a></div><div class="ttdeci">@ DateTime</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00190">Log.cpp:190</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0daabd5d15a9bd1e36bb6facd60952a2b69"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daabd5d15a9bd1e36bb6facd60952a2b69">anonymous_namespace{Log.cpp}::Field::AppTime</a></div><div class="ttdeci">@ AppTime</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00195">Log.cpp:195</a></div></div>
 </div><!-- fragment -->
 <p>Default file fields. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01581">1581</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1581</span>                                     {</div>
-<div class="line"><span class="lineno"> 1582</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da8cf10d2341ed01492506085688270c1e">Field::DateTime</a>,</div>
-<div class="line"><span class="lineno"> 1583</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3ff39d3acb327553070a64ef0cb321d5">Field::Sequence</a>,</div>
-<div class="line"><span class="lineno"> 1584</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">Field::Level</a>,</div>
-<div class="line"><span class="lineno"> 1585</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da693e7589872f7acd3e69d831d022d6ea">Field::ThreadId</a>,</div>
-<div class="line"><span class="lineno"> 1586</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daabd5d15a9bd1e36bb6facd60952a2b69">Field::AppTime</a>,</div>
-<div class="line"><span class="lineno"> 1587</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873">Field::Category</a>,</div>
-<div class="line"><span class="lineno"> 1588</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da86408593c34af77fdd90df932f8b5261">Field::Function</a></div>
-<div class="line"><span class="lineno"> 1589</span>    };</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01580">1580</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1580</span>                                     {</div>
+<div class="line"><span class="lineno"> 1581</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da8cf10d2341ed01492506085688270c1e">Field::DateTime</a>,</div>
+<div class="line"><span class="lineno"> 1582</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3ff39d3acb327553070a64ef0cb321d5">Field::Sequence</a>,</div>
+<div class="line"><span class="lineno"> 1583</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">Field::Level</a>,</div>
+<div class="line"><span class="lineno"> 1584</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da693e7589872f7acd3e69d831d022d6ea">Field::ThreadId</a>,</div>
+<div class="line"><span class="lineno"> 1585</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daabd5d15a9bd1e36bb6facd60952a2b69">Field::AppTime</a>,</div>
+<div class="line"><span class="lineno"> 1586</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873">Field::Category</a>,</div>
+<div class="line"><span class="lineno"> 1587</span>      <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da86408593c34af77fdd90df932f8b5261">Field::Function</a></div>
+<div class="line"><span class="lineno"> 1588</span>    };</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a7a843782348b647c13a98ef04223d7b2">LeakedState()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a">anonymous_namespace{Log.cpp}::startup()</a>.</p>
 
@@ -1398,7 +1398,7 @@ Here is the caller graph for this function:</div>
 
 <p>Default file fields text (generated from default file fields above). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01599">1599</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01598">1598</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a7a843782348b647c13a98ef04223d7b2">LeakedState()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>.</p>
 
@@ -1425,13 +1425,13 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p>Lock name to be used with <span class="tt"><a class="el" href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html" title="Scoped owner of a session-local Windows named mutex.">npi::app::CrossProcessLocker</a></span> to acquire before directory cleanup. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01566">1566</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1566</span>                                      {</div>
-<div class="line"><span class="lineno"> 1567</span>      QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#aa911b67ddc94ce902ba75acd2cd259c7">npi::app::organization</a>).replace(<span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39;-&#39;</span>) %</div>
-<div class="line"><span class="lineno"> 1568</span>      QLatin1Char(<span class="charliteral">&#39;-&#39;</span>) %</div>
-<div class="line"><span class="lineno"> 1569</span>      QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>).replace(<span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39;-&#39;</span>) %</div>
-<div class="line"><span class="lineno"> 1570</span>      QLatin1StringView(<span class="stringliteral">&quot;-log-dir-cleaning-lock&quot;</span>)</div>
-<div class="line"><span class="lineno"> 1571</span>    };</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01565">1565</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1565</span>                                      {</div>
+<div class="line"><span class="lineno"> 1566</span>      QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#aa911b67ddc94ce902ba75acd2cd259c7">npi::app::organization</a>).replace(<span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39;-&#39;</span>) %</div>
+<div class="line"><span class="lineno"> 1567</span>      QLatin1Char(<span class="charliteral">&#39;-&#39;</span>) %</div>
+<div class="line"><span class="lineno"> 1568</span>      QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>).replace(<span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39;-&#39;</span>) %</div>
+<div class="line"><span class="lineno"> 1569</span>      QLatin1StringView(<span class="stringliteral">&quot;-log-dir-cleaning-lock&quot;</span>)</div>
+<div class="line"><span class="lineno"> 1570</span>    };</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1d722dbe548810e26de6526339f7db0a">anonymous_namespace{Log.cpp}::workers::directoryCleanup()</a>.</p>
 
@@ -1483,7 +1483,7 @@ Here is the caller graph for this function:</div>
 
 <p>File line cache object. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01605">1605</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01604">1604</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a1ab72ec10a06d8bb5b1d465f2d52803f">anonymous_namespace{Log.cpp}::format::appendFileLine()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler()</a>.</p>
 
@@ -1503,7 +1503,7 @@ Here is the caller graph for this function:</div>
 
 <p>Function cache object. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01606">1606</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01605">1605</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a5d4c3aaa1f776827c7219cf823733709">anonymous_namespace{Log.cpp}::format::appendFunction()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler()</a>.</p>
 
@@ -1523,8 +1523,8 @@ Here is the caller graph for this function:</div>
 
 <p>Constant main thread ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01555">1555</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1555</span>{::GetCurrentThreadId()};                                      <span class="comment">///&lt; Constant main thread ID.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01554">1554</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1554</span>{::GetCurrentThreadId()};                                      <span class="comment">///&lt; Constant main thread ID.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler()</a>.</p>
 
@@ -1544,7 +1544,7 @@ Here is the caller graph for this function:</div>
 
 <p>Handle to permanent console if available. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01602">1602</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01601">1601</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a7a843782348b647c13a98ef04223d7b2">LeakedState()</a>, and <a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#af1e8c4c76f88dcb941823751b89636b9">anonymous_namespace{Log.cpp}::console::isPermanent()</a>.</p>
 
@@ -1586,13 +1586,13 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p>Lock name to be used with <span class="tt"><a class="el" href="../../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html" title="Scoped owner of a session-local Windows named mutex.">npi::app::CrossProcessLocker</a></span> for accessing log settings file. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01558">1558</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1558</span>                                   {</div>
-<div class="line"><span class="lineno"> 1559</span>      QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#aa911b67ddc94ce902ba75acd2cd259c7">npi::app::organization</a>).replace(<span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39;-&#39;</span>) %</div>
-<div class="line"><span class="lineno"> 1560</span>      QLatin1Char(<span class="charliteral">&#39;-&#39;</span>) %</div>
-<div class="line"><span class="lineno"> 1561</span>      QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>).replace(<span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39;-&#39;</span>) %</div>
-<div class="line"><span class="lineno"> 1562</span>      QLatin1StringView(<span class="stringliteral">&quot;-log-settings-lock&quot;</span>)</div>
-<div class="line"><span class="lineno"> 1563</span>    };</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01557">1557</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1557</span>                                   {</div>
+<div class="line"><span class="lineno"> 1558</span>      QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#aa911b67ddc94ce902ba75acd2cd259c7">npi::app::organization</a>).replace(<span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39;-&#39;</span>) %</div>
+<div class="line"><span class="lineno"> 1559</span>      QLatin1Char(<span class="charliteral">&#39;-&#39;</span>) %</div>
+<div class="line"><span class="lineno"> 1560</span>      QString(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a>).replace(<span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39;-&#39;</span>) %</div>
+<div class="line"><span class="lineno"> 1561</span>      QLatin1StringView(<span class="stringliteral">&quot;-log-settings-lock&quot;</span>)</div>
+<div class="line"><span class="lineno"> 1562</span>    };</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#aaa3ef86b0bde2d695263c99035301b1c">anonymous_namespace{Log.cpp}::control::removeSettings()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a07969a1c7e4498118828e463456c5d1e">anonymous_namespace{Log.cpp}::control::saveSettings()</a>.</p>
 
@@ -1612,8 +1612,8 @@ Here is the caller graph for this function:</div>
 
 <p>Constant start timepoint for application. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01554">1554</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1554</span>{std::chrono::steady_clock::now()}; <span class="comment">///&lt; Constant start timepoint for application.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01553">1553</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1553</span>{std::chrono::steady_clock::now()}; <span class="comment">///&lt; Constant start timepoint for application.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler()</a>, and <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a926d3f4c96d81c126df53add6ff3e041">anonymous_namespace{Log.cpp}::workers::syntheticLog()</a>.</p>
 

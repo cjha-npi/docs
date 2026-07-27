@@ -1,5 +1,5 @@
 <map id="anonymous_namespace{Log::cpp}::FileLineCache::KeysEqual_" name="anonymous_namespace{Log::cpp}::FileLineCache::KeysEqual_">
-<area shape="rect" id="Node000001" title="Compares 2 keys for strict equality." alt="" coords="765,20,1235,46"/>
+<area shape="rect" id="Node000001" title="Compares 2 keys for equality." alt="" coords="765,20,1235,46"/>
 <area shape="rect" id="Node000002" href="$d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a0dd7683287f5825c354fc6f20722d736" title="Finds or inserts the normalized file and line value and returns its slot." alt="" coords="496,5,717,61"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="755,33,717,36,717,31,760,33"/>
 <area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="227,13,448,54"/>

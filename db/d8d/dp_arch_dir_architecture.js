@@ -18,13 +18,12 @@ var dp_arch_dir_architecture =
       [ "Thread Safety and Usage Rules", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__thread_safety_and_usage_rules", null ],
       [ "Design Limits", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__design_limits", null ],
       [ "Public API", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__public_api", null ],
-      [ "Testing", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing", [
-        [ "Test Environment", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__environment", null ],
-        [ "Log Message Handler Time", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__log_msg_handler_time", null ],
-        [ "Extreme Stress", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__extreme_stress", null ],
-        [ "Cache Text", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__context_cache", null ],
-        [ "Text Sanitization", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__text_sanitization", null ],
-        [ "Logging Behavior", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__logging_behavior", null ]
-      ] ]
+      [ "Test: Overview", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_overview", null ],
+      [ "Test: Environment", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_environment", null ],
+      [ "Test: Handler Time", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_handler_time", null ],
+      [ "Test: Extreme Stress", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_extreme_stress", null ],
+      [ "Test: Cache Text", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_context_cache", null ],
+      [ "Test: Text Sanitization", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_text_sanitization", null ],
+      [ "Test: Logging Behavior", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_logging_behavior", null ]
     ] ]
 ];

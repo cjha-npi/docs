@@ -141,7 +141,7 @@ $(function(){initNavTree('d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_ca
 <div class="textblock"><p>Caches normalized logging-category text. </p>
 <p>Cache keys are derived from the pointed-to text rather than pointer identity. Entries are inserted concurrently, published with atomic state transitions, and stored in a fixed text pool. Slot zero represents an unavailable value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00597">597</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00596">596</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for anonymous_namespace{Log.cpp}::CategoryCache:</div>
 <div class="dyncontent">
@@ -179,7 +179,7 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a0ddbefb697054b557edac786761d4238" id="r_a0ddbefb697054b557edac786761d4238"><td class="memItemLeft">static <a class="el" href="#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">TextHash</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0ddbefb697054b557edac786761d4238">HashText_</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *text) noexcept</td></tr>
 <tr class="memdesc:a0ddbefb697054b557edac786761d4238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hashes bounded null-terminated text and records the scanned length.  <br /></td></tr>
 <tr class="memitem:a435efdf570bf14b59b57ac13434102b9" id="r_a435efdf570bf14b59b57ac13434102b9"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a435efdf570bf14b59b57ac13434102b9">KeysEqual_</a> (const <a class="el" href="#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">Key</a> &amp;lhs, const <a class="el" href="#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">Key</a> &amp;rhs) noexcept</td></tr>
-<tr class="memdesc:a435efdf570bf14b59b57ac13434102b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares 2 keys for strict equality.  <br /></td></tr>
+<tr class="memdesc:a435efdf570bf14b59b57ac13434102b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares 2 keys for equality.  <br /></td></tr>
 <tr class="memitem:a3a83a9d55b098fd17d4c632b0aca30ba" id="r_a3a83a9d55b098fd17d4c632b0aca30ba"><td class="memItemLeft">static <a class="el" href="#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">Key</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3a83a9d55b098fd17d4c632b0aca30ba">MakeKey_</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *category) noexcept</td></tr>
 <tr class="memdesc:a3a83a9d55b098fd17d4c632b0aca30ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the cache key from the relevant message-context data.  <br /></td></tr>
 <tr class="memitem:ac5f6ee7eaa12b0b1282dd4eb8798dbd9" id="r_ac5f6ee7eaa12b0b1282dd4eb8798dbd9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ac5f6ee7eaa12b0b1282dd4eb8798dbd9">Mix_</a> (std::uint64_t &amp;hash, std::uint64_t value) noexcept</td></tr>
@@ -473,39 +473,39 @@ Here is the call graph for this function:</div>
 <p>Returns the immutable text and length associated with a cache slot. </p>
 <dl class="section return"><dt>Returns</dt><dd>A pair with first value as pointer and second value as length. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00682">682</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  683</span>    {</div>
-<div class="line"><span class="lineno">  684</span>      <span class="keywordflow">if</span>(slot == <a class="code hl_variable" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>)</div>
-<div class="line"><span class="lineno">  685</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  686</span> </div>
-<div class="line"><span class="lineno">  687</span>      <span class="keyword">const</span> std::uint32_t idx{<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(slot) - 1u};</div>
-<div class="line"><span class="lineno">  688</span> </div>
-<div class="line"><span class="lineno">  689</span>      <span class="keywordflow">if</span>(idx &gt;= <a class="code hl_variable" href="#a9448c053ef924ee5710672b5081db811">UnusableIndex_</a>)</div>
-<div class="line"><span class="lineno">  690</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  691</span> </div>
-<div class="line"><span class="lineno">  692</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry">Entry</a>&amp; entry{<a class="code hl_variable" href="#a51048ed6742aaaca083412c9b3d65a7e">entries_</a>[idx]};</div>
-<div class="line"><span class="lineno">  693</span> </div>
-<div class="line"><span class="lineno">  694</span>      <span class="keywordflow">if</span>(entry.state_.load(std::memory_order_acquire) != <a class="code hl_variable" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a>)</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  696</span> </div>
-<div class="line"><span class="lineno">  697</span>      <span class="keywordflow">if</span>(entry.offset_ == 0u || entry.length_ == 0u)</div>
-<div class="line"><span class="lineno">  698</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  699</span> </div>
-<div class="line"><span class="lineno">  700</span>      <span class="keywordflow">if</span>(entry.offset_ &gt;= <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a>)</div>
-<div class="line"><span class="lineno">  701</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  702</span> </div>
-<div class="line"><span class="lineno">  703</span>      <span class="keywordflow">if</span>(entry.length_ &gt;= <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a> - entry.offset_)</div>
-<div class="line"><span class="lineno">  704</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  705</span> </div>
-<div class="line"><span class="lineno">  706</span>      <span class="keywordflow">return</span> {<a class="code hl_variable" href="#a651ee432dec146e083366cbead346bb4">pool_</a>.data() + entry.offset_, entry.length_};</div>
-<div class="line"><span class="lineno">  707</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a3b178c549b7daedeed2ec90eb2b4cabd"><div class="ttname"><a href="#a3b178c549b7daedeed2ec90eb2b4cabd">anonymous_namespace{Log.cpp}::CategoryCache::NullSlot_</a></div><div class="ttdeci">static constexpr std::uint8_t NullSlot_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00710">Log.cpp:710</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a51048ed6742aaaca083412c9b3d65a7e"><div class="ttname"><a href="#a51048ed6742aaaca083412c9b3d65a7e">anonymous_namespace{Log.cpp}::CategoryCache::entries_</a></div><div class="ttdeci">std::array&lt; Entry, Capacity_ &gt; entries_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00748">Log.cpp:748</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a651ee432dec146e083366cbead346bb4"><div class="ttname"><a href="#a651ee432dec146e083366cbead346bb4">anonymous_namespace{Log.cpp}::CategoryCache::pool_</a></div><div class="ttdeci">std::array&lt; char, PoolSize_ &gt; pool_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00749">Log.cpp:749</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a9448c053ef924ee5710672b5081db811"><div class="ttname"><a href="#a9448c053ef924ee5710672b5081db811">anonymous_namespace{Log.cpp}::CategoryCache::UnusableIndex_</a></div><div class="ttdeci">static constexpr std::uint32_t UnusableIndex_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00714">Log.cpp:714</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_aba0e8eea52d87e5152feb2d2ccbd02b5"><div class="ttname"><a href="#aba0e8eea52d87e5152feb2d2ccbd02b5">anonymous_namespace{Log.cpp}::CategoryCache::StateReady_</a></div><div class="ttdeci">static constexpr std::uint8_t StateReady_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00722">Log.cpp:722</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_af6511ff220d800b36a2b4db9dfeb4cbe"><div class="ttname"><a href="#af6511ff220d800b36a2b4db9dfeb4cbe">anonymous_namespace{Log.cpp}::CategoryCache::PoolSize_</a></div><div class="ttdeci">static constexpr std::uint32_t PoolSize_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00716">Log.cpp:716</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry"><div class="ttname"><a href="#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry">anonymous_namespace{Log.cpp}::CategoryCache::Entry</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00741">Log.cpp:741</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00681">681</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  682</span>    {</div>
+<div class="line"><span class="lineno">  683</span>      <span class="keywordflow">if</span>(slot == <a class="code hl_variable" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>)</div>
+<div class="line"><span class="lineno">  684</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  685</span> </div>
+<div class="line"><span class="lineno">  686</span>      <span class="keyword">const</span> std::uint32_t idx{<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(slot) - 1u};</div>
+<div class="line"><span class="lineno">  687</span> </div>
+<div class="line"><span class="lineno">  688</span>      <span class="keywordflow">if</span>(idx &gt;= <a class="code hl_variable" href="#a9448c053ef924ee5710672b5081db811">UnusableIndex_</a>)</div>
+<div class="line"><span class="lineno">  689</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  690</span> </div>
+<div class="line"><span class="lineno">  691</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry">Entry</a>&amp; entry{<a class="code hl_variable" href="#a51048ed6742aaaca083412c9b3d65a7e">entries_</a>[idx]};</div>
+<div class="line"><span class="lineno">  692</span> </div>
+<div class="line"><span class="lineno">  693</span>      <span class="keywordflow">if</span>(entry.state_.load(std::memory_order_acquire) != <a class="code hl_variable" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a>)</div>
+<div class="line"><span class="lineno">  694</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  695</span> </div>
+<div class="line"><span class="lineno">  696</span>      <span class="keywordflow">if</span>(entry.offset_ == 0u || entry.length_ == 0u)</div>
+<div class="line"><span class="lineno">  697</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  698</span> </div>
+<div class="line"><span class="lineno">  699</span>      <span class="keywordflow">if</span>(entry.offset_ &gt;= <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a>)</div>
+<div class="line"><span class="lineno">  700</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  701</span> </div>
+<div class="line"><span class="lineno">  702</span>      <span class="keywordflow">if</span>(entry.length_ &gt;= <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a> - entry.offset_)</div>
+<div class="line"><span class="lineno">  703</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  704</span> </div>
+<div class="line"><span class="lineno">  705</span>      <span class="keywordflow">return</span> {<a class="code hl_variable" href="#a651ee432dec146e083366cbead346bb4">pool_</a>.data() + entry.offset_, entry.length_};</div>
+<div class="line"><span class="lineno">  706</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a3b178c549b7daedeed2ec90eb2b4cabd"><div class="ttname"><a href="#a3b178c549b7daedeed2ec90eb2b4cabd">anonymous_namespace{Log.cpp}::CategoryCache::NullSlot_</a></div><div class="ttdeci">static constexpr std::uint8_t NullSlot_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00709">Log.cpp:709</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a51048ed6742aaaca083412c9b3d65a7e"><div class="ttname"><a href="#a51048ed6742aaaca083412c9b3d65a7e">anonymous_namespace{Log.cpp}::CategoryCache::entries_</a></div><div class="ttdeci">std::array&lt; Entry, Capacity_ &gt; entries_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00747">Log.cpp:747</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a651ee432dec146e083366cbead346bb4"><div class="ttname"><a href="#a651ee432dec146e083366cbead346bb4">anonymous_namespace{Log.cpp}::CategoryCache::pool_</a></div><div class="ttdeci">std::array&lt; char, PoolSize_ &gt; pool_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00748">Log.cpp:748</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a9448c053ef924ee5710672b5081db811"><div class="ttname"><a href="#a9448c053ef924ee5710672b5081db811">anonymous_namespace{Log.cpp}::CategoryCache::UnusableIndex_</a></div><div class="ttdeci">static constexpr std::uint32_t UnusableIndex_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00713">Log.cpp:713</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_aba0e8eea52d87e5152feb2d2ccbd02b5"><div class="ttname"><a href="#aba0e8eea52d87e5152feb2d2ccbd02b5">anonymous_namespace{Log.cpp}::CategoryCache::StateReady_</a></div><div class="ttdeci">static constexpr std::uint8_t StateReady_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00721">Log.cpp:721</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_af6511ff220d800b36a2b4db9dfeb4cbe"><div class="ttname"><a href="#af6511ff220d800b36a2b4db9dfeb4cbe">anonymous_namespace{Log.cpp}::CategoryCache::PoolSize_</a></div><div class="ttdeci">static constexpr std::uint32_t PoolSize_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00715">Log.cpp:715</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry"><div class="ttname"><a href="#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry">anonymous_namespace{Log.cpp}::CategoryCache::Entry</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00740">Log.cpp:740</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a51048ed6742aaaca083412c9b3d65a7e">entries_</a>, <a class="el" href="#a7b1680b37c030257bbfe9fe22b9d8982">anonymous_namespace{Log.cpp}::CategoryCache::Entry::length_</a>, <a class="el" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>, <a class="el" href="#af1cfc4f6ae5b77b96f17d5ecc981c345">anonymous_namespace{Log.cpp}::CategoryCache::Entry::offset_</a>, <a class="el" href="#a651ee432dec146e083366cbead346bb4">pool_</a>, <a class="el" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a>, <a class="el" href="#a9b1119e02b099a720e4e706c228728c0">anonymous_namespace{Log.cpp}::CategoryCache::Entry::state_</a>, <a class="el" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a>, and <a class="el" href="#a9448c053ef924ee5710672b5081db811">UnusableIndex_</a>.</p>
 
@@ -513,7 +513,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache_a10bc796c3898193fe3c9490efc1a4478_icgraph.svg" width="100%" height="471"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache_a10bc796c3898193fe3c9490efc1a4478_icgraph.svg" width="100%" height="533"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -543,21 +543,21 @@ Here is the caller graph for this function:</div>
 
 <p>Finalizes a cache key into the 32-bit probe hash. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00819">819</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  820</span>    {</div>
-<div class="line"><span class="lineno">  821</span>      std::uint64_t hash{key.hash_};</div>
-<div class="line"><span class="lineno">  822</span> </div>
-<div class="line"><span class="lineno">  823</span>      <a class="code hl_function" href="#ac5f6ee7eaa12b0b1282dd4eb8798dbd9">Mix_</a>(hash, <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(key.length_));</div>
-<div class="line"><span class="lineno">  824</span> </div>
-<div class="line"><span class="lineno">  825</span>      hash ^= hash &gt;&gt; 33u;</div>
-<div class="line"><span class="lineno">  826</span>      hash *= 0xff51afd7ed558ccdULL;</div>
-<div class="line"><span class="lineno">  827</span>      hash ^= hash &gt;&gt; 33u;</div>
-<div class="line"><span class="lineno">  828</span>      hash *= 0xc4ceb9fe1a85ec53ULL;</div>
-<div class="line"><span class="lineno">  829</span>      hash ^= hash &gt;&gt; 33u;</div>
-<div class="line"><span class="lineno">  830</span> </div>
-<div class="line"><span class="lineno">  831</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(hash ^ (hash &gt;&gt; 32u));</div>
-<div class="line"><span class="lineno">  832</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ac5f6ee7eaa12b0b1282dd4eb8798dbd9"><div class="ttname"><a href="#ac5f6ee7eaa12b0b1282dd4eb8798dbd9">anonymous_namespace{Log.cpp}::CategoryCache::Mix_</a></div><div class="ttdeci">static void Mix_(std::uint64_t &amp;hash, std::uint64_t value) noexcept</div><div class="ttdoc">Combines another value into a 64-bit hash state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00809">Log.cpp:809</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00818">818</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  819</span>    {</div>
+<div class="line"><span class="lineno">  820</span>      std::uint64_t hash{key.hash_};</div>
+<div class="line"><span class="lineno">  821</span> </div>
+<div class="line"><span class="lineno">  822</span>      <a class="code hl_function" href="#ac5f6ee7eaa12b0b1282dd4eb8798dbd9">Mix_</a>(hash, <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(key.length_));</div>
+<div class="line"><span class="lineno">  823</span> </div>
+<div class="line"><span class="lineno">  824</span>      hash ^= hash &gt;&gt; 33u;</div>
+<div class="line"><span class="lineno">  825</span>      hash *= 0xff51afd7ed558ccdULL;</div>
+<div class="line"><span class="lineno">  826</span>      hash ^= hash &gt;&gt; 33u;</div>
+<div class="line"><span class="lineno">  827</span>      hash *= 0xc4ceb9fe1a85ec53ULL;</div>
+<div class="line"><span class="lineno">  828</span>      hash ^= hash &gt;&gt; 33u;</div>
+<div class="line"><span class="lineno">  829</span> </div>
+<div class="line"><span class="lineno">  830</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(hash ^ (hash &gt;&gt; 32u));</div>
+<div class="line"><span class="lineno">  831</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ac5f6ee7eaa12b0b1282dd4eb8798dbd9"><div class="ttname"><a href="#ac5f6ee7eaa12b0b1282dd4eb8798dbd9">anonymous_namespace{Log.cpp}::CategoryCache::Mix_</a></div><div class="ttdeci">static void Mix_(std::uint64_t &amp;hash, std::uint64_t value) noexcept</div><div class="ttdoc">Combines another value into a 64-bit hash state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00808">Log.cpp:808</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ac5f6ee7eaa12b0b1282dd4eb8798dbd9">Mix_()</a>.</p>
 
@@ -600,33 +600,33 @@ Here is the caller graph for this function:</div>
 
 <p>Hashes bounded null-terminated text and records the scanned length. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00771">771</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  772</span>    {</div>
-<div class="line"><span class="lineno">  773</span>      <span class="keyword">constexpr</span> std::uint64_t OffsetBasis{14695981039346656037ULL};</div>
-<div class="line"><span class="lineno">  774</span>      <span class="keyword">constexpr</span> std::uint64_t Prime{1099511628211ULL};</div>
-<div class="line"><span class="lineno">  775</span> </div>
-<div class="line"><span class="lineno">  776</span>      <a class="code hl_struct" href="#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">TextHash</a> result{</div>
-<div class="line"><span class="lineno">  777</span>        .hash_ = OffsetBasis,</div>
-<div class="line"><span class="lineno">  778</span>        .length_ = 0</div>
-<div class="line"><span class="lineno">  779</span>      };</div>
-<div class="line"><span class="lineno">  780</span> </div>
-<div class="line"><span class="lineno">  781</span>      <span class="keywordflow">if</span>(text == <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">  782</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  783</span> </div>
-<div class="line"><span class="lineno">  784</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* current{<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(text)};</div>
-<div class="line"><span class="lineno">  785</span> </div>
-<div class="line"><span class="lineno">  786</span>      <span class="keywordflow">while</span>(*current != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; result.length_ &lt; <a class="code hl_variable" href="#a351cae4cc82d6775c3fe329c3415e542">ContextScanMax_</a>) {</div>
-<div class="line"><span class="lineno">  787</span>        result.hash_ ^= <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(*current);</div>
-<div class="line"><span class="lineno">  788</span>        result.hash_ *= Prime;</div>
-<div class="line"><span class="lineno">  789</span> </div>
-<div class="line"><span class="lineno">  790</span>        ++current;</div>
-<div class="line"><span class="lineno">  791</span>        ++result.length_;</div>
-<div class="line"><span class="lineno">  792</span>      }</div>
-<div class="line"><span class="lineno">  793</span> </div>
-<div class="line"><span class="lineno">  794</span>      <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  795</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a351cae4cc82d6775c3fe329c3415e542"><div class="ttname"><a href="#a351cae4cc82d6775c3fe329c3415e542">anonymous_namespace{Log.cpp}::CategoryCache::ContextScanMax_</a></div><div class="ttdeci">static constexpr std::uint32_t ContextScanMax_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00718">Log.cpp:718</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash"><div class="ttname"><a href="#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">anonymous_namespace{Log.cpp}::CategoryCache::TextHash</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00731">Log.cpp:731</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00770">770</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  771</span>    {</div>
+<div class="line"><span class="lineno">  772</span>      <span class="keyword">constexpr</span> std::uint64_t OffsetBasis{14695981039346656037ULL};</div>
+<div class="line"><span class="lineno">  773</span>      <span class="keyword">constexpr</span> std::uint64_t Prime{1099511628211ULL};</div>
+<div class="line"><span class="lineno">  774</span> </div>
+<div class="line"><span class="lineno">  775</span>      <a class="code hl_struct" href="#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">TextHash</a> result{</div>
+<div class="line"><span class="lineno">  776</span>        .hash_ = OffsetBasis,</div>
+<div class="line"><span class="lineno">  777</span>        .length_ = 0</div>
+<div class="line"><span class="lineno">  778</span>      };</div>
+<div class="line"><span class="lineno">  779</span> </div>
+<div class="line"><span class="lineno">  780</span>      <span class="keywordflow">if</span>(text == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  781</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  782</span> </div>
+<div class="line"><span class="lineno">  783</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* current{<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(text)};</div>
+<div class="line"><span class="lineno">  784</span> </div>
+<div class="line"><span class="lineno">  785</span>      <span class="keywordflow">while</span>(*current != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; result.length_ &lt; <a class="code hl_variable" href="#a351cae4cc82d6775c3fe329c3415e542">ContextScanMax_</a>) {</div>
+<div class="line"><span class="lineno">  786</span>        result.hash_ ^= <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(*current);</div>
+<div class="line"><span class="lineno">  787</span>        result.hash_ *= Prime;</div>
+<div class="line"><span class="lineno">  788</span> </div>
+<div class="line"><span class="lineno">  789</span>        ++current;</div>
+<div class="line"><span class="lineno">  790</span>        ++result.length_;</div>
+<div class="line"><span class="lineno">  791</span>      }</div>
+<div class="line"><span class="lineno">  792</span> </div>
+<div class="line"><span class="lineno">  793</span>      <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  794</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a351cae4cc82d6775c3fe329c3415e542"><div class="ttname"><a href="#a351cae4cc82d6775c3fe329c3415e542">anonymous_namespace{Log.cpp}::CategoryCache::ContextScanMax_</a></div><div class="ttdeci">static constexpr std::uint32_t ContextScanMax_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00717">Log.cpp:717</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash"><div class="ttname"><a href="#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">anonymous_namespace{Log.cpp}::CategoryCache::TextHash</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00730">Log.cpp:730</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a351cae4cc82d6775c3fe329c3415e542">ContextScanMax_</a>, <a class="el" href="#ada445903c60517fc0302fb0e757a1fb9">anonymous_namespace{Log.cpp}::CategoryCache::TextHash::hash_</a>, and <a class="el" href="#a0f0ce91d2e0f57dba0df0705c12c3741">anonymous_namespace{Log.cpp}::CategoryCache::TextHash::length_</a>.</p>
 
@@ -666,12 +666,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Compares 2 keys for strict equality. </p>
+<p>Compares 2 keys for equality. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00753">753</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  754</span>    {</div>
-<div class="line"><span class="lineno">  755</span>      <span class="keywordflow">return</span> lhs.hash_ == rhs.hash_ &amp;&amp; lhs.length_ == rhs.length_;</div>
-<div class="line"><span class="lineno">  756</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00752">752</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  753</span>    {</div>
+<div class="line"><span class="lineno">  754</span>      <span class="keywordflow">return</span> lhs.hash_ == rhs.hash_ &amp;&amp; lhs.length_ == rhs.length_;</div>
+<div class="line"><span class="lineno">  755</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 <div class="dynheader">
@@ -707,16 +707,16 @@ Here is the caller graph for this function:</div>
 
 <p>Builds the cache key from the relevant message-context data. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00798">798</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  799</span>    {</div>
-<div class="line"><span class="lineno">  800</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">TextHash</a> text{<a class="code hl_function" href="#a0ddbefb697054b557edac786761d4238">HashText_</a>(category)};</div>
-<div class="line"><span class="lineno">  801</span> </div>
-<div class="line"><span class="lineno">  802</span>      <span class="keywordflow">return</span> {</div>
-<div class="line"><span class="lineno">  803</span>        .hash_ = text.hash_,</div>
-<div class="line"><span class="lineno">  804</span>        .length_ = text.length_</div>
-<div class="line"><span class="lineno">  805</span>      };</div>
-<div class="line"><span class="lineno">  806</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a0ddbefb697054b557edac786761d4238"><div class="ttname"><a href="#a0ddbefb697054b557edac786761d4238">anonymous_namespace{Log.cpp}::CategoryCache::HashText_</a></div><div class="ttdeci">static TextHash HashText_(const char *text) noexcept</div><div class="ttdoc">Hashes bounded null-terminated text and records the scanned length.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00771">Log.cpp:771</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00797">797</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  798</span>    {</div>
+<div class="line"><span class="lineno">  799</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#d8/d32/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_text_hash">TextHash</a> text{<a class="code hl_function" href="#a0ddbefb697054b557edac786761d4238">HashText_</a>(category)};</div>
+<div class="line"><span class="lineno">  800</span> </div>
+<div class="line"><span class="lineno">  801</span>      <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno">  802</span>        .hash_ = text.hash_,</div>
+<div class="line"><span class="lineno">  803</span>        .length_ = text.length_</div>
+<div class="line"><span class="lineno">  804</span>      };</div>
+<div class="line"><span class="lineno">  805</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a0ddbefb697054b557edac786761d4238"><div class="ttname"><a href="#a0ddbefb697054b557edac786761d4238">anonymous_namespace{Log.cpp}::CategoryCache::HashText_</a></div><div class="ttdeci">static TextHash HashText_(const char *text) noexcept</div><div class="ttdoc">Hashes bounded null-terminated text and records the scanned length.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00770">Log.cpp:770</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ada445903c60517fc0302fb0e757a1fb9">anonymous_namespace{Log.cpp}::CategoryCache::TextHash::hash_</a>, <a class="el" href="#a0ddbefb697054b557edac786761d4238">HashText_()</a>, and <a class="el" href="#a0f0ce91d2e0f57dba0df0705c12c3741">anonymous_namespace{Log.cpp}::CategoryCache::TextHash::length_</a>.</p>
 
@@ -763,14 +763,14 @@ Here is the caller graph for this function:</div>
 
 <p>Combines another value into a 64-bit hash state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00809">809</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  810</span>    {</div>
-<div class="line"><span class="lineno">  811</span>      <span class="comment">// 0x9e3779b97f4a7c15ull is derived from the golden ratio and is commonly</span></div>
-<div class="line"><span class="lineno">  812</span>      <span class="comment">// used to spread bits when combining hash values.</span></div>
-<div class="line"><span class="lineno">  813</span>      <span class="comment">// (hash &lt;&lt; 6u) + (hash &gt;&gt; 2u) makes the new value depend on shifted versions</span></div>
-<div class="line"><span class="lineno">  814</span>      <span class="comment">// of the previous hash, so the order of mixed fields matters.</span></div>
-<div class="line"><span class="lineno">  815</span>      hash ^= value + 0x9e3779b97f4a7c15ULL + (hash &lt;&lt; 6u) + (hash &gt;&gt; 2u);</div>
-<div class="line"><span class="lineno">  816</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00808">808</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  809</span>    {</div>
+<div class="line"><span class="lineno">  810</span>      <span class="comment">// 0x9e3779b97f4a7c15ull is derived from the golden ratio and is commonly</span></div>
+<div class="line"><span class="lineno">  811</span>      <span class="comment">// used to spread bits when combining hash values.</span></div>
+<div class="line"><span class="lineno">  812</span>      <span class="comment">// (hash &lt;&lt; 6u) + (hash &gt;&gt; 2u) makes the new value depend on shifted versions</span></div>
+<div class="line"><span class="lineno">  813</span>      <span class="comment">// of the previous hash, so the order of mixed fields matters.</span></div>
+<div class="line"><span class="lineno">  814</span>      hash ^= value + 0x9e3779b97f4a7c15ULL + (hash &lt;&lt; 6u) + (hash &gt;&gt; 2u);</div>
+<div class="line"><span class="lineno">  815</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0c3664a82b33e321bfcc24ac0b00313e">HashKey_()</a>.</p>
 <div class="dynheader">
@@ -810,14 +810,14 @@ Here is the caller graph for this function:</div>
 
 <p>Normalizes source text into the cache storage format. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00869">869</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  870</span>    {</div>
-<div class="line"><span class="lineno">  871</span>      <span class="keywordflow">if</span>(category != <span class="keyword">nullptr</span> &amp;&amp; category[0] != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  872</span>        buf.appendText_(category, <a class="code hl_variable" href="#a351cae4cc82d6775c3fe329c3415e542">ContextScanMax_</a>);</div>
-<div class="line"><span class="lineno">  873</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  874</span>        buf.appendRawChar_(<span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno">  875</span>      buf.finalize_();</div>
-<div class="line"><span class="lineno">  876</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00868">868</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  869</span>    {</div>
+<div class="line"><span class="lineno">  870</span>      <span class="keywordflow">if</span>(category != <span class="keyword">nullptr</span> &amp;&amp; category[0] != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  871</span>        buf.appendText_(category, <a class="code hl_variable" href="#a351cae4cc82d6775c3fe329c3415e542">ContextScanMax_</a>);</div>
+<div class="line"><span class="lineno">  872</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  873</span>        buf.appendRawChar_(<span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno">  874</span>      buf.finalize_();</div>
+<div class="line"><span class="lineno">  875</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a351cae4cc82d6775c3fe329c3415e542">ContextScanMax_</a>.</p>
 
@@ -919,39 +919,39 @@ Here is the call graph for this function:</div>
 
 <p>Atomically reserves a unique contiguous range in the fixed text pool. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00835">835</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  836</span>    {</div>
-<div class="line"><span class="lineno">  837</span>      <span class="keywordflow">if</span>(size == 0u || size &gt;= <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a>)</div>
-<div class="line"><span class="lineno">  838</span>        <span class="keywordflow">return</span> 0u;</div>
-<div class="line"><span class="lineno">  839</span> </div>
-<div class="line"><span class="lineno">  840</span>      <span class="comment">// poolUsed_ starts at 1 and position 0 is unused. This is so that</span></div>
-<div class="line"><span class="lineno">  841</span>      <span class="comment">// this function can return 0 as invalid/failed marker.</span></div>
-<div class="line"><span class="lineno">  842</span>      std::uint32_t current{<a class="code hl_variable" href="#af3036a691b866505de7d4edb4c1d0c54">poolUsed_</a>.load(std::memory_order_relaxed)};</div>
-<div class="line"><span class="lineno">  843</span> </div>
-<div class="line"><span class="lineno">  844</span>      <span class="comment">// Use a compare-exchange loop to reserve a contiguous block of the pool.</span></div>
-<div class="line"><span class="lineno">  845</span>      <span class="comment">// The loop retries if another thread reserves space concurrently,</span></div>
-<div class="line"><span class="lineno">  846</span>      <span class="comment">// causing the current value to change.</span></div>
-<div class="line"><span class="lineno">  847</span>      <span class="comment">// Relaxed ordering is sufficient here because this atomic only reserves</span></div>
-<div class="line"><span class="lineno">  848</span>      <span class="comment">// unique pool ranges. Publication happens through entry.state_.</span></div>
-<div class="line"><span class="lineno">  849</span>      <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><span class="lineno">  850</span>        <span class="keywordflow">if</span>(current &gt;= <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a> || size &gt; <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a> - current)</div>
-<div class="line"><span class="lineno">  851</span>          <span class="keywordflow">return</span> 0u;</div>
-<div class="line"><span class="lineno">  852</span> </div>
-<div class="line"><span class="lineno">  853</span>        <span class="keyword">const</span> std::uint32_t next{current + size};</div>
-<div class="line"><span class="lineno">  854</span> </div>
-<div class="line"><span class="lineno">  855</span>        <span class="comment">// Attempt to update poolUsed_ to the new value. If another thread has</span></div>
-<div class="line"><span class="lineno">  856</span>        <span class="comment">// modified poolUsed_ since we loaded it, the compare_exchange_weak will</span></div>
-<div class="line"><span class="lineno">  857</span>        <span class="comment">// fail, update current with the new value of poolUsed_, and retry the loop.</span></div>
-<div class="line"><span class="lineno">  858</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#af3036a691b866505de7d4edb4c1d0c54">poolUsed_</a>.compare_exchange_weak(</div>
-<div class="line"><span class="lineno">  859</span>          current,</div>
-<div class="line"><span class="lineno">  860</span>          next,</div>
-<div class="line"><span class="lineno">  861</span>          std::memory_order_relaxed,</div>
-<div class="line"><span class="lineno">  862</span>          std::memory_order_relaxed)) {</div>
-<div class="line"><span class="lineno">  863</span>          <span class="keywordflow">return</span> current;</div>
-<div class="line"><span class="lineno">  864</span>        }</div>
-<div class="line"><span class="lineno">  865</span>      }</div>
-<div class="line"><span class="lineno">  866</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_af3036a691b866505de7d4edb4c1d0c54"><div class="ttname"><a href="#af3036a691b866505de7d4edb4c1d0c54">anonymous_namespace{Log.cpp}::CategoryCache::poolUsed_</a></div><div class="ttdeci">std::atomic&lt; std::uint32_t &gt; poolUsed_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00750">Log.cpp:750</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00834">834</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  835</span>    {</div>
+<div class="line"><span class="lineno">  836</span>      <span class="keywordflow">if</span>(size == 0u || size &gt;= <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a>)</div>
+<div class="line"><span class="lineno">  837</span>        <span class="keywordflow">return</span> 0u;</div>
+<div class="line"><span class="lineno">  838</span> </div>
+<div class="line"><span class="lineno">  839</span>      <span class="comment">// poolUsed_ starts at 1 and position 0 is unused. This is so that</span></div>
+<div class="line"><span class="lineno">  840</span>      <span class="comment">// this function can return 0 as invalid/failed marker.</span></div>
+<div class="line"><span class="lineno">  841</span>      std::uint32_t current{<a class="code hl_variable" href="#af3036a691b866505de7d4edb4c1d0c54">poolUsed_</a>.load(std::memory_order_relaxed)};</div>
+<div class="line"><span class="lineno">  842</span> </div>
+<div class="line"><span class="lineno">  843</span>      <span class="comment">// Use a compare-exchange loop to reserve a contiguous block of the pool.</span></div>
+<div class="line"><span class="lineno">  844</span>      <span class="comment">// The loop retries if another thread reserves space concurrently,</span></div>
+<div class="line"><span class="lineno">  845</span>      <span class="comment">// causing the current value to change.</span></div>
+<div class="line"><span class="lineno">  846</span>      <span class="comment">// Relaxed ordering is sufficient here because this atomic only reserves</span></div>
+<div class="line"><span class="lineno">  847</span>      <span class="comment">// unique pool ranges. Publication happens through entry.state_.</span></div>
+<div class="line"><span class="lineno">  848</span>      <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><span class="lineno">  849</span>        <span class="keywordflow">if</span>(current &gt;= <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a> || size &gt; <a class="code hl_variable" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a> - current)</div>
+<div class="line"><span class="lineno">  850</span>          <span class="keywordflow">return</span> 0u;</div>
+<div class="line"><span class="lineno">  851</span> </div>
+<div class="line"><span class="lineno">  852</span>        <span class="keyword">const</span> std::uint32_t next{current + size};</div>
+<div class="line"><span class="lineno">  853</span> </div>
+<div class="line"><span class="lineno">  854</span>        <span class="comment">// Attempt to update poolUsed_ to the new value. If another thread has</span></div>
+<div class="line"><span class="lineno">  855</span>        <span class="comment">// modified poolUsed_ since we loaded it, the compare_exchange_weak will</span></div>
+<div class="line"><span class="lineno">  856</span>        <span class="comment">// fail, update current with the new value of poolUsed_, and retry the loop.</span></div>
+<div class="line"><span class="lineno">  857</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#af3036a691b866505de7d4edb4c1d0c54">poolUsed_</a>.compare_exchange_weak(</div>
+<div class="line"><span class="lineno">  858</span>          current,</div>
+<div class="line"><span class="lineno">  859</span>          next,</div>
+<div class="line"><span class="lineno">  860</span>          std::memory_order_relaxed,</div>
+<div class="line"><span class="lineno">  861</span>          std::memory_order_relaxed)) {</div>
+<div class="line"><span class="lineno">  862</span>          <span class="keywordflow">return</span> current;</div>
+<div class="line"><span class="lineno">  863</span>        }</div>
+<div class="line"><span class="lineno">  864</span>      }</div>
+<div class="line"><span class="lineno">  865</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_af3036a691b866505de7d4edb4c1d0c54"><div class="ttname"><a href="#af3036a691b866505de7d4edb4c1d0c54">anonymous_namespace{Log.cpp}::CategoryCache::poolUsed_</a></div><div class="ttdeci">std::atomic&lt; std::uint32_t &gt; poolUsed_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00749">Log.cpp:749</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#af6511ff220d800b36a2b4db9dfeb4cbe">PoolSize_</a>, and <a class="el" href="#af3036a691b866505de7d4edb4c1d0c54">poolUsed_</a>.</p>
 
@@ -990,86 +990,86 @@ Here is the caller graph for this function:</div>
 <p>Finds or inserts the normalized category value and returns its slot. </p>
 <dl class="section return"><dt>Returns</dt><dd>Slot value or null slot (0) if unable to find or insert. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00610">610</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  611</span>    {</div>
-<div class="line"><span class="lineno">  612</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">Key</a> key{<a class="code hl_function" href="#a3a83a9d55b098fd17d4c632b0aca30ba">MakeKey_</a>(ctx.category)};</div>
-<div class="line"><span class="lineno">  613</span>      <span class="keyword">const</span> std::uint32_t start{<a class="code hl_function" href="#a0c3664a82b33e321bfcc24ac0b00313e">HashKey_</a>(key) &amp; <a class="code hl_variable" href="#ab663a06bb8586cbfda8ff0d78c4f4366">HashMask_</a>};</div>
-<div class="line"><span class="lineno">  614</span>      <span class="keywordflow">for</span>(std::uint32_t probe = 0; probe &lt; <a class="code hl_variable" href="#a03356cf8d3547efc665cf418a45b2908">Capacity_</a>; ++probe) {</div>
-<div class="line"><span class="lineno">  615</span>        <span class="keyword">const</span> std::uint32_t idx{(start + probe) &amp; <a class="code hl_variable" href="#ab663a06bb8586cbfda8ff0d78c4f4366">HashMask_</a>};</div>
-<div class="line"><span class="lineno">  616</span> </div>
-<div class="line"><span class="lineno">  617</span>        <span class="comment">// idx + 1 would be 256, which cannot fit in std::uint8_t.</span></div>
-<div class="line"><span class="lineno">  618</span>        <span class="keywordflow">if</span>(idx == <a class="code hl_variable" href="#a9448c053ef924ee5710672b5081db811">UnusableIndex_</a>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  619</span> </div>
-<div class="line"><span class="lineno">  620</span>        <a class="code hl_struct" href="#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry">Entry</a>&amp; entry{<a class="code hl_variable" href="#a51048ed6742aaaca083412c9b3d65a7e">entries_</a>[idx]};</div>
-<div class="line"><span class="lineno">  621</span> </div>
-<div class="line"><span class="lineno">  622</span>        std::uint8_t state{<a class="code hl_function" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_</a>(entry)};</div>
-<div class="line"><span class="lineno">  623</span> </div>
-<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a>) {</div>
-<div class="line"><span class="lineno">  625</span>          state = <a class="code hl_function" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_</a>(entry);</div>
-<div class="line"><span class="lineno">  626</span>          <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a>)</div>
-<div class="line"><span class="lineno">  627</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  628</span>        }</div>
-<div class="line"><span class="lineno">  629</span> </div>
-<div class="line"><span class="lineno">  630</span>        <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a>) {</div>
-<div class="line"><span class="lineno">  631</span>          <span class="keywordflow">if</span>(<a class="code hl_function" href="#a435efdf570bf14b59b57ac13434102b9">KeysEqual_</a>(entry.key_, key))</div>
-<div class="line"><span class="lineno">  632</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(idx + 1u);</div>
-<div class="line"><span class="lineno">  633</span>          <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  634</span>        }</div>
-<div class="line"><span class="lineno">  635</span> </div>
-<div class="line"><span class="lineno">  636</span>        std::uint8_t expected{<a class="code hl_variable" href="#a5955ff6dbec4d6a22a31341908921a2d">StateEmpty_</a>};</div>
-<div class="line"><span class="lineno">  637</span> </div>
-<div class="line"><span class="lineno">  638</span>        <span class="keywordflow">if</span>(!entry.state_.compare_exchange_strong(</div>
-<div class="line"><span class="lineno">  639</span>          expected,</div>
-<div class="line"><span class="lineno">  640</span>          <a class="code hl_variable" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a>,</div>
-<div class="line"><span class="lineno">  641</span>          std::memory_order_acq_rel,</div>
-<div class="line"><span class="lineno">  642</span>          std::memory_order_acquire)) {</div>
-<div class="line"><span class="lineno">  643</span>          state = <a class="code hl_function" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_</a>(entry);</div>
-<div class="line"><span class="lineno">  644</span>          <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a> &amp;&amp; <a class="code hl_function" href="#a435efdf570bf14b59b57ac13434102b9">KeysEqual_</a>(entry.key_, key))</div>
-<div class="line"><span class="lineno">  645</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(idx + 1u);</div>
-<div class="line"><span class="lineno">  646</span>          <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  647</span>        }</div>
-<div class="line"><span class="lineno">  648</span> </div>
-<div class="line"><span class="lineno">  649</span>        TextBuffer&lt;TextCap_&gt; buf;</div>
-<div class="line"><span class="lineno">  650</span>        <a class="code hl_function" href="#ae14526e54791695749cfda8b0c4f8060">Normalize_</a>(buf, ctx.category);</div>
-<div class="line"><span class="lineno">  651</span>        <span class="keyword">const</span> std::size_t textSize{buf.size_()};</div>
-<div class="line"><span class="lineno">  652</span> </div>
-<div class="line"><span class="lineno">  653</span>        <span class="keywordflow">if</span>(textSize == 0u || textSize &gt; std::numeric_limits&lt;std::uint16_t&gt;::max()) {</div>
-<div class="line"><span class="lineno">  654</span>          entry.state_.store(<a class="code hl_variable" href="#a5955ff6dbec4d6a22a31341908921a2d">StateEmpty_</a>, std::memory_order_release);</div>
-<div class="line"><span class="lineno">  655</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>;</div>
-<div class="line"><span class="lineno">  656</span>        }</div>
-<div class="line"><span class="lineno">  657</span> </div>
-<div class="line"><span class="lineno">  658</span>        <span class="keyword">const</span> std::uint16_t length{<span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(textSize)};</div>
-<div class="line"><span class="lineno">  659</span>        <span class="keyword">const</span> std::uint32_t offset{<a class="code hl_function" href="#ad205aa3702fc645db0d7d2851adad3b1">reservePool_</a>(<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(length) + 1u)};</div>
-<div class="line"><span class="lineno">  660</span> </div>
-<div class="line"><span class="lineno">  661</span>        <span class="keywordflow">if</span>(offset == 0u) {</div>
-<div class="line"><span class="lineno">  662</span>          entry.state_.store(<a class="code hl_variable" href="#a5955ff6dbec4d6a22a31341908921a2d">StateEmpty_</a>, std::memory_order_release);</div>
-<div class="line"><span class="lineno">  663</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>;</div>
-<div class="line"><span class="lineno">  664</span>        }</div>
-<div class="line"><span class="lineno">  665</span> </div>
-<div class="line"><span class="lineno">  666</span>        std::memcpy(<a class="code hl_variable" href="#a651ee432dec146e083366cbead346bb4">pool_</a>.data() + offset, buf.data_(), length);</div>
-<div class="line"><span class="lineno">  667</span> </div>
-<div class="line"><span class="lineno">  668</span>        <a class="code hl_variable" href="#a651ee432dec146e083366cbead346bb4">pool_</a>[offset + length] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  669</span> </div>
-<div class="line"><span class="lineno">  670</span>        entry.key_ = key;</div>
-<div class="line"><span class="lineno">  671</span>        entry.offset_ = offset;</div>
-<div class="line"><span class="lineno">  672</span>        entry.length_ = length;</div>
-<div class="line"><span class="lineno">  673</span>        entry.state_.store(<a class="code hl_variable" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a>, std::memory_order_release);</div>
-<div class="line"><span class="lineno">  674</span> </div>
-<div class="line"><span class="lineno">  675</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(idx + 1u);</div>
-<div class="line"><span class="lineno">  676</span>      }</div>
-<div class="line"><span class="lineno">  677</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>;</div>
-<div class="line"><span class="lineno">  678</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a03356cf8d3547efc665cf418a45b2908"><div class="ttname"><a href="#a03356cf8d3547efc665cf418a45b2908">anonymous_namespace{Log.cpp}::CategoryCache::Capacity_</a></div><div class="ttdeci">static constexpr std::uint32_t Capacity_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00712">Log.cpp:712</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a0c3664a82b33e321bfcc24ac0b00313e"><div class="ttname"><a href="#a0c3664a82b33e321bfcc24ac0b00313e">anonymous_namespace{Log.cpp}::CategoryCache::HashKey_</a></div><div class="ttdeci">static std::uint32_t HashKey_(const Key &amp;key) noexcept</div><div class="ttdoc">Finalizes a cache key into the 32-bit probe hash.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00819">Log.cpp:819</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a10ba24b7f22ae19dfa063856e4225c14"><div class="ttname"><a href="#a10ba24b7f22ae19dfa063856e4225c14">anonymous_namespace{Log.cpp}::CategoryCache::WaitState_</a></div><div class="ttdeci">static std::uint8_t WaitState_(const Entry &amp;entry) noexcept</div><div class="ttdoc">Waits briefly for an entry insertion to finish and returns its observed state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00759">Log.cpp:759</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a3a83a9d55b098fd17d4c632b0aca30ba"><div class="ttname"><a href="#a3a83a9d55b098fd17d4c632b0aca30ba">anonymous_namespace{Log.cpp}::CategoryCache::MakeKey_</a></div><div class="ttdeci">static Key MakeKey_(const char *category) noexcept</div><div class="ttdoc">Builds the cache key from the relevant message-context data.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00798">Log.cpp:798</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a435efdf570bf14b59b57ac13434102b9"><div class="ttname"><a href="#a435efdf570bf14b59b57ac13434102b9">anonymous_namespace{Log.cpp}::CategoryCache::KeysEqual_</a></div><div class="ttdeci">static bool KeysEqual_(const Key &amp;lhs, const Key &amp;rhs) noexcept</div><div class="ttdoc">Compares 2 keys for strict equality.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00753">Log.cpp:753</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a5955ff6dbec4d6a22a31341908921a2d"><div class="ttname"><a href="#a5955ff6dbec4d6a22a31341908921a2d">anonymous_namespace{Log.cpp}::CategoryCache::StateEmpty_</a></div><div class="ttdeci">static constexpr std::uint8_t StateEmpty_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00720">Log.cpp:720</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ab663a06bb8586cbfda8ff0d78c4f4366"><div class="ttname"><a href="#ab663a06bb8586cbfda8ff0d78c4f4366">anonymous_namespace{Log.cpp}::CategoryCache::HashMask_</a></div><div class="ttdeci">static constexpr std::uint32_t HashMask_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00713">Log.cpp:713</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ad205aa3702fc645db0d7d2851adad3b1"><div class="ttname"><a href="#ad205aa3702fc645db0d7d2851adad3b1">anonymous_namespace{Log.cpp}::CategoryCache::reservePool_</a></div><div class="ttdeci">std::uint32_t reservePool_(std::uint32_t size) noexcept</div><div class="ttdoc">Atomically reserves a unique contiguous range in the fixed text pool.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00835">Log.cpp:835</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ad9691a33a30580e0c41b4642ed719297"><div class="ttname"><a href="#ad9691a33a30580e0c41b4642ed719297">anonymous_namespace{Log.cpp}::CategoryCache::StateBusy_</a></div><div class="ttdeci">static constexpr std::uint8_t StateBusy_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00721">Log.cpp:721</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ae14526e54791695749cfda8b0c4f8060"><div class="ttname"><a href="#ae14526e54791695749cfda8b0c4f8060">anonymous_namespace{Log.cpp}::CategoryCache::Normalize_</a></div><div class="ttdeci">static void Normalize_(TextBuffer&lt; TextCap_ &gt; &amp;buf, const char *category) noexcept</div><div class="ttdoc">Normalizes source text into the cache storage format.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00869">Log.cpp:869</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key"><div class="ttname"><a href="#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">anonymous_namespace{Log.cpp}::CategoryCache::Key</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00736">Log.cpp:736</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00609">609</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  610</span>    {</div>
+<div class="line"><span class="lineno">  611</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">Key</a> key{<a class="code hl_function" href="#a3a83a9d55b098fd17d4c632b0aca30ba">MakeKey_</a>(ctx.category)};</div>
+<div class="line"><span class="lineno">  612</span>      <span class="keyword">const</span> std::uint32_t start{<a class="code hl_function" href="#a0c3664a82b33e321bfcc24ac0b00313e">HashKey_</a>(key) &amp; <a class="code hl_variable" href="#ab663a06bb8586cbfda8ff0d78c4f4366">HashMask_</a>};</div>
+<div class="line"><span class="lineno">  613</span>      <span class="keywordflow">for</span>(std::uint32_t probe = 0; probe &lt; <a class="code hl_variable" href="#a03356cf8d3547efc665cf418a45b2908">Capacity_</a>; ++probe) {</div>
+<div class="line"><span class="lineno">  614</span>        <span class="keyword">const</span> std::uint32_t idx{(start + probe) &amp; <a class="code hl_variable" href="#ab663a06bb8586cbfda8ff0d78c4f4366">HashMask_</a>};</div>
+<div class="line"><span class="lineno">  615</span> </div>
+<div class="line"><span class="lineno">  616</span>        <span class="comment">// idx + 1 would be 256, which cannot fit in std::uint8_t.</span></div>
+<div class="line"><span class="lineno">  617</span>        <span class="keywordflow">if</span>(idx == <a class="code hl_variable" href="#a9448c053ef924ee5710672b5081db811">UnusableIndex_</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  618</span> </div>
+<div class="line"><span class="lineno">  619</span>        <a class="code hl_struct" href="#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry">Entry</a>&amp; entry{<a class="code hl_variable" href="#a51048ed6742aaaca083412c9b3d65a7e">entries_</a>[idx]};</div>
+<div class="line"><span class="lineno">  620</span> </div>
+<div class="line"><span class="lineno">  621</span>        std::uint8_t state{<a class="code hl_function" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_</a>(entry)};</div>
+<div class="line"><span class="lineno">  622</span> </div>
+<div class="line"><span class="lineno">  623</span>        <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a>) {</div>
+<div class="line"><span class="lineno">  624</span>          state = <a class="code hl_function" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_</a>(entry);</div>
+<div class="line"><span class="lineno">  625</span>          <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a>)</div>
+<div class="line"><span class="lineno">  626</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  627</span>        }</div>
+<div class="line"><span class="lineno">  628</span> </div>
+<div class="line"><span class="lineno">  629</span>        <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a>) {</div>
+<div class="line"><span class="lineno">  630</span>          <span class="keywordflow">if</span>(<a class="code hl_function" href="#a435efdf570bf14b59b57ac13434102b9">KeysEqual_</a>(entry.key_, key))</div>
+<div class="line"><span class="lineno">  631</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(idx + 1u);</div>
+<div class="line"><span class="lineno">  632</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  633</span>        }</div>
+<div class="line"><span class="lineno">  634</span> </div>
+<div class="line"><span class="lineno">  635</span>        std::uint8_t expected{<a class="code hl_variable" href="#a5955ff6dbec4d6a22a31341908921a2d">StateEmpty_</a>};</div>
+<div class="line"><span class="lineno">  636</span> </div>
+<div class="line"><span class="lineno">  637</span>        <span class="keywordflow">if</span>(!entry.state_.compare_exchange_strong(</div>
+<div class="line"><span class="lineno">  638</span>          expected,</div>
+<div class="line"><span class="lineno">  639</span>          <a class="code hl_variable" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a>,</div>
+<div class="line"><span class="lineno">  640</span>          std::memory_order_acq_rel,</div>
+<div class="line"><span class="lineno">  641</span>          std::memory_order_acquire)) {</div>
+<div class="line"><span class="lineno">  642</span>          state = <a class="code hl_function" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_</a>(entry);</div>
+<div class="line"><span class="lineno">  643</span>          <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a> &amp;&amp; <a class="code hl_function" href="#a435efdf570bf14b59b57ac13434102b9">KeysEqual_</a>(entry.key_, key))</div>
+<div class="line"><span class="lineno">  644</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(idx + 1u);</div>
+<div class="line"><span class="lineno">  645</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  646</span>        }</div>
+<div class="line"><span class="lineno">  647</span> </div>
+<div class="line"><span class="lineno">  648</span>        TextBuffer&lt;TextCap_&gt; buf;</div>
+<div class="line"><span class="lineno">  649</span>        <a class="code hl_function" href="#ae14526e54791695749cfda8b0c4f8060">Normalize_</a>(buf, ctx.category);</div>
+<div class="line"><span class="lineno">  650</span>        <span class="keyword">const</span> std::size_t textSize{buf.size_()};</div>
+<div class="line"><span class="lineno">  651</span> </div>
+<div class="line"><span class="lineno">  652</span>        <span class="keywordflow">if</span>(textSize == 0u || textSize &gt; std::numeric_limits&lt;std::uint16_t&gt;::max()) {</div>
+<div class="line"><span class="lineno">  653</span>          entry.state_.store(<a class="code hl_variable" href="#a5955ff6dbec4d6a22a31341908921a2d">StateEmpty_</a>, std::memory_order_release);</div>
+<div class="line"><span class="lineno">  654</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>;</div>
+<div class="line"><span class="lineno">  655</span>        }</div>
+<div class="line"><span class="lineno">  656</span> </div>
+<div class="line"><span class="lineno">  657</span>        <span class="keyword">const</span> std::uint16_t length{<span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(textSize)};</div>
+<div class="line"><span class="lineno">  658</span>        <span class="keyword">const</span> std::uint32_t offset{<a class="code hl_function" href="#ad205aa3702fc645db0d7d2851adad3b1">reservePool_</a>(<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(length) + 1u)};</div>
+<div class="line"><span class="lineno">  659</span> </div>
+<div class="line"><span class="lineno">  660</span>        <span class="keywordflow">if</span>(offset == 0u) {</div>
+<div class="line"><span class="lineno">  661</span>          entry.state_.store(<a class="code hl_variable" href="#a5955ff6dbec4d6a22a31341908921a2d">StateEmpty_</a>, std::memory_order_release);</div>
+<div class="line"><span class="lineno">  662</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>;</div>
+<div class="line"><span class="lineno">  663</span>        }</div>
+<div class="line"><span class="lineno">  664</span> </div>
+<div class="line"><span class="lineno">  665</span>        std::memcpy(<a class="code hl_variable" href="#a651ee432dec146e083366cbead346bb4">pool_</a>.data() + offset, buf.data_(), length);</div>
+<div class="line"><span class="lineno">  666</span> </div>
+<div class="line"><span class="lineno">  667</span>        <a class="code hl_variable" href="#a651ee432dec146e083366cbead346bb4">pool_</a>[offset + length] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  668</span> </div>
+<div class="line"><span class="lineno">  669</span>        entry.key_ = key;</div>
+<div class="line"><span class="lineno">  670</span>        entry.offset_ = offset;</div>
+<div class="line"><span class="lineno">  671</span>        entry.length_ = length;</div>
+<div class="line"><span class="lineno">  672</span>        entry.state_.store(<a class="code hl_variable" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a>, std::memory_order_release);</div>
+<div class="line"><span class="lineno">  673</span> </div>
+<div class="line"><span class="lineno">  674</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(idx + 1u);</div>
+<div class="line"><span class="lineno">  675</span>      }</div>
+<div class="line"><span class="lineno">  676</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>;</div>
+<div class="line"><span class="lineno">  677</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a03356cf8d3547efc665cf418a45b2908"><div class="ttname"><a href="#a03356cf8d3547efc665cf418a45b2908">anonymous_namespace{Log.cpp}::CategoryCache::Capacity_</a></div><div class="ttdeci">static constexpr std::uint32_t Capacity_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00711">Log.cpp:711</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a0c3664a82b33e321bfcc24ac0b00313e"><div class="ttname"><a href="#a0c3664a82b33e321bfcc24ac0b00313e">anonymous_namespace{Log.cpp}::CategoryCache::HashKey_</a></div><div class="ttdeci">static std::uint32_t HashKey_(const Key &amp;key) noexcept</div><div class="ttdoc">Finalizes a cache key into the 32-bit probe hash.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00818">Log.cpp:818</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a10ba24b7f22ae19dfa063856e4225c14"><div class="ttname"><a href="#a10ba24b7f22ae19dfa063856e4225c14">anonymous_namespace{Log.cpp}::CategoryCache::WaitState_</a></div><div class="ttdeci">static std::uint8_t WaitState_(const Entry &amp;entry) noexcept</div><div class="ttdoc">Waits briefly for an entry insertion to finish and returns its observed state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00758">Log.cpp:758</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a3a83a9d55b098fd17d4c632b0aca30ba"><div class="ttname"><a href="#a3a83a9d55b098fd17d4c632b0aca30ba">anonymous_namespace{Log.cpp}::CategoryCache::MakeKey_</a></div><div class="ttdeci">static Key MakeKey_(const char *category) noexcept</div><div class="ttdoc">Builds the cache key from the relevant message-context data.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00797">Log.cpp:797</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a435efdf570bf14b59b57ac13434102b9"><div class="ttname"><a href="#a435efdf570bf14b59b57ac13434102b9">anonymous_namespace{Log.cpp}::CategoryCache::KeysEqual_</a></div><div class="ttdeci">static bool KeysEqual_(const Key &amp;lhs, const Key &amp;rhs) noexcept</div><div class="ttdoc">Compares 2 keys for equality.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00752">Log.cpp:752</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a5955ff6dbec4d6a22a31341908921a2d"><div class="ttname"><a href="#a5955ff6dbec4d6a22a31341908921a2d">anonymous_namespace{Log.cpp}::CategoryCache::StateEmpty_</a></div><div class="ttdeci">static constexpr std::uint8_t StateEmpty_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00719">Log.cpp:719</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ab663a06bb8586cbfda8ff0d78c4f4366"><div class="ttname"><a href="#ab663a06bb8586cbfda8ff0d78c4f4366">anonymous_namespace{Log.cpp}::CategoryCache::HashMask_</a></div><div class="ttdeci">static constexpr std::uint32_t HashMask_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00712">Log.cpp:712</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ad205aa3702fc645db0d7d2851adad3b1"><div class="ttname"><a href="#ad205aa3702fc645db0d7d2851adad3b1">anonymous_namespace{Log.cpp}::CategoryCache::reservePool_</a></div><div class="ttdeci">std::uint32_t reservePool_(std::uint32_t size) noexcept</div><div class="ttdoc">Atomically reserves a unique contiguous range in the fixed text pool.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00834">Log.cpp:834</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ad9691a33a30580e0c41b4642ed719297"><div class="ttname"><a href="#ad9691a33a30580e0c41b4642ed719297">anonymous_namespace{Log.cpp}::CategoryCache::StateBusy_</a></div><div class="ttdeci">static constexpr std::uint8_t StateBusy_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00720">Log.cpp:720</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_ae14526e54791695749cfda8b0c4f8060"><div class="ttname"><a href="#ae14526e54791695749cfda8b0c4f8060">anonymous_namespace{Log.cpp}::CategoryCache::Normalize_</a></div><div class="ttdeci">static void Normalize_(TextBuffer&lt; TextCap_ &gt; &amp;buf, const char *category) noexcept</div><div class="ttdoc">Normalizes source text into the cache storage format.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00868">Log.cpp:868</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key"><div class="ttname"><a href="#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key">anonymous_namespace{Log.cpp}::CategoryCache::Key</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00735">Log.cpp:735</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a03356cf8d3547efc665cf418a45b2908">Capacity_</a>, <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ae25159be3ca4845a11faf9b51e5fe88f">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::data_()</a>, <a class="el" href="#a51048ed6742aaaca083412c9b3d65a7e">entries_</a>, <a class="el" href="#a0c3664a82b33e321bfcc24ac0b00313e">HashKey_()</a>, <a class="el" href="#ab663a06bb8586cbfda8ff0d78c4f4366">HashMask_</a>, <a class="el" href="#a9ae9861f3849020c485a9e80bbec2f28">anonymous_namespace{Log.cpp}::CategoryCache::Entry::key_</a>, <a class="el" href="#a435efdf570bf14b59b57ac13434102b9">KeysEqual_()</a>, <a class="el" href="#a7b1680b37c030257bbfe9fe22b9d8982">anonymous_namespace{Log.cpp}::CategoryCache::Entry::length_</a>, <a class="el" href="#a3a83a9d55b098fd17d4c632b0aca30ba">MakeKey_()</a>, <a class="el" href="#ae14526e54791695749cfda8b0c4f8060">Normalize_()</a>, <a class="el" href="#a3b178c549b7daedeed2ec90eb2b4cabd">NullSlot_</a>, <a class="el" href="#af1cfc4f6ae5b77b96f17d5ecc981c345">anonymous_namespace{Log.cpp}::CategoryCache::Entry::offset_</a>, <a class="el" href="#a651ee432dec146e083366cbead346bb4">pool_</a>, <a class="el" href="#ad205aa3702fc645db0d7d2851adad3b1">reservePool_()</a>, <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ab7bba778ac4a5104350c8dd82a117cc9">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::size_()</a>, <a class="el" href="#a9b1119e02b099a720e4e706c228728c0">anonymous_namespace{Log.cpp}::CategoryCache::Entry::state_</a>, <a class="el" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a>, <a class="el" href="#a5955ff6dbec4d6a22a31341908921a2d">StateEmpty_</a>, <a class="el" href="#aba0e8eea52d87e5152feb2d2ccbd02b5">StateReady_</a>, <a class="el" href="#a9448c053ef924ee5710672b5081db811">UnusableIndex_</a>, and <a class="el" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_()</a>.</p>
 
@@ -1112,17 +1112,17 @@ Here is the caller graph for this function:</div>
 
 <p>Waits briefly for an entry insertion to finish and returns its observed state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00759">759</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  760</span>    {</div>
-<div class="line"><span class="lineno">  761</span>      std::uint8_t state{entry.state_.load(std::memory_order_acquire)};</div>
-<div class="line"><span class="lineno">  762</span>      <span class="keywordflow">for</span>(std::uint32_t spin = 0; state == <a class="code hl_variable" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a> &amp;&amp; spin &lt; <a class="code hl_variable" href="#a76e965cf30105c298f5f7b01dfb653b3">BusySpinCount_</a>; ++spin) {</div>
-<div class="line"><span class="lineno">  763</span>        <span class="keywordflow">if</span>((spin &amp; 15u) == 15u)</div>
-<div class="line"><span class="lineno">  764</span>          ::YieldProcessor(); <span class="comment">// pause after every 16 failed spins</span></div>
-<div class="line"><span class="lineno">  765</span>        state = entry.state_.load(std::memory_order_acquire);</div>
-<div class="line"><span class="lineno">  766</span>      }</div>
-<div class="line"><span class="lineno">  767</span>      <span class="keywordflow">return</span> state;</div>
-<div class="line"><span class="lineno">  768</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a76e965cf30105c298f5f7b01dfb653b3"><div class="ttname"><a href="#a76e965cf30105c298f5f7b01dfb653b3">anonymous_namespace{Log.cpp}::CategoryCache::BusySpinCount_</a></div><div class="ttdeci">static constexpr std::uint32_t BusySpinCount_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00724">Log.cpp:724</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00758">758</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  759</span>    {</div>
+<div class="line"><span class="lineno">  760</span>      std::uint8_t state{entry.state_.load(std::memory_order_acquire)};</div>
+<div class="line"><span class="lineno">  761</span>      <span class="keywordflow">for</span>(std::uint32_t spin = 0; state == <a class="code hl_variable" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a> &amp;&amp; spin &lt; <a class="code hl_variable" href="#a76e965cf30105c298f5f7b01dfb653b3">BusySpinCount_</a>; ++spin) {</div>
+<div class="line"><span class="lineno">  762</span>        <span class="keywordflow">if</span>((spin &amp; 15u) == 15u)</div>
+<div class="line"><span class="lineno">  763</span>          ::YieldProcessor(); <span class="comment">// pause after every 16 failed spins</span></div>
+<div class="line"><span class="lineno">  764</span>        state = entry.state_.load(std::memory_order_acquire);</div>
+<div class="line"><span class="lineno">  765</span>      }</div>
+<div class="line"><span class="lineno">  766</span>      <span class="keywordflow">return</span> state;</div>
+<div class="line"><span class="lineno">  767</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a76e965cf30105c298f5f7b01dfb653b3"><div class="ttname"><a href="#a76e965cf30105c298f5f7b01dfb653b3">anonymous_namespace{Log.cpp}::CategoryCache::BusySpinCount_</a></div><div class="ttdeci">static constexpr std::uint32_t BusySpinCount_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00723">Log.cpp:723</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a76e965cf30105c298f5f7b01dfb653b3">BusySpinCount_</a>, and <a class="el" href="#ad9691a33a30580e0c41b4642ed719297">StateBusy_</a>.</p>
 
@@ -1156,8 +1156,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00724">724</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  724</span>{256u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00723">723</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  723</span>{256u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_()</a>.</p>
 
@@ -1183,8 +1183,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00712">712</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  712</span>{256u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00711">711</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  711</span>{256u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 
@@ -1210,8 +1210,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00718">718</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  718</span>{2048u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00717">717</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  717</span>{2048u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0ddbefb697054b557edac786761d4238">HashText_()</a>, and <a class="el" href="#ae14526e54791695749cfda8b0c4f8060">Normalize_()</a>.</p>
 
@@ -1237,8 +1237,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00748">748</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  748</span>{};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00747">747</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  747</span>{};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a10bc796c3898193fe3c9490efc1a4478">data_()</a>, and <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 
@@ -1264,8 +1264,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00713">713</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  713</span>{<a class="code hl_variable" href="#a03356cf8d3547efc665cf418a45b2908">Capacity_</a> - 1u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00712">712</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  712</span>{<a class="code hl_variable" href="#a03356cf8d3547efc665cf418a45b2908">Capacity_</a> - 1u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 
@@ -1291,8 +1291,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00710">710</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  710</span>{0};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00709">709</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  709</span>{0};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a10bc796c3898193fe3c9490efc1a4478">data_()</a>, and <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 
@@ -1318,8 +1318,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00749">749</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  749</span>{};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00748">748</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  748</span>{};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a10bc796c3898193fe3c9490efc1a4478">data_()</a>, and <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 
@@ -1345,8 +1345,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00716">716</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  716</span>{128u * 1024u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00715">715</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  715</span>{128u * 1024u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a10bc796c3898193fe3c9490efc1a4478">data_()</a>, and <a class="el" href="#ad205aa3702fc645db0d7d2851adad3b1">reservePool_()</a>.</p>
 
@@ -1372,8 +1372,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00750">750</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  750</span>{1u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00749">749</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  749</span>{1u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ad205aa3702fc645db0d7d2851adad3b1">reservePool_()</a>.</p>
 
@@ -1399,8 +1399,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00721">721</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  721</span>{1};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00720">720</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  720</span>{1};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>, and <a class="el" href="#a10ba24b7f22ae19dfa063856e4225c14">WaitState_()</a>.</p>
 
@@ -1426,8 +1426,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00720">720</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  720</span>{0};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00719">719</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  719</span>{0};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 
@@ -1453,8 +1453,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00722">722</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  722</span>{2};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00721">721</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  721</span>{2};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a10bc796c3898193fe3c9490efc1a4478">data_()</a>, and <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 
@@ -1480,8 +1480,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00717">717</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  717</span>{256u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00716">716</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  716</span>{256u};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1505,8 +1505,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00714">714</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  714</span>{<a class="code hl_variable" href="#a03356cf8d3547efc665cf418a45b2908">Capacity_</a> - 1u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00713">713</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  713</span>{<a class="code hl_variable" href="#a03356cf8d3547efc665cf418a45b2908">Capacity_</a> - 1u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a10bc796c3898193fe3c9490efc1a4478">data_()</a>, and <a class="el" href="#aa8d17d03bf1721cb63fec4acbf5607ec">slot_()</a>.</p>
 

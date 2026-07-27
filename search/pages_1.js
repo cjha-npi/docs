@@ -2,7 +2,7 @@ var searchData=
 [
   ['bar_20generator_0',['CPU Bar Generator',['../dc/df4/dp_dh_rm_sys_graphs_cpu_bar_generator.html',1,'dp_dh_dir_rm_sys_graphs']]],
   ['basic_20interactions_1',['Basic Interactions',['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__basic_interactions',1,'']]],
-  ['behavior_2',['Behavior',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__allocation_and_capacity',1,'Allocation and Capacity Behavior'],['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__exception_failure_behavior',1,'Exception and Failure Behavior'],['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__logging_behavior',1,'Logging Behavior']]],
+  ['behavior_2',['Behavior',['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__allocation_and_capacity',1,'Allocation and Capacity Behavior'],['../d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__exception_failure_behavior',1,'Exception and Failure Behavior'],['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_logging_behavior',1,'Test: Logging Behavior']]],
   ['behavior_3',['Non-blocking behavior',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__non_block_behavior',1,'']]],
   ['big_20non_20heading_20texts_4',['Big Non-Heading Texts',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text',1,'']]],
   ['blocking_20behavior_5',['Non-blocking behavior',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__non_block_behavior',1,'']]],

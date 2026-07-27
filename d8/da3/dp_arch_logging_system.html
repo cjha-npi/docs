@@ -239,7 +239,7 @@ Important, Fatal, and Crash Logging</h1>
 <h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__workers_and_queue"></a>
 Worker Threads and Queue Ownership</h1>
 <p>The file worker consumes the file queue, formats normal records in batches, writes them to the active file, optionally forwards warning records to the important-log bridge, and forwards displayable records to the display queue. Outside the internal test code, it is the only producer of the display queue.</p>
-<p>The display worker consumes the display queue and writes formatted batches to the attached console or debugger. It can stop when neither output target is available and can be restarted by the file worker when a console is opened or a debugger is attached. Muting display output disables forwarding without affecting normal or important file logging.</p>
+<p>The display worker consumes the display queue and writes formatted batches to the attached console or debugger. It can stop when neither output target is available. It is restarted directly when a temporary console is opened and by the file worker when a debugger is attached. Muting display output disables forwarding without affecting normal or important file logging.</p>
 <p>Workers use an atomic wake-up flag together with <span class="tt">wait()</span> and <span class="tt">notify_one()</span>. Short idle sleeps allow bursts to be collected before a worker blocks. During shutdown, each worker performs additional empty-queue checks which give records already in transit time to be drained before the thread exits.</p>
 <p>The display path limits output to 4096 lines per second. Excess records remain written to the normal log but may be suppressed from the console or debugger, with a summary reporting the number of suppressed display lines.</p>
 <h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__console_and_debugger"></a>
@@ -315,11 +315,11 @@ Public API</h1>
 <li><b>Console control:</b> <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ad54369e851cae6d6b5e146ee35fbcc35" title="npi::log::isPermanentConsole">npi::log::isPermanentConsole</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a3f5453b25bfa7808da0fa9c48d5a0b01" title="npi::log::isConsoleOpen">npi::log::isConsoleOpen</a>, <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a35a969078b211913c70a3289d579181f" title="npi::log::openConsole">npi::log::openConsole</a>, and <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7b8c87cac5cee3c9c4ad9f19aebc8c02" title="npi::log::closeConsole">npi::log::closeConsole</a>.</li>
 </ul>
 <p>Detailed parameter, return-value, threading, and persistence behavior is documented on the corresponding declarations in <span class="tt"><a class="el" href="../../da/df4/_log_8h.html" title="Declares runtime configuration and console controls for the logging system.">Log.h</a></span>.</p>
-<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__testing"></a>
-Testing</h1>
+<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__test_overview"></a>
+Test: Overview</h1>
 <p>The logging system has been tested for handler overhead, extreme multithreaded load, context-cache correctness, text sanitization, normal and important file behavior, concurrent fatal logging, limited crash handling, console and debugger transitions, blocked-console shutdown, directory switching, folder-size cleanup, field normalization, category filtering, persistent settings, temporary mode, and display toggles.</p>
-<h2 class="doxsection"><a class="anchor" id="dp_arch_logging_system__testing__environment"></a>
-Test Environment</h2>
+<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__test_environment"></a>
+Test: Environment</h1>
 <ul>
 <li>Lenovo ThinkBook 15 G2 ITL</li>
 <li>Processor: 11th Gen Intel Core i5-1135G7</li>
@@ -328,8 +328,8 @@ Test Environment</h2>
 <li>Visual Studio 2026 MSVC v145</li>
 <li>Qt 6.8.3</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="dp_arch_logging_system__testing__log_msg_handler_time"></a>
-Log Message Handler Time</h2>
+<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__test_handler_time"></a>
+Test: Handler Time</h1>
 <p>This test was performed to check the average time taken by the <span class="tt">logMsgHandler</span> function.</p>
 <div class="fragment"><div class="line">std::atomic_int64_t totalLogTime{0};</div>
 <div class="line">std::atomic_int64_t logCount{0};</div>
@@ -359,7 +359,7 @@ Log Message Handler Time</h2>
 <div class="line">  <span class="comment">// convert avg from nanoseconds to microseconds</span></div>
 <div class="line">  <span class="comment">// used ::OutputDebugStringA to output microseconds value</span></div>
 <div class="line">}</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_ae42f26a3b2327af9cd201c13e96c0349"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler</a></div><div class="ttdeci">void logMsgHandler(QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</div><div class="ttdoc">Captures and routes one message delivered by Qt.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05118">Log.cpp:5118</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_ae42f26a3b2327af9cd201c13e96c0349"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler</a></div><div class="ttdeci">void logMsgHandler(QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</div><div class="ttdoc">Captures and routes one message delivered by Qt.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05110">Log.cpp:5110</a></div></div>
 </div><!-- fragment --><p> Results:</p><ul>
 <li>Debug builds:<ul>
 <li>No Load: ~30 microseconds.</li>
@@ -377,8 +377,8 @@ Log Message Handler Time</h2>
 <li>Continuously active CPU, and</li>
 <li>No wake-up calls for workers.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="dp_arch_logging_system__testing__extreme_stress"></a>
-Extreme Stress</h2>
+<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__test_extreme_stress"></a>
+Test: Extreme Stress</h1>
 <p>This test was performed to check how the logging system handles extreme stress.</p>
 <p>Relevant test code: </p><div class="fragment"><div class="line">Q_LOGGING_CATEGORY(npi_LogStressTestThread, <span class="stringliteral">&quot;npi.LogStressTestThread&quot;</span>)</div>
 <div class="line"><span class="preprocessor">#define npiLogStressTestThreadInfo qCInfo(npi_LogStressTestThread).noquote()</span></div>
@@ -416,8 +416,8 @@ Extreme Stress</h2>
 </ul>
 </li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="dp_arch_logging_system__testing__context_cache"></a>
-Cache Text</h2>
+<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__test_context_cache"></a>
+Test: Cache Text</h1>
 <p>This test was performed to check whether the caches responsible for storing text from different parts of <span class="tt">QMessageLogContext</span> behave correctly.</p>
 <p>The logging system uses three different caches:</p>
 <ol type="1">
@@ -459,8 +459,8 @@ Cache Text</h2>
 <div class="line">... npi.temp_1_cat some/file_1.cpp:11 func_1 | &quot;Testing Context with Counter: 6&quot;</div>
 <div class="line">... npi.temp_1_cat some/file_1.cpp:11 func_1 | &quot;Testing Context with Counter: 7&quot;</div>
 </div><!-- fragment --><p>Conclusion: The texts are stored correctly in the caches and are later retrieved by the log writer thread using their assigned indices. When pointer values are used as cache keys, the text found during the first lookup is stored and reused because the pointer addresses remain unchanged. As a result, every subsequent log incorrectly contains the first category, file, and function texts. This test demonstrates that pointer-based cache keys are unreliable because the text stored at a stable address can change. Content-derived keys correctly distinguish the updated contexts. Hashing pointer values takes approximately 70% of the time required to hash the pointed-to text. However, because pointer-based caching is not reliable, it should not be used. Content-based caching remains beneficial because previously processed file and function texts do not need to be normalized again or copied into the text pools.</p>
-<h2 class="doxsection"><a class="anchor" id="dp_arch_logging_system__testing__text_sanitization"></a>
-Text Sanitization</h2>
+<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__test_text_sanitization"></a>
+Test: Text Sanitization</h1>
 <p>This test was performed to check the text sanitization. The text sanitization happens inside <span class="tt"><a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a0663052a99e9b2a0bf0b2c0cb9e75b7b" title="Sanitizes and appends one character.">TextBuffer::appendChar_</a></span> function:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> appendChar_(<span class="keywordtype">char</span> chr) <span class="keyword">noexcept</span></div>
 <div class="line">{</div>
@@ -524,9 +524,9 @@ Text Sanitization</h2>
 <li>The <span class="tt">|</span> preceding the log message is added by the formatter so that the message is always separated from the other fields.</li>
 </ul>
 </dd></dl>
-<h2 class="doxsection"><a class="anchor" id="dp_arch_logging_system__testing__logging_behavior"></a>
-Logging Behavior</h2>
-<p><b>Fatal, Critical and Crash Handling:</b></p>
+<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__test_logging_behavior"></a>
+Test: Logging Behavior</h1>
+<p><span class="dp-markdown-big-text"><b>Fatal, Critical and Crash Handling:</b></span></p>
 <p>Fatal and Critical logs were generated directly from <span class="tt">MainWindow</span> and from the stress-testing threads under extremely heavy loads.</p>
 <ul>
 <li>All logs were written to the <span class="tt">*.imp.log</span> file as expected.</li>
@@ -536,12 +536,12 @@ Logging Behavior</h2>
 </ul>
 <p>Under heavy concurrent fatal logging, only the first fatal log displayed a popup and was written to the <span class="tt">*.imp.log</span> file. This behavior is expected and intentional. When multiple threads emit fatal logs concurrently, only the first thread to claim fatal ownership writes the fatal record and displays the popup. The other fatal threads wait for a fixed grace period then fail fast if the original thread hasn't done so already. This prevents competing fatal-handling paths and gives the owning thread sufficient time to write the log and display the popup. A guard is included to prevent the owning thread from waiting on itself if a re-entrant fatal log occurs on the same thread.</p>
 <p>Limited crash-handling tests were performed. The crash handlers are installed, and crash logs are forwarded to the <span class="tt">*.imp.log</span> file. Some crash-handling tests could not be completed because Visual Studio intercepted the crash before the installed handlers could be invoked, for example, in the case of a stack overflow. Completing these tests would require running the executable outside Visual Studio together with all required supporting files.</p>
-<p><b>Console/Debugger:</b></p>
+<p><span class="dp-markdown-big-text"><b>Console/Debugger:</b></span></p>
 <p>The solution was started without a debugger attached, and it correctly detected the opening and closing of the console. The display thread was started and stopped successfully multiple times during the same run.</p>
-<p><b>Stuck Display Thread:</b></p>
+<p><span class="dp-markdown-big-text"><b>Stuck Display Thread:</b></span></p>
 <p>If text is selected in the console, the <span class="tt">WriteConsoleA</span> or <span class="tt">WriteConsoleW</span> function used by the display thread can become blocked and fail to return. This is one of the main reasons why console output is handled by a dedicated display thread rather than the main thread. If the display thread is blocked while the application is shutting down, the user is asked whether to abandon the display thread and continue shutting down or to continue waiting. This works as expected. Terminating the process while the display thread is blocked has no adverse side effects and is supported by design.</p>
 <p>To perform this test, press <span class="tt">Ctrl + F</span> and search for text currently shown in the console. The matched text becomes selected, causing the display thread to become blocked.</p>
-<p><b>Log Directory:</b></p>
+<p><span class="dp-markdown-big-text"><b>Log Directory:</b></span></p>
 <ul>
 <li>Changed the directory while logging was active:<ul>
 <li>The directory change was successful, and both <span class="tt">*.log</span> and <span class="tt">*.imp.log</span> (if needed) files were created in the new directory.</li>
@@ -557,7 +557,7 @@ Logging Behavior</h2>
 <li>Changing back to default directory works as expected.</li>
 <li>Selecting the current directory again does nothing and provides a feedback text stating the selected directory is the current directory.</li>
 </ul>
-<p><b>Log File:</b></p>
+<p><span class="dp-markdown-big-text"><b>Log File:</b></span></p>
 <p>All tests were performed on both <span class="tt">*.log</span> and <span class="tt">*.imp.log</span> files.</p><ul>
 <li>File names are assigned correctly.</li>
 <li>While a log file is open for writing by the application:<ul>
@@ -568,7 +568,7 @@ Logging Behavior</h2>
 </li>
 <li>After a log file is closed, it behaves like a normal file and can be moved, deleted, or otherwise modified.</li>
 </ul>
-<p><b>Max Folder Size:</b></p>
+<p><span class="dp-markdown-big-text"><b>Max Folder Size:</b></span></p>
 <ul>
 <li>Directory cleanup happens on startup, directory change and on manual calls only.</li>
 <li>Filters <span class="tt">xxxxxxxx_xxxxxxxxx_Phhhhhhhh.log</span> files, where x = decimal and h = hexadecimal.</li>
@@ -578,7 +578,7 @@ Logging Behavior</h2>
 <li>Debouncing for cleanup and saving works as expected.</li>
 <li>Saves the new size only when temporary mode is disabled.</li>
 </ul>
-<p><b>Fields:</b></p>
+<p><span class="dp-markdown-big-text"><b>Fields:</b></span></p>
 <ul>
 <li>The complete fields text can be queried to show users all available fields.</li>
 <li>When applied, the text is normalized:<ul>
@@ -595,7 +595,7 @@ Logging Behavior</h2>
 <li>On reset the default values are applied.</li>
 <li>The changes respect temp mode and are only saved when temp mode is false.</li>
 </ul>
-<p><b>Categories and Filters:</b></p>
+<p><span class="dp-markdown-big-text"><b>Categories and Filters:</b></span></p>
 <ul>
 <li>Logging category is determined correctly.</li>
 <li>Categories can be separated based on <span class="tt">Qt</span> and <span class="tt">non-Qt</span> categories.</li>
@@ -603,7 +603,7 @@ Logging Behavior</h2>
 <li>Filter text normalization works correctly.</li>
 <li>Filter rules are saved and respect the temporary-mode setting.</li>
 </ul>
-<p><b>Toggles:</b></p>
+<p><span class="dp-markdown-big-text"><b>Toggles:</b></span></p>
 <p>All toggles respect temporary mode and are saved to the settings file only when temporary mode is disabled, which is the default.</p><ul>
 <li>Warn is Important: Setting to true sends the warning logs to <span class="tt">*.imp.log</span>.</li>
 <li>Show Warning Log: Enables/disables warning log display on console/debugger.</li>
@@ -611,7 +611,7 @@ Logging Behavior</h2>
 <li>Show Debug Log: Enables/disables debug log display on console/debugger.</li>
 <li>Colored Console: Enables or disables console text colors based on the log level.</li>
 </ul>
-<p><b>Console:</b></p>
+<p><span class="dp-markdown-big-text"><b>Console:</b></span></p>
 <ul>
 <li>Permanent console is detected correctly.</li>
 <li>Opening and closing the console works as expected:<ul>

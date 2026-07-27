@@ -49,7 +49,7 @@
 <script type="application/ecmascript">
 var viewWidth = 618;
 var viewHeight = 167;
-var sectionId = 'dynsection-1';
+var sectionId = 'dynsection-18';
 </script>
 <script type="application/ecmascript" xlink:href="../../svg.min.js"/>
 <svg id="graph" class="graph">
@@ -58,7 +58,7 @@ var sectionId = 'dynsection-1';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Provides queue, wake&#45;up, field&#45;layout, and thread state shared by workers.">
+<g id="a_Node000001"><a xlink:title="Provides common queue, wake&#45;up, field&#45;layout, and thread state for workers.">
 <polygon fill="#999999" stroke="none" points="610.25,-79.25 300.25,-79.25 300.25,-60 610.25,-60 610.25,-79.25"/>
 <text xml:space="preserve" text-anchor="start" x="308.25" y="-65.8" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Log.cpp}::LeakedState::Worker</text>
 </a>

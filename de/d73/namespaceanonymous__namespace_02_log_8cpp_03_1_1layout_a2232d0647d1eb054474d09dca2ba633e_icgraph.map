@@ -1,13 +1,21 @@
 <map id="anonymous_namespace{Log::cpp}::layout::packField" name="anonymous_namespace{Log::cpp}::layout::packField">
-<area shape="rect" id="Node000001" title="Packs one unique field into the next four&#45;bit layout slot." alt="" coords="693,78,1099,103"/>
-<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="955,72,959,67,952,62,931,58,896,56,858,58,837,64,833,69,845,79,840,77,828,70,834,59,857,53,896,51,931,53,954,58,964,66,958,76"/>
-<area shape="rect" id="Node000002" href="$de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a2f8305be7a08f7bd6252a3d9cc9a074c" title="Normalizes user field text and optionally publishes its packed layout." alt="" coords="448,63,645,118"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="683,91,645,93,645,88,688,90"/>
-<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="587,54,576,46,547,41,526,43,512,48,506,55,506,65,502,61,501,53,510,44,525,38,547,36,578,41,592,55"/>
-<area shape="rect" id="Node000003" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="227,29,400,85"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,75,400,72,400,67,443,75"/>
+<area shape="rect" id="Node000001" title="Packs one unique field into the next four&#45;bit layout slot." alt="" coords="765,186,1171,211"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="1027,180,1031,175,1024,170,1003,166,968,164,930,166,909,172,905,177,917,186,912,185,900,178,906,167,929,161,968,159,1003,161,1026,166,1036,174,1030,184"/>
+<area shape="rect" id="Node000002" href="$de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a2f8305be7a08f7bd6252a3d9cc9a074c" title="Normalizes user field text and optionally publishes its packed layout." alt="" coords="520,171,717,226"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="755,199,717,201,717,196,760,198"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="666,162,662,158,653,154,619,149,594,151,579,156,572,163,571,172,567,169,567,161,576,152,593,146,619,144,654,149,665,154,671,163"/>
+<area shape="rect" id="Node000003" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="263,29,436,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="571,166,524,137,471,106,430,88,430,82,473,101,527,132,576,166"/>
 <area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,70,179,111"/>
-<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="437,96,400,100,227,100,179,98,179,93,227,95,400,95,443,96"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="352,21,341,12,313,8,294,10,281,15,275,21,275,31,270,28,270,19,278,10,292,5,313,3,343,8,357,22"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="216,72,179,80,178,75,222,71"/>
+<area shape="poly" id="edge10_Node000002_Node000004" title=" " alt="" coords="536,168,471,150,317,120,179,101,178,96,317,115,473,145,541,168"/>
+<area shape="rect" id="Node000005" href="$d5/ddd/namespacenpi_1_1log.html#ae641f0801f76d9024013c1d201b7d4fa" title="Restores the default displayed log fields." alt="" coords="227,160,472,186"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="509,189,472,187,472,182,515,188"/>
+<area shape="rect" id="Node000006" href="$d5/ddd/namespacenpi_1_1log.html#a015e6cf2735c059ebad3d94c4f69d884" title="Restores the default normal log file fields." alt="" coords="239,210,460,235"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="510,208,460,215,459,210,515,207"/>
+<area shape="rect" id="Node000007" href="$d5/ddd/namespacenpi_1_1log.html#a1c8be170c09e71630d3e61964c5681dc" title="Changes the fields included in displayed logs." alt="" coords="235,259,464,285"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="537,228,473,250,424,262,423,256,471,245,532,229"/>
+<area shape="rect" id="Node000008" href="$d5/ddd/namespacenpi_1_1log.html#a314e1bbd60d0d23d037fdb863ad706fd" title="Changes the fields included in normal log files." alt="" coords="247,308,452,334"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="581,230,531,269,473,300,438,311,437,306,471,295,528,264,576,232"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="394,21,391,17,382,12,349,8,326,10,311,15,305,21,305,30,300,28,300,19,309,10,325,5,349,3,384,7,394,13,400,22"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="253,71,179,82,177,77,257,68"/>
 </map>

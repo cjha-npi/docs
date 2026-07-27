@@ -168,7 +168,7 @@
 <area shape="poly" id="edge104_Node000055_Node000025" title=" " alt="" coords="873,1276,897,1225,934,1159,983,1091,1012,1059,1044,1031,1059,1023,1056,1027,1047,1035,1016,1063,988,1094,939,1162,902,1227,878,1278"/>
 <area shape="rect" id="Node000056" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a0c3664a82b33e321bfcc24ac0b00313e" title="Finalizes a cache key into the 32&#45;bit probe hash." alt="" coords="1045,1285,1267,1341"/>
 <area shape="poly" id="edge105_Node000055_Node000056" title=" " alt="" coords="972,1306,1040,1308,1035,1311,974,1310"/>
-<area shape="rect" id="Node000058" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a435efdf570bf14b59b57ac13434102b9" title="Compares 2 keys for strict equality." alt="" coords="1045,1445,1267,1501"/>
+<area shape="rect" id="Node000058" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a435efdf570bf14b59b57ac13434102b9" title="Compares 2 keys for equality." alt="" coords="1045,1445,1267,1501"/>
 <area shape="poly" id="edge107_Node000055_Node000058" title=" " alt="" coords="967,1330,999,1350,1016,1371,1024,1392,1031,1412,1047,1431,1060,1441,1054,1442,1044,1435,1026,1414,1019,1393,1012,1373,996,1354,968,1335"/>
 <area shape="rect" id="Node000059" href="$d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a3a83a9d55b098fd17d4c632b0aca30ba" title="Builds the cache key from the relevant message&#45;context data." alt="" coords="1045,1365,1267,1421"/>
 <area shape="poly" id="edge108_Node000055_Node000059" title=" " alt="" coords="955,1330,1058,1362,1053,1364,957,1335"/>
@@ -186,7 +186,7 @@
 <area shape="poly" id="edge115_Node000064_Node000025" title=" " alt="" coords="873,378,1000,793,1009,840,1013,879,1022,914,1032,932,1047,951,1056,960,1050,961,1043,955,1027,935,1017,916,1008,880,1004,841,995,794,872,384"/>
 <area shape="rect" id="Node000065" href="$d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a9dc613bb097339af32c1af783547447c" title="Finalizes a cache key into the 32&#45;bit probe hash." alt="" coords="1045,5,1267,61"/>
 <area shape="poly" id="edge116_Node000064_Node000065" title=" " alt="" coords="872,325,896,271,933,204,982,133,1012,100,1044,71,1059,63,1056,67,1047,75,1015,104,987,136,938,206,901,274,877,326"/>
-<area shape="rect" id="Node000067" href="$d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#ae8746397035000686a4a24c41692d0dd" title="Compares 2 keys for strict equality." alt="" coords="1045,85,1267,141"/>
+<area shape="rect" id="Node000067" href="$d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#ae8746397035000686a4a24c41692d0dd" title="Compares 2 keys for equality." alt="" coords="1045,85,1267,141"/>
 <area shape="poly" id="edge118_Node000064_Node000067" title=" " alt="" coords="880,324,946,239,992,192,1044,151,1061,143,1058,147,1047,155,996,196,950,243,885,327"/>
 <area shape="rect" id="Node000068" href="$d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a412ac1d0578183f98b4bae2f29e62b06" title="Builds the cache key from the relevant message&#45;context data." alt="" coords="1045,165,1267,221"/>
 <area shape="poly" id="edge119_Node000064_Node000068" title=" " alt="" coords="898,324,965,277,1044,231,1067,222,1063,226,1047,236,968,282,902,327"/>
@@ -206,7 +206,7 @@
 <area shape="poly" id="edge127_Node000074_Node000025" title=" " alt="" coords="900,858,968,905,1047,951,1068,961,1063,963,1044,956,965,909,901,863"/>
 <area shape="rect" id="Node000075" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#af2d7aa51ccae7087bb4dee5786309c27" title="Finalizes a cache key into the 32&#45;bit probe hash." alt="" coords="1045,725,1267,781"/>
 <area shape="poly" id="edge128_Node000074_Node000075" title=" " alt="" coords="963,803,1048,781,1044,785,967,807"/>
-<area shape="rect" id="Node000077" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#aa1e76f9d85cb3e11d4e0a63eaa66a6dc" title="Compares 2 keys for strict equality." alt="" coords="1045,805,1267,861"/>
+<area shape="rect" id="Node000077" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#aa1e76f9d85cb3e11d4e0a63eaa66a6dc" title="Compares 2 keys for equality." alt="" coords="1045,805,1267,861"/>
 <area shape="poly" id="edge130_Node000074_Node000077" title=" " alt="" coords="972,831,1040,832,1036,835,975,835"/>
 <area shape="rect" id="Node000078" href="$da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a3811d33788f541bca6fa5817da03d906" title="Builds the cache key from the relevant message&#45;context data." alt="" coords="1045,885,1267,941"/>
 <area shape="poly" id="edge131_Node000074_Node000078" title=" " alt="" coords="964,859,1049,882,1044,885,966,863"/>

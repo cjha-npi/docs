@@ -14,10 +14,9 @@ var searchData=
   ['location_11',['Location',['../dc/d17/dp_dh_vs_settings.html#dp_dh_vs_settings__browsing_database_location',1,'Browsing Database Location'],['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location',1,'Browsing Database Location']]],
   ['log_20fields_20and_20formatting_12',['Log Fields and Formatting',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__fields_and_formatting',1,'']]],
   ['log_20files_13',['Normal Log Files',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__normal_log_files',1,'']]],
-  ['log_20message_20handler_20time_14',['Log Message Handler Time',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__log_msg_handler_time',1,'']]],
-  ['log_20process_15',['Imp Log Process',['../de/d99/dp_dep_imp_log_process.html',1,'dp_dep_dir_dependencies']]],
-  ['log_20records_20and_20context_20caches_16',['Log Records and Context Caches',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__log_records_and_context_caches',1,'']]],
-  ['logging_17',['Logging',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__imp_fatal_crash_logging',1,'Important, Fatal, and Crash Logging'],['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__logging',1,'Logging']]],
-  ['logging_20behavior_18',['Logging Behavior',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__testing__logging_behavior',1,'']]],
-  ['logging_20system_19',['Logging System',['../d8/da3/dp_arch_logging_system.html',1,'dp_arch_dir_architecture']]]
+  ['log_20process_14',['Imp Log Process',['../de/d99/dp_dep_imp_log_process.html',1,'dp_dep_dir_dependencies']]],
+  ['log_20records_20and_20context_20caches_15',['Log Records and Context Caches',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__log_records_and_context_caches',1,'']]],
+  ['logging_16',['Logging',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__imp_fatal_crash_logging',1,'Important, Fatal, and Crash Logging'],['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__logging',1,'Logging']]],
+  ['logging_20behavior_17',['Test: Logging Behavior',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_logging_behavior',1,'']]],
+  ['logging_20system_18',['Logging System',['../d8/da3/dp_arch_logging_system.html',1,'dp_arch_dir_architecture']]]
 ];

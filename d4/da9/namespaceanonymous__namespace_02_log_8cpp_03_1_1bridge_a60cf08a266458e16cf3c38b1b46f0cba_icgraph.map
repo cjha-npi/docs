@@ -1,9 +1,13 @@
 <map id="anonymous_namespace{Log::cpp}::bridge::startProcess" name="anonymous_namespace{Log::cpp}::bridge::startProcess">
-<area shape="rect" id="Node000001" title="Starts a new npiImpLog.exe helper for the supplied directory and file base name." alt="" coords="448,44,877,70"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="722,38,725,34,718,29,697,25,663,23,625,25,604,30,600,35,612,45,607,44,595,36,601,26,624,20,663,18,698,19,721,24,731,33,725,43"/>
-<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a" title="Transitions both normal and important logging to a new directory." alt="" coords="227,29,400,85"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="437,57,400,60,400,55,443,57"/>
-<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="352,21,341,12,313,8,294,10,281,15,275,21,275,31,271,28,270,19,278,10,292,5,313,3,343,8,357,22"/>
-<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="216,57,179,60,178,55,221,57"/>
+<area shape="rect" id="Node000001" title="Starts a new npiImpLog.exe helper for the supplied directory and file base name." alt="" coords="488,55,917,80"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="762,49,765,44,758,39,737,35,703,33,665,35,644,41,640,46,652,55,647,54,635,47,641,36,664,30,703,28,738,30,761,35,771,43,765,53"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a" title="Transitions both normal and important logging to a new directory." alt="" coords="267,40,440,95"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="477,68,440,70,440,65,483,67"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="396,31,392,27,384,23,353,18,332,20,318,25,311,32,311,41,307,38,307,30,315,21,331,15,353,13,386,18,395,23,401,33"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="5,5,219,31"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="257,49,175,34,175,28,261,47"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="13,55,211,80"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="256,68,211,70,210,65,261,67"/>
+<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="25,104,199,145"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="261,89,198,107,197,102,256,90"/>
 </map>

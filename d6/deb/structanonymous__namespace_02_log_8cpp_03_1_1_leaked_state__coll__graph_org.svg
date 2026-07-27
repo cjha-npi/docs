@@ -585,7 +585,7 @@
 <!-- Node29 -->
 <g id="Node000029" class="node">
 <title>Node29</title>
-<g id="a_Node000029"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker" target="_top" xlink:title="File worker with normal&#45;log file information and drop counting.">
+<g id="a_Node000029"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker" target="_top" xlink:title="Stores file worker state plus normal&#45;log file information and drop counting.">
 <polygon fill="white" stroke="none" points="1078.75,-969.25 930.75,-969.25 930.75,-927.5 1078.75,-927.5 1078.75,-969.25"/>
 <text xml:space="preserve" text-anchor="start" x="938.75" y="-954.8" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="938.75" y="-943.55" font-family="Consolas" font-size="11.00">{Log.cpp}::LeakedState</text>
@@ -606,7 +606,7 @@
 <!-- Node30 -->
 <g id="Node000030" class="node">
 <title>Node30</title>
-<g id="a_Node000030"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker" target="_top" xlink:title="Provides queue, wake&#45;up, field&#45;layout, and thread state shared by workers.">
+<g id="a_Node000030"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker" target="_top" xlink:title="Provides common queue, wake&#45;up, field&#45;layout, and thread state for workers.">
 <polygon fill="white" stroke="none" points="754.5,-789.25 606.5,-789.25 606.5,-747.5 754.5,-747.5 754.5,-789.25"/>
 <text xml:space="preserve" text-anchor="start" x="614.5" y="-774.8" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="614.5" y="-763.55" font-family="Consolas" font-size="11.00">{Log.cpp}::LeakedState</text>
@@ -628,7 +628,7 @@
 <!-- Node39 -->
 <g id="Node000039" class="node">
 <title>Node39</title>
-<g id="a_Node000039"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker" target="_top" xlink:title="Display worker with display muting and failure information.">
+<g id="a_Node000039"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker" target="_top" xlink:title="Stores display worker plus display muting and failure information.">
 <polygon fill="white" stroke="none" points="1078.75,-1066.25 930.75,-1066.25 930.75,-1024.5 1078.75,-1024.5 1078.75,-1066.25"/>
 <text xml:space="preserve" text-anchor="start" x="938.75" y="-1051.8" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="938.75" y="-1040.55" font-family="Consolas" font-size="11.00">{Log.cpp}::LeakedState</text>

@@ -1,4 +1,8 @@
 <map id="anonymous_namespace{Log::cpp}::control::setMaxFolderMb" name="anonymous_namespace{Log::cpp}::control::setMaxFolderMb">
-<area shape="rect" id="Node000001" title="Updates the runtime maximum&#45;folder&#45;size setting." alt="" coords="5,29,459,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="308,24,314,19,306,14,278,10,232,8,182,10,155,16,150,18,150,20,165,30,160,29,145,22,146,15,153,11,182,5,232,3,279,4,308,9,320,18,310,29"/>
+<area shape="rect" id="Node000001" title="Updates the runtime maximum&#45;folder&#45;size setting." alt="" coords="307,42,760,68"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="601,37,606,32,598,27,574,23,533,21,490,23,465,28,461,31,461,33,475,43,469,42,456,35,457,28,463,23,489,18,533,16,574,17,600,22,611,31,603,41"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#a82c9393d9e86743df96071dd5dda1fb6" title="Restores the default maximum log folder size." alt="" coords="25,5,239,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,42,238,36,238,31,352,41"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#a44c3ab1ead08f699085787d44d37ae11" title="Changes the normal&#45;log cleanup target." alt="" coords="5,70,259,96"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="339,69,259,77,258,72,344,68"/>
 </map>

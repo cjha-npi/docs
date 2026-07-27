@@ -141,7 +141,7 @@ $(function(){initNavTree('d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_fi
 <div class="textblock"><p>Caches normalized source-file and line-number text. </p>
 <p>The cache keeps the last three path components when available, appends the source line, and stores the result in a fixed pool. Entries are addressed by compact 16-bit slots carried by <span class="tt"><a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html" title="Stores one captured log record for asynchronous processing.">OneLog</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00886">886</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00885">885</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for anonymous_namespace{Log.cpp}::FileLineCache:</div>
 <div class="dyncontent">
@@ -181,7 +181,7 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memitem:aab94c7116b206b9f46e015b043c082ce" id="r_aab94c7116b206b9f46e015b043c082ce"><td class="memItemLeft">static <a class="el" href="#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">TextHash</a>&#160;</td><td class="memItemRight"><a class="el" href="#aab94c7116b206b9f46e015b043c082ce">HashText_</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *text) noexcept</td></tr>
 <tr class="memdesc:aab94c7116b206b9f46e015b043c082ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hashes bounded null-terminated text and records the scanned length.  <br /></td></tr>
 <tr class="memitem:ae8746397035000686a4a24c41692d0dd" id="r_ae8746397035000686a4a24c41692d0dd"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ae8746397035000686a4a24c41692d0dd">KeysEqual_</a> (const <a class="el" href="#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">Key</a> &amp;lhs, const <a class="el" href="#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">Key</a> &amp;rhs) noexcept</td></tr>
-<tr class="memdesc:ae8746397035000686a4a24c41692d0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares 2 keys for strict equality.  <br /></td></tr>
+<tr class="memdesc:ae8746397035000686a4a24c41692d0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares 2 keys for equality.  <br /></td></tr>
 <tr class="memitem:a412ac1d0578183f98b4bae2f29e62b06" id="r_a412ac1d0578183f98b4bae2f29e62b06"><td class="memItemLeft">static <a class="el" href="#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">Key</a>&#160;</td><td class="memItemRight"><a class="el" href="#a412ac1d0578183f98b4bae2f29e62b06">MakeKey_</a> (const QMessageLogContext &amp;ctx) noexcept</td></tr>
 <tr class="memdesc:a412ac1d0578183f98b4bae2f29e62b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the cache key from the relevant message-context data.  <br /></td></tr>
 <tr class="memitem:a054c912f7b98caef97510d52357c8a43" id="r_a054c912f7b98caef97510d52357c8a43"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a054c912f7b98caef97510d52357c8a43">Mix_</a> (std::uint64_t &amp;hash, std::uint64_t value) noexcept</td></tr>
@@ -484,31 +484,31 @@ Here is the call graph for this function:</div>
 
 <p>Appends the retained source-path components used by the file-line field. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01160">1160</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1161</span>    {</div>
-<div class="line"><span class="lineno"> 1162</span>      <span class="keywordflow">if</span>(file == <span class="keyword">nullptr</span> || file[0] == <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1163</span>        <span class="keywordflow">return</span> buf.appendRawChar_(<span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno"> 1164</span> </div>
-<div class="line"><span class="lineno"> 1165</span>      std::size_t sep1{0};</div>
-<div class="line"><span class="lineno"> 1166</span>      std::size_t sep2{0};</div>
-<div class="line"><span class="lineno"> 1167</span>      std::size_t sep3{0};</div>
-<div class="line"><span class="lineno"> 1168</span>      std::size_t last{0};</div>
-<div class="line"><span class="lineno"> 1169</span> </div>
-<div class="line"><span class="lineno"> 1170</span>      <span class="keywordflow">while</span>(last &lt; <a class="code hl_variable" href="#a1e7dd49474b39d30ed972f18e5444bff">ContextScanMax_</a> &amp;&amp; file[last] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
-<div class="line"><span class="lineno"> 1171</span>        <span class="keywordflow">if</span>(file[last] == <span class="charliteral">&#39;\\&#39;</span> || file[last] == <span class="charliteral">&#39;/&#39;</span>) {</div>
-<div class="line"><span class="lineno"> 1172</span>          sep1 = sep2;</div>
-<div class="line"><span class="lineno"> 1173</span>          sep2 = sep3;</div>
-<div class="line"><span class="lineno"> 1174</span>          sep3 = last + 1u;</div>
-<div class="line"><span class="lineno"> 1175</span>        }</div>
-<div class="line"><span class="lineno"> 1176</span>        ++last;</div>
-<div class="line"><span class="lineno"> 1177</span>      }</div>
-<div class="line"><span class="lineno"> 1178</span> </div>
-<div class="line"><span class="lineno"> 1179</span>      <span class="keywordflow">if</span>(last == 0u || sep3 == last)</div>
-<div class="line"><span class="lineno"> 1180</span>        <span class="keywordflow">return</span> buf.appendRawChar_(<span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno"> 1181</span> </div>
-<div class="line"><span class="lineno"> 1182</span>      <span class="keywordflow">return</span> buf.appendTextRange_(file + sep1, last - sep1);</div>
-<div class="line"><span class="lineno"> 1183</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a1e7dd49474b39d30ed972f18e5444bff"><div class="ttname"><a href="#a1e7dd49474b39d30ed972f18e5444bff">anonymous_namespace{Log.cpp}::FileLineCache::ContextScanMax_</a></div><div class="ttdeci">static constexpr std::uint32_t ContextScanMax_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01009">Log.cpp:1009</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01159">1159</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1160</span>    {</div>
+<div class="line"><span class="lineno"> 1161</span>      <span class="keywordflow">if</span>(file == <span class="keyword">nullptr</span> || file[0] == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1162</span>        <span class="keywordflow">return</span> buf.appendRawChar_(<span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno"> 1163</span> </div>
+<div class="line"><span class="lineno"> 1164</span>      std::size_t sep1{0};</div>
+<div class="line"><span class="lineno"> 1165</span>      std::size_t sep2{0};</div>
+<div class="line"><span class="lineno"> 1166</span>      std::size_t sep3{0};</div>
+<div class="line"><span class="lineno"> 1167</span>      std::size_t last{0};</div>
+<div class="line"><span class="lineno"> 1168</span> </div>
+<div class="line"><span class="lineno"> 1169</span>      <span class="keywordflow">while</span>(last &lt; <a class="code hl_variable" href="#a1e7dd49474b39d30ed972f18e5444bff">ContextScanMax_</a> &amp;&amp; file[last] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 1170</span>        <span class="keywordflow">if</span>(file[last] == <span class="charliteral">&#39;\\&#39;</span> || file[last] == <span class="charliteral">&#39;/&#39;</span>) {</div>
+<div class="line"><span class="lineno"> 1171</span>          sep1 = sep2;</div>
+<div class="line"><span class="lineno"> 1172</span>          sep2 = sep3;</div>
+<div class="line"><span class="lineno"> 1173</span>          sep3 = last + 1u;</div>
+<div class="line"><span class="lineno"> 1174</span>        }</div>
+<div class="line"><span class="lineno"> 1175</span>        ++last;</div>
+<div class="line"><span class="lineno"> 1176</span>      }</div>
+<div class="line"><span class="lineno"> 1177</span> </div>
+<div class="line"><span class="lineno"> 1178</span>      <span class="keywordflow">if</span>(last == 0u || sep3 == last)</div>
+<div class="line"><span class="lineno"> 1179</span>        <span class="keywordflow">return</span> buf.appendRawChar_(<span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno"> 1180</span> </div>
+<div class="line"><span class="lineno"> 1181</span>      <span class="keywordflow">return</span> buf.appendTextRange_(file + sep1, last - sep1);</div>
+<div class="line"><span class="lineno"> 1182</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a1e7dd49474b39d30ed972f18e5444bff"><div class="ttname"><a href="#a1e7dd49474b39d30ed972f18e5444bff">anonymous_namespace{Log.cpp}::FileLineCache::ContextScanMax_</a></div><div class="ttdeci">static constexpr std::uint32_t ContextScanMax_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01008">Log.cpp:1008</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a1e7dd49474b39d30ed972f18e5444bff">ContextScanMax_</a>.</p>
 
@@ -547,39 +547,39 @@ Here is the caller graph for this function:</div>
 <p>Returns the immutable text and length associated with a cache slot. </p>
 <dl class="section return"><dt>Returns</dt><dd>A pair with first value as pointer and second value as length. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00973">973</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  974</span>    {</div>
-<div class="line"><span class="lineno">  975</span>      <span class="keywordflow">if</span>(slot == <a class="code hl_variable" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>)</div>
-<div class="line"><span class="lineno">  976</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  977</span> </div>
-<div class="line"><span class="lineno">  978</span>      <span class="keyword">const</span> std::uint32_t idx{<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(slot) - 1u};</div>
-<div class="line"><span class="lineno">  979</span> </div>
-<div class="line"><span class="lineno">  980</span>      <span class="keywordflow">if</span>(idx &gt;= <a class="code hl_variable" href="#a92a2f3f68ff31ec33b7c3c3df0d92099">UnusableIndex_</a>)</div>
-<div class="line"><span class="lineno">  981</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  982</span> </div>
-<div class="line"><span class="lineno">  983</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry">Entry</a>&amp; entry{<a class="code hl_variable" href="#a96141b67cc2ce7d708c14de9b6a0f295">entries_</a>[idx]};</div>
-<div class="line"><span class="lineno">  984</span> </div>
-<div class="line"><span class="lineno">  985</span>      <span class="keywordflow">if</span>(entry.state_.load(std::memory_order_acquire) != <a class="code hl_variable" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a>)</div>
-<div class="line"><span class="lineno">  986</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  987</span> </div>
-<div class="line"><span class="lineno">  988</span>      <span class="keywordflow">if</span>(entry.offset_ == 0u || entry.length_ == 0u)</div>
-<div class="line"><span class="lineno">  989</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  990</span> </div>
-<div class="line"><span class="lineno">  991</span>      <span class="keywordflow">if</span>(entry.offset_ &gt;= <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a>)</div>
-<div class="line"><span class="lineno">  992</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  993</span> </div>
-<div class="line"><span class="lineno">  994</span>      <span class="keywordflow">if</span>(entry.length_ &gt;= <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a> - entry.offset_)</div>
-<div class="line"><span class="lineno">  995</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
-<div class="line"><span class="lineno">  996</span> </div>
-<div class="line"><span class="lineno">  997</span>      <span class="keywordflow">return</span> {<a class="code hl_variable" href="#a213ba93a606c109d1864a9a64ee39718">pool_</a>.data() + entry.offset_, entry.length_};</div>
-<div class="line"><span class="lineno">  998</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a213ba93a606c109d1864a9a64ee39718"><div class="ttname"><a href="#a213ba93a606c109d1864a9a64ee39718">anonymous_namespace{Log.cpp}::FileLineCache::pool_</a></div><div class="ttdeci">std::array&lt; char, PoolSize_ &gt; pool_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01041">Log.cpp:1041</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a3ac557daa4bd8051c8687f362f6d789d"><div class="ttname"><a href="#a3ac557daa4bd8051c8687f362f6d789d">anonymous_namespace{Log.cpp}::FileLineCache::NullSlot_</a></div><div class="ttdeci">static constexpr std::uint16_t NullSlot_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01001">Log.cpp:1001</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a5b65c98f572f0651ceb8637bc63534fd"><div class="ttname"><a href="#a5b65c98f572f0651ceb8637bc63534fd">anonymous_namespace{Log.cpp}::FileLineCache::StateReady_</a></div><div class="ttdeci">static constexpr std::uint8_t StateReady_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01013">Log.cpp:1013</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a6e6815cb1b8aac3f52e05a521c038877"><div class="ttname"><a href="#a6e6815cb1b8aac3f52e05a521c038877">anonymous_namespace{Log.cpp}::FileLineCache::PoolSize_</a></div><div class="ttdeci">static constexpr std::uint32_t PoolSize_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01007">Log.cpp:1007</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a92a2f3f68ff31ec33b7c3c3df0d92099"><div class="ttname"><a href="#a92a2f3f68ff31ec33b7c3c3df0d92099">anonymous_namespace{Log.cpp}::FileLineCache::UnusableIndex_</a></div><div class="ttdeci">static constexpr std::uint32_t UnusableIndex_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01005">Log.cpp:1005</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a96141b67cc2ce7d708c14de9b6a0f295"><div class="ttname"><a href="#a96141b67cc2ce7d708c14de9b6a0f295">anonymous_namespace{Log.cpp}::FileLineCache::entries_</a></div><div class="ttdeci">std::array&lt; Entry, Capacity_ &gt; entries_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01040">Log.cpp:1040</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry"><div class="ttname"><a href="#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry">anonymous_namespace{Log.cpp}::FileLineCache::Entry</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01033">Log.cpp:1033</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00972">972</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  973</span>    {</div>
+<div class="line"><span class="lineno">  974</span>      <span class="keywordflow">if</span>(slot == <a class="code hl_variable" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>)</div>
+<div class="line"><span class="lineno">  975</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  976</span> </div>
+<div class="line"><span class="lineno">  977</span>      <span class="keyword">const</span> std::uint32_t idx{<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(slot) - 1u};</div>
+<div class="line"><span class="lineno">  978</span> </div>
+<div class="line"><span class="lineno">  979</span>      <span class="keywordflow">if</span>(idx &gt;= <a class="code hl_variable" href="#a92a2f3f68ff31ec33b7c3c3df0d92099">UnusableIndex_</a>)</div>
+<div class="line"><span class="lineno">  980</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  981</span> </div>
+<div class="line"><span class="lineno">  982</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry">Entry</a>&amp; entry{<a class="code hl_variable" href="#a96141b67cc2ce7d708c14de9b6a0f295">entries_</a>[idx]};</div>
+<div class="line"><span class="lineno">  983</span> </div>
+<div class="line"><span class="lineno">  984</span>      <span class="keywordflow">if</span>(entry.state_.load(std::memory_order_acquire) != <a class="code hl_variable" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a>)</div>
+<div class="line"><span class="lineno">  985</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  986</span> </div>
+<div class="line"><span class="lineno">  987</span>      <span class="keywordflow">if</span>(entry.offset_ == 0u || entry.length_ == 0u)</div>
+<div class="line"><span class="lineno">  988</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  989</span> </div>
+<div class="line"><span class="lineno">  990</span>      <span class="keywordflow">if</span>(entry.offset_ &gt;= <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a>)</div>
+<div class="line"><span class="lineno">  991</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  992</span> </div>
+<div class="line"><span class="lineno">  993</span>      <span class="keywordflow">if</span>(entry.length_ &gt;= <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a> - entry.offset_)</div>
+<div class="line"><span class="lineno">  994</span>        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;&quot;</span>, 0};</div>
+<div class="line"><span class="lineno">  995</span> </div>
+<div class="line"><span class="lineno">  996</span>      <span class="keywordflow">return</span> {<a class="code hl_variable" href="#a213ba93a606c109d1864a9a64ee39718">pool_</a>.data() + entry.offset_, entry.length_};</div>
+<div class="line"><span class="lineno">  997</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a213ba93a606c109d1864a9a64ee39718"><div class="ttname"><a href="#a213ba93a606c109d1864a9a64ee39718">anonymous_namespace{Log.cpp}::FileLineCache::pool_</a></div><div class="ttdeci">std::array&lt; char, PoolSize_ &gt; pool_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01040">Log.cpp:1040</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a3ac557daa4bd8051c8687f362f6d789d"><div class="ttname"><a href="#a3ac557daa4bd8051c8687f362f6d789d">anonymous_namespace{Log.cpp}::FileLineCache::NullSlot_</a></div><div class="ttdeci">static constexpr std::uint16_t NullSlot_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01000">Log.cpp:1000</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a5b65c98f572f0651ceb8637bc63534fd"><div class="ttname"><a href="#a5b65c98f572f0651ceb8637bc63534fd">anonymous_namespace{Log.cpp}::FileLineCache::StateReady_</a></div><div class="ttdeci">static constexpr std::uint8_t StateReady_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01012">Log.cpp:1012</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a6e6815cb1b8aac3f52e05a521c038877"><div class="ttname"><a href="#a6e6815cb1b8aac3f52e05a521c038877">anonymous_namespace{Log.cpp}::FileLineCache::PoolSize_</a></div><div class="ttdeci">static constexpr std::uint32_t PoolSize_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01006">Log.cpp:1006</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a92a2f3f68ff31ec33b7c3c3df0d92099"><div class="ttname"><a href="#a92a2f3f68ff31ec33b7c3c3df0d92099">anonymous_namespace{Log.cpp}::FileLineCache::UnusableIndex_</a></div><div class="ttdeci">static constexpr std::uint32_t UnusableIndex_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01004">Log.cpp:1004</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a96141b67cc2ce7d708c14de9b6a0f295"><div class="ttname"><a href="#a96141b67cc2ce7d708c14de9b6a0f295">anonymous_namespace{Log.cpp}::FileLineCache::entries_</a></div><div class="ttdeci">std::array&lt; Entry, Capacity_ &gt; entries_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01039">Log.cpp:1039</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry"><div class="ttname"><a href="#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry">anonymous_namespace{Log.cpp}::FileLineCache::Entry</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01032">Log.cpp:1032</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a96141b67cc2ce7d708c14de9b6a0f295">entries_</a>, <a class="el" href="#a724008c222b14420c93431227507ff61">anonymous_namespace{Log.cpp}::FileLineCache::Entry::length_</a>, <a class="el" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>, <a class="el" href="#a9428ae642c6c9019ef5998f7ccfe6239">anonymous_namespace{Log.cpp}::FileLineCache::Entry::offset_</a>, <a class="el" href="#a213ba93a606c109d1864a9a64ee39718">pool_</a>, <a class="el" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a>, <a class="el" href="#a199b82e1c703846c884e9d30de7950e8">anonymous_namespace{Log.cpp}::FileLineCache::Entry::state_</a>, <a class="el" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a>, and <a class="el" href="#a92a2f3f68ff31ec33b7c3c3df0d92099">UnusableIndex_</a>.</p>
 
@@ -587,7 +587,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_ae6f9298f6d2b42bfd9f2a1da10f79932_icgraph.svg" width="100%" height="471"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_ae6f9298f6d2b42bfd9f2a1da10f79932_icgraph.svg" width="100%" height="533"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -617,26 +617,26 @@ Here is the caller graph for this function:</div>
 
 <p>Finalizes a cache key into the 32-bit probe hash. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01115">1115</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1116</span>    {</div>
-<div class="line"><span class="lineno"> 1117</span>      std::uint64_t hash{key.fileHash_};</div>
-<div class="line"><span class="lineno"> 1118</span> </div>
-<div class="line"><span class="lineno"> 1119</span>      <span class="keyword">const</span> std::uint64_t lengthAndLine{</div>
-<div class="line"><span class="lineno"> 1120</span>        (<span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(key.fileLength_) &lt;&lt; 32u) |</div>
-<div class="line"><span class="lineno"> 1121</span>        <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(key.line_))</div>
-<div class="line"><span class="lineno"> 1122</span>      };</div>
-<div class="line"><span class="lineno"> 1123</span> </div>
-<div class="line"><span class="lineno"> 1124</span>      <a class="code hl_function" href="#a054c912f7b98caef97510d52357c8a43">Mix_</a>(hash, lengthAndLine);</div>
-<div class="line"><span class="lineno"> 1125</span> </div>
-<div class="line"><span class="lineno"> 1126</span>      hash ^= hash &gt;&gt; 33u;</div>
-<div class="line"><span class="lineno"> 1127</span>      hash *= 0xff51afd7ed558ccdULL;</div>
-<div class="line"><span class="lineno"> 1128</span>      hash ^= hash &gt;&gt; 33u;</div>
-<div class="line"><span class="lineno"> 1129</span>      hash *= 0xc4ceb9fe1a85ec53ULL;</div>
-<div class="line"><span class="lineno"> 1130</span>      hash ^= hash &gt;&gt; 33u;</div>
-<div class="line"><span class="lineno"> 1131</span> </div>
-<div class="line"><span class="lineno"> 1132</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(hash ^ (hash &gt;&gt; 32u));</div>
-<div class="line"><span class="lineno"> 1133</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a054c912f7b98caef97510d52357c8a43"><div class="ttname"><a href="#a054c912f7b98caef97510d52357c8a43">anonymous_namespace{Log.cpp}::FileLineCache::Mix_</a></div><div class="ttdeci">static void Mix_(std::uint64_t &amp;hash, std::uint64_t value) noexcept</div><div class="ttdoc">Combines another value into a 64-bit hash state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01105">Log.cpp:1105</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01114">1114</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1115</span>    {</div>
+<div class="line"><span class="lineno"> 1116</span>      std::uint64_t hash{key.fileHash_};</div>
+<div class="line"><span class="lineno"> 1117</span> </div>
+<div class="line"><span class="lineno"> 1118</span>      <span class="keyword">const</span> std::uint64_t lengthAndLine{</div>
+<div class="line"><span class="lineno"> 1119</span>        (<span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(key.fileLength_) &lt;&lt; 32u) |</div>
+<div class="line"><span class="lineno"> 1120</span>        <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(key.line_))</div>
+<div class="line"><span class="lineno"> 1121</span>      };</div>
+<div class="line"><span class="lineno"> 1122</span> </div>
+<div class="line"><span class="lineno"> 1123</span>      <a class="code hl_function" href="#a054c912f7b98caef97510d52357c8a43">Mix_</a>(hash, lengthAndLine);</div>
+<div class="line"><span class="lineno"> 1124</span> </div>
+<div class="line"><span class="lineno"> 1125</span>      hash ^= hash &gt;&gt; 33u;</div>
+<div class="line"><span class="lineno"> 1126</span>      hash *= 0xff51afd7ed558ccdULL;</div>
+<div class="line"><span class="lineno"> 1127</span>      hash ^= hash &gt;&gt; 33u;</div>
+<div class="line"><span class="lineno"> 1128</span>      hash *= 0xc4ceb9fe1a85ec53ULL;</div>
+<div class="line"><span class="lineno"> 1129</span>      hash ^= hash &gt;&gt; 33u;</div>
+<div class="line"><span class="lineno"> 1130</span> </div>
+<div class="line"><span class="lineno"> 1131</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(hash ^ (hash &gt;&gt; 32u));</div>
+<div class="line"><span class="lineno"> 1132</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a054c912f7b98caef97510d52357c8a43"><div class="ttname"><a href="#a054c912f7b98caef97510d52357c8a43">anonymous_namespace{Log.cpp}::FileLineCache::Mix_</a></div><div class="ttdeci">static void Mix_(std::uint64_t &amp;hash, std::uint64_t value) noexcept</div><div class="ttdoc">Combines another value into a 64-bit hash state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01104">Log.cpp:1104</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a054c912f7b98caef97510d52357c8a43">Mix_()</a>.</p>
 
@@ -679,33 +679,33 @@ Here is the caller graph for this function:</div>
 
 <p>Hashes bounded null-terminated text and records the scanned length. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01065">1065</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1066</span>    {</div>
-<div class="line"><span class="lineno"> 1067</span>      <span class="keyword">constexpr</span> std::uint64_t OffsetBasis{14695981039346656037ULL};</div>
-<div class="line"><span class="lineno"> 1068</span> </div>
-<div class="line"><span class="lineno"> 1069</span>      <span class="keyword">constexpr</span> std::uint64_t Prime{1099511628211ULL};</div>
-<div class="line"><span class="lineno"> 1070</span> </div>
-<div class="line"><span class="lineno"> 1071</span>      <a class="code hl_struct" href="#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">TextHash</a> result{</div>
-<div class="line"><span class="lineno"> 1072</span>        .hash_ = OffsetBasis,</div>
-<div class="line"><span class="lineno"> 1073</span>        .length_ = 0</div>
-<div class="line"><span class="lineno"> 1074</span>      };</div>
-<div class="line"><span class="lineno"> 1075</span> </div>
-<div class="line"><span class="lineno"> 1076</span>      <span class="keywordflow">if</span>(text == <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno"> 1077</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno"> 1078</span> </div>
-<div class="line"><span class="lineno"> 1079</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* current{<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(text)};</div>
-<div class="line"><span class="lineno"> 1080</span> </div>
-<div class="line"><span class="lineno"> 1081</span>      <span class="keywordflow">while</span>(*current != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; result.length_ &lt; <a class="code hl_variable" href="#a1e7dd49474b39d30ed972f18e5444bff">ContextScanMax_</a>) {</div>
-<div class="line"><span class="lineno"> 1082</span>        result.hash_ ^= <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(*current);</div>
-<div class="line"><span class="lineno"> 1083</span>        result.hash_ *= Prime;</div>
-<div class="line"><span class="lineno"> 1084</span> </div>
-<div class="line"><span class="lineno"> 1085</span>        ++current;</div>
-<div class="line"><span class="lineno"> 1086</span>        ++result.length_;</div>
-<div class="line"><span class="lineno"> 1087</span>      }</div>
-<div class="line"><span class="lineno"> 1088</span> </div>
-<div class="line"><span class="lineno"> 1089</span>      <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno"> 1090</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash"><div class="ttname"><a href="#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">anonymous_namespace{Log.cpp}::FileLineCache::TextHash</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01022">Log.cpp:1022</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01064">1064</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1065</span>    {</div>
+<div class="line"><span class="lineno"> 1066</span>      <span class="keyword">constexpr</span> std::uint64_t OffsetBasis{14695981039346656037ULL};</div>
+<div class="line"><span class="lineno"> 1067</span> </div>
+<div class="line"><span class="lineno"> 1068</span>      <span class="keyword">constexpr</span> std::uint64_t Prime{1099511628211ULL};</div>
+<div class="line"><span class="lineno"> 1069</span> </div>
+<div class="line"><span class="lineno"> 1070</span>      <a class="code hl_struct" href="#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">TextHash</a> result{</div>
+<div class="line"><span class="lineno"> 1071</span>        .hash_ = OffsetBasis,</div>
+<div class="line"><span class="lineno"> 1072</span>        .length_ = 0</div>
+<div class="line"><span class="lineno"> 1073</span>      };</div>
+<div class="line"><span class="lineno"> 1074</span> </div>
+<div class="line"><span class="lineno"> 1075</span>      <span class="keywordflow">if</span>(text == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1076</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1077</span> </div>
+<div class="line"><span class="lineno"> 1078</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* current{<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(text)};</div>
+<div class="line"><span class="lineno"> 1079</span> </div>
+<div class="line"><span class="lineno"> 1080</span>      <span class="keywordflow">while</span>(*current != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; result.length_ &lt; <a class="code hl_variable" href="#a1e7dd49474b39d30ed972f18e5444bff">ContextScanMax_</a>) {</div>
+<div class="line"><span class="lineno"> 1081</span>        result.hash_ ^= <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(*current);</div>
+<div class="line"><span class="lineno"> 1082</span>        result.hash_ *= Prime;</div>
+<div class="line"><span class="lineno"> 1083</span> </div>
+<div class="line"><span class="lineno"> 1084</span>        ++current;</div>
+<div class="line"><span class="lineno"> 1085</span>        ++result.length_;</div>
+<div class="line"><span class="lineno"> 1086</span>      }</div>
+<div class="line"><span class="lineno"> 1087</span> </div>
+<div class="line"><span class="lineno"> 1088</span>      <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno"> 1089</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash"><div class="ttname"><a href="#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">anonymous_namespace{Log.cpp}::FileLineCache::TextHash</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01021">Log.cpp:1021</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a1e7dd49474b39d30ed972f18e5444bff">ContextScanMax_</a>, <a class="el" href="#a77bd26fd2088a1b038c666a7b5284ac7">anonymous_namespace{Log.cpp}::FileLineCache::TextHash::hash_</a>, and <a class="el" href="#ab1fac38ad7055c8ae67d267e82186276">anonymous_namespace{Log.cpp}::FileLineCache::TextHash::length_</a>.</p>
 
@@ -745,14 +745,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Compares 2 keys for strict equality. </p>
+<p>Compares 2 keys for equality. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01045">1045</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1046</span>    {</div>
-<div class="line"><span class="lineno"> 1047</span>      <span class="keywordflow">return</span> lhs.fileHash_ == rhs.fileHash_ &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1048</span>             lhs.fileLength_ == rhs.fileLength_ &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1049</span>             lhs.line_ == rhs.line_;</div>
-<div class="line"><span class="lineno"> 1050</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01044">1044</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1045</span>    {</div>
+<div class="line"><span class="lineno"> 1046</span>      <span class="keywordflow">return</span> lhs.fileHash_ == rhs.fileHash_ &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1047</span>             lhs.fileLength_ == rhs.fileLength_ &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1048</span>             lhs.line_ == rhs.line_;</div>
+<div class="line"><span class="lineno"> 1049</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 <div class="dynheader">
@@ -788,17 +788,17 @@ Here is the caller graph for this function:</div>
 
 <p>Builds the cache key from the relevant message-context data. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01093">1093</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1094</span>    {</div>
-<div class="line"><span class="lineno"> 1095</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">TextHash</a> file{<a class="code hl_function" href="#aab94c7116b206b9f46e015b043c082ce">HashText_</a>(ctx.file)};</div>
-<div class="line"><span class="lineno"> 1096</span> </div>
-<div class="line"><span class="lineno"> 1097</span>      <span class="keywordflow">return</span> {</div>
-<div class="line"><span class="lineno"> 1098</span>        .fileHash_ = file.hash_,</div>
-<div class="line"><span class="lineno"> 1099</span>        .fileLength_ = file.length_,</div>
-<div class="line"><span class="lineno"> 1100</span>        .line_ = ctx.line</div>
-<div class="line"><span class="lineno"> 1101</span>      };</div>
-<div class="line"><span class="lineno"> 1102</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_aab94c7116b206b9f46e015b043c082ce"><div class="ttname"><a href="#aab94c7116b206b9f46e015b043c082ce">anonymous_namespace{Log.cpp}::FileLineCache::HashText_</a></div><div class="ttdeci">static TextHash HashText_(const char *text) noexcept</div><div class="ttdoc">Hashes bounded null-terminated text and records the scanned length.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01065">Log.cpp:1065</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01092">1092</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1093</span>    {</div>
+<div class="line"><span class="lineno"> 1094</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">TextHash</a> file{<a class="code hl_function" href="#aab94c7116b206b9f46e015b043c082ce">HashText_</a>(ctx.file)};</div>
+<div class="line"><span class="lineno"> 1095</span> </div>
+<div class="line"><span class="lineno"> 1096</span>      <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno"> 1097</span>        .fileHash_ = file.hash_,</div>
+<div class="line"><span class="lineno"> 1098</span>        .fileLength_ = file.length_,</div>
+<div class="line"><span class="lineno"> 1099</span>        .line_ = ctx.line</div>
+<div class="line"><span class="lineno"> 1100</span>      };</div>
+<div class="line"><span class="lineno"> 1101</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_aab94c7116b206b9f46e015b043c082ce"><div class="ttname"><a href="#aab94c7116b206b9f46e015b043c082ce">anonymous_namespace{Log.cpp}::FileLineCache::HashText_</a></div><div class="ttdeci">static TextHash HashText_(const char *text) noexcept</div><div class="ttdoc">Hashes bounded null-terminated text and records the scanned length.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01064">Log.cpp:1064</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a77bd26fd2088a1b038c666a7b5284ac7">anonymous_namespace{Log.cpp}::FileLineCache::TextHash::hash_</a>, <a class="el" href="#aab94c7116b206b9f46e015b043c082ce">HashText_()</a>, and <a class="el" href="#ab1fac38ad7055c8ae67d267e82186276">anonymous_namespace{Log.cpp}::FileLineCache::TextHash::length_</a>.</p>
 
@@ -845,14 +845,14 @@ Here is the caller graph for this function:</div>
 
 <p>Combines another value into a 64-bit hash state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01105">1105</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1106</span>    {</div>
-<div class="line"><span class="lineno"> 1107</span>      <span class="comment">// 0x9e3779b97f4a7c15ull is derived from the golden ratio and is commonly</span></div>
-<div class="line"><span class="lineno"> 1108</span>      <span class="comment">// used to spread bits when combining hash values.</span></div>
-<div class="line"><span class="lineno"> 1109</span>      <span class="comment">// (hash &lt;&lt; 6u) + (hash &gt;&gt; 2u) makes the new value depend on shifted versions</span></div>
-<div class="line"><span class="lineno"> 1110</span>      <span class="comment">// of the previous hash, so the order of mixed fields matters.</span></div>
-<div class="line"><span class="lineno"> 1111</span>      hash ^= value + 0x9e3779b97f4a7c15ULL + (hash &lt;&lt; 6u) + (hash &gt;&gt; 2u);</div>
-<div class="line"><span class="lineno"> 1112</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01104">1104</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1105</span>    {</div>
+<div class="line"><span class="lineno"> 1106</span>      <span class="comment">// 0x9e3779b97f4a7c15ull is derived from the golden ratio and is commonly</span></div>
+<div class="line"><span class="lineno"> 1107</span>      <span class="comment">// used to spread bits when combining hash values.</span></div>
+<div class="line"><span class="lineno"> 1108</span>      <span class="comment">// (hash &lt;&lt; 6u) + (hash &gt;&gt; 2u) makes the new value depend on shifted versions</span></div>
+<div class="line"><span class="lineno"> 1109</span>      <span class="comment">// of the previous hash, so the order of mixed fields matters.</span></div>
+<div class="line"><span class="lineno"> 1110</span>      hash ^= value + 0x9e3779b97f4a7c15ULL + (hash &lt;&lt; 6u) + (hash &gt;&gt; 2u);</div>
+<div class="line"><span class="lineno"> 1111</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a9dc613bb097339af32c1af783547447c">HashKey_()</a>.</p>
 <div class="dynheader">
@@ -892,14 +892,14 @@ Here is the caller graph for this function:</div>
 
 <p>Normalizes source text into the cache storage format. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01186">1186</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1187</span>    {</div>
-<div class="line"><span class="lineno"> 1188</span>      <span class="keywordtype">bool</span> ok{<a class="code hl_function" href="#a9d02a026ff012161b459d4163563cd5e">AppendFileName_</a>(buf, ctx.file)};</div>
-<div class="line"><span class="lineno"> 1189</span>      <span class="keywordflow">if</span>(ok) ok = buf.appendRawChar_(<span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><span class="lineno"> 1190</span>      <span class="keywordflow">if</span>(ok) buf.appendDec_(ctx.line);</div>
-<div class="line"><span class="lineno"> 1191</span>      buf.finalize_();</div>
-<div class="line"><span class="lineno"> 1192</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a9d02a026ff012161b459d4163563cd5e"><div class="ttname"><a href="#a9d02a026ff012161b459d4163563cd5e">anonymous_namespace{Log.cpp}::FileLineCache::AppendFileName_</a></div><div class="ttdeci">static bool AppendFileName_(TextBuffer&lt; TextCap_ &gt; &amp;buf, const char *file) noexcept</div><div class="ttdoc">Appends the retained source-path components used by the file-line field.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01160">Log.cpp:1160</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01185">1185</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1186</span>    {</div>
+<div class="line"><span class="lineno"> 1187</span>      <span class="keywordtype">bool</span> ok{<a class="code hl_function" href="#a9d02a026ff012161b459d4163563cd5e">AppendFileName_</a>(buf, ctx.file)};</div>
+<div class="line"><span class="lineno"> 1188</span>      <span class="keywordflow">if</span>(ok) ok = buf.appendRawChar_(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><span class="lineno"> 1189</span>      <span class="keywordflow">if</span>(ok) buf.appendDec_(ctx.line);</div>
+<div class="line"><span class="lineno"> 1190</span>      buf.finalize_();</div>
+<div class="line"><span class="lineno"> 1191</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a9d02a026ff012161b459d4163563cd5e"><div class="ttname"><a href="#a9d02a026ff012161b459d4163563cd5e">anonymous_namespace{Log.cpp}::FileLineCache::AppendFileName_</a></div><div class="ttdeci">static bool AppendFileName_(TextBuffer&lt; TextCap_ &gt; &amp;buf, const char *file) noexcept</div><div class="ttdoc">Appends the retained source-path components used by the file-line field.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01159">Log.cpp:1159</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a9d02a026ff012161b459d4163563cd5e">AppendFileName_()</a>.</p>
 
@@ -1006,29 +1006,29 @@ Here is the call graph for this function:</div>
 
 <p>Atomically reserves a unique contiguous range in the fixed text pool. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01136">1136</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1137</span>    {</div>
-<div class="line"><span class="lineno"> 1138</span>      <span class="keywordflow">if</span>(size == 0u || size &gt;= <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a>)</div>
-<div class="line"><span class="lineno"> 1139</span>        <span class="keywordflow">return</span> 0u;</div>
-<div class="line"><span class="lineno"> 1140</span> </div>
-<div class="line"><span class="lineno"> 1141</span>      std::uint32_t current{<a class="code hl_variable" href="#a153665c7eee42b60c2b9dfac895cf4b4">poolUsed_</a>.load(std::memory_order_relaxed)};</div>
-<div class="line"><span class="lineno"> 1142</span> </div>
-<div class="line"><span class="lineno"> 1143</span>      <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><span class="lineno"> 1144</span>        <span class="keywordflow">if</span>(current &gt;= <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a> || size &gt; <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a> - current)</div>
-<div class="line"><span class="lineno"> 1145</span>          <span class="keywordflow">return</span> 0u;</div>
-<div class="line"><span class="lineno"> 1146</span> </div>
-<div class="line"><span class="lineno"> 1147</span>        <span class="keyword">const</span> std::uint32_t next{current + size};</div>
-<div class="line"><span class="lineno"> 1148</span> </div>
-<div class="line"><span class="lineno"> 1149</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a153665c7eee42b60c2b9dfac895cf4b4">poolUsed_</a>.compare_exchange_weak(</div>
-<div class="line"><span class="lineno"> 1150</span>          current,</div>
-<div class="line"><span class="lineno"> 1151</span>          next,</div>
-<div class="line"><span class="lineno"> 1152</span>          std::memory_order_relaxed,</div>
-<div class="line"><span class="lineno"> 1153</span>          std::memory_order_relaxed)) {</div>
-<div class="line"><span class="lineno"> 1154</span>          <span class="keywordflow">return</span> current;</div>
-<div class="line"><span class="lineno"> 1155</span>        }</div>
-<div class="line"><span class="lineno"> 1156</span>      }</div>
-<div class="line"><span class="lineno"> 1157</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a153665c7eee42b60c2b9dfac895cf4b4"><div class="ttname"><a href="#a153665c7eee42b60c2b9dfac895cf4b4">anonymous_namespace{Log.cpp}::FileLineCache::poolUsed_</a></div><div class="ttdeci">std::atomic&lt; std::uint32_t &gt; poolUsed_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01042">Log.cpp:1042</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01135">1135</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1136</span>    {</div>
+<div class="line"><span class="lineno"> 1137</span>      <span class="keywordflow">if</span>(size == 0u || size &gt;= <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a>)</div>
+<div class="line"><span class="lineno"> 1138</span>        <span class="keywordflow">return</span> 0u;</div>
+<div class="line"><span class="lineno"> 1139</span> </div>
+<div class="line"><span class="lineno"> 1140</span>      std::uint32_t current{<a class="code hl_variable" href="#a153665c7eee42b60c2b9dfac895cf4b4">poolUsed_</a>.load(std::memory_order_relaxed)};</div>
+<div class="line"><span class="lineno"> 1141</span> </div>
+<div class="line"><span class="lineno"> 1142</span>      <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><span class="lineno"> 1143</span>        <span class="keywordflow">if</span>(current &gt;= <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a> || size &gt; <a class="code hl_variable" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a> - current)</div>
+<div class="line"><span class="lineno"> 1144</span>          <span class="keywordflow">return</span> 0u;</div>
+<div class="line"><span class="lineno"> 1145</span> </div>
+<div class="line"><span class="lineno"> 1146</span>        <span class="keyword">const</span> std::uint32_t next{current + size};</div>
+<div class="line"><span class="lineno"> 1147</span> </div>
+<div class="line"><span class="lineno"> 1148</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a153665c7eee42b60c2b9dfac895cf4b4">poolUsed_</a>.compare_exchange_weak(</div>
+<div class="line"><span class="lineno"> 1149</span>          current,</div>
+<div class="line"><span class="lineno"> 1150</span>          next,</div>
+<div class="line"><span class="lineno"> 1151</span>          std::memory_order_relaxed,</div>
+<div class="line"><span class="lineno"> 1152</span>          std::memory_order_relaxed)) {</div>
+<div class="line"><span class="lineno"> 1153</span>          <span class="keywordflow">return</span> current;</div>
+<div class="line"><span class="lineno"> 1154</span>        }</div>
+<div class="line"><span class="lineno"> 1155</span>      }</div>
+<div class="line"><span class="lineno"> 1156</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a153665c7eee42b60c2b9dfac895cf4b4"><div class="ttname"><a href="#a153665c7eee42b60c2b9dfac895cf4b4">anonymous_namespace{Log.cpp}::FileLineCache::poolUsed_</a></div><div class="ttdeci">std::atomic&lt; std::uint32_t &gt; poolUsed_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01041">Log.cpp:1041</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a6e6815cb1b8aac3f52e05a521c038877">PoolSize_</a>, and <a class="el" href="#a153665c7eee42b60c2b9dfac895cf4b4">poolUsed_</a>.</p>
 
@@ -1067,88 +1067,88 @@ Here is the caller graph for this function:</div>
 <p>Finds or inserts the normalized file and line value and returns its slot. </p>
 <dl class="section return"><dt>Returns</dt><dd>Slot value or null slot (0) if unable to find or insert. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00899">899</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  900</span>    {</div>
-<div class="line"><span class="lineno">  901</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">Key</a> key{<a class="code hl_function" href="#a412ac1d0578183f98b4bae2f29e62b06">MakeKey_</a>(ctx)};</div>
-<div class="line"><span class="lineno">  902</span>      <span class="keyword">const</span> std::uint32_t start{<a class="code hl_function" href="#a9dc613bb097339af32c1af783547447c">HashKey_</a>(key) &amp; <a class="code hl_variable" href="#a14aa38a4544902aadd5836003fe0ac4a">HashMask_</a>};</div>
-<div class="line"><span class="lineno">  903</span>      <span class="keywordflow">for</span>(std::uint32_t probe = 0; probe &lt; <a class="code hl_variable" href="#a2671ca19ec9fff53029b3fcab99b0c84">Capacity_</a>; ++probe) {</div>
-<div class="line"><span class="lineno">  904</span>        <span class="keyword">const</span> std::uint32_t idx{(start + probe) &amp; <a class="code hl_variable" href="#a14aa38a4544902aadd5836003fe0ac4a">HashMask_</a>};</div>
-<div class="line"><span class="lineno">  905</span> </div>
-<div class="line"><span class="lineno">  906</span>        <span class="comment">// idx + 1 would be 65536, which cannot fit in std::uint16_t.</span></div>
-<div class="line"><span class="lineno">  907</span>        <span class="keywordflow">if</span>(idx == <a class="code hl_variable" href="#a92a2f3f68ff31ec33b7c3c3df0d92099">UnusableIndex_</a>)</div>
-<div class="line"><span class="lineno">  908</span>          <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  909</span> </div>
-<div class="line"><span class="lineno">  910</span>        <a class="code hl_struct" href="#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry">Entry</a>&amp; entry{<a class="code hl_variable" href="#a96141b67cc2ce7d708c14de9b6a0f295">entries_</a>[idx]};</div>
-<div class="line"><span class="lineno">  911</span> </div>
-<div class="line"><span class="lineno">  912</span>        std::uint8_t state{<a class="code hl_function" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_</a>(entry)};</div>
-<div class="line"><span class="lineno">  913</span> </div>
-<div class="line"><span class="lineno">  914</span>        <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a>) {</div>
-<div class="line"><span class="lineno">  915</span>          state = <a class="code hl_function" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_</a>(entry);</div>
-<div class="line"><span class="lineno">  916</span>          <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a>)</div>
-<div class="line"><span class="lineno">  917</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  918</span>        }</div>
-<div class="line"><span class="lineno">  919</span> </div>
-<div class="line"><span class="lineno">  920</span>        <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a>) {</div>
-<div class="line"><span class="lineno">  921</span>          <span class="keywordflow">if</span>(<a class="code hl_function" href="#ae8746397035000686a4a24c41692d0dd">KeysEqual_</a>(entry.key_, key))</div>
-<div class="line"><span class="lineno">  922</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(idx + 1u);</div>
-<div class="line"><span class="lineno">  923</span>          <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  924</span>        }</div>
-<div class="line"><span class="lineno">  925</span> </div>
-<div class="line"><span class="lineno">  926</span>        std::uint8_t expected{<a class="code hl_variable" href="#a57d6b24dc1a39d73983a73fd8afbd2b6">StateEmpty_</a>};</div>
-<div class="line"><span class="lineno">  927</span> </div>
-<div class="line"><span class="lineno">  928</span>        <span class="keywordflow">if</span>(!entry.state_.compare_exchange_strong(</div>
-<div class="line"><span class="lineno">  929</span>          expected,</div>
-<div class="line"><span class="lineno">  930</span>          <a class="code hl_variable" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a>,</div>
-<div class="line"><span class="lineno">  931</span>          std::memory_order_acq_rel,</div>
-<div class="line"><span class="lineno">  932</span>          std::memory_order_acquire)) {</div>
-<div class="line"><span class="lineno">  933</span>          state = <a class="code hl_function" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_</a>(entry);</div>
-<div class="line"><span class="lineno">  934</span>          <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a> &amp;&amp; <a class="code hl_function" href="#ae8746397035000686a4a24c41692d0dd">KeysEqual_</a>(entry.key_, key))</div>
-<div class="line"><span class="lineno">  935</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(idx + 1u);</div>
-<div class="line"><span class="lineno">  936</span>          <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  937</span>        }</div>
-<div class="line"><span class="lineno">  938</span> </div>
-<div class="line"><span class="lineno">  939</span>        TextBuffer&lt;TextCap_&gt; buf;</div>
-<div class="line"><span class="lineno">  940</span>        <a class="code hl_function" href="#a0b9ad69bec8d95fa4dfc8fcd8b422c71">Normalize_</a>(buf, ctx);</div>
-<div class="line"><span class="lineno">  941</span>        <span class="keyword">const</span> std::size_t textSize{buf.size_()};</div>
-<div class="line"><span class="lineno">  942</span> </div>
-<div class="line"><span class="lineno">  943</span>        <span class="keywordflow">if</span>(textSize == 0u || textSize &gt; std::numeric_limits&lt;std::uint16_t&gt;::max()) {</div>
-<div class="line"><span class="lineno">  944</span>          entry.state_.store(<a class="code hl_variable" href="#a57d6b24dc1a39d73983a73fd8afbd2b6">StateEmpty_</a>, std::memory_order_release);</div>
-<div class="line"><span class="lineno">  945</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>;</div>
-<div class="line"><span class="lineno">  946</span>        }</div>
-<div class="line"><span class="lineno">  947</span> </div>
-<div class="line"><span class="lineno">  948</span>        <span class="keyword">const</span> std::uint16_t length{<span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(textSize)};</div>
-<div class="line"><span class="lineno">  949</span> </div>
-<div class="line"><span class="lineno">  950</span>        <span class="keyword">const</span> std::uint32_t offset{<a class="code hl_function" href="#ad6ad62ef3d5ac5d04d4fe6e741eb0ef5">reservePool_</a>(<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(length) + 1u)};</div>
-<div class="line"><span class="lineno">  951</span> </div>
-<div class="line"><span class="lineno">  952</span>        <span class="keywordflow">if</span>(offset == 0u) {</div>
-<div class="line"><span class="lineno">  953</span>          entry.state_.store(<a class="code hl_variable" href="#a57d6b24dc1a39d73983a73fd8afbd2b6">StateEmpty_</a>, std::memory_order_release);</div>
-<div class="line"><span class="lineno">  954</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>;</div>
-<div class="line"><span class="lineno">  955</span>        }</div>
-<div class="line"><span class="lineno">  956</span> </div>
-<div class="line"><span class="lineno">  957</span>        std::memcpy(<a class="code hl_variable" href="#a213ba93a606c109d1864a9a64ee39718">pool_</a>.data() + offset, buf.data_(), length);</div>
-<div class="line"><span class="lineno">  958</span> </div>
-<div class="line"><span class="lineno">  959</span>        <a class="code hl_variable" href="#a213ba93a606c109d1864a9a64ee39718">pool_</a>[offset + length] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  960</span> </div>
-<div class="line"><span class="lineno">  961</span>        entry.key_ = key;</div>
-<div class="line"><span class="lineno">  962</span>        entry.offset_ = offset;</div>
-<div class="line"><span class="lineno">  963</span>        entry.length_ = length;</div>
-<div class="line"><span class="lineno">  964</span>        entry.state_.store(<a class="code hl_variable" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a>, std::memory_order_release);</div>
-<div class="line"><span class="lineno">  965</span> </div>
-<div class="line"><span class="lineno">  966</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(idx + 1u);</div>
-<div class="line"><span class="lineno">  967</span>      }</div>
-<div class="line"><span class="lineno">  968</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>;</div>
-<div class="line"><span class="lineno">  969</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a0b9ad69bec8d95fa4dfc8fcd8b422c71"><div class="ttname"><a href="#a0b9ad69bec8d95fa4dfc8fcd8b422c71">anonymous_namespace{Log.cpp}::FileLineCache::Normalize_</a></div><div class="ttdeci">static void Normalize_(TextBuffer&lt; TextCap_ &gt; &amp;buf, const QMessageLogContext &amp;ctx) noexcept</div><div class="ttdoc">Normalizes source text into the cache storage format.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01186">Log.cpp:1186</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a14aa38a4544902aadd5836003fe0ac4a"><div class="ttname"><a href="#a14aa38a4544902aadd5836003fe0ac4a">anonymous_namespace{Log.cpp}::FileLineCache::HashMask_</a></div><div class="ttdeci">static constexpr std::uint32_t HashMask_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01004">Log.cpp:1004</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a2671ca19ec9fff53029b3fcab99b0c84"><div class="ttname"><a href="#a2671ca19ec9fff53029b3fcab99b0c84">anonymous_namespace{Log.cpp}::FileLineCache::Capacity_</a></div><div class="ttdeci">static constexpr std::uint32_t Capacity_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01003">Log.cpp:1003</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a307e2c83a2d4ef7c35f8563d955d4723"><div class="ttname"><a href="#a307e2c83a2d4ef7c35f8563d955d4723">anonymous_namespace{Log.cpp}::FileLineCache::WaitState_</a></div><div class="ttdeci">static std::uint8_t WaitState_(const Entry &amp;entry) noexcept</div><div class="ttdoc">Waits briefly for an entry insertion to finish and returns its observed state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01053">Log.cpp:1053</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a412ac1d0578183f98b4bae2f29e62b06"><div class="ttname"><a href="#a412ac1d0578183f98b4bae2f29e62b06">anonymous_namespace{Log.cpp}::FileLineCache::MakeKey_</a></div><div class="ttdeci">static Key MakeKey_(const QMessageLogContext &amp;ctx) noexcept</div><div class="ttdoc">Builds the cache key from the relevant message-context data.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01093">Log.cpp:1093</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a57d6b24dc1a39d73983a73fd8afbd2b6"><div class="ttname"><a href="#a57d6b24dc1a39d73983a73fd8afbd2b6">anonymous_namespace{Log.cpp}::FileLineCache::StateEmpty_</a></div><div class="ttdeci">static constexpr std::uint8_t StateEmpty_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01011">Log.cpp:1011</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a9dc613bb097339af32c1af783547447c"><div class="ttname"><a href="#a9dc613bb097339af32c1af783547447c">anonymous_namespace{Log.cpp}::FileLineCache::HashKey_</a></div><div class="ttdeci">static std::uint32_t HashKey_(const Key &amp;key) noexcept</div><div class="ttdoc">Finalizes a cache key into the 32-bit probe hash.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01115">Log.cpp:1115</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_aab1f4fd9e8e6511b894685095d12e2a3"><div class="ttname"><a href="#aab1f4fd9e8e6511b894685095d12e2a3">anonymous_namespace{Log.cpp}::FileLineCache::StateBusy_</a></div><div class="ttdeci">static constexpr std::uint8_t StateBusy_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01012">Log.cpp:1012</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_ad6ad62ef3d5ac5d04d4fe6e741eb0ef5"><div class="ttname"><a href="#ad6ad62ef3d5ac5d04d4fe6e741eb0ef5">anonymous_namespace{Log.cpp}::FileLineCache::reservePool_</a></div><div class="ttdeci">std::uint32_t reservePool_(std::uint32_t size) noexcept</div><div class="ttdoc">Atomically reserves a unique contiguous range in the fixed text pool.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01136">Log.cpp:1136</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_ae8746397035000686a4a24c41692d0dd"><div class="ttname"><a href="#ae8746397035000686a4a24c41692d0dd">anonymous_namespace{Log.cpp}::FileLineCache::KeysEqual_</a></div><div class="ttdeci">static bool KeysEqual_(const Key &amp;lhs, const Key &amp;rhs) noexcept</div><div class="ttdoc">Compares 2 keys for strict equality.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01045">Log.cpp:1045</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key"><div class="ttname"><a href="#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">anonymous_namespace{Log.cpp}::FileLineCache::Key</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01027">Log.cpp:1027</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00898">898</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  899</span>    {</div>
+<div class="line"><span class="lineno">  900</span>      <span class="keyword">const</span> <a class="code hl_struct" href="#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">Key</a> key{<a class="code hl_function" href="#a412ac1d0578183f98b4bae2f29e62b06">MakeKey_</a>(ctx)};</div>
+<div class="line"><span class="lineno">  901</span>      <span class="keyword">const</span> std::uint32_t start{<a class="code hl_function" href="#a9dc613bb097339af32c1af783547447c">HashKey_</a>(key) &amp; <a class="code hl_variable" href="#a14aa38a4544902aadd5836003fe0ac4a">HashMask_</a>};</div>
+<div class="line"><span class="lineno">  902</span>      <span class="keywordflow">for</span>(std::uint32_t probe = 0; probe &lt; <a class="code hl_variable" href="#a2671ca19ec9fff53029b3fcab99b0c84">Capacity_</a>; ++probe) {</div>
+<div class="line"><span class="lineno">  903</span>        <span class="keyword">const</span> std::uint32_t idx{(start + probe) &amp; <a class="code hl_variable" href="#a14aa38a4544902aadd5836003fe0ac4a">HashMask_</a>};</div>
+<div class="line"><span class="lineno">  904</span> </div>
+<div class="line"><span class="lineno">  905</span>        <span class="comment">// idx + 1 would be 65536, which cannot fit in std::uint16_t.</span></div>
+<div class="line"><span class="lineno">  906</span>        <span class="keywordflow">if</span>(idx == <a class="code hl_variable" href="#a92a2f3f68ff31ec33b7c3c3df0d92099">UnusableIndex_</a>)</div>
+<div class="line"><span class="lineno">  907</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  908</span> </div>
+<div class="line"><span class="lineno">  909</span>        <a class="code hl_struct" href="#d7/d6d/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_entry">Entry</a>&amp; entry{<a class="code hl_variable" href="#a96141b67cc2ce7d708c14de9b6a0f295">entries_</a>[idx]};</div>
+<div class="line"><span class="lineno">  910</span> </div>
+<div class="line"><span class="lineno">  911</span>        std::uint8_t state{<a class="code hl_function" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_</a>(entry)};</div>
+<div class="line"><span class="lineno">  912</span> </div>
+<div class="line"><span class="lineno">  913</span>        <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a>) {</div>
+<div class="line"><span class="lineno">  914</span>          state = <a class="code hl_function" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_</a>(entry);</div>
+<div class="line"><span class="lineno">  915</span>          <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a>)</div>
+<div class="line"><span class="lineno">  916</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  917</span>        }</div>
+<div class="line"><span class="lineno">  918</span> </div>
+<div class="line"><span class="lineno">  919</span>        <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a>) {</div>
+<div class="line"><span class="lineno">  920</span>          <span class="keywordflow">if</span>(<a class="code hl_function" href="#ae8746397035000686a4a24c41692d0dd">KeysEqual_</a>(entry.key_, key))</div>
+<div class="line"><span class="lineno">  921</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(idx + 1u);</div>
+<div class="line"><span class="lineno">  922</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  923</span>        }</div>
+<div class="line"><span class="lineno">  924</span> </div>
+<div class="line"><span class="lineno">  925</span>        std::uint8_t expected{<a class="code hl_variable" href="#a57d6b24dc1a39d73983a73fd8afbd2b6">StateEmpty_</a>};</div>
+<div class="line"><span class="lineno">  926</span> </div>
+<div class="line"><span class="lineno">  927</span>        <span class="keywordflow">if</span>(!entry.state_.compare_exchange_strong(</div>
+<div class="line"><span class="lineno">  928</span>          expected,</div>
+<div class="line"><span class="lineno">  929</span>          <a class="code hl_variable" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a>,</div>
+<div class="line"><span class="lineno">  930</span>          std::memory_order_acq_rel,</div>
+<div class="line"><span class="lineno">  931</span>          std::memory_order_acquire)) {</div>
+<div class="line"><span class="lineno">  932</span>          state = <a class="code hl_function" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_</a>(entry);</div>
+<div class="line"><span class="lineno">  933</span>          <span class="keywordflow">if</span>(state == <a class="code hl_variable" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a> &amp;&amp; <a class="code hl_function" href="#ae8746397035000686a4a24c41692d0dd">KeysEqual_</a>(entry.key_, key))</div>
+<div class="line"><span class="lineno">  934</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(idx + 1u);</div>
+<div class="line"><span class="lineno">  935</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  936</span>        }</div>
+<div class="line"><span class="lineno">  937</span> </div>
+<div class="line"><span class="lineno">  938</span>        TextBuffer&lt;TextCap_&gt; buf;</div>
+<div class="line"><span class="lineno">  939</span>        <a class="code hl_function" href="#a0b9ad69bec8d95fa4dfc8fcd8b422c71">Normalize_</a>(buf, ctx);</div>
+<div class="line"><span class="lineno">  940</span>        <span class="keyword">const</span> std::size_t textSize{buf.size_()};</div>
+<div class="line"><span class="lineno">  941</span> </div>
+<div class="line"><span class="lineno">  942</span>        <span class="keywordflow">if</span>(textSize == 0u || textSize &gt; std::numeric_limits&lt;std::uint16_t&gt;::max()) {</div>
+<div class="line"><span class="lineno">  943</span>          entry.state_.store(<a class="code hl_variable" href="#a57d6b24dc1a39d73983a73fd8afbd2b6">StateEmpty_</a>, std::memory_order_release);</div>
+<div class="line"><span class="lineno">  944</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>;</div>
+<div class="line"><span class="lineno">  945</span>        }</div>
+<div class="line"><span class="lineno">  946</span> </div>
+<div class="line"><span class="lineno">  947</span>        <span class="keyword">const</span> std::uint16_t length{<span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(textSize)};</div>
+<div class="line"><span class="lineno">  948</span> </div>
+<div class="line"><span class="lineno">  949</span>        <span class="keyword">const</span> std::uint32_t offset{<a class="code hl_function" href="#ad6ad62ef3d5ac5d04d4fe6e741eb0ef5">reservePool_</a>(<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(length) + 1u)};</div>
+<div class="line"><span class="lineno">  950</span> </div>
+<div class="line"><span class="lineno">  951</span>        <span class="keywordflow">if</span>(offset == 0u) {</div>
+<div class="line"><span class="lineno">  952</span>          entry.state_.store(<a class="code hl_variable" href="#a57d6b24dc1a39d73983a73fd8afbd2b6">StateEmpty_</a>, std::memory_order_release);</div>
+<div class="line"><span class="lineno">  953</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>;</div>
+<div class="line"><span class="lineno">  954</span>        }</div>
+<div class="line"><span class="lineno">  955</span> </div>
+<div class="line"><span class="lineno">  956</span>        std::memcpy(<a class="code hl_variable" href="#a213ba93a606c109d1864a9a64ee39718">pool_</a>.data() + offset, buf.data_(), length);</div>
+<div class="line"><span class="lineno">  957</span> </div>
+<div class="line"><span class="lineno">  958</span>        <a class="code hl_variable" href="#a213ba93a606c109d1864a9a64ee39718">pool_</a>[offset + length] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  959</span> </div>
+<div class="line"><span class="lineno">  960</span>        entry.key_ = key;</div>
+<div class="line"><span class="lineno">  961</span>        entry.offset_ = offset;</div>
+<div class="line"><span class="lineno">  962</span>        entry.length_ = length;</div>
+<div class="line"><span class="lineno">  963</span>        entry.state_.store(<a class="code hl_variable" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a>, std::memory_order_release);</div>
+<div class="line"><span class="lineno">  964</span> </div>
+<div class="line"><span class="lineno">  965</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint16_t<span class="keyword">&gt;</span>(idx + 1u);</div>
+<div class="line"><span class="lineno">  966</span>      }</div>
+<div class="line"><span class="lineno">  967</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>;</div>
+<div class="line"><span class="lineno">  968</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a0b9ad69bec8d95fa4dfc8fcd8b422c71"><div class="ttname"><a href="#a0b9ad69bec8d95fa4dfc8fcd8b422c71">anonymous_namespace{Log.cpp}::FileLineCache::Normalize_</a></div><div class="ttdeci">static void Normalize_(TextBuffer&lt; TextCap_ &gt; &amp;buf, const QMessageLogContext &amp;ctx) noexcept</div><div class="ttdoc">Normalizes source text into the cache storage format.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01185">Log.cpp:1185</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a14aa38a4544902aadd5836003fe0ac4a"><div class="ttname"><a href="#a14aa38a4544902aadd5836003fe0ac4a">anonymous_namespace{Log.cpp}::FileLineCache::HashMask_</a></div><div class="ttdeci">static constexpr std::uint32_t HashMask_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01003">Log.cpp:1003</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a2671ca19ec9fff53029b3fcab99b0c84"><div class="ttname"><a href="#a2671ca19ec9fff53029b3fcab99b0c84">anonymous_namespace{Log.cpp}::FileLineCache::Capacity_</a></div><div class="ttdeci">static constexpr std::uint32_t Capacity_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01002">Log.cpp:1002</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a307e2c83a2d4ef7c35f8563d955d4723"><div class="ttname"><a href="#a307e2c83a2d4ef7c35f8563d955d4723">anonymous_namespace{Log.cpp}::FileLineCache::WaitState_</a></div><div class="ttdeci">static std::uint8_t WaitState_(const Entry &amp;entry) noexcept</div><div class="ttdoc">Waits briefly for an entry insertion to finish and returns its observed state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01052">Log.cpp:1052</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a412ac1d0578183f98b4bae2f29e62b06"><div class="ttname"><a href="#a412ac1d0578183f98b4bae2f29e62b06">anonymous_namespace{Log.cpp}::FileLineCache::MakeKey_</a></div><div class="ttdeci">static Key MakeKey_(const QMessageLogContext &amp;ctx) noexcept</div><div class="ttdoc">Builds the cache key from the relevant message-context data.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01092">Log.cpp:1092</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a57d6b24dc1a39d73983a73fd8afbd2b6"><div class="ttname"><a href="#a57d6b24dc1a39d73983a73fd8afbd2b6">anonymous_namespace{Log.cpp}::FileLineCache::StateEmpty_</a></div><div class="ttdeci">static constexpr std::uint8_t StateEmpty_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01010">Log.cpp:1010</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_a9dc613bb097339af32c1af783547447c"><div class="ttname"><a href="#a9dc613bb097339af32c1af783547447c">anonymous_namespace{Log.cpp}::FileLineCache::HashKey_</a></div><div class="ttdeci">static std::uint32_t HashKey_(const Key &amp;key) noexcept</div><div class="ttdoc">Finalizes a cache key into the 32-bit probe hash.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01114">Log.cpp:1114</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_aab1f4fd9e8e6511b894685095d12e2a3"><div class="ttname"><a href="#aab1f4fd9e8e6511b894685095d12e2a3">anonymous_namespace{Log.cpp}::FileLineCache::StateBusy_</a></div><div class="ttdeci">static constexpr std::uint8_t StateBusy_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01011">Log.cpp:1011</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_ad6ad62ef3d5ac5d04d4fe6e741eb0ef5"><div class="ttname"><a href="#ad6ad62ef3d5ac5d04d4fe6e741eb0ef5">anonymous_namespace{Log.cpp}::FileLineCache::reservePool_</a></div><div class="ttdeci">std::uint32_t reservePool_(std::uint32_t size) noexcept</div><div class="ttdoc">Atomically reserves a unique contiguous range in the fixed text pool.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01135">Log.cpp:1135</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_ae8746397035000686a4a24c41692d0dd"><div class="ttname"><a href="#ae8746397035000686a4a24c41692d0dd">anonymous_namespace{Log.cpp}::FileLineCache::KeysEqual_</a></div><div class="ttdeci">static bool KeysEqual_(const Key &amp;lhs, const Key &amp;rhs) noexcept</div><div class="ttdoc">Compares 2 keys for equality.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01044">Log.cpp:1044</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key"><div class="ttname"><a href="#df/d64/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_key">anonymous_namespace{Log.cpp}::FileLineCache::Key</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01026">Log.cpp:1026</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a2671ca19ec9fff53029b3fcab99b0c84">Capacity_</a>, <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ae25159be3ca4845a11faf9b51e5fe88f">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::data_()</a>, <a class="el" href="#a96141b67cc2ce7d708c14de9b6a0f295">entries_</a>, <a class="el" href="#a9dc613bb097339af32c1af783547447c">HashKey_()</a>, <a class="el" href="#a14aa38a4544902aadd5836003fe0ac4a">HashMask_</a>, <a class="el" href="#a07d2ad9c7a2768d7b6833dde310c4b0d">anonymous_namespace{Log.cpp}::FileLineCache::Entry::key_</a>, <a class="el" href="#ae8746397035000686a4a24c41692d0dd">KeysEqual_()</a>, <a class="el" href="#a724008c222b14420c93431227507ff61">anonymous_namespace{Log.cpp}::FileLineCache::Entry::length_</a>, <a class="el" href="#a412ac1d0578183f98b4bae2f29e62b06">MakeKey_()</a>, <a class="el" href="#a0b9ad69bec8d95fa4dfc8fcd8b422c71">Normalize_()</a>, <a class="el" href="#a3ac557daa4bd8051c8687f362f6d789d">NullSlot_</a>, <a class="el" href="#a9428ae642c6c9019ef5998f7ccfe6239">anonymous_namespace{Log.cpp}::FileLineCache::Entry::offset_</a>, <a class="el" href="#a213ba93a606c109d1864a9a64ee39718">pool_</a>, <a class="el" href="#ad6ad62ef3d5ac5d04d4fe6e741eb0ef5">reservePool_()</a>, <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ab7bba778ac4a5104350c8dd82a117cc9">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::size_()</a>, <a class="el" href="#a199b82e1c703846c884e9d30de7950e8">anonymous_namespace{Log.cpp}::FileLineCache::Entry::state_</a>, <a class="el" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a>, <a class="el" href="#a57d6b24dc1a39d73983a73fd8afbd2b6">StateEmpty_</a>, <a class="el" href="#a5b65c98f572f0651ceb8637bc63534fd">StateReady_</a>, <a class="el" href="#a92a2f3f68ff31ec33b7c3c3df0d92099">UnusableIndex_</a>, and <a class="el" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_()</a>.</p>
 
@@ -1191,17 +1191,17 @@ Here is the caller graph for this function:</div>
 
 <p>Waits briefly for an entry insertion to finish and returns its observed state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01053">1053</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1054</span>    {</div>
-<div class="line"><span class="lineno"> 1055</span>      std::uint8_t state{entry.state_.load(std::memory_order_acquire)};</div>
-<div class="line"><span class="lineno"> 1056</span>      <span class="keywordflow">for</span>(std::uint32_t spin = 0; state == <a class="code hl_variable" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a> &amp;&amp; spin &lt; <a class="code hl_variable" href="#aafc10244b99533d8c23072444875039d">BusySpinCount_</a>; ++spin) {</div>
-<div class="line"><span class="lineno"> 1057</span>        <span class="keywordflow">if</span>((spin &amp; 15u) == 15u)</div>
-<div class="line"><span class="lineno"> 1058</span>          ::YieldProcessor(); <span class="comment">// pause after every 16 failed spins</span></div>
-<div class="line"><span class="lineno"> 1059</span>        state = entry.state_.load(std::memory_order_acquire);</div>
-<div class="line"><span class="lineno"> 1060</span>      }</div>
-<div class="line"><span class="lineno"> 1061</span>      <span class="keywordflow">return</span> state;</div>
-<div class="line"><span class="lineno"> 1062</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_aafc10244b99533d8c23072444875039d"><div class="ttname"><a href="#aafc10244b99533d8c23072444875039d">anonymous_namespace{Log.cpp}::FileLineCache::BusySpinCount_</a></div><div class="ttdeci">static constexpr std::uint32_t BusySpinCount_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01015">Log.cpp:1015</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01052">1052</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1053</span>    {</div>
+<div class="line"><span class="lineno"> 1054</span>      std::uint8_t state{entry.state_.load(std::memory_order_acquire)};</div>
+<div class="line"><span class="lineno"> 1055</span>      <span class="keywordflow">for</span>(std::uint32_t spin = 0; state == <a class="code hl_variable" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a> &amp;&amp; spin &lt; <a class="code hl_variable" href="#aafc10244b99533d8c23072444875039d">BusySpinCount_</a>; ++spin) {</div>
+<div class="line"><span class="lineno"> 1056</span>        <span class="keywordflow">if</span>((spin &amp; 15u) == 15u)</div>
+<div class="line"><span class="lineno"> 1057</span>          ::YieldProcessor(); <span class="comment">// pause after every 16 failed spins</span></div>
+<div class="line"><span class="lineno"> 1058</span>        state = entry.state_.load(std::memory_order_acquire);</div>
+<div class="line"><span class="lineno"> 1059</span>      }</div>
+<div class="line"><span class="lineno"> 1060</span>      <span class="keywordflow">return</span> state;</div>
+<div class="line"><span class="lineno"> 1061</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_html_aafc10244b99533d8c23072444875039d"><div class="ttname"><a href="#aafc10244b99533d8c23072444875039d">anonymous_namespace{Log.cpp}::FileLineCache::BusySpinCount_</a></div><div class="ttdeci">static constexpr std::uint32_t BusySpinCount_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01014">Log.cpp:1014</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#aafc10244b99533d8c23072444875039d">BusySpinCount_</a>, and <a class="el" href="#aab1f4fd9e8e6511b894685095d12e2a3">StateBusy_</a>.</p>
 
@@ -1235,8 +1235,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01015">1015</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1015</span>{256u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01014">1014</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1014</span>{256u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_()</a>.</p>
 
@@ -1262,8 +1262,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01003">1003</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1003</span>{65536u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01002">1002</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1002</span>{65536u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 
@@ -1289,8 +1289,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01009">1009</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1009</span>{2048u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01008">1008</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1008</span>{2048u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a9d02a026ff012161b459d4163563cd5e">AppendFileName_()</a>, and <a class="el" href="#aab94c7116b206b9f46e015b043c082ce">HashText_()</a>.</p>
 
@@ -1316,8 +1316,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01040">1040</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1040</span>{};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01039">1039</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1039</span>{};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ae6f9298f6d2b42bfd9f2a1da10f79932">data_()</a>, and <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 
@@ -1343,8 +1343,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01004">1004</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1004</span>{<a class="code hl_variable" href="#a2671ca19ec9fff53029b3fcab99b0c84">Capacity_</a> - 1u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01003">1003</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1003</span>{<a class="code hl_variable" href="#a2671ca19ec9fff53029b3fcab99b0c84">Capacity_</a> - 1u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 
@@ -1370,8 +1370,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01001">1001</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1001</span>{0};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01000">1000</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1000</span>{0};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ae6f9298f6d2b42bfd9f2a1da10f79932">data_()</a>, and <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 
@@ -1397,8 +1397,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01041">1041</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1041</span>{};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01040">1040</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1040</span>{};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ae6f9298f6d2b42bfd9f2a1da10f79932">data_()</a>, and <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 
@@ -1424,8 +1424,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01007">1007</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1007</span>{8u * 1024u * 1024u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01006">1006</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1006</span>{8u * 1024u * 1024u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ae6f9298f6d2b42bfd9f2a1da10f79932">data_()</a>, and <a class="el" href="#ad6ad62ef3d5ac5d04d4fe6e741eb0ef5">reservePool_()</a>.</p>
 
@@ -1451,8 +1451,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01042">1042</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1042</span>{1u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01041">1041</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1041</span>{1u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ad6ad62ef3d5ac5d04d4fe6e741eb0ef5">reservePool_()</a>.</p>
 
@@ -1478,8 +1478,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01012">1012</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1012</span>{1};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01011">1011</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1011</span>{1};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>, and <a class="el" href="#a307e2c83a2d4ef7c35f8563d955d4723">WaitState_()</a>.</p>
 
@@ -1505,8 +1505,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01011">1011</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1011</span>{0};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01010">1010</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1010</span>{0};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 
@@ -1532,8 +1532,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01013">1013</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1013</span>{2};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01012">1012</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1012</span>{2};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ae6f9298f6d2b42bfd9f2a1da10f79932">data_()</a>, and <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 
@@ -1559,8 +1559,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01008">1008</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1008</span>{256u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01007">1007</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1007</span>{256u};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1584,8 +1584,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01005">1005</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1005</span>{<a class="code hl_variable" href="#a2671ca19ec9fff53029b3fcab99b0c84">Capacity_</a> - 1u};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01004">1004</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1004</span>{<a class="code hl_variable" href="#a2671ca19ec9fff53029b3fcab99b0c84">Capacity_</a> - 1u};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ae6f9298f6d2b42bfd9f2a1da10f79932">data_()</a>, and <a class="el" href="#a0dd7683287f5825c354fc6f20722d736">slot_()</a>.</p>
 

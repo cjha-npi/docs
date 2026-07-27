@@ -1,40 +1,76 @@
 <map id="npi::log::setFilterRules" name="npi::log::setFilterRules">
-<area shape="rect" id="Node000001" title="Changes the custom Qt logging category filter rules." alt="" coords="5,192,219,218"/>
-<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title=" " alt="" coords="267,125,472,181"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,190,261,174,257,177,177,195"/>
-<area shape="rect" id="Node000018" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="267,217,472,273"/>
-<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="194,215,261,227,257,229,196,221"/>
-<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af445fc06eca56a41e21e49cd943a261b" title="Generates the space&#45;separated list of every supported output field." alt="" coords="524,5,729,61"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="417,123,519,71,544,62,539,65,521,76,420,128"/>
-<area shape="rect" id="Node000004" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afa860e5f805566dfb6d3b74cadbf826d" title="Converts an ordered field list to normalized field text." alt="" coords="520,85,733,141"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="471,135,515,130,510,132,473,140"/>
-<area shape="rect" id="Node000005" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae0f74e4fc893caff483e47bcc8f799c1" title="Detects and configures the console attached during initialization." alt="" coords="524,165,729,221"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="471,166,518,175,513,177,472,172"/>
-<area shape="rect" id="Node000006" href="$da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019" title="Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;." alt="" coords="785,156,983,182"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="728,181,780,178,775,180,730,186"/>
-<area shape="rect" id="Node000007" href="$dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="781,206,987,231"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="729,201,776,207,771,208,729,206"/>
-<area shape="rect" id="Node000008" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="1039,31,1212,86"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="966,203,985,192,1003,170,1009,147,1015,122,1033,97,1041,92,1046,89,1037,100,1020,124,1014,148,1007,173,988,197,968,208"/>
-<area shape="rect" id="Node000010" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="1035,111,1216,166"/>
-<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="946,203,986,192,1052,170,1057,168,987,197,947,208"/>
-<area shape="rect" id="Node000011" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="1039,191,1212,246"/>
-<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="986,216,1033,218,1028,219,987,221"/>
-<area shape="rect" id="Node000012" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64" title="Finalizes the command line and launches npiMsgBox.exe." alt="" coords="1039,271,1212,326"/>
-<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="923,229,1036,268,1031,268,923,234"/>
-<area shape="rect" id="Node000013" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761" title="Builds the helper executable path and reusable command&#45;line prefix. The command&#45;line prefix buffer is..." alt="" coords="1039,351,1212,406"/>
-<area shape="poly" id="edge12_Node000007_Node000013" title=" " alt="" coords="899,228,957,279,1036,336,1053,348,1047,347,1033,341,954,283,898,234"/>
-<area shape="rect" id="Node000009" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a587867f118701093b97cc8ccaf37a239" title="Sanitizes and appends one message character." alt="" coords="1280,31,1453,86"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1211,56,1275,58,1270,59,1212,61"/>
-<area shape="rect" id="Node000014" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a7c36613e6219d885c2b5c949ce285c60" title="Appends one character to the prepared command&#45;line prefix buffer." alt="" coords="1280,271,1453,326"/>
-<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="1209,348,1272,329,1277,328,1210,353"/>
-<area shape="rect" id="Node000015" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60" title="Appends the application title used as the message&#45;box title to the command&#45;line prefix." alt="" coords="1264,351,1469,406"/>
-<area shape="poly" id="edge14_Node000013_Node000015" title=" " alt="" coords="1212,376,1259,378,1253,379,1212,381"/>
-<area shape="rect" id="Node000017" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ae9382129e5c68748dfb4d7ca8056cd94" title="Appends one character to the prepared executable path buffer." alt="" coords="1280,431,1453,486"/>
-<area shape="poly" id="edge16_Node000013_Node000017" title=" " alt="" coords="1210,404,1277,428,1272,428,1209,409"/>
-<area shape="rect" id="Node000016" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="1517,351,1755,406"/>
-<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="1469,376,1512,378,1507,379,1469,381"/>
-<area shape="rect" id="Node000019" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="524,269,729,325"/>
-<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="471,263,519,274,513,275,472,268"/>
-<area shape="poly" id="edge19_Node000019_Node000019" title=" " alt="" coords="577,268,577,259,586,250,603,245,627,243,661,247,671,253,677,262,672,261,668,257,659,252,627,248,604,250,589,255,582,261,582,271"/>
+<area shape="rect" id="Node000001" title="Changes the custom Qt logging category filter rules." alt="" coords="5,479,219,505"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title=" " alt="" coords="271,125,476,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,478,265,289,347,185,345,189,269,292,125,481"/>
+<area shape="rect" id="Node000018" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a027c61d8dc60f13ad2a0e0be6e917a6e" title="Normalizes and validates custom Qt category&#45;filter rules." alt="" coords="267,585,480,641"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="141,502,308,580,303,584,140,507"/>
+<area shape="rect" id="Node000019" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="544,504,749,560"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="218,497,538,521,535,526,219,502"/>
+<area shape="rect" id="Node000021" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#aaa3ef86b0bde2d695263c99035301b1c" title="Removes one persistent logging setting under the cross&#45;process lock." alt="" coords="287,327,460,382"/>
+<area shape="poly" id="edge22_Node000001_Node000021" title=" " alt="" coords="129,477,188,437,265,392,288,384,284,387,268,397,191,441,132,481"/>
+<area shape="rect" id="Node000028" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a07969a1c7e4498118828e463456c5d1e" title="Writes one persistent logging setting under the cross&#45;process lock." alt="" coords="287,431,460,486"/>
+<area shape="poly" id="edge38_Node000001_Node000028" title=" " alt="" coords="212,477,281,469,277,472,214,481"/>
+<area shape="rect" id="Node000029" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a4b266529f52b5d050ba76fbd66ed3b02" title="Installs the built&#45;in and normalized custom Qt category filters." alt="" coords="287,689,460,745"/>
+<area shape="poly" id="edge44_Node000001_Node000029" title=" " alt="" coords="124,502,183,570,224,612,268,651,316,686,311,685,265,655,220,615,179,573,123,507"/>
+<area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af445fc06eca56a41e21e49cd943a261b" title="Generates the space&#45;separated list of every supported output field." alt="" coords="544,5,749,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="421,123,527,71,554,62,549,65,529,76,425,128"/>
+<area shape="rect" id="Node000004" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afa860e5f805566dfb6d3b74cadbf826d" title="Converts an ordered field list to normalized field text." alt="" coords="540,85,753,141"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="475,136,535,128,530,131,477,141"/>
+<area shape="rect" id="Node000005" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae0f74e4fc893caff483e47bcc8f799c1" title="Detects and configures the console attached during initialization." alt="" coords="544,165,749,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="475,166,539,176,534,178,477,171"/>
+<area shape="rect" id="Node000006" href="$da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019" title="Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;." alt="" coords="833,180,1031,206"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="749,191,828,192,823,194,750,196"/>
+<area shape="rect" id="Node000007" href="$dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="1368,350,1573,375"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="749,211,1321,328,1405,348,1400,348,1319,333,749,216"/>
+<area shape="rect" id="Node000008" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="1625,255,1799,310"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1509,347,1618,313,1623,312,1511,352"/>
+<area shape="rect" id="Node000010" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="1621,175,1803,230"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="1484,348,1541,298,1620,240,1634,235,1639,233,1623,245,1544,302,1486,352"/>
+<area shape="rect" id="Node000011" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="1625,335,1799,390"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="1573,360,1620,362,1615,363,1574,365"/>
+<area shape="rect" id="Node000012" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a2e29a8fedb4d4bc0661873c8d4883c64" title="Finalizes the command line and launches npiMsgBox.exe." alt="" coords="1625,415,1799,470"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="1510,373,1623,412,1618,412,1510,378"/>
+<area shape="rect" id="Node000013" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a58ddc58a8755566f9fa235e49d764761" title="Builds the helper executable path and reusable command&#45;line prefix. The command&#45;line prefix buffer is..." alt="" coords="1625,495,1799,550"/>
+<area shape="poly" id="edge12_Node000007_Node000013" title=" " alt="" coords="1504,373,1540,391,1575,415,1591,433,1599,449,1608,464,1623,480,1635,491,1630,490,1620,485,1604,468,1595,451,1586,436,1572,419,1537,395,1504,378"/>
+<area shape="rect" id="Node000009" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a587867f118701093b97cc8ccaf37a239" title="Sanitizes and appends one message character." alt="" coords="1867,255,2040,310"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1798,280,1862,282,1856,283,1799,285"/>
+<area shape="rect" id="Node000014" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a7c36613e6219d885c2b5c949ce285c60" title="Appends one character to the prepared command&#45;line prefix buffer." alt="" coords="1867,415,2040,470"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="1796,492,1859,473,1864,472,1797,497"/>
+<area shape="rect" id="Node000015" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60" title="Appends the application title used as the message&#45;box title to the command&#45;line prefix." alt="" coords="1851,495,2056,550"/>
+<area shape="poly" id="edge14_Node000013_Node000015" title=" " alt="" coords="1798,520,1845,522,1840,523,1799,525"/>
+<area shape="rect" id="Node000017" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#ae9382129e5c68748dfb4d7ca8056cd94" title="Appends one character to the prepared executable path buffer." alt="" coords="1867,575,2040,630"/>
+<area shape="poly" id="edge16_Node000013_Node000017" title=" " alt="" coords="1796,548,1864,572,1859,572,1796,553"/>
+<area shape="rect" id="Node000016" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="2104,495,2341,550"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="2056,520,2099,522,2094,523,2056,525"/>
+<area shape="poly" id="edge18_Node000018_Node000018" title=" " alt="" coords="323,584,323,575,332,566,349,561,373,559,408,563,419,569,424,578,419,577,415,573,406,568,373,564,350,566,335,571,328,577,328,587"/>
+<area shape="rect" id="Node000020" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="829,504,1035,560"/>
+<area shape="poly" id="edge20_Node000019_Node000020" title=" " alt="" coords="749,529,824,531,819,532,750,534"/>
+<area shape="poly" id="edge21_Node000020_Node000020" title=" " alt="" coords="879,503,879,494,888,485,906,479,932,477,969,482,980,488,986,497,981,495,977,492,967,487,932,483,907,485,891,490,884,496,883,506"/>
+<area shape="poly" id="edge27_Node000021_Node000019" title=" " alt="" coords="460,377,482,393,500,418,506,443,513,467,530,490,541,500,536,500,526,494,508,469,501,444,495,420,478,396,460,383"/>
+<area shape="poly" id="edge28_Node000021_Node000021" title=" " alt="" coords="323,326,323,317,332,308,349,302,373,300,408,305,419,310,424,319,419,319,415,314,406,310,373,305,350,307,335,312,328,319,328,328"/>
+<area shape="rect" id="Node000022" href="$dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544" title="Application ProgramData path: C:/ProgramData/[organization]/[Application]." alt="" coords="528,350,765,375"/>
+<area shape="poly" id="edge23_Node000021_Node000022" title=" " alt="" coords="459,354,523,358,518,360,461,360"/>
+<area shape="rect" id="Node000025" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a3a8077999c13c0cee65f995122e46196" title="Converts a QSettings status to explanatory user&#45;facing text." alt="" coords="556,269,737,325"/>
+<area shape="poly" id="edge29_Node000021_Node000025" title=" " alt="" coords="459,334,551,316,546,319,461,339"/>
+<area shape="rect" id="Node000026" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ac2b824ac899ce94ad3251f16688adfd6" title="Displays a warning message through Qt or the executable fallback." alt="" coords="560,424,733,480"/>
+<area shape="poly" id="edge31_Node000021_Node000026" title=" " alt="" coords="452,380,563,421,558,422,452,385"/>
+<area shape="rect" id="Node000023" href="$dc/dba/namespacenpi_1_1app.html#a30836be8b9337a64733a6e05594b23c8" title="Organization ProgramData path: C:/ProgramData/[organization]." alt="" coords="813,350,1051,375"/>
+<area shape="poly" id="edge24_Node000022_Node000023" title=" " alt="" coords="764,360,808,362,803,363,766,365"/>
+<area shape="rect" id="Node000024" href="$d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1" title="Resolve base path using Known Folder ID or environment variable fallback." alt="" coords="1099,342,1320,383"/>
+<area shape="poly" id="edge25_Node000023_Node000024" title=" " alt="" coords="1050,360,1093,362,1088,363,1051,365"/>
+<area shape="poly" id="edge26_Node000024_Node000007" title=" " alt="" coords="1320,360,1363,362,1357,363,1320,365"/>
+<area shape="poly" id="edge30_Node000025_Node000025" title=" " alt="" coords="594,268,594,259,604,250,621,245,647,243,683,247,694,253,700,262,695,261,691,257,681,252,647,248,622,250,606,255,599,261,599,271"/>
+<area shape="poly" id="edge32_Node000026_Node000026" title=" " alt="" coords="594,423,594,414,604,405,621,399,647,397,683,402,694,408,700,417,695,415,691,412,681,407,647,403,622,405,606,410,599,416,599,425"/>
+<area shape="rect" id="Node000027" href="$dc/dba/namespacenpi_1_1app.html#a8a8a5a1bb6702937ac0df7ce82143606" title="Launches npiMsgBox.exe to show a warning message box." alt="" coords="1368,430,1573,455"/>
+<area shape="poly" id="edge33_Node000026_Node000027" title=" " alt="" coords="733,448,1362,442,1358,445,733,454"/>
+<area shape="poly" id="edge34_Node000027_Node000008" title=" " alt="" coords="1503,427,1537,410,1572,386,1586,369,1595,354,1604,337,1620,320,1630,316,1635,313,1623,325,1608,341,1599,356,1591,372,1575,390,1540,414,1505,432"/>
+<area shape="poly" id="edge35_Node000027_Node000011" title=" " alt="" coords="1509,427,1618,393,1623,392,1511,432"/>
+<area shape="poly" id="edge36_Node000027_Node000012" title=" " alt="" coords="1573,440,1620,442,1615,443,1573,445"/>
+<area shape="poly" id="edge37_Node000027_Node000013" title=" " alt="" coords="1510,453,1623,492,1618,492,1510,458"/>
+<area shape="poly" id="edge40_Node000028_Node000019" title=" " alt="" coords="460,479,539,502,534,503,460,484"/>
+<area shape="poly" id="edge39_Node000028_Node000022" title=" " alt="" coords="426,428,475,406,527,385,568,376,564,378,529,390,477,411,429,433"/>
+<area shape="poly" id="edge42_Node000028_Node000025" title=" " alt="" coords="426,429,478,392,492,377,501,363,510,349,526,335,551,324,547,327,530,339,514,353,505,366,496,381,482,397,429,433"/>
+<area shape="poly" id="edge43_Node000028_Node000026" title=" " alt="" coords="459,454,555,453,550,455,461,459"/>
+<area shape="poly" id="edge41_Node000028_Node000028" title=" " alt="" coords="323,430,323,421,332,412,349,406,373,404,408,409,419,414,424,423,419,422,415,418,406,414,373,409,350,411,335,416,328,423,328,432"/>
+<area shape="poly" id="edge45_Node000029_Node000029" title=" " alt="" coords="323,688,323,679,332,670,349,665,373,663,408,667,419,673,424,682,419,680,415,677,406,672,373,668,350,670,335,675,328,681,327,691"/>
 </map>

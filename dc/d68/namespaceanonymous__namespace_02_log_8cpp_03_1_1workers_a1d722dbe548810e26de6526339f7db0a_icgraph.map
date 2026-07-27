@@ -1,8 +1,16 @@
 <map id="anonymous_namespace{Log::cpp}::workers::directoryCleanup" name="anonymous_namespace{Log::cpp}::workers::directoryCleanup">
-<area shape="rect" id="Node000001" title="Starts a detached cleanup operation for managed normal log files." alt="" coords="227,80,696,106"/>
-<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287" title="Updates the runtime maximum&#45;folder&#45;size setting." alt="" coords="5,29,179,85"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,81,179,68,179,63,324,78"/>
-<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,109,179,150"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="319,107,179,123,178,118,325,106"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="158,21,152,17,139,13,92,8,59,10,37,15,27,22,27,30,21,29,22,19,34,10,58,5,92,3,141,7,155,13,163,21"/>
+<area shape="rect" id="Node000001" title="Starts a detached cleanup operation for managed normal log files." alt="" coords="568,100,1037,126"/>
+<area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="307,5,520,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="742,99,519,45,472,34,471,28,521,40,747,97"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="315,55,512,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="681,100,512,82,512,76,687,99"/>
+<area shape="rect" id="Node000004" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287" title="Updates the runtime maximum&#45;folder&#45;size setting." alt="" coords="327,129,500,185"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="678,127,500,150,499,145,683,126"/>
+<area shape="rect" id="Node000007" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="327,208,500,249"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="754,128,483,211,482,206,748,128"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="463,120,459,117,449,112,413,108,388,110,372,115,364,121,364,131,359,128,359,119,369,110,387,104,413,102,451,107,462,113,468,122"/>
+<area shape="rect" id="Node000005" href="$d5/ddd/namespacenpi_1_1log.html#a82c9393d9e86743df96071dd5dda1fb6" title="Restores the default maximum log folder size." alt="" coords="25,108,239,149"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="316,148,239,142,238,137,322,147"/>
+<area shape="rect" id="Node000006" href="$d5/ddd/namespacenpi_1_1log.html#a44c3ab1ead08f699085787d44d37ae11" title="Changes the normal&#45;log cleanup target." alt="" coords="5,173,259,199"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="316,167,255,176,254,171,321,166"/>
 </map>
