@@ -1,5 +1,5 @@
-<map id="Ind/StageWindow.h" name="Ind/StageWindow.h">
-<area shape="rect" id="Node000001" title="Independent utility for showing a top&#45;level widget either instantly or with a source&#45;origin animation..." alt="" coords="13,5,171,31"/>
-<area shape="rect" id="Node000002" href="$de/d71/_stage_window_8cpp.html" title="Implementation of npi::ind::StageWindow for showing a top&#45;level widget with optional animation." alt="" coords="5,79,179,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,37,95,80,89,78,90,41"/>
+<map id="Main_Proj/src/Ind/StageWindow.h" name="Main_Proj/src/Ind/StageWindow.h">
+<area shape="rect" id="Node000001" title="Independent utility for showing a top&#45;level widget either instantly or with a source&#45;origin animation..." alt="" coords="13,5,283,31"/>
+<area shape="rect" id="Node000002" href="$de/d71/_stage_window_8cpp.html" title="Implementation of npi::ind::StageWindow for showing a top&#45;level widget with optional animation." alt="" coords="5,79,291,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,37,150,80,146,78,146,41"/>
 </map>

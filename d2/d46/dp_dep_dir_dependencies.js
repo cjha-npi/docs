@@ -17,29 +17,8 @@ var dp_dep_dir_dependencies =
       [ "Parent Side Header", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_header", null ],
       [ "Parent Side Source", "d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_source", null ]
     ] ],
-    [ "MoodyCamel Queue", "d7/d7b/dp_dep_moody_camel_queue.html", [
-      [ "Introduction", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__intro", null ],
-      [ "Details", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__details", null ],
-      [ "Integration in This Project", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__integration", null ],
-      [ "Operational Model", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__operation_model", null ],
-      [ "Tokens and Recommended Usage", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__tokens_recommended_usage", null ],
-      [ "Allocation and Capacity Behavior", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__allocation_and_capacity", null ],
-      [ "Lifetime and Correctness Requirements", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__lifetime_correctness_requirements", null ],
-      [ "Exception and Failure Behavior", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__exception_failure_behavior", null ],
-      [ "Limitations", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__limitations", null ],
-      [ "Licensing and Maintenance", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__licensing_maintenance", null ],
-      [ "Summary", "d7/d7b/dp_dep_moody_camel_queue.html#dp_dep_moody_camel_queue__summary", null ]
-    ] ],
-    [ "Magic Enum", "dc/d55/dp_dep_magic_enum.html", [
-      [ "Introduction", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__intro", null ],
-      [ "Details", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__details", null ],
-      [ "Integration in This Project", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__integration", null ],
-      [ "Core Capabilities", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__core_capabilities", null ],
-      [ "Compiler and Language Requirements", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__compiler_lang_requirements", null ],
-      [ "Reflection Range and Customization", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__reflection_customization", null ],
-      [ "Limitations", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__limitations", null ],
-      [ "Recommended Usage in the Codebase", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__recommended_usage", null ],
-      [ "Licensing and Maintenance", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__license_maintenance", null ],
-      [ "Summary", "dc/d55/dp_dep_magic_enum.html#dp_dep_magic_enum__summary", null ]
+    [ "External Headers", "d3/dd2/dp_dep_external_headers.html", [
+      [ "Moodycamel Queue", "d3/dd2/dp_dep_external_headers.html#dp_dep_external_headers_moodycamel_queue", null ],
+      [ "Magic Enum", "d3/dd2/dp_dep_external_headers.html#dp_dep_external_headers__magic_enum", null ]
     ] ]
 ];

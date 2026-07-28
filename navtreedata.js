@@ -29,7 +29,6 @@ var NAVTREE =
     [ "Architecture", "db/d8d/dp_arch_dir_architecture.html", "db/d8d/dp_arch_dir_architecture" ],
     [ "Dependencies", "d2/d46/dp_dep_dir_dependencies.html", "d2/d46/dp_dep_dir_dependencies" ],
     [ "Dev Hub", "d3/dfe/dp_dh_dir_dev_hub.html", "d3/dfe/dp_dh_dir_dev_hub" ],
-    [ "Visual Studio", "d4/d27/dp_dh_dir_visual_studio.html", "d4/d27/dp_dh_dir_visual_studio" ],
     [ "Bugs List", "dc/d96/dp_dh_bugs.html", null ],
     [ "Required", "d5/d96/dp_dh_required.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -67,11 +66,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a03356cf8d3547efc665cf418a45b2908",
-"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a4dda410a11a2586d23a34e649ffbdf02",
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a43a88c468a70d84a209929f3ef0c3db3",
-"da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a770514f089d7e726049b295fa262efcc",
-"dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a2757e70304e07fe74e0017423be1cadb"
+"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a10ba24b7f22ae19dfa063856e4225c14",
+"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a724008c222b14420c93431227507ff61",
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a705367302ce1bbdbf85b5a65195613c9",
+"da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a9bb91ef33ca327b133086ab06cd2ef8e",
+"de/d5c/classanonymous__namespace_02_stage_window_8cpp_03_1_1_opacity_guard.html#a5ba4263ca610b2097ecc2e2f44e0e76a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

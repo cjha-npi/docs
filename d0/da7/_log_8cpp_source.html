@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Root/Log.cpp Source File</title>
+<title>Main Project: Main_Proj/src/Root/Log.cpp Source File</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -249,11 +249,11 @@ $(function(){initNavTree('d0/da7/_log_8cpp_source.html','../../',''); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#include &quot;ext/magic_enum.hpp&quot;</span></div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">// Project headers.</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#include &quot;src/Ind/LockedValue.hpp&quot;</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#include &quot;src/Ind/WinErrorText.hpp&quot;</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#include &quot;src/Root/MetaInfo.h&quot;</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#include &quot;src/Util/CrossProcessLocker.hpp&quot;</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#include &quot;src/Util/WinMsgBoxExe.h&quot;</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/dd8/_locked_value_8hpp.html">src/Ind/LockedValue.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/d43/_win_error_text_8hpp.html">src/Ind/WinErrorText.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d0d/_meta_info_8h.html">src/Root/MetaInfo.h</a>&quot;</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/d25/_cross_process_locker_8hpp.html">src/Util/CrossProcessLocker.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d49/_win_msg_box_exe_8h.html">src/Util/WinMsgBoxExe.h</a>&quot;</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/df4/_log_8h.html">Log.h</a>&quot;</span></div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment"></span> </div>
@@ -6233,10 +6233,15 @@ $(function(){initNavTree('d0/da7/_log_8cpp_source.html','../../',''); });
 <div class="line"><a id="l05685" name="l05685"></a><span class="lineno"> 5685</span>  }</div>
 <div class="line"><a id="l05686" name="l05686"></a><span class="lineno"> 5686</span>}</div>
 </div>
+<div class="ttc" id="a_cross_process_locker_8hpp_html"><div class="ttname"><a href="../../d8/d25/_cross_process_locker_8hpp.html">CrossProcessLocker.hpp</a></div><div class="ttdoc">RAII locker for a session-local Windows named mutex.</div></div>
+<div class="ttc" id="a_locked_value_8hpp_html"><div class="ttname"><a href="../../dc/dd8/_locked_value_8hpp.html">LockedValue.hpp</a></div><div class="ttdoc">Defines a generic value protected by a QReadWriteLock.</div></div>
 <div class="ttc" id="a_log_8cpp_html_a29523bd69971206d80a3109b7bba0eea"><div class="ttname"><a href="../../d0/da7/_log_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a></div><div class="ttdeci">#define npiWarn</div><div class="ttdoc">Emits an internal warning diagnostic through the logging-system category.</div><div class="ttdef"><b>Definition</b> <a href="#l00131">Log.cpp:131</a></div></div>
 <div class="ttc" id="a_log_8cpp_html_a489b218ba63dc7f5434988420437df4f"><div class="ttname"><a href="../../d0/da7/_log_8cpp.html#a489b218ba63dc7f5434988420437df4f">npiCrit</a></div><div class="ttdeci">#define npiCrit</div><div class="ttdoc">Emits an internal critical diagnostic through the logging-system category.</div><div class="ttdef"><b>Definition</b> <a href="#l00134">Log.cpp:134</a></div></div>
 <div class="ttc" id="a_log_8cpp_html_acfd217143f12c58fa5be9bd51908a231"><div class="ttname"><a href="../../d0/da7/_log_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a></div><div class="ttdeci">#define npiFatl</div><div class="ttdoc">Emits an internal fatal diagnostic through the logging-system category.</div><div class="ttdef"><b>Definition</b> <a href="#l00137">Log.cpp:137</a></div></div>
 <div class="ttc" id="a_log_8h_html"><div class="ttname"><a href="../../da/df4/_log_8h.html">Log.h</a></div><div class="ttdoc">Declares runtime configuration and console controls for the logging system.</div></div>
+<div class="ttc" id="a_meta_info_8h_html"><div class="ttname"><a href="../../db/d0d/_meta_info_8h.html">MetaInfo.h</a></div><div class="ttdoc">Declares application metadata and metadata-derived application paths.</div></div>
+<div class="ttc" id="a_win_error_text_8hpp_html"><div class="ttname"><a href="../../d9/d43/_win_error_text_8hpp.html">WinErrorText.hpp</a></div><div class="ttdoc">Provides conversion of Windows error codes into readable text.</div></div>
+<div class="ttc" id="a_win_msg_box_exe_8h_html"><div class="ttname"><a href="../../d4/d49/_win_msg_box_exe_8h.html">WinMsgBoxExe.h</a></div><div class="ttdoc">Declares Windows helper-process message box functions.</div></div>
 <div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html"><div class="ttname"><a href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html">anonymous_namespace{Log.cpp}::CategoryCache</a></div><div class="ttdoc">Caches normalized logging-category text.</div><div class="ttdef"><b>Definition</b> <a href="#l00596">Log.cpp:596</a></div></div>
 <div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a03356cf8d3547efc665cf418a45b2908"><div class="ttname"><a href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a03356cf8d3547efc665cf418a45b2908">anonymous_namespace{Log.cpp}::CategoryCache::Capacity_</a></div><div class="ttdeci">static constexpr std::uint32_t Capacity_</div><div class="ttdef"><b>Definition</b> <a href="#l00711">Log.cpp:711</a></div></div>
 <div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_category_cache_html_a089d6bb50bb468c61d1994eea3852262"><div class="ttname"><a href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a089d6bb50bb468c61d1994eea3852262">anonymous_namespace{Log.cpp}::CategoryCache::CategoryCache</a></div><div class="ttdeci">CategoryCache(CategoryCache &amp;&amp;)=delete</div></div>
@@ -6695,7 +6700,7 @@ $(function(){initNavTree('d0/da7/_log_8cpp_source.html','../../',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../dir_176b74ca7fe251e8ce5a9c9ccf88d4ec.html">Root</a></li><li class="navelem"><a href="../../d0/da7/_log_8cpp.html">Log.cpp</a></li>
+    <li class="navelem"><a href="../../dir_ce0e7e0051629da598757e5adae9dc7c.html">Main_Proj</a></li><li class="navelem"><a href="../../dir_049a93b64050dd5ba1d2b2dc78ae21fd.html">src</a></li><li class="navelem"><a href="../../dir_21583df424298f34e2b8b6be997db7ba.html">Root</a></li><li class="navelem"><a href="../../d0/da7/_log_8cpp.html">Log.cpp</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

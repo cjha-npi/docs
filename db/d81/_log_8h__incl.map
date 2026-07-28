@@ -1,5 +1,5 @@
-<map id="Root/Log.h" name="Root/Log.h">
-<area shape="rect" id="Node000001" title="Declares runtime configuration and console controls for the logging system." alt="" coords="268,5,369,31"/>
+<map id="Main_Proj/src/Root/Log.h" name="Main_Proj/src/Root/Log.h">
+<area shape="rect" id="Node000001" title="Declares runtime configuration and console controls for the logging system." alt="" coords="212,5,425,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,83,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,34,91,81,90,76,274,28"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="107,79,256,105"/>

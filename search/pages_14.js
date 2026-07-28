@@ -3,8 +3,7 @@ var searchData=
   ['validation_20and_20switching_0',['Directory Validation and Switching',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__directory_validation_and_switching',1,'']]],
   ['version_20information_1',['Version Information',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__ver_info',1,'']]],
   ['visual_20indent_2',['Force Visual Indent',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent',1,'']]],
-  ['visual_20studio_3',['Visual Studio',['../d4/d27/dp_dh_dir_visual_studio.html',1,'']]],
+  ['visual_20studio_20setup_3',['Visual Studio Setup',['../d7/d3c/dp_dh_vs_setup.html',1,'dp_dh_dir_setups']]],
   ['vs_20project_20settings_4',['VS Project Settings',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_proj_settings',1,'']]],
-  ['vs_20property_20sheets_5',['VS Property Sheets',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets',1,'']]],
-  ['vs_20setup_6',['VS Setup',['../d7/d3c/dp_dh_vs_setup.html',1,'dp_dh_dir_dev_hub']]]
+  ['vs_20property_20sheets_5',['VS Property Sheets',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets',1,'']]]
 ];

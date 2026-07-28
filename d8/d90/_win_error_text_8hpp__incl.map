@@ -1,7 +1,7 @@
-<map id="Ind/WinErrorText.hpp" name="Ind/WinErrorText.hpp">
-<area shape="rect" id="Node000001" title="Provides conversion of Windows error codes into readable text." alt="" coords="13,5,195,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,99,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,30,67,75,63,71,93,31"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="123,79,192,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="114,28,147,73,141,73,111,33"/>
+<map id="Main_Proj/src/Ind/WinErrorText.hpp" name="Main_Proj/src/Ind/WinErrorText.hpp">
+<area shape="rect" id="Node000001" title="Provides conversion of Windows error codes into readable text." alt="" coords="5,5,299,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="53,79,147,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,30,115,75,111,71,141,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="171,79,240,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,28,195,73,189,73,159,33"/>
 </map>

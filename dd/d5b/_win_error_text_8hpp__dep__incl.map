@@ -1,0 +1,8 @@
+<map id="Main_Proj/src/Ind/WinErrorText.hpp" name="Main_Proj/src/Ind/WinErrorText.hpp">
+<area shape="rect" id="Node000001" title="Provides conversion of Windows error codes into readable text." alt="" coords="5,5,299,31"/>
+<area shape="rect" id="Node000002" href="$d0/da7/_log_8cpp.html" title="Implements the asynchronous application logging system." alt="" coords="69,168,235,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,39,122,57,111,80,107,99,111,119,122,144,138,168,133,167,118,147,105,120,101,99,105,78,117,55,136,34"/>
+<area shape="rect" id="Node000003" href="$d8/d25/_cross_process_locker_8hpp.html" title="RAII locker for a session&#45;local Windows named mutex." alt="" coords="120,79,325,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,34,209,79,203,80,167,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="205,125,169,170,166,166,200,127"/>
+</map>
