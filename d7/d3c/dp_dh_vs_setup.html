@@ -160,6 +160,166 @@ Browsing Database Location</h1>
 </ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects the parent folder of <span class="tt">VS_Caches</span> to exist. For example, if the cache location is <span class="tt">F:\Misc\VS_Caches</span>, then <span class="tt">F:\Misc</span> must already exist. Visual Studio can recreate the <span class="tt">VS_Caches</span> folder itself, but it does not create the missing parent folder. If the parent folder is missing, the browsing database and IntelliSense may stop working.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__copy_project_code_on_save"></a>
+Copy Project Code on Save</h1>
+<p>The <span class="tt">Copy_Proj_Code_On_Save</span> Visual Commander extension automatically creates a filtered backup of the Visual Studio project containing a document whenever that document is saved. Visual Studio determines the directory containing the project's <span class="tt">.vcxproj</span> file and passes that directory to:</p>
+<div class="fragment"><div class="line">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</div>
+</div><!-- fragment --><p>The script mirrors the whitelisted project files from <span class="tt">F:</span> to the corresponding path under <span class="tt">E:</span> while preserving the complete directory structure. For example:</p>
+<div class="fragment"><div class="line">F:\Eval\Group\DataSync</div>
+</div><!-- fragment --><p>is copied to:</p>
+<div class="fragment"><div class="line">E:\Eval\Group\DataSync</div>
+</div><!-- fragment --><p>Only manually created project files matching the following whitelist are copied:</p>
+<div class="fragment"><div class="line">*.h</div>
+<div class="line">*.hpp</div>
+<div class="line">*.c</div>
+<div class="line">*.cpp</div>
+<div class="line">*.ui</div>
+<div class="line">*.qrc</div>
+<div class="line">*.md</div>
+<div class="line">*.png</div>
+<div class="line">*.ico</div>
+</div><!-- fragment --><p>Generated files, Visual Studio project files, hidden files and directories, and directories such as <span class="tt">x64</span>, <span class="tt">x86</span>, <span class="tt">bin</span>, <span class="tt">obj</span>, <span class="tt">out</span>, and <span class="tt">build</span> are excluded. Directories containing no whitelisted files are not retained in the destination.</p>
+<p>Robocopy copies only new or changed files and removes destination files that no longer exist in the source project. The destination files are temporarily made writable during the copy operation and marked as <b>read-only</b> afterward to reduce the risk of accidental modification.</p>
+<p>Copy results are appended to:</p>
+<div class="fragment"><div class="line">D:\ToolBox\CopyProjCode\CopyProjCode.log</div>
+</div><!-- fragment --><p>Robocopy result codes below <span class="tt">8</span> indicate successful or informational outcomes, while result codes of <span class="tt">8</span> or higher indicate a failure.</p>
+<p><span class="dp-markdown-big-text"><b>Installation</b></span></p>
+<p>Save the following script as <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</span>:</p>
+<div class="fragment"><div class="line">@echo off</div>
+<div class="line">setlocal EnableExtensions DisableDelayedExpansion</div>
+<div class="line"> </div>
+<div class="line">set &quot;sourceRoot=F:\&quot;</div>
+<div class="line">set &quot;destinationRoot=E:\&quot;</div>
+<div class="line">set &quot;source=%~f1&quot;</div>
+<div class="line"> </div>
+<div class="line">if not defined source exit /b 2</div>
+<div class="line">if not exist &quot;%source%\&quot; exit /b 3</div>
+<div class="line">if /I not &quot;%source:~0,3%&quot;==&quot;%sourceRoot%&quot; exit /b 0</div>
+<div class="line">if /I &quot;%source%&quot;==&quot;%sourceRoot%&quot; exit /b 4</div>
+<div class="line"> </div>
+<div class="line">rem Preserve the complete path below F:\.</div>
+<div class="line">rem F:\A\B\C\SomeProj becomes E:\A\B\C\SomeProj.</div>
+<div class="line">set &quot;destination=%destinationRoot%%source:~3%&quot;</div>
+<div class="line"> </div>
+<div class="line">set &quot;logDir=D:\ToolBox\CopyProjCode&quot;</div>
+<div class="line">set &quot;logFile=%logDir%\CopyProjCode.log&quot;</div>
+<div class="line"> </div>
+<div class="line">if not exist &quot;%logDir%\&quot; md &quot;%logDir%&quot; &gt;nul 2&gt;&amp;1</div>
+<div class="line"> </div>
+<div class="line">rem Allow Robocopy to update and delete existing backup files.</div>
+<div class="line">if exist &quot;%destination%\&quot; (</div>
+<div class="line">    attrib -R &quot;%destination%\*&quot; /S &gt;nul 2&gt;&amp;1</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">robocopy &quot;%source%&quot; &quot;%destination%&quot; ^</div>
+<div class="line">    *.h *.hpp *.c *.cpp *.ui *.qrc *.md *.png *.ico ^</div>
+<div class="line">    /S /PURGE /R:1 /W:1 /XJ ^</div>
+<div class="line">    /XD &quot;.*&quot; &quot;x64&quot; &quot;x86&quot; &quot;bin&quot; &quot;obj&quot; &quot;out&quot; &quot;build&quot; ^</div>
+<div class="line">    /XF &quot;.*&quot; &quot;*.sln&quot; &quot;*.vcxproj&quot; &quot;*.vcxproj.filters&quot; &quot;*.vcxproj.user&quot; ^</div>
+<div class="line">    /NFL /NDL /NJH /NJS /NP &gt;nul</div>
+<div class="line"> </div>
+<div class="line">set &quot;result=%errorlevel%&quot;</div>
+<div class="line"> </div>
+<div class="line">rem Remove directories that became empty after filtering or deletion.</div>
+<div class="line">if exist &quot;%destination%\&quot; (</div>
+<div class="line">    for /F &quot;delims=&quot; %%D in (</div>
+<div class="line">        &#39;dir &quot;%destination%&quot; /AD /B /S 2^&gt;nul ^| sort /R&#39;</div>
+<div class="line">    ) do rd &quot;%%D&quot; 2&gt;nul</div>
+<div class="line"> </div>
+<div class="line">    rd &quot;%destination%&quot; 2&gt;nul</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">rem Protect all copied backup files from accidental modification.</div>
+<div class="line">if exist &quot;%destination%\&quot; (</div>
+<div class="line">    attrib +R &quot;%destination%\*&quot; /S &gt;nul 2&gt;&amp;1</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">&gt;&gt;&quot;%logFile%&quot; echo [%date% %time%] Result %result%: &quot;%source%&quot; to &quot;%destination%&quot;</div>
+<div class="line"> </div>
+<div class="line">rem Robocopy return codes below 8 are successful or informational.</div>
+<div class="line">if %result% GEQ 8 exit /b %result%</div>
+<div class="line"> </div>
+<div class="line">exit /b 0</div>
+</div><!-- fragment --><p> Install the <a href="https://marketplace.visualstudio.com/items?itemName=SergeyVlasov.VisualCommander">Visual Commander</a> extension by Sergey Vlasov in Visual Studio. Then open <span class="tt">Extensions &gt; VCmd &gt; Extensions...</span>, click <span class="tt">Add</span>, and create an extension named <span class="tt">Copy_Proj_Code_On_Save</span> using the <span class="tt">C# v4.0</span> language. Paste the following code:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>E : VisualCommanderExt.IExtension</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> SetSite(</div>
+<div class="line">        EnvDTE80.DTE2 DTE,</div>
+<div class="line">        Microsoft.VisualStudio.Shell.Package package)</div>
+<div class="line">    {</div>
+<div class="line">        events = DTE.Events;</div>
+<div class="line">        documentEvents = events.DocumentEvents;</div>
+<div class="line">        documentEvents.DocumentSaved += OnDocumentSaved;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Close()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span>(documentEvents != <span class="keyword">null</span>)</div>
+<div class="line">            documentEvents.DocumentSaved -= OnDocumentSaved;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> OnDocumentSaved(EnvDTE.Document document)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">try</span> {</div>
+<div class="line">            EnvDTE.ProjectItem projectItem = document.ProjectItem;</div>
+<div class="line">            <span class="keywordflow">if</span>(projectItem == <span class="keyword">null</span>)</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">            EnvDTE.Project project = projectItem.ContainingProject;</div>
+<div class="line">            <span class="keywordflow">if</span>(project == <span class="keyword">null</span> || <span class="keywordtype">string</span>.IsNullOrEmpty(project.FullName))</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordtype">string</span> projectDir =</div>
+<div class="line">                System.IO.Path.GetDirectoryName(project.FullName);</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span>(<span class="keywordtype">string</span>.IsNullOrEmpty(projectDir))</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">            projectDir = System.IO.Path</div>
+<div class="line">                .GetFullPath(projectDir)</div>
+<div class="line">                .TrimEnd(<span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span>(!projectDir.StartsWith(</div>
+<div class="line">                sourceRoot,</div>
+<div class="line">                System.StringComparison.OrdinalIgnoreCase))</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordtype">string</span> commandProcessor =</div>
+<div class="line">                System.Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;ComSpec&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span>(<span class="keywordtype">string</span>.IsNullOrEmpty(commandProcessor))</div>
+<div class="line">                commandProcessor = <span class="stringliteral">&quot;cmd.exe&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">            System.Diagnostics.ProcessStartInfo startInfo =</div>
+<div class="line">                <span class="keyword">new</span> System.Diagnostics.ProcessStartInfo();</div>
+<div class="line"> </div>
+<div class="line">            startInfo.FileName = commandProcessor;</div>
+<div class="line">            startInfo.Arguments =</div>
+<div class="line">                <span class="stringliteral">&quot;/d /c \&quot;\&quot;&quot;</span> + scriptPath + <span class="stringliteral">&quot;\&quot; \&quot;&quot;</span> + projectDir + <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
+<div class="line">            startInfo.UseShellExecute = <span class="keyword">false</span>;</div>
+<div class="line">            startInfo.CreateNoWindow = <span class="keyword">true</span>;</div>
+<div class="line">            startInfo.WindowStyle =</div>
+<div class="line">                System.Diagnostics.ProcessWindowStyle.Hidden;</div>
+<div class="line"> </div>
+<div class="line">            System.Diagnostics.Process process =</div>
+<div class="line">                System.Diagnostics.Process.Start(startInfo);</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span>(process != <span class="keyword">null</span>)</div>
+<div class="line">                process.Dispose();</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">catch</span>(System.Exception) {</div>
+<div class="line">            <span class="comment">// Ignore failures to avoid disrupting document saves.</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> sourceRoot = <span class="stringliteral">@&quot;F:\&quot;</span>;</div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> scriptPath =</div>
+<div class="line">        <span class="stringliteral">@&quot;D:\ToolBox\CopyProjCode\CopyProjCode.cmd&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> EnvDTE.Events events;</div>
+<div class="line">    <span class="keyword">private</span> EnvDTE.DocumentEvents documentEvents;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Click <span class="tt">Save</span>, then click <span class="tt">Compile</span>. Verify that <span class="tt">Compilation status</span> shows <span class="tt">Success</span>, and then click <span class="tt">Install</span>. Restart Visual Studio if necessary.</p>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__bug_sophos_dll"></a>
 BUG: Sophos DLL</h1>
 <p> <div class="dp-hidden-xrefitem"> </p>

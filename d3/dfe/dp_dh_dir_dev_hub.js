@@ -27,6 +27,7 @@ var dp_dh_dir_dev_hub =
     ] ],
     [ "VS Setup", "d7/d3c/dp_dh_vs_setup.html", [
       [ "Browsing Database Location", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location", null ],
+      [ "Copy Project Code on Save", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__copy_project_code_on_save", null ],
       [ "BUG: Sophos DLL", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll", null ]
     ] ],
     [ "Project Setup", "d4/d3b/dp_dh_project_setup.html", [
@@ -37,7 +38,8 @@ var dp_dh_dir_dev_hub =
       [ "VS Property Sheets", "d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets", null ]
     ] ],
     [ "Tips &amp; Tricks", "d2/dab/dp_dh_tips_tricks.html", [
-      [ "Create ICO Icons Using ImageMagick", "d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick", null ]
+      [ "Create ICO Icons Using ImageMagick", "d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick", null ],
+      [ "Create Files with Given Size", "d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_files_with_given_size", null ]
     ] ],
     [ "Doxygen", "d4/d7c/dp_dh_dir_doxygen.html", "d4/d7c/dp_dh_dir_doxygen" ],
     [ "Git &amp; Github", "de/d8d/dp_dh_dir_git_github.html", "de/d8d/dp_dh_dir_git_github" ],

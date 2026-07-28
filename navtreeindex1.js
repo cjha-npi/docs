@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a03356cf8d3547efc665cf418a45b2908":[8,0,0,1,20],
 "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a089d6bb50bb468c61d1994eea3852262":[7,0,0,7,6],
 "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a089d6bb50bb468c61d1994eea3852262":[8,0,0,1,6],
 "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a0c3664a82b33e321bfcc24ac0b00313e":[7,0,0,7,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a4be539cf0c688be65c5d4bb518933136":[7,0,0,8,1,1],
 "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a4be539cf0c688be65c5d4bb518933136":[8,0,0,2,1,1],
 "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a4be539cf0c688be65c5d4bb518933136":[9,0,4,0,6,1],
-"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a4dda410a11a2586d23a34e649ffbdf02":[7,0,0,8,16],
-"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a4dda410a11a2586d23a34e649ffbdf02":[8,0,0,2,16]
+"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a4dda410a11a2586d23a34e649ffbdf02":[7,0,0,8,16]
 };

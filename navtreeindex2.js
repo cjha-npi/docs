@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a4dda410a11a2586d23a34e649ffbdf02":[8,0,0,2,16],
 "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a57d6b24dc1a39d73983a73fd8afbd2b6":[7,0,0,8,30],
 "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a57d6b24dc1a39d73983a73fd8afbd2b6":[8,0,0,2,30],
 "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a5b65c98f572f0651ceb8637bc63534fd":[7,0,0,8,31],
@@ -154,7 +155,8 @@ var NAVTREEINDEX2 =
 "d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__what_it_does":[3,5,0,1],
 "d7/d3c/dp_dh_vs_setup.html":[3,1],
 "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location":[3,1,0],
-"d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll":[3,1,1],
+"d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll":[3,1,2],
+"d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__copy_project_code_on_save":[3,1,1],
 "d7/d4d/npi_imp_log_8cpp.html":[9,0,7],
 "d7/d4d/npi_imp_log_8cpp.html#a9f918755b601cf4bffca775992e6fb90":[9,0,7,0],
 "d7/d4d/npi_imp_log_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9":[9,0,7,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a431e23f5d76469fcfbbb2839c29b232c":[7,0,0,10,5,9],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a431e23f5d76469fcfbbb2839c29b232c":[8,0,0,4,5,9],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a431e23f5d76469fcfbbb2839c29b232c":[9,0,4,0,20,9],
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a43a88c468a70d84a209929f3ef0c3db3":[7,0,0,10,2,2],
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a43a88c468a70d84a209929f3ef0c3db3":[8,0,0,4,2,2],
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a43a88c468a70d84a209929f3ef0c3db3":[9,0,4,0,17,2]
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a43a88c468a70d84a209929f3ef0c3db3":[7,0,0,10,2,2]
 };

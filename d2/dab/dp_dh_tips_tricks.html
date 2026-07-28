@@ -156,8 +156,16 @@ Create ICO Icons Using ImageMagick</h1>
 <li>has transparent background if possible</li>
 </ul>
 <p>Use the following command in a command prompt and change <span class="tt">input.png</span> and <span class="tt">output.ico</span> as required. </p><div class="fragment"><div class="line">magick input.png -define icon:auto-resize=256,128,64,48,32,24,16 output.ico</div>
-</div><!-- fragment --><p> <span class="tt">ImageMagick</span> will resize the original <span class="tt">.png</span> into all those sizes and pack them into one <span class="tt">.ico</span> file. </p>
-</div></div><!-- contents -->
+</div><!-- fragment --><p> <span class="tt">ImageMagick</span> will resize the original <span class="tt">.png</span> into all those sizes and pack them into one <span class="tt">.ico</span> file.</p>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_tips_tricks__create_files_with_given_size"></a>
+Create Files with Given Size</h1>
+<p>For testing it is sometimes necessary to create files with a given size in a folder, open command prompt in a folder and use:</p>
+<p>1 KiB: </p><div class="fragment"><div class="line">fsutil file createnew file_name.txt 1024</div>
+</div><!-- fragment --><p>1 MiB: </p><div class="fragment"><div class="line">fsutil file createnew file_name.txt 1048576</div>
+</div><!-- fragment --><p>10 MiB: </p><div class="fragment"><div class="line">fsutil file createnew file_name.txt 10485760</div>
+</div><!-- fragment --><p>100 MiB: </p><div class="fragment"><div class="line">fsutil file createnew file_name.txt 104857600</div>
+</div><!-- fragment --><p>1 GiB: </p><div class="fragment"><div class="line">fsutil file createnew file_name.txt 1073741824</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
