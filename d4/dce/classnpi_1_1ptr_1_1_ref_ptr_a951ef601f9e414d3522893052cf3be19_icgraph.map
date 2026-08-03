@@ -1,5 +1,0 @@
-<map id="npi::ptr::RefPtr::isValid_" name="npi::ptr::RefPtr::isValid_">
-<area shape="rect" id="Node000001" title="Check whether the RefPtr currently holds a valid object." alt="" coords="323,5,552,31"/>
-<area shape="rect" id="Node000002" href="$d4/dce/classnpi_1_1ptr_1_1_ref_ptr.html#a04517aa0b653ba8899ac039a7e30c766" title="Explicit boolean conversion operator (e.g. if(refPtr){...})." alt="" coords="5,5,275,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="312,18,274,21,274,16,317,18"/>
-</map>

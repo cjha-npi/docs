@@ -1,7 +1,0 @@
-<map id="anonymous_namespace{Log.cpp}::LeakedState::Worker" name="anonymous_namespace{Log.cpp}::LeakedState::Worker">
-<area shape="rect" id="Node000001" title="Provides queue, wake&#45;up, field&#45;layout, and thread state shared by workers." alt="" coords="5,60,419,86"/>
-<area shape="rect" id="Node000002" href="$d1/d3b/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_disp_worker.html" title="Extends worker state with display muting and failure information." alt="" coords="467,5,664,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="333,57,470,44,464,45,334,62"/>
-<area shape="rect" id="Node000003" href="$d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker.html" title="Extends worker state with normal&#45;log file information and drop counting." alt="" coords="467,85,664,141"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="334,84,470,102,464,102,334,90"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="npi::ptr::RefPtrFromThis::refPtrFromThis_" name="npi::ptr::RefPtrFromThis::refPtrFromThis_">
-<area shape="rect" id="Node000001" title="Create a RefPtr to this object if still alive and is wrapped in a RefPtrHost." alt="" coords="5,29,355,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="124,29,112,21,118,11,141,5,180,3,215,4,238,9,248,18,242,28,239,23,243,19,236,14,215,10,180,8,142,10,121,15,117,20,129,30"/>
-</map>

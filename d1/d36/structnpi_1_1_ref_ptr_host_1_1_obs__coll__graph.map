@@ -1,5 +1,0 @@
-<map id="npi::RefPtrHost&lt; T &gt;::Obs" name="npi::RefPtrHost&lt; T &gt;::Obs">
-<area shape="rect" id="Node000001" title="Inner observer type holding a type&#45;erased pointer to the object. Used to broadcast the lifetime of th..." alt="" coords="5,116,227,142"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="13,5,219,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,53,119,117,113,115,114,56"/>
-</map>

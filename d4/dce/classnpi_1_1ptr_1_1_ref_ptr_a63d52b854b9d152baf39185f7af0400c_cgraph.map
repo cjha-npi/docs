@@ -1,6 +1,0 @@
-<map id="npi::ptr::RefPtr::operator!=" name="npi::ptr::RefPtr::operator!=">
-<area shape="rect" id="Node000001" title="Compare this RefPtr to a RefPtrHost for inequality." alt="" coords="5,29,251,55"/>
-<area shape="rect" id="Node000002" href="$d4/dce/classnpi_1_1ptr_1_1_ref_ptr.html#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980" title="Friend declarations of RefPtrHost class." alt="" coords="299,29,544,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,40,294,42,288,42,251,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="374,29,364,21,369,11,389,5,421,3,451,4,470,9,479,17,474,27,471,23,474,18,467,14,450,10,421,8,390,10,372,15,369,20,379,30"/>
-</map>

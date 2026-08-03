@@ -1,7 +1,0 @@
-<map id="npi::ptr::RefPtrHost::assign_" name="npi::ptr::RefPtrHost::assign_">
-<area shape="rect" id="Node000001" title="Internal helper to assign from another polymorphically related RefPtrHost object." alt="" coords="235,46,488,72"/>
-<area shape="rect" id="Node000002" href="$d9/d12/classnpi_1_1ptr_1_1_ref_ptr_host.html#ac9aa517e1ffe24e6f572f5ce21580178" title="Polymorphic converting copy constructor." alt="" coords="5,5,187,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,46,186,40,186,34,254,45"/>
-<area shape="rect" id="Node000003" href="$d9/d12/classnpi_1_1ptr_1_1_ref_ptr_host.html#aa76808c2e42a2ba7bce14565d5f5d82b" title="Polymorphic assignment operator." alt="" coords="5,71,187,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,73,187,83,186,77,249,72"/>
-</map>

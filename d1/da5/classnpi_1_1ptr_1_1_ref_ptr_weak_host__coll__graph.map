@@ -1,7 +1,0 @@
-<map id="npi::ptr::RefPtrWeakHost&lt; T &gt;" name="npi::ptr::RefPtrWeakHost&lt; T &gt;">
-<area shape="rect" id="Node000001" title="A non&#45;owning weak host that references a RefPtrHost managed object and its observers including local ..." alt="" coords="32,150,285,176"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,20,131,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,50,153,150,148,151,79,54"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="155,5,344,61"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,67,223,99,203,128,177,153,174,148,199,125,218,96,234,70"/>
-</map>

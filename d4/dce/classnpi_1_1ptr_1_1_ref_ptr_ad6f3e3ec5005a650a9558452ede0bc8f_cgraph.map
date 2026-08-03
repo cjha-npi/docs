@@ -1,8 +1,0 @@
-<map id="npi::ptr::RefPtr::assign_" name="npi::ptr::RefPtr::assign_">
-<area shape="rect" id="Node000001" title="Internal helper to assign from another polymorphically related RefPtr object." alt="" coords="5,55,227,80"/>
-<area shape="rect" id="Node000002" href="$d4/dce/classnpi_1_1ptr_1_1_ref_ptr.html#a161a8052754985bb8024c19c06fd9206" title="Friend declarations of RefPtr class with type as U. This makes any RefPtr class object a friend of an..." alt="" coords="275,29,488,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,54,270,53,264,53,227,60"/>
-<area shape="rect" id="Node000003" href="$d4/dce/classnpi_1_1ptr_1_1_ref_ptr.html#a7980c547d3489e9fc977f12627f47fea" title="Retrieve a raw pointer to the managed object, if any." alt="" coords="283,79,480,104"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="226,75,277,82,272,82,226,80"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="339,29,329,21,334,11,351,5,381,3,408,4,426,9,434,17,429,27,426,23,428,18,423,14,407,10,381,8,353,10,337,15,335,20,344,30"/>
-</map>

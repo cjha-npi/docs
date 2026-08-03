@@ -1,9 +1,0 @@
-<map id="Test/TestTwo.cpp" name="Test/TestTwo.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="79,5,228,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,91,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,32,73,77,70,72,134,30"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="115,79,192,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,29,156,72,151,70,151,32"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="216,79,325,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,28,247,74,242,75,171,33"/>
-</map>

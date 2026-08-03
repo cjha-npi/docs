@@ -1,8 +1,0 @@
-<map id="npi::ptr::RefPtr::operator==" name="npi::ptr::RefPtr::operator==">
-<area shape="rect" id="Node000001" title="Compare this RefPtr to a RefPtrHost for equality." alt="" coords="5,43,251,68"/>
-<area shape="rect" id="Node000002" href="$d4/dce/classnpi_1_1ptr_1_1_ref_ptr.html#a7980c547d3489e9fc977f12627f47fea" title="Retrieve a raw pointer to the managed object, if any." alt="" coords="323,5,520,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,40,317,31,312,32,229,45"/>
-<area shape="rect" id="Node000003" href="$d4/dce/classnpi_1_1ptr_1_1_ref_ptr.html#a9a90d6c7f87e0b3d7dc0ecc2a5bc4980" title="Friend declarations of RefPtrHost class." alt="" coords="299,79,544,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,66,311,78,306,78,233,71"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="374,78,364,71,369,60,389,54,421,52,451,54,470,58,479,66,474,77,471,72,474,68,467,63,450,59,421,57,390,59,372,64,369,70,379,80"/>
-</map>
