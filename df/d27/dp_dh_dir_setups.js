@@ -8,6 +8,7 @@ var dp_dh_dir_setups =
     [ "Visual Studio Setup", "d7/d3c/dp_dh_vs_setup.html", [
       [ "Useful Extensions", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__useful_extensions", null ],
       [ "Browsing Database Location", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location", null ],
+      [ "Visual Studio Custom Toolbar", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__custom_toolbar", null ],
       [ "Copy Project Code on Save", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__copy_project_code_on_save", null ],
       [ "BUG: Sophos DLL", "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll", null ]
     ] ],

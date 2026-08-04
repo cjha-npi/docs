@@ -17,8 +17,9 @@ var searchData=
   ['time_14',['Test: Handler Time',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_handler_time',1,'']]],
   ['tips_20tricks_15',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_misc']]],
   ['tips_20tweaks_16',['Tips Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
-  ['tricks_17',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_misc']]],
-  ['troubleshooting_18',['Troubleshooting',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__troubleshooting',1,'Troubleshooting'],['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__troubleshooting',1,'Troubleshooting']]],
-  ['tweaks_19',['Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
-  ['types_20',['Types',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__types',1,'']]]
+  ['toolbar_17',['Visual Studio Custom Toolbar',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__custom_toolbar',1,'']]],
+  ['tricks_18',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_misc']]],
+  ['troubleshooting_19',['Troubleshooting',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__troubleshooting',1,'Troubleshooting'],['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__troubleshooting',1,'Troubleshooting']]],
+  ['tweaks_20',['Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
+  ['types_21',['Types',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__types',1,'']]]
 ];

@@ -67,5 +67,6 @@ var searchData=
   ['crossprocesslocker_2ehpp_64',['CrossProcessLocker.hpp',['../d8/d25/_cross_process_locker_8hpp.html',1,'']]],
   ['css_65',['doxy-plus.css',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
   ['current_20components_66',['Current Components',['../index.html#autotoc_md1',1,'']]],
-  ['customization_67',['Customization',['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__customization',1,'']]]
+  ['custom_20toolbar_67',['Visual Studio Custom Toolbar',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__custom_toolbar',1,'']]],
+  ['customization_68',['Customization',['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__customization',1,'']]]
 ];

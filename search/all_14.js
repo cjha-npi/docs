@@ -36,10 +36,11 @@ var searchData=
   ['tips_20tricks_33',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_misc']]],
   ['tips_20tweaks_34',['Tips Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
   ['tips_5ftricks_2emd_35',['tips_tricks.md',['../df/d5a/tips__tricks_8md.html',1,'']]],
-  ['tricks_36',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_misc']]],
-  ['troubleshooting_37',['Troubleshooting',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__troubleshooting',1,'Troubleshooting'],['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__troubleshooting',1,'Troubleshooting']]],
-  ['tryenter_5f_38',['tryEnter_',['../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#adc585f7a807c773ae087ff5f1d9eb243',1,'npi::ind::SlotGate']]],
-  ['tweaks_39',['Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
-  ['typecatfilter_40',['TypeCatFilter',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2b380887c96684457d43d06fc18be6c',1,'anonymous_namespace{Log.cpp}::LeakedState']]],
-  ['types_41',['Types',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__types',1,'']]]
+  ['toolbar_36',['Visual Studio Custom Toolbar',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__custom_toolbar',1,'']]],
+  ['tricks_37',['Tips &amp;amp; Tricks',['../d2/dab/dp_dh_tips_tricks.html',1,'dp_dh_dir_misc']]],
+  ['troubleshooting_38',['Troubleshooting',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__troubleshooting',1,'Troubleshooting'],['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__troubleshooting',1,'Troubleshooting']]],
+  ['tryenter_5f_39',['tryEnter_',['../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#adc585f7a807c773ae087ff5f1d9eb243',1,'npi::ind::SlotGate']]],
+  ['tweaks_40',['Tweaks',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks',1,'Markdown Tips &amp;amp; Tweaks'],['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks',1,'Tips &amp;amp; Tweaks']]],
+  ['typecatfilter_41',['TypeCatFilter',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2b380887c96684457d43d06fc18be6c',1,'anonymous_namespace{Log.cpp}::LeakedState']]],
+  ['types_42',['Types',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__types',1,'']]]
 ];

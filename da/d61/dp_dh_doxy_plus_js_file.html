@@ -2428,7 +2428,10 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    for (const [key, val] of fileLocalMap) {</div>
 <div class="line">      const nsName = `&lt;${key}&gt;`;</div>
 <div class="line">      for (const node of val) {</div>
-<div class="line">        if (node[0] === nsName) node[0] = &#39;&lt;anon&gt;&#39;;</div>
+<div class="line">        if (node[0] === nsName) {</div>
+<div class="line">          if(node[1]) node[0] = &#39;&lt;anon&gt;&#39;;</div>
+<div class="line">          else node[0] = &#39;&#39;;</div>
+<div class="line">        }</div>
 <div class="line">        if (!node[0].endsWith(&#39;::&#39;)) node[0] = `${node[0]}::`;</div>
 <div class="line">      }</div>
 <div class="line">    }</div>

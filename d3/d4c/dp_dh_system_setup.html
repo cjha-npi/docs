@@ -144,48 +144,23 @@ Structure</h1>
 <li><span class="tt">C: Windows</span> : Windows drive (min 250 GB)</li>
 <li><span class="tt">D: Docs</span> : Documents, Doxygen files, settings, config, etc. (min 20 GB)</li>
 <li><span class="tt">E: Code</span> : Filtered code files from all projects (min 5 GB)</li>
-<li><span class="tt">F: Work</span> : Main working directory (remaining space, min 200 GB)</li>
+<li><span class="tt">F: Work</span> : Main work drive (min 100 GB)</li>
+<li><span class="tt">G: Generated</span> : Drive to hold data generated using Doxygen, VS, etc. i.e. things that can be easily reproduced. (min 100 GB)</li>
+<li><span class="tt">H: History</span> : Drive to hold backups, drivers, etc. in one place (min 50 GB)</li>
 </ul>
-<p><span class="dp-markdown-big-text"><b>Project Folders:</b></span></p>
-<ul>
-<li><span class="tt">Core</span> : Contains final projects, names start with <span class="tt">C</span> e.g. <span class="tt">C123_UniClamp</span></li>
-<li><span class="tt">Demo</span> : Contains projects demonstrating one or more modules, names start with <span class="tt">D</span> e.g. <span class="tt">D42_Log</span></li>
-<li><span class="tt">Eval</span> : Contains evaluation projects for module development, names start with <span class="tt">E</span> e.g. <span class="tt">E42_LogTest</span></li>
-<li><span class="tt">Form</span> : Contains independent <span class="tt">*.ui</span> Qt form file projects, names start with <span class="tt">F</span> e.g. <span class="tt">F24_LogUI</span></li>
-<li><span class="tt">Gear</span> : Contains projects purely made to test/work with hardware, names start with <span class="tt">G</span> e.g. <span class="tt">G21_MCUConnection</span></li>
-<li><span class="tt">Test</span> : Contains small projects just made for testing, names start with <span class="tt">T</span> e.g. <span class="tt">T78_WinMutex</span></li>
+<p><span class="dp-markdown-big-text"><b>Project Scope Folders:</b></span></p>
+<p>The project parent folder defines the scope of a project i.e. why the project is being developed:</p><ul>
+<li><span class="tt">Core</span> : Core projects, combination of all needed modules together.</li>
+<li><span class="tt">Demo</span> : Demonstration projects, usually finalization of a single module.</li>
+<li><span class="tt">Eval</span> : Evaluation/Test projects, for developing a module.</li>
 </ul>
-<p><span class="dp-markdown-big-text"><b>Other Folders:</b></span></p>
-<ul>
-<li><span class="tt">Solo</span> : Contains independent files, can have any extension.</li>
-<li><span class="tt">Doxy</span> : Doxygen output.</li>
-<li><span class="tt">Misc</span> : Miscellaneous files/folders.</li>
-<li><span class="tt">Temp</span> : Temporary file/folders/projects.</li>
+<p>The usual scenario is to develop a module in <span class="tt">Eval</span> then once the module is finalized, move it to <span class="tt">Demo</span> and comment it as necessary and insert it in Doxygen documentation, finally add it to the <span class="tt">Core</span> project if needed. The projects in each scope starts with the first letter of that scope appended by the monotonically increasing project number, for example:</p><ul>
+<li><span class="tt">Core</span> : <span class="tt">C12_UniClamp</span></li>
+<li><span class="tt">Demo</span> : <span class="tt">D42_LogSystem</span></li>
+<li><span class="tt">Eval</span> : <span class="tt">E111_PlotTest</span></li>
 </ul>
-<p><span class="dp-markdown-big-text"><b>E: Code Drive Structure:</b></span></p>
-<div class="fragment"><div class="line">E:\</div>
-<div class="line">├── Core</div>
-<div class="line">├── Demo</div>
-<div class="line">├── Eval</div>
-<div class="line">├── Form</div>
-<div class="line">├── Gear</div>
-<div class="line">├── Solo</div>
-<div class="line">└── Test</div>
-</div><!-- fragment --><p><span class="dp-markdown-big-text"><b>F: Work Drive Structure:</b></span></p>
-<div class="fragment"><div class="line">F:\</div>
-<div class="line">├── Core</div>
-<div class="line">├── Demo</div>
-<div class="line">├── Doxy</div>
-<div class="line">│   └── Main</div>
-<div class="line">├── Eval</div>
-<div class="line">├── Gear</div>
-<div class="line">├── Misc</div>
-<div class="line">│   ├── RS_Caches</div>
-<div class="line">│   ├── VS_Bins</div>
-<div class="line">│   ├── VS_Caches</div>
-<div class="line">│   └── VS_Objs</div>
-<div class="line">└── Test</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dp_dh_system_setup__installations"></a>
+<p>Both <span class="tt">F:</span> and <span class="tt">E:</span> drives contains these folders. The main project resides in <span class="tt">F:</span> drive while the files from <span class="tt">F:</span> to <span class="tt">E:</span> are copied automatically on save using <a class="el" href="../../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__copy_project_code_on_save" title="Copy Project Code on Save">Copy Project Code on Save</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_system_setup__installations"></a>
 Installations</h1>
 <ul>
 <li><b>Required:</b><ul>

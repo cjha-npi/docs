@@ -158,12 +158,12 @@ Browsing Database Location</h1>
 <li><b>VS 2022:</b> <span class="tt">Tools &gt; Options... &gt; Text Editor &gt; C/C++ &gt; Advanced &gt; Browsing Database Fallback</span><ul>
 <li>Always Use Fallback Location: <span class="tt">True</span></li>
 <li>Do Not Warn If Fallback Location Used: <span class="tt">True</span></li>
-<li>Fallback Location: <span class="tt">F:\Misc\VS_Caches</span> <div class="dp-markdown-list-gap"></div></li>
+<li>Fallback Location: <span class="tt">G:\VS_Caches</span> <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
 <li><b>VS 2026:</b> <span class="tt">Tools &gt; Options... &gt; Languages &gt; C/C++ &gt; Intellisense &gt; Browsing &amp; navigation &gt; Location</span><ul>
 <li>Always use the specified custom location for the browsing database: <span class="tt">Enabled</span></li>
-<li>Custom location for browsing database files: <span class="tt">F:\Misc\VS_Caches</span></li>
+<li>Custom location for browsing database files: <span class="tt">G:\VS_Caches</span></li>
 </ul>
 </li>
 </ul>
@@ -172,30 +172,54 @@ Browsing Database Location</h1>
 <li>The option <span class="tt">Do Not Warn If Fallback Location Used</span> is not available in VS 2026. Instead, when the custom location is used for the first time, a popup appears with a <span class="tt">Do not prompt again</span> checkbox. Enable this checkbox to prevent the popup from appearing again. The same popup is also available in VS 2022.</li>
 </ul>
 </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects the parent folder of <span class="tt">VS_Caches</span> to exist. For example, if the cache location is <span class="tt">F:\Misc\VS_Caches</span>, then <span class="tt">F:\Misc</span> must already exist. Visual Studio can recreate the <span class="tt">VS_Caches</span> folder itself, but it does not create the missing parent folder. If the parent folder is missing, the browsing database and IntelliSense may stop working.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects the parent folder of <span class="tt">VS_Caches</span> to exist. For example, if the cache location is <span class="tt">G:\Bla\VS_Caches</span>, then <span class="tt">G:\Bla</span> must already exist. Visual Studio can recreate the <span class="tt">VS_Caches</span> folder itself, but it does not create the missing parent folder. If the parent folder is missing, the browsing database and IntelliSense may stop working.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__custom_toolbar"></a>
+Visual Studio Custom Toolbar</h1>
+<ul>
+<li>Right-click on toolbar and select <span class="tt">Customize...</span></li>
+<li>Under <span class="tt">Toolbars</span> tab, click <span class="tt">New...</span> and create a new toolbar, give it a name <span class="tt">Custom_Toolbar</span>, click <span class="tt">OK</span></li>
+<li>Change its <span class="tt">Location</span> from <span class="tt">Top</span> to <span class="tt">Left</span>, so that it appears vertically on left.</li>
+<li>Under <span class="tt">Commands</span> tab, select <span class="tt">Toolbar</span> from the radio box and then select <span class="tt">Custom_Toolbar</span></li>
+<li>Add following commands:<ul>
+<li><span class="tt">Edit &gt; Undo</span></li>
+<li><span class="tt">Edit &gt; Redo</span></li>
+<li><span class="tt">Edit &gt; Document Format</span></li>
+<li><span class="tt">Project &gt; Add New Item</span></li>
+<li><span class="tt">Project &gt; Add Existing Item</span></li>
+<li><span class="tt">File &gt; Save All</span></li>
+<li><span class="tt">Debug &gt; Start Debug Target</span> (appears as <span class="tt">Local Windows Debugger</span> after adding)</li>
+<li><span class="tt">Debug &gt; Start Without Debugging</span></li>
+<li><span class="tt">Debug &gt; Stop Debugging</span></li>
+<li><span class="tt">Build &gt; Build Solution</span></li>
+<li><span class="tt">Build &gt; Cancel</span> (cancel's building a solution)</li>
+<li><span class="tt">Build &gt; Clean Solution</span> (has no icon so will appear as text)</li>
+<li><span class="tt">Build &gt; Clean Only Project</span> (has no icon so will appear as text)</li>
+<li><span class="tt">Extensions &gt; ReSharper_ShowOptions</span> (rename to <span class="tt">RS</span>)</li>
+<li><span class="tt">Tools &gt; Options...</span></li>
+</ul>
+</li>
+</ul>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__copy_project_code_on_save"></a>
 Copy Project Code on Save</h1>
-<p>The <span class="tt">Copy_Proj_Code_On_Save</span> Visual Commander extension automatically creates a filtered backup of the Visual Studio project containing a document whenever that document is saved. Visual Studio determines the directory containing the project's <span class="tt">.vcxproj</span> file and passes that directory to:</p>
-<div class="fragment"><div class="line">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</div>
-</div><!-- fragment --><p>The script mirrors the whitelisted project files from <span class="tt">F:</span> to the corresponding path under <span class="tt">E:</span> while preserving the complete directory structure. For example:</p>
-<div class="fragment"><div class="line">F:\Eval\Group\DataSync</div>
-</div><!-- fragment --><p>is copied to:</p>
-<div class="fragment"><div class="line">E:\Eval\Group\DataSync</div>
-</div><!-- fragment --><p>Only manually created project files matching the following whitelist are copied:</p>
-<div class="fragment"><div class="line">*.h</div>
-<div class="line">*.hpp</div>
-<div class="line">*.c</div>
-<div class="line">*.cpp</div>
-<div class="line">*.ui</div>
-<div class="line">*.qrc</div>
-<div class="line">*.md</div>
-<div class="line">*.png</div>
-<div class="line">*.ico</div>
-</div><!-- fragment --><p>Generated files, Visual Studio project files, hidden files and directories, and directories such as <span class="tt">x64</span>, <span class="tt">x86</span>, <span class="tt">bin</span>, <span class="tt">obj</span>, <span class="tt">out</span>, and <span class="tt">build</span> are excluded. Directories containing no whitelisted files are not retained in the destination.</p>
-<p>Robocopy copies only new or changed files and removes destination files that no longer exist in the source project. The destination files are temporarily made writable during the copy operation and marked as <b>read-only</b> afterward to reduce the risk of accidental modification.</p>
-<p>Copy results are appended to:</p>
-<div class="fragment"><div class="line">D:\ToolBox\CopyProjCode\CopyProjCode.log</div>
-</div><!-- fragment --><p>Robocopy result codes below <span class="tt">8</span> indicate successful or informational outcomes, while result codes of <span class="tt">8</span> or higher indicate a failure.</p>
+<p>The <span class="tt">Copy_Proj_Code_On_Save</span> Visual Commander extension automatically creates a filtered mirror of the Visual Studio project containing a document whenever that document is saved.</p>
+<p>The extension listens for Visual Studio's <span class="tt">DocumentSaved</span> event, determines the containing <span class="tt">.vcxproj</span> directory, and then:</p>
+<ul>
+<li>Accepts projects only under <span class="tt">F:\Core</span>, <span class="tt">F:\Demo</span>, and <span class="tt">F:\Eval</span>.</li>
+<li>Debounces repeated saves from the same project.</li>
+<li>Queues each project only once.</li>
+<li>Processes queued projects sequentially.</li>
+<li>Uses a named Windows mutex to prevent overlapping copies across Visual Studio instances.</li>
+<li>Launches <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</span> without blocking the Visual Studio interface.</li>
+</ul>
+<p>The <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</span> Robocopy script:</p>
+<ul>
+<li>Executes only for project folders under <span class="tt">F:\Core</span>, <span class="tt">F:\Demo</span>, and <span class="tt">F:\Eval</span>.</li>
+<li>Preserves the complete directory structure, so <span class="tt">F:\Eval\A\B\C\</span> is mirrored to <span class="tt">E:\Eval\A\B\C\</span>.</li>
+<li>Copies only <span class="tt">*.h</span>, <span class="tt">*.hpp</span>, <span class="tt">*.c</span>, <span class="tt">*.cpp</span>, <span class="tt">*.ui</span>, <span class="tt">*.qrc</span>, <span class="tt">*.md</span>, <span class="tt">*.png</span>, and <span class="tt">*.ico</span> files.</li>
+<li>Deletes destination files that no longer exist in the source.</li>
+<li>Deletes empty destination folders.</li>
+<li>Writes the copy log to <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.log</span>.</li>
+</ul>
 <p><span class="dp-markdown-big-text"><b>Installation</b></span></p>
 <p>Save the following script as <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</span>:</p>
 <div class="fragment"><div class="line">@echo off</div>
@@ -205,24 +229,32 @@ Copy Project Code on Save</h1>
 <div class="line">set &quot;destinationRoot=E:\&quot;</div>
 <div class="line">set &quot;source=%~f1&quot;</div>
 <div class="line"> </div>
-<div class="line">if not defined source exit /b 2</div>
-<div class="line">if not exist &quot;%source%\&quot; exit /b 3</div>
-<div class="line">if /I not &quot;%source:~0,3%&quot;==&quot;%sourceRoot%&quot; exit /b 0</div>
-<div class="line">if /I &quot;%source%&quot;==&quot;%sourceRoot%&quot; exit /b 4</div>
-<div class="line"> </div>
-<div class="line">rem Preserve the complete path below F:\.</div>
-<div class="line">rem F:\A\B\C\SomeProj becomes E:\A\B\C\SomeProj.</div>
-<div class="line">set &quot;destination=%destinationRoot%%source:~3%&quot;</div>
-<div class="line"> </div>
 <div class="line">set &quot;logDir=D:\ToolBox\CopyProjCode&quot;</div>
 <div class="line">set &quot;logFile=%logDir%\CopyProjCode.log&quot;</div>
 <div class="line"> </div>
 <div class="line">if not exist &quot;%logDir%\&quot; md &quot;%logDir%&quot; &gt;nul 2&gt;&amp;1</div>
 <div class="line"> </div>
-<div class="line">rem Allow Robocopy to update and delete existing backup files.</div>
-<div class="line">if exist &quot;%destination%\&quot; (</div>
-<div class="line">    attrib -R &quot;%destination%\*&quot; /S &gt;nul 2&gt;&amp;1</div>
-<div class="line">)</div>
+<div class="line">rem Validate the supplied project directory.</div>
+<div class="line">if not defined source exit /b 2</div>
+<div class="line">if not exist &quot;%source%\&quot; exit /b 3</div>
+<div class="line">if /I &quot;%source%&quot;==&quot;%sourceRoot%&quot; exit /b 4</div>
+<div class="line">if /I not &quot;%source:~0,3%&quot;==&quot;%sourceRoot%&quot; exit /b 0</div>
+<div class="line"> </div>
+<div class="line">rem Accept projects only under F:\Core, F:\Demo, or F:\Eval.</div>
+<div class="line">set &quot;sourceWithSlash=%source%\&quot;</div>
+<div class="line"> </div>
+<div class="line">if /I &quot;%sourceWithSlash:~0,8%&quot;==&quot;F:\Core\&quot; goto SourceAllowed</div>
+<div class="line">if /I &quot;%sourceWithSlash:~0,8%&quot;==&quot;F:\Demo\&quot; goto SourceAllowed</div>
+<div class="line">if /I &quot;%sourceWithSlash:~0,8%&quot;==&quot;F:\Eval\&quot; goto SourceAllowed</div>
+<div class="line"> </div>
+<div class="line">exit /b 0</div>
+<div class="line"> </div>
+<div class="line">:SourceAllowed</div>
+<div class="line"> </div>
+<div class="line">rem Preserve the complete path below F:\.</div>
+<div class="line">rem Example:</div>
+<div class="line">rem F:\Core\A\SomeProj becomes E:\Core\A\SomeProj.</div>
+<div class="line">set &quot;destination=%destinationRoot%%source:~3%&quot;</div>
 <div class="line"> </div>
 <div class="line">robocopy &quot;%source%&quot; &quot;%destination%&quot; ^</div>
 <div class="line">    *.h *.hpp *.c *.cpp *.ui *.qrc *.md *.png *.ico ^</div>
@@ -233,23 +265,20 @@ Copy Project Code on Save</h1>
 <div class="line"> </div>
 <div class="line">set &quot;result=%errorlevel%&quot;</div>
 <div class="line"> </div>
-<div class="line">rem Remove directories that became empty after filtering or deletion.</div>
+<div class="line">rem Remove destination directories that became empty after filtering,</div>
+<div class="line">rem source deletion, or source directory removal.</div>
 <div class="line">if exist &quot;%destination%\&quot; (</div>
 <div class="line">    for /F &quot;delims=&quot; %%D in (</div>
 <div class="line">        &#39;dir &quot;%destination%&quot; /AD /B /S 2^&gt;nul ^| sort /R&#39;</div>
 <div class="line">    ) do rd &quot;%%D&quot; 2&gt;nul</div>
 <div class="line"> </div>
+<div class="line">    rem Remove the project destination itself if it is now empty.</div>
 <div class="line">    rd &quot;%destination%&quot; 2&gt;nul</div>
-<div class="line">)</div>
-<div class="line"> </div>
-<div class="line">rem Protect all copied backup files from accidental modification.</div>
-<div class="line">if exist &quot;%destination%\&quot; (</div>
-<div class="line">    attrib +R &quot;%destination%\*&quot; /S &gt;nul 2&gt;&amp;1</div>
 <div class="line">)</div>
 <div class="line"> </div>
 <div class="line">&gt;&gt;&quot;%logFile%&quot; echo [%date% %time%] Result %result%: &quot;%source%&quot; to &quot;%destination%&quot;</div>
 <div class="line"> </div>
-<div class="line">rem Robocopy return codes below 8 are successful or informational.</div>
+<div class="line">rem Robocopy return codes from 0 through 7 are successful or informational.</div>
 <div class="line">if %result% GEQ 8 exit /b %result%</div>
 <div class="line"> </div>
 <div class="line">exit /b 0</div>
@@ -263,17 +292,43 @@ Copy Project Code on Save</h1>
 <div class="line">        events = DTE.Events;</div>
 <div class="line">        documentEvents = events.DocumentEvents;</div>
 <div class="line">        documentEvents.DocumentSaved += OnDocumentSaved;</div>
+<div class="line"> </div>
+<div class="line">        lock(syncRoot)</div>
+<div class="line">        {</div>
+<div class="line">            stopping = <span class="keyword">false</span>;</div>
+<div class="line">            pendingProjects.Clear();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        workerThread = <span class="keyword">new</span> System.Threading.Thread(WorkerLoop);</div>
+<div class="line">        workerThread.IsBackground = <span class="keyword">true</span>;</div>
+<div class="line">        workerThread.Name = <span class="stringliteral">&quot;Copy Project Code&quot;</span>;</div>
+<div class="line">        workerThread.Start();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Close()</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span>(documentEvents != <span class="keyword">null</span>)</div>
 <div class="line">            documentEvents.DocumentSaved -= OnDocumentSaved;</div>
+<div class="line"> </div>
+<div class="line">        lock(syncRoot)</div>
+<div class="line">        {</div>
+<div class="line">            stopping = <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        workEvent.Set();</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Do not hold Visual Studio shutdown indefinitely if Robocopy is active.</span></div>
+<div class="line">        <span class="keywordflow">if</span>(workerThread != <span class="keyword">null</span>)</div>
+<div class="line">            workerThread.Join(2000);</div>
+<div class="line"> </div>
+<div class="line">        documentEvents = <span class="keyword">null</span>;</div>
+<div class="line">        events = <span class="keyword">null</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> OnDocumentSaved(EnvDTE.Document document)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">try</span> {</div>
+<div class="line">        <span class="keywordflow">try</span></div>
+<div class="line">        {</div>
 <div class="line">            EnvDTE.ProjectItem projectItem = document.ProjectItem;</div>
 <div class="line">            <span class="keywordflow">if</span>(projectItem == <span class="keyword">null</span>)</div>
 <div class="line">                <span class="keywordflow">return</span>;</div>
@@ -290,47 +345,227 @@ Copy Project Code on Save</h1>
 <div class="line"> </div>
 <div class="line">            projectDir = System.IO.Path</div>
 <div class="line">                .GetFullPath(projectDir)</div>
-<div class="line">                .TrimEnd(<span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line">                .TrimEnd(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>);</div>
 <div class="line"> </div>
-<div class="line">            <span class="keywordflow">if</span>(!projectDir.StartsWith(</div>
-<div class="line">                sourceRoot,</div>
-<div class="line">                System.StringComparison.OrdinalIgnoreCase))</div>
+<div class="line">            <span class="keywordflow">if</span>(!IsAllowedProjectDirectory(projectDir))</div>
 <div class="line">                <span class="keywordflow">return</span>;</div>
 <div class="line"> </div>
-<div class="line">            <span class="keywordtype">string</span> commandProcessor =</div>
-<div class="line">                System.Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;ComSpec&quot;</span>);</div>
+<div class="line">            lock(syncRoot)</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">if</span>(stopping)</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line"> </div>
-<div class="line">            <span class="keywordflow">if</span>(<span class="keywordtype">string</span>.IsNullOrEmpty(commandProcessor))</div>
-<div class="line">                commandProcessor = <span class="stringliteral">&quot;cmd.exe&quot;</span>;</div>
+<div class="line">                <span class="comment">// Updating the time replaces any earlier pending save for the</span></div>
+<div class="line">                <span class="comment">// same project and restarts that project&#39;s debounce interval.</span></div>
+<div class="line">                pendingProjects[projectDir] = System.DateTime.UtcNow;</div>
+<div class="line">            }</div>
 <div class="line"> </div>
-<div class="line">            System.Diagnostics.ProcessStartInfo startInfo =</div>
-<div class="line">                <span class="keyword">new</span> System.Diagnostics.ProcessStartInfo();</div>
-<div class="line"> </div>
-<div class="line">            startInfo.FileName = commandProcessor;</div>
-<div class="line">            startInfo.Arguments =</div>
-<div class="line">                <span class="stringliteral">&quot;/d /c \&quot;\&quot;&quot;</span> + scriptPath + <span class="stringliteral">&quot;\&quot; \&quot;&quot;</span> + projectDir + <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
-<div class="line">            startInfo.UseShellExecute = <span class="keyword">false</span>;</div>
-<div class="line">            startInfo.CreateNoWindow = <span class="keyword">true</span>;</div>
-<div class="line">            startInfo.WindowStyle =</div>
-<div class="line">                System.Diagnostics.ProcessWindowStyle.Hidden;</div>
-<div class="line"> </div>
-<div class="line">            System.Diagnostics.Process process =</div>
-<div class="line">                System.Diagnostics.Process.Start(startInfo);</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordflow">if</span>(process != <span class="keyword">null</span>)</div>
-<div class="line">                process.Dispose();</div>
+<div class="line">            workEvent.Set();</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span>(System.Exception) {</div>
-<div class="line">            <span class="comment">// Ignore failures to avoid disrupting document saves.</span></div>
+<div class="line">        <span class="keywordflow">catch</span>(System.Exception)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Saving the document must never be disrupted by backup failures.</span></div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> sourceRoot = <span class="stringliteral">@&quot;F:\&quot;</span>;</div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> WorkerLoop()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">string</span> projectDir = <span class="keyword">null</span>;</div>
+<div class="line">            <span class="keywordtype">int</span> waitMilliseconds = System.Threading.Timeout.Infinite;</div>
+<div class="line"> </div>
+<div class="line">            lock(syncRoot)</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">if</span>(stopping)</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">                System.DateTime now = System.DateTime.UtcNow;</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">foreach</span>(</div>
+<div class="line">                    System.Collections.Generic.KeyValuePair&lt;</div>
+<div class="line">                        <span class="keywordtype">string</span>,</div>
+<div class="line">                        System.DateTime&gt; item in pendingProjects)</div>
+<div class="line">                {</div>
+<div class="line">                    <span class="keywordtype">double</span> remaining =</div>
+<div class="line">                        debounceMilliseconds -</div>
+<div class="line">                        (now - item.Value).TotalMilliseconds;</div>
+<div class="line"> </div>
+<div class="line">                    <span class="keywordflow">if</span>(remaining &lt;= 0.0)</div>
+<div class="line">                    {</div>
+<div class="line">                        projectDir = item.Key;</div>
+<div class="line">                        <span class="keywordflow">break</span>;</div>
+<div class="line">                    }</div>
+<div class="line"> </div>
+<div class="line">                    <span class="keywordtype">int</span> candidateWait =</div>
+<div class="line">                        (int)System.Math.Ceiling(remaining);</div>
+<div class="line"> </div>
+<div class="line">                    <span class="keywordflow">if</span>(waitMilliseconds ==</div>
+<div class="line">                           System.Threading.Timeout.Infinite ||</div>
+<div class="line">                       candidateWait &lt; waitMilliseconds)</div>
+<div class="line">                    {</div>
+<div class="line">                        waitMilliseconds = candidateWait;</div>
+<div class="line">                    }</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span>(projectDir != <span class="keyword">null</span>)</div>
+<div class="line">                    pendingProjects.Remove(projectDir);</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span>(projectDir == <span class="keyword">null</span>)</div>
+<div class="line">            {</div>
+<div class="line">                workEvent.WaitOne(waitMilliseconds);</div>
+<div class="line">                <span class="keywordflow">continue</span>;</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">            RunProjectCopy(projectDir);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> RunProjectCopy(<span class="keywordtype">string</span> projectDir)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">try</span></div>
+<div class="line">        {</div>
+<div class="line">            <span class="keyword">using</span>(System.Threading.Mutex copyMutex =</div>
+<div class="line">                <span class="keyword">new</span> System.Threading.Mutex(<span class="keyword">false</span>, copyMutexName))</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordtype">bool</span> ownsMutex = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">try</span></div>
+<div class="line">                {</div>
+<div class="line">                    <span class="comment">// Poll instead of waiting indefinitely so extension</span></div>
+<div class="line">                    <span class="comment">// shutdown can still be noticed.</span></div>
+<div class="line">                    <span class="keywordflow">while</span>(!IsStopping())</div>
+<div class="line">                    {</div>
+<div class="line">                        <span class="keywordflow">try</span></div>
+<div class="line">                        {</div>
+<div class="line">                            ownsMutex =</div>
+<div class="line">                                copyMutex.WaitOne(mutexPollMilliseconds);</div>
+<div class="line">                        }</div>
+<div class="line">                        <span class="keywordflow">catch</span>(System.Threading.AbandonedMutexException)</div>
+<div class="line">                        {</div>
+<div class="line">                            <span class="comment">// The previous owning process terminated. This</span></div>
+<div class="line">                            <span class="comment">// thread now owns the mutex and may continue.</span></div>
+<div class="line">                            ownsMutex = <span class="keyword">true</span>;</div>
+<div class="line">                        }</div>
+<div class="line"> </div>
+<div class="line">                        <span class="keywordflow">if</span>(ownsMutex)</div>
+<div class="line">                            <span class="keywordflow">break</span>;</div>
+<div class="line">                    }</div>
+<div class="line"> </div>
+<div class="line">                    <span class="keywordflow">if</span>(!ownsMutex || IsStopping())</div>
+<div class="line">                        <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">                    RunScript(projectDir);</div>
+<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">finally</span></div>
+<div class="line">                {</div>
+<div class="line">                    <span class="keywordflow">if</span>(ownsMutex)</div>
+<div class="line">                    {</div>
+<div class="line">                        <span class="keywordflow">try</span></div>
+<div class="line">                        {</div>
+<div class="line">                            copyMutex.ReleaseMutex();</div>
+<div class="line">                        }</div>
+<div class="line">                        <span class="keywordflow">catch</span>(System.ApplicationException)</div>
+<div class="line">                        {</div>
+<div class="line">                        }</div>
+<div class="line">                    }</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">catch</span>(System.Exception)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Failures must not terminate the worker or affect Visual Studio.</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RunScript(<span class="keywordtype">string</span> projectDir)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">string</span> commandProcessor =</div>
+<div class="line">            System.Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;ComSpec&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span>(<span class="keywordtype">string</span>.IsNullOrEmpty(commandProcessor))</div>
+<div class="line">            commandProcessor = <span class="stringliteral">&quot;cmd.exe&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">        System.Diagnostics.ProcessStartInfo startInfo =</div>
+<div class="line">            <span class="keyword">new</span> System.Diagnostics.ProcessStartInfo();</div>
+<div class="line"> </div>
+<div class="line">        startInfo.FileName = commandProcessor;</div>
+<div class="line">        startInfo.Arguments =</div>
+<div class="line">            <span class="stringliteral">&quot;/d /s /c \&quot;\&quot;&quot;</span> + scriptPath + <span class="stringliteral">&quot;\&quot; \&quot;&quot;</span> + projectDir + <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
+<div class="line">        startInfo.UseShellExecute = <span class="keyword">false</span>;</div>
+<div class="line">        startInfo.CreateNoWindow = <span class="keyword">true</span>;</div>
+<div class="line">        startInfo.WindowStyle =</div>
+<div class="line">            System.Diagnostics.ProcessWindowStyle.Hidden;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">using</span>(System.Diagnostics.Process process =</div>
+<div class="line">            System.Diagnostics.Process.Start(startInfo))</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span>(process != <span class="keyword">null</span>)</div>
+<div class="line">                process.WaitForExit();</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsAllowedProjectDirectory(<span class="keywordtype">string</span> projectDir)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">string</span> projectDirWithSlash =</div>
+<div class="line">            projectDir.TrimEnd(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>) + <span class="stringliteral">&quot;\\&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> index = 0; index &lt; allowedRoots.Length; ++index)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span>(projectDirWithSlash.StartsWith(</div>
+<div class="line">                allowedRoots[index],</div>
+<div class="line">                System.StringComparison.OrdinalIgnoreCase))</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">bool</span> IsStopping()</div>
+<div class="line">    {</div>
+<div class="line">        lock(syncRoot)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> stopping;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> debounceMilliseconds = 1500;</div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> mutexPollMilliseconds = 250;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> copyMutexName =</div>
+<div class="line">        <span class="stringliteral">@&quot;Local\CJ.CopyProjCode.Robocopy&quot;</span>;</div>
+<div class="line"> </div>
 <div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> scriptPath =</div>
 <div class="line">        <span class="stringliteral">@&quot;D:\ToolBox\CopyProjCode\CopyProjCode.cmd&quot;</span>;</div>
 <div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">string</span>[] allowedRoots =</div>
+<div class="line">        <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line">        {</div>
+<div class="line">            <span class="stringliteral">@&quot;F:\Core\&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">@&quot;F:\Demo\&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">@&quot;F:\Eval\&quot;</span></div>
+<div class="line">        };</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> readonly <span class="keywordtype">object</span> syncRoot = <span class="keyword">new</span> object();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> readonly System.Collections.Generic.Dictionary&lt;</div>
+<div class="line">        string,</div>
+<div class="line">        System.DateTime&gt; pendingProjects =</div>
+<div class="line">        <span class="keyword">new</span> System.Collections.Generic.Dictionary&lt;</div>
+<div class="line">            string,</div>
+<div class="line">            System.DateTime&gt;(</div>
+<div class="line">                System.StringComparer.OrdinalIgnoreCase);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> readonly System.Threading.AutoResetEvent workEvent =</div>
+<div class="line">        <span class="keyword">new</span> System.Threading.AutoResetEvent(<span class="keyword">false</span>);</div>
+<div class="line"> </div>
 <div class="line">    <span class="keyword">private</span> EnvDTE.Events events;</div>
 <div class="line">    <span class="keyword">private</span> EnvDTE.DocumentEvents documentEvents;</div>
+<div class="line">    <span class="keyword">private</span> System.Threading.Thread workerThread;</div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">bool</span> stopping;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Click <span class="tt">Save</span>, then click <span class="tt">Compile</span>. Verify that <span class="tt">Compilation status</span> shows <span class="tt">Success</span>, and then click <span class="tt">Install</span>. Restart Visual Studio if necessary.</p>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__bug_sophos_dll"></a>

@@ -147,8 +147,9 @@ var NAVTREEINDEX2 =
 "d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__what_it_does":[3,3,0,1],
 "d7/d3c/dp_dh_vs_setup.html":[3,1,1],
 "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__browsing_database_location":[3,1,1,1],
-"d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll":[3,1,1,3],
-"d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__copy_project_code_on_save":[3,1,1,2],
+"d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll":[3,1,1,4],
+"d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__copy_project_code_on_save":[3,1,1,3],
+"d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__custom_toolbar":[3,1,1,2],
 "d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__useful_extensions":[3,1,1,0],
 "d7/d4d/npi_imp_log_8cpp.html":[8,0,4,0],
 "d7/d4d/npi_imp_log_8cpp.html#a9f918755b601cf4bffca775992e6fb90":[8,0,4,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a608fc64cda1ad2a7c033b9d454ca2ed5":[8,0,3,0,1,0,21,1],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a6df3eff6860870e5ee56b0cefb957cc8":[6,0,0,10,18],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a6df3eff6860870e5ee56b0cefb957cc8":[7,0,0,4,18],
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a705367302ce1bbdbf85b5a65195613c9":[6,0,0,10,1,6],
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a705367302ce1bbdbf85b5a65195613c9":[7,0,0,4,1,6]
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a705367302ce1bbdbf85b5a65195613c9":[6,0,0,10,1,6]
 };

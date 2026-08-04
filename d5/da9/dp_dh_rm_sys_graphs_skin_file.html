@@ -300,8 +300,8 @@ $(function(){initNavTree('d5/da9/dp_dh_rm_sys_graphs_skin_file.html','../../',''
 <div class="line">Lite_RAMLine=0,0,0,100</div>
 <div class="line"> </div>
 <div class="line">; CPU core bar fill color.</div>
-<div class="line">Dark_CPUBar=0,120,120,255</div>
-<div class="line">Lite_CPUBar=0,180,180,255</div>
+<div class="line">Dark_CPUBar=0,100,200,255</div>
+<div class="line">Lite_CPUBar=0,150,250,255</div>
 <div class="line"> </div>
 <div class="line">; CPU core bar background color.</div>
 <div class="line">Dark_CPUBarBase=40,40,40,180</div>
@@ -326,10 +326,6 @@ $(function(){initNavTree('d5/da9/dp_dh_rm_sys_graphs_skin_file.html','../../',''
 <div class="line">; CPU core averaged-load tick color.</div>
 <div class="line">Dark_CPUCoreAvg=255,255,255,255</div>
 <div class="line">Lite_CPUCoreAvg=0,0,0,255</div>
-<div class="line"> </div>
-<div class="line">; Total CPU averaged-load tick color.</div>
-<div class="line">Dark_CPUTotalAvg=255,255,255,255</div>
-<div class="line">Lite_CPUTotalAvg=0,0,0,255</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -686,7 +682,7 @@ $(function(){initNavTree('d5/da9/dp_dh_rm_sys_graphs_skin_file.html','../../',''
 <div class="line">; Larger gap inserted between CPU core groups.</div>
 <div class="line">[BigGap]</div>
 <div class="line">Measure=Calc</div>
-<div class="line">Formula=(3 * #Gap#)</div>
+<div class="line">Formula=(2 * #Gap#)</div>
 <div class="line">UpdateDivider=-1</div>
 <div class="line">DynamicVariables=1</div>
 <div class="line"> </div>
@@ -1353,13 +1349,13 @@ $(function(){initNavTree('d5/da9/dp_dh_rm_sys_graphs_skin_file.html','../../',''
 <div class="line">[TickWindow_ToolTip]</div>
 <div class="line">Measure=String</div>
 <div class="line">Group=TickWindowMeasures</div>
-<div class="line">String=Tick Window Duration: [TickWindow_Sec:2] s#CRLF#Short Tick = Core Average#CRLF#Long Tick = Total Average</div>
+<div class="line">String=Tick Duration: [TickWindow_Sec:2] s</div>
 <div class="line">UpdateDivider=-1</div>
 <div class="line">DynamicVariables=1</div>
 <div class="line"> </div>
 <div class="line">; Increases the tick averaging window by one skin update step.</div>
 <div class="line">; The stored value is updated immediately so it persists after refresh.</div>
-<div class="line">; NOTE: Disbaled=1 otherwise this executes on load/refresh</div>
+<div class="line">; NOTE: Disabled=1 otherwise this executes on load/refresh</div>
 <div class="line">[TickWindowMs_Inc]</div>
 <div class="line">Measure=Calc</div>
 <div class="line">Formula=Min((Floor(#TickWindowMs_Max# / #SkinUpdateMs#) * #SkinUpdateMs#), (#TickWindowMs# + #SkinUpdateMs#))</div>
@@ -1372,7 +1368,7 @@ $(function(){initNavTree('d5/da9/dp_dh_rm_sys_graphs_skin_file.html','../../',''
 <div class="line"> </div>
 <div class="line">; Decreases the tick averaging window by one skin update step.</div>
 <div class="line">; The stored value is updated immediately so it persists after refresh.</div>
-<div class="line">; NOTE: Disbaled=1 otherwise this executes on load/refresh</div>
+<div class="line">; NOTE: Disabled=1 otherwise this executes on load/refresh</div>
 <div class="line">[TickWindowMs_Dec]</div>
 <div class="line">Measure=Calc</div>
 <div class="line">Formula=Max(#SkinUpdateMs#, (#TickWindowMs# - #SkinUpdateMs#))</div>
@@ -1408,36 +1404,11 @@ $(function(){initNavTree('d5/da9/dp_dh_rm_sys_graphs_skin_file.html','../../',''
 <div class="line">; This file must exist before the skin runs for the first time. It can be</div>
 <div class="line">; empty or contain only comments, but if it is missing, Rainmeter will log an</div>
 <div class="line">; include-file error before the Lua script gets a chance to create it. After the</div>
-<div class="line">; first load, the script can create/update the file and refresh the skin. Excdept</div>
+<div class="line">; first load, the script can create/update the file and refresh the skin. Except</div>
 <div class="line">; for an include-file error in the Rainmeter log, everything will work correctly,</div>
 <div class="line">; even if this file is not present because the Lua script will create the file</div>
 <div class="line">; and call refresh for this skin.</div>
 <div class="line">@Include=#CURRENTPATH#CJ_SysGraphs_CpuBars.inc</div>
-<div class="line"> </div>
-<div class="line">; =============================================================================</div>
-<div class="line">; Total CPU Average Tick</div>
-<div class="line">; =============================================================================</div>
-<div class="line"> </div>
-<div class="line">; Averaged total CPU load used by the long horizontal tick marker.</div>
-<div class="line">[AvgCPU0Load]</div>
-<div class="line">Measure=CPU</div>
-<div class="line">Group=TickWindowMeasures</div>
-<div class="line">Processor=0</div>
-<div class="line">AverageSize=[TickWindow]</div>
-<div class="line">UpdateDivider=1</div>
-<div class="line">DynamicVariables=1</div>
-<div class="line"> </div>
-<div class="line">; Long tick marker showing the averaged total CPU load across the bar section.</div>
-<div class="line">[AvgCPU0Tick]</div>
-<div class="line">Meter=Shape</div>
-<div class="line">Group=BarDependentMeter</div>
-<div class="line">X=([BarSectionX] - [HalfGap])</div>
-<div class="line">Y=(Max(0, Min(([SkinHeight] - 2), ([SkinHeight] - 2 - Round(([SkinHeight] - 2) * ([AvgCPU0Load] / 100))))))</div>
-<div class="line">W=([BarSectionW] + #Gap#)</div>
-<div class="line">H=2</div>
-<div class="line">SolidColor=[##ThemeName#_CPUTotalAvg]</div>
-<div class="line">Hidden=(([BarW] = 0) ? 1 : 0)</div>
-<div class="line">DynamicVariables=1</div>
 <div class="line"> </div>
 <div class="line">; =============================================================================</div>
 <div class="line">; Bar Detail Interaction</div>

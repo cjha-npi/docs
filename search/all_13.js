@@ -93,11 +93,12 @@ var searchData=
   ['stress_90',['Test: Extreme Stress',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_extreme_stress',1,'']]],
   ['strict_91',['STRICT',['../d9/d43/_win_error_text_8hpp.html#a8a7c30a576d5706b6c0821834d01cbbc',1,'STRICT:&#160;WinErrorText.hpp'],['../d0/da7/_log_8cpp.html#a8a7c30a576d5706b6c0821834d01cbbc',1,'STRICT:&#160;Log.cpp'],['../d3/dac/_meta_info_8cpp.html#a8a7c30a576d5706b6c0821834d01cbbc',1,'STRICT:&#160;MetaInfo.cpp'],['../d8/d25/_cross_process_locker_8hpp.html#a8a7c30a576d5706b6c0821834d01cbbc',1,'STRICT:&#160;CrossProcessLocker.hpp'],['../d9/d49/_win_msg_box_exe_8cpp.html#a8a7c30a576d5706b6c0821834d01cbbc',1,'STRICT:&#160;WinMsgBoxExe.cpp'],['../d2/d4f/npi_msg_box_8cpp.html#a8a7c30a576d5706b6c0821834d01cbbc',1,'STRICT:&#160;npiMsgBox.cpp']]],
   ['structure_92',['Structure',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__example_structure',1,'Example Structure'],['../index.html#autotoc_md3',1,'Project Structure'],['../d3/d4c/dp_dh_system_setup.html#dp_dh_system_setup__structure',1,'Structure']]],
-  ['studio_20setup_93',['Visual Studio Setup',['../d7/d3c/dp_dh_vs_setup.html',1,'dp_dh_dir_setups']]],
-  ['suffix_5f_94',['suffix_',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a8a56f91ba31daa7f54a3355e3bf1bc77',1,'anonymous_namespace{Log.cpp}::format::UnitInfo']]],
-  ['switching_95',['Directory Validation and Switching',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__directory_validation_and_switching',1,'']]],
-  ['syntheticlog_96',['syntheticLog',['../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a926d3f4c96d81c126df53add6ff3e041',1,'anonymous_namespace{Log.cpp}::workers']]],
-  ['system_97',['Logging System',['../d8/da3/dp_arch_logging_system.html',1,'dp_arch_dir_architecture']]],
-  ['system_20setup_98',['System Setup',['../d3/d4c/dp_dh_system_setup.html',1,'dp_dh_dir_setups']]],
-  ['system_5fsetup_2emd_99',['System_setup.md',['../d8/d04/_system__setup_8md.html',1,'']]]
+  ['studio_20custom_20toolbar_93',['Visual Studio Custom Toolbar',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__custom_toolbar',1,'']]],
+  ['studio_20setup_94',['Visual Studio Setup',['../d7/d3c/dp_dh_vs_setup.html',1,'dp_dh_dir_setups']]],
+  ['suffix_5f_95',['suffix_',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a8a56f91ba31daa7f54a3355e3bf1bc77',1,'anonymous_namespace{Log.cpp}::format::UnitInfo']]],
+  ['switching_96',['Directory Validation and Switching',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__directory_validation_and_switching',1,'']]],
+  ['syntheticlog_97',['syntheticLog',['../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a926d3f4c96d81c126df53add6ff3e041',1,'anonymous_namespace{Log.cpp}::workers']]],
+  ['system_98',['Logging System',['../d8/da3/dp_arch_logging_system.html',1,'dp_arch_dir_architecture']]],
+  ['system_20setup_99',['System Setup',['../d3/d4c/dp_dh_system_setup.html',1,'dp_dh_dir_setups']]],
+  ['system_5fsetup_2emd_100',['System_setup.md',['../d8/d04/_system__setup_8md.html',1,'']]]
 ];
