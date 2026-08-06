@@ -12,7 +12,7 @@ var dp_dh_dir_dev_hub =
       [ "Automatic Pages", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages", [
         [ "Project Required Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__project_required_page", null ],
         [ "Dev Hub Required Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_required_page", null ],
-        [ "Dev Hub Bugs Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_bugs_page", null ]
+        [ "Dev Hub Bug List Page", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__dev_hub_bugs_page", null ]
       ] ],
       [ "Markdown Tips &amp; Tweaks", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks", [
         [ "Adding Links", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__add_links", null ],
@@ -22,7 +22,8 @@ var dp_dh_dir_dev_hub =
         [ "Force Visual Indent", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent", null ],
         [ "Hide xrefitem Text at Source", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source", null ],
         [ "Add Line Gap When Needed", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__line_gap_when_needed", null ],
-        [ "Big Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text", null ]
+        [ "Big Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text", null ],
+        [ "Medium Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__mid_non_heading_text", null ]
       ] ]
     ] ],
     [ "Setups", "df/d27/dp_dh_dir_setups.html", "df/d27/dp_dh_dir_setups" ],

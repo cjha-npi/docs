@@ -271,9 +271,9 @@ Dev Hub Required Page</h2>
 <div class="fragment"><div class="line">ALIASES += &quot;dh_req=\xrefitem dp_dh_required \&quot;REQUIRED\&quot; \&quot;Required\&quot;&quot;</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Use this tag only for files inside the <span class="tt">Dev Hub</span> branch.</dd></dl>
 <h2 class="doxsection"><a class="anchor" id="dp_dh_dev_hub_overview__automatic_pages__dev_hub_bugs_page"></a>
-Dev Hub Bugs Page</h2>
+Dev Hub Bug List Page</h2>
 <p>This page collects all <span class="tt">Dev Hub</span> related content tagged as <b>bug</b>. When it appears, it is placed under the <a class="el" href="#dp_dh_dev_hub_overview__additional_branches__dev_hub_branch" title="Dev Hub Branch">Dev Hub Branch</a> (the branch is created if needed).</p>
-<div class="fragment"><div class="line">ALIASES += &quot;dh_bug=\xrefitem dp_dh_bugs \&quot;BUG\&quot; \&quot;Bugs List\&quot;&quot;</div>
+<div class="fragment"><div class="line">ALIASES += &quot;dh_bug=\xrefitem dp_dh_bugs \&quot;BUG\&quot; \&quot;Bug List\&quot;&quot;</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Use this tag only for files inside the <span class="tt">Dev Hub</span> branch.</dd></dl>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_dev_hub_overview__markdown_tips_tweaks"></a>
 Markdown Tips &amp; Tweaks</h1>
@@ -372,6 +372,8 @@ Hide xrefitem Text at Source</h2>
 <h2 class="doxsection"><a class="anchor" id="dp_dh_dev_hub_overview__markdown_tips_tweaks__line_gap_when_needed"></a>
 Add Line Gap When Needed</h2>
 <p>Text, especially numbered or bullet lists, may not show any visible gap between two items in the generated output from a Markdown file, no matter how many blank lines are placed between them. Sometimes additional separation is needed to make two items look visually separated. To add a visible gap, use:</p>
+<div class="fragment"><div class="line">&lt;div class=&quot;dp-markdown-list-gap&quot;&gt;&lt;/div&gt;</div>
+</div><!-- fragment --><p> For example:</p>
 <div class="fragment"><div class="line">- Point one</div>
 <div class="line"> </div>
 <div class="line">&lt;div class=&quot;dp-markdown-list-gap&quot;&gt;&lt;/div&gt;</div>
@@ -383,11 +385,24 @@ Add Line Gap When Needed</h2>
 <div class="line">}</div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text"></a>
 Big Non-Heading Texts</h2>
-<p>To have bigger than normal texts in a Markdown file without creating a heading use:</p>
-<div class="fragment"><div class="line">&lt;span class=&quot;dp-markdown-big-text&quot;&gt;Some Text&lt;/span&gt;</div>
-</div><!-- fragment --><p>This wraps the generated text in an HTML <span class="tt">span</span> with the class <span class="tt">dp-markdown-big-text</span>. In <span class="tt">doxy-plus.css</span>, the following rule changes the text appearance:</p>
+<p>To have bigger than normal texts in a Markdown file without creating a heading use (text can have spaces):</p>
+<div class="fragment"><div class="line">&lt;span class=&quot;dp-markdown-big-text&quot;&gt;Text&lt;/span&gt;</div>
+</div><!-- fragment --><p>This makes the text appear as:</p>
+<p><span class="dp-markdown-big-text">Text</span></p>
+<p>The generated text is wrapped in an HTML <span class="tt">span</span> with the class <span class="tt">dp-markdown-big-text</span>. In <span class="tt">doxy-plus.css</span>, the following rule changes the text appearance:</p>
 <div class="fragment"><div class="line">#doc-content &gt; div &gt; div.contents &gt; div.textblock .dp-markdown-big-text {</div>
 <div class="line">  font-size: 1.3em;</div>
+<div class="line">  font-weight: 500;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dp_dh_dev_hub_overview__markdown_tips_tweaks__mid_non_heading_text"></a>
+Medium Non-Heading Texts</h2>
+<p>To have bigger than normal texts but smaller than <a class="el" href="#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text" title="Big Non-Heading Texts">Big Non-Heading Texts</a> in a Markdown file without creating a heading use (text can have spaces):</p>
+<div class="fragment"><div class="line">&lt;span class=&quot;dp-markdown-mid-text&quot;&gt;Text&lt;/span&gt;</div>
+</div><!-- fragment --><p>This makes the text appear as:</p>
+<p><span class="dp-markdown-mid-text">Text</span></p>
+<p>The generated text is wrapped in an HTML <span class="tt">span</span> with the class <span class="tt">dp-markdown-mid-text</span>. In <span class="tt">doxy-plus.css</span>, the following rule changes the text appearance:</p>
+<div class="fragment"><div class="line">#doc-content &gt; div &gt; div.contents &gt; div.textblock .dp-markdown-mid-text {</div>
+<div class="line">  font-size: 1.15em;</div>
 <div class="line">  font-weight: 500;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->

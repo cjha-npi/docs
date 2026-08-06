@@ -2289,7 +2289,7 @@
       const nsName = `<${key}>`;
       for (const node of val) {
         if (node[0] === nsName) {
-          if(node[1]) node[0] = '<anon>';
+          if (node[1]) node[0] = '<anon>';
           else node[0] = '';
         }
         if (!node[0].endsWith('::')) node[0] = `${node[0]}::`;
@@ -2557,7 +2557,7 @@
         vars.htmlData.push([`${key} Classes`, null, val]);
       }
     }
-    else{
+    else {
       theOtherClasses[0] = 'Classes';
     }
 
@@ -4569,8 +4569,41 @@
     // Only run on pages that have doxsection (e.g. Markdown pages) and when page content is available
     if (!vars.pageHasDoxsections || !vars.els.PAGE_CONTENT || !vars.els.PAGE_CONTENT.isConnected) return;
 
-    // Function to attach markdown page nav haeder item correctly
-    function attchPagenavItemClass() {
+    // Removes the leading whitespace from all Markdown page-nav item labels.
+    function removePagenavItemLeadingSpaces() {
+
+      const navLinks = vars.els.PAGE_NAV.querySelectorAll(':scope li > .item > a[href^="#"]');
+
+      for (const navLink of navLinks) {
+        for (const node of [...navLink.childNodes]) {
+
+          // Remove whitespace from the first text node contributing to the label.
+          if (node.nodeType === Node.TEXT_NODE) {
+            const text = node.nodeValue ?? '';
+            const trimmedText = text.replace(/^[\t\n\f\r ]+/, '');
+
+            // Remove a whitespace-only node and continue looking for the label.
+            if (!trimmedText) {
+              node.remove();
+              continue;
+            }
+
+            node.nodeValue = trimmedText;
+            break;
+          }
+
+          // Doxygen places an empty anchor before the page-nav item text.
+          if (node.nodeType === Node.ELEMENT_NODE && node.matches('a.anchor:empty'))
+            continue;
+
+          // Do not alter whitespace occurring after actual visible content.
+          break;
+        }
+      }
+    }
+
+    // Function to attach markdown page nav header item correctly
+    function attachPagenavItemClass() {
 
       // The headings in the main page that have children are already
       // customized with `data-dp-doxsection-has-children="true"` in
@@ -4597,7 +4630,8 @@
     // The page nav does not immediately gets populated with li items on page load and 
     // so waiting for it is necessary.
     if (vars.els.PAGE_NAV && vars.els.PAGE_NAV.isConnected && vars.els.PAGE_NAV.querySelector('li')) {
-      attchPagenavItemClass();
+      removePagenavItemLeadingSpaces();
+      attachPagenavItemClass();
     }
     else if (vars.els.PAGE_NAV && vars.els.PAGE_NAV.isConnected) {
       let pageNavItemMoTimeoutId = null;
@@ -4609,7 +4643,8 @@
         }
 
         if (vars.els.PAGE_NAV.querySelector('li')) {
-          attchPagenavItemClass();
+          removePagenavItemLeadingSpaces();
+          attachPagenavItemClass();
           clearTimeout(pageNavItemMoTimeoutId);
           pageNavItemMo.disconnect();
         }

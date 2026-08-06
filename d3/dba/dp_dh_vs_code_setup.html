@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: System Setup</title>
+<title>Main Project: VS Code Setup</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -108,7 +108,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('d3/d4c/dp_dh_system_setup.html','../../',''); });
+$(function(){initNavTree('d3/dba/dp_dh_vs_code_setup.html','../../',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -134,65 +134,25 @@ $(function(){initNavTree('d3/d4c/dp_dh_system_setup.html','../../',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">System Setup </div></div>
+  <div class="headertitle"><div class="title">VS Code Setup </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="dp_dh_system_setup__structure"></a>
-Structure</h1>
-<p><span class="dp-markdown-mid-text"><b>Drives:</b></span></p>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="dp_dh_vs_code_setup__read_only_file_types"></a>
+Read-Only File Types</h1>
+<p>To make some file types as read-only in VS Code settings add the following in <span class="tt">File: Readonly include</span>: </p><div class="fragment"><div class="line">**/*.c</div>
+<div class="line">**/*.cpp</div>
+<div class="line">**/*.h</div>
+<div class="line">**/*.hpp</div>
+</div><!-- fragment --><p> Here the <span class="tt">**/</span> part means “inside any directory, at any depth.” and is very important.</p>
+<p><span class="dp-markdown-mid-text">Enable/Disable for current file in current VS Code session</span></p>
 <ul>
-<li><span class="tt">C: Windows</span> : Windows drive (min 250 GB)</li>
-<li><span class="tt">D: Docs</span> : Documents, Doxygen files, settings, config, etc. (min 20 GB)</li>
-<li><span class="tt">E: Code</span> : Filtered code files from all projects (min 5 GB)</li>
-<li><span class="tt">F: Work</span> : Main work drive (min 100 GB)</li>
-<li><span class="tt">G: Generated</span> : Drive to hold data generated using Doxygen, VS, etc. i.e. things that can be easily reproduced. (min 100 GB)</li>
-<li><span class="tt">H: History</span> : Drive to hold backups, drivers, etc. in one place (min 50 GB)</li>
+<li>Open the file</li>
+<li>Use <span class="tt">Ctrl + Shift + P</span> or type <span class="tt">&gt;</span> in top-middle search box</li>
+<li>Disable Read-Only Mode: <div class="fragment"><div class="line">Set Active Editor Writeable in Session</div>
+</div><!-- fragment --></li>
+<li>Enable Read-Only Mode: <div class="fragment"><div class="line">Reset Active Editor Readonly in Session</div>
+</div><!-- fragment --> </li>
 </ul>
-<p><span class="dp-markdown-mid-text"><b>Project Scope Folders:</b></span></p>
-<p>The project parent folder defines the scope of a project i.e. why the project is being developed:</p><ul>
-<li><span class="tt">Core</span> : Core projects, combination of all needed modules together.</li>
-<li><span class="tt">Demo</span> : Demonstration projects, usually finalization of a single module.</li>
-<li><span class="tt">Eval</span> : Evaluation/Test projects, for developing a module.</li>
-</ul>
-<p>The usual scenario is to develop a module in <span class="tt">Eval</span> then once the module is finalized, move it to <span class="tt">Demo</span> and comment it as necessary and insert it in Doxygen documentation, finally add it to the <span class="tt">Core</span> project if needed. The projects in each scope starts with the first letter of that scope appended by the monotonically increasing project number, for example:</p><ul>
-<li><span class="tt">Core</span> : <span class="tt">C12_UniClamp</span></li>
-<li><span class="tt">Demo</span> : <span class="tt">D42_LogSystem</span></li>
-<li><span class="tt">Eval</span> : <span class="tt">E111_PlotTest</span></li>
-</ul>
-<p>Both <span class="tt">F:</span> and <span class="tt">E:</span> drives contains these folders. The main project resides in <span class="tt">F:</span> drive while the files from <span class="tt">F:</span> to <span class="tt">E:</span> are copied automatically on save using <a class="el" href="../../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__backup_sol_code_on_save" title="Backup Solution Code on Save">Backup Solution Code on Save</a>.</p>
-<h1 class="doxsection"><a class="anchor" id="dp_dh_system_setup__installations"></a>
-Installations</h1>
-<ul>
-<li><b>Required:</b><ul>
-<li>Google Chrome Browser</li>
-<li>JetBrains Mono Font</li>
-<li>Qt 6.8.3</li>
-<li>JetBrains ReSharper</li>
-<li>PowerToys</li>
-<li>Visual Studio Code</li>
-<li>Git</li>
-<li>GitHub Desktop</li>
-<li>Doxygen 1.16.1</li>
-<li>7-Zip</li>
-<li>Rainmeter</li>
-<li>Graphviz 14.1.5</li>
-<li>Google Drive</li>
-<li>ChatGPT</li>
-<li>Visual Studio Community 2026 <div class="dp-markdown-list-gap"></div></li>
-</ul>
-</li>
-<li><b>Optional:</b><ul>
-<li>Python 3.13.3</li>
-<li>File Pilot File Explorer</li>
-<li>Dorian File Explorer</li>
-<li>Files File Explorer</li>
-<li>WindHawk</li>
-</ul>
-</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="dp_dh_system_setup__change_file_explorer_font"></a>
-Change File Explorer Font</h1>
-<p>I prefer file explorer to have fixed width font, this helps in recognizing different and related folders and files. To do this install <a href="../../windhawk.net">Windhawk</a> then install <span class="tt">Explorer Font Changer</span> mod. Go to the <span class="tt">Settings</span> tab for this mod and change the font. Keep <span class="tt">Glow text</span> disabled. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

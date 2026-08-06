@@ -138,8 +138,8 @@ $(function(){initNavTree('d7/d3c/dp_dh_vs_setup.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This page describes Visual Studio IDE settings that should be configured for a consistent development environment. These settings affect the editor, formatting behavior, extensions, UI preferences, debugging experience, and other user-level Visual Studio behavior.</p>
-<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__useful_extensions"></a>
-Useful Extensions</h1>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__extensions"></a>
+Extensions</h1>
 <ul>
 <li>JetBrains ReSharper</li>
 <li>Productivity Power Tools</li>
@@ -173,8 +173,27 @@ Browsing Database Location</h1>
 </ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Visual Studio expects the parent folder of <span class="tt">VS_Caches</span> to exist. For example, if the cache location is <span class="tt">G:\Bla\VS_Caches</span>, then <span class="tt">G:\Bla</span> must already exist. Visual Studio can recreate the <span class="tt">VS_Caches</span> folder itself, but it does not create the missing parent folder. If the parent folder is missing, the browsing database and IntelliSense may stop working.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__doxygen_related_changes"></a>
+Doxygen Related Changes</h1>
+<ul>
+<li><p class="startli"><b>Add Details to Quick Info Tooltips:</b></p>
+<div class="fragment"><div class="line">Tools &gt; Languages &gt; C/C++ &gt; Intellisense &gt; Quick Info</div>
+</div><!-- fragment --><p> Here under <span class="tt">Doxygen tags to display on Quick Info tooltips</span> add</p><ul>
+<li>details</li>
+<li>warning</li>
+</ul>
+<p class="startli">After this the Quick Info tooltip will contains these 2 as well. </p><div class="dp-markdown-list-gap"></div></li>
+<li><p class="startli"><b>Disable Automatic Doxygen Comment Generation:</b></p>
+<p class="startli">By default as soon as you type <span class="tt">///</span> (or other Doxygen comment style), Visual Studio will automatically create: </p><div class="fragment"><div class="line">/// @brief </div>
+<div class="line">/// @tparam Len </div>
+<div class="line">/// @param txt </div>
+<div class="line">/// @return</div>
+</div><!-- fragment --><p> This can be annoying sometimes. Disable this by going to </p><div class="fragment"><div class="line">Tools &gt; Languages &gt; C/C++ &gt; Code Style &gt; General</div>
+</div><!-- fragment --><p> Here set <span class="tt">Generated documentation comments style</span> to <span class="tt">None</span></p>
+</li>
+</ul>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__custom_toolbar"></a>
-Visual Studio Custom Toolbar</h1>
+Custom Toolbar</h1>
 <ul>
 <li>Right-click on toolbar and select <span class="tt">Customize...</span></li>
 <li>Under <span class="tt">Toolbars</span> tab, click <span class="tt">New...</span> and create a new toolbar, give it a name <span class="tt">Custom_Toolbar</span>, click <span class="tt">OK</span></li>
@@ -186,42 +205,164 @@ Visual Studio Custom Toolbar</h1>
 <li><span class="tt">Edit &gt; Document Format</span></li>
 <li><span class="tt">Project &gt; Add New Item</span></li>
 <li><span class="tt">Project &gt; Add Existing Item</span></li>
+<li><span class="tt">File &gt; Save</span></li>
 <li><span class="tt">File &gt; Save All</span></li>
-<li><span class="tt">Debug &gt; Start Debug Target</span> (appears as <span class="tt">Local Windows Debugger</span> after adding)</li>
+<li><span class="tt">Debug &gt; Start Debug Target</span><ul>
+<li>appears as <span class="tt">Local Windows Debugger</span> after adding</li>
+</ul>
+</li>
 <li><span class="tt">Debug &gt; Start Without Debugging</span></li>
 <li><span class="tt">Debug &gt; Stop Debugging</span></li>
 <li><span class="tt">Build &gt; Build Solution</span></li>
-<li><span class="tt">Build &gt; Cancel</span> (cancel's building a solution)</li>
-<li><span class="tt">Build &gt; Clean Solution</span> (has no icon so will appear as text)</li>
-<li><span class="tt">Build &gt; Clean Only Project</span> (has no icon so will appear as text)</li>
-<li><span class="tt">Extensions &gt; ReSharper_ShowOptions</span> (rename to <span class="tt">RS</span>)</li>
+<li><span class="tt">Build &gt; Cancel</span><ul>
+<li>Cancel's building a solution</li>
+</ul>
+</li>
+<li><span class="tt">Build &gt; Clean Solution</span><ul>
+<li>Has no icon so will appear as text</li>
+<li>Rename to <span class="tt">Clean Sol</span></li>
+</ul>
+</li>
+<li><span class="tt">Build &gt; Clean Only Project</span><ul>
+<li>Has no icon so will appear as text with project name</li>
+<li><b>DO NOT RENAME</b>, otherwise project name will not be shown</li>
+</ul>
+</li>
+<li><span class="tt">Extensions &gt; ReSharper_ShowOptions</span><ul>
+<li>Has no icon so will appear as text</li>
+<li>Rename to <span class="tt">RS</span></li>
+</ul>
+</li>
 <li><span class="tt">Tools &gt; Options...</span></li>
 </ul>
 </li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__copy_project_code_on_save"></a>
-Copy Project Code on Save</h1>
-<p>The <span class="tt">Copy_Proj_Code_On_Save</span> Visual Commander extension automatically creates a filtered mirror of the Visual Studio project containing a document whenever that document is saved.</p>
-<p>The extension listens for Visual Studio's <span class="tt">DocumentSaved</span> event, determines the containing <span class="tt">.vcxproj</span> directory, and then:</p>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__custom_font"></a>
+Custom Font</h1>
 <ul>
-<li>Accepts projects only under <span class="tt">F:\Core</span>, <span class="tt">F:\Demo</span>, and <span class="tt">F:\Eval</span>.</li>
+<li>JetBrains Mono, Size 9:<ul>
+<li>Text Editor</li>
+</ul>
+</li>
+<li>JetBrains Mono Light, Size 9:<ul>
+<li>Environment</li>
+<li>[All Text Tool Windows]</li>
+<li>Editor Tooltip</li>
+<li>Statement Completion</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__naming_style"></a>
+Naming Style</h1>
+<p>Go to </p><div class="fragment"><div class="line">ReSharper Options &gt; Code Editing &gt; C/C++ &gt; Naming Style</div>
+</div><!-- fragment --><p> <b>Create the following styles:</b></p>
+<ul>
+<li><b>Macros:</b><ul>
+<li>Rule Description: <b>MACRO</b></li>
+<li>Element:<ul>
+<li>Macro</li>
+</ul>
+</li>
+<li>Style: <span class="tt">ALL_UPPER</span></li>
+<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Namespaces, Global Functions, Variables, Parameters:</b><ul>
+<li>Rule Description: <b>NS G-Func Var Param</b></li>
+<li>Element:<ul>
+<li>Namespace</li>
+<li>Namespace alias</li>
+<li>Global function</li>
+<li>All Variables</li>
+<li>All Parameters</li>
+</ul>
+</li>
+<li>Style: <span class="tt">lowerCamelCase_underscoreTolerant</span></li>
+<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Types, Enums and Templates:</b><ul>
+<li>Rule Description: <b>Type Enum Template</b></li>
+<li>Element:<ul>
+<li>All Types</li>
+<li>All Enumerators</li>
+<li>All Template parameters</li>
+</ul>
+</li>
+<li>Style: <span class="tt">UpperCamelCase_UnderscoreTolerant</span></li>
+<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Qt Auto-Connect Slots:</b><ul>
+<li>Rule Description: <b>Qt Auto-Connect Slot</b></li>
+<li>Element:<ul>
+<li>Member function</li>
+</ul>
+</li>
+<li>Static: <b>NO</b></li>
+<li>Prefix: <span class="tt">on_</span></li>
+<li>Style: <span class="tt">lowerCamelCase_underscoreTolerant</span></li>
+<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Non-Static Members:</b><ul>
+<li>Rule Description: <b>Non-Static Member</b></li>
+<li>Element:<ul>
+<li>All Fields</li>
+<li>Member function</li>
+</ul>
+</li>
+<li>Static: <b>NO</b></li>
+<li>Suffix: <span class="tt">_</span></li>
+<li>Style: <span class="tt">lowerCamelCase_underscoreTolerant</span></li>
+<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Static Members:</b><ul>
+<li>Rule Description: <b>Static Member</b></li>
+<li>Element:<ul>
+<li>All Fields</li>
+<li>Member function</li>
+</ul>
+</li>
+<li>Static: <b>YES</b></li>
+<li>Suffix: <span class="tt">_</span></li>
+<li>Style: <span class="tt">UpperCamelCase_UnderscoreTolerant</span></li>
+<li>Enable Inspections: YES</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__backup_sol_code_on_save"></a>
+Backup Solution Code on Save</h1>
+<p>The <span class="tt">Backup_Sol_Code_On_Save</span> Visual Commander extension automatically creates a filtered mirror of the Visual Studio solution containing a document whenever that document is saved.</p>
+<p>The extension listens for Visual Studio's <span class="tt">DocumentSaved</span> event, determines the containing solution directory, and then:</p>
+<ul>
+<li>Accepts solutions only under <span class="tt">F:\Core\</span>, <span class="tt">F:\Demo\</span>, and <span class="tt">F:\Eval\</span>.</li>
 <li>Debounces repeated saves from the same project.</li>
 <li>Queues each project only once.</li>
 <li>Processes queued projects sequentially.</li>
 <li>Uses a named Windows mutex to prevent overlapping copies across Visual Studio instances.</li>
-<li>Launches <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</span> without blocking the Visual Studio interface.</li>
+<li>Launches <span class="tt">D:\ToolBox\BackupSolCode\BackupSolCode.cmd</span> without blocking the Visual Studio interface.</li>
 </ul>
-<p>The <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</span> Robocopy script:</p>
+<p>The <span class="tt">D:\ToolBox\BackupSolCode\BackupSolCode.cmd</span> Robocopy script:</p>
 <ul>
-<li>Executes only for project folders under <span class="tt">F:\Core</span>, <span class="tt">F:\Demo</span>, and <span class="tt">F:\Eval</span>.</li>
+<li>Executes only for project folders under <span class="tt">F:\Core\</span>, <span class="tt">F:\Demo\</span>, and <span class="tt">F:\Eval\</span>.</li>
 <li>Preserves the complete directory structure, so <span class="tt">F:\Eval\A\B\C\</span> is mirrored to <span class="tt">E:\Eval\A\B\C\</span>.</li>
-<li>Copies only <span class="tt">*.h</span>, <span class="tt">*.hpp</span>, <span class="tt">*.c</span>, <span class="tt">*.cpp</span>, <span class="tt">*.ui</span>, <span class="tt">*.qrc</span>, <span class="tt">*.md</span>, <span class="tt">*.png</span>, and <span class="tt">*.ico</span> files.</li>
-<li>Deletes destination files that no longer exist in the source.</li>
-<li>Deletes empty destination folders.</li>
-<li>Writes the copy log to <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.log</span>.</li>
+<li>Copies only:<ul>
+<li>Code files: <span class="tt">*.h</span>, <span class="tt">*.hpp</span>, <span class="tt">*.c</span>, and <span class="tt">*.cpp</span></li>
+<li>Image files: <span class="tt">*.png</span>, <span class="tt">*.svg</span>, <span class="tt">*.jpg</span>, and <span class="tt">*.jpeg</span></li>
+<li>Font files: <span class="tt">*.ttf</span> and <span class="tt">*.otf</span></li>
+<li>Other files: <span class="tt">*.ui</span>, <span class="tt">*.qrc</span>, <span class="tt">*.md</span>, <span class="tt">*.ico</span>, <span class="tt">*.rc</span>, and <span class="tt">*.ini</span></li>
 </ul>
+</li>
+<li>Deletes destination files that no longer exist in the source.</li>
+<li>Does not delete <span class="tt">_git</span> folder in destination since it is managed by <a class="el" href="../../d7/d32/dp_dh_git_pre_push_hook.html" title="Git Pre-Push Hook">Git Pre-Push Hook</a>.</li>
+<li>Deletes empty destination folders.</li>
+<li>Writes the copy log to <span class="tt">D:\ToolBox\BackupSolCode\BackupSolCode.log</span>.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This and <a class="el" href="../../d7/d32/dp_dh_git_pre_push_hook.html" title="Git Pre-Push Hook">Git Pre-Push Hook</a> uses the same basic copying filter rules for Robocopy, so a change in one would mean that the other should be changed similarly.</dd></dl>
 <p><span class="dp-markdown-big-text"><b>Installation</b></span></p>
-<p>Save the following script as <span class="tt">D:\ToolBox\CopyProjCode\CopyProjCode.cmd</span>:</p>
+<p>Save the following script as <span class="tt">D:\ToolBox\BackupSolCode\BackupSolCode.cmd</span>:</p>
 <div class="fragment"><div class="line">@echo off</div>
 <div class="line">setlocal EnableExtensions DisableDelayedExpansion</div>
 <div class="line"> </div>
@@ -229,18 +370,25 @@ Copy Project Code on Save</h1>
 <div class="line">set &quot;destinationRoot=E:\&quot;</div>
 <div class="line">set &quot;source=%~f1&quot;</div>
 <div class="line"> </div>
-<div class="line">set &quot;logDir=D:\ToolBox\CopyProjCode&quot;</div>
-<div class="line">set &quot;logFile=%logDir%\CopyProjCode.log&quot;</div>
+<div class="line">set &quot;logDir=D:\ToolBox\BackupSolCode&quot;</div>
+<div class="line">set &quot;logFile=%logDir%\BackupSolCode.log&quot;</div>
+<div class="line">set &quot;oldLogFile=%logDir%\BackupSolCode.old.log&quot;</div>
+<div class="line">set &quot;maxLogSize=20480&quot;</div>
 <div class="line"> </div>
 <div class="line">if not exist &quot;%logDir%\&quot; md &quot;%logDir%&quot; &gt;nul 2&gt;&amp;1</div>
 <div class="line"> </div>
-<div class="line">rem Validate the supplied project directory.</div>
+<div class="line">rem Validate the supplied solution directory.</div>
 <div class="line">if not defined source exit /b 2</div>
 <div class="line">if not exist &quot;%source%\&quot; exit /b 3</div>
 <div class="line">if /I &quot;%source%&quot;==&quot;%sourceRoot%&quot; exit /b 4</div>
 <div class="line">if /I not &quot;%source:~0,3%&quot;==&quot;%sourceRoot%&quot; exit /b 0</div>
 <div class="line"> </div>
-<div class="line">rem Accept projects only under F:\Core, F:\Demo, or F:\Eval.</div>
+<div class="line">rem The source must be below a category root, not the category root itself.</div>
+<div class="line">if /I &quot;%source%&quot;==&quot;F:\Core&quot; exit /b 4</div>
+<div class="line">if /I &quot;%source%&quot;==&quot;F:\Demo&quot; exit /b 4</div>
+<div class="line">if /I &quot;%source%&quot;==&quot;F:\Eval&quot; exit /b 4</div>
+<div class="line"> </div>
+<div class="line">rem Accept solutions only under F:\Core\, F:\Demo\, or F:\Eval\.</div>
 <div class="line">set &quot;sourceWithSlash=%source%\&quot;</div>
 <div class="line"> </div>
 <div class="line">if /I &quot;%sourceWithSlash:~0,8%&quot;==&quot;F:\Core\&quot; goto SourceAllowed</div>
@@ -252,14 +400,15 @@ Copy Project Code on Save</h1>
 <div class="line">:SourceAllowed</div>
 <div class="line"> </div>
 <div class="line">rem Preserve the complete path below F:\.</div>
-<div class="line">rem Example:</div>
-<div class="line">rem F:\Core\A\SomeProj becomes E:\Core\A\SomeProj.</div>
+<div class="line">rem F:\Eval\A\B\Sol becomes E:\Eval\A\B\Sol.</div>
 <div class="line">set &quot;destination=%destinationRoot%%source:~3%&quot;</div>
 <div class="line"> </div>
 <div class="line">robocopy &quot;%source%&quot; &quot;%destination%&quot; ^</div>
 <div class="line">    *.h *.hpp *.c *.cpp *.ui *.qrc *.md *.png *.ico ^</div>
+<div class="line">    *.svg *.jpg *.jpeg *.ttf *.otf *.rc *.ini ^</div>
 <div class="line">    /S /PURGE /R:1 /W:1 /XJ ^</div>
-<div class="line">    /XD &quot;.*&quot; &quot;x64&quot; &quot;x86&quot; &quot;bin&quot; &quot;obj&quot; &quot;out&quot; &quot;build&quot; ^</div>
+<div class="line">    /XD &quot;.*&quot; &quot;_git&quot; &quot;x64&quot; &quot;x86&quot; &quot;bin&quot; &quot;obj&quot; &quot;out&quot; &quot;build&quot; ^</div>
+<div class="line">    &quot;_ReSharper.Caches&quot; &quot;GeneratedFiles&quot; &quot;Debug&quot; &quot;Release&quot; ^</div>
 <div class="line">    /XF &quot;.*&quot; &quot;*.sln&quot; &quot;*.vcxproj&quot; &quot;*.vcxproj.filters&quot; &quot;*.vcxproj.user&quot; ^</div>
 <div class="line">    /NFL /NDL /NJH /NJS /NP &gt;nul</div>
 <div class="line"> </div>
@@ -267,14 +416,22 @@ Copy Project Code on Save</h1>
 <div class="line"> </div>
 <div class="line">rem Remove destination directories that became empty after filtering,</div>
 <div class="line">rem source deletion, or source directory removal.</div>
-<div class="line">if exist &quot;%destination%\&quot; (</div>
-<div class="line">    for /F &quot;delims=&quot; %%D in (</div>
-<div class="line">        &#39;dir &quot;%destination%&quot; /AD /B /S 2^&gt;nul ^| sort /R&#39;</div>
-<div class="line">    ) do rd &quot;%%D&quot; 2&gt;nul</div>
-<div class="line"> </div>
-<div class="line">    rem Remove the project destination itself if it is now empty.</div>
-<div class="line">    rd &quot;%destination%&quot; 2&gt;nul</div>
+<div class="line">rem Do not delete the _git directory because it is maintained by the Git pre-push hook.</div>
+<div class="line">if %result% LSS 8 (</div>
+<div class="line">    if exist &quot;%destination%\&quot; (</div>
+<div class="line">        for /F &quot;delims=&quot; %%D in (</div>
+<div class="line">            &#39;dir &quot;%destination%&quot; /AD /B /S 2^&gt;nul ^| sort /R&#39;</div>
+<div class="line">        ) do (</div>
+<div class="line">            if /I not &quot;%%D&quot;==&quot;%destination%\_git&quot; (</div>
+<div class="line">                echo(%%D| findstr /I /B /C:&quot;%destination%\_git\&quot; &gt;nul</div>
+<div class="line">                if errorlevel 1 rd &quot;%%D&quot; 2&gt;nul</div>
+<div class="line">            )</div>
+<div class="line">        )</div>
+<div class="line">        rd &quot;%destination%&quot; 2&gt;nul</div>
+<div class="line">    )</div>
 <div class="line">)</div>
+<div class="line"> </div>
+<div class="line">call :RotateLog</div>
 <div class="line"> </div>
 <div class="line">&gt;&gt;&quot;%logFile%&quot; echo [%date% %time%] Result %result%: &quot;%source%&quot; to &quot;%destination%&quot;</div>
 <div class="line"> </div>
@@ -282,296 +439,358 @@ Copy Project Code on Save</h1>
 <div class="line">if %result% GEQ 8 exit /b %result%</div>
 <div class="line"> </div>
 <div class="line">exit /b 0</div>
-</div><!-- fragment --><p> Install the <a href="https://marketplace.visualstudio.com/items?itemName=SergeyVlasov.VisualCommander">Visual Commander</a> extension by Sergey Vlasov in Visual Studio. Then open <span class="tt">Extensions &gt; VCmd &gt; Extensions...</span>, click <span class="tt">Add</span>, and create an extension named <span class="tt">Copy_Proj_Code_On_Save</span> using the <span class="tt">C# v4.0</span> language. Paste the following code:</p>
+<div class="line"> </div>
+<div class="line">rem Rotate the current log before writing when it is already at least 20 KiB.</div>
+<div class="line">:RotateLog</div>
+<div class="line"> </div>
+<div class="line">if not exist &quot;%logFile%&quot; exit /b 0</div>
+<div class="line"> </div>
+<div class="line">for %%F in (&quot;%logFile%&quot;) do (</div>
+<div class="line">    if %%~zF LSS %maxLogSize% exit /b 0</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">rem Keep only one previous log file.</div>
+<div class="line">del /Q &quot;%oldLogFile%&quot; &gt;nul 2&gt;&amp;1</div>
+<div class="line">move /Y &quot;%logFile%&quot; &quot;%oldLogFile%&quot; &gt;nul 2&gt;&amp;1</div>
+<div class="line"> </div>
+<div class="line">exit /b 0</div>
+</div><!-- fragment --><p> Install the <a href="https://marketplace.visualstudio.com/items?itemName=SergeyVlasov.VisualCommander">Visual Commander</a> extension by Sergey Vlasov in Visual Studio. Then open <span class="tt">Extensions &gt; VCmd &gt; Extensions...</span>, click <span class="tt">Add</span>, and create an extension named <span class="tt">Backup_Sol_Code_On_Save</span> using the <span class="tt">C# v4.0</span> language. Paste the following code:</p>
 <div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>E : VisualCommanderExt.IExtension</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> SetSite(</div>
-<div class="line">        EnvDTE80.DTE2 DTE,</div>
-<div class="line">        Microsoft.VisualStudio.Shell.Package package)</div>
+<div class="line">  <span class="keyword">public</span> <span class="keywordtype">void</span> SetSite(EnvDTE80.DTE2 DTE, Microsoft.VisualStudio.Shell.Package package)</div>
+<div class="line">  {</div>
+<div class="line">    dte = DTE;</div>
+<div class="line">    events = DTE.Events;</div>
+<div class="line">    documentEvents = events.DocumentEvents;</div>
+<div class="line">    documentEvents.DocumentSaved += OnDocumentSaved;</div>
+<div class="line"> </div>
+<div class="line">    lock (syncRoot)</div>
 <div class="line">    {</div>
-<div class="line">        events = DTE.Events;</div>
-<div class="line">        documentEvents = events.DocumentEvents;</div>
-<div class="line">        documentEvents.DocumentSaved += OnDocumentSaved;</div>
-<div class="line"> </div>
-<div class="line">        lock(syncRoot)</div>
-<div class="line">        {</div>
-<div class="line">            stopping = <span class="keyword">false</span>;</div>
-<div class="line">            pendingProjects.Clear();</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        workerThread = <span class="keyword">new</span> System.Threading.Thread(WorkerLoop);</div>
-<div class="line">        workerThread.IsBackground = <span class="keyword">true</span>;</div>
-<div class="line">        workerThread.Name = <span class="stringliteral">&quot;Copy Project Code&quot;</span>;</div>
-<div class="line">        workerThread.Start();</div>
+<div class="line">      stopping = <span class="keyword">false</span>;</div>
+<div class="line">      pendingSolutions.Clear();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Close()</div>
+<div class="line">    workerThread = <span class="keyword">new</span> System.Threading.Thread(WorkerLoop);</div>
+<div class="line">    workerThread.IsBackground = <span class="keyword">true</span>;</div>
+<div class="line">    workerThread.Name = <span class="stringliteral">&quot;Backup Solution Code&quot;</span>;</div>
+<div class="line">    workerThread.Start();</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">public</span> <span class="keywordtype">void</span> Close()</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">if</span> (documentEvents != <span class="keyword">null</span>)</div>
+<div class="line">      documentEvents.DocumentSaved -= OnDocumentSaved;</div>
+<div class="line"> </div>
+<div class="line">    lock (syncRoot)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span>(documentEvents != <span class="keyword">null</span>)</div>
-<div class="line">            documentEvents.DocumentSaved -= OnDocumentSaved;</div>
-<div class="line"> </div>
-<div class="line">        lock(syncRoot)</div>
-<div class="line">        {</div>
-<div class="line">            stopping = <span class="keyword">true</span>;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        workEvent.Set();</div>
-<div class="line"> </div>
-<div class="line">        <span class="comment">// Do not hold Visual Studio shutdown indefinitely if Robocopy is active.</span></div>
-<div class="line">        <span class="keywordflow">if</span>(workerThread != <span class="keyword">null</span>)</div>
-<div class="line">            workerThread.Join(2000);</div>
-<div class="line"> </div>
-<div class="line">        documentEvents = <span class="keyword">null</span>;</div>
-<div class="line">        events = <span class="keyword">null</span>;</div>
+<div class="line">      stopping = <span class="keyword">true</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> OnDocumentSaved(EnvDTE.Document document)</div>
+<div class="line">    workEvent.Set();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Do not hold Visual Studio shutdown indefinitely if Robocopy is active.</span></div>
+<div class="line">    <span class="keywordflow">if</span> (workerThread != <span class="keyword">null</span>)</div>
+<div class="line">      workerThread.Join(2000);</div>
+<div class="line"> </div>
+<div class="line">    workerThread = <span class="keyword">null</span>;</div>
+<div class="line">    documentEvents = <span class="keyword">null</span>;</div>
+<div class="line">    events = <span class="keyword">null</span>;</div>
+<div class="line">    dte = <span class="keyword">null</span>;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">private</span> <span class="keywordtype">void</span> OnDocumentSaved(EnvDTE.Document document)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">try</span></div>
 <div class="line">    {</div>
+<div class="line">      <span class="keywordflow">if</span> (document == <span class="keyword">null</span> ||</div>
+<div class="line">         <span class="keywordtype">string</span>.IsNullOrEmpty(document.FullName) ||</div>
+<div class="line">         dte == <span class="keyword">null</span> ||</div>
+<div class="line">         dte.Solution == <span class="keyword">null</span> ||</div>
+<div class="line">         <span class="keywordtype">string</span>.IsNullOrEmpty(dte.Solution.FullName))</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordtype">string</span> solutionDir =</div>
+<div class="line">          System.IO.Path.GetDirectoryName(dte.Solution.FullName);</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(solutionDir))</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">      solutionDir = System.IO.Path</div>
+<div class="line">          .GetFullPath(solutionDir)</div>
+<div class="line">          .TrimEnd(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">if</span> (!IsAllowedSolutionDirectory(solutionDir))</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordtype">string</span> documentPath = System.IO.Path</div>
+<div class="line">          .GetFullPath(document.FullName);</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// Ignore documents located outside the current solution directory.</span></div>
+<div class="line">      <span class="comment">// This prevents saving an unrelated external file from triggering</span></div>
+<div class="line">      <span class="comment">// a copy of the currently open solution.</span></div>
+<div class="line">      <span class="keywordflow">if</span> (!IsPathInsideDirectory(documentPath, solutionDir))</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">      lock (syncRoot)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keywordflow">if</span> (stopping)</div>
+<div class="line">          <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Updating the time replaces any earlier pending save for the</span></div>
+<div class="line">        <span class="comment">// same solution and restarts that solution&#39;s debounce interval.</span></div>
+<div class="line">        pendingSolutions[solutionDir] =</div>
+<div class="line">            System.DateTime.UtcNow;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      workEvent.Set();</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (System.Exception)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="comment">// Saving the document must never be disrupted by backup failures.</span></div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">private</span> <span class="keywordtype">void</span> WorkerLoop()</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keywordtype">string</span> solutionDir = <span class="keyword">null</span>;</div>
+<div class="line">      <span class="keywordtype">int</span> waitMilliseconds =</div>
+<div class="line">          System.Threading.Timeout.Infinite;</div>
+<div class="line"> </div>
+<div class="line">      lock (syncRoot)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keywordflow">if</span> (stopping)</div>
+<div class="line">          <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">        System.DateTime now = System.DateTime.UtcNow;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">foreach</span> (</div>
+<div class="line">            System.Collections.Generic.KeyValuePair&lt;</div>
+<div class="line">                <span class="keywordtype">string</span>,</div>
+<div class="line">                System.DateTime&gt; item in pendingSolutions)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="keywordtype">double</span> remaining =</div>
+<div class="line">              debounceMilliseconds -</div>
+<div class="line">              (now - item.Value).TotalMilliseconds;</div>
+<div class="line"> </div>
+<div class="line">          <span class="keywordflow">if</span> (remaining &lt;= 0.0)</div>
+<div class="line">          {</div>
+<div class="line">            solutionDir = item.Key;</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">          }</div>
+<div class="line"> </div>
+<div class="line">          <span class="keywordtype">int</span> candidateWait =</div>
+<div class="line">              (int)System.Math.Ceiling(remaining);</div>
+<div class="line"> </div>
+<div class="line">          <span class="keywordflow">if</span> (waitMilliseconds ==</div>
+<div class="line">                 System.Threading.Timeout.Infinite ||</div>
+<div class="line">             candidateWait &lt; waitMilliseconds)</div>
+<div class="line">          {</div>
+<div class="line">            waitMilliseconds = candidateWait;</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (solutionDir != <span class="keyword">null</span>)</div>
+<div class="line">          pendingSolutions.Remove(solutionDir);</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">if</span> (solutionDir == <span class="keyword">null</span>)</div>
+<div class="line">      {</div>
+<div class="line">        workEvent.WaitOne(waitMilliseconds);</div>
+<div class="line">        <span class="keywordflow">continue</span>;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      RunSolutionCopy(solutionDir);</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">private</span> <span class="keywordtype">void</span> RunSolutionCopy(<span class="keywordtype">string</span> solutionDir)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">      <span class="keyword">using</span> (System.Threading.Mutex copyMutex =</div>
+<div class="line">          <span class="keyword">new</span> System.Threading.Mutex(<span class="keyword">false</span>, copyMutexName))</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keywordtype">bool</span> ownsMutex = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
 <div class="line">        <span class="keywordflow">try</span></div>
 <div class="line">        {</div>
-<div class="line">            EnvDTE.ProjectItem projectItem = document.ProjectItem;</div>
-<div class="line">            <span class="keywordflow">if</span>(projectItem == <span class="keyword">null</span>)</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">            EnvDTE.Project project = projectItem.ContainingProject;</div>
-<div class="line">            <span class="keywordflow">if</span>(project == <span class="keyword">null</span> || <span class="keywordtype">string</span>.IsNullOrEmpty(project.FullName))</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordtype">string</span> projectDir =</div>
-<div class="line">                System.IO.Path.GetDirectoryName(project.FullName);</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordflow">if</span>(<span class="keywordtype">string</span>.IsNullOrEmpty(projectDir))</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">            projectDir = System.IO.Path</div>
-<div class="line">                .GetFullPath(projectDir)</div>
-<div class="line">                .TrimEnd(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordflow">if</span>(!IsAllowedProjectDirectory(projectDir))</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">            lock(syncRoot)</div>
+<div class="line">          <span class="comment">// Poll instead of waiting indefinitely so extension</span></div>
+<div class="line">          <span class="comment">// shutdown can still be noticed.</span></div>
+<div class="line">          <span class="keywordflow">while</span> (!IsStopping())</div>
+<div class="line">          {</div>
+<div class="line">            <span class="keywordflow">try</span></div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">if</span>(stopping)</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">                <span class="comment">// Updating the time replaces any earlier pending save for the</span></div>
-<div class="line">                <span class="comment">// same project and restarts that project&#39;s debounce interval.</span></div>
-<div class="line">                pendingProjects[projectDir] = System.DateTime.UtcNow;</div>
+<div class="line">              ownsMutex =</div>
+<div class="line">                  copyMutex.WaitOne(mutexPollMilliseconds);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">catch</span> (System.Threading.AbandonedMutexException)</div>
+<div class="line">            {</div>
+<div class="line">              <span class="comment">// The previous owning process terminated. This</span></div>
+<div class="line">              <span class="comment">// thread now owns the mutex and may continue.</span></div>
+<div class="line">              ownsMutex = <span class="keyword">true</span>;</div>
 <div class="line">            }</div>
 <div class="line"> </div>
-<div class="line">            workEvent.Set();</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span>(System.Exception)</div>
-<div class="line">        {</div>
-<div class="line">            <span class="comment">// Saving the document must never be disrupted by backup failures.</span></div>
-<div class="line">        }</div>
-<div class="line">    }</div>
+<div class="line">            <span class="keywordflow">if</span> (ownsMutex)</div>
+<div class="line">              <span class="keywordflow">break</span>;</div>
+<div class="line">          }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> WorkerLoop()</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordtype">string</span> projectDir = <span class="keyword">null</span>;</div>
-<div class="line">            <span class="keywordtype">int</span> waitMilliseconds = System.Threading.Timeout.Infinite;</div>
+<div class="line">          <span class="keywordflow">if</span> (!ownsMutex || IsStopping())</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
 <div class="line"> </div>
-<div class="line">            lock(syncRoot)</div>
+<div class="line">          RunScript(solutionDir);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">finally</span></div>
+<div class="line">        {</div>
+<div class="line">          <span class="keywordflow">if</span> (ownsMutex)</div>
+<div class="line">          {</div>
+<div class="line">            <span class="keywordflow">try</span></div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">if</span>(stopping)</div>
-<div class="line">                    <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">                System.DateTime now = System.DateTime.UtcNow;</div>
-<div class="line"> </div>
-<div class="line">                <span class="keywordflow">foreach</span>(</div>
-<div class="line">                    System.Collections.Generic.KeyValuePair&lt;</div>
-<div class="line">                        <span class="keywordtype">string</span>,</div>
-<div class="line">                        System.DateTime&gt; item in pendingProjects)</div>
-<div class="line">                {</div>
-<div class="line">                    <span class="keywordtype">double</span> remaining =</div>
-<div class="line">                        debounceMilliseconds -</div>
-<div class="line">                        (now - item.Value).TotalMilliseconds;</div>
-<div class="line"> </div>
-<div class="line">                    <span class="keywordflow">if</span>(remaining &lt;= 0.0)</div>
-<div class="line">                    {</div>
-<div class="line">                        projectDir = item.Key;</div>
-<div class="line">                        <span class="keywordflow">break</span>;</div>
-<div class="line">                    }</div>
-<div class="line"> </div>
-<div class="line">                    <span class="keywordtype">int</span> candidateWait =</div>
-<div class="line">                        (int)System.Math.Ceiling(remaining);</div>
-<div class="line"> </div>
-<div class="line">                    <span class="keywordflow">if</span>(waitMilliseconds ==</div>
-<div class="line">                           System.Threading.Timeout.Infinite ||</div>
-<div class="line">                       candidateWait &lt; waitMilliseconds)</div>
-<div class="line">                    {</div>
-<div class="line">                        waitMilliseconds = candidateWait;</div>
-<div class="line">                    }</div>
-<div class="line">                }</div>
-<div class="line"> </div>
-<div class="line">                <span class="keywordflow">if</span>(projectDir != <span class="keyword">null</span>)</div>
-<div class="line">                    pendingProjects.Remove(projectDir);</div>
+<div class="line">              copyMutex.ReleaseMutex();</div>
 <div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordflow">if</span>(projectDir == <span class="keyword">null</span>)</div>
+<div class="line">            <span class="keywordflow">catch</span> (System.ApplicationException)</div>
 <div class="line">            {</div>
-<div class="line">                workEvent.WaitOne(waitMilliseconds);</div>
-<div class="line">                <span class="keywordflow">continue</span>;</div>
 <div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            RunProjectCopy(projectDir);</div>
+<div class="line">          }</div>
 <div class="line">        }</div>
+<div class="line">      }</div>
 <div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> RunProjectCopy(<span class="keywordtype">string</span> projectDir)</div>
+<div class="line">    <span class="keywordflow">catch</span> (System.Exception)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">try</span></div>
-<div class="line">        {</div>
-<div class="line">            <span class="keyword">using</span>(System.Threading.Mutex copyMutex =</div>
-<div class="line">                <span class="keyword">new</span> System.Threading.Mutex(<span class="keyword">false</span>, copyMutexName))</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordtype">bool</span> ownsMutex = <span class="keyword">false</span>;</div>
-<div class="line"> </div>
-<div class="line">                <span class="keywordflow">try</span></div>
-<div class="line">                {</div>
-<div class="line">                    <span class="comment">// Poll instead of waiting indefinitely so extension</span></div>
-<div class="line">                    <span class="comment">// shutdown can still be noticed.</span></div>
-<div class="line">                    <span class="keywordflow">while</span>(!IsStopping())</div>
-<div class="line">                    {</div>
-<div class="line">                        <span class="keywordflow">try</span></div>
-<div class="line">                        {</div>
-<div class="line">                            ownsMutex =</div>
-<div class="line">                                copyMutex.WaitOne(mutexPollMilliseconds);</div>
-<div class="line">                        }</div>
-<div class="line">                        <span class="keywordflow">catch</span>(System.Threading.AbandonedMutexException)</div>
-<div class="line">                        {</div>
-<div class="line">                            <span class="comment">// The previous owning process terminated. This</span></div>
-<div class="line">                            <span class="comment">// thread now owns the mutex and may continue.</span></div>
-<div class="line">                            ownsMutex = <span class="keyword">true</span>;</div>
-<div class="line">                        }</div>
-<div class="line"> </div>
-<div class="line">                        <span class="keywordflow">if</span>(ownsMutex)</div>
-<div class="line">                            <span class="keywordflow">break</span>;</div>
-<div class="line">                    }</div>
-<div class="line"> </div>
-<div class="line">                    <span class="keywordflow">if</span>(!ownsMutex || IsStopping())</div>
-<div class="line">                        <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">                    RunScript(projectDir);</div>
-<div class="line">                }</div>
-<div class="line">                <span class="keywordflow">finally</span></div>
-<div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">if</span>(ownsMutex)</div>
-<div class="line">                    {</div>
-<div class="line">                        <span class="keywordflow">try</span></div>
-<div class="line">                        {</div>
-<div class="line">                            copyMutex.ReleaseMutex();</div>
-<div class="line">                        }</div>
-<div class="line">                        <span class="keywordflow">catch</span>(System.ApplicationException)</div>
-<div class="line">                        {</div>
-<div class="line">                        }</div>
-<div class="line">                    }</div>
-<div class="line">                }</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span>(System.Exception)</div>
-<div class="line">        {</div>
-<div class="line">            <span class="comment">// Failures must not terminate the worker or affect Visual Studio.</span></div>
-<div class="line">        }</div>
+<div class="line">      <span class="comment">// Failures must not terminate the worker or affect Visual Studio.</span></div>
 <div class="line">    }</div>
+<div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RunScript(<span class="keywordtype">string</span> projectDir)</div>
+<div class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RunScript(<span class="keywordtype">string</span> solutionDir)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">string</span> commandProcessor =</div>
+<div class="line">        System.Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;ComSpec&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(commandProcessor))</div>
+<div class="line">      commandProcessor = <span class="stringliteral">&quot;cmd.exe&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    System.Diagnostics.ProcessStartInfo startInfo =</div>
+<div class="line">        <span class="keyword">new</span> System.Diagnostics.ProcessStartInfo();</div>
+<div class="line"> </div>
+<div class="line">    startInfo.FileName = commandProcessor;</div>
+<div class="line">    startInfo.Arguments =</div>
+<div class="line">        <span class="stringliteral">&quot;/d /s /c \&quot;\&quot;&quot;</span> +</div>
+<div class="line">        scriptPath +</div>
+<div class="line">        <span class="stringliteral">&quot;\&quot; \&quot;&quot;</span> +</div>
+<div class="line">        solutionDir +</div>
+<div class="line">        <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    startInfo.UseShellExecute = <span class="keyword">false</span>;</div>
+<div class="line">    startInfo.CreateNoWindow = <span class="keyword">true</span>;</div>
+<div class="line">    startInfo.WindowStyle =</div>
+<div class="line">        System.Diagnostics.ProcessWindowStyle.Hidden;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">using</span> (System.Diagnostics.Process process =</div>
+<div class="line">        System.Diagnostics.Process.Start(startInfo))</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordtype">string</span> commandProcessor =</div>
-<div class="line">            System.Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;ComSpec&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">if</span>(<span class="keywordtype">string</span>.IsNullOrEmpty(commandProcessor))</div>
-<div class="line">            commandProcessor = <span class="stringliteral">&quot;cmd.exe&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">        System.Diagnostics.ProcessStartInfo startInfo =</div>
-<div class="line">            <span class="keyword">new</span> System.Diagnostics.ProcessStartInfo();</div>
-<div class="line"> </div>
-<div class="line">        startInfo.FileName = commandProcessor;</div>
-<div class="line">        startInfo.Arguments =</div>
-<div class="line">            <span class="stringliteral">&quot;/d /s /c \&quot;\&quot;&quot;</span> + scriptPath + <span class="stringliteral">&quot;\&quot; \&quot;&quot;</span> + projectDir + <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
-<div class="line">        startInfo.UseShellExecute = <span class="keyword">false</span>;</div>
-<div class="line">        startInfo.CreateNoWindow = <span class="keyword">true</span>;</div>
-<div class="line">        startInfo.WindowStyle =</div>
-<div class="line">            System.Diagnostics.ProcessWindowStyle.Hidden;</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">using</span>(System.Diagnostics.Process process =</div>
-<div class="line">            System.Diagnostics.Process.Start(startInfo))</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">if</span>(process != <span class="keyword">null</span>)</div>
-<div class="line">                process.WaitForExit();</div>
-<div class="line">        }</div>
+<div class="line">      <span class="keywordflow">if</span> (process != <span class="keyword">null</span>)</div>
+<div class="line">        process.WaitForExit();</div>
 <div class="line">    }</div>
+<div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsAllowedProjectDirectory(<span class="keywordtype">string</span> projectDir)</div>
+<div class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsPathInsideDirectory(</div>
+<div class="line">      <span class="keywordtype">string</span> path,</div>
+<div class="line">      <span class="keywordtype">string</span> directory)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">string</span> fullPath = System.IO.Path</div>
+<div class="line">        .GetFullPath(path);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">string</span> directoryWithSlash = System.IO.Path</div>
+<div class="line">        .GetFullPath(directory)</div>
+<div class="line">        .TrimEnd(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>) + <span class="stringliteral">&quot;\\&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> fullPath.StartsWith(</div>
+<div class="line">        directoryWithSlash,</div>
+<div class="line">        System.StringComparison.OrdinalIgnoreCase);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsAllowedSolutionDirectory(<span class="keywordtype">string</span> solutionDir)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">string</span> normalizedSolutionDir =</div>
+<div class="line">        solutionDir.TrimEnd(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">string</span> solutionDirWithSlash =</div>
+<div class="line">        normalizedSolutionDir + <span class="stringliteral">&quot;\\&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> index = 0;</div>
+<div class="line">        index &lt; allowedRoots.Length;</div>
+<div class="line">        ++index)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordtype">string</span> projectDirWithSlash =</div>
-<div class="line">            projectDir.TrimEnd(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>) + <span class="stringliteral">&quot;\\&quot;</span>;</div>
+<div class="line">      <span class="keywordtype">string</span> normalizedRoot =</div>
+<div class="line">          allowedRoots[index].TrimEnd(<span class="charliteral">&#39;\\&#39;</span>, <span class="charliteral">&#39;/&#39;</span>);</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> index = 0; index &lt; allowedRoots.Length; ++index)</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">if</span>(projectDirWithSlash.StartsWith(</div>
-<div class="line">                allowedRoots[index],</div>
-<div class="line">                System.StringComparison.OrdinalIgnoreCase))</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">      <span class="comment">// The solution must be below the category root, not the root itself.</span></div>
+<div class="line">      <span class="keywordflow">if</span> (!normalizedSolutionDir.Equals(</div>
+<div class="line">            normalizedRoot,</div>
+<div class="line">            System.StringComparison.OrdinalIgnoreCase) &amp;&amp;</div>
+<div class="line">        solutionDirWithSlash.StartsWith(</div>
+<div class="line">            allowedRoots[index],</div>
+<div class="line">            System.StringComparison.OrdinalIgnoreCase))</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keywordtype">bool</span> IsStopping()</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">private</span> <span class="keywordtype">bool</span> IsStopping()</div>
+<div class="line">  {</div>
+<div class="line">    lock (syncRoot)</div>
 <div class="line">    {</div>
-<div class="line">        lock(syncRoot)</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> stopping;</div>
-<div class="line">        }</div>
+<div class="line">      <span class="keywordflow">return</span> stopping;</div>
 <div class="line">    }</div>
+<div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> debounceMilliseconds = 1500;</div>
-<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> mutexPollMilliseconds = 250;</div>
+<div class="line">  <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> debounceMilliseconds = 1500;</div>
+<div class="line">  <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> mutexPollMilliseconds = 250;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> copyMutexName =</div>
-<div class="line">        <span class="stringliteral">@&quot;Local\CJ.CopyProjCode.Robocopy&quot;</span>;</div>
+<div class="line">  <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> copyMutexName =</div>
+<div class="line">      <span class="stringliteral">@&quot;Local\CJ.BackupSolutionCode.Robocopy&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> scriptPath =</div>
-<div class="line">        <span class="stringliteral">@&quot;D:\ToolBox\CopyProjCode\CopyProjCode.cmd&quot;</span>;</div>
+<div class="line">  <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> scriptPath =</div>
+<div class="line">      <span class="stringliteral">@&quot;D:\ToolBox\BackupSolCode\BackupSolCode.cmd&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">string</span>[] allowedRoots =</div>
-<div class="line">        <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
-<div class="line">        {</div>
+<div class="line">  <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">string</span>[] allowedRoots =</div>
+<div class="line">      <span class="keyword">new</span> <span class="keywordtype">string</span>[]</div>
+<div class="line">      {</div>
 <div class="line">            <span class="stringliteral">@&quot;F:\Core\&quot;</span>,</div>
 <div class="line">            <span class="stringliteral">@&quot;F:\Demo\&quot;</span>,</div>
 <div class="line">            <span class="stringliteral">@&quot;F:\Eval\&quot;</span></div>
-<div class="line">        };</div>
+<div class="line">      };</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> readonly <span class="keywordtype">object</span> syncRoot = <span class="keyword">new</span> object();</div>
+<div class="line">  <span class="keyword">private</span> readonly <span class="keywordtype">object</span> syncRoot = <span class="keyword">new</span> object();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> readonly System.Collections.Generic.Dictionary&lt;</div>
-<div class="line">        string,</div>
-<div class="line">        System.DateTime&gt; pendingProjects =</div>
-<div class="line">        <span class="keyword">new</span> System.Collections.Generic.Dictionary&lt;</div>
-<div class="line">            string,</div>
-<div class="line">            System.DateTime&gt;(</div>
-<div class="line">                System.StringComparer.OrdinalIgnoreCase);</div>
+<div class="line">  <span class="keyword">private</span> readonly System.Collections.Generic.Dictionary&lt;</div>
+<div class="line">      string,</div>
+<div class="line">      System.DateTime&gt; pendingSolutions =</div>
+<div class="line">      <span class="keyword">new</span> System.Collections.Generic.Dictionary&lt;</div>
+<div class="line">          string,</div>
+<div class="line">          System.DateTime&gt;(</div>
+<div class="line">              System.StringComparer.OrdinalIgnoreCase);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> readonly System.Threading.AutoResetEvent workEvent =</div>
-<div class="line">        <span class="keyword">new</span> System.Threading.AutoResetEvent(<span class="keyword">false</span>);</div>
+<div class="line">  <span class="keyword">private</span> readonly System.Threading.AutoResetEvent workEvent =</div>
+<div class="line">      <span class="keyword">new</span> System.Threading.AutoResetEvent(<span class="keyword">false</span>);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">private</span> EnvDTE.Events events;</div>
-<div class="line">    <span class="keyword">private</span> EnvDTE.DocumentEvents documentEvents;</div>
-<div class="line">    <span class="keyword">private</span> System.Threading.Thread workerThread;</div>
-<div class="line">    <span class="keyword">private</span> <span class="keywordtype">bool</span> stopping;</div>
+<div class="line">  <span class="keyword">private</span> EnvDTE80.DTE2 dte;</div>
+<div class="line">  <span class="keyword">private</span> EnvDTE.Events events;</div>
+<div class="line">  <span class="keyword">private</span> EnvDTE.DocumentEvents documentEvents;</div>
+<div class="line">  <span class="keyword">private</span> System.Threading.Thread workerThread;</div>
+<div class="line">  <span class="keyword">private</span> <span class="keywordtype">bool</span> stopping;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Click <span class="tt">Save</span>, then click <span class="tt">Compile</span>. Verify that <span class="tt">Compilation status</span> shows <span class="tt">Success</span>, and then click <span class="tt">Install</span>. Restart Visual Studio if necessary.</p>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__bug_sophos_dll"></a>
 BUG: Sophos DLL</h1>
 <p> <div class="dp-hidden-xrefitem"> </p>
-<dl class="dp_dh_bugs"><dt><b><a class="el" href="../../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000002">BUG</a></b></dt><dd><a class="el" href="#dp_dh_vs_setup__bug_sophos_dll" title="BUG: Sophos DLL">std::system_error due to Sophos Endpoint Agent</a></dd></dl>
+<dl class="dp_dh_bugs"><dt><b><a class="el" href="../../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000003">BUG</a></b></dt><dd><a class="el" href="#dp_dh_vs_setup__bug_sophos_dll" title="BUG: Sophos DLL">Visual Studio : std::system_error due to Sophos Endpoint Agent</a></dd></dl>
 <p> </div> </p>
 <p>The <span class="tt">Sophos Endpoint Agent</span> may inject <span class="tt">SophosED.dll</span> into a process started under the Visual Studio debugger. In the observed case, <span class="tt">SophosED.dll</span> throws and catches <span class="tt">std::system_error</span> internally. Visual Studio reports this as a first-chance exception, so the Debug Output window may show messages similar to this:</p>
 <div class="fragment"><div class="line">Exception thrown at 0x00007FFFB5691B6A in &lt;project name&gt;.exe: Microsoft C++ exception: std::system_error at memory location 0x000000F4F98FE950.</div>

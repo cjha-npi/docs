@@ -6,6 +6,5 @@ var searchData=
   ['unusableindex_5f_3',['UnusableIndex_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a9448c053ef924ee5710672b5081db811',1,'anonymous_namespace{Log.cpp}::CategoryCache::UnusableIndex_'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a92a2f3f68ff31ec33b7c3c3df0d92099',1,'anonymous_namespace{Log.cpp}::FileLineCache::UnusableIndex_'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#ac5438a8df38618923d1606ac132fa676',1,'anonymous_namespace{Log.cpp}::FunctionCache::UnusableIndex_']]],
   ['usage_20rules_4',['Thread Safety and Usage Rules',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__thread_safety_and_usage_rules',1,'']]],
   ['usedirectory_5',['useDirectory',['../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a21d28d4dc1e0f827575b17f576af195a',1,'anonymous_namespace{Log.cpp}::control']]],
-  ['useful_20extensions_6',['Useful Extensions',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__useful_extensions',1,'']]],
-  ['using_20imagemagick_7',['Create ICO Icons Using ImageMagick',['../d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick',1,'']]]
+  ['using_20imagemagick_6',['Create ICO Icons Using ImageMagick',['../d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick',1,'']]]
 ];

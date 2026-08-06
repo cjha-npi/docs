@@ -29,7 +29,7 @@ var NAVTREE =
     [ "Architecture", "db/d8d/dp_arch_dir_architecture.html", "db/d8d/dp_arch_dir_architecture" ],
     [ "Dependencies", "d2/d46/dp_dep_dir_dependencies.html", "d2/d46/dp_dep_dir_dependencies" ],
     [ "Dev Hub", "d3/dfe/dp_dh_dir_dev_hub.html", "d3/dfe/dp_dh_dir_dev_hub" ],
-    [ "Bugs List", "dc/d96/dp_dh_bugs.html", null ],
+    [ "Bug List", "dc/d96/dp_dh_bugs.html", null ],
     [ "Required", "d5/d96/dp_dh_required.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -67,10 +67,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a10ba24b7f22ae19dfa063856e4225c14",
-"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a724008c222b14420c93431227507ff61",
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a705367302ce1bbdbf85b5a65195613c9",
-"da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a9bb91ef33ca327b133086ab06cd2ef8e",
-"de/d5c/classanonymous__namespace_02_stage_window_8cpp_03_1_1_opacity_guard.html#a5ba4263ca610b2097ecc2e2f44e0e76a"
+"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a6e6815cb1b8aac3f52e05a521c038877",
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a760d6f3c0180e7ab893e0978b435d944",
+"da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#aa1bf29984d2d8e3f9f17526085114ac5",
+"de/d5c/classanonymous__namespace_02_stage_window_8cpp_03_1_1_opacity_guard.html#a7a9406b69084db547df9f810f6c61667"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

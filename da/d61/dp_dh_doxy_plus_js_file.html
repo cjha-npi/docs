@@ -2429,7 +2429,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">      const nsName = `&lt;${key}&gt;`;</div>
 <div class="line">      for (const node of val) {</div>
 <div class="line">        if (node[0] === nsName) {</div>
-<div class="line">          if(node[1]) node[0] = &#39;&lt;anon&gt;&#39;;</div>
+<div class="line">          if (node[1]) node[0] = &#39;&lt;anon&gt;&#39;;</div>
 <div class="line">          else node[0] = &#39;&#39;;</div>
 <div class="line">        }</div>
 <div class="line">        if (!node[0].endsWith(&#39;::&#39;)) node[0] = `${node[0]}::`;</div>
@@ -2697,7 +2697,7 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">        vars.htmlData.push([`${key} Classes`, null, val]);</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
-<div class="line">    else{</div>
+<div class="line">    else {</div>
 <div class="line">      theOtherClasses[0] = &#39;Classes&#39;;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -4709,8 +4709,41 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    // Only run on pages that have doxsection (e.g. Markdown pages) and when page content is available</div>
 <div class="line">    if (!vars.pageHasDoxsections || !vars.els.PAGE_CONTENT || !vars.els.PAGE_CONTENT.isConnected) return;</div>
 <div class="line"> </div>
-<div class="line">    // Function to attach markdown page nav haeder item correctly</div>
-<div class="line">    function attchPagenavItemClass() {</div>
+<div class="line">    // Removes the leading whitespace from all Markdown page-nav item labels.</div>
+<div class="line">    function removePagenavItemLeadingSpaces() {</div>
+<div class="line"> </div>
+<div class="line">      const navLinks = vars.els.PAGE_NAV.querySelectorAll(&#39;:scope li &gt; .item &gt; a[href^=&quot;#&quot;]&#39;);</div>
+<div class="line"> </div>
+<div class="line">      for (const navLink of navLinks) {</div>
+<div class="line">        for (const node of [...navLink.childNodes]) {</div>
+<div class="line"> </div>
+<div class="line">          // Remove whitespace from the first text node contributing to the label.</div>
+<div class="line">          if (node.nodeType === Node.TEXT_NODE) {</div>
+<div class="line">            const text = node.nodeValue ?? &#39;&#39;;</div>
+<div class="line">            const trimmedText = text.replace(/^[\t\n\f\r ]+/, &#39;&#39;);</div>
+<div class="line"> </div>
+<div class="line">            // Remove a whitespace-only node and continue looking for the label.</div>
+<div class="line">            if (!trimmedText) {</div>
+<div class="line">              node.remove();</div>
+<div class="line">              continue;</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">            node.nodeValue = trimmedText;</div>
+<div class="line">            break;</div>
+<div class="line">          }</div>
+<div class="line"> </div>
+<div class="line">          // Doxygen places an empty anchor before the page-nav item text.</div>
+<div class="line">          if (node.nodeType === Node.ELEMENT_NODE &amp;&amp; node.matches(&#39;a.anchor:empty&#39;))</div>
+<div class="line">            continue;</div>
+<div class="line"> </div>
+<div class="line">          // Do not alter whitespace occurring after actual visible content.</div>
+<div class="line">          break;</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // Function to attach markdown page nav header item correctly</div>
+<div class="line">    function attachPagenavItemClass() {</div>
 <div class="line"> </div>
 <div class="line">      // The headings in the main page that have children are already</div>
 <div class="line">      // customized with `data-dp-doxsection-has-children=&quot;true&quot;` in</div>
@@ -4737,7 +4770,8 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">    // The page nav does not immediately gets populated with li items on page load and </div>
 <div class="line">    // so waiting for it is necessary.</div>
 <div class="line">    if (vars.els.PAGE_NAV &amp;&amp; vars.els.PAGE_NAV.isConnected &amp;&amp; vars.els.PAGE_NAV.querySelector(&#39;li&#39;)) {</div>
-<div class="line">      attchPagenavItemClass();</div>
+<div class="line">      removePagenavItemLeadingSpaces();</div>
+<div class="line">      attachPagenavItemClass();</div>
 <div class="line">    }</div>
 <div class="line">    else if (vars.els.PAGE_NAV &amp;&amp; vars.els.PAGE_NAV.isConnected) {</div>
 <div class="line">      let pageNavItemMoTimeoutId = null;</div>
@@ -4749,7 +4783,8 @@ $(function(){initNavTree('da/d61/dp_dh_doxy_plus_js_file.html','../../',''); });
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        if (vars.els.PAGE_NAV.querySelector(&#39;li&#39;)) {</div>
-<div class="line">          attchPagenavItemClass();</div>
+<div class="line">          removePagenavItemLeadingSpaces();</div>
+<div class="line">          attachPagenavItemClass();</div>
 <div class="line">          clearTimeout(pageNavItemMoTimeoutId);</div>
 <div class="line">          pageNavItemMo.disconnect();</div>
 <div class="line">        }</div>

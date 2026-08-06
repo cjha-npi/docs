@@ -18,7 +18,6 @@ var searchData=
   ['api_15',['Public API',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__public_api',1,'']]],
   ['architecture_16',['Architecture',['../db/d8d/dp_arch_dir_architecture.html',1,'']]],
   ['architecture_20branch_17',['Architecture Branch',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__additional_branches__architecture_branch',1,'']]],
-  ['assumptions_18',['Requirements &amp;amp; assumptions',['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__reqs_assumptions',1,'']]],
-  ['at_20source_19',['Hide xrefitem Text at Source',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source',1,'']]],
-  ['automatic_20pages_20',['Automatic Pages',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages',1,'']]]
+  ['at_20source_18',['Hide xrefitem Text at Source',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source',1,'']]],
+  ['automatic_20pages_19',['Automatic Pages',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages',1,'']]]
 ];

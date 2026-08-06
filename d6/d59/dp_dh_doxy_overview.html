@@ -357,36 +357,49 @@ Debug Helpers</h1>
 Tips &amp; Tweaks</h1>
 <h2 class="doxsection"><a class="anchor" id="dp_dh_doxy_overview__tips_tweaks__dox_ext_setup"></a>
 Dox Extension Setup</h2>
-<p>A Doxygen configuration file does not need to be named <span class="tt">Doxyfile</span>. Doxygen only cares about the file contents, not the file name or extension. For convenience, the configuration file can therefore be saved with a <span class="tt">.dox</span> extension and associated with Doxygen on Windows.</p>
-<p>After the <span class="tt">.dox</span> extension association is configured:</p>
-<ul>
+<p>Doxygen only cares about doxyfile contents, so we save the doxyfile with <span class="tt">.dox</span> extension and associate it with Doxygen so that double clicking it runs the doxyfile. Below are the main advantages of this setup:</p><ul>
 <li>Double-clicking a <span class="tt">.dox</span> file will run Doxygen using that file</li>
 <li>Command Prompt window will automatically open and show details</li>
 <li>Command Prompt window will automatically close after documentation generation is complete</li>
 </ul>
-<p>This makes it extremely easy to run Doxygen generation. Below are the ways to configure, check and remove the <span class="tt">.dox</span> extension association on Windows.</p>
-<p><span class="dp-markdown-big-text">Create Dox Extension Association</span></p>
-<p>Keep the Doxygen configuration file contents unchanged, but save the file with a <span class="tt">.dox</span> extension. Then open Command Prompt as Administrator and run:</p>
-<div class="fragment"><div class="line">assoc .dox=Doxygen.Config</div>
-</div><!-- fragment --><p>This associates all <span class="tt">.dox</span> files with the custom <span class="tt">Doxygen.Config</span> file type.</p>
-<p><span class="dp-markdown-big-text">Configure Dox Extension Execution</span></p>
-<p>In the Administrator level Command Prompt, if <span class="tt">doxygen.exe</span> is available through the PATH environment variable, then use:</p>
-<div class="fragment"><div class="line">ftype Doxygen.Config=&quot;%SystemRoot%\System32\cmd.exe&quot; /d /c &quot;for %%I in (%1) do pushd &quot;&quot;%%~dpI&quot;&quot; &amp;&amp; doxygen &quot;&quot;%%~nxI&quot;&quot;&quot;</div>
-</div><!-- fragment --><p>Else, if <span class="tt">doxygen.exe</span> is not available through PATH, use the full executable path instead. For example, if Doxygen is installed here <span class="tt">C:\Program Files\doxygen\bin\doxygen.exe</span> then use</p>
-<div class="fragment"><div class="line">ftype Doxygen.Config=&quot;%SystemRoot%\System32\cmd.exe&quot; /d /c &quot;for %%I in (%1) do pushd &quot;&quot;%%~dpI&quot;&quot; &amp;&amp; C:\Progra~1\doxygen\bin\doxygen.exe &quot;&quot;%%~nxI&quot;&quot;&quot;</div>
-</div><!-- fragment --><p><span class="dp-markdown-big-text">Check Dox Extension Association</span></p>
-<p>To verify the <span class="tt">.dox</span> association, in an Administrator level Command Prompt, run:</p>
-<div class="fragment"><div class="line">assoc .dox</div>
-<div class="line">ftype Doxygen.Config</div>
-</div><!-- fragment --><p><span class="dp-markdown-big-text">Remove Dox Extension Association</span></p>
-<p>To revert the association, in an Administrator level Command Prompt, run:</p>
-<div class="fragment"><div class="line">assoc .dox=</div>
-<div class="line">ftype Doxygen.Config=</div>
-</div><!-- fragment --><p><span class="dp-markdown-big-text">Create Taskbar Pinnable Shortcut</span></p>
-<p>Since Microsoft’s current taskbar model is app-oriented, Windows may block pinning shortcuts whose target is not an <span class="tt">.exe</span>. To be able to pin the <span class="tt">.dox</span> file to the taskbar while maintaining its double-click to run functionality, do the following:</p>
-<p>Create a Windows shortcut with following shortcut target </p><div class="fragment"><div class="line">%SystemRoot%\System32\cmd.exe /d /c start &quot;&quot; &quot;C:\Path\To\YourFile.dox&quot;</div>
-</div><!-- fragment --><p> Change <span class="tt">C:\Path\To\YourFile.dox</span> to the correct file. Then right-click the shortcut select <span class="tt">Show more options &gt; Pin to taskbar</span>.</p>
-<p>Change the icon if needed, current icon for Main Project is:</p>
+<p><span class="dp-markdown-mid-text">Setup</span></p>
+<ul>
+<li><b>Create a <span class="tt">.cmd</span> file so that it can inform on warnings and/or errors</b><ul>
+<li>For this to work we need <span class="tt">WARN_LOGFILE = _doxy-file.log</span> in doxyfile.</li>
+<li>Create the <span class="tt">D:\ToolBox\RunDoxy\RunDoxy.cmd</span> file using code from <a class="el" href="../../da/db8/dp_dh_run_doxy_cmd.html" title="RunDoxy.cmd">RunDoxy.cmd</a></li>
+<li>This enables showing a dialog box when generated warning log file is non-empty. <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Create Associations</b><ul>
+<li>Make sure <span class="tt">doxygen.exe</span> is available through the PATH environment variable.</li>
+<li>Open <b>Administrator Command Prompt</b>, run the following 2 commands: <div class="fragment"><div class="line">assoc .dox=Doxygen.Config</div>
+</div><!-- fragment --> This associates <span class="tt">.dox</span> to <span class="tt">Doxygen.Config</span> type. <div class="fragment"><div class="line">ftype Doxygen.Config=&quot;%SystemRoot%\System32\cmd.exe&quot; /d /c call &quot;D:\ToolBox\RunDoxy\RunDoxy.cmd&quot; &quot;%1&quot;</div>
+</div><!-- fragment --> This calls the <span class="tt">D:\ToolBox\RunDoxy\RunDoxy.cmd</span> file with the <span class="tt">.dox</span> file as parameter.</li>
+</ul>
+</li>
+</ul>
+<p><span class="dp-markdown-mid-text">Verify</span></p>
+<p>Use Administrator Command Prompt and execute the following commands.</p><ul>
+<li>Verify <span class="tt">.dox</span> extension association <div class="fragment"><div class="line">assoc .dox</div>
+</div><!-- fragment --></li>
+<li>Verify <span class="tt">Doxygen.Config</span> association <div class="fragment"><div class="line">ftype Doxygen.Config</div>
+</div><!-- fragment --></li>
+</ul>
+<p><span class="dp-markdown-mid-text">Remove</span></p>
+<p>Use Administrator Command Prompt and execute the following commands.</p><ul>
+<li>Remove <span class="tt">.dox</span> association <div class="fragment"><div class="line">assoc .dox=</div>
+</div><!-- fragment --></li>
+<li>Remove <span class="tt">Doxygen.Config</span> association <div class="fragment"><div class="line">ftype Doxygen.Config=</div>
+</div><!-- fragment --></li>
+</ul>
+<p><span class="dp-markdown-mid-text">Pin to Taskbar</span></p>
+<p>Since Microsoft’s current taskbar model is app-oriented, Windows may block pinning shortcuts whose target is not an <span class="tt">.exe</span>. To be able to pin the <span class="tt">.dox</span> file to the taskbar while maintaining its double-click to run functionality, do the following:</p><ul>
+<li>Create a Windows shortcut with following shortcut target: <div class="fragment"><div class="line">%SystemRoot%\System32\cmd.exe /d /c start &quot;&quot; &quot;D:\Doxygen\Main\_doxy-file.dox&quot;</div>
+</div><!-- fragment --></li>
+<li>Change <span class="tt">D:\Doxygen\Main\_doxy-file.dox</span> to correct <span class="tt">.dox</span> file.</li>
+<li>Right-click the shortcut select <span class="tt">Show more options &gt; Pin to taskbar</span>.</li>
+<li>Change icon if needed, current icon:</li>
+</ul>
 <div class="image">
 <img src="../../dox_shortcut_icon.png" alt="" width="128px" height="auto"/>
 </div>
@@ -497,7 +510,50 @@ Broken Hash with INLINE_SIMPLE_STRUCTS</h2>
 <div class="line"> </div>
 <div class="line">  // ... Rest of the code</div>
 <div class="line">})(jQuery);</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dp_dh_doxy_overview__bugs_fixes__fenced_code_inside_list"></a>
+Fenced Code Inside List Items</h2>
+<p> <div class="dp-hidden-xrefitem"> </p>
+<dl class="dp_dh_bugs"><dt><b><a class="el" href="../../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000002">BUG</a></b></dt><dd><a class="el" href="#dp_dh_doxy_overview__bugs_fixes__fenced_code_inside_list" title="Fenced Code Inside List Items">Doxygen Overview : Fenced Code Inside List Items</a></dd></dl>
+<p> </div> </p>
+<p>This Doxygen bug (<a href="https://github.com/doxygen/doxygen/issues/5904">Github link</a>) is triggered by several fenced code blocks placed directly inside consecutive nested list items. The first two blocks are parsed correctly; from the third block onward, Doxygen loses the correct block/list state and emits malformed intermediate markup. There is no meaningful “two-block limit”; that is simply where this parser failure manifests. For example:</p>
+<ul>
+<li>Items:<ul>
+<li>A: <div class="fragment"><div class="line">A</div>
+</div><!-- fragment --></li>
+<li>B: <div class="fragment"><div class="line">B</div>
+</div><!-- fragment --></li>
+<li>C: <span class="tt">
+    C
+    </span></li>
+<li>D: <span class="tt">
+    D
+    </span></li>
+<li>E: <span class="tt">
+    E
+    </span></li>
+</ul>
+</li>
+</ul>
+<p>To fix this issue use </p><div class="fragment"><div class="line">\code</div>
+<div class="line">text</div>
+<div class="line">\endcode</div>
+</div><!-- fragment --><p>Then it appears correctly:</p>
+<ul>
+<li>Items:<ul>
+<li>A: <div class="fragment"><div class="line">A</div>
+</div><!-- fragment --></li>
+<li>B: <div class="fragment"><div class="line">B</div>
+</div><!-- fragment --></li>
+<li>C: <div class="fragment"><div class="line">C</div>
+</div><!-- fragment --></li>
+<li>D: <div class="fragment"><div class="line">D</div>
+</div><!-- fragment --></li>
+<li>E: <div class="fragment"><div class="line">E</div>
+</div><!-- fragment --> </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
