@@ -17,8 +17,7 @@ var searchData=
   ['project_20required_20page_14',['Project Required Page',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__automatic_pages__project_required_page',1,'']]],
   ['project_20settings_15',['VS Project Settings',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_proj_settings',1,'']]],
   ['project_20setup_16',['Project Setup',['../d4/d3b/dp_dh_project_setup.html',1,'dp_dh_dir_setups']]],
-  ['project_20structure_17',['Project Structure',['../index.html#autotoc_md3',1,'']]],
-  ['property_20sheets_18',['VS Property Sheets',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets',1,'']]],
-  ['public_20api_19',['Public API',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__public_api',1,'']]],
-  ['push_20hook_20',['Git Pre-Push Hook',['../d7/d32/dp_dh_git_pre_push_hook.html',1,'dp_dh_dir_git_github']]]
+  ['property_20sheets_17',['VS Property Sheets',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets',1,'']]],
+  ['public_20api_18',['Public API',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__public_api',1,'']]],
+  ['push_20hook_19',['Git Pre-Push Hook',['../d7/d32/dp_dh_git_pre_push_hook.html',1,'dp_dh_dir_git_github']]]
 ];

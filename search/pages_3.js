@@ -15,13 +15,12 @@ var searchData=
   ['directory_20validation_20and_20switching_12',['Directory Validation and Switching',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__directory_validation_and_switching',1,'']]],
   ['dll_13',['DLL',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll',1,'BUG: Sophos DLL'],['../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000003',1,'BUG: Sophos DLL'],['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__dll_plugin',1,'Build Plugin DLL']]],
   ['dll_20plugin_20source_14',['DLL Plugin Source',['../d2/d5a/dp_dh_rm_sys_graphs_dll_plugin_source.html',1,'dp_dh_dir_rm_sys_graphs']]],
-  ['documentation_15',['Documentation',['../index.html#autotoc_md5',1,'']]],
-  ['dox_20extension_20setup_16',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]],
-  ['doxy_20plus_20css_17',['doxy-plus.css',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxy_20plus_20js_18',['doxy-plus.js',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxy_20plus_20xml_19',['doxy-plus.xml',['../de/d10/dp_dh_doxy_plus_xml_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxyfile_20',['Doxyfile',['../dc/d5a/dp_dh_doxy_file.html',1,'dp_dh_dir_doxygen']]],
-  ['doxygen_21',['Doxygen',['../d4/d7c/dp_dh_dir_doxygen.html',1,'dp_dh_dir_dev_hub']]],
-  ['doxygen_20examples_22',['Doxygen Examples',['../d6/d8f/dp_dh_doxy_examples.html',1,'dp_dh_dir_misc']]],
-  ['doxygen_20related_20changes_23',['Doxygen Related Changes',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__doxygen_related_changes',1,'']]]
+  ['dox_20extension_20setup_15',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]],
+  ['doxy_20plus_20css_16',['doxy-plus.css',['../dc/dc4/dp_dh_doxy_plus_css_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxy_20plus_20js_17',['doxy-plus.js',['../da/d61/dp_dh_doxy_plus_js_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxy_20plus_20xml_18',['doxy-plus.xml',['../de/d10/dp_dh_doxy_plus_xml_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxyfile_19',['Doxyfile',['../dc/d5a/dp_dh_doxy_file.html',1,'dp_dh_dir_doxygen']]],
+  ['doxygen_20',['Doxygen',['../d4/d7c/dp_dh_dir_doxygen.html',1,'dp_dh_dir_dev_hub']]],
+  ['doxygen_20examples_21',['Doxygen Examples',['../d6/d8f/dp_dh_doxy_examples.html',1,'dp_dh_dir_misc']]],
+  ['doxygen_20related_20changes_22',['Doxygen Related Changes',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__doxygen_related_changes',1,'']]]
 ];

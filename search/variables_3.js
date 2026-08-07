@@ -20,6 +20,5 @@ var searchData=
   ['directorychangemutex_5f_17',['directoryChangeMutex_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a458cf3bfc85923bc242cb24bcdaa469a',1,'anonymous_namespace{Log.cpp}::LeakedState::Runtime']]],
   ['disp_5f_18',['disp_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a3a382c587b4cfe21c4b60bff72e250e3',1,'anonymous_namespace{Log.cpp}::LeakedState']]],
   ['dispfields_5f_19',['dispFields_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a0204ccec3cfcb7cec4adc63a9c78bf6b',1,'anonymous_namespace{Log.cpp}::LeakedState::Config']]],
-  ['droppedlogs_5f_20',['droppedLogs_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a08879be319b1cfb791b4c7e20b5ba62e',1,'anonymous_namespace{Log.cpp}::LeakedState::FileWorker']]],
-  ['duration_5f_21',['duration_',['../dd/d54/classnpi_1_1ind_1_1_stage_window.html#a1c448ed9d93bd4709016f89d4185845a',1,'npi::ind::StageWindow']]]
+  ['droppedlogs_5f_20',['droppedLogs_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a08879be319b1cfb791b4c7e20b5ba62e',1,'anonymous_namespace{Log.cpp}::LeakedState::FileWorker']]]
 ];

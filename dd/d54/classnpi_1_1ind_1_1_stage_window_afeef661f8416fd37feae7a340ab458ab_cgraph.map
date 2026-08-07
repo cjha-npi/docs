@@ -1,7 +1,0 @@
-<map id="npi::ind::StageWindow::quick_" name="npi::ind::StageWindow::quick_">
-<area shape="rect" id="Node000001" title="Show immediately without animation." alt="" coords="5,46,259,72"/>
-<area shape="rect" id="Node000002" href="$dd/d54/classnpi_1_1ind_1_1_stage_window.html#abe852302a5151f716b50b48a495ff06e" title="Show the widget in a state&#45;correct way." alt="" coords="307,5,568,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,44,302,40,296,41,250,49"/>
-<area shape="rect" id="Node000003" href="$dd/d54/classnpi_1_1ind_1_1_stage_window.html#a85d47c78496ff23e95c3c12e3781143b" title="Compute and apply an on&#45;screen position for widget_, respecting frames/title bars." alt="" coords="343,71,532,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,69,338,80,332,81,255,74"/>
-</map>

@@ -172,7 +172,7 @@ var sectionId = 'dynsection-20';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title="Deleted copy constructor.">
 <polygon fill="white" stroke="none" points="1350,-337.75 1196,-337.75 1196,-296 1350,-296 1350,-337.75"/>
 <text xml:space="preserve" text-anchor="start" x="1204" y="-323.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1204" y="-312.05" font-family="Consolas" font-size="11.00">{Log::cpp}::LeakedState</text>
@@ -653,7 +653,7 @@ var sectionId = 'dynsection-20';
 <!-- Node22 -->
 <g id="Node000022" class="node">
 <title>Node22</title>
-<g id="a_Node000022"><a xlink:href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" target="_top" xlink:title=" ">
+<g id="a_Node000022"><a xlink:href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" target="_top" xlink:title="Allows the first thread to claim ownership in case of winStopMsgExe function call.">
 <polygon fill="white" stroke="none" points="1926,-281.75 1790,-281.75 1790,-240 1926,-240 1926,-281.75"/>
 <text xml:space="preserve" text-anchor="start" x="1798" y="-267.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1798" y="-256.05" font-family="Consolas" font-size="11.00">{WinMsgBoxExe::cpp}</text>

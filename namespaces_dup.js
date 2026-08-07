@@ -15,7 +15,6 @@ var namespaces_dup =
       [ "openAppendFile", "da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#a527cbed54a6c0a8cc4217423e882eea5", null ],
       [ "openAppendFileWithParentDir", "da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#a7a36314319425cf75c1e6845694fc462", null ]
     ] ],
-    [ "anonymous_namespace{StageWindow.cpp}", "d1/d80/namespaceanonymous__namespace_02_stage_window_8cpp_03.html", "d1/d80/namespaceanonymous__namespace_02_stage_window_8cpp_03" ],
     [ "anonymous_namespace{WinMsgBoxExe.cpp}", "d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html", [
       [ "bufAppendMsg", "d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17", null ],
       [ "bufAppendMsg", "d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa5a1d5158b86763cb636ae2e787d06a6", null ],

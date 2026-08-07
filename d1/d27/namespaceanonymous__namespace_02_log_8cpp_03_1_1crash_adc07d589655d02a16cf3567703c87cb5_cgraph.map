@@ -46,7 +46,7 @@
 <area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="1076,486,1172,488,1167,490,1078,491"/>
 <area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="1374,486,1457,488,1452,490,1375,491"/>
 <area shape="poly" id="edge18_Node000014_Node000014" title=" " alt="" coords="1224,287,1220,278,1228,268,1247,263,1276,261,1318,266,1329,272,1332,281,1327,280,1325,276,1316,271,1276,266,1248,268,1231,273,1225,279,1229,288"/>
-<area shape="rect" id="Node000016" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="1459,1028,1664,1083"/>
+<area shape="rect" id="Node000016" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title="Deleted copy constructor." alt="" coords="1459,1028,1664,1083"/>
 <area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="1378,1053,1454,1055,1448,1056,1379,1058"/>
 <area shape="poly" id="edge21_Node000016_Node000016" title=" " alt="" coords="1513,1026,1512,1018,1521,1009,1538,1003,1561,1001,1595,1006,1605,1011,1611,1020,1606,1019,1602,1015,1593,1011,1561,1006,1539,1008,1524,1013,1517,1020,1517,1029"/>
 <area shape="poly" id="edge24_Node000017_Node000015" title=" " alt="" coords="1023,1166,1140,1093,1163,1087,1168,1085,1143,1098,1025,1170"/>
@@ -60,7 +60,7 @@
 <area shape="poly" id="edge26_Node000018_Node000018" title=" " alt="" coords="1221,1181,1221,1172,1231,1163,1249,1158,1276,1156,1314,1160,1325,1166,1331,1175,1326,1174,1322,1170,1312,1165,1276,1161,1250,1163,1234,1168,1226,1174,1226,1184"/>
 <area shape="rect" id="Node000021" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="1475,1248,1648,1303"/>
 <area shape="poly" id="edge30_Node000020_Node000021" title=" " alt="" coords="1356,1340,1410,1328,1482,1306,1487,1305,1411,1333,1357,1345"/>
-<area shape="rect" id="Node000023" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="1471,1328,1652,1383"/>
+<area shape="rect" id="Node000023" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title="Allows the first thread to claim ownership in case of winStopMsgExe function call." alt="" coords="1471,1328,1652,1383"/>
 <area shape="poly" id="edge32_Node000020_Node000023" title=" " alt="" coords="1378,1353,1465,1355,1460,1356,1379,1358"/>
 <area shape="rect" id="Node000024" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="1475,1408,1648,1463"/>
 <area shape="poly" id="edge33_Node000020_Node000024" title=" " alt="" coords="1322,1366,1470,1409,1465,1409,1322,1371"/>

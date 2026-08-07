@@ -105,7 +105,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title="Deleted copy constructor.">
 <polygon fill="white" stroke="none" points="678,-401.75 524,-401.75 524,-360 678,-360 678,-401.75"/>
 <text xml:space="preserve" text-anchor="start" x="532" y="-387.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="532" y="-376.05" font-family="Consolas" font-size="11.00">{Log::cpp}::LeakedState</text>
@@ -163,7 +163,7 @@
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" target="_top" xlink:title=" ">
+<g id="a_Node000009"><a xlink:href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" target="_top" xlink:title="Allows the first thread to claim ownership in case of winStopMsgExe function call.">
 <polygon fill="white" stroke="none" points="669,-281.75 533,-281.75 533,-240 669,-240 669,-281.75"/>
 <text xml:space="preserve" text-anchor="start" x="541" y="-267.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="541" y="-256.05" font-family="Consolas" font-size="11.00">{WinMsgBoxExe::cpp}</text>

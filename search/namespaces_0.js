@@ -10,6 +10,5 @@ var searchData=
   ['anonymous_5fnamespace_7blog_2ecpp_7d_3a_3aworkers_7',['workers',['../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html',1,'anonymous_namespace{Log.cpp}']]],
   ['anonymous_5fnamespace_7bmetainfo_2ecpp_7d_8',['anonymous_namespace{MetaInfo.cpp}',['../d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html',1,'']]],
   ['anonymous_5fnamespace_7bnpiimplog_2ecpp_7d_9',['anonymous_namespace{npiImpLog.cpp}',['../da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html',1,'']]],
-  ['anonymous_5fnamespace_7bstagewindow_2ecpp_7d_10',['anonymous_namespace{StageWindow.cpp}',['../d1/d80/namespaceanonymous__namespace_02_stage_window_8cpp_03.html',1,'']]],
-  ['anonymous_5fnamespace_7bwinmsgboxexe_2ecpp_7d_11',['anonymous_namespace{WinMsgBoxExe.cpp}',['../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html',1,'']]]
+  ['anonymous_5fnamespace_7bwinmsgboxexe_2ecpp_7d_10',['anonymous_namespace{WinMsgBoxExe.cpp}',['../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html',1,'']]]
 ];

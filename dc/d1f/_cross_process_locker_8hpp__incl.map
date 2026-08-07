@@ -1,19 +1,17 @@
-<map id="Main_Proj/src/Util/CrossProcessLocker.hpp" name="Main_Proj/src/Util/CrossProcessLocker.hpp">
-<area shape="rect" id="Node000001" title="RAII locker for a session&#45;local Windows named mutex." alt="" coords="220,5,569,31"/>
+<map id="Main_Proj/CrossProcessLocker.hpp" name="Main_Proj/CrossProcessLocker.hpp">
+<area shape="rect" id="Node000001" title="RAII locker for a session&#45;local Windows named mutex." alt="" coords="232,5,509,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,153,99,178"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,33,123,51,85,64,61,81,52,95,48,112,50,146,45,145,43,111,47,93,57,77,83,60,121,46,222,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="312,153,381,178"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="427,28,456,42,482,60,497,81,498,93,493,106,472,129,445,145,417,155,389,162,388,157,415,150,443,140,468,124,488,103,493,93,492,83,478,63,453,47,426,34"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="308,79,385,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="389,29,361,74,357,70,385,32"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="409,79,479,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="403,28,434,73,429,72,401,33"/>
-<area shape="rect" id="Node000006" href="$d4/d49/_win_msg_box_exe_8h.html" title="Declares Windows helper&#45;process message box functions." alt="" coords="553,79,759,105"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="437,28,609,76,603,77,436,34"/>
-<area shape="rect" id="Node000008" href="$d9/d43/_win_error_text_8hpp.html" title="Provides conversion of Windows error codes into readable text." alt="" coords="71,79,284,105"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="357,32,221,79,219,74,362,30"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="601,153,711,178"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="658,102,658,147,654,143,654,106"/>
-<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="159,106,80,151,78,147,155,103"/>
-<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="205,102,315,149,310,150,204,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,33,134,52,94,65,69,81,59,95,54,112,52,146,47,144,49,111,54,93,65,77,92,60,133,47,237,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="391,153,460,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="502,28,597,46,634,60,658,77,669,101,662,120,642,135,612,146,538,160,468,166,467,160,538,155,611,141,639,131,658,117,664,101,654,81,631,65,595,52,502,34"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="284,79,361,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="365,29,337,74,333,70,361,32"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="385,79,455,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="379,28,410,73,405,72,377,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="479,79,644,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="402,28,526,76,521,77,401,34"/>
+<area shape="rect" id="Node000007" href="$d9/d43/_win_error_text_8hpp.html" title="Provides conversion of Windows error codes into readable text." alt="" coords="79,79,260,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="336,32,210,79,208,74,341,30"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="153,106,79,151,77,146,148,103"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="211,102,386,151,381,154,210,107"/>
 </map>

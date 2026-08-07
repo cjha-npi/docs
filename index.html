@@ -140,21 +140,6 @@ $(function(){initNavTree('index.html','',''); });
 <div class="textblock"><p><a class="anchor" id="md_main__page"></a></p>
 <p>This is the main documentation for the <b>NPI main project structure</b>.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-Current Components</h1>
-<ul>
-<li><b>Platform Check Utility</b> — Compile-time guard ensuring Windows-only builds.</li>
-<li><b>OrgMetaData</b> — Organization metadata container having static constexpr members.</li>
-<li><b>AppMetaData</b> — Application metadata container having static constexpr members.</li>
-<li><b>nativeFatalMessage Utility</b> — Emergency startup fatal error message box when <span class="tt">QApplication</span> may not be available.</li>
-<li><b>Meta Paths Utility</b> — Provides Organization and Application meta paths in ProgramData and Public/Documents directories.</li>
-<li><b>GlobalLocker</b> — RAII wrapper around a Windows named mutex for both inter-process and inter-thread synchronization.</li>
-<li><b>Concepts Page</b> — Contains reusable C++20 concepts that enforce design constraints.</li>
-<li><b>GuiProps Struct</b> — Defines Qt property names used by custom <span class="tt">QProxyStyle</span> and widget rendering logic.</li>
-<li><b>StageWindow Class</b> — Provides controlled show/hide animations for Qt widgets with opacity handling and optional timing customization.</li>
-<li><b>TextSpec Class</b> — Manages thread-safe font creation and caching for consistent application typography.</li>
-<li><b>RefPtr Classes</b> — Implements a non-owning, auto-nullifying linking mechanism (similar to <span class="tt">QPointer</span> + <span class="tt">std::shared_ptr</span>) for observer-style object tracking.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Requirements</h1>
 <ul>
 <li><b>OS:</b> Windows 10 or newer (x64)</li>
@@ -162,12 +147,7 @@ Requirements</h1>
 <li><b>Framework:</b> Qt 6.8.x (MSVC 64-bit)</li>
 <li><b>Language Standard:</b> C++20</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-Project Structure</h1>
-<div class="fragment"><div class="line">inc/npi/ -&gt; Public headers under the npi namespace</div>
-<div class="line">src/ -&gt; Source files</div>
-<div class="line">gui/ -&gt; GUI-related resources</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Coding Conventions</h1>
 <ul>
 <li><b>Everything</b> has to be inside either named or anonymous namespace.</li>
@@ -184,11 +164,7 @@ Coding Conventions</h1>
 </ul>
 </li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Documentation</h1>
-<p>This project uses <b>Doxygen</b> for code documentation. <br  />
- If used as the Doxygen main page, ensure the following in the Doxyfile: </p><div class="fragment"><div class="line">USE_MDFILE_AS_MAINPAGE = README.md</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 License</h1>
 <p>All rights reserved by <b>npi electronics GmbH</b>. <br  />
  Use restricted to internal development and testing purposes. </p>

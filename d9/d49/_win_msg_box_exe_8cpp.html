@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Main_Proj/src/Util/WinMsgBoxExe.cpp File Reference</title>
+<title>Main Project: Main_Proj/WinMsgBoxExe.cpp File Reference</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -141,7 +141,7 @@ $(function(){initNavTree('d9/d49/_win_msg_box_exe_8cpp.html','../../',''); });
 <code>#include &lt;atomic&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
-<code>#include &quot;<a class="el" href="../../db/d0d/_meta_info_8h_source.html">src/Root/MetaInfo.h</a>&quot;</code><br />
+<code>#include &quot;src/MetaInfo.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d4/d49/_win_msg_box_exe_8h_source.html">WinMsgBoxExe.h</a>&quot;</code><br />
 </div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
 <div class="textblock"><p>Implements helper-process based Windows message boxes. </p>
@@ -184,6 +184,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a587867f118701093b97cc8ccaf37a239" id="r_a587867f118701093b97cc8ccaf37a239"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a587867f118701093b97cc8ccaf37a239">anonymous_namespace{WinMsgBoxExe.cpp}::bufAppendMsgChar</a> (wchar_t *buf, size_t &amp;pos, unsigned int uChr) noexcept</td></tr>
 <tr class="memdesc:a587867f118701093b97cc8ccaf37a239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sanitizes and appends one message character.  <br /></td></tr>
 <tr class="memitem:a86d417acf3a64e3477e64493dc92a88c" id="r_a86d417acf3a64e3477e64493dc92a88c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c">anonymous_namespace{WinMsgBoxExe.cpp}::claimStopOwnership</a> () noexcept</td></tr>
+<tr class="memdesc:a86d417acf3a64e3477e64493dc92a88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the first thread to claim ownership in case of <span class="tt">winStopMsgExe</span> function call.  <br /></td></tr>
 <tr class="memitem:a7c36613e6219d885c2b5c949ce285c60" id="r_a7c36613e6219d885c2b5c949ce285c60"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a7c36613e6219d885c2b5c949ce285c60">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineBufAppend</a> (wchar_t chr) noexcept</td></tr>
 <tr class="memdesc:a7c36613e6219d885c2b5c949ce285c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends one character to the prepared command-line prefix buffer.  <br /></td></tr>
 <tr class="memitem:a59f9ee4de5e70beaf819165aec928b60" id="r_a59f9ee4de5e70beaf819165aec928b60"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a59f9ee4de5e70beaf819165aec928b60">anonymous_namespace{WinMsgBoxExe.cpp}::cmdLineBufAppendTitle</a> () noexcept</td></tr>
@@ -289,7 +290,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../dir_ce0e7e0051629da598757e5adae9dc7c.html">Main_Proj</a></li><li class="navelem"><a href="../../dir_049a93b64050dd5ba1d2b2dc78ae21fd.html">src</a></li><li class="navelem"><a href="../../dir_dd9d9f351c3f48241ab2d76d55afef9b.html">Util</a></li><li class="navelem"><a href="../../d9/d49/_win_msg_box_exe_8cpp.html">WinMsgBoxExe.cpp</a></li>
+    <li class="navelem"><a href="../../dir_ce0e7e0051629da598757e5adae9dc7c.html">Main_Proj</a></li><li class="navelem"><a href="../../d9/d49/_win_msg_box_exe_8cpp.html">WinMsgBoxExe.cpp</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

@@ -1,6 +1,6 @@
 <map id="npi::log::setFilterRules" name="npi::log::setFilterRules">
 <area shape="rect" id="Node000001" title="Changes the custom Qt logging category filter rules." alt="" coords="5,479,219,505"/>
-<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title=" " alt="" coords="271,125,476,181"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title="Private constructor so that only one instance of this class can be created using the static Inst_() f..." alt="" coords="271,125,476,181"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,478,265,289,347,185,345,189,269,292,125,481"/>
 <area shape="rect" id="Node000018" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a027c61d8dc60f13ad2a0e0be6e917a6e" title="Normalizes and validates custom Qt category&#45;filter rules." alt="" coords="267,585,480,641"/>
 <area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="141,502,308,580,303,584,140,507"/>
@@ -24,7 +24,7 @@
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="749,211,1321,328,1405,348,1400,348,1319,333,749,216"/>
 <area shape="rect" id="Node000008" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="1625,255,1799,310"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1509,347,1618,313,1623,312,1511,352"/>
-<area shape="rect" id="Node000010" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="1621,175,1803,230"/>
+<area shape="rect" id="Node000010" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title="Allows the first thread to claim ownership in case of winStopMsgExe function call." alt="" coords="1621,175,1803,230"/>
 <area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="1484,348,1541,298,1620,240,1634,235,1639,233,1623,245,1544,302,1486,352"/>
 <area shape="rect" id="Node000011" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="1625,335,1799,390"/>
 <area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="1573,360,1620,362,1615,363,1574,365"/>
@@ -43,7 +43,7 @@
 <area shape="rect" id="Node000016" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="2104,495,2341,550"/>
 <area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="2056,520,2099,522,2094,523,2056,525"/>
 <area shape="poly" id="edge18_Node000018_Node000018" title=" " alt="" coords="323,584,323,575,332,566,349,561,373,559,408,563,419,569,424,578,419,577,415,573,406,568,373,564,350,566,335,571,328,577,328,587"/>
-<area shape="rect" id="Node000020" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="829,504,1035,560"/>
+<area shape="rect" id="Node000020" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title="Deleted copy constructor." alt="" coords="829,504,1035,560"/>
 <area shape="poly" id="edge20_Node000019_Node000020" title=" " alt="" coords="749,529,824,531,819,532,750,534"/>
 <area shape="poly" id="edge21_Node000020_Node000020" title=" " alt="" coords="879,503,879,494,888,485,906,479,932,477,969,482,980,488,986,497,981,495,977,492,967,487,932,483,907,485,891,490,884,496,883,506"/>
 <area shape="poly" id="edge27_Node000021_Node000019" title=" " alt="" coords="460,377,482,393,500,418,506,443,513,467,530,490,541,500,536,500,526,494,508,469,501,444,495,420,478,396,460,383"/>

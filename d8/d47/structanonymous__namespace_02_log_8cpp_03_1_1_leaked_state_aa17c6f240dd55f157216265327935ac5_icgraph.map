@@ -1,13 +1,13 @@
 <map id="anonymous_namespace{Log::cpp}::LeakedState::LeakedState" name="anonymous_namespace{Log::cpp}::LeakedState::LeakedState">
-<area shape="rect" id="Node000001" title=" " alt="" coords="2019,1937,2480,1963"/>
+<area shape="rect" id="Node000001" title="Deleted copy constructor." alt="" coords="2019,1937,2480,1963"/>
 <area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="2313,1932,2318,1927,2311,1922,2288,1918,2249,1916,2208,1918,2185,1923,2181,1928,2194,1937,2188,1938,2176,1929,2182,1919,2207,1913,2249,1911,2288,1912,2313,1917,2323,1926,2317,1936"/>
-<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa972fb0cf3be00f70e763eb8547aee46" title=" " alt="" coords="1765,1802,1971,1858"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa972fb0cf3be00f70e763eb8547aee46" title="Deleted move constructor." alt="" coords="1765,1802,1971,1858"/>
 <area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="2198,1936,1957,1861,1957,1855,2203,1934"/>
 <area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="1765,1882,1971,1938"/>
 <area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="2116,1937,1971,1923,1970,1918,2121,1936"/>
-<area shape="rect" id="Node000075" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a8e71ac633c252155d8d20e14e22f1413" title=" " alt="" coords="1765,1962,1971,2018"/>
+<area shape="rect" id="Node000075" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a8e71ac633c252155d8d20e14e22f1413" title="Deleted copy assignment operator." alt="" coords="1765,1962,1971,2018"/>
 <area shape="poly" id="edge174_Node000001_Node000075" title=" " alt="" coords="2116,1965,1971,1982,1969,1977,2121,1963"/>
-<area shape="rect" id="Node000076" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a16e938f9d8d3845738c244e1162d4f84" title=" " alt="" coords="1765,2042,1971,2098"/>
+<area shape="rect" id="Node000076" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a16e938f9d8d3845738c244e1162d4f84" title="Deleted move assignment operator." alt="" coords="1765,2042,1971,2098"/>
 <area shape="poly" id="edge175_Node000001_Node000076" title=" " alt="" coords="2198,1967,1958,2045,1956,2040,2203,1964"/>
 <area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#a2357fd8efc3511b85c79fbab4159e343" title="Returns all logging categories encountered since startup." alt="" coords="1492,5,1697,31"/>
 <area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="1768,1877,1763,1872,1753,1852,1744,1825,1733,1750,1726,1653,1724,1536,1731,1259,1744,952,1757,645,1761,370,1758,254,1750,159,1736,87,1726,62,1715,44,1698,29,1696,24,1719,40,1731,59,1741,86,1755,158,1763,254,1766,370,1762,645,1749,952,1736,1260,1730,1536,1732,1653,1738,1750,1750,1823,1758,1850,1768,1869,1774,1877"/>

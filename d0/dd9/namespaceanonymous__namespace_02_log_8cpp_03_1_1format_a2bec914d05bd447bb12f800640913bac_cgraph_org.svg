@@ -376,7 +376,7 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title=" ">
+<g id="a_Node000007"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title="Deleted copy constructor.">
 <polygon fill="white" stroke="none" points="880,-767.75 726,-767.75 726,-726 880,-726 880,-767.75"/>
 <text xml:space="preserve" text-anchor="start" x="734" y="-753.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="734" y="-742.05" font-family="Consolas" font-size="11.00">{Log::cpp}::LeakedState</text>

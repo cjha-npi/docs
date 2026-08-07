@@ -282,7 +282,7 @@ var sectionId = 'dynsection-16';
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title=" ">
+<g id="a_Node000006"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title="Deleted copy constructor.">
 <polygon fill="white" stroke="none" points="1110,-752.75 956,-752.75 956,-711 1110,-711 1110,-752.75"/>
 <text xml:space="preserve" text-anchor="start" x="964" y="-738.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="964" y="-727.05" font-family="Consolas" font-size="11.00">{Log::cpp}::LeakedState</text>

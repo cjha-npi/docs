@@ -1,9 +1,5 @@
-<map id="Main_Proj/src/Root/MetaInfo.h" name="Main_Proj/src/Root/MetaInfo.h">
-<area shape="rect" id="Node000001" title="Declares application metadata and metadata&#45;derived application paths." alt="" coords="151,5,404,31"/>
-<area shape="rect" id="Node000002" href="$d0/da7/_log_8cpp.html" title="Implements the asynchronous application logging system." alt="" coords="5,79,171,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,34,135,82,133,77,240,34"/>
-<area shape="rect" id="Node000003" href="$d3/dac/_meta_info_8cpp.html" title="Defines metadata&#45;derived application path resolution and initialization." alt="" coords="195,79,360,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="279,37,280,81,275,78,275,41"/>
-<area shape="rect" id="Node000004" href="$d9/d49/_win_msg_box_exe_8cpp.html" title="Implements helper&#45;process based Windows message boxes." alt="" coords="384,79,549,120"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="313,31,424,79,418,79,312,37"/>
+<map id="Main_Proj/MetaInfo.h" name="Main_Proj/MetaInfo.h">
+<area shape="rect" id="Node000001" title="Declares application metadata and metadata&#45;derived application paths." alt="" coords="13,5,195,31"/>
+<area shape="rect" id="Node000002" href="$d3/dac/_meta_info_8cpp.html" title="Defines metadata&#45;derived application path resolution and initialization." alt="" coords="5,79,203,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,37,106,80,102,78,102,41"/>
 </map>

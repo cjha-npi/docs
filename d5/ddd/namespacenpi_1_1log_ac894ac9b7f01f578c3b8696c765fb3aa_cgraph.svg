@@ -67,7 +67,7 @@ var sectionId = 'dynsection-24';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" target="_top" xlink:title="Private constructor so that only one instance of this class can be created using the static Inst_() f...">
 <polygon fill="white" stroke="none" points="700,-1995.75 546,-1995.75 546,-1954 700,-1954 700,-1995.75"/>
 <text xml:space="preserve" text-anchor="start" x="554" y="-1981.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="554" y="-1970.05" font-family="Consolas" font-size="11.00">{Log::cpp}::LeakedState</text>
@@ -363,7 +363,7 @@ var sectionId = 'dynsection-24';
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_Node000010"><a xlink:href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" target="_top" xlink:title=" ">
+<g id="a_Node000010"><a xlink:href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" target="_top" xlink:title="Allows the first thread to claim ownership in case of winStopMsgExe function call.">
 <polygon fill="white" stroke="none" points="1511,-1924.75 1375,-1924.75 1375,-1883 1511,-1883 1511,-1924.75"/>
 <text xml:space="preserve" text-anchor="start" x="1383" y="-1910.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1383" y="-1899.05" font-family="Consolas" font-size="11.00">{WinMsgBoxExe::cpp}</text>
@@ -588,7 +588,7 @@ var sectionId = 'dynsection-24';
 <!-- Node22 -->
 <g id="Node000022" class="node">
 <title>Node22</title>
-<g id="a_Node000022"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title=" ">
+<g id="a_Node000022"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" target="_top" xlink:title="Deleted copy constructor.">
 <polygon fill="white" stroke="none" points="1520,-1297.75 1366,-1297.75 1366,-1256 1520,-1256 1520,-1297.75"/>
 <text xml:space="preserve" text-anchor="start" x="1374" y="-1283.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1374" y="-1272.05" font-family="Consolas" font-size="11.00">{Log::cpp}::LeakedState</text>

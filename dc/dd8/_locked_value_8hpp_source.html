@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Main Project: Main_Proj/src/Ind/LockedValue.hpp Source File</title>
+<title>Main Project: ind/LockedValue.hpp Source File</title>
 <link rel="icon" href="../../npi_icon.png" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <!-- 🟩 BEG ------------------------------------------------------------------------------------------------ -->
@@ -157,8 +157,7 @@ $(function(){initNavTree('dc/dd8/_locked_value_8hpp_source.html','../../',''); }
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d6/d57/namespacenpi.html">   21</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d14/namespacenpi_1_1ind.html">npi::ind</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d14/namespacenpi_1_1ind.html">npi::ind</a></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{<span class="comment"></span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">  /**</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">   * \brief Stores a value protected by a `QReadWriteLock`.</span></div>
@@ -545,7 +544,6 @@ $(function(){initNavTree('dc/dd8/_locked_value_8hpp_source.html','../../',''); }
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>  };</div>
 </div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>}</div>
-</div>
 <div class="ttc" id="aclassnpi_1_1ind_1_1_locked_value_1_1_read_access_html"><div class="ttname"><a href="../../d1/d6e/classnpi_1_1ind_1_1_locked_value_1_1_read_access.html">npi::ind::LockedValue::ReadAccess</a></div><div class="ttdoc">Provides scoped read-only access to the protected value.</div><div class="ttdef"><b>Definition</b> <a href="#l00081">LockedValue.hpp:81</a></div></div>
 <div class="ttc" id="aclassnpi_1_1ind_1_1_locked_value_1_1_read_access_html_a05493ab0db015c85bd872b8d9b812841"><div class="ttname"><a href="../../d1/d6e/classnpi_1_1ind_1_1_locked_value_1_1_read_access.html#a05493ab0db015c85bd872b8d9b812841">npi::ind::LockedValue::ReadAccess::ReadAccess</a></div><div class="ttdeci">ReadAccess(ReadAccess &amp;&amp;)=delete</div><div class="ttdoc">Disables moving because QReadLocker does not transfer ownership.</div></div>
 <div class="ttc" id="aclassnpi_1_1ind_1_1_locked_value_1_1_read_access_html_a0bd6f05ea6dfb649c2a9bc0c1101b939"><div class="ttname"><a href="../../d1/d6e/classnpi_1_1ind_1_1_locked_value_1_1_read_access.html#a0bd6f05ea6dfb649c2a9bc0c1101b939">npi::ind::LockedValue::ReadAccess::operator=</a></div><div class="ttdeci">ReadAccess &amp; operator=(ReadAccess &amp;&amp;)=delete</div><div class="ttdoc">Disables move assignment because lock ownership cannot be transferred.</div></div>
@@ -592,7 +590,7 @@ $(function(){initNavTree('dc/dd8/_locked_value_8hpp_source.html','../../',''); }
 <div class="ttc" id="aclassnpi_1_1ind_1_1_locked_value_html_af3068b5522890e2a7ef899262941d95c"><div class="ttname"><a href="../../d4/d0d/classnpi_1_1ind_1_1_locked_value.html#af3068b5522890e2a7ef899262941d95c">npi::ind::LockedValue::LockedValue</a></div><div class="ttdeci">LockedValue(LockedValue &amp;&amp;)=delete</div><div class="ttdoc">Disables moving because the internal lock has a fixed identity.</div></div>
 <div class="ttc" id="aclassnpi_1_1ind_1_1_locked_value_html_af6c0a66434b83a49c70b3d652e98bb2a"><div class="ttname"><a href="../../d4/d0d/classnpi_1_1ind_1_1_locked_value.html#af6c0a66434b83a49c70b3d652e98bb2a">npi::ind::LockedValue::write_</a></div><div class="ttdeci">void write_(U &amp;&amp;value)</div><div class="ttdoc">Replaces the complete protected value.</div><div class="ttdef"><b>Definition</b> <a href="#l00281">LockedValue.hpp:281</a></div></div>
 <div class="ttc" id="anamespace_3global_scope_4_html_d7/dcd/class_q_read_write_lock"><div class="ttname"><a href="../../d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock">QReadWriteLock</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1ind_html"><div class="ttname"><a href="../../da/d14/namespacenpi_1_1ind.html">npi::ind</a></div><div class="ttdoc">Strictly self-contained and application-independent utility code.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">LockedValue.hpp:22</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1ind_html"><div class="ttname"><a href="../../da/d14/namespacenpi_1_1ind.html">npi::ind</a></div><div class="ttdoc">Strictly self-contained and application-independent utility code.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
@@ -600,7 +598,7 @@ $(function(){initNavTree('dc/dd8/_locked_value_8hpp_source.html','../../',''); }
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="../../dir_ce0e7e0051629da598757e5adae9dc7c.html">Main_Proj</a></li><li class="navelem"><a href="../../dir_049a93b64050dd5ba1d2b2dc78ae21fd.html">src</a></li><li class="navelem"><a href="../../dir_27b113e56825a0262c099cc7bc989ca0.html">Ind</a></li><li class="navelem"><a href="../../dc/dd8/_locked_value_8hpp.html">LockedValue.hpp</a></li>
+    <li class="navelem"><a href="../../dir_659cf1d3958c76fffb577f6dc3a8ecf0.html">ind</a></li><li class="navelem"><a href="../../dc/dd8/_locked_value_8hpp.html">LockedValue.hpp</a></li>
     <li class="footer">Generated on <span class="timestamp"></span> for Main Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

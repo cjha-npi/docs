@@ -149,6 +149,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a587867f118701093b97cc8ccaf37a239" id="r_a587867f118701093b97cc8ccaf37a239"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a587867f118701093b97cc8ccaf37a239">bufAppendMsgChar</a> (wchar_t *buf, size_t &amp;pos, unsigned int uChr) noexcept</td></tr>
 <tr class="memdesc:a587867f118701093b97cc8ccaf37a239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sanitizes and appends one message character.  <br /></td></tr>
 <tr class="memitem:a86d417acf3a64e3477e64493dc92a88c" id="r_a86d417acf3a64e3477e64493dc92a88c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a86d417acf3a64e3477e64493dc92a88c">claimStopOwnership</a> () noexcept</td></tr>
+<tr class="memdesc:a86d417acf3a64e3477e64493dc92a88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the first thread to claim ownership in case of <span class="tt">winStopMsgExe</span> function call.  <br /></td></tr>
 <tr class="memitem:a7c36613e6219d885c2b5c949ce285c60" id="r_a7c36613e6219d885c2b5c949ce285c60"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7c36613e6219d885c2b5c949ce285c60">cmdLineBufAppend</a> (wchar_t chr) noexcept</td></tr>
 <tr class="memdesc:a7c36613e6219d885c2b5c949ce285c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends one character to the prepared command-line prefix buffer.  <br /></td></tr>
 <tr class="memitem:a59f9ee4de5e70beaf819165aec928b60" id="r_a59f9ee4de5e70beaf819165aec928b60"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a59f9ee4de5e70beaf819165aec928b60">cmdLineBufAppendTitle</a> () noexcept</td></tr>
@@ -389,27 +390,30 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00313">313</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  314</span>  {</div>
-<div class="line"><span class="lineno">  315</span>    <span class="keyword">const</span> std::uint32_t selfThreadId = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(::GetCurrentThreadId());</div>
-<div class="line"><span class="lineno">  316</span>    std::uint32_t expectedThreadId{0};</div>
-<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aeb03db5280e598e55f4c0c6dc2e2c0c6">stopCallOwnerThreadId</a>.compare_exchange_strong(</div>
-<div class="line"><span class="lineno">  318</span>      expectedThreadId,</div>
-<div class="line"><span class="lineno">  319</span>      selfThreadId,</div>
-<div class="line"><span class="lineno">  320</span>      std::memory_order_acq_rel,</div>
-<div class="line"><span class="lineno">  321</span>      std::memory_order_acquire))</div>
-<div class="line"><span class="lineno">  322</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  323</span> </div>
-<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">if</span>(expectedThreadId == selfThreadId) {</div>
-<div class="line"><span class="lineno">  325</span>      ::TerminateProcess(::GetCurrentProcess(), EXIT_FAILURE);</div>
-<div class="line"><span class="lineno">  326</span>      std::abort(); <span class="comment">// fallback</span></div>
-<div class="line"><span class="lineno">  327</span>    }</div>
-<div class="line"><span class="lineno">  328</span> </div>
-<div class="line"><span class="lineno">  329</span>    ::Sleep(5000);</div>
+<p>Allows the first thread to claim ownership in case of <span class="tt">winStopMsgExe</span> function call. </p>
+<p>When <span class="tt">winStopMsgExe</span> is called then the application is supposed to be terminated. However, it takes a finite amount of time to generate the text and call the helper process before the termination can happen. This function helps a thread take ownership in such cases, if another thread tries to call the same function then it has to wait for a small time so that the first thread can finish creating the message and terminate the process. In case the same thread enters again, this function terminates the process immediately. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00320">320</a> of file <a class="el" href="../../d9/d49/_win_msg_box_exe_8cpp_source.html">WinMsgBoxExe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  321</span>  {</div>
+<div class="line"><span class="lineno">  322</span>    <span class="keyword">const</span> std::uint32_t selfThreadId = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(::GetCurrentThreadId());</div>
+<div class="line"><span class="lineno">  323</span>    std::uint32_t expectedThreadId{0};</div>
+<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aeb03db5280e598e55f4c0c6dc2e2c0c6">stopCallOwnerThreadId</a>.compare_exchange_strong(</div>
+<div class="line"><span class="lineno">  325</span>      expectedThreadId,</div>
+<div class="line"><span class="lineno">  326</span>      selfThreadId,</div>
+<div class="line"><span class="lineno">  327</span>      std::memory_order_acq_rel,</div>
+<div class="line"><span class="lineno">  328</span>      std::memory_order_acquire))</div>
+<div class="line"><span class="lineno">  329</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  330</span> </div>
-<div class="line"><span class="lineno">  331</span>    ::TerminateProcess(::GetCurrentProcess(), EXIT_FAILURE);</div>
-<div class="line"><span class="lineno">  332</span>    std::abort(); <span class="comment">// fallback</span></div>
-<div class="line"><span class="lineno">  333</span>  }</div>
+<div class="line"><span class="lineno">  331</span>    <span class="keywordflow">if</span>(expectedThreadId == selfThreadId) {</div>
+<div class="line"><span class="lineno">  332</span>      ::TerminateProcess(::GetCurrentProcess(), EXIT_FAILURE);</div>
+<div class="line"><span class="lineno">  333</span>      std::abort(); <span class="comment">// fallback</span></div>
+<div class="line"><span class="lineno">  334</span>    }</div>
+<div class="line"><span class="lineno">  335</span> </div>
+<div class="line"><span class="lineno">  336</span>    ::Sleep(5000);</div>
+<div class="line"><span class="lineno">  337</span> </div>
+<div class="line"><span class="lineno">  338</span>    ::TerminateProcess(::GetCurrentProcess(), EXIT_FAILURE);</div>
+<div class="line"><span class="lineno">  339</span>    std::abort(); <span class="comment">// fallback</span></div>
+<div class="line"><span class="lineno">  340</span>  }</div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03_html_aeb03db5280e598e55f4c0c6dc2e2c0c6"><div class="ttname"><a href="#aeb03db5280e598e55f4c0c6dc2e2c0c6">anonymous_namespace{WinMsgBoxExe.cpp}::stopCallOwnerThreadId</a></div><div class="ttdeci">std::atomic_uint32_t stopCallOwnerThreadId</div><div class="ttdoc">Variable to stop second and further calls of stop message from generating message box....</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00106">WinMsgBoxExe.cpp:106</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#aeb03db5280e598e55f4c0c6dc2e2c0c6">stopCallOwnerThreadId</a>.</p>

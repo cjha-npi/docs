@@ -175,33 +175,33 @@ Variables</h2></td></tr>
 
 <p>Converts an important-log helper exit code to explanatory text. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01841">1841</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1842</span>    {</div>
-<div class="line"><span class="lineno"> 1843</span>      <span class="keywordflow">switch</span>(code) {</div>
-<div class="line"><span class="lineno"> 1844</span>        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno"> 1845</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Normal shutdown.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1846</span>        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno"> 1847</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Missing/invalid primary log file path argument.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1848</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno"> 1849</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Primary log path ends with a slash.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1850</span>        <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno"> 1851</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Backup log path ends with a slash.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1852</span>        <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno"> 1853</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Missing/invalid STDIN handle.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1854</span>        <span class="keywordflow">case</span> 5:</div>
-<div class="line"><span class="lineno"> 1855</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;STDIN read failed.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1856</span>        <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno"> 1857</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Failed to open/create both primary and backup log files.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1858</span>        <span class="keywordflow">case</span> 7:</div>
-<div class="line"><span class="lineno"> 1859</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Failed to open/create primary log file, and no backup was provided.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1860</span>        <span class="keywordflow">case</span> 8:</div>
-<div class="line"><span class="lineno"> 1861</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Log file write failed.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1862</span>        <span class="keywordflow">case</span> 9:</div>
-<div class="line"><span class="lineno"> 1863</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Log file write made no progress after repeated attempts.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1864</span>        <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno"> 1865</span>          <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Unknown error.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1866</span>      }</div>
-<div class="line"><span class="lineno"> 1867</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01866">1866</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1867</span>    {</div>
+<div class="line"><span class="lineno"> 1868</span>      <span class="keywordflow">switch</span> (code) {</div>
+<div class="line"><span class="lineno"> 1869</span>      <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno"> 1870</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Normal shutdown.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1871</span>      <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 1872</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Missing/invalid primary log file path argument.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1873</span>      <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 1874</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Primary log path ends with a slash.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1875</span>      <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 1876</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Backup log path ends with a slash.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1877</span>      <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 1878</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Missing/invalid STDIN handle.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1879</span>      <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno"> 1880</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;STDIN read failed.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1881</span>      <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno"> 1882</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Failed to open/create both primary and backup log files.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1883</span>      <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno"> 1884</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Failed to open/create primary log file, and no backup was provided.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1885</span>      <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno"> 1886</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Log file write failed.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1887</span>      <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno"> 1888</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Log file write made no progress after repeated attempts.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1889</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1890</span>        <span class="keywordflow">return</span> QStringLiteral(<span class="stringliteral">&quot;Unknown error.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1891</span>      }</div>
+<div class="line"><span class="lineno"> 1892</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">processExitText()</a>.</p>
 
@@ -254,144 +254,145 @@ Here is the caller graph for this function:</div>
 <p>Writes a complete byte range to the current important-log pipe. </p>
 <p>Crash-mode calls use bounded lock acquisition and abandon the write rather than risk blocking or recursive failure handling. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02179">2179</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2180</span>    {</div>
-<div class="line"><span class="lineno"> 2181</span>      <a class="code hl_struct" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">LeakedState</a>&amp; leaked = <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>();</div>
-<div class="line"><span class="lineno"> 2182</span> </div>
-<div class="line"><span class="lineno"> 2183</span>      <span class="comment">// If crash is true i.e. fatal or crash log, then we acquire hold so that a new</span></div>
-<div class="line"><span class="lineno"> 2184</span>      <span class="comment">// important log process cannot be started. In other cases pipe lock will be held</span></div>
-<div class="line"><span class="lineno"> 2185</span>      <span class="comment">// already by either the sendDataLocked or startProcess for synchronization.</span></div>
-<div class="line"><span class="lineno"> 2186</span>      <span class="keywordtype">bool</span> holdAcquired{<span class="keyword">false</span>};</div>
-<div class="line"><span class="lineno"> 2187</span>      <span class="keywordflow">if</span>(<a class="code hl_namespace" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html">crash</a>) {</div>
-<div class="line"><span class="lineno"> 2188</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; 250; ++ii) {</div>
-<div class="line"><span class="lineno"> 2189</span>          <span class="keywordtype">bool</span> expected = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2190</span>          <span class="keywordflow">if</span>(leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.compare_exchange_strong(expected, <span class="keyword">true</span>, std::memory_order_acq_rel)) {</div>
-<div class="line"><span class="lineno"> 2191</span>            holdAcquired = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2192</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2193</span>          }</div>
-<div class="line"><span class="lineno"> 2194</span>          ::YieldProcessor();</div>
-<div class="line"><span class="lineno"> 2195</span>        }</div>
-<div class="line"><span class="lineno"> 2196</span>        <span class="keywordflow">if</span>(!holdAcquired) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 2197</span>      }</div>
-<div class="line"><span class="lineno"> 2198</span> </div>
-<div class="line"><span class="lineno"> 2199</span>      <span class="comment">// Nothing can be written unless the helper process and pipe are valid.</span></div>
-<div class="line"><span class="lineno"> 2200</span>      <span class="comment">// Invalid input is treated as a no-op because logging must not destabilize</span></div>
-<div class="line"><span class="lineno"> 2201</span>      <span class="comment">// the caller.</span></div>
-<div class="line"><span class="lineno"> 2202</span>      <span class="keywordflow">if</span>(leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">hProcess_</a> == <span class="keyword">nullptr</span> ||</div>
-<div class="line"><span class="lineno"> 2203</span>         leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a> == <span class="keyword">nullptr</span> ||</div>
-<div class="line"><span class="lineno"> 2204</span>         leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a> == INVALID_HANDLE_VALUE ||</div>
-<div class="line"><span class="lineno"> 2205</span>         data == <span class="keyword">nullptr</span> ||</div>
-<div class="line"><span class="lineno"> 2206</span>         len == 0) {</div>
-<div class="line"><span class="lineno"> 2207</span>        <span class="keywordflow">if</span>(holdAcquired)</div>
-<div class="line"><span class="lineno"> 2208</span>          leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
-<div class="line"><span class="lineno"> 2209</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 2210</span>      }</div>
-<div class="line"><span class="lineno"> 2211</span> </div>
-<div class="line"><span class="lineno"> 2212</span>      <span class="comment">// Use a byte pointer so pointer arithmetic advances by exact byte count.</span></div>
-<div class="line"><span class="lineno"> 2213</span>      <span class="comment">// remaining tracks how many bytes still need to be sent to the helper.</span></div>
-<div class="line"><span class="lineno"> 2214</span>      <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* bPtr = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(data);</div>
-<div class="line"><span class="lineno"> 2215</span>      <span class="keywordtype">size_t</span> remaining = len;</div>
-<div class="line"><span class="lineno"> 2216</span> </div>
-<div class="line"><span class="lineno"> 2217</span>      <span class="comment">// Counts repeated write attempts that made no progress.</span></div>
-<div class="line"><span class="lineno"> 2218</span>      <span class="comment">// This prevents an infinite loop if the pipe stops accepting data.</span></div>
-<div class="line"><span class="lineno"> 2219</span>      <span class="keywordtype">int</span> noProgressTries = 0;</div>
-<div class="line"><span class="lineno"> 2220</span> </div>
-<div class="line"><span class="lineno"> 2221</span>      <span class="keywordflow">while</span>(remaining &gt; 0) {</div>
-<div class="line"><span class="lineno"> 2222</span>        <span class="comment">// WriteFile accepts a DWORD byte count, so very large writes are split into</span></div>
-<div class="line"><span class="lineno"> 2223</span>        <span class="comment">// DWORD-sized chunks. Normal log writes will usually complete in one chunk.</span></div>
-<div class="line"><span class="lineno"> 2224</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> chunkSz = (remaining &gt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(0xFFFFFFFFu))</div>
-<div class="line"><span class="lineno"> 2225</span>                                 ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(0xFFFFFFFFu)</div>
-<div class="line"><span class="lineno"> 2226</span>                                 : remaining;</div>
-<div class="line"><span class="lineno"> 2227</span>        <span class="keyword">const</span> DWORD chunk = <span class="keyword">static_cast&lt;</span>DWORD<span class="keyword">&gt;</span>(chunkSz);</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02209">2209</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2210</span>    {</div>
+<div class="line"><span class="lineno"> 2211</span>      <a class="code hl_struct" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">LeakedState</a>&amp; leaked = <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>();</div>
+<div class="line"><span class="lineno"> 2212</span> </div>
+<div class="line"><span class="lineno"> 2213</span>      <span class="comment">// If crash is true i.e. fatal or crash log, then we acquire hold so that a new</span></div>
+<div class="line"><span class="lineno"> 2214</span>      <span class="comment">// important log process cannot be started. In other cases pipe lock will be held</span></div>
+<div class="line"><span class="lineno"> 2215</span>      <span class="comment">// already by either the sendDataLocked or startProcess for synchronization.</span></div>
+<div class="line"><span class="lineno"> 2216</span>      <span class="keywordtype">bool</span> holdAcquired{<span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno"> 2217</span>      <span class="keywordflow">if</span> (<a class="code hl_namespace" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html">crash</a>) {</div>
+<div class="line"><span class="lineno"> 2218</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii &lt; 250; ++ii) {</div>
+<div class="line"><span class="lineno"> 2219</span>          <span class="keywordtype">bool</span> expected = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2220</span>          <span class="keywordflow">if</span> (leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.compare_exchange_strong(expected, <span class="keyword">true</span>, std::memory_order_acq_rel)) {</div>
+<div class="line"><span class="lineno"> 2221</span>            holdAcquired = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2222</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2223</span>          }</div>
+<div class="line"><span class="lineno"> 2224</span>          ::YieldProcessor();</div>
+<div class="line"><span class="lineno"> 2225</span>        }</div>
+<div class="line"><span class="lineno"> 2226</span>        <span class="keywordflow">if</span> (!holdAcquired) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2227</span>      }</div>
 <div class="line"><span class="lineno"> 2228</span> </div>
-<div class="line"><span class="lineno"> 2229</span>        <span class="comment">// Write the current chunk to the pipe connected to npiImpLog.exe STDIN.</span></div>
-<div class="line"><span class="lineno"> 2230</span>        <span class="comment">// A successful call may still write fewer bytes than requested.</span></div>
-<div class="line"><span class="lineno"> 2231</span>        DWORD wrote = 0;</div>
-<div class="line"><span class="lineno"> 2232</span>        <span class="keyword">const</span> BOOL ok = ::WriteFile(leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a>, bPtr, chunk, &amp;wrote, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno"> 2233</span> </div>
-<div class="line"><span class="lineno"> 2234</span>        <span class="keywordflow">if</span>(!ok || wrote == 0) {</div>
-<div class="line"><span class="lineno"> 2235</span>          <span class="comment">// GetLastError is meaningful only when WriteFile fails. If WriteFile</span></div>
-<div class="line"><span class="lineno"> 2236</span>          <span class="comment">// succeeds but writes zero bytes, use a deterministic synthetic error.</span></div>
-<div class="line"><span class="lineno"> 2237</span>          <span class="keyword">const</span> DWORD err = ok ? ERROR_WRITE_FAULT : ::GetLastError();</div>
-<div class="line"><span class="lineno"> 2238</span> </div>
-<div class="line"><span class="lineno"> 2239</span>          <span class="comment">// During crash handling, do not show another fatal message or retry deeply.</span></div>
-<div class="line"><span class="lineno"> 2240</span>          <span class="comment">// Best effort logging is safer than risking recursive failure handling.</span></div>
-<div class="line"><span class="lineno"> 2241</span>          <span class="keywordflow">if</span>(crash) {</div>
-<div class="line"><span class="lineno"> 2242</span>            <span class="keywordflow">if</span>(holdAcquired)</div>
-<div class="line"><span class="lineno"> 2243</span>              leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
-<div class="line"><span class="lineno"> 2244</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 2245</span>          }</div>
+<div class="line"><span class="lineno"> 2229</span>      <span class="comment">// Nothing can be written unless the helper process and pipe are valid.</span></div>
+<div class="line"><span class="lineno"> 2230</span>      <span class="comment">// Invalid input is treated as a no-op because logging must not destabilize</span></div>
+<div class="line"><span class="lineno"> 2231</span>      <span class="comment">// the caller.</span></div>
+<div class="line"><span class="lineno"> 2232</span>      <span class="keywordflow">if</span> (leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">hProcess_</a> == <span class="keyword">nullptr</span> ||</div>
+<div class="line"><span class="lineno"> 2233</span>          leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a> == <span class="keyword">nullptr</span> ||</div>
+<div class="line"><span class="lineno"> 2234</span>          leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a> == INVALID_HANDLE_VALUE ||</div>
+<div class="line"><span class="lineno"> 2235</span>          data == <span class="keyword">nullptr</span> ||</div>
+<div class="line"><span class="lineno"> 2236</span>          len == 0) {</div>
+<div class="line"><span class="lineno"> 2237</span>        <span class="keywordflow">if</span> (holdAcquired)</div>
+<div class="line"><span class="lineno"> 2238</span>          leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 2239</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2240</span>      }</div>
+<div class="line"><span class="lineno"> 2241</span> </div>
+<div class="line"><span class="lineno"> 2242</span>      <span class="comment">// Use a byte pointer so pointer arithmetic advances by exact byte count.</span></div>
+<div class="line"><span class="lineno"> 2243</span>      <span class="comment">// remaining tracks how many bytes still need to be sent to the helper.</span></div>
+<div class="line"><span class="lineno"> 2244</span>      <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* bPtr = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(data);</div>
+<div class="line"><span class="lineno"> 2245</span>      <span class="keywordtype">size_t</span> remaining = len;</div>
 <div class="line"><span class="lineno"> 2246</span> </div>
-<div class="line"><span class="lineno"> 2247</span>          <span class="comment">// Broken pipe errors mean the helper is gone, so retries are pointless.</span></div>
-<div class="line"><span class="lineno"> 2248</span>          <span class="comment">// Other no-progress cases are retried briefly before reporting failure.</span></div>
-<div class="line"><span class="lineno"> 2249</span>          <span class="keywordflow">if</span>(err == ERROR_BROKEN_PIPE || err == ERROR_NO_DATA) {</div>
-<div class="line"><span class="lineno"> 2250</span>            noProgressTries = 16;</div>
-<div class="line"><span class="lineno"> 2251</span>          }</div>
-<div class="line"><span class="lineno"> 2252</span>          <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 2253</span>            ++noProgressTries;</div>
-<div class="line"><span class="lineno"> 2254</span>          }</div>
-<div class="line"><span class="lineno"> 2255</span> </div>
-<div class="line"><span class="lineno"> 2256</span>          <span class="comment">// Give transient no-progress cases a few chances. This is intentionally</span></div>
-<div class="line"><span class="lineno"> 2257</span>          <span class="comment">// short because blocking the main application on logging is worse.</span></div>
-<div class="line"><span class="lineno"> 2258</span>          <span class="keywordflow">if</span>(noProgressTries &lt; 16) {</div>
-<div class="line"><span class="lineno"> 2259</span>            ::SwitchToThread();</div>
-<div class="line"><span class="lineno"> 2260</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 2261</span>          }</div>
-<div class="line"><span class="lineno"> 2262</span> </div>
-<div class="line"><span class="lineno"> 2263</span>          <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno"> 2264</span>            <span class="comment">// Build a diagnostic message containing the pipe write error.</span></div>
-<div class="line"><span class="lineno"> 2265</span>            <span class="comment">// The helper process state is added below when available.</span></div>
-<div class="line"><span class="lineno"> 2266</span>            QString msg = QStringLiteral(<span class="stringliteral">&quot;WriteFile to npiImpLog pipe failed.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2267</span>            msg += QStringLiteral(<span class="stringliteral">&quot;\nGetLastError %1: %2&quot;</span>)</div>
-<div class="line"><span class="lineno"> 2268</span>                  .arg(<span class="keyword">static_cast&lt;</span>qulonglong<span class="keyword">&gt;</span>(err))</div>
-<div class="line"><span class="lineno"> 2269</span>                  .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err)));</div>
-<div class="line"><span class="lineno"> 2270</span> </div>
-<div class="line"><span class="lineno"> 2271</span>            <span class="comment">// Broken pipe normally means npiImpLog.exe exited or failed during startup.</span></div>
-<div class="line"><span class="lineno"> 2272</span>            <span class="comment">// This gives a clearer reason than the raw Win32 error alone.</span></div>
-<div class="line"><span class="lineno"> 2273</span>            <span class="keywordflow">if</span>(err == ERROR_BROKEN_PIPE || err == ERROR_NO_DATA)</div>
-<div class="line"><span class="lineno"> 2274</span>              msg += QStringLiteral(<span class="stringliteral">&quot;\nPipe is closed. The helper likely exited or failed to start.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2275</span> </div>
-<div class="line"><span class="lineno"> 2276</span>            <span class="comment">// Add helper exit information if the process has already terminated.</span></div>
-<div class="line"><span class="lineno"> 2277</span>            <span class="comment">// If it is still active, the pipe failure is reported as-is.</span></div>
-<div class="line"><span class="lineno"> 2278</span>            DWORD code = STILL_ACTIVE;</div>
-<div class="line"><span class="lineno"> 2279</span>            <span class="keywordflow">if</span>(::GetExitCodeProcess(leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">hProcess_</a>, &amp;code)) {</div>
-<div class="line"><span class="lineno"> 2280</span>              <span class="keywordflow">if</span>(code == STILL_ACTIVE) {</div>
-<div class="line"><span class="lineno"> 2281</span>                msg += QStringLiteral(<span class="stringliteral">&quot;\nHelper process is still running.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2282</span>              }</div>
-<div class="line"><span class="lineno"> 2283</span>              <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 2284</span>                msg += QStringLiteral(<span class="stringliteral">&quot;\nHelper exited with code %1: %2&quot;</span>)</div>
-<div class="line"><span class="lineno"> 2285</span>                      .arg(<span class="keyword">static_cast&lt;</span>qulonglong<span class="keyword">&gt;</span>(code))</div>
-<div class="line"><span class="lineno"> 2286</span>                      .arg(<a class="code hl_function" href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">processExitText</a>(code));</div>
-<div class="line"><span class="lineno"> 2287</span>              }</div>
-<div class="line"><span class="lineno"> 2288</span>            }</div>
-<div class="line"><span class="lineno"> 2289</span> </div>
-<div class="line"><span class="lineno"> 2290</span>            <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nImp Log Write Failed.\n\n%1&quot;</span>).arg(msg));</div>
+<div class="line"><span class="lineno"> 2247</span>      <span class="comment">// Counts repeated write attempts that made no progress.</span></div>
+<div class="line"><span class="lineno"> 2248</span>      <span class="comment">// This prevents an infinite loop if the pipe stops accepting data.</span></div>
+<div class="line"><span class="lineno"> 2249</span>      <span class="keywordtype">int</span> noProgressTries = 0;</div>
+<div class="line"><span class="lineno"> 2250</span> </div>
+<div class="line"><span class="lineno"> 2251</span>      <span class="keywordflow">while</span> (remaining &gt; 0) {</div>
+<div class="line"><span class="lineno"> 2252</span>        <span class="comment">// WriteFile accepts a DWORD byte count, so very large writes are split into</span></div>
+<div class="line"><span class="lineno"> 2253</span>        <span class="comment">// DWORD-sized chunks. Normal log writes will usually complete in one chunk.</span></div>
+<div class="line"><span class="lineno"> 2254</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> chunkSz = (remaining &gt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(0xFFFFFFFFu))</div>
+<div class="line"><span class="lineno"> 2255</span>                                 ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(0xFFFFFFFFu)</div>
+<div class="line"><span class="lineno"> 2256</span>                                 : remaining;</div>
+<div class="line"><span class="lineno"> 2257</span>        <span class="keyword">const</span> DWORD chunk = <span class="keyword">static_cast&lt;</span>DWORD<span class="keyword">&gt;</span>(chunkSz);</div>
+<div class="line"><span class="lineno"> 2258</span> </div>
+<div class="line"><span class="lineno"> 2259</span>        <span class="comment">// Write the current chunk to the pipe connected to npiImpLog.exe STDIN.</span></div>
+<div class="line"><span class="lineno"> 2260</span>        <span class="comment">// A successful call may still write fewer bytes than requested.</span></div>
+<div class="line"><span class="lineno"> 2261</span>        DWORD wrote = 0;</div>
+<div class="line"><span class="lineno"> 2262</span>        <span class="keyword">const</span> BOOL ok = ::WriteFile(leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a>, bPtr, chunk, &amp;wrote, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno"> 2263</span> </div>
+<div class="line"><span class="lineno"> 2264</span>        <span class="keywordflow">if</span> (!ok || wrote == 0) {</div>
+<div class="line"><span class="lineno"> 2265</span>          <span class="comment">// GetLastError is meaningful only when WriteFile fails. If WriteFile</span></div>
+<div class="line"><span class="lineno"> 2266</span>          <span class="comment">// succeeds but writes zero bytes, use a deterministic synthetic error.</span></div>
+<div class="line"><span class="lineno"> 2267</span>          <span class="keyword">const</span> DWORD err = ok ? ERROR_WRITE_FAULT : ::GetLastError();</div>
+<div class="line"><span class="lineno"> 2268</span> </div>
+<div class="line"><span class="lineno"> 2269</span>          <span class="comment">// During crash handling, do not show another fatal message or retry deeply.</span></div>
+<div class="line"><span class="lineno"> 2270</span>          <span class="comment">// Best effort logging is safer than risking recursive failure handling.</span></div>
+<div class="line"><span class="lineno"> 2271</span>          <span class="keywordflow">if</span> (crash) {</div>
+<div class="line"><span class="lineno"> 2272</span>            <span class="keywordflow">if</span> (holdAcquired)</div>
+<div class="line"><span class="lineno"> 2273</span>              leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 2274</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2275</span>          }</div>
+<div class="line"><span class="lineno"> 2276</span> </div>
+<div class="line"><span class="lineno"> 2277</span>          <span class="comment">// Broken pipe errors mean the helper is gone, so retries are pointless.</span></div>
+<div class="line"><span class="lineno"> 2278</span>          <span class="comment">// Other no-progress cases are retried briefly before reporting failure.</span></div>
+<div class="line"><span class="lineno"> 2279</span>          <span class="keywordflow">if</span> (err == ERROR_BROKEN_PIPE || err == ERROR_NO_DATA) {</div>
+<div class="line"><span class="lineno"> 2280</span>            noProgressTries = 16;</div>
+<div class="line"><span class="lineno"> 2281</span>          }</div>
+<div class="line"><span class="lineno"> 2282</span>          <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 2283</span>            ++noProgressTries;</div>
+<div class="line"><span class="lineno"> 2284</span>          }</div>
+<div class="line"><span class="lineno"> 2285</span> </div>
+<div class="line"><span class="lineno"> 2286</span>          <span class="comment">// Give transient no-progress cases a few chances. This is intentionally</span></div>
+<div class="line"><span class="lineno"> 2287</span>          <span class="comment">// short because blocking the main application on logging is worse.</span></div>
+<div class="line"><span class="lineno"> 2288</span>          <span class="keywordflow">if</span> (noProgressTries &lt; 16) {</div>
+<div class="line"><span class="lineno"> 2289</span>            ::SwitchToThread();</div>
+<div class="line"><span class="lineno"> 2290</span>            <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno"> 2291</span>          }</div>
-<div class="line"><span class="lineno"> 2292</span>          <span class="keywordflow">catch</span>(...) {</div>
-<div class="line"><span class="lineno"> 2293</span>            <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nImp Log Write Failed.\n\nWriteFile to npiImpLog pipe failed. Diagnostic message construction also failed.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2294</span>          }</div>
-<div class="line"><span class="lineno"> 2295</span>        }</div>
-<div class="line"><span class="lineno"> 2296</span> </div>
-<div class="line"><span class="lineno"> 2297</span>        <span class="comment">// Advance only after confirmed progress. Partial writes are handled by</span></div>
-<div class="line"><span class="lineno"> 2298</span>        <span class="comment">// continuing the loop with the remaining unwritten bytes.</span></div>
-<div class="line"><span class="lineno"> 2299</span>        noProgressTries = 0;</div>
-<div class="line"><span class="lineno"> 2300</span>        bPtr += wrote;</div>
-<div class="line"><span class="lineno"> 2301</span>        remaining -= <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(wrote);</div>
-<div class="line"><span class="lineno"> 2302</span>      }</div>
-<div class="line"><span class="lineno"> 2303</span> </div>
-<div class="line"><span class="lineno"> 2304</span>      <span class="keywordflow">if</span>(holdAcquired)</div>
-<div class="line"><span class="lineno"> 2305</span>        leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
-<div class="line"><span class="lineno"> 2306</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1bridge_html_a64e6b530b8b3e6eb1891bbb6df1dd11c"><div class="ttname"><a href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">anonymous_namespace{Log.cpp}::bridge::processExitText</a></div><div class="ttdeci">QString processExitText(DWORD code)</div><div class="ttdoc">Converts an important-log helper exit code to explanatory text.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01841">Log.cpp:1841</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1crash_html"><div class="ttname"><a href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html">anonymous_namespace{Log.cpp}::crash</a></div><div class="ttdoc">Installs and implements fatal and abnormal-termination handling.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02348">Log.cpp:2349</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1app_html_ab43cdd42223150fbfc70f9a9f02a9019"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a></div><div class="ttdeci">void winStopMsgExe(const char *message) noexcept</div><div class="ttdoc">Launches npiMsgBox.exe to show a stop/error message box and terminates this process.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00402">WinMsgBoxExe.cpp:402</a></div></div>
+<div class="line"><span class="lineno"> 2292</span> </div>
+<div class="line"><span class="lineno"> 2293</span>          <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno"> 2294</span>            <span class="comment">// Build a diagnostic message containing the pipe write error.</span></div>
+<div class="line"><span class="lineno"> 2295</span>            <span class="comment">// The helper process state is added below when available.</span></div>
+<div class="line"><span class="lineno"> 2296</span>            QString msg = QStringLiteral(<span class="stringliteral">&quot;WriteFile to npiImpLog pipe failed.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2297</span>            msg += QStringLiteral(<span class="stringliteral">&quot;\nGetLastError %1: %2&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2298</span>                  .arg(<span class="keyword">static_cast&lt;</span>qulonglong<span class="keyword">&gt;</span>(err))</div>
+<div class="line"><span class="lineno"> 2299</span>                  .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err)));</div>
+<div class="line"><span class="lineno"> 2300</span> </div>
+<div class="line"><span class="lineno"> 2301</span>            <span class="comment">// Broken pipe normally means npiImpLog.exe exited or failed during startup.</span></div>
+<div class="line"><span class="lineno"> 2302</span>            <span class="comment">// This gives a clearer reason than the raw Win32 error alone.</span></div>
+<div class="line"><span class="lineno"> 2303</span>            <span class="keywordflow">if</span> (err == ERROR_BROKEN_PIPE || err == ERROR_NO_DATA)</div>
+<div class="line"><span class="lineno"> 2304</span>              msg += QStringLiteral(<span class="stringliteral">&quot;\nPipe is closed. The helper likely exited or failed to start.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2305</span> </div>
+<div class="line"><span class="lineno"> 2306</span>            <span class="comment">// Add helper exit information if the process has already terminated.</span></div>
+<div class="line"><span class="lineno"> 2307</span>            <span class="comment">// If it is still active, the pipe failure is reported as-is.</span></div>
+<div class="line"><span class="lineno"> 2308</span>            DWORD code = STILL_ACTIVE;</div>
+<div class="line"><span class="lineno"> 2309</span>            <span class="keywordflow">if</span> (::GetExitCodeProcess(leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">hProcess_</a>, &amp;code)) {</div>
+<div class="line"><span class="lineno"> 2310</span>              <span class="keywordflow">if</span> (code == STILL_ACTIVE) {</div>
+<div class="line"><span class="lineno"> 2311</span>                msg += QStringLiteral(<span class="stringliteral">&quot;\nHelper process is still running.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2312</span>              }</div>
+<div class="line"><span class="lineno"> 2313</span>              <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 2314</span>                msg += QStringLiteral(<span class="stringliteral">&quot;\nHelper exited with code %1: %2&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2315</span>                      .arg(<span class="keyword">static_cast&lt;</span>qulonglong<span class="keyword">&gt;</span>(code))</div>
+<div class="line"><span class="lineno"> 2316</span>                      .arg(<a class="code hl_function" href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">processExitText</a>(code));</div>
+<div class="line"><span class="lineno"> 2317</span>              }</div>
+<div class="line"><span class="lineno"> 2318</span>            }</div>
+<div class="line"><span class="lineno"> 2319</span> </div>
+<div class="line"><span class="lineno"> 2320</span>            <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nImp Log Write Failed.\n\n%1&quot;</span>).arg(msg));</div>
+<div class="line"><span class="lineno"> 2321</span>          }</div>
+<div class="line"><span class="lineno"> 2322</span>          <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno"> 2323</span>            <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 2324</span>              <span class="stringliteral">&quot;Fatal Error:\nImp Log Write Failed.\n\nWriteFile to npiImpLog pipe failed. Diagnostic message construction also failed.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2325</span>          }</div>
+<div class="line"><span class="lineno"> 2326</span>        }</div>
+<div class="line"><span class="lineno"> 2327</span> </div>
+<div class="line"><span class="lineno"> 2328</span>        <span class="comment">// Advance only after confirmed progress. Partial writes are handled by</span></div>
+<div class="line"><span class="lineno"> 2329</span>        <span class="comment">// continuing the loop with the remaining unwritten bytes.</span></div>
+<div class="line"><span class="lineno"> 2330</span>        noProgressTries = 0;</div>
+<div class="line"><span class="lineno"> 2331</span>        bPtr += wrote;</div>
+<div class="line"><span class="lineno"> 2332</span>        remaining -= <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(wrote);</div>
+<div class="line"><span class="lineno"> 2333</span>      }</div>
+<div class="line"><span class="lineno"> 2334</span> </div>
+<div class="line"><span class="lineno"> 2335</span>      <span class="keywordflow">if</span> (holdAcquired)</div>
+<div class="line"><span class="lineno"> 2336</span>        leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 2337</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1bridge_html_a64e6b530b8b3e6eb1891bbb6df1dd11c"><div class="ttname"><a href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">anonymous_namespace{Log.cpp}::bridge::processExitText</a></div><div class="ttdeci">QString processExitText(DWORD code)</div><div class="ttdoc">Converts an important-log helper exit code to explanatory text.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01866">Log.cpp:1866</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1crash_html"><div class="ttname"><a href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html">anonymous_namespace{Log.cpp}::crash</a></div><div class="ttdoc">Installs and implements fatal and abnormal-termination handling.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02379">Log.cpp:2380</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1app_html_ab43cdd42223150fbfc70f9a9f02a9019"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a></div><div class="ttdeci">void winStopMsgExe(const char *message) noexcept</div><div class="ttdoc">Launches npiMsgBox.exe to show a stop/error message box and terminates this process.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d49/_win_msg_box_exe_8cpp_source.html#l00409">WinMsgBoxExe.cpp:409</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1ind_html_a36235e7ddba2a265d60b240df5134019"><div class="ttname"><a href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a></div><div class="ttdeci">std::wstring winErrorText(DWORD errorCode)</div><div class="ttdoc">Converts Windows DWORD error code into format &quot;&lt;text&gt; (Code &lt;number&gt;).&quot;.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d43/_win_error_text_8hpp_source.html#l00058">WinErrorText.hpp:58</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">anonymous_namespace{Log.cpp}::LeakedState</a></div><div class="ttdoc">Owns all process-lifetime logging state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01551">Log.cpp:1551</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a00d8b5fce58842fa89e1ef00dc64cbb9"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hold_</a></div><div class="ttdeci">std::atomic_bool hold_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01609">Log.cpp:1609</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_aa2af451e37148badf7713b39f4109f31"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hProcess_</a></div><div class="ttdeci">HANDLE hProcess_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01612">Log.cpp:1612</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ab0c62c5920ad435ef7e06f520daf5480"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hLogPipe_</a></div><div class="ttdeci">HANDLE hLogPipe_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01613">Log.cpp:1613</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ab2f0a8b193b9402be7cbb5eaa618353b"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">anonymous_namespace{Log.cpp}::LeakedState::bridge_</a></div><div class="ttdeci">struct anonymous_namespace{Log.cpp}::LeakedState::BridgeState bridge_</div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ae28ae1e0989c84468f1c7dd17981e5e4"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_</a></div><div class="ttdeci">static LeakedState &amp; Inst_() noexcept</div><div class="ttdoc">Returns the intentionally leaked process-wide logging state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01708">Log.cpp:1708</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">anonymous_namespace{Log.cpp}::LeakedState</a></div><div class="ttdoc">Owns all process-lifetime logging state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01571">Log.cpp:1571</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a00d8b5fce58842fa89e1ef00dc64cbb9"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hold_</a></div><div class="ttdeci">std::atomic_bool hold_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01630">Log.cpp:1630</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_aa2af451e37148badf7713b39f4109f31"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hProcess_</a></div><div class="ttdeci">HANDLE hProcess_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01633">Log.cpp:1633</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ab0c62c5920ad435ef7e06f520daf5480"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hLogPipe_</a></div><div class="ttdeci">HANDLE hLogPipe_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01634">Log.cpp:1634</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ab2f0a8b193b9402be7cbb5eaa618353b"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">anonymous_namespace{Log.cpp}::LeakedState::bridge_</a></div><div class="ttdeci">struct anonymous_namespace{Log.cpp}::LeakedState::BridgeState bridge_</div><div class="ttdoc">Stores synchronization and handles for the important-log helper process.</div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_ae28ae1e0989c84468f1c7dd17981e5e4"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_</a></div><div class="ttdeci">static LeakedState &amp; Inst_() noexcept</div><div class="ttdoc">Returns the intentionally leaked process-wide logging state.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01732">Log.cpp:1732</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">anonymous_namespace{Log.cpp}::LeakedState::bridge_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hLogPipe_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hold_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hProcess_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_()</a>, <a class="el" href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">processExitText()</a>, <a class="el" href="#a7d1aecaff8b806303e9f2166caeec8ba">sendData()</a>, <a class="el" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText()</a>, and <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe()</a>.</p>
 
@@ -444,32 +445,32 @@ Here is the caller graph for this function:</div>
 <p>Writes important-log data while coordinating normal, fatal, and crash senders. </p>
 <p>Non-fatal writes hold the pipe lock. Fatal writes try to acquire it and otherwise perform a best-effort unlocked write, so interleaving remains possible. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02311">2311</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2312</span>    {</div>
-<div class="line"><span class="lineno"> 2313</span>      <a class="code hl_struct" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">LeakedState</a>&amp; leaked = <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>();</div>
-<div class="line"><span class="lineno"> 2314</span> </div>
-<div class="line"><span class="lineno"> 2315</span>      <span class="comment">// In case of fatal logs we try to acquire the pipe lock but proceed</span></div>
-<div class="line"><span class="lineno"> 2316</span>      <span class="comment">// without it if unable to acquire it. This is the best effort logging</span></div>
-<div class="line"><span class="lineno"> 2317</span>      <span class="comment">// since it is better to have interleaved data than to not have fatal logs.</span></div>
-<div class="line"><span class="lineno"> 2318</span>      <span class="keywordflow">if</span>(fatal) {</div>
-<div class="line"><span class="lineno"> 2319</span>        <span class="keywordflow">if</span>(::TryAcquireSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>)) {</div>
-<div class="line"><span class="lineno"> 2320</span>          <a class="code hl_function" href="#a7d1aecaff8b806303e9f2166caeec8ba">sendData</a>(data, len, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 2321</span>          ::ReleaseSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
-<div class="line"><span class="lineno"> 2322</span>        }</div>
-<div class="line"><span class="lineno"> 2323</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 2324</span>          <a class="code hl_function" href="#a7d1aecaff8b806303e9f2166caeec8ba">sendData</a>(data, len, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 2325</span>        }</div>
-<div class="line"><span class="lineno"> 2326</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 2327</span>      }</div>
-<div class="line"><span class="lineno"> 2328</span> </div>
-<div class="line"><span class="lineno"> 2329</span>      <span class="comment">// For normal non-fatal logs i.e. warning or critical, acquiring the</span></div>
-<div class="line"><span class="lineno"> 2330</span>      <span class="comment">// pipe lock is a must to avoid interleaving of data.</span></div>
-<div class="line"><span class="lineno"> 2331</span>      ::AcquireSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
-<div class="line"><span class="lineno"> 2332</span>      <a class="code hl_function" href="#a7d1aecaff8b806303e9f2166caeec8ba">sendData</a>(data, len, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 2333</span>      ::ReleaseSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
-<div class="line"><span class="lineno"> 2334</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1bridge_html_a7d1aecaff8b806303e9f2166caeec8ba"><div class="ttname"><a href="#a7d1aecaff8b806303e9f2166caeec8ba">anonymous_namespace{Log.cpp}::bridge::sendData</a></div><div class="ttdeci">void sendData(const char *data, size_t len, bool crash) noexcept</div><div class="ttdoc">Writes a complete byte range to the current important-log pipe.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02179">Log.cpp:2179</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_aa51366d4eb149c9632b88a624e00d50b"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::pipeLock_</a></div><div class="ttdeci">SRWLOCK pipeLock_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01610">Log.cpp:1610</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02342">2342</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2343</span>    {</div>
+<div class="line"><span class="lineno"> 2344</span>      <a class="code hl_struct" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">LeakedState</a>&amp; leaked = <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>();</div>
+<div class="line"><span class="lineno"> 2345</span> </div>
+<div class="line"><span class="lineno"> 2346</span>      <span class="comment">// In case of fatal logs we try to acquire the pipe lock but proceed</span></div>
+<div class="line"><span class="lineno"> 2347</span>      <span class="comment">// without it if unable to acquire it. This is the best effort logging</span></div>
+<div class="line"><span class="lineno"> 2348</span>      <span class="comment">// since it is better to have interleaved data than to not have fatal logs.</span></div>
+<div class="line"><span class="lineno"> 2349</span>      <span class="keywordflow">if</span> (fatal) {</div>
+<div class="line"><span class="lineno"> 2350</span>        <span class="keywordflow">if</span> (::TryAcquireSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>)) {</div>
+<div class="line"><span class="lineno"> 2351</span>          <a class="code hl_function" href="#a7d1aecaff8b806303e9f2166caeec8ba">sendData</a>(data, len, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 2352</span>          ::ReleaseSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
+<div class="line"><span class="lineno"> 2353</span>        }</div>
+<div class="line"><span class="lineno"> 2354</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 2355</span>          <a class="code hl_function" href="#a7d1aecaff8b806303e9f2166caeec8ba">sendData</a>(data, len, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 2356</span>        }</div>
+<div class="line"><span class="lineno"> 2357</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2358</span>      }</div>
+<div class="line"><span class="lineno"> 2359</span> </div>
+<div class="line"><span class="lineno"> 2360</span>      <span class="comment">// For normal non-fatal logs i.e. warning or critical, acquiring the</span></div>
+<div class="line"><span class="lineno"> 2361</span>      <span class="comment">// pipe lock is a must to avoid interleaving of data.</span></div>
+<div class="line"><span class="lineno"> 2362</span>      ::AcquireSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
+<div class="line"><span class="lineno"> 2363</span>      <a class="code hl_function" href="#a7d1aecaff8b806303e9f2166caeec8ba">sendData</a>(data, len, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2364</span>      ::ReleaseSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
+<div class="line"><span class="lineno"> 2365</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1bridge_html_a7d1aecaff8b806303e9f2166caeec8ba"><div class="ttname"><a href="#a7d1aecaff8b806303e9f2166caeec8ba">anonymous_namespace{Log.cpp}::bridge::sendData</a></div><div class="ttdeci">void sendData(const char *data, size_t len, bool crash) noexcept</div><div class="ttdoc">Writes a complete byte range to the current important-log pipe.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02209">Log.cpp:2209</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_aa51366d4eb149c9632b88a624e00d50b"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::pipeLock_</a></div><div class="ttdeci">SRWLOCK pipeLock_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01631">Log.cpp:1631</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">anonymous_namespace{Log.cpp}::LeakedState::bridge_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_()</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::pipeLock_</a>, <a class="el" href="#a7d1aecaff8b806303e9f2166caeec8ba">sendData()</a>, and <a class="el" href="#a0ad3876154f2b818add3875e77f95303">sendDataLocked()</a>.</p>
 
@@ -515,311 +516,316 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01875">1875</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1876</span>    {</div>
-<div class="line"><span class="lineno"> 1877</span>      <span class="comment">// Construct the primary and backup file full paths for the important log process.</span></div>
-<div class="line"><span class="lineno"> 1878</span>      <span class="keyword">const</span> QString fileName = fileBaseName + QStringLiteral(<span class="stringliteral">&quot;.imp.log&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1879</span>      <span class="keyword">const</span> QString pFileStr = QDir(directory).filePath(fileName);</div>
-<div class="line"><span class="lineno"> 1880</span>      <span class="keyword">const</span> QString bFileStr = QDir(<a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a>()).filePath(QStringLiteral(<span class="stringliteral">&quot;ImpLogs/%1&quot;</span>).arg(fileName));</div>
-<div class="line"><span class="lineno"> 1881</span>      <span class="keyword">const</span> std::wstring primaryFullPath = QDir::toNativeSeparators(pFileStr).toStdWString();</div>
-<div class="line"><span class="lineno"> 1882</span>      <span class="keyword">const</span> std::wstring backupFullPath = QDir::toNativeSeparators(bFileStr).toStdWString();</div>
-<div class="line"><span class="lineno"> 1883</span> </div>
-<div class="line"><span class="lineno"> 1884</span>      <a class="code hl_struct" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">LeakedState</a>&amp; leaked = <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>();</div>
-<div class="line"><span class="lineno"> 1885</span> </div>
-<div class="line"><span class="lineno"> 1886</span>      <span class="comment">// Path texts checks.</span></div>
-<div class="line"><span class="lineno"> 1887</span> </div>
-<div class="line"><span class="lineno"> 1888</span>      <span class="keywordflow">if</span>(primaryFullPath.empty())</div>
-<div class="line"><span class="lineno"> 1889</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nPrimary log path is empty.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1890</span> </div>
-<div class="line"><span class="lineno"> 1891</span>      <span class="keywordflow">if</span>(primaryFullPath.back() == L<span class="charliteral">&#39;\\&#39;</span> || primaryFullPath.back() == L<span class="charliteral">&#39;/&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1892</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nPrimary log path ends with a slash.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1893</span> </div>
-<div class="line"><span class="lineno"> 1894</span>      <span class="keywordflow">if</span>(!backupFullPath.empty() &amp;&amp; (backupFullPath.back() == L<span class="charliteral">&#39;\\&#39;</span> || backupFullPath.back() == L<span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno"> 1895</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nBackup log path ends with a slash.&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1896</span> </div>
-<div class="line"><span class="lineno"> 1897</span>      <span class="comment">// GetModuleFileNameW(nullptr, ...) gets the full path of the currently running</span></div>
-<div class="line"><span class="lineno"> 1898</span>      <span class="comment">// main executable, for example C:\MyApp\bin\MyApp.exe</span></div>
-<div class="line"><span class="lineno"> 1899</span>      <span class="keywordtype">wchar_t</span> impLogExePathBuf[<a class="code hl_variable" href="#ae8d0e12dcebf85fb9c88a985e424e5f3">filePathMaxLen</a>]{};</div>
-<div class="line"><span class="lineno"> 1900</span>      <span class="keyword">const</span> DWORD n = ::GetModuleFileNameW(<span class="keyword">nullptr</span>, impLogExePathBuf, <a class="code hl_variable" href="#ae8d0e12dcebf85fb9c88a985e424e5f3">filePathMaxLen</a>);</div>
-<div class="line"><span class="lineno"> 1901</span>      <span class="keywordflow">if</span>(n == 0 || n &gt;= <a class="code hl_variable" href="#ae8d0e12dcebf85fb9c88a985e424e5f3">filePathMaxLen</a>) {</div>
-<div class="line"><span class="lineno"> 1902</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 1903</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 1904</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;GetModuleFileNameW&#39; Error:\n%1&quot;</span>)</div>
-<div class="line"><span class="lineno"> 1905</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
-<div class="line"><span class="lineno"> 1906</span>      }</div>
-<div class="line"><span class="lineno"> 1907</span> </div>
-<div class="line"><span class="lineno"> 1908</span>      <span class="comment">// Construct the helper executable path by replacing the main executable name with npiImpLog.exe.</span></div>
-<div class="line"><span class="lineno"> 1909</span>      std::wstring impLogExePath(impLogExePathBuf, impLogExePathBuf + n);</div>
-<div class="line"><span class="lineno"> 1910</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> slash = impLogExePath.find_last_of(L<span class="stringliteral">&quot;\\/&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1911</span>      <span class="keywordflow">if</span>(slash == std::wstring::npos)</div>
-<div class="line"><span class="lineno"> 1912</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nnpiImpLog.exe path could not be determined&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1913</span>      impLogExePath.resize(slash + 1);</div>
-<div class="line"><span class="lineno"> 1914</span>      impLogExePath += L<span class="stringliteral">&quot;npiImpLog.exe&quot;</span>;</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01900">1900</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1901</span>    {</div>
+<div class="line"><span class="lineno"> 1902</span>      <span class="comment">// Construct the primary and backup file full paths for the important log process.</span></div>
+<div class="line"><span class="lineno"> 1903</span>      <span class="keyword">const</span> QString fileName = fileBaseName + QStringLiteral(<span class="stringliteral">&quot;.imp.log&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1904</span>      <span class="keyword">const</span> QString pFileStr = QDir(directory).filePath(fileName);</div>
+<div class="line"><span class="lineno"> 1905</span>      <span class="keyword">const</span> QString bFileStr = QDir(<a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a>()).filePath(QStringLiteral(<span class="stringliteral">&quot;ImpLogs/%1&quot;</span>).arg(fileName));</div>
+<div class="line"><span class="lineno"> 1906</span>      <span class="keyword">const</span> std::wstring primaryFullPath = QDir::toNativeSeparators(pFileStr).toStdWString();</div>
+<div class="line"><span class="lineno"> 1907</span>      <span class="keyword">const</span> std::wstring backupFullPath = QDir::toNativeSeparators(bFileStr).toStdWString();</div>
+<div class="line"><span class="lineno"> 1908</span> </div>
+<div class="line"><span class="lineno"> 1909</span>      <a class="code hl_struct" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html">LeakedState</a>&amp; leaked = <a class="code hl_function" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">LeakedState::Inst_</a>();</div>
+<div class="line"><span class="lineno"> 1910</span> </div>
+<div class="line"><span class="lineno"> 1911</span>      <span class="comment">// Path texts checks.</span></div>
+<div class="line"><span class="lineno"> 1912</span> </div>
+<div class="line"><span class="lineno"> 1913</span>      <span class="keywordflow">if</span> (primaryFullPath.empty())</div>
+<div class="line"><span class="lineno"> 1914</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nPrimary log path is empty.&quot;</span>);</div>
 <div class="line"><span class="lineno"> 1915</span> </div>
-<div class="line"><span class="lineno"> 1916</span>      <span class="comment">// Create an inheritable anonymous pipe.</span></div>
-<div class="line"><span class="lineno"> 1917</span>      <span class="comment">// Child (npiImpLog.exe) gets the read end as stdin.</span></div>
-<div class="line"><span class="lineno"> 1918</span>      <span class="comment">// Parent (this process) keeps the write end for sending log data.</span></div>
-<div class="line"><span class="lineno"> 1919</span>      SECURITY_ATTRIBUTES sa{};</div>
-<div class="line"><span class="lineno"> 1920</span>      sa.nLength = <span class="keyword">sizeof</span>(sa);</div>
-<div class="line"><span class="lineno"> 1921</span>      sa.bInheritHandle = TRUE;</div>
-<div class="line"><span class="lineno"> 1922</span> </div>
-<div class="line"><span class="lineno"> 1923</span>      HANDLE hRead = INVALID_HANDLE_VALUE;  <span class="comment">// read handle</span></div>
-<div class="line"><span class="lineno"> 1924</span>      HANDLE hWrite = INVALID_HANDLE_VALUE; <span class="comment">// write handle</span></div>
-<div class="line"><span class="lineno"> 1925</span> </div>
-<div class="line"><span class="lineno"> 1926</span>      <span class="comment">// Create the anonymous pipe with a reasonably large buffer to reduce the chance of blocking on writes.</span></div>
-<div class="line"><span class="lineno"> 1927</span>      <span class="keyword">constexpr</span> DWORD pipeBufBytes = 256u * 1024u; <span class="comment">// buffer 256 KiB</span></div>
-<div class="line"><span class="lineno"> 1928</span>      <span class="keywordflow">if</span>(!::CreatePipe(&amp;hRead, &amp;hWrite, &amp;sa, pipeBufBytes)) {</div>
-<div class="line"><span class="lineno"> 1929</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 1930</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 1931</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;CreatePipe&#39; Error:\n%1&quot;</span>)</div>
-<div class="line"><span class="lineno"> 1932</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
-<div class="line"><span class="lineno"> 1933</span>      }</div>
-<div class="line"><span class="lineno"> 1934</span> </div>
-<div class="line"><span class="lineno"> 1935</span>      <span class="comment">// Remove inheritance from the write handle. The child must inherit only</span></div>
-<div class="line"><span class="lineno"> 1936</span>      <span class="comment">// the read end. If it inherits the write end too, EOF detection can</span></div>
-<div class="line"><span class="lineno"> 1937</span>      <span class="comment">// break because the pipe would still have a writer open.</span></div>
-<div class="line"><span class="lineno"> 1938</span>      <span class="keywordflow">if</span>(!::SetHandleInformation(hWrite, HANDLE_FLAG_INHERIT, 0)) {</div>
-<div class="line"><span class="lineno"> 1939</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 1940</span>        ::CloseHandle(hRead);</div>
-<div class="line"><span class="lineno"> 1941</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno"> 1942</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 1943</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;SetHandleInformation&#39; Error:\n%1&quot;</span>)</div>
-<div class="line"><span class="lineno"> 1944</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
-<div class="line"><span class="lineno"> 1945</span>      }</div>
-<div class="line"><span class="lineno"> 1946</span> </div>
-<div class="line"><span class="lineno"> 1947</span>      <span class="comment">// The anonymous pipe is used only for the child process&#39;s standard input. The</span></div>
-<div class="line"><span class="lineno"> 1948</span>      <span class="comment">// npiImpLog.exe does not use STDOUT or STDERR. Redirect both streams to NUL</span></div>
-<div class="line"><span class="lineno"> 1949</span>      <span class="comment">// so the helper does not depend on the parent process having valid console handles,</span></div>
-<div class="line"><span class="lineno"> 1950</span>      <span class="comment">// which is especially important for GUI applications.</span></div>
-<div class="line"><span class="lineno"> 1951</span>      <span class="comment">// hNull is created as inheritable because it is explicitly passed to the child</span></div>
-<div class="line"><span class="lineno"> 1952</span>      <span class="comment">// as STDOUT and STDERR. Unrelated inheritable handles are blocked later by the</span></div>
-<div class="line"><span class="lineno"> 1953</span>      <span class="comment">// PROC_THREAD_ATTRIBUTE_HANDLE_LIST setup.</span></div>
-<div class="line"><span class="lineno"> 1954</span>      HANDLE hNull = ::CreateFileW(</div>
-<div class="line"><span class="lineno"> 1955</span>        L<span class="stringliteral">&quot;NUL&quot;</span>,</div>
-<div class="line"><span class="lineno"> 1956</span>        GENERIC_WRITE,</div>
-<div class="line"><span class="lineno"> 1957</span>        FILE_SHARE_READ | FILE_SHARE_WRITE,</div>
-<div class="line"><span class="lineno"> 1958</span>        &amp;sa,</div>
-<div class="line"><span class="lineno"> 1959</span>        OPEN_EXISTING,</div>
-<div class="line"><span class="lineno"> 1960</span>        FILE_ATTRIBUTE_NORMAL,</div>
-<div class="line"><span class="lineno"> 1961</span>        <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno"> 1962</span> </div>
-<div class="line"><span class="lineno"> 1963</span>      <span class="comment">// Check the NUL handle before starting the process.</span></div>
-<div class="line"><span class="lineno"> 1964</span>      <span class="keywordflow">if</span>(hNull == INVALID_HANDLE_VALUE || hNull == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno"> 1916</span>      <span class="keywordflow">if</span> (primaryFullPath.back() == L<span class="charliteral">&#39;\\&#39;</span> || primaryFullPath.back() == L<span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1917</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nPrimary log path ends with a slash.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1918</span> </div>
+<div class="line"><span class="lineno"> 1919</span>      <span class="keywordflow">if</span> (!backupFullPath.empty() &amp;&amp; (backupFullPath.back() == L<span class="charliteral">&#39;\\&#39;</span> || backupFullPath.back() == L<span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno"> 1920</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nBackup log path ends with a slash.&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1921</span> </div>
+<div class="line"><span class="lineno"> 1922</span>      <span class="comment">// GetModuleFileNameW(nullptr, ...) gets the full path of the currently running</span></div>
+<div class="line"><span class="lineno"> 1923</span>      <span class="comment">// main executable, for example C:\MyApp\bin\MyApp.exe</span></div>
+<div class="line"><span class="lineno"> 1924</span>      <span class="keywordtype">wchar_t</span> impLogExePathBuf[<a class="code hl_variable" href="#ae8d0e12dcebf85fb9c88a985e424e5f3">filePathMaxLen</a>]{};</div>
+<div class="line"><span class="lineno"> 1925</span>      <span class="keyword">const</span> DWORD n = ::GetModuleFileNameW(<span class="keyword">nullptr</span>, impLogExePathBuf, <a class="code hl_variable" href="#ae8d0e12dcebf85fb9c88a985e424e5f3">filePathMaxLen</a>);</div>
+<div class="line"><span class="lineno"> 1926</span>      <span class="keywordflow">if</span> (n == 0 || n &gt;= <a class="code hl_variable" href="#ae8d0e12dcebf85fb9c88a985e424e5f3">filePathMaxLen</a>) {</div>
+<div class="line"><span class="lineno"> 1927</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 1928</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 1929</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;GetModuleFileNameW&#39; Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 1930</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
+<div class="line"><span class="lineno"> 1931</span>      }</div>
+<div class="line"><span class="lineno"> 1932</span> </div>
+<div class="line"><span class="lineno"> 1933</span>      <span class="comment">// Construct the helper executable path by replacing the main executable name with npiImpLog.exe.</span></div>
+<div class="line"><span class="lineno"> 1934</span>      std::wstring impLogExePath(impLogExePathBuf, impLogExePathBuf + n);</div>
+<div class="line"><span class="lineno"> 1935</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> slash = impLogExePath.find_last_of(L<span class="stringliteral">&quot;\\/&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1936</span>      <span class="keywordflow">if</span> (slash == std::wstring::npos)</div>
+<div class="line"><span class="lineno"> 1937</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 1938</span>          <span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nnpiImpLog.exe path could not be determined&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1939</span>      impLogExePath.resize(slash + 1);</div>
+<div class="line"><span class="lineno"> 1940</span>      impLogExePath += L<span class="stringliteral">&quot;npiImpLog.exe&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1941</span> </div>
+<div class="line"><span class="lineno"> 1942</span>      <span class="comment">// Create an inheritable anonymous pipe.</span></div>
+<div class="line"><span class="lineno"> 1943</span>      <span class="comment">// Child (npiImpLog.exe) gets the read end as stdin.</span></div>
+<div class="line"><span class="lineno"> 1944</span>      <span class="comment">// Parent (this process) keeps the write end for sending log data.</span></div>
+<div class="line"><span class="lineno"> 1945</span>      SECURITY_ATTRIBUTES sa{};</div>
+<div class="line"><span class="lineno"> 1946</span>      sa.nLength = <span class="keyword">sizeof</span>(sa);</div>
+<div class="line"><span class="lineno"> 1947</span>      sa.bInheritHandle = TRUE;</div>
+<div class="line"><span class="lineno"> 1948</span> </div>
+<div class="line"><span class="lineno"> 1949</span>      HANDLE hRead = INVALID_HANDLE_VALUE;  <span class="comment">// read handle</span></div>
+<div class="line"><span class="lineno"> 1950</span>      HANDLE hWrite = INVALID_HANDLE_VALUE; <span class="comment">// write handle</span></div>
+<div class="line"><span class="lineno"> 1951</span> </div>
+<div class="line"><span class="lineno"> 1952</span>      <span class="comment">// Create the anonymous pipe with a reasonably large buffer to reduce the chance of blocking on writes.</span></div>
+<div class="line"><span class="lineno"> 1953</span>      <span class="keyword">constexpr</span> DWORD pipeBufBytes = 256u * 1024u; <span class="comment">// buffer 256 KiB</span></div>
+<div class="line"><span class="lineno"> 1954</span>      <span class="keywordflow">if</span> (!::CreatePipe(&amp;hRead, &amp;hWrite, &amp;sa, pipeBufBytes)) {</div>
+<div class="line"><span class="lineno"> 1955</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 1956</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 1957</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;CreatePipe&#39; Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 1958</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
+<div class="line"><span class="lineno"> 1959</span>      }</div>
+<div class="line"><span class="lineno"> 1960</span> </div>
+<div class="line"><span class="lineno"> 1961</span>      <span class="comment">// Remove inheritance from the write handle. The child must inherit only</span></div>
+<div class="line"><span class="lineno"> 1962</span>      <span class="comment">// the read end. If it inherits the write end too, EOF detection can</span></div>
+<div class="line"><span class="lineno"> 1963</span>      <span class="comment">// break because the pipe would still have a writer open.</span></div>
+<div class="line"><span class="lineno"> 1964</span>      <span class="keywordflow">if</span> (!::SetHandleInformation(hWrite, HANDLE_FLAG_INHERIT, 0)) {</div>
 <div class="line"><span class="lineno"> 1965</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
 <div class="line"><span class="lineno"> 1966</span>        ::CloseHandle(hRead);</div>
 <div class="line"><span class="lineno"> 1967</span>        ::CloseHandle(hWrite);</div>
 <div class="line"><span class="lineno"> 1968</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 1969</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;CreateFileW(NUL)&#39; Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 1969</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;SetHandleInformation&#39; Error:\n%1&quot;</span>)</div>
 <div class="line"><span class="lineno"> 1970</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
 <div class="line"><span class="lineno"> 1971</span>      }</div>
 <div class="line"><span class="lineno"> 1972</span> </div>
-<div class="line"><span class="lineno"> 1973</span>      <span class="comment">// Build command line in format: &quot;npiImpLog.exe&quot; &quot;primary&quot; &quot;backup&quot;</span></div>
-<div class="line"><span class="lineno"> 1974</span>      <span class="comment">// Paths are quoted because both executable and log paths may contain spaces.</span></div>
-<div class="line"><span class="lineno"> 1975</span>      std::wstring cmdLine;</div>
-<div class="line"><span class="lineno"> 1976</span>      cmdLine.reserve(impLogExePath.size() + primaryFullPath.size() + backupFullPath.size() + 16);</div>
-<div class="line"><span class="lineno"> 1977</span>      cmdLine += L<span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1978</span>      cmdLine += impLogExePath;</div>
-<div class="line"><span class="lineno"> 1979</span>      cmdLine += L<span class="stringliteral">&quot;\&quot; \&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1980</span>      cmdLine += primaryFullPath;</div>
-<div class="line"><span class="lineno"> 1981</span>      cmdLine += L<span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1982</span>      <span class="keywordflow">if</span>(!backupFullPath.empty()) {</div>
-<div class="line"><span class="lineno"> 1983</span>        cmdLine += L<span class="stringliteral">&quot; \&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1984</span>        cmdLine += backupFullPath;</div>
-<div class="line"><span class="lineno"> 1985</span>        cmdLine += L<span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1986</span>      }</div>
-<div class="line"><span class="lineno"> 1987</span> </div>
-<div class="line"><span class="lineno"> 1988</span>      <span class="comment">// Restrict inheritance to the exact handles needed by the child process.</span></div>
-<div class="line"><span class="lineno"> 1989</span>      HANDLE inheritList[2]{hRead, hNull};</div>
-<div class="line"><span class="lineno"> 1990</span> </div>
-<div class="line"><span class="lineno"> 1991</span>      <span class="comment">// Ask Windows for the required memory size for one process/thread attribute.</span></div>
-<div class="line"><span class="lineno"> 1992</span>      <span class="comment">// This first sizing call is expected to fail with ERROR_INSUFFICIENT_BUFFER</span></div>
-<div class="line"><span class="lineno"> 1993</span>      <span class="comment">// and return the required byte count in attrListBytes.</span></div>
-<div class="line"><span class="lineno"> 1994</span>      SIZE_T attrListBytes = 0;</div>
-<div class="line"><span class="lineno"> 1995</span>      <span class="keyword">const</span> BOOL attrSizeOk = ::InitializeProcThreadAttributeList(<span class="keyword">nullptr</span>, 1, 0, &amp;attrListBytes);</div>
-<div class="line"><span class="lineno"> 1996</span>      <span class="keyword">const</span> DWORD attrSizeErr = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 1997</span> </div>
-<div class="line"><span class="lineno"> 1998</span>      <span class="comment">// For the sizing call, success is unexpected. The valid result is failure with</span></div>
-<div class="line"><span class="lineno"> 1999</span>      <span class="comment">// ERROR_INSUFFICIENT_BUFFER and a non-zero attrListBytes value. Anything else</span></div>
-<div class="line"><span class="lineno"> 2000</span>      <span class="comment">// means Windows did not provide a usable attribute-list size.</span></div>
-<div class="line"><span class="lineno"> 2001</span>      <span class="keywordflow">if</span>(attrSizeOk || attrListBytes == 0 || attrSizeErr != ERROR_INSUFFICIENT_BUFFER) {</div>
-<div class="line"><span class="lineno"> 2002</span>        ::CloseHandle(hNull);</div>
-<div class="line"><span class="lineno"> 2003</span>        ::CloseHandle(hRead);</div>
-<div class="line"><span class="lineno"> 2004</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno"> 2005</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 2006</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;InitializeProcThreadAttributeList&#39; (get size) Error:\n%1&quot;</span>)</div>
-<div class="line"><span class="lineno"> 2007</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(attrSizeErr))));</div>
-<div class="line"><span class="lineno"> 2008</span>      }</div>
-<div class="line"><span class="lineno"> 2009</span> </div>
-<div class="line"><span class="lineno"> 2010</span>      <span class="comment">// Allocate the attribute-list buffer using the process heap because Windows</span></div>
-<div class="line"><span class="lineno"> 2011</span>      <span class="comment">// owns the internal layout of this structure. It is later released with</span></div>
-<div class="line"><span class="lineno"> 2012</span>      <span class="comment">// HeapFree().</span></div>
-<div class="line"><span class="lineno"> 2013</span>      <span class="keyword">auto</span>* attrList = <span class="keyword">static_cast&lt;</span>LPPROC_THREAD_ATTRIBUTE_LIST<span class="keyword">&gt;</span>(</div>
-<div class="line"><span class="lineno"> 2014</span>        ::HeapAlloc(::GetProcessHeap(), 0, attrListBytes));</div>
-<div class="line"><span class="lineno"> 2015</span> </div>
-<div class="line"><span class="lineno"> 2016</span>      <span class="keywordflow">if</span>(!attrList) {</div>
-<div class="line"><span class="lineno"> 2017</span>        ::CloseHandle(hNull);</div>
-<div class="line"><span class="lineno"> 2018</span>        ::CloseHandle(hRead);</div>
-<div class="line"><span class="lineno"> 2019</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno"> 2020</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;HeapAlloc&#39; failed for attribute list&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2021</span>      }</div>
-<div class="line"><span class="lineno"> 2022</span> </div>
-<div class="line"><span class="lineno"> 2023</span>      <span class="comment">// Initialize the allocated attribute list. This prepares the buffer so it can</span></div>
-<div class="line"><span class="lineno"> 2024</span>      <span class="comment">// receive attributes such as the explicit handle inheritance list.</span></div>
-<div class="line"><span class="lineno"> 2025</span>      <span class="keywordflow">if</span>(!::InitializeProcThreadAttributeList(attrList, 1, 0, &amp;attrListBytes)) {</div>
-<div class="line"><span class="lineno"> 2026</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 2027</span>        ::HeapFree(::GetProcessHeap(), 0, attrList);</div>
+<div class="line"><span class="lineno"> 1973</span>      <span class="comment">// The anonymous pipe is used only for the child process&#39;s standard input. The</span></div>
+<div class="line"><span class="lineno"> 1974</span>      <span class="comment">// npiImpLog.exe does not use STDOUT or STDERR. Redirect both streams to NUL</span></div>
+<div class="line"><span class="lineno"> 1975</span>      <span class="comment">// so the helper does not depend on the parent process having valid console handles,</span></div>
+<div class="line"><span class="lineno"> 1976</span>      <span class="comment">// which is especially important for GUI applications.</span></div>
+<div class="line"><span class="lineno"> 1977</span>      <span class="comment">// hNull is created as inheritable because it is explicitly passed to the child</span></div>
+<div class="line"><span class="lineno"> 1978</span>      <span class="comment">// as STDOUT and STDERR. Unrelated inheritable handles are blocked later by the</span></div>
+<div class="line"><span class="lineno"> 1979</span>      <span class="comment">// PROC_THREAD_ATTRIBUTE_HANDLE_LIST setup.</span></div>
+<div class="line"><span class="lineno"> 1980</span>      HANDLE hNull = ::CreateFileW(</div>
+<div class="line"><span class="lineno"> 1981</span>        L<span class="stringliteral">&quot;NUL&quot;</span>,</div>
+<div class="line"><span class="lineno"> 1982</span>        GENERIC_WRITE,</div>
+<div class="line"><span class="lineno"> 1983</span>        FILE_SHARE_READ | FILE_SHARE_WRITE,</div>
+<div class="line"><span class="lineno"> 1984</span>        &amp;sa,</div>
+<div class="line"><span class="lineno"> 1985</span>        OPEN_EXISTING,</div>
+<div class="line"><span class="lineno"> 1986</span>        FILE_ATTRIBUTE_NORMAL,</div>
+<div class="line"><span class="lineno"> 1987</span>        <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno"> 1988</span> </div>
+<div class="line"><span class="lineno"> 1989</span>      <span class="comment">// Check the NUL handle before starting the process.</span></div>
+<div class="line"><span class="lineno"> 1990</span>      <span class="keywordflow">if</span> (hNull == INVALID_HANDLE_VALUE || hNull == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno"> 1991</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 1992</span>        ::CloseHandle(hRead);</div>
+<div class="line"><span class="lineno"> 1993</span>        ::CloseHandle(hWrite);</div>
+<div class="line"><span class="lineno"> 1994</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 1995</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;CreateFileW(NUL)&#39; Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 1996</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
+<div class="line"><span class="lineno"> 1997</span>      }</div>
+<div class="line"><span class="lineno"> 1998</span> </div>
+<div class="line"><span class="lineno"> 1999</span>      <span class="comment">// Build command line in format: &quot;npiImpLog.exe&quot; &quot;primary&quot; &quot;backup&quot;</span></div>
+<div class="line"><span class="lineno"> 2000</span>      <span class="comment">// Paths are quoted because both executable and log paths may contain spaces.</span></div>
+<div class="line"><span class="lineno"> 2001</span>      std::wstring cmdLine;</div>
+<div class="line"><span class="lineno"> 2002</span>      cmdLine.reserve(impLogExePath.size() + primaryFullPath.size() + backupFullPath.size() + 16);</div>
+<div class="line"><span class="lineno"> 2003</span>      cmdLine += L<span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2004</span>      cmdLine += impLogExePath;</div>
+<div class="line"><span class="lineno"> 2005</span>      cmdLine += L<span class="stringliteral">&quot;\&quot; \&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2006</span>      cmdLine += primaryFullPath;</div>
+<div class="line"><span class="lineno"> 2007</span>      cmdLine += L<span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2008</span>      <span class="keywordflow">if</span> (!backupFullPath.empty()) {</div>
+<div class="line"><span class="lineno"> 2009</span>        cmdLine += L<span class="stringliteral">&quot; \&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2010</span>        cmdLine += backupFullPath;</div>
+<div class="line"><span class="lineno"> 2011</span>        cmdLine += L<span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2012</span>      }</div>
+<div class="line"><span class="lineno"> 2013</span> </div>
+<div class="line"><span class="lineno"> 2014</span>      <span class="comment">// Restrict inheritance to the exact handles needed by the child process.</span></div>
+<div class="line"><span class="lineno"> 2015</span>      HANDLE inheritList[2]{hRead, hNull};</div>
+<div class="line"><span class="lineno"> 2016</span> </div>
+<div class="line"><span class="lineno"> 2017</span>      <span class="comment">// Ask Windows for the required memory size for one process/thread attribute.</span></div>
+<div class="line"><span class="lineno"> 2018</span>      <span class="comment">// This first sizing call is expected to fail with ERROR_INSUFFICIENT_BUFFER</span></div>
+<div class="line"><span class="lineno"> 2019</span>      <span class="comment">// and return the required byte count in attrListBytes.</span></div>
+<div class="line"><span class="lineno"> 2020</span>      SIZE_T attrListBytes = 0;</div>
+<div class="line"><span class="lineno"> 2021</span>      <span class="keyword">const</span> BOOL attrSizeOk = ::InitializeProcThreadAttributeList(<span class="keyword">nullptr</span>, 1, 0, &amp;attrListBytes);</div>
+<div class="line"><span class="lineno"> 2022</span>      <span class="keyword">const</span> DWORD attrSizeErr = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 2023</span> </div>
+<div class="line"><span class="lineno"> 2024</span>      <span class="comment">// For the sizing call, success is unexpected. The valid result is failure with</span></div>
+<div class="line"><span class="lineno"> 2025</span>      <span class="comment">// ERROR_INSUFFICIENT_BUFFER and a non-zero attrListBytes value. Anything else</span></div>
+<div class="line"><span class="lineno"> 2026</span>      <span class="comment">// means Windows did not provide a usable attribute-list size.</span></div>
+<div class="line"><span class="lineno"> 2027</span>      <span class="keywordflow">if</span> (attrSizeOk || attrListBytes == 0 || attrSizeErr != ERROR_INSUFFICIENT_BUFFER) {</div>
 <div class="line"><span class="lineno"> 2028</span>        ::CloseHandle(hNull);</div>
 <div class="line"><span class="lineno"> 2029</span>        ::CloseHandle(hRead);</div>
 <div class="line"><span class="lineno"> 2030</span>        ::CloseHandle(hWrite);</div>
 <div class="line"><span class="lineno"> 2031</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 2032</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;InitializeProcThreadAttributeList&#39; Error:\n%1&quot;</span>)</div>
-<div class="line"><span class="lineno"> 2033</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
-<div class="line"><span class="lineno"> 2034</span>      }</div>
-<div class="line"><span class="lineno"> 2035</span> </div>
-<div class="line"><span class="lineno"> 2036</span>      <span class="comment">// Restrict child handle inheritance to hRead and hNull only. This prevents the</span></div>
-<div class="line"><span class="lineno"> 2037</span>      <span class="comment">// child from inheriting unrelated handles, especially the pipe write handle.</span></div>
-<div class="line"><span class="lineno"> 2038</span>      <span class="keywordflow">if</span>(!::UpdateProcThreadAttribute(</div>
-<div class="line"><span class="lineno"> 2039</span>        attrList,</div>
-<div class="line"><span class="lineno"> 2040</span>        0,</div>
-<div class="line"><span class="lineno"> 2041</span>        PROC_THREAD_ATTRIBUTE_HANDLE_LIST,</div>
-<div class="line"><span class="lineno"> 2042</span>        <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(inheritList),</div>
-<div class="line"><span class="lineno"> 2043</span>        <span class="keyword">sizeof</span>(inheritList),</div>
-<div class="line"><span class="lineno"> 2044</span>        <span class="keyword">nullptr</span>,</div>
-<div class="line"><span class="lineno"> 2045</span>        <span class="keyword">nullptr</span>)) {</div>
-<div class="line"><span class="lineno"> 2046</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 2047</span>        ::DeleteProcThreadAttributeList(attrList);</div>
-<div class="line"><span class="lineno"> 2048</span>        ::HeapFree(::GetProcessHeap(), 0, attrList);</div>
-<div class="line"><span class="lineno"> 2049</span>        ::CloseHandle(hNull);</div>
-<div class="line"><span class="lineno"> 2050</span>        ::CloseHandle(hRead);</div>
-<div class="line"><span class="lineno"> 2051</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno"> 2052</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 2053</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;UpdateProcThreadAttribute(HANDLE_LIST)&#39; Error:\n%1&quot;</span>)</div>
-<div class="line"><span class="lineno"> 2054</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
-<div class="line"><span class="lineno"> 2055</span>      }</div>
-<div class="line"><span class="lineno"> 2056</span> </div>
-<div class="line"><span class="lineno"> 2057</span>      <span class="comment">// Configure the child standard handles. STDIN comes from the pipe read handle;</span></div>
-<div class="line"><span class="lineno"> 2058</span>      <span class="comment">// STDOUT and STDERR go to NUL because the helper does not produce output.</span></div>
-<div class="line"><span class="lineno"> 2059</span>      STARTUPINFOEXW siex{};</div>
-<div class="line"><span class="lineno"> 2060</span>      siex.StartupInfo.cb = <span class="keyword">sizeof</span>(STARTUPINFOEXW);</div>
-<div class="line"><span class="lineno"> 2061</span>      siex.StartupInfo.dwFlags = STARTF_USESTDHANDLES;</div>
-<div class="line"><span class="lineno"> 2062</span>      siex.StartupInfo.hStdInput = hRead;</div>
-<div class="line"><span class="lineno"> 2063</span>      siex.StartupInfo.hStdOutput = hNull;</div>
-<div class="line"><span class="lineno"> 2064</span>      siex.StartupInfo.hStdError = hNull;</div>
-<div class="line"><span class="lineno"> 2065</span>      siex.lpAttributeList = attrList;</div>
-<div class="line"><span class="lineno"> 2066</span> </div>
-<div class="line"><span class="lineno"> 2067</span>      <span class="comment">// Receives the process and main-thread handles created by CreateProcessW().</span></div>
-<div class="line"><span class="lineno"> 2068</span>      PROCESS_INFORMATION pi{};</div>
-<div class="line"><span class="lineno"> 2069</span> </div>
-<div class="line"><span class="lineno"> 2070</span>      <span class="comment">// CreateProcessW may modify the command-line buffer, so pass a mutable copy.</span></div>
-<div class="line"><span class="lineno"> 2071</span>      std::wstring mutableCmd = cmdLine;</div>
-<div class="line"><span class="lineno"> 2072</span> </div>
-<div class="line"><span class="lineno"> 2073</span>      <span class="comment">// Start npiImpLog.exe with no window and with extended startup information.</span></div>
-<div class="line"><span class="lineno"> 2074</span>      <span class="comment">// bInheritHandles must be TRUE because the handle list controls inheritance.</span></div>
-<div class="line"><span class="lineno"> 2075</span>      <span class="keyword">const</span> BOOL ok = ::CreateProcessW(</div>
-<div class="line"><span class="lineno"> 2076</span>        impLogExePath.c_str(),</div>
-<div class="line"><span class="lineno"> 2077</span>        mutableCmd.data(),</div>
-<div class="line"><span class="lineno"> 2078</span>        <span class="keyword">nullptr</span>,</div>
-<div class="line"><span class="lineno"> 2079</span>        <span class="keyword">nullptr</span>,</div>
-<div class="line"><span class="lineno"> 2080</span>        TRUE, <span class="comment">// must be TRUE when using HANDLE_LIST attribute</span></div>
-<div class="line"><span class="lineno"> 2081</span>        CREATE_NO_WINDOW | EXTENDED_STARTUPINFO_PRESENT,</div>
-<div class="line"><span class="lineno"> 2082</span>        <span class="keyword">nullptr</span>,</div>
-<div class="line"><span class="lineno"> 2083</span>        <span class="keyword">nullptr</span>,</div>
-<div class="line"><span class="lineno"> 2084</span>        &amp;siex.StartupInfo,</div>
-<div class="line"><span class="lineno"> 2085</span>        &amp;pi);</div>
-<div class="line"><span class="lineno"> 2086</span> </div>
-<div class="line"><span class="lineno"> 2087</span>      <span class="comment">// Capture CreateProcessW failure immediately. Cleanup calls may overwrite the</span></div>
-<div class="line"><span class="lineno"> 2088</span>      <span class="comment">// thread&#39;s last-error value.</span></div>
-<div class="line"><span class="lineno"> 2089</span>      <span class="keyword">const</span> DWORD createProcErr = ok ? ERROR_SUCCESS : ::GetLastError();</div>
-<div class="line"><span class="lineno"> 2090</span> </div>
-<div class="line"><span class="lineno"> 2091</span>      <span class="comment">// The attribute list is needed only during CreateProcessW. After the child is</span></div>
-<div class="line"><span class="lineno"> 2092</span>      <span class="comment">// created or creation has failed, it can be destroyed and freed.</span></div>
-<div class="line"><span class="lineno"> 2093</span>      ::DeleteProcThreadAttributeList(attrList);</div>
-<div class="line"><span class="lineno"> 2094</span>      ::HeapFree(::GetProcessHeap(), 0, attrList);</div>
+<div class="line"><span class="lineno"> 2032</span>          QStringLiteral(</div>
+<div class="line"><span class="lineno"> 2033</span>            <span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;InitializeProcThreadAttributeList&#39; (get size) Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2034</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(attrSizeErr))));</div>
+<div class="line"><span class="lineno"> 2035</span>      }</div>
+<div class="line"><span class="lineno"> 2036</span> </div>
+<div class="line"><span class="lineno"> 2037</span>      <span class="comment">// Allocate the attribute-list buffer using the process heap because Windows</span></div>
+<div class="line"><span class="lineno"> 2038</span>      <span class="comment">// owns the internal layout of this structure. It is later released with</span></div>
+<div class="line"><span class="lineno"> 2039</span>      <span class="comment">// HeapFree().</span></div>
+<div class="line"><span class="lineno"> 2040</span>      <span class="keyword">auto</span>* attrList = <span class="keyword">static_cast&lt;</span>LPPROC_THREAD_ATTRIBUTE_LIST<span class="keyword">&gt;</span>(</div>
+<div class="line"><span class="lineno"> 2041</span>        ::HeapAlloc(::GetProcessHeap(), 0, attrListBytes));</div>
+<div class="line"><span class="lineno"> 2042</span> </div>
+<div class="line"><span class="lineno"> 2043</span>      <span class="keywordflow">if</span> (!attrList) {</div>
+<div class="line"><span class="lineno"> 2044</span>        ::CloseHandle(hNull);</div>
+<div class="line"><span class="lineno"> 2045</span>        ::CloseHandle(hRead);</div>
+<div class="line"><span class="lineno"> 2046</span>        ::CloseHandle(hWrite);</div>
+<div class="line"><span class="lineno"> 2047</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;HeapAlloc&#39; failed for attribute list&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2048</span>      }</div>
+<div class="line"><span class="lineno"> 2049</span> </div>
+<div class="line"><span class="lineno"> 2050</span>      <span class="comment">// Initialize the allocated attribute list. This prepares the buffer so it can</span></div>
+<div class="line"><span class="lineno"> 2051</span>      <span class="comment">// receive attributes such as the explicit handle inheritance list.</span></div>
+<div class="line"><span class="lineno"> 2052</span>      <span class="keywordflow">if</span> (!::InitializeProcThreadAttributeList(attrList, 1, 0, &amp;attrListBytes)) {</div>
+<div class="line"><span class="lineno"> 2053</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 2054</span>        ::HeapFree(::GetProcessHeap(), 0, attrList);</div>
+<div class="line"><span class="lineno"> 2055</span>        ::CloseHandle(hNull);</div>
+<div class="line"><span class="lineno"> 2056</span>        ::CloseHandle(hRead);</div>
+<div class="line"><span class="lineno"> 2057</span>        ::CloseHandle(hWrite);</div>
+<div class="line"><span class="lineno"> 2058</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 2059</span>          QStringLiteral(</div>
+<div class="line"><span class="lineno"> 2060</span>            <span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;InitializeProcThreadAttributeList&#39; Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2061</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
+<div class="line"><span class="lineno"> 2062</span>      }</div>
+<div class="line"><span class="lineno"> 2063</span> </div>
+<div class="line"><span class="lineno"> 2064</span>      <span class="comment">// Restrict child handle inheritance to hRead and hNull only. This prevents the</span></div>
+<div class="line"><span class="lineno"> 2065</span>      <span class="comment">// child from inheriting unrelated handles, especially the pipe write handle.</span></div>
+<div class="line"><span class="lineno"> 2066</span>      <span class="keywordflow">if</span> (!::UpdateProcThreadAttribute(</div>
+<div class="line"><span class="lineno"> 2067</span>        attrList,</div>
+<div class="line"><span class="lineno"> 2068</span>        0,</div>
+<div class="line"><span class="lineno"> 2069</span>        PROC_THREAD_ATTRIBUTE_HANDLE_LIST,</div>
+<div class="line"><span class="lineno"> 2070</span>        <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(inheritList),</div>
+<div class="line"><span class="lineno"> 2071</span>        <span class="keyword">sizeof</span>(inheritList),</div>
+<div class="line"><span class="lineno"> 2072</span>        <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno"> 2073</span>        <span class="keyword">nullptr</span>)) {</div>
+<div class="line"><span class="lineno"> 2074</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 2075</span>        ::DeleteProcThreadAttributeList(attrList);</div>
+<div class="line"><span class="lineno"> 2076</span>        ::HeapFree(::GetProcessHeap(), 0, attrList);</div>
+<div class="line"><span class="lineno"> 2077</span>        ::CloseHandle(hNull);</div>
+<div class="line"><span class="lineno"> 2078</span>        ::CloseHandle(hRead);</div>
+<div class="line"><span class="lineno"> 2079</span>        ::CloseHandle(hWrite);</div>
+<div class="line"><span class="lineno"> 2080</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 2081</span>          QStringLiteral(</div>
+<div class="line"><span class="lineno"> 2082</span>            <span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;UpdateProcThreadAttribute(HANDLE_LIST)&#39; Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2083</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
+<div class="line"><span class="lineno"> 2084</span>      }</div>
+<div class="line"><span class="lineno"> 2085</span> </div>
+<div class="line"><span class="lineno"> 2086</span>      <span class="comment">// Configure the child standard handles. STDIN comes from the pipe read handle;</span></div>
+<div class="line"><span class="lineno"> 2087</span>      <span class="comment">// STDOUT and STDERR go to NUL because the helper does not produce output.</span></div>
+<div class="line"><span class="lineno"> 2088</span>      STARTUPINFOEXW siex{};</div>
+<div class="line"><span class="lineno"> 2089</span>      siex.StartupInfo.cb = <span class="keyword">sizeof</span>(STARTUPINFOEXW);</div>
+<div class="line"><span class="lineno"> 2090</span>      siex.StartupInfo.dwFlags = STARTF_USESTDHANDLES;</div>
+<div class="line"><span class="lineno"> 2091</span>      siex.StartupInfo.hStdInput = hRead;</div>
+<div class="line"><span class="lineno"> 2092</span>      siex.StartupInfo.hStdOutput = hNull;</div>
+<div class="line"><span class="lineno"> 2093</span>      siex.StartupInfo.hStdError = hNull;</div>
+<div class="line"><span class="lineno"> 2094</span>      siex.lpAttributeList = attrList;</div>
 <div class="line"><span class="lineno"> 2095</span> </div>
-<div class="line"><span class="lineno"> 2096</span>      <span class="keywordflow">if</span>(!ok) {</div>
-<div class="line"><span class="lineno"> 2097</span>        ::CloseHandle(hNull);</div>
-<div class="line"><span class="lineno"> 2098</span>        ::CloseHandle(hRead);</div>
-<div class="line"><span class="lineno"> 2099</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno"> 2100</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 2101</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;CreateProcessW&#39; Error:\n%1&quot;</span>)</div>
-<div class="line"><span class="lineno"> 2102</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(createProcErr))));</div>
-<div class="line"><span class="lineno"> 2103</span>      }</div>
-<div class="line"><span class="lineno"> 2104</span> </div>
-<div class="line"><span class="lineno"> 2105</span>      <span class="comment">// The parent keeps only the child process handle and the pipe write handle.</span></div>
-<div class="line"><span class="lineno"> 2106</span>      <span class="comment">// hRead and hNull belong only to the child side after process creation.</span></div>
-<div class="line"><span class="lineno"> 2107</span>      ::CloseHandle(hNull);</div>
-<div class="line"><span class="lineno"> 2108</span>      ::CloseHandle(hRead);</div>
-<div class="line"><span class="lineno"> 2109</span>      ::CloseHandle(pi.hThread);</div>
-<div class="line"><span class="lineno"> 2110</span> </div>
-<div class="line"><span class="lineno"> 2111</span>      <span class="comment">// Detect immediate helper startup failure. In normal operation, the helper</span></div>
-<div class="line"><span class="lineno"> 2112</span>      <span class="comment">// waits on STDIN and this short wait times out.</span></div>
-<div class="line"><span class="lineno"> 2113</span>      <span class="keyword">const</span> DWORD waitResult = ::WaitForSingleObject(pi.hProcess, 250);</div>
-<div class="line"><span class="lineno"> 2114</span>      <span class="keywordflow">if</span>(waitResult == WAIT_FAILED) {</div>
-<div class="line"><span class="lineno"> 2115</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
-<div class="line"><span class="lineno"> 2116</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 2117</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;WaitForSingleObject&#39; Error:\n%1&quot;</span>)</div>
-<div class="line"><span class="lineno"> 2118</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
-<div class="line"><span class="lineno"> 2119</span>      }</div>
-<div class="line"><span class="lineno"> 2120</span> </div>
-<div class="line"><span class="lineno"> 2121</span>      <span class="comment">// If the helper already exited, treat it as startup failure and report its</span></div>
-<div class="line"><span class="lineno"> 2122</span>      <span class="comment">// npiImpLog-specific exit code.</span></div>
-<div class="line"><span class="lineno"> 2123</span>      <span class="keywordflow">if</span>(waitResult == WAIT_OBJECT_0) {</div>
-<div class="line"><span class="lineno"> 2124</span>        DWORD code = 0;</div>
-<div class="line"><span class="lineno"> 2125</span>        (void)::GetExitCodeProcess(pi.hProcess, &amp;code);</div>
-<div class="line"><span class="lineno"> 2126</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
-<div class="line"><span class="lineno"> 2127</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nnpiImpLog.exe returned %1:\n%2&quot;</span>)</div>
-<div class="line"><span class="lineno"> 2128</span>         .arg(<span class="keyword">static_cast&lt;</span>qulonglong<span class="keyword">&gt;</span>(code))</div>
-<div class="line"><span class="lineno"> 2129</span>         .arg(<a class="code hl_function" href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">processExitText</a>(code)));</div>
-<div class="line"><span class="lineno"> 2130</span>      }</div>
-<div class="line"><span class="lineno"> 2131</span> </div>
-<div class="line"><span class="lineno"> 2132</span>      <span class="comment">// Acquire the pipe lock so that normal messages wait. Then check if</span></div>
-<div class="line"><span class="lineno"> 2133</span>      <span class="comment">// fatal or crash is not in progress before proceeding to replace the handles.</span></div>
-<div class="line"><span class="lineno"> 2134</span> </div>
-<div class="line"><span class="lineno"> 2135</span>      ::AcquireSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
-<div class="line"><span class="lineno"> 2136</span> </div>
-<div class="line"><span class="lineno"> 2137</span>      HANDLE hProcessOld = leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">hProcess_</a>;</div>
-<div class="line"><span class="lineno"> 2138</span>      HANDLE hLogPipeOld = leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a>;</div>
+<div class="line"><span class="lineno"> 2096</span>      <span class="comment">// Receives the process and main-thread handles created by CreateProcessW().</span></div>
+<div class="line"><span class="lineno"> 2097</span>      PROCESS_INFORMATION pi{};</div>
+<div class="line"><span class="lineno"> 2098</span> </div>
+<div class="line"><span class="lineno"> 2099</span>      <span class="comment">// CreateProcessW may modify the command-line buffer, so pass a mutable copy.</span></div>
+<div class="line"><span class="lineno"> 2100</span>      std::wstring mutableCmd = cmdLine;</div>
+<div class="line"><span class="lineno"> 2101</span> </div>
+<div class="line"><span class="lineno"> 2102</span>      <span class="comment">// Start npiImpLog.exe with no window and with extended startup information.</span></div>
+<div class="line"><span class="lineno"> 2103</span>      <span class="comment">// bInheritHandles must be TRUE because the handle list controls inheritance.</span></div>
+<div class="line"><span class="lineno"> 2104</span>      <span class="keyword">const</span> BOOL ok = ::CreateProcessW(</div>
+<div class="line"><span class="lineno"> 2105</span>        impLogExePath.c_str(),</div>
+<div class="line"><span class="lineno"> 2106</span>        mutableCmd.data(),</div>
+<div class="line"><span class="lineno"> 2107</span>        <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno"> 2108</span>        <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno"> 2109</span>        TRUE, <span class="comment">// must be TRUE when using HANDLE_LIST attribute</span></div>
+<div class="line"><span class="lineno"> 2110</span>        CREATE_NO_WINDOW | EXTENDED_STARTUPINFO_PRESENT,</div>
+<div class="line"><span class="lineno"> 2111</span>        <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno"> 2112</span>        <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno"> 2113</span>        &amp;siex.StartupInfo,</div>
+<div class="line"><span class="lineno"> 2114</span>        &amp;pi);</div>
+<div class="line"><span class="lineno"> 2115</span> </div>
+<div class="line"><span class="lineno"> 2116</span>      <span class="comment">// Capture CreateProcessW failure immediately. Cleanup calls may overwrite the</span></div>
+<div class="line"><span class="lineno"> 2117</span>      <span class="comment">// thread&#39;s last-error value.</span></div>
+<div class="line"><span class="lineno"> 2118</span>      <span class="keyword">const</span> DWORD createProcErr = ok ? ERROR_SUCCESS : ::GetLastError();</div>
+<div class="line"><span class="lineno"> 2119</span> </div>
+<div class="line"><span class="lineno"> 2120</span>      <span class="comment">// The attribute list is needed only during CreateProcessW. After the child is</span></div>
+<div class="line"><span class="lineno"> 2121</span>      <span class="comment">// created or creation has failed, it can be destroyed and freed.</span></div>
+<div class="line"><span class="lineno"> 2122</span>      ::DeleteProcThreadAttributeList(attrList);</div>
+<div class="line"><span class="lineno"> 2123</span>      ::HeapFree(::GetProcessHeap(), 0, attrList);</div>
+<div class="line"><span class="lineno"> 2124</span> </div>
+<div class="line"><span class="lineno"> 2125</span>      <span class="keywordflow">if</span> (!ok) {</div>
+<div class="line"><span class="lineno"> 2126</span>        ::CloseHandle(hNull);</div>
+<div class="line"><span class="lineno"> 2127</span>        ::CloseHandle(hRead);</div>
+<div class="line"><span class="lineno"> 2128</span>        ::CloseHandle(hWrite);</div>
+<div class="line"><span class="lineno"> 2129</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 2130</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;CreateProcessW&#39; Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2131</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(createProcErr))));</div>
+<div class="line"><span class="lineno"> 2132</span>      }</div>
+<div class="line"><span class="lineno"> 2133</span> </div>
+<div class="line"><span class="lineno"> 2134</span>      <span class="comment">// The parent keeps only the child process handle and the pipe write handle.</span></div>
+<div class="line"><span class="lineno"> 2135</span>      <span class="comment">// hRead and hNull belong only to the child side after process creation.</span></div>
+<div class="line"><span class="lineno"> 2136</span>      ::CloseHandle(hNull);</div>
+<div class="line"><span class="lineno"> 2137</span>      ::CloseHandle(hRead);</div>
+<div class="line"><span class="lineno"> 2138</span>      ::CloseHandle(pi.hThread);</div>
 <div class="line"><span class="lineno"> 2139</span> </div>
-<div class="line"><span class="lineno"> 2140</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> crashing =</div>
-<div class="line"><span class="lineno"> 2141</span>      ::InterlockedCompareExchange(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6">crash_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa86ec3715622a7a47c91d45641cc65ef">crashing_</a>, 0, 0) != 0;</div>
-<div class="line"><span class="lineno"> 2142</span> </div>
-<div class="line"><span class="lineno"> 2143</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> fatalLog =</div>
-<div class="line"><span class="lineno"> 2144</span>      leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6">crash_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a3c86372a5b3448a7b1de1c99ade51911">fatalOwnerThreadId_</a>.load(std::memory_order_acquire) != 0u;</div>
-<div class="line"><span class="lineno"> 2145</span> </div>
-<div class="line"><span class="lineno"> 2146</span>      <span class="comment">// Acquiring hold is important because fatal and crash messages acquire it before</span></div>
-<div class="line"><span class="lineno"> 2147</span>      <span class="comment">// sending message to important log process. In case here we are unable to acquire</span></div>
-<div class="line"><span class="lineno"> 2148</span>      <span class="comment">// hold then it means that fatal or crash is already in progress and there is no</span></div>
-<div class="line"><span class="lineno"> 2149</span>      <span class="comment">// point in starting the new important log process since the application is going</span></div>
-<div class="line"><span class="lineno"> 2150</span>      <span class="comment">// to terminate very soon.</span></div>
-<div class="line"><span class="lineno"> 2151</span>      <span class="keywordflow">if</span>(<span class="keywordtype">bool</span> expected = <span class="keyword">false</span>; crashing || fatalLog || !leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.compare_exchange_strong(expected, <span class="keyword">true</span>, std::memory_order_acq_rel)) {</div>
-<div class="line"><span class="lineno"> 2152</span>        ::ReleaseSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
-<div class="line"><span class="lineno"> 2153</span>        ::CloseHandle(hWrite);</div>
-<div class="line"><span class="lineno"> 2154</span>        ::CloseHandle(pi.hProcess);</div>
-<div class="line"><span class="lineno"> 2155</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 2156</span>      }</div>
-<div class="line"><span class="lineno"> 2157</span> </div>
-<div class="line"><span class="lineno"> 2158</span>      leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">hProcess_</a> = pi.hProcess;</div>
-<div class="line"><span class="lineno"> 2159</span>      leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a> = hWrite;</div>
+<div class="line"><span class="lineno"> 2140</span>      <span class="comment">// Detect immediate helper startup failure. In normal operation, the helper</span></div>
+<div class="line"><span class="lineno"> 2141</span>      <span class="comment">// waits on STDIN and this short wait times out.</span></div>
+<div class="line"><span class="lineno"> 2142</span>      <span class="keyword">const</span> DWORD waitResult = ::WaitForSingleObject(pi.hProcess, 250);</div>
+<div class="line"><span class="lineno"> 2143</span>      <span class="keywordflow">if</span> (waitResult == WAIT_FAILED) {</div>
+<div class="line"><span class="lineno"> 2144</span>        <span class="keyword">const</span> DWORD err = ::GetLastError();</div>
+<div class="line"><span class="lineno"> 2145</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 2146</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\n&#39;WaitForSingleObject&#39; Error:\n%1&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2147</span>         .arg(QString::fromStdWString(<a class="code hl_function" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText</a>(err))));</div>
+<div class="line"><span class="lineno"> 2148</span>      }</div>
+<div class="line"><span class="lineno"> 2149</span> </div>
+<div class="line"><span class="lineno"> 2150</span>      <span class="comment">// If the helper already exited, treat it as startup failure and report its</span></div>
+<div class="line"><span class="lineno"> 2151</span>      <span class="comment">// npiImpLog-specific exit code.</span></div>
+<div class="line"><span class="lineno"> 2152</span>      <span class="keywordflow">if</span> (waitResult == WAIT_OBJECT_0) {</div>
+<div class="line"><span class="lineno"> 2153</span>        DWORD code = 0;</div>
+<div class="line"><span class="lineno"> 2154</span>        (void)::GetExitCodeProcess(pi.hProcess, &amp;code);</div>
+<div class="line"><span class="lineno"> 2155</span>        <a class="code hl_function" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe</a>(</div>
+<div class="line"><span class="lineno"> 2156</span>          QStringLiteral(<span class="stringliteral">&quot;Fatal Error:\nStart Imp Log Process Failed.\n\nnpiImpLog.exe returned %1:\n%2&quot;</span>)</div>
+<div class="line"><span class="lineno"> 2157</span>         .arg(<span class="keyword">static_cast&lt;</span>qulonglong<span class="keyword">&gt;</span>(code))</div>
+<div class="line"><span class="lineno"> 2158</span>         .arg(<a class="code hl_function" href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">processExitText</a>(code)));</div>
+<div class="line"><span class="lineno"> 2159</span>      }</div>
 <div class="line"><span class="lineno"> 2160</span> </div>
-<div class="line"><span class="lineno"> 2161</span>      <span class="comment">// Close previous handles</span></div>
-<div class="line"><span class="lineno"> 2162</span> </div>
-<div class="line"><span class="lineno"> 2163</span>      <span class="keywordflow">if</span>(hLogPipeOld != <span class="keyword">nullptr</span> &amp;&amp; hLogPipeOld != INVALID_HANDLE_VALUE)</div>
-<div class="line"><span class="lineno"> 2164</span>        ::CloseHandle(hLogPipeOld);</div>
+<div class="line"><span class="lineno"> 2161</span>      <span class="comment">// Acquire the pipe lock so that normal messages wait. Then check if</span></div>
+<div class="line"><span class="lineno"> 2162</span>      <span class="comment">// fatal or crash is not in progress before proceeding to replace the handles.</span></div>
+<div class="line"><span class="lineno"> 2163</span> </div>
+<div class="line"><span class="lineno"> 2164</span>      ::AcquireSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
 <div class="line"><span class="lineno"> 2165</span> </div>
-<div class="line"><span class="lineno"> 2166</span>      <span class="keywordflow">if</span>(hProcessOld != <span class="keyword">nullptr</span> &amp;&amp; hProcessOld != INVALID_HANDLE_VALUE)</div>
-<div class="line"><span class="lineno"> 2167</span>        ::CloseHandle(hProcessOld);</div>
+<div class="line"><span class="lineno"> 2166</span>      HANDLE hProcessOld = leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">hProcess_</a>;</div>
+<div class="line"><span class="lineno"> 2167</span>      HANDLE hLogPipeOld = leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a>;</div>
 <div class="line"><span class="lineno"> 2168</span> </div>
-<div class="line"><span class="lineno"> 2169</span>      <span class="comment">// Set the hold to false so that fatal and crash can proceed safely</span></div>
-<div class="line"><span class="lineno"> 2170</span>      leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 2169</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> crashing =</div>
+<div class="line"><span class="lineno"> 2170</span>        ::InterlockedCompareExchange(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6">crash_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa86ec3715622a7a47c91d45641cc65ef">crashing_</a>, 0, 0) != 0;</div>
 <div class="line"><span class="lineno"> 2171</span> </div>
-<div class="line"><span class="lineno"> 2172</span>      <span class="comment">// Release the pipe lock to allow normal messages to go to important log process if needed.</span></div>
-<div class="line"><span class="lineno"> 2173</span>      ::ReleaseSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
-<div class="line"><span class="lineno"> 2174</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1bridge_html_ae8d0e12dcebf85fb9c88a985e424e5f3"><div class="ttname"><a href="#ae8d0e12dcebf85fb9c88a985e424e5f3">anonymous_namespace{Log.cpp}::bridge::filePathMaxLen</a></div><div class="ttdeci">constexpr size_t filePathMaxLen</div><div class="ttdoc">Max length for file path, 4096 is generous but safe.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01838">Log.cpp:1838</a></div></div>
+<div class="line"><span class="lineno"> 2172</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> fatalLog =</div>
+<div class="line"><span class="lineno"> 2173</span>        leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6">crash_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a3c86372a5b3448a7b1de1c99ade51911">fatalOwnerThreadId_</a>.load(std::memory_order_acquire) != 0u;</div>
+<div class="line"><span class="lineno"> 2174</span> </div>
+<div class="line"><span class="lineno"> 2175</span>      <span class="comment">// Acquiring hold is important because fatal and crash messages acquire it before</span></div>
+<div class="line"><span class="lineno"> 2176</span>      <span class="comment">// sending message to important log process. In case here we are unable to acquire</span></div>
+<div class="line"><span class="lineno"> 2177</span>      <span class="comment">// hold then it means that fatal or crash is already in progress and there is no</span></div>
+<div class="line"><span class="lineno"> 2178</span>      <span class="comment">// point in starting the new important log process since the application is going</span></div>
+<div class="line"><span class="lineno"> 2179</span>      <span class="comment">// to terminate very soon.</span></div>
+<div class="line"><span class="lineno"> 2180</span>      <span class="keywordflow">if</span> (<span class="keywordtype">bool</span> expected = <span class="keyword">false</span>; crashing || fatalLog || !leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.compare_exchange_strong(</div>
+<div class="line"><span class="lineno"> 2181</span>                                   expected, <span class="keyword">true</span>, std::memory_order_acq_rel)) {</div>
+<div class="line"><span class="lineno"> 2182</span>        ::ReleaseSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
+<div class="line"><span class="lineno"> 2183</span>        ::CloseHandle(hWrite);</div>
+<div class="line"><span class="lineno"> 2184</span>        ::CloseHandle(pi.hProcess);</div>
+<div class="line"><span class="lineno"> 2185</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2186</span>      }</div>
+<div class="line"><span class="lineno"> 2187</span> </div>
+<div class="line"><span class="lineno"> 2188</span>      leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">hProcess_</a> = pi.hProcess;</div>
+<div class="line"><span class="lineno"> 2189</span>      leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">hLogPipe_</a> = hWrite;</div>
+<div class="line"><span class="lineno"> 2190</span> </div>
+<div class="line"><span class="lineno"> 2191</span>      <span class="comment">// Close previous handles</span></div>
+<div class="line"><span class="lineno"> 2192</span> </div>
+<div class="line"><span class="lineno"> 2193</span>      <span class="keywordflow">if</span> (hLogPipeOld != <span class="keyword">nullptr</span> &amp;&amp; hLogPipeOld != INVALID_HANDLE_VALUE)</div>
+<div class="line"><span class="lineno"> 2194</span>        ::CloseHandle(hLogPipeOld);</div>
+<div class="line"><span class="lineno"> 2195</span> </div>
+<div class="line"><span class="lineno"> 2196</span>      <span class="keywordflow">if</span> (hProcessOld != <span class="keyword">nullptr</span> &amp;&amp; hProcessOld != INVALID_HANDLE_VALUE)</div>
+<div class="line"><span class="lineno"> 2197</span>        ::CloseHandle(hProcessOld);</div>
+<div class="line"><span class="lineno"> 2198</span> </div>
+<div class="line"><span class="lineno"> 2199</span>      <span class="comment">// Set the hold to false so that fatal and crash can proceed safely</span></div>
+<div class="line"><span class="lineno"> 2200</span>      leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">hold_</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 2201</span> </div>
+<div class="line"><span class="lineno"> 2202</span>      <span class="comment">// Release the pipe lock to allow normal messages to go to important log process if needed.</span></div>
+<div class="line"><span class="lineno"> 2203</span>      ::ReleaseSRWLockExclusive(&amp;leaked.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">bridge_</a>.<a class="code hl_variable" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">pipeLock_</a>);</div>
+<div class="line"><span class="lineno"> 2204</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1bridge_html_ae8d0e12dcebf85fb9c88a985e424e5f3"><div class="ttname"><a href="#ae8d0e12dcebf85fb9c88a985e424e5f3">anonymous_namespace{Log.cpp}::bridge::filePathMaxLen</a></div><div class="ttdeci">constexpr size_t filePathMaxLen</div><div class="ttdoc">Max length for file path, 4096 is generous but safe.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01863">Log.cpp:1863</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1app_html_a40a2a28831f2f410c995f0657baf6544"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir</a></div><div class="ttdeci">const QString &amp; appProgramDataDir() noexcept</div><div class="ttdoc">Application ProgramData path: C:/ProgramData/[organization]/[Application].</div><div class="ttdef"><b>Definition</b> <a href="../../d3/dac/_meta_info_8cpp_source.html#l00141">MetaInfo.cpp:141</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a21dc7146586a77102d0e4da75f3191e6"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6">anonymous_namespace{Log.cpp}::LeakedState::crash_</a></div><div class="ttdeci">struct anonymous_namespace{Log.cpp}::LeakedState::CrashState crash_</div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a3c86372a5b3448a7b1de1c99ade51911"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a3c86372a5b3448a7b1de1c99ade51911">anonymous_namespace{Log.cpp}::LeakedState::CrashState::fatalOwnerThreadId_</a></div><div class="ttdeci">std::atomic_uint32_t fatalOwnerThreadId_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01618">Log.cpp:1618</a></div></div>
-<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_aa86ec3715622a7a47c91d45641cc65ef"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa86ec3715622a7a47c91d45641cc65ef">anonymous_namespace{Log.cpp}::LeakedState::CrashState::crashing_</a></div><div class="ttdeci">volatile LONG crashing_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01620">Log.cpp:1620</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a21dc7146586a77102d0e4da75f3191e6"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6">anonymous_namespace{Log.cpp}::LeakedState::crash_</a></div><div class="ttdeci">struct anonymous_namespace{Log.cpp}::LeakedState::CrashState crash_</div><div class="ttdoc">Stores crash ownership flags and allocation-free emergency buffers.</div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_a3c86372a5b3448a7b1de1c99ade51911"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a3c86372a5b3448a7b1de1c99ade51911">anonymous_namespace{Log.cpp}::LeakedState::CrashState::fatalOwnerThreadId_</a></div><div class="ttdeci">std::atomic_uint32_t fatalOwnerThreadId_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01639">Log.cpp:1639</a></div></div>
+<div class="ttc" id="astructanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_html_aa86ec3715622a7a47c91d45641cc65ef"><div class="ttname"><a href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa86ec3715622a7a47c91d45641cc65ef">anonymous_namespace{Log.cpp}::LeakedState::CrashState::crashing_</a></div><div class="ttdeci">volatile LONG crashing_</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l01641">Log.cpp:1641</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544">npi::app::appProgramDataDir()</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab2f0a8b193b9402be7cbb5eaa618353b">anonymous_namespace{Log.cpp}::LeakedState::bridge_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6">anonymous_namespace{Log.cpp}::LeakedState::crash_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa86ec3715622a7a47c91d45641cc65ef">anonymous_namespace{Log.cpp}::LeakedState::CrashState::crashing_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a3c86372a5b3448a7b1de1c99ade51911">anonymous_namespace{Log.cpp}::LeakedState::CrashState::fatalOwnerThreadId_</a>, <a class="el" href="#ae8d0e12dcebf85fb9c88a985e424e5f3">filePathMaxLen</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hLogPipe_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hold_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::hProcess_</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4">anonymous_namespace{Log.cpp}::LeakedState::Inst_()</a>, <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa51366d4eb149c9632b88a624e00d50b">anonymous_namespace{Log.cpp}::LeakedState::BridgeState::pipeLock_</a>, <a class="el" href="#a64e6b530b8b3e6eb1891bbb6df1dd11c">processExitText()</a>, <a class="el" href="#a60cf08a266458e16cf3c38b1b46f0cba">startProcess()</a>, <a class="el" href="../../da/d14/namespacenpi_1_1ind.html#a36235e7ddba2a265d60b240df5134019">npi::ind::winErrorText()</a>, and <a class="el" href="../../dc/dba/namespacenpi_1_1app.html#ab43cdd42223150fbfc70f9a9f02a9019">npi::app::winStopMsgExe()</a>.</p>
 
@@ -860,7 +866,7 @@ Here is the caller graph for this function:</div>
 
 <p>Max length for file path, 4096 is generous but safe. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01838">1838</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l01863">1863</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a60cf08a266458e16cf3c38b1b46f0cba">startProcess()</a>.</p>
 

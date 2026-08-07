@@ -6,7 +6,7 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="482,179,566,186,561,187,483,185"/>
 <area shape="rect" id="Node000004" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="828,5,1001,61"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="756,178,774,167,792,145,799,122,805,97,822,71,831,67,835,64,826,75,810,99,804,123,797,148,778,171,758,183"/>
-<area shape="rect" id="Node000006" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="824,85,1005,141"/>
+<area shape="rect" id="Node000006" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title="Allows the first thread to claim ownership in case of winStopMsgExe function call." alt="" coords="824,85,1005,141"/>
 <area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="735,178,775,167,846,143,841,145,777,172,736,183"/>
 <area shape="rect" id="Node000007" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="828,165,1001,221"/>
 <area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="775,191,823,193,818,194,776,196"/>

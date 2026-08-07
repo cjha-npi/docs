@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="Main project entry point.">
 <polygon fill="#999999" stroke="none" points="165,-74.5 41,-74.5 41,-55.25 165,-55.25 165,-74.5"/>
 <text xml:space="preserve" text-anchor="start" x="49" y="-61.05" font-family="Consolas" font-weight="bold" font-size="11.00">Main_Proj/Main.cpp</text>
 </a>
@@ -51,7 +51,7 @@
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:title=" ">
 <polygon fill="#e0e0e0" stroke="none" points="218,-19.25 106,-19.25 106,0 218,0 218,-19.25"/>
-<text xml:space="preserve" text-anchor="middle" x="162" y="-4.8" font-family="Consolas" font-size="11.00">npi/MainWindow.h</text>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-4.8" font-family="Consolas" font-size="11.00">src/MainWindow.h</text>
 </a>
 </g>
 </g>

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="Allows the first thread to claim ownership in case of winStopMsgExe function call.">
 <polygon fill="#999999" stroke="none" points="2498,-551.5 2134,-551.5 2134,-532.25 2498,-532.25 2498,-551.5"/>
 <text xml:space="preserve" text-anchor="start" x="2142" y="-538.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{WinMsgBoxExe::cpp}::claimStopOwnership</text>
 </a>
@@ -1015,7 +1015,7 @@
 <!-- Node41 -->
 <g id="Node000041" class="node">
 <title>Node41</title>
-<g id="a_Node000041"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" target="_top" xlink:title=" ">
+<g id="a_Node000041"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" target="_top" xlink:title="Private constructor so that only one instance of this class can be created using the static Inst_() f...">
 <polygon fill="white" stroke="none" points="974,-630.75 820,-630.75 820,-589 974,-589 974,-630.75"/>
 <text xml:space="preserve" text-anchor="start" x="828" y="-616.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="828" y="-605.05" font-family="Consolas" font-size="11.00">{Log::cpp}::LeakedState</text>

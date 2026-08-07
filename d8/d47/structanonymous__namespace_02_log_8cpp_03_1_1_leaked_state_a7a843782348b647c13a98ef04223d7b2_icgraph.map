@@ -1,5 +1,5 @@
 <map id="anonymous_namespace{Log::cpp}::LeakedState::LeakedState" name="anonymous_namespace{Log::cpp}::LeakedState::LeakedState">
-<area shape="rect" id="Node000001" title=" " alt="" coords="307,301,768,327"/>
+<area shape="rect" id="Node000001" title="Private constructor so that only one instance of this class can be created using the static Inst_() f..." alt="" coords="307,301,768,327"/>
 <area shape="rect" id="Node000002" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="25,5,239,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="521,296,482,246,422,176,346,104,303,72,257,45,232,33,230,28,260,40,306,67,349,100,426,173,487,242,526,296"/>
 <area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#ae641f0801f76d9024013c1d201b7d4fa" title="Restores the default displayed log fields." alt="" coords="9,55,255,80"/>

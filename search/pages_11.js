@@ -20,7 +20,7 @@ var searchData=
   ['source_17',['Source',['../d2/d5a/dp_dh_rm_sys_graphs_dll_plugin_source.html',1,'DLL Plugin Source'],['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source',1,'Hide xrefitem Text at Source'],['../d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_source',1,'Parent Side Source']]],
   ['storage_18',['Browser Storage',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__browser_storage',1,'']]],
   ['stress_19',['Test: Extreme Stress',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_extreme_stress',1,'']]],
-  ['structure_20',['Structure',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__example_structure',1,'Example Structure'],['../index.html#autotoc_md3',1,'Project Structure'],['../d3/d4c/dp_dh_system_setup.html#dp_dh_system_setup__structure',1,'Structure']]],
+  ['structure_20',['Structure',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__example_structure',1,'Example Structure'],['../d3/d4c/dp_dh_system_setup.html#dp_dh_system_setup__structure',1,'Structure']]],
   ['studio_20setup_21',['Visual Studio Setup',['../d7/d3c/dp_dh_vs_setup.html',1,'dp_dh_dir_setups']]],
   ['style_22',['Naming Style',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__naming_style',1,'']]],
   ['switching_23',['Directory Validation and Switching',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__directory_validation_and_switching',1,'']]],

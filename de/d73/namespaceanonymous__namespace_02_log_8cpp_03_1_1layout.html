@@ -185,7 +185,7 @@ Variables</h2></td></tr>
 
 <p>Stores one unpacked field identifier for each supported field position. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02687">2687</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02722">2722</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -216,57 +216,57 @@ Variables</h2></td></tr>
 
 <p>Normalizes user field text and optionally publishes its packed layout. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02743">2743</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2744</span>    {</div>
-<div class="line"><span class="lineno"> 2745</span>      QList&lt;Field&gt; fields;</div>
-<div class="line"><span class="lineno"> 2746</span>      <span class="keyword">const</span> <span class="keyword">auto</span> strList = source.split(<span class="charliteral">&#39; &#39;</span>, Qt::SkipEmptyParts);</div>
-<div class="line"><span class="lineno"> 2747</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QString&amp; str : strList) {</div>
-<div class="line"><span class="lineno"> 2748</span>        <span class="keyword">const</span> <span class="keyword">auto</span> field = magic_enum::enum_cast&lt;Field&gt;(str.toStdString(),</div>
-<div class="line"><span class="lineno"> 2749</span>                                                        magic_enum::case_insensitive);</div>
-<div class="line"><span class="lineno"> 2750</span>        <span class="keywordflow">if</span>(field &amp;&amp; !fields.contains(*field))</div>
-<div class="line"><span class="lineno"> 2751</span>          fields.append(*field);</div>
-<div class="line"><span class="lineno"> 2752</span>      }</div>
-<div class="line"><span class="lineno"> 2753</span> </div>
-<div class="line"><span class="lineno"> 2754</span>      <span class="keywordflow">if</span>(fields.isEmpty()) {</div>
-<div class="line"><span class="lineno"> 2755</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_enumeration" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a> field : defFields) {</div>
-<div class="line"><span class="lineno"> 2756</span>          <span class="keyword">const</span> <span class="keyword">auto</span> val = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(field);</div>
-<div class="line"><span class="lineno"> 2757</span>          <span class="keywordflow">if</span>(val &gt;= <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a> || fields.contains(field)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 2758</span>          fields.append(field);</div>
-<div class="line"><span class="lineno"> 2759</span>        }</div>
-<div class="line"><span class="lineno"> 2760</span>      }</div>
-<div class="line"><span class="lineno"> 2761</span> </div>
-<div class="line"><span class="lineno"> 2762</span>      <span class="comment">// Final fallback, message is always added at the end when formatting</span></div>
-<div class="line"><span class="lineno"> 2763</span>      <span class="keywordflow">if</span>(fields.isEmpty()) fields &lt;&lt; <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">Field::Level</a>;</div>
-<div class="line"><span class="lineno"> 2764</span> </div>
-<div class="line"><span class="lineno"> 2765</span>      std::uint64_t packed = <a class="code hl_variable" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a3a3522ad525d65aa3ff98ce80c877b31">nullPackedFields</a>;</div>
-<div class="line"><span class="lineno"> 2766</span>      std::uint32_t index = 0u;</div>
-<div class="line"><span class="lineno"> 2767</span>      std::uint32_t seen = 0u;</div>
-<div class="line"><span class="lineno"> 2768</span> </div>
-<div class="line"><span class="lineno"> 2769</span>      <span class="comment">// We create the normalized packed layout always since it doesn&#39;t cost much</span></div>
-<div class="line"><span class="lineno"> 2770</span>      <span class="comment">// and publish it only when provided destination is not null.</span></div>
-<div class="line"><span class="lineno"> 2771</span> </div>
-<div class="line"><span class="lineno"> 2772</span>      QStringList normalized;</div>
-<div class="line"><span class="lineno"> 2773</span>      normalized.reserve(fields.size());</div>
-<div class="line"><span class="lineno"> 2774</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_enumeration" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a> field : fields) {</div>
-<div class="line"><span class="lineno"> 2775</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a> = magic_enum::enum_name(field);</div>
-<div class="line"><span class="lineno"> 2776</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.empty()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 2777</span>        <a class="code hl_function" href="#a2232d0647d1eb054474d09dca2ba633e">packField</a>(<span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(field), index, seen, packed);</div>
-<div class="line"><span class="lineno"> 2778</span>        normalized.append(QLatin1StringView{</div>
-<div class="line"><span class="lineno"> 2779</span>          <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.data(),</div>
-<div class="line"><span class="lineno"> 2780</span>          <span class="keyword">static_cast&lt;</span>qsizetype<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.size())</div>
-<div class="line"><span class="lineno"> 2781</span>        });</div>
-<div class="line"><span class="lineno"> 2782</span>      }</div>
-<div class="line"><span class="lineno"> 2783</span> </div>
-<div class="line"><span class="lineno"> 2784</span>      <span class="keywordflow">if</span>(destination != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno"> 2785</span>        destination-&gt;store(packed, std::memory_order_release);</div>
-<div class="line"><span class="lineno"> 2786</span> </div>
-<div class="line"><span class="lineno"> 2787</span>      <span class="keywordflow">return</span> normalized.join(<span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno"> 2788</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a07460c2a8adf32ac03fe1f8cb1b3603d"><div class="ttname"><a href="#a07460c2a8adf32ac03fe1f8cb1b3603d">anonymous_namespace{Log.cpp}::layout::maxFields</a></div><div class="ttdeci">constexpr std::uint32_t maxFields</div><div class="ttdoc">maximum number of fields, depends on Field enum size</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02675">Log.cpp:2675</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a2232d0647d1eb054474d09dca2ba633e"><div class="ttname"><a href="#a2232d0647d1eb054474d09dca2ba633e">anonymous_namespace{Log.cpp}::layout::packField</a></div><div class="ttdeci">void packField(std::uint8_t field, std::uint32_t &amp;index, std::uint32_t &amp;seen, std::uint64_t &amp;destination) noexcept</div><div class="ttdoc">Packs one unique field into the next four-bit layout slot.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02690">Log.cpp:2690</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_a3a3522ad525d65aa3ff98ce80c877b31"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a3a3522ad525d65aa3ff98ce80c877b31">anonymous_namespace{Log.cpp}::nullPackedFields</a></div><div class="ttdeci">constexpr std::uint64_t nullPackedFields</div><div class="ttdoc">Sentinel used before a worker field layout has been published.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00170">Log.cpp:170</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0d"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">anonymous_namespace{Log.cpp}::Field</a></div><div class="ttdeci">Field</div><div class="ttdoc">Identifies a field that can be included in formatted log output.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00189">Log.cpp:189</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">anonymous_namespace{Log.cpp}::Field::Level</a></div><div class="ttdeci">@ Level</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00192">Log.cpp:192</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02778">2778</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2780</span>    {</div>
+<div class="line"><span class="lineno"> 2781</span>      QList&lt;Field&gt; fields;</div>
+<div class="line"><span class="lineno"> 2782</span>      <span class="keyword">const</span> <span class="keyword">auto</span> strList = source.split(<span class="charliteral">&#39; &#39;</span>, Qt::SkipEmptyParts);</div>
+<div class="line"><span class="lineno"> 2783</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> QString&amp; str : strList) {</div>
+<div class="line"><span class="lineno"> 2784</span>        <span class="keyword">const</span> <span class="keyword">auto</span> field = magic_enum::enum_cast&lt;Field&gt;(str.toStdString(),</div>
+<div class="line"><span class="lineno"> 2785</span>                                                        magic_enum::case_insensitive);</div>
+<div class="line"><span class="lineno"> 2786</span>        <span class="keywordflow">if</span> (field &amp;&amp; !fields.contains(*field))</div>
+<div class="line"><span class="lineno"> 2787</span>          fields.append(*field);</div>
+<div class="line"><span class="lineno"> 2788</span>      }</div>
+<div class="line"><span class="lineno"> 2789</span> </div>
+<div class="line"><span class="lineno"> 2790</span>      <span class="keywordflow">if</span> (fields.isEmpty()) {</div>
+<div class="line"><span class="lineno"> 2791</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_enumeration" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a> field : defFields) {</div>
+<div class="line"><span class="lineno"> 2792</span>          <span class="keyword">const</span> <span class="keyword">auto</span> val = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(field);</div>
+<div class="line"><span class="lineno"> 2793</span>          <span class="keywordflow">if</span> (val &gt;= <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a> || fields.contains(field)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2794</span>          fields.append(field);</div>
+<div class="line"><span class="lineno"> 2795</span>        }</div>
+<div class="line"><span class="lineno"> 2796</span>      }</div>
+<div class="line"><span class="lineno"> 2797</span> </div>
+<div class="line"><span class="lineno"> 2798</span>      <span class="comment">// Final fallback, message is always added at the end when formatting</span></div>
+<div class="line"><span class="lineno"> 2799</span>      <span class="keywordflow">if</span> (fields.isEmpty()) fields &lt;&lt; <a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">Field::Level</a>;</div>
+<div class="line"><span class="lineno"> 2800</span> </div>
+<div class="line"><span class="lineno"> 2801</span>      std::uint64_t packed = <a class="code hl_variable" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a3a3522ad525d65aa3ff98ce80c877b31">nullPackedFields</a>;</div>
+<div class="line"><span class="lineno"> 2802</span>      std::uint32_t index = 0u;</div>
+<div class="line"><span class="lineno"> 2803</span>      std::uint32_t seen = 0u;</div>
+<div class="line"><span class="lineno"> 2804</span> </div>
+<div class="line"><span class="lineno"> 2805</span>      <span class="comment">// We create the normalized packed layout always since it doesn&#39;t cost much</span></div>
+<div class="line"><span class="lineno"> 2806</span>      <span class="comment">// and publish it only when provided destination is not null.</span></div>
+<div class="line"><span class="lineno"> 2807</span> </div>
+<div class="line"><span class="lineno"> 2808</span>      QStringList normalized;</div>
+<div class="line"><span class="lineno"> 2809</span>      normalized.reserve(fields.size());</div>
+<div class="line"><span class="lineno"> 2810</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_enumeration" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a> field : fields) {</div>
+<div class="line"><span class="lineno"> 2811</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a> = magic_enum::enum_name(field);</div>
+<div class="line"><span class="lineno"> 2812</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.empty()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2813</span>        <a class="code hl_function" href="#a2232d0647d1eb054474d09dca2ba633e">packField</a>(<span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(field), index, seen, packed);</div>
+<div class="line"><span class="lineno"> 2814</span>        normalized.append(QLatin1StringView{</div>
+<div class="line"><span class="lineno"> 2815</span>          <a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.data(),</div>
+<div class="line"><span class="lineno"> 2816</span>          <span class="keyword">static_cast&lt;</span>qsizetype<span class="keyword">&gt;</span>(<a class="code hl_variable" href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">name</a>.size())</div>
+<div class="line"><span class="lineno"> 2817</span>        });</div>
+<div class="line"><span class="lineno"> 2818</span>      }</div>
+<div class="line"><span class="lineno"> 2819</span> </div>
+<div class="line"><span class="lineno"> 2820</span>      <span class="keywordflow">if</span> (destination != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 2821</span>        destination-&gt;store(packed, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 2822</span> </div>
+<div class="line"><span class="lineno"> 2823</span>      <span class="keywordflow">return</span> normalized.join(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno"> 2824</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a07460c2a8adf32ac03fe1f8cb1b3603d"><div class="ttname"><a href="#a07460c2a8adf32ac03fe1f8cb1b3603d">anonymous_namespace{Log.cpp}::layout::maxFields</a></div><div class="ttdeci">constexpr std::uint32_t maxFields</div><div class="ttdoc">maximum number of fields, depends on Field enum size</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02708">Log.cpp:2708</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a2232d0647d1eb054474d09dca2ba633e"><div class="ttname"><a href="#a2232d0647d1eb054474d09dca2ba633e">anonymous_namespace{Log.cpp}::layout::packField</a></div><div class="ttdeci">void packField(std::uint8_t field, std::uint32_t &amp;index, std::uint32_t &amp;seen, std::uint64_t &amp;destination) noexcept</div><div class="ttdoc">Packs one unique field into the next four-bit layout slot.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02725">Log.cpp:2725</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_a3a3522ad525d65aa3ff98ce80c877b31"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a3a3522ad525d65aa3ff98ce80c877b31">anonymous_namespace{Log.cpp}::nullPackedFields</a></div><div class="ttdeci">constexpr std::uint64_t nullPackedFields</div><div class="ttdoc">Sentinel used before a worker field layout has been published.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00171">Log.cpp:171</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0d"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">anonymous_namespace{Log.cpp}::Field</a></div><div class="ttdeci">Field</div><div class="ttdoc">Identifies a field that can be included in formatted log output.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00190">Log.cpp:190</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">anonymous_namespace{Log.cpp}::Field::Level</a></div><div class="ttdeci">@ Level</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00193">Log.cpp:193</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1app_html_ac99e931bbefcb61feb46dba0819e996a"><div class="ttname"><a href="../../dc/dba/namespacenpi_1_1app.html#ac99e931bbefcb61feb46dba0819e996a">npi::app::name</a></div><div class="ttdeci">constexpr QLatin1StringView name</div><div class="ttdoc">Application name.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d0d/_meta_info_8h_source.html#l00040">MetaInfo.h:40</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">anonymous_namespace{Log.cpp}::Level</a>, <a class="el" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>, <a class="el" href="#a2f8305be7a08f7bd6252a3d9cc9a074c">normalizeAndPackFields()</a>, <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a3a3522ad525d65aa3ff98ce80c877b31">anonymous_namespace{Log.cpp}::nullPackedFields</a>, and <a class="el" href="#a2232d0647d1eb054474d09dca2ba633e">packField()</a>.</p>
@@ -324,37 +324,37 @@ Here is the caller graph for this function:</div>
 
 <p>Packs one unique field into the next four-bit layout slot. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02690">2690</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2691</span>    {</div>
-<div class="line"><span class="lineno"> 2692</span>      <span class="keywordflow">if</span>(index &gt;= <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a> || field &gt;= <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 2693</span> </div>
-<div class="line"><span class="lineno"> 2694</span>      <span class="keyword">const</span> std::uint32_t curPos = 1u &lt;&lt; field; <span class="comment">// set the bit for current field</span></div>
-<div class="line"><span class="lineno"> 2695</span>      <span class="keywordflow">if</span>((seen &amp; curPos) != 0u) <span class="keywordflow">return</span>;         <span class="comment">// bitwise AND checks if that bit is already present in seen</span></div>
-<div class="line"><span class="lineno"> 2696</span>      seen |= curPos;                           <span class="comment">// bitwise OR sets the bit in seen for next iteration</span></div>
-<div class="line"><span class="lineno"> 2697</span> </div>
-<div class="line"><span class="lineno"> 2698</span>      <span class="comment">// Figure out which index the 4 bits representing field would go, for this,</span></div>
-<div class="line"><span class="lineno"> 2699</span>      <span class="comment">// since each field occupies 4 bits, we shift by 4 * index. Casting before </span></div>
-<div class="line"><span class="lineno"> 2700</span>      <span class="comment">// multiplication ensures the multiplication is performed using std::uint64_t.</span></div>
-<div class="line"><span class="lineno"> 2701</span>      <span class="keyword">const</span> std::uint64_t shift = <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(index) * <a class="code hl_variable" href="#aa9606f8fe6dc14d1eba2f7f62c97014a">fieldBits</a>;</div>
-<div class="line"><span class="lineno"> 2702</span> </div>
-<div class="line"><span class="lineno"> 2703</span>      <span class="comment">// Since fieldMask is 0xFULL i.e. only lowest 4 bits (i.e. the right side ones)</span></div>
-<div class="line"><span class="lineno"> 2704</span>      <span class="comment">// are 1111, all others are 0. So we shift it to desired position and then negate</span></div>
-<div class="line"><span class="lineno"> 2705</span>      <span class="comment">// it, this flips all bits, making the current position bits as 0000. Then we do</span></div>
-<div class="line"><span class="lineno"> 2706</span>      <span class="comment">// bitwise AND, in which case a mask bit of 1 preserves the destination bit and</span></div>
-<div class="line"><span class="lineno"> 2707</span>      <span class="comment">// a mask bit of 0 clears the destination bit. So, effectively we clear the 4 bits</span></div>
-<div class="line"><span class="lineno"> 2708</span>      <span class="comment">// in the destination for the given index.</span></div>
-<div class="line"><span class="lineno"> 2709</span>      destination &amp;= ~(<a class="code hl_variable" href="#aa0a3392ffea43dd47c99acfc307f8545">fieldMask</a> &lt;&lt; shift);</div>
-<div class="line"><span class="lineno"> 2710</span> </div>
-<div class="line"><span class="lineno"> 2711</span>      <span class="comment">// Now we shift the field bits into correct position and we bitwise OR to set these</span></div>
-<div class="line"><span class="lineno"> 2712</span>      <span class="comment">// bits in the correct index position in the destination. here we are casting field</span></div>
-<div class="line"><span class="lineno"> 2713</span>      <span class="comment">// to std::uint64_t because destination is std::uint64_t. Above we did not cast the</span></div>
-<div class="line"><span class="lineno"> 2714</span>      <span class="comment">// fieldMask to std::uint64_t because it is already std::uint64_t.</span></div>
-<div class="line"><span class="lineno"> 2715</span>      destination |= <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(field) &lt;&lt; shift;</div>
-<div class="line"><span class="lineno"> 2716</span> </div>
-<div class="line"><span class="lineno"> 2717</span>      ++index;</div>
-<div class="line"><span class="lineno"> 2718</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_aa0a3392ffea43dd47c99acfc307f8545"><div class="ttname"><a href="#aa0a3392ffea43dd47c99acfc307f8545">anonymous_namespace{Log.cpp}::layout::fieldMask</a></div><div class="ttdeci">constexpr std::uint64_t fieldMask</div><div class="ttdoc">Field mask to read one 4-bit field from packed fields.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02677">Log.cpp:2677</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_aa9606f8fe6dc14d1eba2f7f62c97014a"><div class="ttname"><a href="#aa9606f8fe6dc14d1eba2f7f62c97014a">anonymous_namespace{Log.cpp}::layout::fieldBits</a></div><div class="ttdeci">constexpr std::uint32_t fieldBits</div><div class="ttdoc">Each field uses 4 bits.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02674">Log.cpp:2674</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02725">2725</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2726</span>    {</div>
+<div class="line"><span class="lineno"> 2727</span>      <span class="keywordflow">if</span> (index &gt;= <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a> || field &gt;= <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 2728</span> </div>
+<div class="line"><span class="lineno"> 2729</span>      <span class="keyword">const</span> std::uint32_t curPos = 1u &lt;&lt; field; <span class="comment">// set the bit for current field</span></div>
+<div class="line"><span class="lineno"> 2730</span>      <span class="keywordflow">if</span> ((seen &amp; curPos) != 0u) <span class="keywordflow">return</span>;        <span class="comment">// bitwise AND checks if that bit is already present in seen</span></div>
+<div class="line"><span class="lineno"> 2731</span>      seen |= curPos;                           <span class="comment">// bitwise OR sets the bit in seen for next iteration</span></div>
+<div class="line"><span class="lineno"> 2732</span> </div>
+<div class="line"><span class="lineno"> 2733</span>      <span class="comment">// Figure out which index the 4 bits representing field would go, for this,</span></div>
+<div class="line"><span class="lineno"> 2734</span>      <span class="comment">// since each field occupies 4 bits, we shift by 4 * index. Casting before </span></div>
+<div class="line"><span class="lineno"> 2735</span>      <span class="comment">// multiplication ensures the multiplication is performed using std::uint64_t.</span></div>
+<div class="line"><span class="lineno"> 2736</span>      <span class="keyword">const</span> std::uint64_t shift = <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(index) * <a class="code hl_variable" href="#aa9606f8fe6dc14d1eba2f7f62c97014a">fieldBits</a>;</div>
+<div class="line"><span class="lineno"> 2737</span> </div>
+<div class="line"><span class="lineno"> 2738</span>      <span class="comment">// Since fieldMask is 0xFULL i.e. only lowest 4 bits (i.e. the right side ones)</span></div>
+<div class="line"><span class="lineno"> 2739</span>      <span class="comment">// are 1111, all others are 0. So we shift it to desired position and then negate</span></div>
+<div class="line"><span class="lineno"> 2740</span>      <span class="comment">// it, this flips all bits, making the current position bits as 0000. Then we do</span></div>
+<div class="line"><span class="lineno"> 2741</span>      <span class="comment">// bitwise AND, in which case a mask bit of 1 preserves the destination bit and</span></div>
+<div class="line"><span class="lineno"> 2742</span>      <span class="comment">// a mask bit of 0 clears the destination bit. So, effectively we clear the 4 bits</span></div>
+<div class="line"><span class="lineno"> 2743</span>      <span class="comment">// in the destination for the given index.</span></div>
+<div class="line"><span class="lineno"> 2744</span>      destination &amp;= ~(<a class="code hl_variable" href="#aa0a3392ffea43dd47c99acfc307f8545">fieldMask</a> &lt;&lt; shift);</div>
+<div class="line"><span class="lineno"> 2745</span> </div>
+<div class="line"><span class="lineno"> 2746</span>      <span class="comment">// Now we shift the field bits into correct position and we bitwise OR to set these</span></div>
+<div class="line"><span class="lineno"> 2747</span>      <span class="comment">// bits in the correct index position in the destination. here we are casting field</span></div>
+<div class="line"><span class="lineno"> 2748</span>      <span class="comment">// to std::uint64_t because destination is std::uint64_t. Above we did not cast the</span></div>
+<div class="line"><span class="lineno"> 2749</span>      <span class="comment">// fieldMask to std::uint64_t because it is already std::uint64_t.</span></div>
+<div class="line"><span class="lineno"> 2750</span>      destination |= <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(field) &lt;&lt; shift;</div>
+<div class="line"><span class="lineno"> 2751</span> </div>
+<div class="line"><span class="lineno"> 2752</span>      ++index;</div>
+<div class="line"><span class="lineno"> 2753</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_aa0a3392ffea43dd47c99acfc307f8545"><div class="ttname"><a href="#aa0a3392ffea43dd47c99acfc307f8545">anonymous_namespace{Log.cpp}::layout::fieldMask</a></div><div class="ttdeci">constexpr std::uint64_t fieldMask</div><div class="ttdoc">Field mask to read one 4-bit field from packed fields.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02711">Log.cpp:2711</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_aa9606f8fe6dc14d1eba2f7f62c97014a"><div class="ttname"><a href="#aa9606f8fe6dc14d1eba2f7f62c97014a">anonymous_namespace{Log.cpp}::layout::fieldBits</a></div><div class="ttdeci">constexpr std::uint32_t fieldBits</div><div class="ttdoc">Each field uses 4 bits.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02707">Log.cpp:2707</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#aa9606f8fe6dc14d1eba2f7f62c97014a">fieldBits</a>, <a class="el" href="#aa0a3392ffea43dd47c99acfc307f8545">fieldMask</a>, <a class="el" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>, and <a class="el" href="#a2232d0647d1eb054474d09dca2ba633e">packField()</a>.</p>
 
@@ -406,28 +406,28 @@ Here is the caller graph for this function:</div>
 
 <p>Reads one packed field while rejecting duplicates and invalid values. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02721">2721</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2722</span>    {</div>
-<div class="line"><span class="lineno"> 2723</span>      <span class="keywordflow">if</span>(index &gt;= <a class="code hl_variable" href="#a85a4fe9c4b2342b1b7947cdc979c1ae2">maxPackedSlots</a>) <span class="keywordflow">return</span> <a class="code hl_variable" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>;</div>
-<div class="line"><span class="lineno"> 2724</span> </div>
-<div class="line"><span class="lineno"> 2725</span>      <span class="comment">// Here we do the move the bits to the right for the given index. After</span></div>
-<div class="line"><span class="lineno"> 2726</span>      <span class="comment">// (source &gt;&gt; (index * fieldBits)) the bits at the index will occupy</span></div>
-<div class="line"><span class="lineno"> 2727</span>      <span class="comment">// the lowest i.e. right-most 4 bits. Then we use bitwise AND with </span></div>
-<div class="line"><span class="lineno"> 2728</span>      <span class="comment">// fieldMask, which has only the right-most 4 bits as 1 to clear all</span></div>
-<div class="line"><span class="lineno"> 2729</span>      <span class="comment">// other bits except for the right-most 4 bits. That becomes our value</span></div>
-<div class="line"><span class="lineno"> 2730</span>      <span class="comment">// for the field.</span></div>
-<div class="line"><span class="lineno"> 2731</span>      <span class="keyword">const</span> std::uint64_t shift = <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(index) * <a class="code hl_variable" href="#aa9606f8fe6dc14d1eba2f7f62c97014a">fieldBits</a>;</div>
-<div class="line"><span class="lineno"> 2732</span>      <span class="keyword">const</span> std::uint64_t value = (source &gt;&gt; shift) &amp; <a class="code hl_variable" href="#aa0a3392ffea43dd47c99acfc307f8545">fieldMask</a>;</div>
-<div class="line"><span class="lineno"> 2733</span>      <span class="keywordflow">if</span>(value &gt;= <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>) <span class="keywordflow">return</span> <a class="code hl_variable" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>;</div>
-<div class="line"><span class="lineno"> 2734</span> </div>
-<div class="line"><span class="lineno"> 2735</span>      <span class="keyword">const</span> std::uint32_t curPos = 1u &lt;&lt; <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(value);</div>
-<div class="line"><span class="lineno"> 2736</span>      <span class="keywordflow">if</span>((seen &amp; curPos) != 0u) <span class="keywordflow">return</span> <a class="code hl_variable" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>;</div>
-<div class="line"><span class="lineno"> 2737</span>      seen |= curPos;</div>
-<div class="line"><span class="lineno"> 2738</span> </div>
-<div class="line"><span class="lineno"> 2739</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(value);</div>
-<div class="line"><span class="lineno"> 2740</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a74792b6d352eb4ffd343c105504ce1ac"><div class="ttname"><a href="#a74792b6d352eb4ffd343c105504ce1ac">anonymous_namespace{Log.cpp}::layout::nullField</a></div><div class="ttdeci">constexpr std::uint8_t nullField</div><div class="ttdoc">Unused/empty packed field slot, 0xF = bin 1111 = dec 15.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02678">Log.cpp:2678</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a85a4fe9c4b2342b1b7947cdc979c1ae2"><div class="ttname"><a href="#a85a4fe9c4b2342b1b7947cdc979c1ae2">anonymous_namespace{Log.cpp}::layout::maxPackedSlots</a></div><div class="ttdeci">constexpr std::uint32_t maxPackedSlots</div><div class="ttdoc">Maximum slots for a packed 64-bit value (16 slots).</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02676">Log.cpp:2676</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02756">2756</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2757</span>    {</div>
+<div class="line"><span class="lineno"> 2758</span>      <span class="keywordflow">if</span> (index &gt;= <a class="code hl_variable" href="#a85a4fe9c4b2342b1b7947cdc979c1ae2">maxPackedSlots</a>) <span class="keywordflow">return</span> <a class="code hl_variable" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>;</div>
+<div class="line"><span class="lineno"> 2759</span> </div>
+<div class="line"><span class="lineno"> 2760</span>      <span class="comment">// Here we do the move the bits to the right for the given index. After</span></div>
+<div class="line"><span class="lineno"> 2761</span>      <span class="comment">// (source &gt;&gt; (index * fieldBits)) the bits at the index will occupy</span></div>
+<div class="line"><span class="lineno"> 2762</span>      <span class="comment">// the lowest i.e. right-most 4 bits. Then we use bitwise AND with </span></div>
+<div class="line"><span class="lineno"> 2763</span>      <span class="comment">// fieldMask, which has only the right-most 4 bits as 1 to clear all</span></div>
+<div class="line"><span class="lineno"> 2764</span>      <span class="comment">// other bits except for the right-most 4 bits. That becomes our value</span></div>
+<div class="line"><span class="lineno"> 2765</span>      <span class="comment">// for the field.</span></div>
+<div class="line"><span class="lineno"> 2766</span>      <span class="keyword">const</span> std::uint64_t shift = <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(index) * <a class="code hl_variable" href="#aa9606f8fe6dc14d1eba2f7f62c97014a">fieldBits</a>;</div>
+<div class="line"><span class="lineno"> 2767</span>      <span class="keyword">const</span> std::uint64_t value = (source &gt;&gt; shift) &amp; <a class="code hl_variable" href="#aa0a3392ffea43dd47c99acfc307f8545">fieldMask</a>;</div>
+<div class="line"><span class="lineno"> 2768</span>      <span class="keywordflow">if</span> (value &gt;= <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>) <span class="keywordflow">return</span> <a class="code hl_variable" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>;</div>
+<div class="line"><span class="lineno"> 2769</span> </div>
+<div class="line"><span class="lineno"> 2770</span>      <span class="keyword">const</span> std::uint32_t curPos = 1u &lt;&lt; <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(value);</div>
+<div class="line"><span class="lineno"> 2771</span>      <span class="keywordflow">if</span> ((seen &amp; curPos) != 0u) <span class="keywordflow">return</span> <a class="code hl_variable" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>;</div>
+<div class="line"><span class="lineno"> 2772</span>      seen |= curPos;</div>
+<div class="line"><span class="lineno"> 2773</span> </div>
+<div class="line"><span class="lineno"> 2774</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(value);</div>
+<div class="line"><span class="lineno"> 2775</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a74792b6d352eb4ffd343c105504ce1ac"><div class="ttname"><a href="#a74792b6d352eb4ffd343c105504ce1ac">anonymous_namespace{Log.cpp}::layout::nullField</a></div><div class="ttdeci">constexpr std::uint8_t nullField</div><div class="ttdoc">Unused/empty packed field slot, 0xF = bin 1111 = dec 15.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02712">Log.cpp:2712</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a85a4fe9c4b2342b1b7947cdc979c1ae2"><div class="ttname"><a href="#a85a4fe9c4b2342b1b7947cdc979c1ae2">anonymous_namespace{Log.cpp}::layout::maxPackedSlots</a></div><div class="ttdeci">constexpr std::uint32_t maxPackedSlots</div><div class="ttdoc">Maximum slots for a packed 64-bit value (16 slots).</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02710">Log.cpp:2710</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#aa9606f8fe6dc14d1eba2f7f62c97014a">fieldBits</a>, <a class="el" href="#aa0a3392ffea43dd47c99acfc307f8545">fieldMask</a>, <a class="el" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>, <a class="el" href="#a85a4fe9c4b2342b1b7947cdc979c1ae2">maxPackedSlots</a>, <a class="el" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>, and <a class="el" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField()</a>.</p>
 
@@ -475,25 +475,25 @@ Here is the caller graph for this function:</div>
 <p>Expands the current packed field layout for worker-side formatting. </p>
 <p>This function is used by file and display workers to expand the packed atomic layout in an array so that it can be used for formatting. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02793">2793</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2794</span>    {</div>
-<div class="line"><span class="lineno"> 2795</span>      destination.fill(<a class="code hl_variable" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>);</div>
-<div class="line"><span class="lineno"> 2796</span>      <span class="keyword">const</span> std::uint64_t packed = source.load(std::memory_order_acquire);</div>
-<div class="line"><span class="lineno"> 2797</span>      std::uint32_t count = 0u;</div>
-<div class="line"><span class="lineno"> 2798</span>      std::uint32_t seen = 0u;</div>
-<div class="line"><span class="lineno"> 2799</span> </div>
-<div class="line"><span class="lineno"> 2800</span>      <span class="keywordflow">for</span>(std::uint32_t ii = 0; ii &lt; <a class="code hl_variable" href="#a85a4fe9c4b2342b1b7947cdc979c1ae2">maxPackedSlots</a>; ++ii) {</div>
-<div class="line"><span class="lineno"> 2801</span>        <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span> val = <a class="code hl_function" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField</a>(ii, seen, packed); val &lt; <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>) {</div>
-<div class="line"><span class="lineno"> 2802</span>          destination[count] = val;</div>
-<div class="line"><span class="lineno"> 2803</span>          ++count;</div>
-<div class="line"><span class="lineno"> 2804</span>        }</div>
-<div class="line"><span class="lineno"> 2805</span>      }</div>
-<div class="line"><span class="lineno"> 2806</span> </div>
-<div class="line"><span class="lineno"> 2807</span>      <span class="comment">// Final fallback, message is always added at the end when formatting</span></div>
-<div class="line"><span class="lineno"> 2808</span>      <span class="keywordflow">if</span>(count == 0u)</div>
-<div class="line"><span class="lineno"> 2809</span>        destination[0] = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">Field::Level</a>);</div>
-<div class="line"><span class="lineno"> 2810</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a5e5a80526fbb07e172fa4ea3e4e4bfe3"><div class="ttname"><a href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">anonymous_namespace{Log.cpp}::layout::unpackField</a></div><div class="ttdeci">std::uint8_t unpackField(std::uint32_t index, std::uint32_t &amp;seen, std::uint64_t source) noexcept</div><div class="ttdoc">Reads one packed field while rejecting duplicates and invalid values.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02721">Log.cpp:2721</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02829">2829</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2830</span>    {</div>
+<div class="line"><span class="lineno"> 2831</span>      destination.fill(<a class="code hl_variable" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>);</div>
+<div class="line"><span class="lineno"> 2832</span>      <span class="keyword">const</span> std::uint64_t packed = source.load(std::memory_order_acquire);</div>
+<div class="line"><span class="lineno"> 2833</span>      std::uint32_t count = 0u;</div>
+<div class="line"><span class="lineno"> 2834</span>      std::uint32_t seen = 0u;</div>
+<div class="line"><span class="lineno"> 2835</span> </div>
+<div class="line"><span class="lineno"> 2836</span>      <span class="keywordflow">for</span> (std::uint32_t ii = 0; ii &lt; <a class="code hl_variable" href="#a85a4fe9c4b2342b1b7947cdc979c1ae2">maxPackedSlots</a>; ++ii) {</div>
+<div class="line"><span class="lineno"> 2837</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> val = <a class="code hl_function" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField</a>(ii, seen, packed); val &lt; <a class="code hl_variable" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>) {</div>
+<div class="line"><span class="lineno"> 2838</span>          destination[count] = val;</div>
+<div class="line"><span class="lineno"> 2839</span>          ++count;</div>
+<div class="line"><span class="lineno"> 2840</span>        }</div>
+<div class="line"><span class="lineno"> 2841</span>      }</div>
+<div class="line"><span class="lineno"> 2842</span> </div>
+<div class="line"><span class="lineno"> 2843</span>      <span class="comment">// Final fallback, message is always added at the end when formatting</span></div>
+<div class="line"><span class="lineno"> 2844</span>      <span class="keywordflow">if</span> (count == 0u)</div>
+<div class="line"><span class="lineno"> 2845</span>        destination[0] = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">Field::Level</a>);</div>
+<div class="line"><span class="lineno"> 2846</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1layout_html_a5e5a80526fbb07e172fa4ea3e4e4bfe3"><div class="ttname"><a href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">anonymous_namespace{Log.cpp}::layout::unpackField</a></div><div class="ttdeci">std::uint8_t unpackField(std::uint32_t index, std::uint32_t &amp;seen, std::uint64_t source) noexcept</div><div class="ttdoc">Reads one packed field while rejecting duplicates and invalid values.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02756">Log.cpp:2756</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0daa0db49ba470c1c9ae2128c3470339153">anonymous_namespace{Log.cpp}::Level</a>, <a class="el" href="#a07460c2a8adf32ac03fe1f8cb1b3603d">maxFields</a>, <a class="el" href="#a85a4fe9c4b2342b1b7947cdc979c1ae2">maxPackedSlots</a>, <a class="el" href="#a74792b6d352eb4ffd343c105504ce1ac">nullField</a>, <a class="el" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField()</a>, and <a class="el" href="#af9b51b1a2645ae21e0a7ca6bd39e4178">unpackFields()</a>.</p>
 
@@ -534,7 +534,7 @@ Here is the caller graph for this function:</div>
 
 <p>Each field uses 4 bits. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02674">2674</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02707">2707</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a2232d0647d1eb054474d09dca2ba633e">packField()</a>, and <a class="el" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField()</a>.</p>
 
@@ -562,7 +562,7 @@ Here is the caller graph for this function:</div>
 
 <p><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d" title="Identifies a field that can be included in formatted log output.">Field</a> mask to read one 4-bit field from packed fields. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02677">2677</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02711">2711</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a2232d0647d1eb054474d09dca2ba633e">packField()</a>, and <a class="el" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField()</a>.</p>
 
@@ -590,7 +590,7 @@ Here is the caller graph for this function:</div>
 
 <p>maximum number of fields, depends on <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d" title="Identifies a field that can be included in formatted log output.">Field</a> enum size </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02675">2675</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02708">2708</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a2f8305be7a08f7bd6252a3d9cc9a074c">normalizeAndPackFields()</a>, <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a7fc03e94650e6022574acfcd5d3bf5dc">anonymous_namespace{Log.cpp}::format::normalLog()</a>, <a class="el" href="#a2232d0647d1eb054474d09dca2ba633e">packField()</a>, <a class="el" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField()</a>, and <a class="el" href="#af9b51b1a2645ae21e0a7ca6bd39e4178">unpackFields()</a>.</p>
 
@@ -618,7 +618,7 @@ Here is the caller graph for this function:</div>
 
 <p>Maximum slots for a packed 64-bit value (16 slots). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02676">2676</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02710">2710</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField()</a>, and <a class="el" href="#af9b51b1a2645ae21e0a7ca6bd39e4178">unpackFields()</a>.</p>
 
@@ -646,7 +646,7 @@ Here is the caller graph for this function:</div>
 
 <p>Unused/empty packed field slot, 0xF = bin 1111 = dec 15. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02678">2678</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l02712">2712</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a5e5a80526fbb07e172fa4ea3e4e4bfe3">unpackField()</a>, and <a class="el" href="#af9b51b1a2645ae21e0a7ca6bd39e4178">unpackFields()</a>.</p>
 

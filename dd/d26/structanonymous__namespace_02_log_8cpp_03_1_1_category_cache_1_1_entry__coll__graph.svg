@@ -58,7 +58,7 @@ var sectionId = 'dynsection-1';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="One entry in the cache.">
 <polygon fill="#999999" stroke="none" points="727.5,-81.25 411.5,-81.25 411.5,-62 727.5,-62 727.5,-81.25"/>
 <text xml:space="preserve" text-anchor="start" x="419.5" y="-67.8" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Log.cpp}::CategoryCache::Entry</text>
 </a>
@@ -67,7 +67,7 @@ var sectionId = 'dynsection-1';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="../../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#da/d37/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_key" target="_top" xlink:title="Single key for a slot.">
 <polygon fill="white" stroke="none" points="332.75,-158.88 142.75,-158.88 142.75,-128.38 332.75,-128.38 332.75,-158.88"/>
 <text xml:space="preserve" text-anchor="start" x="150.75" y="-144.43" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="237.75" y="-133.18" font-family="Consolas" font-size="11.00">{Log.cpp}::CategoryCache::Key</text>

@@ -1248,7 +1248,7 @@ var sectionId = 'dynsection-10';
 <!-- Node48 -->
 <g id="Node000048" class="node">
 <title>Node48</title>
-<g id="a_Node000048"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" target="_top" xlink:title=" ">
+<g id="a_Node000048"><a xlink:href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" target="_top" xlink:title="Private constructor so that only one instance of this class can be created using the static Inst_() f...">
 <polygon fill="white" stroke="none" points="992,-552.3 838,-552.3 838,-510.55 992,-510.55 992,-552.3"/>
 <text xml:space="preserve" text-anchor="start" x="846" y="-537.85" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="846" y="-526.6" font-family="Consolas" font-size="11.00">{Log::cpp}::LeakedState</text>

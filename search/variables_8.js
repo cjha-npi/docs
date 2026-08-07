@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['insignal_5f_0',['inSignal_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a0e545b41d039c742e05b0a70436928f2',1,'anonymous_namespace{Log.cpp}::LeakedState::CrashState']]],
-  ['invaliddatetime_1',['invalidDateTime',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a1f7083adbe3229b2f6fa4295150f8f18',1,'anonymous_namespace{Log.cpp}::format']]],
-  ['invalidtimedelta_2',['invalidTimeDelta',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#abc875262bc94ebb4526e882a65a2cfa4',1,'anonymous_namespace{Log.cpp}::format']]]
+  ['key_5f_0',['key_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a9ae9861f3849020c485a9e80bbec2f28',1,'anonymous_namespace{Log.cpp}::CategoryCache::Entry::key_'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a07d2ad9c7a2768d7b6833dde310c4b0d',1,'anonymous_namespace{Log.cpp}::FileLineCache::Entry::key_'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a598a67cd10bf833bc29faef39f2e3686',1,'anonymous_namespace{Log.cpp}::FunctionCache::Entry::key_']]]
 ];

@@ -1,6 +1,6 @@
 <map id="anonymous_namespace{Log::cpp}::LeakedState::PermConsoleHandle_" name="anonymous_namespace{Log::cpp}::LeakedState::PermConsoleHandle_">
 <area shape="rect" id="Node000001" title="Detects and configures the console attached during initialization." alt="" coords="560,301,1077,327"/>
-<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title=" " alt="" coords="307,286,512,342"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title="Private constructor so that only one instance of this class can be created using the static Inst_() f..." alt="" coords="307,286,512,342"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="550,315,512,317,511,312,555,313"/>
 <area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="25,5,239,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,278,379,226,351,162,311,97,286,69,257,44,239,33,237,28,260,40,289,65,315,94,356,159,384,224,402,279"/>

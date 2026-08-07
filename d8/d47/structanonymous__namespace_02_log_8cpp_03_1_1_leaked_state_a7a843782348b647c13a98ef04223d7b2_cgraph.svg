@@ -58,7 +58,7 @@ var sectionId = 'dynsection-11';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="Private constructor so that only one instance of this class can be created using the static Inst_() f...">
 <polygon fill="#999999" stroke="none" points="346,-288.5 0,-288.5 0,-269.25 346,-269.25 346,-288.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-275.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Log::cpp}::LeakedState::LeakedState</text>
 </a>
@@ -183,7 +183,7 @@ var sectionId = 'dynsection-11';
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" target="_top" xlink:title=" ">
+<g id="a_Node000009"><a xlink:href="../../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" target="_top" xlink:title="Allows the first thread to claim ownership in case of winStopMsgExe function call.">
 <polygon fill="white" stroke="none" points="904,-281.75 768,-281.75 768,-240 904,-240 904,-281.75"/>
 <text xml:space="preserve" text-anchor="start" x="776" y="-267.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="776" y="-256.05" font-family="Consolas" font-size="11.00">{WinMsgBoxExe::cpp}</text>

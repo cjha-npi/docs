@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Launches npiMsgBox.exe to show a stop/error message box and terminates this process." alt="" coords="5,180,211,206"/>
 <area shape="rect" id="Node000002" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="263,5,436,61"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,179,178,129,257,71,276,63,272,66,260,75,181,133,124,182"/>
-<area shape="rect" id="Node000004" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="259,85,440,141"/>
+<area shape="rect" id="Node000004" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title="Allows the first thread to claim ownership in case of winStopMsgExe function call." alt="" coords="259,85,440,141"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,178,259,141,256,145,149,183"/>
 <area shape="rect" id="Node000005" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="263,165,436,221"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="210,191,257,192,252,194,212,196"/>

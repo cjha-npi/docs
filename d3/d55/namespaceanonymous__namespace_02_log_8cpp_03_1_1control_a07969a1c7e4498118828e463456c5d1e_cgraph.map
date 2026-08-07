@@ -17,7 +17,7 @@
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1282,190,1325,192,1320,193,1283,195"/>
 <area shape="rect" id="Node000006" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aaa8ea5249bc78f802a58761c2cbe5f17" title="Appends a null&#45;terminated ASCII message to the command line." alt="" coords="1588,85,1761,141"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1472,178,1581,144,1586,143,1473,183"/>
-<area shape="rect" id="Node000008" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title=" " alt="" coords="1584,5,1765,61"/>
+<area shape="rect" id="Node000008" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a86d417acf3a64e3477e64493dc92a88c" title="Allows the first thread to claim ownership in case of winStopMsgExe function call." alt="" coords="1584,5,1765,61"/>
 <area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="1447,178,1503,129,1583,71,1597,66,1602,64,1585,75,1506,133,1449,183"/>
 <area shape="rect" id="Node000009" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a1130800899b07b3e7b42ae60f3397c03" title="Copies the prepared command&#45;line prefix into a per&#45;call buffer." alt="" coords="1588,165,1761,221"/>
 <area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="1536,191,1583,193,1577,193,1536,196"/>
@@ -35,7 +35,7 @@
 <area shape="poly" id="edge14_Node000011_Node000015" title=" " alt="" coords="1759,378,1827,403,1822,402,1758,384"/>
 <area shape="rect" id="Node000014" href="$d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#aa8940d19449f89ab180165a36e11b4a2" title="Sanitizes and appends one title character to the command&#45;line prefix." alt="" coords="2067,325,2304,381"/>
 <area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="2018,351,2062,353,2056,353,2019,356"/>
-<area shape="rect" id="Node000017" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title=" " alt="" coords="792,356,997,412"/>
+<area shape="rect" id="Node000017" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title="Deleted copy constructor." alt="" coords="792,356,997,412"/>
 <area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="712,356,787,369,782,369,712,362"/>
 <area shape="poly" id="edge17_Node000017_Node000017" title=" " alt="" coords="842,354,841,346,851,337,869,331,895,329,931,334,943,340,949,349,944,347,939,344,930,339,895,335,870,337,854,342,846,348,846,358"/>
 <area shape="poly" id="edge20_Node000018_Node000018" title=" " alt="" coords="555,420,555,411,564,402,583,397,609,395,647,399,659,405,665,414,660,412,655,409,646,404,609,400,584,402,567,407,559,413,559,423"/>
