@@ -263,7 +263,10 @@ Naming Style</h1>
 <li>Macro</li>
 </ul>
 </li>
-<li>Style: <span class="tt">ALL_UPPER</span></li>
+<li>Style:<ul>
+<li><span class="tt">ALL_UPPER</span></li>
+</ul>
+</li>
 <li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
@@ -277,7 +280,10 @@ Naming Style</h1>
 <li>All Parameters</li>
 </ul>
 </li>
-<li>Style: <span class="tt">lowerCamelCase_underscoreTolerant</span></li>
+<li>Style:<ul>
+<li><span class="tt">lowerCamelCase_underscoreTolerant</span></li>
+</ul>
+</li>
 <li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
@@ -289,32 +295,10 @@ Naming Style</h1>
 <li>All Template parameters</li>
 </ul>
 </li>
-<li>Style: <span class="tt">UpperCamelCase_UnderscoreTolerant</span></li>
-<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
+<li>Style:<ul>
+<li><span class="tt">UpperCamelCase_UnderscoreTolerant</span></li>
 </ul>
 </li>
-<li><b>Qt Auto-Connect Slots:</b><ul>
-<li>Rule Description: <b>Qt Auto-Connect Slot</b></li>
-<li>Element:<ul>
-<li>Member function</li>
-</ul>
-</li>
-<li>Static: <b>NO</b></li>
-<li>Prefix: <span class="tt">on_</span></li>
-<li>Style: <span class="tt">lowerCamelCase_underscoreTolerant</span></li>
-<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
-</ul>
-</li>
-<li><b>Non-Static Members:</b><ul>
-<li>Rule Description: <b>Non-Static Member</b></li>
-<li>Element:<ul>
-<li>All Fields</li>
-<li>Member function</li>
-</ul>
-</li>
-<li>Static: <b>NO</b></li>
-<li>Suffix: <span class="tt">_</span></li>
-<li>Style: <span class="tt">lowerCamelCase_underscoreTolerant</span></li>
 <li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
 </ul>
 </li>
@@ -326,8 +310,46 @@ Naming Style</h1>
 </ul>
 </li>
 <li>Static: <b>YES</b></li>
+<li>Style:<ul>
 <li>Suffix: <span class="tt">_</span></li>
-<li>Style: <span class="tt">UpperCamelCase_UnderscoreTolerant</span></li>
+<li><span class="tt">UpperCamelCase_UnderscoreTolerant</span></li>
+</ul>
+</li>
+<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Non-Static Fields:</b><ul>
+<li>Rule Description: <b>Non-Static Field</b></li>
+<li>Element:<ul>
+<li>All Fields</li>
+</ul>
+</li>
+<li>Static: <b>NO</b></li>
+<li>Style:<ul>
+<li>Suffix: <span class="tt">_</span></li>
+<li><span class="tt">lowerCamelCase_underscoreTolerant</span></li>
+</ul>
+</li>
+<li>Enable Inspections: YES <div class="dp-markdown-list-gap"></div></li>
+</ul>
+</li>
+<li><b>Non-Static Member Functions:</b><ul>
+<li>Rule Description: <b>Non-Static Member Function</b></li>
+<li>Element:<ul>
+<li>Member function</li>
+</ul>
+</li>
+<li>Static: <b>NO</b></li>
+<li>Style 1 (default):<ul>
+<li>Suffix: <span class="tt">_</span></li>
+<li><span class="tt">lowerCamelCase_underscoreTolerant</span></li>
+</ul>
+</li>
+<li>Style 2:<ul>
+<li>Prefix: <span class="tt">on_</span></li>
+<li><span class="tt">lowerCamelCase_underscoreTolerant</span></li>
+</ul>
+</li>
 <li>Enable Inspections: YES</li>
 </ul>
 </li>
