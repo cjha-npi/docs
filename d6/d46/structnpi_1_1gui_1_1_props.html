@@ -204,8 +204,8 @@ Static Public Attributes</h2></td></tr>
 <p>The button is drawn as a color display rather than with normal button visuals: text, icon and pressed/focus/default visual states are not drawn. When disabled, the displayed color is converted to grayscale. </p><dl class="section note"><dt>Note</dt><dd>The property should be present before polish, but its QColor value may be changed dynamically afterward and the button will repaint automatically. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The button's focus policy is changed to Qt::NoFocus. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00146">146</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>{<span class="stringliteral">&quot;npi_ButtonColorDisplay&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00144">144</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>{<span class="stringliteral">&quot;npi_ButtonColorDisplay&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -232,15 +232,15 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><b>bool</b> - Makes a widget the visual base for grouped exclusive buttons. </p>
-<p>The base is drawn as a single button-colored rounded surface. If a layout exists when the base is polished, its margins and spacing are set to zero. Direct button children are made checkable and added to one exclusive QButtonGroup. An existing direct QButtonGroup is reused; otherwise one is created automatically. </p><dl class="section note"><dt>Note</dt><dd>Buttons may be added and removed dynamically at runtime. </dd></dl>
+<p>The base is drawn as a single button-colored rounded surface. Direct button children have their own backgrounds suppressed, are made checkable and added to one exclusive QButtonGroup. An existing direct child QButtonGroup is reused; otherwise one is created automatically. </p><dl class="section note"><dt>Note</dt><dd>Buttons may be added and removed dynamically at runtime. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd><ul>
 <li>Buttons configured as part of this group are not intended to be removed, reparented and reused as ordinary widgets.</li>
 <li>Only QPushButton and QToolButton should be used as direct widget children. </li>
 </ul>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00128">128</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>{<span class="stringliteral">&quot;npi_ButtonGroupBase&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00126">126</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>{<span class="stringliteral">&quot;npi_ButtonGroupBase&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a206c8ef16e0927eb9bbc07529f11fee1">anonymous_namespace{Gui.cpp}::item::initButtonGroupBase()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -269,8 +269,8 @@ Static Public Attributes</h2></td></tr>
 <p><b>bool</b> - Places a QPushButton icon on the right side of the button. </p>
 <dl class="section note"><dt>Note</dt><dd>Only affects buttons containing both text and an icon. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00132">132</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>{<span class="stringliteral">&quot;npi_ButtonRightIcon&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00130">130</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>{<span class="stringliteral">&quot;npi_ButtonRightIcon&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
@@ -299,8 +299,8 @@ Static Public Attributes</h2></td></tr>
 <p><b>bool</b> - Aligns QPushButton text toward its icon instead of centering it. </p>
 <dl class="section note"><dt>Note</dt><dd>Only affects buttons containing both text and an icon and works with <span class="tt"><a class="el" href="#a0e7093bd32af6d035a0102812a366bf7" title="bool - Places a QPushButton icon on the right side of the button.">ButtonRightIcon_</a></span> for icons placed on either side. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00137">137</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>{<span class="stringliteral">&quot;npi_ButtonTextNearIcon&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00135">135</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>{<span class="stringliteral">&quot;npi_ButtonTextNearIcon&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>.</p>
 
@@ -482,15 +482,15 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><b>bool</b> - Makes a widget the visual base for a group of child widgets. </p>
-<p>The base is drawn as a single button-colored rounded surface. If a layout exists when the base is polished, its margins and spacing are set to zero. Descendant widgets are configured not to draw their own background so the group appears as one control. </p><dl class="section note"><dt>Note</dt><dd>Widgets may be added and removed dynamically at runtime. </dd></dl>
+<p>The base is drawn as a single button-colored rounded surface. Descendant widgets are configured not to draw their own background so the group appears as one control. </p><dl class="section note"><dt>Note</dt><dd>Widgets may be added and removed dynamically at runtime. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd><ul>
 <li>Widgets configured as part of this group are not intended to be removed, reparented and reused as ordinary widgets.</li>
 <li>This property does not make button children exclusive or place them in a QButtonGroup. Use <span class="tt"><a class="el" href="#a58fdac61bd4c703ac43514a6871d610c" title="bool - Makes a widget the visual base for grouped exclusive buttons.">ButtonGroupBase_</a></span> for that functionality. </li>
 </ul>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00115">115</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>{<span class="stringliteral">&quot;npi_WidgetGroupBase&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00114">114</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>{<span class="stringliteral">&quot;npi_WidgetGroupBase&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a9f02593ded0fe2acfa83854255a0e461">anonymous_namespace{Gui.cpp}::item::initWidgetGroupBase()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8cf5e0b70affa5b109df93b6deb3a526">anonymous_namespace{Gui.cpp}::item::isInsideWidgetGroupBase()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
