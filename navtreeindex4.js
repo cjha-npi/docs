@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2":[7,0,0,5,20],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2":[8,0,0,0,20],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0":[7,0,0,5,4],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0":[8,0,0,0,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX4 =
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9715ca59b73721ebb21796b6e15f3f64":[9,0,4,2,1,1],
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a992bd764fbc7af77e3bbcaa060077de4":[7,0,0,32],
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940":[7,0,0,36],
-"db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133":[7,0,0,29]
+"db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133":[7,0,0,29],
+"db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa1e072c53b80addf9a579f244bf26c47":[9,0,4,2,2,11]
 };

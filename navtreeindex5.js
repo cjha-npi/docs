@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa1e072c53b80addf9a579f244bf26c47":[9,0,4,2,2,11],
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa99aff5355aacdaa337aa2d151353ab6":[9,0,4,2,2,4],
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aaa1e139c26f0cf95996d6f3b79203a14":[9,0,4,2,2,7],
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b":[7,0,0,30],
@@ -26,7 +25,6 @@ var NAVTREEINDEX5 =
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4":[7,0,0,22],
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data":[9,0,4,2,1],
 "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data":[9,0,4,2,2],
-"db/d54/class_q_abstract_native_event_filter.html":[8,0,3],
 "db/d8d/dp_arch_dir_architecture.html":[1],
 "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html":[7,0,0,2],
 "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a07860869e541a5f987d893214c377ad3":[7,0,0,2,10],
@@ -249,5 +247,7 @@ var NAVTREEINDEX5 =
 "functions_n.html":[8,3,0,12],
 "functions_o.html":[8,3,0,13],
 "functions_p.html":[8,3,0,14],
-"functions_q.html":[8,3,0,15]
+"functions_q.html":[8,3,0,15],
+"functions_r.html":[8,3,0,16],
+"functions_rela.html":[8,3,4]
 };

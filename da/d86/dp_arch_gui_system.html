@@ -649,15 +649,15 @@ Table and Tree Headers</h1>
 <dl class="section warning"><dt>Warning</dt><dd>The custom table and tree header paths do not draw standard header icons or sort arrows.</dd></dl>
 <h1 class="doxsection"><a class="anchor" id="dp_arch_gui_system__completion"></a>
 Completion Popups</h1>
-<p>Recognized <span class="tt"><a class="el" href="../../d2/d52/class_q_completer.html">QCompleter</a></span> popup items emphasize the completion suffix:</p>
+<p>Recognized <span class="tt">QCompleter</span> popup items emphasize the completion suffix:</p>
 <ul>
 <li>A visible matching prefix is identified using the completer's case-sensitivity setting. Its displayed casing comes from the model's text, not from the user's typed prefix.</li>
 <li>In ordinary, non-highlighted items, the prefix is dimmed while the suffix keeps the normal text color. Selected or hovered items use normal text coloring.</li>
 <li>When space is limited, the suffix is prioritized by eliding or dropping the prefix first. If the suffix itself does not fit, it is right-elided. Exact completions with no suffix are right-elided normally.</li>
 <li>Items without a visible matching prefix use normal text coloring.</li>
 </ul>
-<p>The helper retains the base style's non-text item drawing and lays out the customized text within the intersection of the text rectangle and the painter's existing clip. It changes presentation only; completion matching, filtering and insertion remain <span class="tt"><a class="el" href="../../d2/d52/class_q_completer.html">QCompleter</a></span>'s responsibility.</p>
-<dl class="section note"><dt>Note</dt><dd>Recognition requires the completion model to be owned by its <span class="tt"><a class="el" href="../../d2/d52/class_q_completer.html">QCompleter</a></span> and the widget passed to the style to be that completer's popup. Custom delegates, proxy arrangements or popup implementations that bypass this path may retain ordinary item drawing.</dd></dl>
+<p>The helper retains the base style's non-text item drawing and lays out the customized text within the intersection of the text rectangle and the painter's existing clip. It changes presentation only; completion matching, filtering and insertion remain <span class="tt">QCompleter</span>'s responsibility.</p>
+<dl class="section note"><dt>Note</dt><dd>Recognition requires the completion model to be owned by its <span class="tt">QCompleter</span> and the widget passed to the style to be that completer's popup. Custom delegates, proxy arrangements or popup implementations that bypass this path may retain ordinary item drawing.</dd></dl>
 <h1 class="doxsection"><a class="anchor" id="dp_arch_gui_system__limitations"></a>
 Limitations</h1>
 <ul>

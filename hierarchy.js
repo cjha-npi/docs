@@ -34,10 +34,10 @@ var hierarchy =
     [ "npi::ind::LockedValue&lt; T &gt;::WriteAccess", "dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html", null ],
     [ "npi::ind::SlotGate", "d7/dbf/classnpi_1_1ind_1_1_slot_gate.html", null ],
     [ "npi::ind::SlotGate::Blocker", "d6/d53/classnpi_1_1ind_1_1_slot_gate_1_1_blocker.html", null ],
-    [ "QAbstractNativeEventFilter", "db/d54/class_q_abstract_native_event_filter.html", [
+    [ "QAbstractNativeEventFilter", null, [
       [ "anonymous_namespace{Gui.cpp}::GuiStyle", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html", null ]
     ] ],
-    [ "QCompleter", "d2/d52/class_q_completer.html", [
+    [ "QCompleter", null, [
       [ "npi::ind::EmptyCompleter", "df/d43/classnpi_1_1ind_1_1_empty_completer.html", null ]
     ] ],
     [ "QProxyStyle", null, [

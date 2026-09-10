@@ -30,7 +30,5 @@ var annotated_dup =
         [ "LockedValue", "d4/d0d/classnpi_1_1ind_1_1_locked_value.html", "d4/d0d/classnpi_1_1ind_1_1_locked_value" ],
         [ "SlotGate", "d7/dbf/classnpi_1_1ind_1_1_slot_gate.html", "d7/dbf/classnpi_1_1ind_1_1_slot_gate" ]
       ] ]
-    ] ],
-    [ "QAbstractNativeEventFilter", "db/d54/class_q_abstract_native_event_filter.html", null ],
-    [ "QCompleter", "d2/d52/class_q_completer.html", null ]
+    ] ]
 ];

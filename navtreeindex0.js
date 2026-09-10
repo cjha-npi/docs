@@ -172,7 +172,6 @@ var NAVTREEINDEX0 =
 "d2/d4f/npi_msg_box_8cpp.html#a9f918755b601cf4bffca775992e6fb90":[9,0,6,0,0],
 "d2/d4f/npi_msg_box_8cpp.html#ac7bef5d85e3dcd73eef56ad39ffc84a9":[9,0,6,0,2],
 "d2/d4f/npi_msg_box_8cpp_source.html":[9,0,6,0],
-"d2/d52/class_q_completer.html":[8,0,4],
 "d2/d5a/dp_dh_rm_sys_graphs_dll_plugin_source.html":[3,4,2,0,2],
 "d2/dab/dp_dh_tips_tricks.html":[3,4,1],
 "d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_files_with_given_size":[3,4,1,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882":[7,0,0,3,1],
 "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe":[7,0,0,3,0],
 "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f":[7,0,0,3,2],
-"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html":[7,0,1,7]
+"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html":[7,0,1,7],
+"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html":[8,0,1,1]
 };
