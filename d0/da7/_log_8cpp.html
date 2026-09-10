@@ -300,7 +300,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a489b218ba63dc7f5434988420437df4f" id="r_a489b218ba63dc7f5434988420437df4f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a489b218ba63dc7f5434988420437df4f">npiCrit</a>&#160;&#160;&#160;qCCritical(npi_log).noquote()</td></tr>
 <tr class="memdesc:a489b218ba63dc7f5434988420437df4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal critical diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:aba900325c5211dc8d74fe8653bfd7a05" id="r_aba900325c5211dc8d74fe8653bfd7a05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aba900325c5211dc8d74fe8653bfd7a05">npiDbug</a>&#160;&#160;&#160;qCDebug(npi_log).noquote()</td></tr>
-<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the logging category used for logging-system diagnostics.  <br /></td></tr>
+<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal debug diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:acfd217143f12c58fa5be9bd51908a231" id="r_acfd217143f12c58fa5be9bd51908a231"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acfd217143f12c58fa5be9bd51908a231">npiFatl</a>&#160;&#160;&#160;qCFatal(npi_log).noquote()</td></tr>
 <tr class="memdesc:acfd217143f12c58fa5be9bd51908a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal fatal diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:ae7f5f25fa0583792bf1a5f409b3ea9ab" id="r_ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae7f5f25fa0583792bf1a5f409b3ea9ab">npiInfo</a>&#160;&#160;&#160;qCInfo(npi_log).noquote()</td></tr>
@@ -383,6 +383,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac9345b400b3cab13c1c46b049c0f3723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes, validates, creates, and write-tests a log directory.  <br /></td></tr>
 <tr class="memitem:a51d7168bd1bc376fadad171333f0c9b3" id="r_a51d7168bd1bc376fadad171333f0c9b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a51d7168bd1bc376fadad171333f0c9b3">anonymous_namespace{Log.cpp}::crash::claimFatalOwnership</a> (<a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d8/de1/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_crash_state">LeakedState::CrashState</a> &amp;crashState, DWORD curThreadId)</td></tr>
 <tr class="memdesc:a51d7168bd1bc376fadad171333f0c9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Claims fatal ownership or gives the existing owner a brief reporting period.  <br /></td></tr>
+<tr class="memitem:a7c9393901a560802243af7784b9e5cb9" id="r_a7c9393901a560802243af7784b9e5cb9"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a7c9393901a560802243af7784b9e5cb9">anonymous_namespace{Log.cpp}::control::cleanedFilterRule</a> (const QString &amp;rule)</td></tr>
+<tr class="memdesc:a7c9393901a560802243af7784b9e5cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes and validates a custom Qt category-filter rule.  <br /></td></tr>
 <tr class="memitem:a027c61d8dc60f13ad2a0e0be6e917a6e" id="r_a027c61d8dc60f13ad2a0e0be6e917a6e"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a027c61d8dc60f13ad2a0e0be6e917a6e">anonymous_namespace{Log.cpp}::control::cleanedFilterRulesList</a> (const QStringList &amp;list)</td></tr>
 <tr class="memdesc:a027c61d8dc60f13ad2a0e0be6e917a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes and validates custom Qt category-filter rules.  <br /></td></tr>
 <tr class="memitem:acce06e15c0cb54f327204ed7f65005d0" id="r_acce06e15c0cb54f327204ed7f65005d0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#acce06e15c0cb54f327204ed7f65005d0">anonymous_namespace{Log.cpp}::workers::cleanup</a> (<a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker">LeakedState::Worker</a> &amp;worker)</td></tr>
@@ -1452,9 +1454,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal critical diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00135">135</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1d722dbe548810e26de6526339f7db0a">anonymous_namespace{Log.cpp}::workers::directoryCleanup()</a>, <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a151b634635a35cd3feb2de126611e850">anonymous_namespace{Log.cpp}::workers::dispWorkerStart()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a">anonymous_namespace{Log.cpp}::startup()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00143">143</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1470,10 +1470,9 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p>Defines the logging category used for logging-system diagnostics. </p>
 <p>Emits an internal debug diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00126">126</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00134">134</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1491,9 +1490,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal fatal diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920">anonymous_namespace{Log.cpp}::workers::fileWorkerStart()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00146">146</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1508,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal informational diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00129">129</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00137">137</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1529,9 +1526,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal warning diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00132">132</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc">anonymous_namespace{Log.cpp}::control::scheduleMaxFolderMbSave()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287">anonymous_namespace{Log.cpp}::control::setMaxFolderMb()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00140">140</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>

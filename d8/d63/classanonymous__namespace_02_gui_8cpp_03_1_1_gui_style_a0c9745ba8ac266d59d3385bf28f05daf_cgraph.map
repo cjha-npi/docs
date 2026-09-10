@@ -1,0 +1,12 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::getSizeData_" name="anonymous_namespace{Gui::cpp}::GuiStyle::getSizeData_">
+<area shape="rect" id="Node000001" title="Returns sizing data based on the widget&#39;s font size and height limits." alt="" coords="5,90,451,115"/>
+<area shape="rect" id="Node000002" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" title="Calculates standardized widget and icon dimensions for a font." alt="" coords="503,37,756,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="342,87,497,72,492,73,342,92"/>
+<area shape="rect" id="Node000004" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7" title="Returns whether two fonts use the same configured size." alt="" coords="499,126,760,167"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="345,113,493,131,488,132,345,118"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="576,36,572,28,580,18,600,12,629,10,672,15,683,22,687,31,682,29,679,25,671,20,629,15,601,18,583,23,577,29,581,38"/>
+<area shape="rect" id="Node000003" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" title="Returns the gap between an icon and the inner edge of its control." alt="" coords="808,29,1037,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="755,55,803,57,798,57,756,60"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="867,28,866,19,877,10,895,5,923,3,961,7,973,13,980,22,975,20,970,17,960,12,923,8,896,10,879,15,871,21,871,31"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="576,125,572,117,580,107,600,102,629,100,672,105,683,111,687,121,682,118,679,115,671,110,629,105,601,107,583,112,577,118,581,128"/>
+</map>

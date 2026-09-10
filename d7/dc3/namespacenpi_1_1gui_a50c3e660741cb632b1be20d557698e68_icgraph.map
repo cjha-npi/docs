@@ -1,0 +1,13 @@
+<map id="npi::gui::textColor" name="npi::gui::textColor">
+<area shape="rect" id="Node000001" title="Selects a black or white text color for the specified background." alt="" coords="987,37,1160,62"/>
+<area shape="rect" id="Node000002" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882" title="Constructs the drawing resources for one theme variant." alt="" coords="733,29,939,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="976,50,938,52,938,47,982,50"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="878,21,876,17,869,13,836,8,813,10,799,15,794,21,797,31,792,28,789,20,796,11,812,5,836,3,871,8,880,14,883,24"/>
+<area shape="rect" id="Node000003" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f" title="Converts Theme enum value to text." alt="" coords="448,29,685,70"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="723,50,685,52,685,47,728,50"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="613,21,610,17,602,13,567,8,542,10,526,15,521,21,524,31,520,28,516,20,523,11,540,5,567,3,604,8,614,14,617,24"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Sets the configured application theme." alt="" coords="219,22,400,78"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="437,50,400,52,400,47,443,50"/>
+<area shape="rect" id="Node000005" href="$d7/dc3/namespacenpi_1_1gui.html#ad60fe158d1b485a98f71cf850c1de037" title="Sets the application theme." alt="" coords="5,37,171,62"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="208,50,171,52,170,47,214,49"/>
+</map>

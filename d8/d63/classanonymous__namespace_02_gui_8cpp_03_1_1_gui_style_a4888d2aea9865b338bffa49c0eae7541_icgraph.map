@@ -1,0 +1,7 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::palette_" name="anonymous_namespace{Gui::cpp}::GuiStyle::palette_">
+<area shape="rect" id="Node000001" title="Returns the application palette for the currently effective theme variant." alt="" coords="211,31,624,56"/>
+<area shape="rect" id="Node000002" href="$d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55" title="Returns the GUI system&#39;s application palette for the currently effective background." alt="" coords="5,5,163,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,31,163,27,163,21,243,29"/>
+<area shape="rect" id="Node000003" href="$d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47" title="Returns the GUI system&#39;s application palette for an explicitly selected dark/light background." alt="" coords="5,55,163,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,57,163,65,162,59,234,57"/>
+</map>

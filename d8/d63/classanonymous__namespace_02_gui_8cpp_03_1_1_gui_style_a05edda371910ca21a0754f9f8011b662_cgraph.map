@@ -1,0 +1,19 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::GuiStyle" name="anonymous_namespace{Gui::cpp}::GuiStyle::GuiStyle">
+<area shape="rect" id="Node000001" title="Constructs the Fusion&#45;based style and initializes GUI resources." alt="" coords="5,128,419,154"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ad8794d2f5d88470dbe2ff46bee1f9a3a" title="Applies the effective dark/light palette and refreshes dynamic icons." alt="" coords="519,77,708,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="355,126,513,114,508,115,355,131"/>
+<area shape="rect" id="Node000007" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a68ac735f44edde8a92a47fd8977e2b3f" title="Returns whether Windows is configured to use a dark application theme." alt="" coords="467,157,760,198"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="355,151,461,163,456,163,355,157"/>
+<area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0" title="Applies the specified theme variant to a QAction&#39;s dynamic icon." alt="" coords="808,85,1109,126"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="708,103,803,105,797,105,708,108"/>
+<area shape="poly" id="edge9_Node000003_Node000003" title=" " alt="" coords="900,84,895,76,905,66,926,60,959,58,1006,63,1018,70,1022,80,1017,77,1015,73,1005,68,959,63,927,66,907,71,900,77,904,86"/>
+<area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Constructs an icon with theme&#45;dependent Off and On states." alt="" coords="1157,85,1411,126"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1109,103,1152,105,1147,105,1109,108"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="1226,84,1222,76,1231,66,1252,60,1284,58,1330,63,1342,70,1346,80,1341,77,1338,73,1329,68,1284,63,1253,66,1234,71,1227,77,1231,86"/>
+<area shape="rect" id="Node000005" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" title="Copies all available Normal&#45;mode pixmaps for one icon state." alt="" coords="1487,29,1716,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1410,83,1476,76,1481,75,1411,89"/>
+<area shape="rect" id="Node000006" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c" title="Finds the resource path for a theme&#45;dependent icon." alt="" coords="1459,133,1744,174"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="1411,122,1462,132,1456,132,1410,127"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="1541,28,1541,19,1552,10,1572,5,1601,3,1643,7,1656,13,1663,22,1658,20,1653,17,1642,12,1601,8,1573,10,1554,15,1545,21,1545,31"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="1544,132,1539,124,1549,114,1569,108,1601,106,1648,111,1660,118,1663,128,1659,125,1656,121,1646,116,1601,111,1570,114,1551,119,1545,125,1548,134"/>
+</map>

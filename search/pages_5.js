@@ -12,9 +12,10 @@ var searchData=
   ['fixes_9',['Bugs and Fixes',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__bugs_fixes',1,'']]],
   ['flow_10',['Generation Flow',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__gen_flow',1,'']]],
   ['folder_20size_20and_20cleanup_11',['Maximum Folder Size and Cleanup',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__max_folder_size_and_cleanup',1,'']]],
-  ['font_12',['Font',['../d3/d4c/dp_dh_system_setup.html#dp_dh_system_setup__change_file_explorer_font',1,'Change File Explorer Font'],['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__custom_font',1,'Custom Font']]],
-  ['footer_20html_13',['Footer HTML',['../df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__foot',1,'']]],
-  ['force_20new_20line_14',['Force New Line',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_new_line',1,'']]],
-  ['force_20visual_20indent_15',['Force Visual Indent',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent',1,'']]],
-  ['formatting_16',['Log Fields and Formatting',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__fields_and_formatting',1,'']]]
+  ['font_12',['Font',['../da/d86/dp_arch_gui_system.html#dp_arch_gui_system__app_font',1,'Application Font'],['../d3/d4c/dp_dh_system_setup.html#dp_dh_system_setup__change_file_explorer_font',1,'Change File Explorer Font'],['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__custom_font',1,'Custom Font'],['../da/d86/dp_arch_gui_system.html#dp_arch_gui_system__technical_font',1,'Technical Font']]],
+  ['font_20cacheoverflowexception_13',['Font CacheOverflowException',['../da/d86/dp_arch_gui_system.html#dp_arch_gui_system__bug_font_CacheOverflowException',1,'Bug: Font CacheOverflowException'],['../de/da5/bug.html#_bug000001',1,'Bug: Font CacheOverflowException']]],
+  ['footer_20html_14',['Footer HTML',['../df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__foot',1,'']]],
+  ['force_20new_20line_15',['Force New Line',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_new_line',1,'']]],
+  ['force_20visual_20indent_16',['Force Visual Indent',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent',1,'']]],
+  ['formatting_17',['Log Fields and Formatting',['../d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__fields_and_formatting',1,'']]]
 ];

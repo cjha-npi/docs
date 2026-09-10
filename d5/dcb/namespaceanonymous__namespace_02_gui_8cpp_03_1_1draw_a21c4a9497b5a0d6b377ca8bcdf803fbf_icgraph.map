@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Gui::cpp}::draw::coloredPixmap" name="anonymous_namespace{Gui::cpp}::draw::coloredPixmap">
+<area shape="rect" id="Node000001" title="Recolors a pixmap using its alpha channel as a mask." alt="" coords="512,37,933,62"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="786,31,790,26,783,22,760,17,723,15,682,18,660,23,656,28,668,38,663,36,650,29,657,18,681,12,723,10,761,12,785,17,795,25,788,36"/>
+<area shape="rect" id="Node000002" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#acbfcb721bc6f25afe2f86f5b7c540da8" title="Builds a monochrome menu icon using the palette&#39;s text colors." alt="" coords="235,29,464,70"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="501,50,464,52,464,47,507,50"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="394,21,392,17,384,13,349,8,325,10,310,15,305,21,308,31,303,28,299,20,307,11,323,5,349,3,386,8,396,14,399,23"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws supported controls using application&#45;specific layouts and visuals." alt="" coords="5,22,187,78"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="224,50,187,52,186,47,229,49"/>
+</map>

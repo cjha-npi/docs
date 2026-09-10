@@ -1,0 +1,10 @@
+<map id="anonymous_namespace{Gui::cpp}::draw::baseRoundedRect" name="anonymous_namespace{Gui::cpp}::draw::baseRoundedRect">
+<area shape="rect" id="Node000001" title="Fills the option rectangle with the specified color and rounded corners." alt="" coords="235,100,672,126"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="513,95,518,90,511,85,489,81,453,79,414,81,393,86,389,91,401,101,396,100,384,92,390,82,414,76,453,74,490,75,513,80,523,89,516,99"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom spin&#45;box and scrollbar visuals." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="386,100,186,56,187,51,390,97"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws supported controls using application&#45;specific layouts and visuals." alt="" coords="5,85,187,141"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="224,114,187,116,186,111,229,112"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws customized backgrounds, frames, indicators and item&#45;view states." alt="" coords="5,165,187,221"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="388,130,187,176,186,170,388,125"/>
+</map>

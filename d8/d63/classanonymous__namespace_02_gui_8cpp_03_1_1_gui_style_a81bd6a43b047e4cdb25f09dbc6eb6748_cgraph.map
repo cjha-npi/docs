@@ -1,0 +1,22 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::drawPrimitive" name="anonymous_namespace{Gui::cpp}::GuiStyle::drawPrimitive">
+<area shape="rect" id="Node000001" title="Draws customized backgrounds, frames, indicators and item&#45;view states." alt="" coords="5,326,459,352"/>
+<area shape="rect" id="Node000002" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ae5603f3ba33adb7a05f7f1816bd7a0f7" title="Fills the option rectangle with the specified color and rounded corners." alt="" coords="507,29,792,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,325,278,278,338,212,416,141,460,109,505,81,532,71,527,74,508,85,463,113,420,145,342,216,282,282,245,328"/>
+<area shape="rect" id="Node000003" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a12037930720aefc2c0753719a78c11e2" title="Draws a focus indicator along the bottom of a rectangle." alt="" coords="531,119,768,159"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="248,324,352,251,427,207,506,169,536,160,531,163,508,173,429,211,355,255,251,328"/>
+<area shape="rect" id="Node000004" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a17874e85ad6e53b438db9754d89fd2cc" title="Draws the square pressed&#45;state border for a button inside an item view." alt="" coords="523,207,776,263"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="283,324,531,263,527,267,285,329"/>
+<area shape="rect" id="Node000005" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a28022be21bc0970e5e85764652cdcb2c" title="Draws the inset background used for a pressed button." alt="" coords="515,311,784,367"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="458,336,509,338,504,340,459,342"/>
+<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2" title="Adjusts text rectangles for consistent vertical alignment." alt="" coords="559,391,740,447"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="300,349,553,399,549,402,299,354"/>
+<area shape="rect" id="Node000007" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aeed4bac894458e065e60749347901058" title="Returns the surface colors for the currently effective theme variant." alt="" coords="559,471,740,527"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="259,349,367,399,508,456,554,474,548,473,506,462,365,404,259,354"/>
+<area shape="rect" id="Node000008" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a38093419df669cf69b181757e5c3a649" title="Returns the precomputed data for the effective dark/light theme." alt="" coords="840,504,1021,560"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="245,349,286,390,346,443,422,497,464,519,508,536,548,548,591,555,677,561,760,557,830,552,835,551,760,563,677,566,590,560,547,553,506,542,462,524,419,501,343,447,282,394,244,354"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="598,29,594,20,602,11,621,5,649,3,690,8,701,14,705,23,699,22,697,17,688,13,649,8,622,10,605,15,599,21,603,30"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="598,118,594,109,602,100,621,94,649,92,690,97,701,103,705,112,700,111,697,107,688,102,649,97,622,99,605,104,599,110,603,120"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="595,206,595,197,605,188,623,183,649,181,687,185,698,191,704,200,699,199,695,195,685,190,649,186,624,188,608,193,600,199,600,209"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="595,310,595,301,605,292,623,287,649,285,687,289,698,295,704,304,699,302,695,299,685,294,649,290,624,292,608,297,600,303,600,313"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="740,507,835,521,829,521,740,512"/>
+</map>

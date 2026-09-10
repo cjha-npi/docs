@@ -2,6 +2,7 @@ var dp_arch_dir_architecture =
 [
     [ "Logging System", "d8/da3/dp_arch_logging_system.html", [
       [ "Overview", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__overview", null ],
+      [ "Log Category Usage", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__log_category_usage", null ],
       [ "Implementation", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__implementation", null ],
       [ "Initialization", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__initialization", null ],
       [ "Log Records and Context Caches", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__log_records_and_context_caches", null ],
@@ -25,5 +26,25 @@ var dp_arch_dir_architecture =
       [ "Test: Cache Text", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_context_cache", null ],
       [ "Test: Text Sanitization", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_text_sanitization", null ],
       [ "Test: Logging Behavior", "d8/da3/dp_arch_logging_system.html#dp_arch_logging_system__test_logging_behavior", null ]
+    ] ],
+    [ "GUI System", "da/d86/dp_arch_gui_system.html", [
+      [ "Introduction", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__intro", null ],
+      [ "Details", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__details", null ],
+      [ "Initialization", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__initialization", null ],
+      [ "Custom Properties", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__custom_properties", null ],
+      [ "Public Interface", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__public_interface", null ],
+      [ "Usage", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__usage", null ],
+      [ "Application Font", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__app_font", null ],
+      [ "Technical Font", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__technical_font", null ],
+      [ "Themes and Colors", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__themes_colors", null ],
+      [ "Theme-Dependent Icons", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__dynamic_icons", null ],
+      [ "Grouped and Embedded Widgets", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__widget_hierarchies", null ],
+      [ "Custom Drawing and Sizing", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__drawing_sizing", null ],
+      [ "Table and Tree Headers", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__headers", null ],
+      [ "Completion Popups", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__completion", null ],
+      [ "Limitations", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__limitations", null ],
+      [ "Diagnostics and Maintenance", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__diagnostics", null ],
+      [ "Testing", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__testing", null ],
+      [ "Bug: Font CacheOverflowException", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__bug_font_CacheOverflowException", null ]
     ] ]
 ];

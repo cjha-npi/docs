@@ -1,0 +1,12 @@
+<map id="anonymous_namespace{Gui::cpp}::size::dataForFont" name="anonymous_namespace{Gui::cpp}::size::dataForFont">
+<area shape="rect" id="Node000001" title="Calculates standardized widget and icon dimensions for a font." alt="" coords="693,60,1099,86"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="954,54,957,50,950,45,930,41,896,39,859,41,839,46,835,51,846,61,841,60,830,52,836,42,858,36,896,34,931,35,953,40,962,49,957,59"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" title="Returns sizing data based on the widget&#39;s font size and height limits." alt="" coords="464,45,645,101"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="683,73,645,76,645,71,688,73"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3" title="Provides application&#45;standard metrics for selected control elements." alt="" coords="235,5,416,61"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="454,56,416,52,416,46,459,56"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Calculates customized content sizes for supported controls." alt="" coords="235,85,416,141"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="459,90,416,100,415,95,454,91"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws supported controls using application&#45;specific layouts and visuals." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="225,34,187,36,186,31,230,32"/>
+</map>

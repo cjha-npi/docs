@@ -6,11 +6,13 @@ var searchData=
   ['valuetype_3',['ValueType',['../d4/d0d/classnpi_1_1ind_1_1_locked_value.html#a80c5a579822cee0a55aba99d51f46af8',1,'npi::ind::LockedValue']]],
   ['version_4',['version',['../dc/dba/namespacenpi_1_1app.html#ae7820aa42829cc12ab153001b330ad9b',1,'npi::app']]],
   ['version_20information_5',['Version Information',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__ver_info',1,'']]],
-  ['visual_20indent_6',['Force Visual Indent',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent',1,'']]],
-  ['visual_20studio_20setup_7',['Visual Studio Setup',['../d7/d3c/dp_dh_vs_setup.html',1,'dp_dh_dir_setups']]],
-  ['vs_20code_20setup_8',['VS Code Setup',['../d3/dba/dp_dh_vs_code_setup.html',1,'dp_dh_dir_setups']]],
-  ['vs_20project_20settings_9',['VS Project Settings',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_proj_settings',1,'']]],
-  ['vs_20property_20sheets_10',['VS Property Sheets',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets',1,'']]],
-  ['vs_5fcode_5fsetup_2emd_11',['vs_code_setup.md',['../d4/d83/vs__code__setup_8md.html',1,'']]],
-  ['vs_5fsetup_2emd_12',['vs_setup.md',['../d7/d53/vs__setup_8md.html',1,'']]]
+  ['viewbtnpresspen_5f_6',['viewBtnPressPen_',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#af2e7f84837176e22598539054dfb6c61',1,'anonymous_namespace{Gui.cpp}::ThemeData']]],
+  ['viewdisbtnpresspen_5f_7',['viewDisBtnPressPen_',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ae93aca34a9712892ce3a40a76cd32257',1,'anonymous_namespace{Gui.cpp}::ThemeData']]],
+  ['visual_20indent_8',['Force Visual Indent',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent',1,'']]],
+  ['visual_20studio_20setup_9',['Visual Studio Setup',['../d7/d3c/dp_dh_vs_setup.html',1,'dp_dh_dir_setups']]],
+  ['vs_20code_20setup_10',['VS Code Setup',['../d3/dba/dp_dh_vs_code_setup.html',1,'dp_dh_dir_setups']]],
+  ['vs_20project_20settings_11',['VS Project Settings',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_proj_settings',1,'']]],
+  ['vs_20property_20sheets_12',['VS Property Sheets',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_prop_sheets',1,'']]],
+  ['vs_5fcode_5fsetup_2emd_13',['vs_code_setup.md',['../d4/d83/vs__code__setup_8md.html',1,'']]],
+  ['vs_5fsetup_2emd_14',['vs_setup.md',['../d7/d53/vs__setup_8md.html',1,'']]]
 ];

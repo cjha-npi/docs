@@ -2,6 +2,8 @@ var dir_ce0e7e0051629da598757e5adae9dc7c =
 [
     [ "AppTypes.hpp", "dd/d34/_app_types_8hpp.html", "dd/d34/_app_types_8hpp" ],
     [ "CrossProcessLocker.hpp", "d8/d25/_cross_process_locker_8hpp.html", "d8/d25/_cross_process_locker_8hpp" ],
+    [ "Gui.cpp", "dd/d7f/_gui_8cpp.html", "dd/d7f/_gui_8cpp" ],
+    [ "Gui.h", "d1/d67/_gui_8h.html", "d1/d67/_gui_8h" ],
     [ "Log.cpp", "d0/da7/_log_8cpp.html", "d0/da7/_log_8cpp" ],
     [ "Log.h", "da/df4/_log_8h.html", "da/df4/_log_8h" ],
     [ "Main.cpp", "d5/d12/_main_8cpp.html", "d5/d12/_main_8cpp" ],

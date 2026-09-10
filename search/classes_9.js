@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['slotgate_0',['SlotGate',['../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html',1,'npi::ind']]]
+  ['props_0',['Props',['../d6/d46/structnpi_1_1gui_1_1_props.html',1,'npi::gui']]]
 ];

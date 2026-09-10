@@ -17,17 +17,286 @@
   the 'dvh' height will use the second one.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
-/* CUSTOM FONT FOR CODE */
-/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* ============================================================
+ * Atkinson Hyperlegible Next
+ * ============================================================ */
 
-/* JetBrains Mono for code and custom navigation tree */
 @font-face {
-  font-family: "JB-Mono";
-  src: url("JetBrainsMono-Regular.woff2") format("woff2");
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("AtkinsonHyperlegibleNext-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: block;
+}
+
+
+/* ============================================================
+ * JetBrains Mono
+ * ============================================================ */
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-Thin.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-ThinItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-ExtraLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-Light.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-LightItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-Italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-Medium.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-MediumItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-SemiBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-BoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: block;
+}
+
+/*
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "JB-Mono";
+  src: url("JetBrainsMono-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: block;
+}
+*/
+
+
+/* ============================================================
+ * Doxygen Awesome font configuration
+ * ============================================================ */
+
+:root {
+  --font-family:
+      "Atkinson",
+      -apple-system,
+      BlinkMacSystemFont,
+      Segoe UI,
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      Fira Sans,
+      Droid Sans,
+      Helvetica Neue,
+      sans-serif;
+
+  --font-family-monospace:
+      "JB-Mono",
+      ui-monospace,
+      SFMono-Regular,
+      SF Mono,
+      Menlo,
+      Consolas,
+      Liberation Mono,
+      monospace;
 }
 
 /* Disable browser-made fake bold fonts for the whole document.
@@ -70,8 +339,6 @@ html {
 
 :root {
 
-  --font-family-monospace: "JB-Mono",ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
-
   --dp-sep: 6px;
   --dp-min-width: 100px;
   --dp-mark-width: 4px;
@@ -87,7 +354,7 @@ html {
   --dp-page-nav-line-height: 16px;
 
   --dp-root-item-font-size: 12px;
-  --dp-root-item-line-height: 20px;
+  --dp-root-item-line-height: 18px;
 
   --dp-leaf-item-font-size: 12px;
   --dp-leaf-item-line-height: 18px;
@@ -1752,6 +2019,7 @@ li.dpt-node--branch > .dpt-row {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: normal;
 }
 
 /* Separate config for prefix. Here the shrink value

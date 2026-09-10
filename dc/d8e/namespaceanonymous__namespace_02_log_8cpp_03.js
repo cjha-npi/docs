@@ -16,6 +16,7 @@ var namespaceanonymous__namespace_02_log_8cpp_03 =
     ] ],
     [ "control", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html", [
       [ "checkAndValidateDir", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ac9345b400b3cab13c1c46b049c0f3723", null ],
+      [ "cleanedFilterRule", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a7c9393901a560802243af7784b9e5cb9", null ],
       [ "cleanedFilterRulesList", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a027c61d8dc60f13ad2a0e0be6e917a6e", null ],
       [ "comparePaths", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a0a4a9a6776429cc07b1afc2c2ec5ef57", null ],
       [ "loadAllSettings", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794", null ],

@@ -29,12 +29,13 @@ var NAVTREE =
     [ "Architecture", "db/d8d/dp_arch_dir_architecture.html", "db/d8d/dp_arch_dir_architecture" ],
     [ "Dependencies", "d2/d46/dp_dep_dir_dependencies.html", "d2/d46/dp_dep_dir_dependencies" ],
     [ "Dev Hub", "d3/dfe/dp_dh_dir_dev_hub.html", "d3/dfe/dp_dh_dir_dev_hub" ],
+    [ "Bug List", "de/da5/bug.html", null ],
     [ "Bug List", "dc/d96/dp_dh_bugs.html", null ],
     [ "Required", "d5/d96/dp_dh_required.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
@@ -44,10 +45,11 @@ var NAVTREE =
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
@@ -66,11 +68,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#a10ba24b7f22ae19dfa063856e4225c14",
-"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a6e6815cb1b8aac3f52e05a521c038877",
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a76b45c827f28221a7771d511f0e0b649",
-"da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#aa1e76f9d85cb3e11d4e0a63eaa66a6dc",
-"functions_vars.html"
+"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html",
+"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a3ac557daa4bd8051c8687f362f6d789d",
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a01ecd0e5a4ce36824d3ddfa077462957",
+"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2",
+"db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa1e072c53b80addf9a579f244bf26c47",
+"functions_r.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

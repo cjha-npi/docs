@@ -1,0 +1,25 @@
+<map id="anonymous_namespace{Gui::cpp}::icon::updateDynamicIcon" name="anonymous_namespace{Gui::cpp}::icon::updateDynamicIcon">
+<area shape="rect" id="Node000001" title="Applies the specified theme variant to a QAction&#39;s dynamic icon." alt="" coords="797,292,1251,318"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="1095,287,1101,282,1093,277,1067,273,1024,271,978,273,952,279,947,281,947,283,962,293,956,292,942,285,943,278,950,274,977,268,1024,266,1068,267,1095,272,1106,281,1097,292"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ad8794d2f5d88470dbe2ff46bee1f9a3a" title="Applies the effective dark/light palette and refreshes dynamic icons." alt="" coords="504,116,693,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="979,290,672,174,673,169,984,289"/>
+<area shape="rect" id="Node000007" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies base&#45;style initialization and GuiStyle widget customizations." alt="" coords="219,245,400,301"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="944,291,852,279,749,268,599,263,448,268,400,270,399,265,448,263,599,257,750,263,853,274,949,291"/>
+<area shape="rect" id="Node000008" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4b3ce8806a9c3a1bc5f3cbfddfb3d927" title="Refreshes an action&#39;s dynamic icon and registers it for theme updates." alt="" coords="492,277,705,333"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="787,306,705,308,705,303,792,305"/>
+<area shape="rect" id="Node000010" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab5ad1d329be0a1bc2362718e85487f8a" title="Applies the specified theme variant to a QAbstractButton&#39;s dynamic icon." alt="" coords="448,357,749,398"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="942,319,720,360,719,354,937,320"/>
+<area shape="rect" id="Node000011" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a557291b8beefba625196706b350f13cd" title="Applies the specified theme variant to a QLabel&#39;s dynamic pixmap." alt="" coords="448,422,749,463"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="988,320,881,366,750,412,701,425,700,420,749,407,880,361,983,322"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662" title="Constructs the Fusion&#45;based style and initializes GUI resources." alt="" coords="219,5,400,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="516,114,383,64,383,58,521,112"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" title="Observes Windows theme&#45;setting notifications while Theme::System is selected." alt="" coords="219,85,400,141"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="494,134,400,125,399,120,499,132"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Sets the configured application theme." alt="" coords="219,165,400,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="494,162,401,180,399,175,499,160"/>
+<area shape="rect" id="Node000006" href="$d7/dc3/namespacenpi_1_1gui.html#ad60fe158d1b485a98f71cf850c1de037" title="Sets the application theme." alt="" coords="5,180,171,206"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="209,195,172,196,169,191,213,192"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="481,293,400,286,400,280,487,292"/>
+<area shape="rect" id="Node000009" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Applies event&#45;driven style updates and property&#45;controlled behavior." alt="" coords="219,325,400,381"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="482,325,400,341,399,336,487,323"/>
+</map>

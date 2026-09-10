@@ -1,0 +1,7 @@
+<map id="anonymous_namespace{Gui::cpp}::startup" name="anonymous_namespace{Gui::cpp}::startup">
+<area shape="rect" id="Node000001" title="Schedules application&#45;style initialization through Qt&#39;s startup hook." alt="" coords="5,13,331,38"/>
+<area shape="rect" id="Node000002" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the application&#39;s GuiStyle, installing one if needed." alt="" coords="379,5,560,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="330,23,374,26,368,26,331,28"/>
+<area shape="rect" id="Node000003" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a244c57509e0b88781450e3957e7a3a22" title="Registers the bundled JetBrains Mono fonts and logs loading failures." alt="" coords="608,5,789,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="560,23,603,26,598,26,560,28"/>
+</map>

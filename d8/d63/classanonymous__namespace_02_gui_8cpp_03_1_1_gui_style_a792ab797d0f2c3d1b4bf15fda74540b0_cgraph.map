@@ -1,0 +1,14 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::drawComplexControl" name="anonymous_namespace{Gui::cpp}::GuiStyle::drawComplexControl">
+<area shape="rect" id="Node000001" title="Draws custom spin&#45;box and scrollbar visuals." alt="" coords="5,172,499,197"/>
+<area shape="rect" id="Node000002" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ae5603f3ba33adb7a05f7f1816bd7a0f7" title="Fills the option rectangle with the specified color and rounded corners." alt="" coords="547,29,832,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,169,400,127,546,80,591,71,586,73,547,86,402,132,288,174"/>
+<area shape="rect" id="Node000003" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a12037930720aefc2c0753719a78c11e2" title="Draws a focus indicator along the bottom of a rectangle." alt="" coords="571,119,808,159"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="376,169,565,151,560,153,377,174"/>
+<area shape="rect" id="Node000004" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe" title="Constructs a closed triangular path with rounded corners." alt="" coords="559,208,820,249"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="380,194,553,214,548,215,380,200"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a38093419df669cf69b181757e5c3a649" title="Returns the precomputed data for the effective dark/light theme." alt="" coords="599,272,780,328"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="301,194,593,273,589,276,301,200"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="610,29,605,20,618,10,646,5,689,3,753,8,769,14,774,24,769,22,766,18,752,13,689,8,646,10,620,15,610,21,615,30"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="610,118,605,109,618,100,646,94,689,92,753,97,769,104,774,113,769,111,766,108,752,102,689,97,646,99,620,105,610,110,615,120"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="610,207,605,198,618,189,646,183,689,181,753,187,769,193,774,203,769,201,766,197,752,192,689,187,646,189,620,194,610,200,615,209"/>
+</map>

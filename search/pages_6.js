@@ -6,5 +6,7 @@ var searchData=
   ['git_20github_3',['Git &amp;amp; Github',['../de/d8d/dp_dh_dir_git_github.html',1,'dp_dh_dir_dev_hub']]],
   ['git_20pre_20push_20hook_4',['Git Pre-Push Hook',['../d7/d32/dp_dh_git_pre_push_hook.html',1,'dp_dh_dir_git_github']]],
   ['github_5',['Git &amp;amp; Github',['../de/d8d/dp_dh_dir_git_github.html',1,'dp_dh_dir_dev_hub']]],
-  ['given_20size_6',['Create Files with Given Size',['../d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_files_with_given_size',1,'']]]
+  ['given_20size_6',['Create Files with Given Size',['../d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_files_with_given_size',1,'']]],
+  ['grouped_20and_20embedded_20widgets_7',['Grouped and Embedded Widgets',['../da/d86/dp_arch_gui_system.html#dp_arch_gui_system__widget_hierarchies',1,'']]],
+  ['gui_20system_8',['GUI System',['../da/d86/dp_arch_gui_system.html',1,'dp_arch_dir_architecture']]]
 ];

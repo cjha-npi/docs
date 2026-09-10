@@ -1,0 +1,27 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::setTheme_" name="anonymous_namespace{Gui::cpp}::GuiStyle::setTheme_">
+<area shape="rect" id="Node000001" title="Sets the configured application theme." alt="" coords="5,164,427,190"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ad8794d2f5d88470dbe2ff46bee1f9a3a" title="Applies the effective dark/light palette and refreshes dynamic icons." alt="" coords="527,77,716,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="288,162,521,122,517,125,289,167"/>
+<area shape="rect" id="Node000007" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a68ac735f44edde8a92a47fd8977e2b3f" title="Returns whether Windows is configured to use a dark application theme." alt="" coords="475,157,768,198"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="426,175,469,177,464,178,427,180"/>
+<area shape="rect" id="Node000008" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f" title="Converts Theme enum value to text." alt="" coords="503,246,740,287"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="275,187,523,243,519,246,275,193"/>
+<area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0" title="Applies the specified theme variant to a QAction&#39;s dynamic icon." alt="" coords="816,85,1117,126"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="716,103,811,105,805,106,716,108"/>
+<area shape="poly" id="edge9_Node000003_Node000003" title=" " alt="" coords="908,84,903,76,913,66,934,60,967,58,1014,63,1026,70,1030,79,1025,77,1023,73,1013,68,967,63,935,66,915,71,908,77,912,86"/>
+<area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Constructs an icon with theme&#45;dependent Off and On states." alt="" coords="1165,85,1419,126"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1117,103,1160,105,1155,105,1117,108"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="1234,84,1230,76,1239,66,1260,60,1292,58,1338,63,1350,70,1354,80,1349,77,1346,73,1337,68,1292,63,1261,66,1242,71,1235,77,1239,86"/>
+<area shape="rect" id="Node000005" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" title="Copies all available Normal&#45;mode pixmaps for one icon state." alt="" coords="1495,29,1724,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1418,83,1484,76,1489,75,1419,89"/>
+<area shape="rect" id="Node000006" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c" title="Finds the resource path for a theme&#45;dependent icon." alt="" coords="1467,133,1752,174"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="1419,122,1470,132,1464,132,1419,127"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="1549,28,1549,19,1560,10,1580,5,1609,3,1651,7,1664,13,1671,22,1666,20,1661,17,1650,12,1609,8,1581,10,1562,15,1553,21,1553,31"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="1552,132,1547,124,1557,114,1577,108,1609,106,1656,111,1668,118,1671,128,1666,125,1664,121,1654,116,1609,111,1578,114,1559,119,1553,125,1556,134"/>
+<area shape="poly" id="edge15_Node000008_Node000008" title=" " alt="" coords="559,245,554,237,564,227,586,222,621,220,672,225,685,231,688,241,684,238,681,235,670,230,621,225,587,227,567,232,559,238,563,248"/>
+<area shape="rect" id="Node000009" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882" title="Constructs the drawing resources for one theme variant." alt="" coords="864,246,1069,287"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="740,264,859,266,854,267,740,269"/>
+<area shape="poly" id="edge14_Node000009_Node000009" title=" " alt="" coords="908,245,903,237,913,227,934,222,967,220,1014,225,1026,231,1030,241,1025,238,1023,235,1013,230,967,225,935,227,915,232,908,238,912,248"/>
+<area shape="rect" id="Node000010" href="$d7/dc3/namespacenpi_1_1gui.html#a50c3e660741cb632b1be20d557698e68" title="Selects a black or white text color for the specified background." alt="" coords="1205,254,1379,279"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="1069,264,1200,266,1195,267,1069,269"/>
+</map>

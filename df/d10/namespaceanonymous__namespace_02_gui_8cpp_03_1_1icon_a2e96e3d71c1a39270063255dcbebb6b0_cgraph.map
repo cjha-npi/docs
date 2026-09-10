@@ -1,0 +1,13 @@
+<map id="anonymous_namespace{Gui::cpp}::icon::updateDynamicIcon" name="anonymous_namespace{Gui::cpp}::icon::updateDynamicIcon">
+<area shape="rect" id="Node000001" title="Applies the specified theme variant to a QAction&#39;s dynamic icon." alt="" coords="5,92,459,118"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="168,93,155,85,155,78,162,74,187,68,232,66,273,67,299,72,310,81,302,91,299,87,305,82,297,77,273,73,232,71,188,73,164,79,160,81,160,83,173,92"/>
+<area shape="rect" id="Node000002" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Constructs an icon with theme&#45;dependent Off and On states." alt="" coords="507,85,760,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,103,501,105,496,105,458,108"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="576,84,571,76,581,66,601,60,633,58,680,63,692,70,695,80,690,77,688,73,678,68,633,63,602,66,583,71,577,77,580,86"/>
+<area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" title="Copies all available Normal&#45;mode pixmaps for one icon state." alt="" coords="836,29,1065,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="760,83,825,76,831,75,760,89"/>
+<area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c" title="Finds the resource path for a theme&#45;dependent icon." alt="" coords="808,133,1093,174"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="760,122,811,132,806,132,760,127"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="890,28,890,19,901,10,921,5,951,3,993,7,1005,13,1012,22,1007,20,1002,17,991,12,951,8,922,10,903,15,895,21,894,31"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="893,132,889,124,898,114,919,108,951,106,997,111,1009,118,1012,128,1008,125,1005,121,995,116,951,111,919,114,901,119,894,125,898,134"/>
+</map>

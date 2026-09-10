@@ -1,0 +1,8 @@
+<map id="anonymous_namespace{Gui::cpp}::make::roundedArrow" name="anonymous_namespace{Gui::cpp}::make::roundedArrow">
+<area shape="rect" id="Node000001" title="Constructs a closed triangular path with rounded corners." alt="" coords="235,60,648,86"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="500,54,503,50,496,45,476,41,441,39,404,41,383,46,380,51,391,61,386,60,374,52,380,42,403,36,441,34,476,35,499,40,509,49,503,59"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom spin&#45;box and scrollbar visuals." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,61,187,46,186,41,324,58"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws supported controls using application&#45;specific layouts and visuals." alt="" coords="5,85,187,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="319,88,187,105,186,100,324,86"/>
+</map>

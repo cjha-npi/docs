@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::surfaces_" name="anonymous_namespace{Gui::cpp}::GuiStyle::surfaces_">
+<area shape="rect" id="Node000001" title="Returns the surface colors for the currently effective theme variant." alt="" coords="235,134,656,159"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws supported controls using application&#45;specific layouts and visuals." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="395,133,182,64,183,58,399,129"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws customized backgrounds, frames, indicators and item&#45;view states." alt="" coords="5,85,187,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="301,134,187,124,186,119,305,132"/>
+<area shape="rect" id="Node000004" href="$d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" title="Returns the surface colors for the currently effective background." alt="" coords="13,166,179,191"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="295,161,179,174,178,168,299,159"/>
+<area shape="rect" id="Node000005" href="$d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc" title="Returns the surface colors for an explicitly selected dark/light background." alt="" coords="13,215,179,241"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="382,164,152,218,151,213,381,159"/>
+</map>

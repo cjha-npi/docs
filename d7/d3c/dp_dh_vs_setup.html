@@ -521,7 +521,7 @@ Backup Solution Code on Save</h1>
 <div class="line">      }</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordtype">string</span> solutionDir =</div>
-<div class="line">          System.IO.Path.GetDirectoryName(dte.Solution.FullName);</div>
+<div class="line">          <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.IO.Path.GetDirectoryName(dte.Solution.FullName);</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(solutionDir))</div>
 <div class="line">        <span class="keywordflow">return</span>;</div>
@@ -550,12 +550,12 @@ Backup Solution Code on Save</h1>
 <div class="line">        <span class="comment">// Updating the time replaces any earlier pending save for the</span></div>
 <div class="line">        <span class="comment">// same solution and restarts that solution&#39;s debounce interval.</span></div>
 <div class="line">        pendingSolutions[solutionDir] =</div>
-<div class="line">            System.DateTime.UtcNow;</div>
+<div class="line">            <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.DateTime.UtcNow;</div>
 <div class="line">      }</div>
 <div class="line"> </div>
 <div class="line">      workEvent.Set();</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">catch</span> (System.Exception)</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Exception)</div>
 <div class="line">    {</div>
 <div class="line">      <span class="comment">// Saving the document must never be disrupted by backup failures.</span></div>
 <div class="line">    }</div>
@@ -567,19 +567,19 @@ Backup Solution Code on Save</h1>
 <div class="line">    {</div>
 <div class="line">      <span class="keywordtype">string</span> solutionDir = <span class="keyword">null</span>;</div>
 <div class="line">      <span class="keywordtype">int</span> waitMilliseconds =</div>
-<div class="line">          System.Threading.Timeout.Infinite;</div>
+<div class="line">          <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Threading.Timeout.Infinite;</div>
 <div class="line"> </div>
 <div class="line">      lock (syncRoot)</div>
 <div class="line">      {</div>
 <div class="line">        <span class="keywordflow">if</span> (stopping)</div>
 <div class="line">          <span class="keywordflow">return</span>;</div>
 <div class="line"> </div>
-<div class="line">        System.DateTime now = System.DateTime.UtcNow;</div>
+<div class="line">        System.DateTime now = <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.DateTime.UtcNow;</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">foreach</span> (</div>
-<div class="line">            System.Collections.Generic.KeyValuePair&lt;</div>
+<div class="line">            <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Collections.Generic.KeyValuePair&lt;</div>
 <div class="line">                <span class="keywordtype">string</span>,</div>
-<div class="line">                System.DateTime&gt; item in pendingSolutions)</div>
+<div class="line">                <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.DateTime&gt; item in pendingSolutions)</div>
 <div class="line">        {</div>
 <div class="line">          <span class="keywordtype">double</span> remaining =</div>
 <div class="line">              debounceMilliseconds -</div>
@@ -592,10 +592,10 @@ Backup Solution Code on Save</h1>
 <div class="line">          }</div>
 <div class="line"> </div>
 <div class="line">          <span class="keywordtype">int</span> candidateWait =</div>
-<div class="line">              (int)System.Math.Ceiling(remaining);</div>
+<div class="line">              (int)<a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Math.Ceiling(remaining);</div>
 <div class="line"> </div>
 <div class="line">          <span class="keywordflow">if</span> (waitMilliseconds ==</div>
-<div class="line">                 System.Threading.Timeout.Infinite ||</div>
+<div class="line">                 <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Threading.Timeout.Infinite ||</div>
 <div class="line">             candidateWait &lt; waitMilliseconds)</div>
 <div class="line">          {</div>
 <div class="line">            waitMilliseconds = candidateWait;</div>
@@ -621,7 +621,7 @@ Backup Solution Code on Save</h1>
 <div class="line">    <span class="keywordflow">try</span></div>
 <div class="line">    {</div>
 <div class="line">      <span class="keyword">using</span> (System.Threading.Mutex copyMutex =</div>
-<div class="line">          <span class="keyword">new</span> System.Threading.Mutex(<span class="keyword">false</span>, copyMutexName))</div>
+<div class="line">          <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Threading.Mutex(<span class="keyword">false</span>, copyMutexName))</div>
 <div class="line">      {</div>
 <div class="line">        <span class="keywordtype">bool</span> ownsMutex = <span class="keyword">false</span>;</div>
 <div class="line"> </div>
@@ -636,7 +636,7 @@ Backup Solution Code on Save</h1>
 <div class="line">              ownsMutex =</div>
 <div class="line">                  copyMutex.WaitOne(mutexPollMilliseconds);</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">catch</span> (System.Threading.AbandonedMutexException)</div>
+<div class="line">            <span class="keywordflow">catch</span> (<a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Threading.AbandonedMutexException)</div>
 <div class="line">            {</div>
 <div class="line">              <span class="comment">// The previous owning process terminated. This</span></div>
 <div class="line">              <span class="comment">// thread now owns the mutex and may continue.</span></div>
@@ -660,14 +660,14 @@ Backup Solution Code on Save</h1>
 <div class="line">            {</div>
 <div class="line">              copyMutex.ReleaseMutex();</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">catch</span> (System.ApplicationException)</div>
+<div class="line">            <span class="keywordflow">catch</span> (<a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.ApplicationException)</div>
 <div class="line">            {</div>
 <div class="line">            }</div>
 <div class="line">          }</div>
 <div class="line">        }</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">catch</span> (System.Exception)</div>
+<div class="line">    <span class="keywordflow">catch</span> (<a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Exception)</div>
 <div class="line">    {</div>
 <div class="line">      <span class="comment">// Failures must not terminate the worker or affect Visual Studio.</span></div>
 <div class="line">    }</div>
@@ -676,13 +676,13 @@ Backup Solution Code on Save</h1>
 <div class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RunScript(<span class="keywordtype">string</span> solutionDir)</div>
 <div class="line">  {</div>
 <div class="line">    <span class="keywordtype">string</span> commandProcessor =</div>
-<div class="line">        System.Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;ComSpec&quot;</span>);</div>
+<div class="line">        <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Environment.GetEnvironmentVariable(<span class="stringliteral">&quot;ComSpec&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(commandProcessor))</div>
 <div class="line">      commandProcessor = <span class="stringliteral">&quot;cmd.exe&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">    System.Diagnostics.ProcessStartInfo startInfo =</div>
-<div class="line">        <span class="keyword">new</span> System.Diagnostics.ProcessStartInfo();</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Diagnostics.ProcessStartInfo();</div>
 <div class="line"> </div>
 <div class="line">    startInfo.FileName = commandProcessor;</div>
 <div class="line">    startInfo.Arguments =</div>
@@ -695,10 +695,10 @@ Backup Solution Code on Save</h1>
 <div class="line">    startInfo.UseShellExecute = <span class="keyword">false</span>;</div>
 <div class="line">    startInfo.CreateNoWindow = <span class="keyword">true</span>;</div>
 <div class="line">    startInfo.WindowStyle =</div>
-<div class="line">        System.Diagnostics.ProcessWindowStyle.Hidden;</div>
+<div class="line">        <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Diagnostics.ProcessWindowStyle.Hidden;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">using</span> (System.Diagnostics.Process process =</div>
-<div class="line">        System.Diagnostics.Process.Start(startInfo))</div>
+<div class="line">        <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Diagnostics.Process.Start(startInfo))</div>
 <div class="line">    {</div>
 <div class="line">      <span class="keywordflow">if</span> (process != <span class="keyword">null</span>)</div>
 <div class="line">        process.WaitForExit();</div>
@@ -718,7 +718,7 @@ Backup Solution Code on Save</h1>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> fullPath.StartsWith(</div>
 <div class="line">        directoryWithSlash,</div>
-<div class="line">        System.StringComparison.OrdinalIgnoreCase);</div>
+<div class="line">        <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.StringComparison.OrdinalIgnoreCase);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsAllowedSolutionDirectory(<span class="keywordtype">string</span> solutionDir)</div>
@@ -739,10 +739,10 @@ Backup Solution Code on Save</h1>
 <div class="line">      <span class="comment">// The solution must be below the category root, not the root itself.</span></div>
 <div class="line">      <span class="keywordflow">if</span> (!normalizedSolutionDir.Equals(</div>
 <div class="line">            normalizedRoot,</div>
-<div class="line">            System.StringComparison.OrdinalIgnoreCase) &amp;&amp;</div>
+<div class="line">            <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.StringComparison.OrdinalIgnoreCase) &amp;&amp;</div>
 <div class="line">        solutionDirWithSlash.StartsWith(</div>
 <div class="line">            allowedRoots[index],</div>
-<div class="line">            System.StringComparison.OrdinalIgnoreCase))</div>
+<div class="line">            <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.StringComparison.OrdinalIgnoreCase))</div>
 <div class="line">      {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">      }</div>
@@ -778,16 +778,16 @@ Backup Solution Code on Save</h1>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">private</span> readonly <span class="keywordtype">object</span> syncRoot = <span class="keyword">new</span> object();</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">private</span> readonly System.Collections.Generic.Dictionary&lt;</div>
+<div class="line">  <span class="keyword">private</span> readonly <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Collections.Generic.Dictionary&lt;</div>
 <div class="line">      string,</div>
-<div class="line">      System.DateTime&gt; pendingSolutions =</div>
-<div class="line">      <span class="keyword">new</span> System.Collections.Generic.Dictionary&lt;</div>
+<div class="line">      <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.DateTime&gt; pendingSolutions =</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Collections.Generic.Dictionary&lt;</div>
 <div class="line">          string,</div>
-<div class="line">          System.DateTime&gt;(</div>
-<div class="line">              System.StringComparer.OrdinalIgnoreCase);</div>
+<div class="line">          <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.DateTime&gt;(</div>
+<div class="line">              <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.StringComparer.OrdinalIgnoreCase);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">private</span> readonly System.Threading.AutoResetEvent workEvent =</div>
-<div class="line">      <span class="keyword">new</span> System.Threading.AutoResetEvent(<span class="keyword">false</span>);</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.Threading.AutoResetEvent(<span class="keyword">false</span>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">private</span> EnvDTE80.DTE2 dte;</div>
 <div class="line">  <span class="keyword">private</span> EnvDTE.Events events;</div>
@@ -795,6 +795,7 @@ Backup Solution Code on Save</h1>
 <div class="line">  <span class="keyword">private</span> System.Threading.Thread workerThread;</div>
 <div class="line">  <span class="keyword">private</span> <span class="keywordtype">bool</span> stopping;</div>
 <div class="line">}</div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">npi::gui::Theme::System</a></div><div class="ttdeci">@ System</div><div class="ttdoc">Follow the current Windows application theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00153">Gui.h:153</a></div></div>
 </div><!-- fragment --><p> Click <span class="tt">Save</span>, then click <span class="tt">Compile</span>. Verify that <span class="tt">Compilation status</span> shows <span class="tt">Success</span>, and then click <span class="tt">Install</span>. Restart Visual Studio if necessary.</p>
 <h1 class="doxsection"><a class="anchor" id="dp_dh_vs_setup__bug_sophos_dll"></a>
 BUG: Sophos DLL</h1>

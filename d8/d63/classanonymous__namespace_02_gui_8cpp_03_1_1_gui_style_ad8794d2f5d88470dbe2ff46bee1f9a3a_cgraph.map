@@ -1,0 +1,15 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::changeCurrentTheme_" name="anonymous_namespace{Gui::cpp}::GuiStyle::changeCurrentTheme_">
+<area shape="rect" id="Node000001" title="Applies the effective dark/light palette and refreshes dynamic icons." alt="" coords="5,92,507,118"/>
+<area shape="rect" id="Node000002" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0" title="Applies the specified theme variant to a QAction&#39;s dynamic icon." alt="" coords="555,85,856,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="506,103,549,105,544,105,506,108"/>
+<area shape="poly" id="edge8_Node000002_Node000002" title=" " alt="" coords="646,84,642,76,651,66,672,60,705,58,753,63,765,70,769,80,764,77,761,73,751,68,705,63,673,66,654,71,647,77,651,86"/>
+<area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Constructs an icon with theme&#45;dependent Off and On states." alt="" coords="904,85,1157,126"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="856,103,899,105,893,105,856,108"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="973,84,969,76,978,66,999,60,1031,58,1077,63,1089,70,1092,80,1088,77,1085,73,1075,68,1031,63,999,66,981,71,974,77,978,86"/>
+<area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" title="Copies all available Normal&#45;mode pixmaps for one icon state." alt="" coords="1233,29,1463,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1157,83,1223,76,1228,75,1158,89"/>
+<area shape="rect" id="Node000005" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c" title="Finds the resource path for a theme&#45;dependent icon." alt="" coords="1205,133,1491,174"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="1157,122,1208,132,1203,132,1157,127"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="1288,28,1287,19,1298,10,1318,5,1348,3,1390,7,1402,13,1409,22,1404,20,1399,17,1389,12,1348,8,1319,10,1301,15,1292,21,1292,31"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="1290,132,1286,124,1295,114,1316,108,1348,106,1394,111,1406,118,1410,128,1405,125,1402,121,1393,116,1348,111,1317,114,1298,119,1291,125,1295,135"/>
+</map>

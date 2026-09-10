@@ -4,7 +4,7 @@ var searchData=
   ['hash_20with_20inline_5fsimple_5fstructs_1',['Hash with INLINE_SIMPLE_STRUCTS',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__bugs_fixes__broken_hash',1,'Broken Hash with INLINE_SIMPLE_STRUCTS'],['../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000001',1,'Broken Hash with INLINE_SIMPLE_STRUCTS']]],
   ['header_2',['Parent Side Header',['../d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_header',1,'']]],
   ['header_20html_3',['Header HTML',['../df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__head',1,'']]],
-  ['headers_4',['External Headers',['../d3/dd2/dp_dep_external_headers.html',1,'dp_dep_dir_dependencies']]],
+  ['headers_4',['Headers',['../d3/dd2/dp_dep_external_headers.html',1,'External Headers'],['../da/d86/dp_arch_gui_system.html#dp_arch_gui_system__headers',1,'Table and Tree Headers']]],
   ['heading_20texts_5',['Heading Texts',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text',1,'Big Non-Heading Texts'],['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__mid_non_heading_text',1,'Medium Non-Heading Texts']]],
   ['helper_20code_6',['Helper Code',['../d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__helper_code',1,'']]],
   ['helpers_7',['Debug Helpers',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__debug_helpers',1,'']]],

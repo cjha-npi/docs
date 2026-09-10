@@ -1,0 +1,5 @@
+<map id="npi::gui::Surfaces" name="npi::gui::Surfaces">
+<area shape="rect" id="Node000001" title="Background colors for different surface levels." alt="" coords="5,140,171,165"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="53,5,123,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,38,91,140,85,140,86,40"/>
+</map>

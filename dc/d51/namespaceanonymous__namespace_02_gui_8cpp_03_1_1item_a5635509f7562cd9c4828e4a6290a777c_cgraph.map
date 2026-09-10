@@ -1,0 +1,7 @@
+<map id="anonymous_namespace{Gui::cpp}::item::isInsideItemView" name="anonymous_namespace{Gui::cpp}::item::isInsideItemView">
+<area shape="rect" id="Node000001" title="Returns whether a widget has an item&#45;view viewport among its ancestors." alt="" coords="5,44,451,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="165,44,152,37,153,30,159,26,184,20,228,18,268,19,294,24,304,33,297,44,294,39,299,34,292,29,268,25,228,23,185,25,161,30,157,33,157,35,171,45"/>
+<area shape="rect" id="Node000002" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a07860869e541a5f987d893214c377ad3" title="Returns whether a widget is the viewport of its parent item view." alt="" coords="499,29,744,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="450,55,493,57,488,57,450,60"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="547,28,547,19,560,10,585,5,621,3,673,7,688,13,697,22,692,21,686,17,672,13,621,8,586,10,562,15,551,22,551,31"/>
+</map>

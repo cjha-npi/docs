@@ -1,5 +1,6 @@
 var namespaces_dup =
 [
+    [ "anonymous_namespace{Gui.cpp}", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03" ],
     [ "anonymous_namespace{Log.cpp}", "dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html", "dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03" ],
     [ "anonymous_namespace{MetaInfo.cpp}", "d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html", [
       [ "basePath", "d9/dee/namespaceanonymous__namespace_02_meta_info_8cpp_03.html#a83a890c0d741a2d9697ff6eb4744f8c1", null ],

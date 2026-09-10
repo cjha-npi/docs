@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Gui::cpp}::make::theme" name="anonymous_namespace{Gui::cpp}::make::theme">
+<area shape="rect" id="Node000001" title="Constructs the drawing resources for one theme variant." alt="" coords="733,37,1091,62"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="971,31,974,26,967,22,946,17,912,15,874,18,854,23,850,28,862,38,857,36,845,29,851,18,874,12,912,10,947,12,969,17,979,25,973,35"/>
+<area shape="rect" id="Node000002" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f" title="Converts Theme enum value to text." alt="" coords="448,29,685,70"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="723,50,685,52,685,47,728,50"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="613,21,610,17,602,13,567,8,542,10,526,15,521,21,524,31,520,28,516,20,523,11,540,5,567,3,604,8,614,14,617,24"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Sets the configured application theme." alt="" coords="219,22,400,78"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="437,50,400,52,400,47,443,50"/>
+<area shape="rect" id="Node000004" href="$d7/dc3/namespacenpi_1_1gui.html#ad60fe158d1b485a98f71cf850c1de037" title="Sets the application theme." alt="" coords="5,37,171,62"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="208,50,171,52,170,47,214,49"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Gui::cpp}::item::isItemViewViewport" name="anonymous_namespace{Gui::cpp}::item::isItemViewViewport">
+<area shape="rect" id="Node000001" title="Returns whether a widget is the viewport of its parent item view." alt="" coords="512,72,973,98"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="809,67,814,62,806,57,782,53,743,51,700,53,676,58,672,61,672,63,685,73,680,72,667,65,667,58,674,54,699,48,743,46,783,47,808,52,819,61,811,72"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Applies event&#45;driven style updates and property&#45;controlled behavior." alt="" coords="259,5,440,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="634,72,440,48,440,42,640,71"/>
+<area shape="rect" id="Node000003" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a5635509f7562cd9c4828e4a6290a777c" title="Returns whether a widget has an item&#45;view viewport among its ancestors." alt="" coords="235,109,464,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="640,99,464,125,463,119,635,99"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="394,100,390,97,381,92,349,88,327,90,312,95,305,101,305,111,301,108,300,99,309,90,326,85,349,83,383,87,393,93,399,102"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Calculates customized content sizes for supported controls." alt="" coords="5,109,187,165"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="224,137,187,140,186,135,229,137"/>
+</map>

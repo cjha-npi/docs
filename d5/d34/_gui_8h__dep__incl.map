@@ -1,0 +1,5 @@
+<map id="Main_Proj/Gui.h" name="Main_Proj/Gui.h">
+<area shape="rect" id="Node000001" title="Declares runtime configuration and public controls for the graphical user interface." alt="" coords="13,5,155,31"/>
+<area shape="rect" id="Node000002" href="$dd/d7f/_gui_8cpp.html" title="Implements the application GUI style, theme handling and widget customization." alt="" coords="5,79,163,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,37,87,80,81,78,82,41"/>
+</map>

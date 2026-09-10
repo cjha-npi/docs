@@ -156,6 +156,7 @@ var _log_8cpp =
     [ "anonymous_namespace{Log.cpp}::format::bridgeLog", "d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a2bec914d05bd447bb12f800640913bac", null ],
     [ "anonymous_namespace{Log.cpp}::control::checkAndValidateDir", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#ac9345b400b3cab13c1c46b049c0f3723", null ],
     [ "anonymous_namespace{Log.cpp}::crash::claimFatalOwnership", "d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a51d7168bd1bc376fadad171333f0c9b3", null ],
+    [ "anonymous_namespace{Log.cpp}::control::cleanedFilterRule", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a7c9393901a560802243af7784b9e5cb9", null ],
     [ "anonymous_namespace{Log.cpp}::control::cleanedFilterRulesList", "d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a027c61d8dc60f13ad2a0e0be6e917a6e", null ],
     [ "anonymous_namespace{Log.cpp}::workers::cleanup", "dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#acce06e15c0cb54f327204ed7f65005d0", null ],
     [ "anonymous_namespace{Log.cpp}::console::close", "d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a3b284d50cc7fc024cbfb49dd7d7792be", null ],

@@ -1,0 +1,9 @@
+<map id="npi::gui::theme" name="npi::gui::theme">
+<area shape="rect" id="Node000001" title="Returns the configured application theme." alt="" coords="5,56,147,82"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aae4a0b6f66b9c85acd95d5b0f739ed3b" title="Returns the configured application theme." alt="" coords="195,5,376,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,55,189,49,184,51,147,60"/>
+<area shape="rect" id="Node000003" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the application&#39;s GuiStyle, installing one if needed." alt="" coords="195,85,376,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,78,189,88,184,89,146,84"/>
+<area shape="rect" id="Node000004" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a244c57509e0b88781450e3957e7a3a22" title="Registers the bundled JetBrains Mono fonts and logs loading failures." alt="" coords="424,85,605,126"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="376,103,419,105,414,105,376,108"/>
+</map>

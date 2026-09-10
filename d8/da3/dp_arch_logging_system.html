@@ -141,7 +141,38 @@ $(function(){initNavTree('d8/da3/dp_arch_logging_system.html','../../',''); });
 Overview</h1>
 <p>The logging system replaces Qt's default message handler and provides asynchronous file logging, optional console or debugger display, important-log forwarding, runtime configuration, persistent settings, directory cleanup, and best-effort fatal and crash reporting. Normal messages are written to a process-specific <span class="tt">*.log</span> file. Crash, fatal and late messages are forwarded to a separate helper process that maintains a corresponding <span class="tt">*.imp.log</span> file. Critical messages, and warning messages when configured as important, are also forwarded to the helper while remaining available in the normal <span class="tt">*.log</span> file.</p>
 <p>The implementation is designed to keep ordinary logging work away from application threads. The Qt message handler captures the message metadata, assigns sequence and timing information, obtains context-cache slots and enqueues a compact log record. Formatting, normal file output, display routing, rate limiting, and warning-to-important forwarding are performed by worker threads.</p>
-<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__implementation"></a>
+<h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__log_category_usage"></a>
+Log Category Usage</h1>
+<p>The logging category can be very useful for sub-system identification and to enable/disable logs for a particular sub-system. The logging category can be declared and defined by two different Qt macros: <span class="tt">Q_DECLARE_LOGGING_CATEGORY</span> and <span class="tt">Q_LOGGING_CATEGORY</span> (there are other macros as well, but these two are most useful). These macros expand to functions and so special care has to be taken as to how the macros are being used.</p>
+<p><span class="dp-markdown-mid-text">1. Log Category for Multiple Files</span></p>
+<p>Let's say you want to create a logging category <span class="tt">npi.bla</span>, so that it can be used from multiple files. Do this in the header:</p>
+<div class="fragment"><div class="line">#include &lt;QLoggingCategory&gt;</div>
+<div class="line"> </div>
+<div class="line">Q_DECLARE_LOGGING_CATEGORY(npi_bla)</div>
+</div><!-- fragment --><p>And in a single source file provide its definition: </p><div class="fragment"><div class="line">Q_LOGGING_CATEGORY(npi_bla, &quot;npi.bla&quot;)</div>
+</div><!-- fragment --><p><span class="dp-markdown-mid-text">2. Log Category for Single File</span></p>
+<p>Let's say you want to create a logging category <span class="tt">npi.bla</span>, but it is only going to be used in a single source file. In that case do not declare anything in the header. In the source file do this: </p><div class="fragment"><div class="line">#include &lt;QLoggingCategory&gt;</div>
+<div class="line"> </div>
+<div class="line">namespace</div>
+<div class="line">{</div>
+<div class="line">  Q_LOGGING_CATEGORY(npi_bla, &quot;npi.bla&quot;)</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Since, <span class="tt">Q_LOGGING_CATEGORY</span> expands to a function, we need to define it inside anonymous namespace.</p>
+<p><span class="dp-markdown-mid-text">Using Logging Category</span></p>
+<p>The logging category can be used simply like </p><div class="fragment"><div class="line">qCDebug(npi_bla) &lt;&lt; &quot;...&quot;;</div>
+<div class="line">qCInfo(npi_bla) &lt;&lt; &quot;...&quot;;</div>
+<div class="line">qCWarning(npi_bla) &lt;&lt; &quot;...&quot;;</div>
+<div class="line">qCCritical(npi_bla) &lt;&lt; &quot;...&quot;;</div>
+<div class="line">qCFatal(npi_bla) &lt;&lt; &quot;...&quot;;</div>
+</div><!-- fragment --><p> Or, you can define macros around it (always outside any namespace because these are normal non-function style macros): </p><div class="fragment"><div class="line">#define npiDbug qCDebug(npi_bla).noquote()</div>
+<div class="line">#define npiInfo qCInfo(npi_bla).noquote()</div>
+<div class="line">#define npiWarn qCWarning(npi_bla).noquote()</div>
+<div class="line">#define npiCrit qCCritical(npi_bla).noquote()</div>
+<div class="line">#define npiFatl qCFatal(npi_bla).noquote()</div>
+</div><!-- fragment --><p> and then use it like </p><div class="fragment"><div class="line">npiDbug &lt;&lt; &quot;...&quot;</div>
+<div class="line">npiInfo &lt;&lt; &quot;...&quot;</div>
+<div class="line">...</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__implementation"></a>
 Implementation</h1>
 <p>Primary components:</p>
 <ul>
@@ -279,7 +310,19 @@ Maximum Folder Size and Cleanup</h1>
 <h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__category_filtering"></a>
 Category Filtering</h1>
 <p>The implementation installs a category filter that records every encountered category name and then invokes the previously installed filter, when one exists. The public API can return all encountered categories or divide them into Qt categories, whose names begin with <span class="tt">qt.</span>, and non-Qt categories.</p>
-<p>Built-in filter rules differ between debug and release builds. User rules are normalized by removing whitespace and accepting only entries containing one key, one <span class="tt">=</span>, and a Boolean value of <span class="tt">true</span> or <span class="tt">false</span>. The normalized user rules are appended to the built-in rules and applied through <span class="tt">QLoggingCategory::setFilterRules()</span>.</p>
+<p>Built-in filter rules differ between debug and release builds. User rules are normalized by removing whitespace and accepting only entries containing one key, one <span class="tt">=</span>, and a Boolean value of <span class="tt">true</span> or <span class="tt">false</span>. The normalized user rules are appended to the built-in constant rules. The user rules can override the built-in constant rules because Qt evaluates filter rules from top to bottom and built-in constant filter rules are at the top. To have user specified rules there are two functions:</p><ul>
+<li><span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ac0dd546fc6a4f2a6452da15ee952369d" title="Adds the custom Qt logging category filter rule.">npi::log::addFilterRule()</a></span> : Adds the rule at the end of current user specified rules.</li>
+<li><span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc" title="Changes the custom Qt logging category filter rules.">npi::log::setFilterRules()</a></span> : Replaces the entire user supplied rules.</li>
+</ul>
+<p>Except for the above two functions, there are a few other functions:</p><ul>
+<li><span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7e2a77a5c59eb0b1925509a5a81bd285" title="Returns the built-in Qt logging category filter rules.">npi::log::baseFilterRules()</a></span> : Returns the built-in constant base filter rules.</li>
+<li><span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a706cfc14aff0e14a0a79cbe3d9dd0c43" title="Returns the currently configured custom category filter rules.">npi::log::filterRules()</a></span> : Returns the current user specified rules if any, otherwise an empty string list.</li>
+<li><span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a4a5b29dcb269f47a4ef69ee7fe39bfb6" title="Removes all custom category filter rules.">npi::log::resetFilterRules()</a></span> : Removes all user specified filter rules.</li>
+</ul>
+<p>To help setting up the filter rules, we need logging categories. These are provided by the following functions:</p><ul>
+<li><span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#aecacbd05b8c19542926b9d07b16435ba" title="Returns all encountered Qt logging categories.">npi::log::qtCategories()</a></span> : Returns all categories.</li>
+<li><span class="tt"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#af28603358fca7f71c4be70cda3557b9f" title="Returns all encountered non-Qt logging categories.">npi::log::nonQtCategories()</a></span> : Returns categories not starting with <span class="tt">qt.</span>, this includes any custom categories and the default <span class="tt">debug</span> category.</li>
+</ul>
 <h1 class="doxsection"><a class="anchor" id="dp_arch_logging_system__shutdown"></a>
 Shutdown</h1>
 <p>Process shutdown first enables shutdown mode so messages emitted after normal worker processing begins to stop are routed directly to the important-log bridge and, when attached, the debugger. Worker shutdown is performed once.</p>
@@ -359,7 +402,7 @@ Test: Handler Time</h1>
 <div class="line">  <span class="comment">// convert avg from nanoseconds to microseconds</span></div>
 <div class="line">  <span class="comment">// used ::OutputDebugStringA to output microseconds value</span></div>
 <div class="line">}</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_ae42f26a3b2327af9cd201c13e96c0349"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler</a></div><div class="ttdeci">void logMsgHandler(QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</div><div class="ttdoc">Captures and routes one message delivered by Qt.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05189">Log.cpp:5189</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_ae42f26a3b2327af9cd201c13e96c0349"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler</a></div><div class="ttdeci">void logMsgHandler(QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</div><div class="ttdoc">Captures and routes one message delivered by Qt.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05175">Log.cpp:5175</a></div></div>
 </div><!-- fragment --><p> Results:</p><ul>
 <li>Debug builds:<ul>
 <li>No Load: ~30 microseconds.</li>

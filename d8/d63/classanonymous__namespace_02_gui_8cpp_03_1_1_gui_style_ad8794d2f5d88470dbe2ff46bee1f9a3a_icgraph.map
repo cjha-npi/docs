@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::changeCurrentTheme_" name="anonymous_namespace{Gui::cpp}::GuiStyle::changeCurrentTheme_">
+<area shape="rect" id="Node000001" title="Applies the effective dark/light palette and refreshes dynamic icons." alt="" coords="448,100,949,126"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662" title="Constructs the Fusion&#45;based style and initializes GUI resources." alt="" coords="219,5,400,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="625,100,400,54,400,49,630,98"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" title="Observes Windows theme&#45;setting notifications while Theme::System is selected." alt="" coords="219,85,400,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="437,114,400,116,399,111,442,113"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Sets the configured application theme." alt="" coords="219,165,400,221"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="630,127,400,177,399,172,625,128"/>
+<area shape="rect" id="Node000005" href="$d7/dc3/namespacenpi_1_1gui.html#ad60fe158d1b485a98f71cf850c1de037" title="Sets the application theme." alt="" coords="5,180,171,206"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="208,193,171,196,170,191,214,193"/>
+</map>

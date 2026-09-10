@@ -1,5 +1,6 @@
 var _log_8h =
 [
+    [ "npi::log::addFilterRule", "d5/ddd/namespacenpi_1_1log.html#ac0dd546fc6a4f2a6452da15ee952369d", null ],
     [ "npi::log::allCategories", "d5/ddd/namespacenpi_1_1log.html#a2357fd8efc3511b85c79fbab4159e343", null ],
     [ "npi::log::allFields", "d5/ddd/namespacenpi_1_1log.html#a91fb4e6b1ccc56c014f684204cdb9f5c", null ],
     [ "npi::log::baseFilterRules", "d5/ddd/namespacenpi_1_1log.html#a7e2a77a5c59eb0b1925509a5a81bd285", null ],

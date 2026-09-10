@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::getSizeData_" name="anonymous_namespace{Gui::cpp}::GuiStyle::getSizeData_">
+<area shape="rect" id="Node000001" title="Returns sizing data based on the widget&#39;s font size and height limits." alt="" coords="464,60,909,86"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3" title="Provides application&#45;standard metrics for selected control elements." alt="" coords="235,5,416,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="560,60,416,46,416,40,565,59"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Calculates customized content sizes for supported controls." alt="" coords="235,85,416,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="565,87,416,106,416,101,560,87"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws supported controls using application&#45;specific layouts and visuals." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,34,187,36,186,31,230,32"/>
+</map>
