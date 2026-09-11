@@ -35,6 +35,7 @@ var classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style =
     [ "lineEditClearIcon_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aa503feec872e12a4db5927b36cb95a48", null ],
     [ "passwordValidator_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5cfd720cbcb134380a92af1cf4096f85", null ],
     [ "radioBtnIcon_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#afc3e324533360a9d90cd98e8983bc1f6", null ],
+    [ "scrollBarWidth_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2ce53791240fadb0d2738585f92cfa8b", null ],
     [ "theme_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ab0c4715c66c8acb5106dc2819c46800d", null ],
     [ "treeWidgetCollapsed_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#add0efa96dcaeb8799e848416a2765e2d", null ],
     [ "treeWidgetExpanded_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a8c8b4d55dfc23ffd5b152bde9002b3cf", null ]

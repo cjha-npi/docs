@@ -1,35 +1,37 @@
 <map id="anonymous_namespace{Gui.cpp}::GuiStyle" name="anonymous_namespace{Gui.cpp}::GuiStyle">
-<area shape="rect" id="Node000001" title="Application style implementing the GUI system." alt="" coords="924,313,1250,339"/>
+<area shape="rect" id="Node000001" title="Application style implementing the GUI system." alt="" coords="924,407,1250,432"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="566,5,675,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="682,12,733,13,790,19,848,34,902,59,939,86,972,119,1001,156,1025,193,1063,263,1084,314,1078,313,1058,266,1021,196,996,159,968,123,935,90,899,63,846,39,789,24,733,18,684,17"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="682,8,734,7,791,11,849,25,876,37,902,52,947,91,984,139,1015,190,1039,244,1072,341,1086,408,1081,406,1066,343,1034,245,1010,193,980,142,943,95,899,56,874,42,847,30,790,17,733,12,684,13"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="506,55,735,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="742,58,824,67,864,78,902,94,936,117,968,145,1021,208,1060,269,1082,314,1077,313,1055,271,1017,211,964,149,933,122,899,99,862,83,823,72,744,63"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="722,52,767,52,814,57,860,69,902,89,944,123,981,165,1011,211,1035,258,1069,346,1086,408,1080,406,1064,348,1030,261,1006,214,976,168,941,127,899,94,858,74,813,62,767,57,724,57"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="514,104,727,145"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="734,120,818,130,861,141,901,156,960,191,1012,236,1052,279,1079,314,1074,313,1048,283,1008,240,957,196,899,161,859,146,818,135,736,125"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="734,115,777,118,820,125,862,137,902,156,939,183,972,215,1001,251,1026,288,1063,357,1084,408,1078,406,1058,359,1021,291,996,254,968,219,935,187,899,160,860,142,819,130,776,123,736,120"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="594,169,647,195"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="654,179,766,183,834,193,901,210,953,233,1002,261,1073,313,1068,314,999,265,951,238,899,215,833,198,766,189,656,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="654,180,786,184,854,192,901,205,935,226,966,251,1019,309,1058,365,1082,408,1077,407,1054,368,1015,312,963,255,932,230,899,210,853,197,786,190,656,185"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="590,219,651,244"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="659,230,769,238,835,246,901,258,987,284,1059,313,1054,314,986,289,900,263,834,251,768,243,660,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="658,226,709,225,770,228,837,238,901,258,959,291,1010,333,1051,374,1078,407,1073,406,1047,377,1006,337,956,296,899,263,836,243,770,233,709,230,660,231"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="590,407,651,432"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="658,422,768,429,834,426,900,416,949,400,995,378,1070,337,1065,340,998,383,951,405,901,421,835,431,768,434,660,427"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="658,417,927,418,922,421,660,422"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="542,460,699,486"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="707,478,802,476,851,469,899,456,954,431,1003,397,1044,364,1072,340,1076,337,1047,368,1006,402,956,435,901,461,852,474,802,481,708,483"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="566,512,675,538"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="682,531,732,533,787,532,845,523,899,506,930,489,959,468,1011,420,1050,373,1076,341,1080,337,1054,376,1015,424,963,473,933,494,901,511,846,528,788,537,732,538,684,536"/>
-<area shape="rect" id="Node000010" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data" title="Contains dimensions calculated for a fixed&#45;height widget." alt="" coords="534,562,707,602"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="715,592,760,592,808,588,855,578,899,560,934,538,966,510,994,478,1018,445,1056,383,1079,341,1082,337,1061,385,1023,448,998,482,969,513,937,542,902,565,856,583,808,593,760,597,716,597"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="240,545,285,571"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="292,558,536,575,532,578,293,563"/>
-<area shape="rect" id="Node000012" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data" title="Contains the palette and drawing resources for one theme variant." alt="" coords="530,759,711,800"/>
-<area shape="poly" id="edge17_Node000012_Node000011" title=" " alt="" coords="292,565,346,588,420,631,490,678,597,759,592,760,487,683,417,636,344,593,293,570"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="693,754,743,734,797,709,850,677,899,639,934,601,967,559,1020,470,1058,391,1080,341,1083,337,1063,393,1025,473,971,562,938,604,902,643,853,681,799,714,745,739,696,759"/>
-<area shape="rect" id="Node000013" href="$d7/dc3/namespacenpi_1_1gui.html#d0/dae/structnpi_1_1gui_1_1_surfaces" title="Background colors for different surface levels." alt="" coords="180,801,345,827"/>
-<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="352,803,482,791,533,788,528,790,482,796,353,808"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="5,781,75,807"/>
-<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="73,776,98,769,205,755,289,755,374,762,482,769,533,773,528,774,482,774,374,768,289,760,205,760,99,774,77,780"/>
-<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="60,809,80,821,99,830,131,835,163,835,225,825,221,828,164,840,131,841,98,835,77,826,62,814"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="220,851,305,876"/>
-<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="312,857,392,846,481,828,575,799,570,801,483,833,393,851,314,862"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="236,1055,289,1080"/>
-<area shape="poly" id="edge16_Node000012_Node000016" title=" " alt="" coords="297,1068,337,1069,385,1065,435,1054,481,1031,509,1007,534,977,555,945,573,912,598,848,613,802,617,798,603,850,578,914,560,948,538,981,513,1010,483,1036,437,1059,386,1071,338,1075,297,1074"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="706,464,900,444,1008,431,1003,433,901,449,708,469"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="566,513,675,539"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="682,519,785,507,900,486,986,458,1060,431,1055,433,988,463,901,491,786,513,684,524"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="574,565,667,591"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="674,575,781,566,841,555,899,538,951,513,1000,483,1069,433,1074,430,1003,488,954,518,901,543,842,560,781,571,676,580"/>
+<area shape="rect" id="Node000011" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data" title="Contains dimensions calculated for a fixed&#45;height widget." alt="" coords="534,615,707,656"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="714,635,807,624,854,613,899,595,929,578,958,557,1009,510,1049,465,1075,434,1079,430,1053,468,1013,514,961,561,932,582,901,600,856,618,808,629,716,640"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="240,599,285,624"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="292,611,536,628,532,631,293,616"/>
+<area shape="rect" id="Node000013" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data" title="Contains the palette and drawing resources for one theme variant." alt="" coords="530,812,711,853"/>
+<area shape="poly" id="edge18_Node000013_Node000012" title=" " alt="" coords="292,618,346,641,420,684,490,732,597,812,592,813,487,736,417,689,344,646,293,624"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="681,807,788,755,845,720,899,679,961,613,1013,540,1053,475,1078,434,1081,430,1058,478,1018,543,965,616,902,683,848,724,790,760,683,812"/>
+<area shape="rect" id="Node000014" href="$d7/dc3/namespacenpi_1_1gui.html#d0/dae/structnpi_1_1gui_1_1_surfaces" title="Background colors for different surface levels." alt="" coords="180,855,345,880"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="352,857,482,844,533,841,528,843,482,849,353,862"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="5,835,75,860"/>
+<area shape="poly" id="edge16_Node000013_Node000015" title=" " alt="" coords="73,830,98,822,205,808,289,808,374,816,482,822,533,826,528,828,482,827,374,821,289,814,205,813,99,827,77,834"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="60,862,80,874,99,883,131,889,163,888,225,878,221,882,164,894,131,894,98,888,77,879,62,867"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="220,904,305,930"/>
+<area shape="poly" id="edge15_Node000013_Node000016" title=" " alt="" coords="312,910,392,899,481,882,575,852,570,854,483,887,393,905,314,915"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="236,1108,289,1134"/>
+<area shape="poly" id="edge17_Node000013_Node000017" title=" " alt="" coords="297,1122,337,1123,385,1119,435,1107,481,1085,509,1060,534,1031,555,999,573,965,598,901,613,855,617,851,603,903,578,967,560,1001,538,1034,513,1064,483,1089,437,1112,386,1124,338,1128,297,1127"/>
 </map>

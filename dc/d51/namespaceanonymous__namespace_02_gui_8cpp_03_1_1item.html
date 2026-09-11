@@ -188,16 +188,16 @@ Functions</h2></td></tr>
 <dd>
 Does nothing if the widget is null. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01039">1039</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1040</span>    {</div>
-<div class="line"><span class="lineno"> 1041</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1042</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> changed = !wid-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">prop_noBackground</a>).toBool();</div>
-<div class="line"><span class="lineno"> 1043</span>      wid-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">prop_noBackground</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1044</span>      <a class="code hl_function" href="#a66a4ce8048262ea17e75e0b4c32ebc97">setTransparentBase</a>(wid, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 1045</span>      <span class="keywordflow">if</span>(changed)</div>
-<div class="line"><span class="lineno"> 1046</span>        wid-&gt;update();</div>
-<div class="line"><span class="lineno"> 1047</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_a66a4ce8048262ea17e75e0b4c32ebc97"><div class="ttname"><a href="#a66a4ce8048262ea17e75e0b4c32ebc97">anonymous_namespace{Gui.cpp}::item::setTransparentBase</a></div><div class="ttdeci">void setTransparentBase(QWidget *wid, bool translucent)</div><div class="ttdoc">Configures a widget so its Base role does not obscure the underlying background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00981">Gui.cpp:981</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01049">1049</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1050</span>    {</div>
+<div class="line"><span class="lineno"> 1051</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1052</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> changed = !wid-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">prop_noBackground</a>).toBool();</div>
+<div class="line"><span class="lineno"> 1053</span>      wid-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">prop_noBackground</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 1054</span>      <a class="code hl_function" href="#a66a4ce8048262ea17e75e0b4c32ebc97">setTransparentBase</a>(wid, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 1055</span>      <span class="keywordflow">if</span>(changed)</div>
+<div class="line"><span class="lineno"> 1056</span>        wid-&gt;update();</div>
+<div class="line"><span class="lineno"> 1057</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_a66a4ce8048262ea17e75e0b4c32ebc97"><div class="ttname"><a href="#a66a4ce8048262ea17e75e0b4c32ebc97">anonymous_namespace{Gui.cpp}::item::setTransparentBase</a></div><div class="ttdeci">void setTransparentBase(QWidget *wid, bool translucent)</div><div class="ttdoc">Configures a widget so its Base role does not obscure the underlying background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00991">Gui.cpp:991</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_aa17764fc281fe5da09450e9ca22c6133"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">anonymous_namespace{Gui.cpp}::prop_noBackground</a></div><div class="ttdeci">constexpr char prop_noBackground[]</div><div class="ttdoc">Suppresses drawing of the widget&#39;s own background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00197">Gui.cpp:197</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a62f372df0607d665798cb1ef096b8b2d">applyGroupItem()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">anonymous_namespace{Gui.cpp}::prop_noBackground</a>, and <a class="el" href="#a66a4ce8048262ea17e75e0b4c32ebc97">setTransparentBase()</a>.</p>
@@ -238,22 +238,22 @@ Here is the caller graph for this function:</div>
 <p>Applies grouped-widget configuration recursively to a widget hierarchy. </p>
 <p>Configures the root and every widget descendant and installs the <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a> hierarchy filter on each one. </p><dl class="section note"><dt>Note</dt><dd>Does nothing if either pointer is null. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01070">1070</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1071</span>    {</div>
-<div class="line"><span class="lineno"> 1072</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1073</span> </div>
-<div class="line"><span class="lineno"> 1074</span>      <a class="code hl_function" href="#a62f372df0607d665798cb1ef096b8b2d">applyGroupItem</a>(wid);</div>
-<div class="line"><span class="lineno"> 1075</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(wid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1076</span> </div>
-<div class="line"><span class="lineno"> 1077</span>      <span class="keywordflow">for</span>(QObject* child : wid-&gt;children()) {</div>
-<div class="line"><span class="lineno"> 1078</span>        <span class="keywordflow">if</span>(child-&gt;isWidgetType())</div>
-<div class="line"><span class="lineno"> 1079</span>          <a class="code hl_function" href="#ae514cc2c6605c4fa698b2b59e85898f6">applyGroupItemTree</a>(<span class="keyword">dynamic_cast&lt;</span>QWidget*<span class="keyword">&gt;</span>(child), <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1080</span>      }</div>
-<div class="line"><span class="lineno"> 1081</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_a4d44e3cb5b6decad09c239d53485f8ba"><div class="ttname"><a href="#a4d44e3cb5b6decad09c239d53485f8ba">anonymous_namespace{Gui.cpp}::item::installHierarchyFilter</a></div><div class="ttdeci">void installHierarchyFilter(QWidget *wid, QObject *guiStyle)</div><div class="ttdoc">Installs the GuiStyle hierarchy event filter on a widget.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00997">Gui.cpp:997</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_a62f372df0607d665798cb1ef096b8b2d"><div class="ttname"><a href="#a62f372df0607d665798cb1ef096b8b2d">anonymous_namespace{Gui.cpp}::item::applyGroupItem</a></div><div class="ttdeci">void applyGroupItem(QWidget *wid)</div><div class="ttdoc">Applies grouped-widget configuration to one widget.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01039">Gui.cpp:1039</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_ae514cc2c6605c4fa698b2b59e85898f6"><div class="ttname"><a href="#ae514cc2c6605c4fa698b2b59e85898f6">anonymous_namespace{Gui.cpp}::item::applyGroupItemTree</a></div><div class="ttdeci">void applyGroupItemTree(QWidget *wid, QObject *guiStyle)</div><div class="ttdoc">Applies grouped-widget configuration recursively to a widget hierarchy.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01070">Gui.cpp:1070</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ac38bf26de3b0963dbcc0f8ecfd14dc3d"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle</a></div><div class="ttdeci">GuiStyle * guiStyle()</div><div class="ttdoc">Returns the application&#39;s GuiStyle, installing one if needed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03628">Gui.cpp:3628</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01080">1080</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1081</span>    {</div>
+<div class="line"><span class="lineno"> 1082</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1083</span> </div>
+<div class="line"><span class="lineno"> 1084</span>      <a class="code hl_function" href="#a62f372df0607d665798cb1ef096b8b2d">applyGroupItem</a>(wid);</div>
+<div class="line"><span class="lineno"> 1085</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(wid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1086</span> </div>
+<div class="line"><span class="lineno"> 1087</span>      <span class="keywordflow">for</span>(QObject* child : wid-&gt;children()) {</div>
+<div class="line"><span class="lineno"> 1088</span>        <span class="keywordflow">if</span>(child-&gt;isWidgetType())</div>
+<div class="line"><span class="lineno"> 1089</span>          <a class="code hl_function" href="#ae514cc2c6605c4fa698b2b59e85898f6">applyGroupItemTree</a>(<span class="keyword">dynamic_cast&lt;</span>QWidget*<span class="keyword">&gt;</span>(child), <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1090</span>      }</div>
+<div class="line"><span class="lineno"> 1091</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_a4d44e3cb5b6decad09c239d53485f8ba"><div class="ttname"><a href="#a4d44e3cb5b6decad09c239d53485f8ba">anonymous_namespace{Gui.cpp}::item::installHierarchyFilter</a></div><div class="ttdeci">void installHierarchyFilter(QWidget *wid, QObject *guiStyle)</div><div class="ttdoc">Installs the GuiStyle hierarchy event filter on a widget.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01007">Gui.cpp:1007</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_a62f372df0607d665798cb1ef096b8b2d"><div class="ttname"><a href="#a62f372df0607d665798cb1ef096b8b2d">anonymous_namespace{Gui.cpp}::item::applyGroupItem</a></div><div class="ttdeci">void applyGroupItem(QWidget *wid)</div><div class="ttdoc">Applies grouped-widget configuration to one widget.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01049">Gui.cpp:1049</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_ae514cc2c6605c4fa698b2b59e85898f6"><div class="ttname"><a href="#ae514cc2c6605c4fa698b2b59e85898f6">anonymous_namespace{Gui.cpp}::item::applyGroupItemTree</a></div><div class="ttdeci">void applyGroupItemTree(QWidget *wid, QObject *guiStyle)</div><div class="ttdoc">Applies grouped-widget configuration recursively to a widget hierarchy.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01080">Gui.cpp:1080</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ac38bf26de3b0963dbcc0f8ecfd14dc3d"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle</a></div><div class="ttdeci">GuiStyle * guiStyle()</div><div class="ttdoc">Returns the application&#39;s GuiStyle, installing one if needed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03650">Gui.cpp:3650</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a62f372df0607d665798cb1ef096b8b2d">applyGroupItem()</a>, <a class="el" href="#ae514cc2c6605c4fa698b2b59e85898f6">applyGroupItemTree()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, and <a class="el" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter()</a>.</p>
 
@@ -291,27 +291,27 @@ Here is the caller graph for this function:</div>
 <dd>
 Does nothing if the widget is null. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01012">1012</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1013</span>    {</div>
-<div class="line"><span class="lineno"> 1014</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1015</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> changed = (!wid-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a992bd764fbc7af77e3bbcaa060077de4">prop_viewItem</a>).toBool() || !wid-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">prop_noBackground</a>).toBool());</div>
-<div class="line"><span class="lineno"> 1016</span>      wid-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a992bd764fbc7af77e3bbcaa060077de4">prop_viewItem</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1017</span>      wid-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">prop_noBackground</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1018</span>      <a class="code hl_function" href="#a66a4ce8048262ea17e75e0b4c32ebc97">setTransparentBase</a>(wid, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1019</span>      <span class="keyword">auto</span> policy = wid-&gt;sizePolicy();</div>
-<div class="line"><span class="lineno"> 1020</span> </div>
-<div class="line"><span class="lineno"> 1021</span>      <span class="comment">// Qt expands direct cell widgets automatically, but not</span></div>
-<div class="line"><span class="lineno"> 1022</span>      <span class="comment">// Fixed-height widgets nested inside them.</span></div>
-<div class="line"><span class="lineno"> 1023</span>      <span class="keywordflow">if</span>(policy.verticalPolicy() == QSizePolicy::Fixed) {</div>
-<div class="line"><span class="lineno"> 1024</span>        policy.setVerticalPolicy(QSizePolicy::Expanding);</div>
-<div class="line"><span class="lineno"> 1025</span>        wid-&gt;setSizePolicy(policy);</div>
-<div class="line"><span class="lineno"> 1026</span>      }</div>
-<div class="line"><span class="lineno"> 1027</span> </div>
-<div class="line"><span class="lineno"> 1028</span>      <span class="keywordflow">if</span>(changed) {</div>
-<div class="line"><span class="lineno"> 1029</span>        wid-&gt;updateGeometry();</div>
-<div class="line"><span class="lineno"> 1030</span>        wid-&gt;update();</div>
-<div class="line"><span class="lineno"> 1031</span>      }</div>
-<div class="line"><span class="lineno"> 1032</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01022">1022</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1023</span>    {</div>
+<div class="line"><span class="lineno"> 1024</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1025</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> changed = (!wid-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a992bd764fbc7af77e3bbcaa060077de4">prop_viewItem</a>).toBool() || !wid-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">prop_noBackground</a>).toBool());</div>
+<div class="line"><span class="lineno"> 1026</span>      wid-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a992bd764fbc7af77e3bbcaa060077de4">prop_viewItem</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 1027</span>      wid-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">prop_noBackground</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 1028</span>      <a class="code hl_function" href="#a66a4ce8048262ea17e75e0b4c32ebc97">setTransparentBase</a>(wid, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 1029</span>      <span class="keyword">auto</span> policy = wid-&gt;sizePolicy();</div>
+<div class="line"><span class="lineno"> 1030</span> </div>
+<div class="line"><span class="lineno"> 1031</span>      <span class="comment">// Qt expands direct cell widgets automatically, but not</span></div>
+<div class="line"><span class="lineno"> 1032</span>      <span class="comment">// Fixed-height widgets nested inside them.</span></div>
+<div class="line"><span class="lineno"> 1033</span>      <span class="keywordflow">if</span>(policy.verticalPolicy() == QSizePolicy::Fixed) {</div>
+<div class="line"><span class="lineno"> 1034</span>        policy.setVerticalPolicy(QSizePolicy::Expanding);</div>
+<div class="line"><span class="lineno"> 1035</span>        wid-&gt;setSizePolicy(policy);</div>
+<div class="line"><span class="lineno"> 1036</span>      }</div>
+<div class="line"><span class="lineno"> 1037</span> </div>
+<div class="line"><span class="lineno"> 1038</span>      <span class="keywordflow">if</span>(changed) {</div>
+<div class="line"><span class="lineno"> 1039</span>        wid-&gt;updateGeometry();</div>
+<div class="line"><span class="lineno"> 1040</span>        wid-&gt;update();</div>
+<div class="line"><span class="lineno"> 1041</span>      }</div>
+<div class="line"><span class="lineno"> 1042</span>    }</div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a992bd764fbc7af77e3bbcaa060077de4"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a992bd764fbc7af77e3bbcaa060077de4">anonymous_namespace{Gui.cpp}::prop_viewItem</a></div><div class="ttdeci">constexpr char prop_viewItem[]</div><div class="ttdoc">Marks a widget configured for use inside an item view.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00198">Gui.cpp:198</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ab548237e272ef913e3be58652a0cb202">applyViewItem()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">anonymous_namespace{Gui.cpp}::prop_noBackground</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a992bd764fbc7af77e3bbcaa060077de4">anonymous_namespace{Gui.cpp}::prop_viewItem</a>, and <a class="el" href="#a66a4ce8048262ea17e75e0b4c32ebc97">setTransparentBase()</a>.</p>
@@ -352,20 +352,20 @@ Here is the caller graph for this function:</div>
 <p>Applies item-view configuration recursively to a widget hierarchy. </p>
 <p>Configures the root and every widget descendant and installs the <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a> hierarchy filter on each one. </p><dl class="section note"><dt>Note</dt><dd>Does nothing if either pointer is null. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01053">1053</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1054</span>    {</div>
-<div class="line"><span class="lineno"> 1055</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1056</span> </div>
-<div class="line"><span class="lineno"> 1057</span>      <a class="code hl_function" href="#ab548237e272ef913e3be58652a0cb202">applyViewItem</a>(wid);</div>
-<div class="line"><span class="lineno"> 1058</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(wid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1059</span> </div>
-<div class="line"><span class="lineno"> 1060</span>      <span class="keywordflow">for</span>(QObject* child : wid-&gt;children()) {</div>
-<div class="line"><span class="lineno"> 1061</span>        <span class="keywordflow">if</span>(child-&gt;isWidgetType())</div>
-<div class="line"><span class="lineno"> 1062</span>          <a class="code hl_function" href="#afe1c223ba11330b3f9ee830b8a28df13">applyViewItemTree</a>(<span class="keyword">dynamic_cast&lt;</span>QWidget*<span class="keyword">&gt;</span>(child), <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1063</span>      }</div>
-<div class="line"><span class="lineno"> 1064</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_ab548237e272ef913e3be58652a0cb202"><div class="ttname"><a href="#ab548237e272ef913e3be58652a0cb202">anonymous_namespace{Gui.cpp}::item::applyViewItem</a></div><div class="ttdeci">void applyViewItem(QWidget *wid)</div><div class="ttdoc">Applies item-view configuration to one widget.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01012">Gui.cpp:1012</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_afe1c223ba11330b3f9ee830b8a28df13"><div class="ttname"><a href="#afe1c223ba11330b3f9ee830b8a28df13">anonymous_namespace{Gui.cpp}::item::applyViewItemTree</a></div><div class="ttdeci">void applyViewItemTree(QWidget *wid, QObject *guiStyle)</div><div class="ttdoc">Applies item-view configuration recursively to a widget hierarchy.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01053">Gui.cpp:1053</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01063">1063</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1064</span>    {</div>
+<div class="line"><span class="lineno"> 1065</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1066</span> </div>
+<div class="line"><span class="lineno"> 1067</span>      <a class="code hl_function" href="#ab548237e272ef913e3be58652a0cb202">applyViewItem</a>(wid);</div>
+<div class="line"><span class="lineno"> 1068</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(wid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1069</span> </div>
+<div class="line"><span class="lineno"> 1070</span>      <span class="keywordflow">for</span>(QObject* child : wid-&gt;children()) {</div>
+<div class="line"><span class="lineno"> 1071</span>        <span class="keywordflow">if</span>(child-&gt;isWidgetType())</div>
+<div class="line"><span class="lineno"> 1072</span>          <a class="code hl_function" href="#afe1c223ba11330b3f9ee830b8a28df13">applyViewItemTree</a>(<span class="keyword">dynamic_cast&lt;</span>QWidget*<span class="keyword">&gt;</span>(child), <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1073</span>      }</div>
+<div class="line"><span class="lineno"> 1074</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_ab548237e272ef913e3be58652a0cb202"><div class="ttname"><a href="#ab548237e272ef913e3be58652a0cb202">anonymous_namespace{Gui.cpp}::item::applyViewItem</a></div><div class="ttdeci">void applyViewItem(QWidget *wid)</div><div class="ttdoc">Applies item-view configuration to one widget.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01022">Gui.cpp:1022</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_afe1c223ba11330b3f9ee830b8a28df13"><div class="ttname"><a href="#afe1c223ba11330b3f9ee830b8a28df13">anonymous_namespace{Gui.cpp}::item::applyViewItemTree</a></div><div class="ttdeci">void applyViewItemTree(QWidget *wid, QObject *guiStyle)</div><div class="ttdoc">Applies item-view configuration recursively to a widget hierarchy.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01063">Gui.cpp:1063</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ab548237e272ef913e3be58652a0cb202">applyViewItem()</a>, <a class="el" href="#afe1c223ba11330b3f9ee830b8a28df13">applyViewItemTree()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, and <a class="el" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter()</a>.</p>
 
@@ -406,28 +406,28 @@ Here is the caller graph for this function:</div>
 <p>Enables styled-background drawing on the base, disables automatic background filling and installs the hierarchy filter.</p>
 <p>A direct child QButtonGroup is reused or created and made exclusive. Every direct QAbstractButton child is made checkable, configured as a group item and added to that button group if it is not already a member. </p><dl class="section note"><dt>Note</dt><dd>Does nothing if either pointer is null or ButtonGroupBase_ is false. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01133">1133</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1134</span>    {</div>
-<div class="line"><span class="lineno"> 1135</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a> || !wid-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a58fdac61bd4c703ac43514a6871d610c">npi::gui::Props::ButtonGroupBase_</a>).toBool())</div>
-<div class="line"><span class="lineno"> 1136</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1137</span> </div>
-<div class="line"><span class="lineno"> 1138</span>      wid-&gt;setAttribute(Qt::WA_StyledBackground);</div>
-<div class="line"><span class="lineno"> 1139</span>      wid-&gt;setAutoFillBackground(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 1140</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(wid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1141</span> </div>
-<div class="line"><span class="lineno"> 1142</span>      <span class="keyword">auto</span>* btnGrp = wid-&gt;findChild&lt;QButtonGroup*&gt;(QString{}, Qt::FindDirectChildrenOnly);</div>
-<div class="line"><span class="lineno"> 1143</span>      <span class="keywordflow">if</span>(!btnGrp)</div>
-<div class="line"><span class="lineno"> 1144</span>        btnGrp = <span class="keyword">new</span> QButtonGroup{wid};</div>
-<div class="line"><span class="lineno"> 1145</span>      btnGrp-&gt;setExclusive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1146</span> </div>
-<div class="line"><span class="lineno"> 1147</span>      <span class="keyword">const</span> <span class="keyword">auto</span> buttons = wid-&gt;findChildren&lt;QAbstractButton*&gt;(QString{}, Qt::FindDirectChildrenOnly);</div>
-<div class="line"><span class="lineno"> 1148</span>      <span class="keywordflow">for</span>(<span class="keyword">auto</span>* button : buttons) {</div>
-<div class="line"><span class="lineno"> 1149</span>        button-&gt;setCheckable(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1150</span>        <a class="code hl_function" href="#a62f372df0607d665798cb1ef096b8b2d">applyGroupItem</a>(button);</div>
-<div class="line"><span class="lineno"> 1151</span>        <span class="keywordflow">if</span>(btnGrp-&gt;id(button) == -1)</div>
-<div class="line"><span class="lineno"> 1152</span>          btnGrp-&gt;addButton(button);</div>
-<div class="line"><span class="lineno"> 1153</span>      }</div>
-<div class="line"><span class="lineno"> 1154</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01143">1143</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1144</span>    {</div>
+<div class="line"><span class="lineno"> 1145</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a> || !wid-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a58fdac61bd4c703ac43514a6871d610c">npi::gui::Props::ButtonGroupBase_</a>).toBool())</div>
+<div class="line"><span class="lineno"> 1146</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1147</span> </div>
+<div class="line"><span class="lineno"> 1148</span>      wid-&gt;setAttribute(Qt::WA_StyledBackground);</div>
+<div class="line"><span class="lineno"> 1149</span>      wid-&gt;setAutoFillBackground(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 1150</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(wid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1151</span> </div>
+<div class="line"><span class="lineno"> 1152</span>      <span class="keyword">auto</span>* btnGrp = wid-&gt;findChild&lt;QButtonGroup*&gt;(QString{}, Qt::FindDirectChildrenOnly);</div>
+<div class="line"><span class="lineno"> 1153</span>      <span class="keywordflow">if</span>(!btnGrp)</div>
+<div class="line"><span class="lineno"> 1154</span>        btnGrp = <span class="keyword">new</span> QButtonGroup{wid};</div>
+<div class="line"><span class="lineno"> 1155</span>      btnGrp-&gt;setExclusive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 1156</span> </div>
+<div class="line"><span class="lineno"> 1157</span>      <span class="keyword">const</span> <span class="keyword">auto</span> buttons = wid-&gt;findChildren&lt;QAbstractButton*&gt;(QString{}, Qt::FindDirectChildrenOnly);</div>
+<div class="line"><span class="lineno"> 1158</span>      <span class="keywordflow">for</span>(<span class="keyword">auto</span>* button : buttons) {</div>
+<div class="line"><span class="lineno"> 1159</span>        button-&gt;setCheckable(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 1160</span>        <a class="code hl_function" href="#a62f372df0607d665798cb1ef096b8b2d">applyGroupItem</a>(button);</div>
+<div class="line"><span class="lineno"> 1161</span>        <span class="keywordflow">if</span>(btnGrp-&gt;id(button) == -1)</div>
+<div class="line"><span class="lineno"> 1162</span>          btnGrp-&gt;addButton(button);</div>
+<div class="line"><span class="lineno"> 1163</span>      }</div>
+<div class="line"><span class="lineno"> 1164</span>    }</div>
 <div class="ttc" id="astructnpi_1_1gui_1_1_props_html_a58fdac61bd4c703ac43514a6871d610c"><div class="ttname"><a href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a58fdac61bd4c703ac43514a6871d610c">npi::gui::Props::ButtonGroupBase_</a></div><div class="ttdeci">static constexpr const char * ButtonGroupBase_</div><div class="ttdoc">bool - Makes a widget the visual base for grouped exclusive buttons.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00126">Gui.h:126</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a62f372df0607d665798cb1ef096b8b2d">applyGroupItem()</a>, <a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a58fdac61bd4c703ac43514a6871d610c">npi::gui::Props::ButtonGroupBase_</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, <a class="el" href="#a206c8ef16e0927eb9bbc07529f11fee1">initButtonGroupBase()</a>, and <a class="el" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter()</a>.</p>
@@ -468,21 +468,21 @@ Here is the caller graph for this function:</div>
 <p>Initializes item-view handling for explicitly marked viewport widgets. </p>
 <p>Installs the hierarchy filter on the view's viewport, then recursively configures each direct viewport child marked with ItemViewWidget_. </p><dl class="section note"><dt>Note</dt><dd>Does nothing if either pointer or the view's viewport is null. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01087">1087</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1088</span>    {</div>
-<div class="line"><span class="lineno"> 1089</span>      <span class="keywordflow">if</span>(!view || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1090</span> </div>
-<div class="line"><span class="lineno"> 1091</span>      <span class="keyword">auto</span>* viewPort = view-&gt;viewport();</div>
-<div class="line"><span class="lineno"> 1092</span>      <span class="keywordflow">if</span>(!viewPort) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1093</span> </div>
-<div class="line"><span class="lineno"> 1094</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(viewPort, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1095</span> </div>
-<div class="line"><span class="lineno"> 1096</span>      <span class="keywordflow">for</span>(QObject* child : viewPort-&gt;children()) {</div>
-<div class="line"><span class="lineno"> 1097</span>        <span class="keywordflow">if</span>(<span class="keyword">auto</span>* childWid = qobject_cast&lt;QWidget*&gt;(child);</div>
-<div class="line"><span class="lineno"> 1098</span>          childWid &amp;&amp; childWid-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a0c22187364aef3d7138155c4a01dd9dd">npi::gui::Props::ItemViewWidget_</a>).toBool())</div>
-<div class="line"><span class="lineno"> 1099</span>          <a class="code hl_function" href="#afe1c223ba11330b3f9ee830b8a28df13">applyViewItemTree</a>(childWid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1100</span>      }</div>
-<div class="line"><span class="lineno"> 1101</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01097">1097</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1098</span>    {</div>
+<div class="line"><span class="lineno"> 1099</span>      <span class="keywordflow">if</span>(!view || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1100</span> </div>
+<div class="line"><span class="lineno"> 1101</span>      <span class="keyword">auto</span>* viewPort = view-&gt;viewport();</div>
+<div class="line"><span class="lineno"> 1102</span>      <span class="keywordflow">if</span>(!viewPort) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1103</span> </div>
+<div class="line"><span class="lineno"> 1104</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(viewPort, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1105</span> </div>
+<div class="line"><span class="lineno"> 1106</span>      <span class="keywordflow">for</span>(QObject* child : viewPort-&gt;children()) {</div>
+<div class="line"><span class="lineno"> 1107</span>        <span class="keywordflow">if</span>(<span class="keyword">auto</span>* childWid = qobject_cast&lt;QWidget*&gt;(child);</div>
+<div class="line"><span class="lineno"> 1108</span>          childWid &amp;&amp; childWid-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a0c22187364aef3d7138155c4a01dd9dd">npi::gui::Props::ItemViewWidget_</a>).toBool())</div>
+<div class="line"><span class="lineno"> 1109</span>          <a class="code hl_function" href="#afe1c223ba11330b3f9ee830b8a28df13">applyViewItemTree</a>(childWid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1110</span>      }</div>
+<div class="line"><span class="lineno"> 1111</span>    }</div>
 <div class="ttc" id="astructnpi_1_1gui_1_1_props_html_a0c22187364aef3d7138155c4a01dd9dd"><div class="ttname"><a href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a0c22187364aef3d7138155c4a01dd9dd">npi::gui::Props::ItemViewWidget_</a></div><div class="ttdeci">static constexpr const char * ItemViewWidget_</div><div class="ttdoc">bool - Marks a widget intentionally installed as an item-view widget.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00092">Gui.h:92</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#afe1c223ba11330b3f9ee830b8a28df13">applyViewItemTree()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, <a class="el" href="#a191f772a04c0ae7d990013fc5c8015dc">initItemView()</a>, <a class="el" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter()</a>, and <a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a0c22187364aef3d7138155c4a01dd9dd">npi::gui::Props::ItemViewWidget_</a>.</p>
@@ -523,22 +523,22 @@ Here is the caller graph for this function:</div>
 <p>Initializes a widget marked as a WidgetGroupBase_. </p>
 <p>Enables styled-background drawing on the base, disables automatic background filling, installs the hierarchy filter and recursively applies grouped-widget configuration to its widget descendants. </p><dl class="section note"><dt>Note</dt><dd>Does nothing if either pointer is null or WidgetGroupBase_ is false. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01108">1108</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1109</span>    {</div>
-<div class="line"><span class="lineno"> 1110</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a> || !wid-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a5198c35bce828926a75bb68164e77763">npi::gui::Props::WidgetGroupBase_</a>).toBool())</div>
-<div class="line"><span class="lineno"> 1111</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1112</span> </div>
-<div class="line"><span class="lineno"> 1113</span>      wid-&gt;setAttribute(Qt::WA_StyledBackground);</div>
-<div class="line"><span class="lineno"> 1114</span>      wid-&gt;setAutoFillBackground(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 1115</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(wid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1116</span> </div>
-<div class="line"><span class="lineno"> 1117</span>      <span class="keywordflow">for</span>(QObject* child : wid-&gt;children()) {</div>
-<div class="line"><span class="lineno"> 1118</span>        <span class="keywordflow">if</span>(child-&gt;isWidgetType())</div>
-<div class="line"><span class="lineno"> 1119</span>          <a class="code hl_function" href="#ae514cc2c6605c4fa698b2b59e85898f6">applyGroupItemTree</a>(<span class="keyword">dynamic_cast&lt;</span>QWidget*<span class="keyword">&gt;</span>(child), <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1120</span>      }</div>
-<div class="line"><span class="lineno"> 1121</span> </div>
-<div class="line"><span class="lineno"> 1122</span>      wid-&gt;update();</div>
-<div class="line"><span class="lineno"> 1123</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01118">1118</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1119</span>    {</div>
+<div class="line"><span class="lineno"> 1120</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a> || !wid-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a5198c35bce828926a75bb68164e77763">npi::gui::Props::WidgetGroupBase_</a>).toBool())</div>
+<div class="line"><span class="lineno"> 1121</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1122</span> </div>
+<div class="line"><span class="lineno"> 1123</span>      wid-&gt;setAttribute(Qt::WA_StyledBackground);</div>
+<div class="line"><span class="lineno"> 1124</span>      wid-&gt;setAutoFillBackground(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 1125</span>      <a class="code hl_function" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter</a>(wid, <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1126</span> </div>
+<div class="line"><span class="lineno"> 1127</span>      <span class="keywordflow">for</span>(QObject* child : wid-&gt;children()) {</div>
+<div class="line"><span class="lineno"> 1128</span>        <span class="keywordflow">if</span>(child-&gt;isWidgetType())</div>
+<div class="line"><span class="lineno"> 1129</span>          <a class="code hl_function" href="#ae514cc2c6605c4fa698b2b59e85898f6">applyGroupItemTree</a>(<span class="keyword">dynamic_cast&lt;</span>QWidget*<span class="keyword">&gt;</span>(child), <a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1130</span>      }</div>
+<div class="line"><span class="lineno"> 1131</span> </div>
+<div class="line"><span class="lineno"> 1132</span>      wid-&gt;update();</div>
+<div class="line"><span class="lineno"> 1133</span>    }</div>
 <div class="ttc" id="astructnpi_1_1gui_1_1_props_html_a5198c35bce828926a75bb68164e77763"><div class="ttname"><a href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a5198c35bce828926a75bb68164e77763">npi::gui::Props::WidgetGroupBase_</a></div><div class="ttdeci">static constexpr const char * WidgetGroupBase_</div><div class="ttdoc">bool - Makes a widget the visual base for a group of child widgets.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00114">Gui.h:114</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ae514cc2c6605c4fa698b2b59e85898f6">applyGroupItemTree()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, <a class="el" href="#a9f02593ded0fe2acfa83854255a0e461">initWidgetGroupBase()</a>, <a class="el" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter()</a>, and <a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a5198c35bce828926a75bb68164e77763">npi::gui::Props::WidgetGroupBase_</a>.</p>
@@ -579,13 +579,13 @@ Here is the caller graph for this function:</div>
 <p>Installs the <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a> hierarchy event filter on a widget. </p>
 <p>The filter allows widget children added at runtime to inherit the required item-view or group-item configuration. </p><dl class="section note"><dt>Note</dt><dd>Installation is skipped if either pointer is null or the widget is already marked as filtered. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00997">997</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  998</span>    {</div>
-<div class="line"><span class="lineno">  999</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a> || wid-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a063bf20cce5758ff5aa95d14fa5e35db">prop_hierarchyFilterInstalled</a>).toBool())</div>
-<div class="line"><span class="lineno"> 1000</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1001</span>      wid-&gt;installEventFilter(<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
-<div class="line"><span class="lineno"> 1002</span>      wid-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a063bf20cce5758ff5aa95d14fa5e35db">prop_hierarchyFilterInstalled</a>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno"> 1003</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01007">1007</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1008</span>    {</div>
+<div class="line"><span class="lineno"> 1009</span>      <span class="keywordflow">if</span>(!wid || !<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a> || wid-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a063bf20cce5758ff5aa95d14fa5e35db">prop_hierarchyFilterInstalled</a>).toBool())</div>
+<div class="line"><span class="lineno"> 1010</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1011</span>      wid-&gt;installEventFilter(<a class="code hl_function" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>);</div>
+<div class="line"><span class="lineno"> 1012</span>      wid-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a063bf20cce5758ff5aa95d14fa5e35db">prop_hierarchyFilterInstalled</a>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno"> 1013</span>    }</div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a063bf20cce5758ff5aa95d14fa5e35db"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a063bf20cce5758ff5aa95d14fa5e35db">anonymous_namespace{Gui.cpp}::prop_hierarchyFilterInstalled</a></div><div class="ttdeci">constexpr char prop_hierarchyFilterInstalled[]</div><div class="ttdoc">Whether the child-hierarchy event filter has been installed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00199">Gui.cpp:199</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, <a class="el" href="#a4d44e3cb5b6decad09c239d53485f8ba">installHierarchyFilter()</a>, and <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a063bf20cce5758ff5aa95d14fa5e35db">anonymous_namespace{Gui.cpp}::prop_hierarchyFilterInstalled</a>.</p>
@@ -622,16 +622,16 @@ Here is the caller graph for this function:</div>
 <p>Returns whether a widget has an item-view viewport among its ancestors. </p>
 <dl class="section note"><dt>Note</dt><dd>The widget itself is not tested; only its parent chain is searched. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00950">950</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  951</span>    {</div>
-<div class="line"><span class="lineno">  952</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  953</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QWidget* parent = wid-&gt;parentWidget(); parent; parent = parent-&gt;parentWidget()) {</div>
-<div class="line"><span class="lineno">  954</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a07860869e541a5f987d893214c377ad3">isItemViewViewport</a>(parent))</div>
-<div class="line"><span class="lineno">  955</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  956</span>      }</div>
-<div class="line"><span class="lineno">  957</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  958</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_a07860869e541a5f987d893214c377ad3"><div class="ttname"><a href="#a07860869e541a5f987d893214c377ad3">anonymous_namespace{Gui.cpp}::item::isItemViewViewport</a></div><div class="ttdeci">bool isItemViewViewport(const QWidget *wid)</div><div class="ttdoc">Returns whether a widget is the viewport of its parent item view.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00941">Gui.cpp:941</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00960">960</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  961</span>    {</div>
+<div class="line"><span class="lineno">  962</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  963</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QWidget* parent = wid-&gt;parentWidget(); parent; parent = parent-&gt;parentWidget()) {</div>
+<div class="line"><span class="lineno">  964</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="#a07860869e541a5f987d893214c377ad3">isItemViewViewport</a>(parent))</div>
+<div class="line"><span class="lineno">  965</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  966</span>      }</div>
+<div class="line"><span class="lineno">  967</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  968</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1item_html_a07860869e541a5f987d893214c377ad3"><div class="ttname"><a href="#a07860869e541a5f987d893214c377ad3">anonymous_namespace{Gui.cpp}::item::isItemViewViewport</a></div><div class="ttdeci">bool isItemViewViewport(const QWidget *wid)</div><div class="ttdoc">Returns whether a widget is the viewport of its parent item view.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00951">Gui.cpp:951</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a5635509f7562cd9c4828e4a6290a777c">isInsideItemView()</a>, and <a class="el" href="#a07860869e541a5f987d893214c377ad3">isItemViewViewport()</a>.</p>
 
@@ -667,15 +667,15 @@ Here is the caller graph for this function:</div>
 <p>Returns whether a widget has a WidgetGroupBase_-marked ancestor. </p>
 <dl class="section note"><dt>Note</dt><dd>The widget itself is not tested, and ButtonGroupBase_ alone does not satisfy this check. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00963">963</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  964</span>    {</div>
-<div class="line"><span class="lineno">  965</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  966</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QWidget* parent = wid-&gt;parentWidget(); parent; parent = parent-&gt;parentWidget()) {</div>
-<div class="line"><span class="lineno">  967</span>        <span class="keywordflow">if</span>(parent-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a5198c35bce828926a75bb68164e77763">npi::gui::Props::WidgetGroupBase_</a>).toBool())</div>
-<div class="line"><span class="lineno">  968</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  969</span>      }</div>
-<div class="line"><span class="lineno">  970</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  971</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00973">973</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  974</span>    {</div>
+<div class="line"><span class="lineno">  975</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  976</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QWidget* parent = wid-&gt;parentWidget(); parent; parent = parent-&gt;parentWidget()) {</div>
+<div class="line"><span class="lineno">  977</span>        <span class="keywordflow">if</span>(parent-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a5198c35bce828926a75bb68164e77763">npi::gui::Props::WidgetGroupBase_</a>).toBool())</div>
+<div class="line"><span class="lineno">  978</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  979</span>      }</div>
+<div class="line"><span class="lineno">  980</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  981</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a8cf5e0b70affa5b109df93b6deb3a526">isInsideWidgetGroupBase()</a>, and <a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a5198c35bce828926a75bb68164e77763">npi::gui::Props::WidgetGroupBase_</a>.</p>
 
@@ -711,12 +711,12 @@ Here is the caller graph for this function:</div>
 <p>Returns whether a widget is the viewport of its parent item view. </p>
 <dl class="section note"><dt>Note</dt><dd>Returns false if the widget is null or its parent is not a QAbstractItemView owning that viewport. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00941">941</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  942</span>    {</div>
-<div class="line"><span class="lineno">  943</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  944</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* view = qobject_cast&lt;const QAbstractItemView*&gt;(wid-&gt;parentWidget());</div>
-<div class="line"><span class="lineno">  945</span>      <span class="keywordflow">return</span> view &amp;&amp; view-&gt;viewport() == wid;</div>
-<div class="line"><span class="lineno">  946</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00951">951</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  952</span>    {</div>
+<div class="line"><span class="lineno">  953</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  954</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* view = qobject_cast&lt;const QAbstractItemView*&gt;(wid-&gt;parentWidget());</div>
+<div class="line"><span class="lineno">  955</span>      <span class="keywordflow">return</span> view &amp;&amp; view-&gt;viewport() == wid;</div>
+<div class="line"><span class="lineno">  956</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a07860869e541a5f987d893214c377ad3">isItemViewViewport()</a>.</p>
 
@@ -758,16 +758,16 @@ Here is the caller graph for this function:</div>
 <dd>
 Does nothing if the widget is null. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00981">981</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  982</span>    {</div>
-<div class="line"><span class="lineno">  983</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  984</span>      <span class="keywordflow">if</span>(translucent)</div>
-<div class="line"><span class="lineno">  985</span>        wid-&gt;setAttribute(Qt::WA_TranslucentBackground, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  986</span>      wid-&gt;setAutoFillBackground(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  987</span>      QPalette palette = wid-&gt;palette();</div>
-<div class="line"><span class="lineno">  988</span>      palette.setBrush(QPalette::Base, Qt::transparent);</div>
-<div class="line"><span class="lineno">  989</span>      wid-&gt;setPalette(palette);</div>
-<div class="line"><span class="lineno">  990</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00991">991</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  992</span>    {</div>
+<div class="line"><span class="lineno">  993</span>      <span class="keywordflow">if</span>(!wid) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  994</span>      <span class="keywordflow">if</span>(translucent)</div>
+<div class="line"><span class="lineno">  995</span>        wid-&gt;setAttribute(Qt::WA_TranslucentBackground, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  996</span>      wid-&gt;setAutoFillBackground(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  997</span>      QPalette palette = wid-&gt;palette();</div>
+<div class="line"><span class="lineno">  998</span>      palette.setBrush(QPalette::Base, Qt::transparent);</div>
+<div class="line"><span class="lineno">  999</span>      wid-&gt;setPalette(palette);</div>
+<div class="line"><span class="lineno"> 1000</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a66a4ce8048262ea17e75e0b4c32ebc97">setTransparentBase()</a>.</p>
 

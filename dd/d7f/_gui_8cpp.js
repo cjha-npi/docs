@@ -63,6 +63,7 @@ var _gui_8cpp =
     [ "anonymous_namespace{Gui.cpp}::draw::pressedButtonRoundedRect", "d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a28022be21bc0970e5e85764652cdcb2c", null ],
     [ "anonymous_namespace{Gui.cpp}::make::roundedArrow", "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe", null ],
     [ "anonymous_namespace{Gui.cpp}::size::sameFontSize", "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7", null ],
+    [ "anonymous_namespace{Gui.cpp}::size::scrollBarWidth", "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#a664bb963e5feb5ce782b689e9dd5fc85", null ],
     [ "anonymous_namespace{Gui.cpp}::item::setTransparentBase", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a66a4ce8048262ea17e75e0b4c32ebc97", null ],
     [ "anonymous_namespace{Gui.cpp}::startup", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#add5eb10e73705fb784eb977a325385fb", null ],
     [ "anonymous_namespace{Gui.cpp}::draw::tableHorHeaderText", "d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#afcab152974cfc9cdc2bc2fb1f0e01610", null ],

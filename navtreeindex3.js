@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a01ecd0e5a4ce36824d3ddfa077462957":[7,0,1,10,1,9],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a01ecd0e5a4ce36824d3ddfa077462957":[8,0,1,4,1,9],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a01ecd0e5a4ce36824d3ddfa077462957":[9,0,4,4,16,9],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a0204ccec3cfcb7cec4adc63a9c78bf6b":[7,0,1,10,1,2],
@@ -229,6 +230,8 @@ var NAVTREEINDEX3 =
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a1a59c72bf73ed4306529991c0e6bfdca":[8,0,0,0,27],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a1ff7504afa8cd93c46eb17be4271697c":[7,0,0,5,6],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a1ff7504afa8cd93c46eb17be4271697c":[8,0,0,0,6],
+"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2ce53791240fadb0d2738585f92cfa8b":[7,0,0,5,35],
+"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2ce53791240fadb0d2738585f92cfa8b":[8,0,0,0,35],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a3072e8de119f42da9a3e87f13700d0be":[7,0,0,5,30],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a3072e8de119f42da9a3e87f13700d0be":[8,0,0,0,30],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a361880269891460a018340a223f650e0":[7,0,0,5,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3":[7,0,0,5,15],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3":[8,0,0,0,15],
 "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0":[7,0,0,5,2],
-"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0":[8,0,0,0,2],
-"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5cfd720cbcb134380a92af1cf4096f85":[7,0,0,5,33],
-"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5cfd720cbcb134380a92af1cf4096f85":[8,0,0,0,33],
-"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2":[7,0,0,5,20]
+"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0":[8,0,0,0,2]
 };

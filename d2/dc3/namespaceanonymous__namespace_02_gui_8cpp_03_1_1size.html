@@ -148,6 +148,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:adabe13fa5e07f5dfe19a290fd78fc94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the gap between an icon and the inner edge of its control.  <br /></td></tr>
 <tr class="memitem:af76d38d032f81e47be62ac715f61d3c7" id="r_af76d38d032f81e47be62ac715f61d3c7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af76d38d032f81e47be62ac715f61d3c7">sameFontSize</a> (const QFont &amp;font1, const QFont &amp;font2)</td></tr>
 <tr class="memdesc:af76d38d032f81e47be62ac715f61d3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether two fonts use the same configured size.  <br /></td></tr>
+<tr class="memitem:a664bb963e5feb5ce782b689e9dd5fc85" id="r_a664bb963e5feb5ce782b689e9dd5fc85"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a664bb963e5feb5ce782b689e9dd5fc85">scrollBarWidth</a> ()</td></tr>
+<tr class="memdesc:a664bb963e5feb5ce782b689e9dd5fc85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed width for the scrollbar based on application font size.  <br /></td></tr>
 <tr class="memitem:aebe26ff25d1dc2674278ccd056afdeb9" id="r_aebe26ff25d1dc2674278ccd056afdeb9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aebe26ff25d1dc2674278ccd056afdeb9">usesStandardHeight</a> (QStyle::ContentsType type)</td></tr>
 <tr class="memdesc:aebe26ff25d1dc2674278ccd056afdeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a contents type uses the standardized control height.  <br /></td></tr>
 </table>
@@ -314,6 +316,48 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size_af76d38d032f81e47be62ac715f61d3c7_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a664bb963e5feb5ce782b689e9dd5fc85" name="a664bb963e5feb5ce782b689e9dd5fc85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664bb963e5feb5ce782b689e9dd5fc85">&#9670;&#160;</a></span>scrollBarWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int anonymous_namespace{Gui.cpp}::size::scrollBarWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the fixed width for the scrollbar based on application font size. </p>
+<dl class="section note"><dt>Note</dt><dd>Returns 10px if application font size is not set with point size because if font size is set using pixel size then point size returns -1. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00937">937</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  938</span>    {</div>
+<div class="line"><span class="lineno">  939</span>      <span class="keyword">const</span> QFont appFont = qApp-&gt;font();</div>
+<div class="line"><span class="lineno">  940</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a> = appFont.pointSize() &gt; 0 ? qRound(appFont.pointSize() * 1.1) : 10;</div>
+<div class="line"><span class="lineno">  941</span>      <span class="keywordflow">return</span> qBound(10, <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, 32);</div>
+<div class="line"><span class="lineno">  942</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html"><div class="ttname"><a href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">anonymous_namespace{Gui.cpp}::size</a></div><div class="ttdoc">Helpers for standardized widget heights and icon dimensions.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00860">Gui.cpp:861</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a664bb963e5feb5ce782b689e9dd5fc85">scrollBarWidth()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a664bb963e5feb5ce782b689e9dd5fc85">scrollBarWidth()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size_a664bb963e5feb5ce782b689e9dd5fc85_cgraph.svg" width="440" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size_a664bb963e5feb5ce782b689e9dd5fc85_icgraph.svg" width="440" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

@@ -43,6 +43,7 @@ var namespaceanonymous__namespace_02_gui_8cpp_03 =
       [ "dataForFont", "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102", null ],
       [ "iconEdgeSeparation", "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e", null ],
       [ "sameFontSize", "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7", null ],
+      [ "scrollBarWidth", "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#a664bb963e5feb5ce782b689e9dd5fc85", null ],
       [ "usesStandardHeight", "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aebe26ff25d1dc2674278ccd056afdeb9", null ]
     ] ],
     [ "GuiStyle", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style" ],

@@ -177,8 +177,9 @@ var NAVTREEINDEX0 =
 "d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_files_with_given_size":[3,4,1,1],
 "d2/dab/dp_dh_tips_tricks.html#dp_dh_tips_tricks__create_icons_using_image_magick":[3,4,1,0],
 "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html":[7,0,0,4],
+"d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#a664bb963e5feb5ce782b689e9dd5fc85":[7,0,0,4,3],
 "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e":[7,0,0,4,1],
-"d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aebe26ff25d1dc2674278ccd056afdeb9":[7,0,0,4,3],
+"d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aebe26ff25d1dc2674278ccd056afdeb9":[7,0,0,4,4],
 "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102":[7,0,0,4,0],
 "d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7":[7,0,0,4,2],
 "d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html":[7,0,1,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882":[7,0,0,3,1],
 "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe":[7,0,0,3,0],
 "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f":[7,0,0,3,2],
-"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html":[7,0,1,7],
-"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html":[8,0,1,1]
+"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html":[7,0,1,7]
 };
