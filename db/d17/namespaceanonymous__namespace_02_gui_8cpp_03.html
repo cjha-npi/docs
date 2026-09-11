@@ -419,24 +419,24 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
 <p>Returns the application's <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>, installing one if needed. </p>
 <p>Reuses the current application style when it is a <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>. Otherwise, initializes the bundled fonts and installs a new <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>. </p><dl class="section pre"><dt>Precondition</dt><dd>A QApplication instance exists. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03650">3650</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3651</span>  {</div>
-<div class="line"><span class="lineno"> 3652</span>    <span class="keywordflow">if</span>(!qApp)</div>
-<div class="line"><span class="lineno"> 3653</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a> &lt;&lt; <span class="stringliteral">&quot;GuiStyle object requested before QApplication construction&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3654</span> </div>
-<div class="line"><span class="lineno"> 3655</span>    <span class="comment">// Reuse the GuiStyle already installed on the application.</span></div>
-<div class="line"><span class="lineno"> 3656</span>    <span class="keywordflow">if</span>(<span class="keyword">auto</span>* gStyle = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a>*<span class="keyword">&gt;</span>(qApp-&gt;style()))</div>
-<div class="line"><span class="lineno"> 3657</span>      <span class="keywordflow">return</span> gStyle;</div>
-<div class="line"><span class="lineno"> 3658</span> </div>
-<div class="line"><span class="lineno"> 3659</span>    <span class="comment">// Initialize fonts before constructing and installing the application style.</span></div>
-<div class="line"><span class="lineno"> 3660</span>    <a class="code hl_function" href="#a244c57509e0b88781450e3957e7a3a22">initFont</a>();</div>
-<div class="line"><span class="lineno"> 3661</span>    <span class="keyword">const</span> <span class="keyword">auto</span> gStyle = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a>;</div>
-<div class="line"><span class="lineno"> 3662</span>    qApp-&gt;setStyle(gStyle);</div>
-<div class="line"><span class="lineno"> 3663</span>    <span class="keywordflow">return</span> gStyle;</div>
-<div class="line"><span class="lineno"> 3664</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03648">3648</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3649</span>  {</div>
+<div class="line"><span class="lineno"> 3650</span>    <span class="keywordflow">if</span>(!qApp)</div>
+<div class="line"><span class="lineno"> 3651</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a> &lt;&lt; <span class="stringliteral">&quot;GuiStyle object requested before QApplication construction&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3652</span> </div>
+<div class="line"><span class="lineno"> 3653</span>    <span class="comment">// Reuse the GuiStyle already installed on the application.</span></div>
+<div class="line"><span class="lineno"> 3654</span>    <span class="keywordflow">if</span>(<span class="keyword">auto</span>* gStyle = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a>*<span class="keyword">&gt;</span>(qApp-&gt;style()))</div>
+<div class="line"><span class="lineno"> 3655</span>      <span class="keywordflow">return</span> gStyle;</div>
+<div class="line"><span class="lineno"> 3656</span> </div>
+<div class="line"><span class="lineno"> 3657</span>    <span class="comment">// Initialize fonts before constructing and installing the application style.</span></div>
+<div class="line"><span class="lineno"> 3658</span>    <a class="code hl_function" href="#a244c57509e0b88781450e3957e7a3a22">initFont</a>();</div>
+<div class="line"><span class="lineno"> 3659</span>    <span class="keyword">const</span> <span class="keyword">auto</span> gStyle = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a>;</div>
+<div class="line"><span class="lineno"> 3660</span>    qApp-&gt;setStyle(gStyle);</div>
+<div class="line"><span class="lineno"> 3661</span>    <span class="keywordflow">return</span> gStyle;</div>
+<div class="line"><span class="lineno"> 3662</span>  }</div>
 <div class="ttc" id="a_gui_8cpp_html_acfd217143f12c58fa5be9bd51908a231"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a></div><div class="ttdeci">#define npiFatl</div><div class="ttdoc">Creates a fatal message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00168">Gui.cpp:168</a></div></div>
 <div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_gui_style_html"><div class="ttname"><a href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">anonymous_namespace{Gui.cpp}::GuiStyle</a></div><div class="ttdoc">Application style implementing the GUI system.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01208">Gui.cpp:1208</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a244c57509e0b88781450e3957e7a3a22"><div class="ttname"><a href="#a244c57509e0b88781450e3957e7a3a22">anonymous_namespace{Gui.cpp}::initFont</a></div><div class="ttdeci">void initFont()</div><div class="ttdoc">Registers the bundled JetBrains Mono fonts and logs loading failures.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03622">Gui.cpp:3622</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a244c57509e0b88781450e3957e7a3a22"><div class="ttname"><a href="#a244c57509e0b88781450e3957e7a3a22">anonymous_namespace{Gui.cpp}::initFont</a></div><div class="ttdeci">void initFont()</div><div class="ttdoc">Registers the bundled JetBrains Mono fonts and logs loading failures.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03620">Gui.cpp:3620</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a244c57509e0b88781450e3957e7a3a22">initFont()</a>, and <a class="el" href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a>.</p>
 
@@ -472,29 +472,29 @@ Here is the caller graph for this function:</div>
 <p>Registers the bundled JetBrains Mono fonts and logs loading failures. </p>
 <p>Attempts to load Regular, Bold, Italic and Bold-Italic once. Failed loads are not retried on subsequent calls. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03622">3622</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3623</span>  {</div>
-<div class="line"><span class="lineno"> 3624</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> loaded{<span class="keyword">false</span>}; <span class="comment">// Whether the font-loading pass has already completed.</span></div>
-<div class="line"><span class="lineno"> 3625</span>    <span class="keywordflow">if</span>(loaded) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 3626</span> </div>
-<div class="line"><span class="lineno"> 3627</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idRegular = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Regular.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3628</span>    <span class="keywordflow">if</span>(idRegular == -1)</div>
-<div class="line"><span class="lineno"> 3629</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Regular font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3630</span> </div>
-<div class="line"><span class="lineno"> 3631</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idBold = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Bold.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3632</span>    <span class="keywordflow">if</span>(idBold == -1)</div>
-<div class="line"><span class="lineno"> 3633</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3634</span> </div>
-<div class="line"><span class="lineno"> 3635</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Italic.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3636</span>    <span class="keywordflow">if</span>(idItalic == -1)</div>
-<div class="line"><span class="lineno"> 3637</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Italic font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3638</span> </div>
-<div class="line"><span class="lineno"> 3639</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idBoldItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-BoldItalic.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3640</span>    <span class="keywordflow">if</span>(idBoldItalic == -1)</div>
-<div class="line"><span class="lineno"> 3641</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold-Italic font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3642</span> </div>
-<div class="line"><span class="lineno"> 3643</span>    loaded = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 3644</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03620">3620</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3621</span>  {</div>
+<div class="line"><span class="lineno"> 3622</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> loaded{<span class="keyword">false</span>}; <span class="comment">// Whether the font-loading pass has already completed.</span></div>
+<div class="line"><span class="lineno"> 3623</span>    <span class="keywordflow">if</span>(loaded) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 3624</span> </div>
+<div class="line"><span class="lineno"> 3625</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idRegular = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Regular.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3626</span>    <span class="keywordflow">if</span>(idRegular == -1)</div>
+<div class="line"><span class="lineno"> 3627</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Regular font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3628</span> </div>
+<div class="line"><span class="lineno"> 3629</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idBold = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Bold.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3630</span>    <span class="keywordflow">if</span>(idBold == -1)</div>
+<div class="line"><span class="lineno"> 3631</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3632</span> </div>
+<div class="line"><span class="lineno"> 3633</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Italic.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3634</span>    <span class="keywordflow">if</span>(idItalic == -1)</div>
+<div class="line"><span class="lineno"> 3635</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Italic font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3636</span> </div>
+<div class="line"><span class="lineno"> 3637</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idBoldItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-BoldItalic.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3638</span>    <span class="keywordflow">if</span>(idBoldItalic == -1)</div>
+<div class="line"><span class="lineno"> 3639</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold-Italic font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3640</span> </div>
+<div class="line"><span class="lineno"> 3641</span>    loaded = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3642</span>  }</div>
 <div class="ttc" id="a_gui_8cpp_html_a29523bd69971206d80a3109b7bba0eea"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a></div><div class="ttdeci">#define npiWarn</div><div class="ttdoc">Creates a warning message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00162">Gui.cpp:162</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>.</p>
@@ -559,14 +559,14 @@ Here is the caller graph for this function:</div>
 <p>Schedules application-style initialization through Qt's startup hook. </p>
 <p>Registered with Q_COREAPP_STARTUP_FUNCTION; GUI initialization is deferred until application events are processed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03669">3669</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3670</span>  {</div>
-<div class="line"><span class="lineno"> 3671</span>    <span class="comment">// Defer GuiStyle creation until QApplication construction has completed.</span></div>
-<div class="line"><span class="lineno"> 3672</span>    <span class="comment">// The callback runs when events are processed, through exec() or an explicit</span></div>
-<div class="line"><span class="lineno"> 3673</span>    <span class="comment">// processEvents() call after construction.</span></div>
-<div class="line"><span class="lineno"> 3674</span>    QTimer::singleShot(0, qApp, []{ <a class="code hl_function" href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>(); });</div>
-<div class="line"><span class="lineno"> 3675</span>  }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ac38bf26de3b0963dbcc0f8ecfd14dc3d"><div class="ttname"><a href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle</a></div><div class="ttdeci">GuiStyle * guiStyle()</div><div class="ttdoc">Returns the application&#39;s GuiStyle, installing one if needed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03650">Gui.cpp:3650</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03667">3667</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3668</span>  {</div>
+<div class="line"><span class="lineno"> 3669</span>    <span class="comment">// Defer GuiStyle creation until QApplication construction has completed.</span></div>
+<div class="line"><span class="lineno"> 3670</span>    <span class="comment">// The callback runs when events are processed, through exec() or an explicit</span></div>
+<div class="line"><span class="lineno"> 3671</span>    <span class="comment">// processEvents() call after construction.</span></div>
+<div class="line"><span class="lineno"> 3672</span>    QTimer::singleShot(0, qApp, []{ <a class="code hl_function" href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>(); });</div>
+<div class="line"><span class="lineno"> 3673</span>  }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ac38bf26de3b0963dbcc0f8ecfd14dc3d"><div class="ttname"><a href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle</a></div><div class="ttdeci">GuiStyle * guiStyle()</div><div class="ttdoc">Returns the application&#39;s GuiStyle, installing one if needed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03648">Gui.cpp:3648</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle()</a>.</p>
 <div class="dynheader">
