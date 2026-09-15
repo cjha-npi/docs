@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Gui::cpp}::item::isInsideItemBase" name="anonymous_namespace{Gui::cpp}::item::isInsideItemBase">
+<area shape="rect" id="Node000001" title="Returns whether a widget has a group&#45;base ancestor." alt="" coords="544,68,989,94"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="834,63,839,58,832,53,807,49,767,47,723,49,699,55,695,57,694,59,708,69,703,68,689,61,690,54,696,50,722,44,767,42,808,43,834,48,845,57,837,68"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Applies event&#45;driven style updates and property&#45;controlled behavior." alt="" coords="275,5,456,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="649,68,456,47,456,41,654,67"/>
+<area shape="rect" id="Node000003" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7" title="Initializes a widget marked as a group base." alt="" coords="235,109,496,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="654,95,496,116,495,111,649,95"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="413,100,411,97,403,92,365,87,339,89,323,95,318,101,321,110,316,108,312,100,320,90,338,84,365,82,404,87,415,93,418,103"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies base&#45;style initialization and GuiStyle widget customizations." alt="" coords="5,101,187,157"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="224,129,187,132,186,127,230,129"/>
+</map>

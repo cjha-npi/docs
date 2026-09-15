@@ -23,7 +23,7 @@ var searchData=
   ['settheme_20',['setTheme',['../d7/dc3/namespacenpi_1_1gui.html#ad60fe158d1b485a98f71cf850c1de037',1,'npi::gui']]],
   ['settheme_5f_21',['setTheme_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
   ['settingsstatustext_22',['settingsStatusText',['../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a3a8077999c13c0cee65f995122e46196',1,'anonymous_namespace{Log.cpp}::control']]],
-  ['settransparentbase_23',['setTransparentBase',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a66a4ce8048262ea17e75e0b4c32ebc97',1,'anonymous_namespace{Gui.cpp}::item']]],
+  ['settransparentbase_23',['setTransparentBase',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8b3d5790edb95817ba0c80fc7e3df28e',1,'anonymous_namespace{Gui.cpp}::item']]],
   ['setwarnlogimportantstate_24',['setWarnLogImportantState',['../d5/ddd/namespacenpi_1_1log.html#a780d5155d9059b348224270ef35f1af1',1,'npi::log']]],
   ['showcompletion_5f_25',['showCompletion_',['../df/d43/classnpi_1_1ind_1_1_empty_completer.html#ad9ff9c019498e495b948b446e49ad8a7',1,'npi::ind::EmptyCompleter']]],
   ['showcritmsg_26',['showCritMsg',['../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#af368724ec58d19d8bfc230468251e183',1,'anonymous_namespace{Log.cpp}::control']]],

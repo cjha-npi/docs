@@ -372,6 +372,12 @@ scrollSlider_</td>
 <td class="fielddoc">
 QScrollBar slider color. </td></tr>
 <tr><td class="fieldtype">
+<a id="a7da374364bab717b25ce64cf8b47d0f6" name="a7da374364bab717b25ce64cf8b47d0f6"></a>QPen</td>
+<td class="fieldname">
+sepPen_</td>
+<td class="fielddoc">
+Pen used for drawing horizontal/vertical separators. </td></tr>
+<tr><td class="fieldtype">
 <a id="ab963c28bba91ecfbc45c09c7fcc6a589" name="ab963c28bba91ecfbc45c09c7fcc6a589"></a>Surfaces</td>
 <td class="fieldname">
 surfaces_</td>
@@ -419,28 +425,28 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
 <p>Returns the application's <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>, installing one if needed. </p>
 <p>Reuses the current application style when it is a <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>. Otherwise, initializes the bundled fonts and installs a new <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>. </p><dl class="section pre"><dt>Precondition</dt><dd>A QApplication instance exists. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03648">3648</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3649</span>  {</div>
-<div class="line"><span class="lineno"> 3650</span>    <span class="keywordflow">if</span>(!qApp)</div>
-<div class="line"><span class="lineno"> 3651</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a> &lt;&lt; <span class="stringliteral">&quot;GuiStyle object requested before QApplication construction&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3652</span> </div>
-<div class="line"><span class="lineno"> 3653</span>    <span class="comment">// Reuse the GuiStyle already installed on the application.</span></div>
-<div class="line"><span class="lineno"> 3654</span>    <span class="keywordflow">if</span>(<span class="keyword">auto</span>* gStyle = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a>*<span class="keyword">&gt;</span>(qApp-&gt;style()))</div>
-<div class="line"><span class="lineno"> 3655</span>      <span class="keywordflow">return</span> gStyle;</div>
-<div class="line"><span class="lineno"> 3656</span> </div>
-<div class="line"><span class="lineno"> 3657</span>    <span class="comment">// Initialize fonts before constructing and installing the application style.</span></div>
-<div class="line"><span class="lineno"> 3658</span>    <a class="code hl_function" href="#a244c57509e0b88781450e3957e7a3a22">initFont</a>();</div>
-<div class="line"><span class="lineno"> 3659</span>    <span class="keyword">const</span> <span class="keyword">auto</span> gStyle = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a>;</div>
-<div class="line"><span class="lineno"> 3660</span>    qApp-&gt;setStyle(gStyle);</div>
-<div class="line"><span class="lineno"> 3661</span>    <span class="keywordflow">return</span> gStyle;</div>
-<div class="line"><span class="lineno"> 3662</span>  }</div>
-<div class="ttc" id="a_gui_8cpp_html_acfd217143f12c58fa5be9bd51908a231"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a></div><div class="ttdeci">#define npiFatl</div><div class="ttdoc">Creates a fatal message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00168">Gui.cpp:168</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_gui_style_html"><div class="ttname"><a href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">anonymous_namespace{Gui.cpp}::GuiStyle</a></div><div class="ttdoc">Application style implementing the GUI system.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01208">Gui.cpp:1208</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a244c57509e0b88781450e3957e7a3a22"><div class="ttname"><a href="#a244c57509e0b88781450e3957e7a3a22">anonymous_namespace{Gui.cpp}::initFont</a></div><div class="ttdeci">void initFont()</div><div class="ttdoc">Registers the bundled JetBrains Mono fonts and logs loading failures.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03620">Gui.cpp:3620</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03734">3734</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3735</span>  {</div>
+<div class="line"><span class="lineno"> 3736</span>    <span class="keywordflow">if</span>(!qApp)</div>
+<div class="line"><span class="lineno"> 3737</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a> &lt;&lt; <span class="stringliteral">&quot;GuiStyle object requested before QApplication construction&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3738</span> </div>
+<div class="line"><span class="lineno"> 3739</span>    <span class="comment">// Reuse the GuiStyle already installed on the application.</span></div>
+<div class="line"><span class="lineno"> 3740</span>    <span class="keywordflow">if</span>(<span class="keyword">auto</span>* gStyle = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a>*<span class="keyword">&gt;</span>(qApp-&gt;style()))</div>
+<div class="line"><span class="lineno"> 3741</span>      <span class="keywordflow">return</span> gStyle;</div>
+<div class="line"><span class="lineno"> 3742</span> </div>
+<div class="line"><span class="lineno"> 3743</span>    <span class="comment">// Initialize fonts before constructing and installing the application style.</span></div>
+<div class="line"><span class="lineno"> 3744</span>    <a class="code hl_function" href="#a244c57509e0b88781450e3957e7a3a22">initFont</a>();</div>
+<div class="line"><span class="lineno"> 3745</span>    <span class="keyword">const</span> <span class="keyword">auto</span> gStyle = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a>;</div>
+<div class="line"><span class="lineno"> 3746</span>    qApp-&gt;setStyle(gStyle);</div>
+<div class="line"><span class="lineno"> 3747</span>    <span class="keywordflow">return</span> gStyle;</div>
+<div class="line"><span class="lineno"> 3748</span>  }</div>
+<div class="ttc" id="a_gui_8cpp_html_acfd217143f12c58fa5be9bd51908a231"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a></div><div class="ttdeci">#define npiFatl</div><div class="ttdoc">Creates a fatal message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00165">Gui.cpp:165</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_gui_style_html"><div class="ttname"><a href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">anonymous_namespace{Gui.cpp}::GuiStyle</a></div><div class="ttdoc">Application style implementing the GUI system.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01241">Gui.cpp:1241</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a244c57509e0b88781450e3957e7a3a22"><div class="ttname"><a href="#a244c57509e0b88781450e3957e7a3a22">anonymous_namespace{Gui.cpp}::initFont</a></div><div class="ttdeci">void initFont()</div><div class="ttdoc">Registers the bundled JetBrains Mono fonts and logs loading failures.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03706">Gui.cpp:3706</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a244c57509e0b88781450e3957e7a3a22">initFont()</a>, and <a class="el" href="../../dd/d7f/_gui_8cpp.html#acfd217143f12c58fa5be9bd51908a231">npiFatl</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ae514cc2c6605c4fa698b2b59e85898f6">anonymous_namespace{Gui.cpp}::item::applyGroupItemTree()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13">anonymous_namespace{Gui.cpp}::item::applyViewItemTree()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a206c8ef16e0927eb9bbc07529f11fee1">anonymous_namespace{Gui.cpp}::item::initButtonGroupBase()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a191f772a04c0ae7d990013fc5c8015dc">anonymous_namespace{Gui.cpp}::item::initItemView()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a9f02593ded0fe2acfa83854255a0e461">anonymous_namespace{Gui.cpp}::item::initWidgetGroupBase()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba">anonymous_namespace{Gui.cpp}::item::installHierarchyFilter()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4">npi::gui::isDarkBackground()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">npi::gui::palette()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47">npi::gui::palette()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ad60fe158d1b485a98f71cf850c1de037">npi::gui::setTheme()</a>, <a class="el" href="#add5eb10e73705fb784eb977a325385fb">startup()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a">npi::gui::surfaces()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc">npi::gui::surfaces()</a>, and <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea">npi::gui::theme()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec">anonymous_namespace{Gui.cpp}::item::applyBaseItemTree()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13">anonymous_namespace{Gui.cpp}::item::applyViewItemTree()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a191f772a04c0ae7d990013fc5c8015dc">anonymous_namespace{Gui.cpp}::item::initItemView()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7">anonymous_namespace{Gui.cpp}::item::initMainBase()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba">anonymous_namespace{Gui.cpp}::item::installHierarchyFilter()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4">npi::gui::isDarkBackground()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">npi::gui::palette()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47">npi::gui::palette()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ad60fe158d1b485a98f71cf850c1de037">npi::gui::setTheme()</a>, <a class="el" href="#add5eb10e73705fb784eb977a325385fb">startup()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a">npi::gui::surfaces()</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc">npi::gui::surfaces()</a>, and <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea">npi::gui::theme()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -472,30 +478,30 @@ Here is the caller graph for this function:</div>
 <p>Registers the bundled JetBrains Mono fonts and logs loading failures. </p>
 <p>Attempts to load Regular, Bold, Italic and Bold-Italic once. Failed loads are not retried on subsequent calls. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03620">3620</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3621</span>  {</div>
-<div class="line"><span class="lineno"> 3622</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> loaded{<span class="keyword">false</span>}; <span class="comment">// Whether the font-loading pass has already completed.</span></div>
-<div class="line"><span class="lineno"> 3623</span>    <span class="keywordflow">if</span>(loaded) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 3624</span> </div>
-<div class="line"><span class="lineno"> 3625</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idRegular = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Regular.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3626</span>    <span class="keywordflow">if</span>(idRegular == -1)</div>
-<div class="line"><span class="lineno"> 3627</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Regular font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3628</span> </div>
-<div class="line"><span class="lineno"> 3629</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idBold = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Bold.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3630</span>    <span class="keywordflow">if</span>(idBold == -1)</div>
-<div class="line"><span class="lineno"> 3631</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3632</span> </div>
-<div class="line"><span class="lineno"> 3633</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Italic.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3634</span>    <span class="keywordflow">if</span>(idItalic == -1)</div>
-<div class="line"><span class="lineno"> 3635</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Italic font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3636</span> </div>
-<div class="line"><span class="lineno"> 3637</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idBoldItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-BoldItalic.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3638</span>    <span class="keywordflow">if</span>(idBoldItalic == -1)</div>
-<div class="line"><span class="lineno"> 3639</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold-Italic font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 3640</span> </div>
-<div class="line"><span class="lineno"> 3641</span>    loaded = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 3642</span>  }</div>
-<div class="ttc" id="a_gui_8cpp_html_a29523bd69971206d80a3109b7bba0eea"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a></div><div class="ttdeci">#define npiWarn</div><div class="ttdoc">Creates a warning message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00162">Gui.cpp:162</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03706">3706</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3707</span>  {</div>
+<div class="line"><span class="lineno"> 3708</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> loaded{<span class="keyword">false</span>}; <span class="comment">// Whether the font-loading pass has already completed.</span></div>
+<div class="line"><span class="lineno"> 3709</span>    <span class="keywordflow">if</span>(loaded) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 3710</span> </div>
+<div class="line"><span class="lineno"> 3711</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idRegular = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Regular.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3712</span>    <span class="keywordflow">if</span>(idRegular == -1)</div>
+<div class="line"><span class="lineno"> 3713</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Regular font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3714</span> </div>
+<div class="line"><span class="lineno"> 3715</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idBold = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Bold.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3716</span>    <span class="keywordflow">if</span>(idBold == -1)</div>
+<div class="line"><span class="lineno"> 3717</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3718</span> </div>
+<div class="line"><span class="lineno"> 3719</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Italic.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3720</span>    <span class="keywordflow">if</span>(idItalic == -1)</div>
+<div class="line"><span class="lineno"> 3721</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Italic font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3722</span> </div>
+<div class="line"><span class="lineno"> 3723</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> idBoldItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-BoldItalic.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3724</span>    <span class="keywordflow">if</span>(idBoldItalic == -1)</div>
+<div class="line"><span class="lineno"> 3725</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold-Italic font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 3726</span> </div>
+<div class="line"><span class="lineno"> 3727</span>    loaded = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3728</span>  }</div>
+<div class="ttc" id="a_gui_8cpp_html_a29523bd69971206d80a3109b7bba0eea"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a></div><div class="ttdeci">#define npiWarn</div><div class="ttdoc">Creates a warning message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00159">Gui.cpp:159</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>.</p>
 
@@ -526,11 +532,11 @@ Here is the caller graph for this function:</div>
 <p>Returns whether Windows is configured to use a dark application theme. </p>
 <p>Reads AppsUseLightTheme from the current user's Windows theme settings and returns true when its value is zero. </p><dl class="section note"><dt>Note</dt><dd>A missing setting defaults to the light application theme. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01192">1192</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1193</span>  {</div>
-<div class="line"><span class="lineno"> 1194</span>    QSettings settings{<span class="stringliteral">&quot;HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize&quot;</span>, QSettings::NativeFormat};</div>
-<div class="line"><span class="lineno"> 1195</span>    <span class="keywordflow">return</span> settings.value(<span class="stringliteral">&quot;AppsUseLightTheme&quot;</span>, 1).toInt() == 0;</div>
-<div class="line"><span class="lineno"> 1196</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01225">1225</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1226</span>  {</div>
+<div class="line"><span class="lineno"> 1227</span>    QSettings settings{<span class="stringliteral">&quot;HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize&quot;</span>, QSettings::NativeFormat};</div>
+<div class="line"><span class="lineno"> 1228</span>    <span class="keywordflow">return</span> settings.value(<span class="stringliteral">&quot;AppsUseLightTheme&quot;</span>, 1).toInt() == 0;</div>
+<div class="line"><span class="lineno"> 1229</span>  }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662">anonymous_namespace{Gui.cpp}::GuiStyle::GuiStyle()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad">anonymous_namespace{Gui.cpp}::GuiStyle::nativeEventFilter()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882">anonymous_namespace{Gui.cpp}::GuiStyle::setTheme_()</a>.</p>
 <div class="dynheader">
@@ -559,14 +565,14 @@ Here is the caller graph for this function:</div>
 <p>Schedules application-style initialization through Qt's startup hook. </p>
 <p>Registered with Q_COREAPP_STARTUP_FUNCTION; GUI initialization is deferred until application events are processed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03667">3667</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3668</span>  {</div>
-<div class="line"><span class="lineno"> 3669</span>    <span class="comment">// Defer GuiStyle creation until QApplication construction has completed.</span></div>
-<div class="line"><span class="lineno"> 3670</span>    <span class="comment">// The callback runs when events are processed, through exec() or an explicit</span></div>
-<div class="line"><span class="lineno"> 3671</span>    <span class="comment">// processEvents() call after construction.</span></div>
-<div class="line"><span class="lineno"> 3672</span>    QTimer::singleShot(0, qApp, []{ <a class="code hl_function" href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>(); });</div>
-<div class="line"><span class="lineno"> 3673</span>  }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ac38bf26de3b0963dbcc0f8ecfd14dc3d"><div class="ttname"><a href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle</a></div><div class="ttdeci">GuiStyle * guiStyle()</div><div class="ttdoc">Returns the application&#39;s GuiStyle, installing one if needed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03648">Gui.cpp:3648</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03753">3753</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3754</span>  {</div>
+<div class="line"><span class="lineno"> 3755</span>    <span class="comment">// Defer GuiStyle creation until QApplication construction has completed.</span></div>
+<div class="line"><span class="lineno"> 3756</span>    <span class="comment">// The callback runs when events are processed, through exec() or an explicit</span></div>
+<div class="line"><span class="lineno"> 3757</span>    <span class="comment">// processEvents() call after construction.</span></div>
+<div class="line"><span class="lineno"> 3758</span>    QTimer::singleShot(0, qApp, []{ <a class="code hl_function" href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>(); });</div>
+<div class="line"><span class="lineno"> 3759</span>  }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ac38bf26de3b0963dbcc0f8ecfd14dc3d"><div class="ttname"><a href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle</a></div><div class="ttdeci">GuiStyle * guiStyle()</div><div class="ttdoc">Returns the application&#39;s GuiStyle, installing one if needed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03734">Gui.cpp:3734</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle()</a>.</p>
 <div class="dynheader">
@@ -602,20 +608,20 @@ Here is the call graph for this function:</div>
 <dl class="section pre"><dt>Precondition</dt><dd>widget is not null. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Unsupported Windows versions may reject the requested DWM attribute. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01173">1173</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1174</span>  {</div>
-<div class="line"><span class="lineno"> 1175</span>    <span class="keywordflow">if</span>(widget-&gt;isWindow() &amp;&amp; widget-&gt;effectiveWinId() != 0) {</div>
-<div class="line"><span class="lineno"> 1176</span>      HWND hwnd = <span class="keyword">reinterpret_cast&lt;</span>HWND<span class="keyword">&gt;</span>(widget-&gt;effectiveWinId()); <span class="comment">// NOLINT(performance-no-int-to-ptr)</span></div>
-<div class="line"><span class="lineno"> 1177</span>      <span class="keyword">auto</span> bgColor = widget-&gt;palette().color(QPalette::Window);</div>
-<div class="line"><span class="lineno"> 1178</span>      <span class="keyword">const</span> COLORREF clr = RGB(bgColor.red(), bgColor.green(), bgColor.blue());</div>
-<div class="line"><span class="lineno"> 1179</span>      <span class="keyword">const</span> HRESULT result = DwmSetWindowAttribute(hwnd, DWMWA_CAPTION_COLOR, &amp;clr, <span class="keyword">sizeof</span>(clr));</div>
-<div class="line"><span class="lineno"> 1180</span>      <span class="keywordflow">if</span>(FAILED(result))</div>
-<div class="line"><span class="lineno"> 1181</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to set window title bar color. Widget:&quot;</span></div>
-<div class="line"><span class="lineno"> 1182</span>        &lt;&lt; widget-&gt;objectName()</div>
-<div class="line"><span class="lineno"> 1183</span>        &lt;&lt; <span class="stringliteral">&quot;HRESULT:&quot;</span></div>
-<div class="line"><span class="lineno"> 1184</span>        &lt;&lt; QString::number(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(result), 16);</div>
-<div class="line"><span class="lineno"> 1185</span>    }</div>
-<div class="line"><span class="lineno"> 1186</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01206">1206</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1207</span>  {</div>
+<div class="line"><span class="lineno"> 1208</span>    <span class="keywordflow">if</span>(widget-&gt;isWindow() &amp;&amp; widget-&gt;effectiveWinId() != 0) {</div>
+<div class="line"><span class="lineno"> 1209</span>      HWND hwnd = <span class="keyword">reinterpret_cast&lt;</span>HWND<span class="keyword">&gt;</span>(widget-&gt;effectiveWinId()); <span class="comment">// NOLINT(performance-no-int-to-ptr)</span></div>
+<div class="line"><span class="lineno"> 1210</span>      <span class="keyword">auto</span> bgColor = widget-&gt;palette().color(QPalette::Window);</div>
+<div class="line"><span class="lineno"> 1211</span>      <span class="keyword">const</span> COLORREF clr = RGB(bgColor.red(), bgColor.green(), bgColor.blue());</div>
+<div class="line"><span class="lineno"> 1212</span>      <span class="keyword">const</span> HRESULT result = DwmSetWindowAttribute(hwnd, DWMWA_CAPTION_COLOR, &amp;clr, <span class="keyword">sizeof</span>(clr));</div>
+<div class="line"><span class="lineno"> 1213</span>      <span class="keywordflow">if</span>(FAILED(result))</div>
+<div class="line"><span class="lineno"> 1214</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to set window title bar color. Widget:&quot;</span></div>
+<div class="line"><span class="lineno"> 1215</span>        &lt;&lt; widget-&gt;objectName()</div>
+<div class="line"><span class="lineno"> 1216</span>        &lt;&lt; <span class="stringliteral">&quot;HRESULT:&quot;</span></div>
+<div class="line"><span class="lineno"> 1217</span>        &lt;&lt; QString::number(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(result), 16);</div>
+<div class="line"><span class="lineno"> 1218</span>    }</div>
+<div class="line"><span class="lineno"> 1219</span>  }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>.</p>
 
@@ -651,9 +657,9 @@ Here is the caller graph for this function:</div>
 
 <p>Offset used to center focus indicators on their target position. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00183">183</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>{<a class="code hl_variable" href="#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a> / 2}; <span class="comment">///&lt; Offset used to center focus indicators on their target position.</span></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab3fe4f49056ef475941d2c6fda65bee3"><div class="ttname"><a href="#ab3fe4f49056ef475941d2c6fda65bee3">anonymous_namespace{Gui.cpp}::borderWidth</a></div><div class="ttdeci">constexpr int borderWidth</div><div class="ttdoc">Width of pressed borders and focus indicators.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00182">Gui.cpp:182</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00180">180</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  180</span>{<a class="code hl_variable" href="#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a> / 2}; <span class="comment">///&lt; Offset used to center focus indicators on their target position.</span></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab3fe4f49056ef475941d2c6fda65bee3"><div class="ttname"><a href="#ab3fe4f49056ef475941d2c6fda65bee3">anonymous_namespace{Gui.cpp}::borderWidth</a></div><div class="ttdeci">constexpr int borderWidth</div><div class="ttdoc">Width of pressed borders and focus indicators.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00179">Gui.cpp:179</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a12037930720aefc2c0753719a78c11e2">anonymous_namespace{Gui.cpp}::draw::focusLine()</a>, and <a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a17874e85ad6e53b438db9754d89fd2cc">anonymous_namespace{Gui.cpp}::draw::itemPressedButton()</a>.</p>
 
@@ -681,8 +687,8 @@ Here is the caller graph for this function:</div>
 
 <p>Width of pressed borders and focus indicators. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00182">182</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>{2};                   <span class="comment">///&lt; Width of pressed borders and focus indicators.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00179">179</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>{2};                   <span class="comment">///&lt; Width of pressed borders and focus indicators.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102">anonymous_namespace{Gui.cpp}::size::dataForFont()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0">anonymous_namespace{Gui.cpp}::GuiStyle::drawComplexControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3">anonymous_namespace{Gui.cpp}::GuiStyle::pixelMetric()</a>, <a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a28022be21bc0970e5e85764652cdcb2c">anonymous_namespace{Gui.cpp}::draw::pressedButtonRoundedRect()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>, and <a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">anonymous_namespace{Gui.cpp}::make::theme()</a>.</p>
 
@@ -710,8 +716,8 @@ Here is the caller graph for this function:</div>
 
 <p>Height of a drop-down arrow. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00179">179</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>{8};               <span class="comment">///&lt; Height of a drop-down arrow.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00176">176</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>{8};               <span class="comment">///&lt; Height of a drop-down arrow.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>.</p>
 
@@ -739,8 +745,8 @@ Here is the caller graph for this function:</div>
 
 <p>Horizontal padding around a drop-down arrow. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00177">177</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>{6};                  <span class="comment">///&lt; Horizontal padding around a drop-down arrow.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00174">174</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>{6};                  <span class="comment">///&lt; Horizontal padding around a drop-down arrow.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
@@ -768,8 +774,8 @@ Here is the caller graph for this function:</div>
 
 <p>Width of a drop-down arrow. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00178">178</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>{10};               <span class="comment">///&lt; Width of a drop-down arrow.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00175">175</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>{10};               <span class="comment">///&lt; Width of a drop-down arrow.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
@@ -797,8 +803,8 @@ Here is the caller graph for this function:</div>
 
 <p>Height increment used for fixed-height widgets. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00181">181</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>{4};                 <span class="comment">///&lt; Height increment used for fixed-height widgets.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00178">178</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>{4};                 <span class="comment">///&lt; Height increment used for fixed-height widgets.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102">anonymous_namespace{Gui.cpp}::size::dataForFont()</a>.</p>
 
@@ -826,8 +832,8 @@ Here is the caller graph for this function:</div>
 
 <p>Horizontal padding around control text. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00175">175</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>{8};                    <span class="comment">///&lt; Horizontal padding around control text.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00172">172</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>{8};                    <span class="comment">///&lt; Horizontal padding around control text.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
@@ -855,8 +861,8 @@ Here is the caller graph for this function:</div>
 
 <p>Gap between an icon and adjacent text. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00176">176</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>{4};                   <span class="comment">///&lt; Gap between an icon and adjacent text.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00173">173</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>{4};                   <span class="comment">///&lt; Gap between an icon and adjacent text.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
@@ -884,9 +890,9 @@ Here is the caller graph for this function:</div>
 
 <p>Corner radius of the inner pressed-button background. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00185">185</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>{<a class="code hl_variable" href="#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a> * 0.7}; <span class="comment">///&lt; Corner radius of the inner pressed-button background.</span></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_aff5afbe0a76b10e27360d733d02d24d4"><div class="ttname"><a href="#aff5afbe0a76b10e27360d733d02d24d4">anonymous_namespace{Gui.cpp}::outerRadius</a></div><div class="ttdeci">constexpr qreal outerRadius</div><div class="ttdoc">Corner radius of rounded control backgrounds.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00184">Gui.cpp:184</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00182">182</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>{<a class="code hl_variable" href="#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a> * 0.7}; <span class="comment">///&lt; Corner radius of the inner pressed-button background.</span></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_aff5afbe0a76b10e27360d733d02d24d4"><div class="ttname"><a href="#aff5afbe0a76b10e27360d733d02d24d4">anonymous_namespace{Gui.cpp}::outerRadius</a></div><div class="ttdeci">constexpr qreal outerRadius</div><div class="ttdoc">Corner radius of rounded control backgrounds.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00181">Gui.cpp:181</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a28022be21bc0970e5e85764652cdcb2c">anonymous_namespace{Gui.cpp}::draw::pressedButtonRoundedRect()</a>.</p>
 
@@ -914,8 +920,8 @@ Here is the caller graph for this function:</div>
 
 <p>Corner radius of rounded control backgrounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00184">184</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>{<a class="code hl_variable" href="#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a> * 2.0}; <span class="comment">///&lt; Corner radius of rounded control backgrounds.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00181">181</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>{<a class="code hl_variable" href="#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a> * 2.0}; <span class="comment">///&lt; Corner radius of rounded control backgrounds.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ae5603f3ba33adb7a05f7f1816bd7a0f7">anonymous_namespace{Gui.cpp}::draw::baseRoundedRect()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>.</p>
 
@@ -943,8 +949,8 @@ Here is the caller graph for this function:</div>
 
 <p>Whether the child-hierarchy event filter has been installed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00199">199</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>{<span class="stringliteral">&quot;npi_gui_private_hierarchyFilterInstalled&quot;</span>};         <span class="comment">///&lt; Whether the child-hierarchy event filter has been installed.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00196">196</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>{<span class="stringliteral">&quot;npi_gui_private_hierarchyFilterInstalled&quot;</span>};         <span class="comment">///&lt; Whether the child-hierarchy event filter has been installed.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, and <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba">anonymous_namespace{Gui.cpp}::item::installHierarchyFilter()</a>.</p>
 
@@ -972,8 +978,8 @@ Here is the caller graph for this function:</div>
 
 <p>Whether clear-action customization has been attempted. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00193">193</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  193</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditClearButtonChanged&quot;</span>};     <span class="comment">///&lt; Whether clear-action customization has been attempted.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00190">190</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditClearButtonChanged&quot;</span>};     <span class="comment">///&lt; Whether clear-action customization has been attempted.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -1001,8 +1007,8 @@ Here is the caller graph for this function:</div>
 
 <p>Marks a QLineEdit owned by a complex control. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00192">192</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditComplex&quot;</span>};                           <span class="comment">///&lt; Marks a QLineEdit owned by a complex control.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00189">189</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditComplex&quot;</span>};                           <span class="comment">///&lt; Marks a QLineEdit owned by a complex control.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
@@ -1030,8 +1036,8 @@ Here is the caller graph for this function:</div>
 
 <p>Marks an internal default QLineEdit, such as an item-view editor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00191">191</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditDefault&quot;</span>};                           <span class="comment">///&lt; Marks an internal default QLineEdit, such as an item-view editor.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00188">188</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditDefault&quot;</span>};                           <span class="comment">///&lt; Marks an internal default QLineEdit, such as an item-view editor.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
@@ -1059,8 +1065,8 @@ Here is the caller graph for this function:</div>
 
 <p>Whether password-line-edit initialization has been completed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00194">194</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditPasswordInitialized&quot;</span>};   <span class="comment">///&lt; Whether password-line-edit initialization has been completed.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00191">191</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditPasswordInitialized&quot;</span>};   <span class="comment">///&lt; Whether password-line-edit initialization has been completed.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -1088,8 +1094,8 @@ Here is the caller graph for this function:</div>
 
 <p>Stores the QAction that toggles password visibility. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00195">195</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditTogglePasswordAction&quot;</span>}; <span class="comment">///&lt; Stores the QAction that toggles password visibility.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00192">192</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>{<span class="stringliteral">&quot;npi_gui_private_lineEditTogglePasswordAction&quot;</span>}; <span class="comment">///&lt; Stores the QAction that toggles password visibility.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -1117,10 +1123,10 @@ Here is the caller graph for this function:</div>
 
 <p>Suppresses drawing of the widget's own background. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00197">197</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>{<span class="stringliteral">&quot;npi_gui_private_noBackground&quot;</span>};                                 <span class="comment">///&lt; Suppresses drawing of the widget&#39;s own background.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00194">194</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>{<span class="stringliteral">&quot;npi_gui_private_noBackground&quot;</span>};                                 <span class="comment">///&lt; Suppresses drawing of the widget&#39;s own background.</span></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a62f372df0607d665798cb1ef096b8b2d">anonymous_namespace{Gui.cpp}::item::applyGroupItem()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202">anonymous_namespace{Gui.cpp}::item::applyViewItem()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0">anonymous_namespace{Gui.cpp}::GuiStyle::drawComplexControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2">anonymous_namespace{Gui.cpp}::item::applyBaseItem()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202">anonymous_namespace{Gui.cpp}::item::applyViewItem()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0">anonymous_namespace{Gui.cpp}::GuiStyle::drawComplexControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7">anonymous_namespace{Gui.cpp}::item::initMainBase()</a>.</p>
 
 </div>
 </div>
@@ -1146,8 +1152,8 @@ Here is the caller graph for this function:</div>
 
 <p>Stores the original icon for dynamic-icon fallback. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00196">196</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>{<span class="stringliteral">&quot;npi_gui_private_storedOriginalIcon&quot;</span>};                     <span class="comment">///&lt; Stores the original icon for dynamic-icon fallback.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00193">193</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>{<span class="stringliteral">&quot;npi_gui_private_storedOriginalIcon&quot;</span>};                     <span class="comment">///&lt; Stores the original icon for dynamic-icon fallback.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab5ad1d329be0a1bc2362718e85487f8a">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon()</a>, and <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon()</a>.</p>
 
@@ -1175,8 +1181,8 @@ Here is the caller graph for this function:</div>
 
 <p>Whether the window title-bar event filter has been installed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00190">190</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  190</span>{<span class="stringliteral">&quot;npi_gui_private_titleBarFilterInstalled&quot;</span>};           <span class="comment">///&lt; Whether the window title-bar event filter has been installed.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00187">187</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>{<span class="stringliteral">&quot;npi_gui_private_titleBarFilterInstalled&quot;</span>};           <span class="comment">///&lt; Whether the window title-bar event filter has been installed.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -1204,10 +1210,10 @@ Here is the caller graph for this function:</div>
 
 <p>Marks a widget configured for use inside an item view. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00198">198</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>{<span class="stringliteral">&quot;npi_gui_private_viewItem&quot;</span>};                                         <span class="comment">///&lt; Marks a widget configured for use inside an item view.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00195">195</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>{<span class="stringliteral">&quot;npi_gui_private_viewItem&quot;</span>};                                         <span class="comment">///&lt; Marks a widget configured for use inside an item view.</span></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202">anonymous_namespace{Gui.cpp}::item::applyViewItem()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202">anonymous_namespace{Gui.cpp}::item::applyViewItem()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7">anonymous_namespace{Gui.cpp}::item::initMainBase()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
 </div>
 </div>
@@ -1233,8 +1239,8 @@ Here is the caller graph for this function:</div>
 
 <p>Whether the table-header viewport event filter has been installed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00188">188</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>{<span class="stringliteral">&quot;npi_gui_private_viewportFilterInstalled&quot;</span>};           <span class="comment">///&lt; Whether the table-header viewport event filter has been installed.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00185">185</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>{<span class="stringliteral">&quot;npi_gui_private_viewportFilterInstalled&quot;</span>};           <span class="comment">///&lt; Whether the table-header viewport event filter has been installed.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -1262,8 +1268,8 @@ Here is the caller graph for this function:</div>
 
 <p>Requests repainting of the complete table header. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00189">189</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  189</span>{<span class="stringliteral">&quot;npi_gui_private_viewportUpdate&quot;</span>};                             <span class="comment">///&lt; Requests repainting of the complete table header.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00186">186</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>{<span class="stringliteral">&quot;npi_gui_private_viewportUpdate&quot;</span>};                             <span class="comment">///&lt; Requests repainting of the complete table header.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>.</p>
 
@@ -1291,8 +1297,8 @@ Here is the caller graph for this function:</div>
 
 <p>Corner radius used for custom arrow paths. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00186">186</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  186</span>{1.1};        <span class="comment">///&lt; Corner radius used for custom arrow paths.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00183">183</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>{1.1};        <span class="comment">///&lt; Corner radius used for custom arrow paths.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe">anonymous_namespace{Gui.cpp}::make::roundedArrow()</a>.</p>
 
@@ -1320,8 +1326,8 @@ Here is the caller graph for this function:</div>
 
 <p>Gap between a control edge and its focus indicator. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00180">180</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>{6};                       <span class="comment">///&lt; Gap between a control edge and its focus indicator.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00177">177</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>{6};                       <span class="comment">///&lt; Gap between a control edge and its focus indicator.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a12037930720aefc2c0753719a78c11e2">anonymous_namespace{Gui.cpp}::draw::focusLine()</a>.</p>
 

@@ -21,20 +21,20 @@ var namespaceanonymous__namespace_02_gui_8cpp_03 =
       [ "updateDynamicIcon", "df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a557291b8beefba625196706b350f13cd", null ]
     ] ],
     [ "item", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html", [
-      [ "applyGroupItem", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a62f372df0607d665798cb1ef096b8b2d", null ],
-      [ "applyGroupItemTree", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ae514cc2c6605c4fa698b2b59e85898f6", null ],
+      [ "applyBaseItem", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2", null ],
+      [ "applyBaseItemTree", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec", null ],
       [ "applyViewItem", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202", null ],
       [ "applyViewItemTree", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13", null ],
-      [ "initButtonGroupBase", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a206c8ef16e0927eb9bbc07529f11fee1", null ],
       [ "initItemView", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a191f772a04c0ae7d990013fc5c8015dc", null ],
-      [ "initWidgetGroupBase", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a9f02593ded0fe2acfa83854255a0e461", null ],
+      [ "initMainBase", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7", null ],
       [ "installHierarchyFilter", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba", null ],
+      [ "isInsideItemBase", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a767b562fdd6fe188b63123a47719a5de", null ],
       [ "isInsideItemView", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a5635509f7562cd9c4828e4a6290a777c", null ],
-      [ "isInsideWidgetGroupBase", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8cf5e0b70affa5b109df93b6deb3a526", null ],
       [ "isItemViewViewport", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a07860869e541a5f987d893214c377ad3", null ],
-      [ "setTransparentBase", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a66a4ce8048262ea17e75e0b4c32ebc97", null ]
+      [ "setTransparentBase", "dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8b3d5790edb95817ba0c80fc7e3df28e", null ]
     ] ],
     [ "make", "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html", [
+      [ "checkerBrush", "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a3319a4d9d55045f0932132acc4c06e5b", null ],
       [ "roundedArrow", "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe", null ],
       [ "theme", "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882", null ],
       [ "themeText", "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f", null ]

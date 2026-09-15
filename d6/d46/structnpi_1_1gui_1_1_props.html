@@ -143,15 +143,18 @@ $(function(){initNavTree('d6/d46/structnpi_1_1gui_1_1_props.html','../../','d1/d
 <div class="textblock"><p>QObject dynamic properties providing special GUI functionality. </p>
 <dl class="section note"><dt>Note</dt><dd><ul>
 <li>Unless otherwise stated, these properties should be set before the widget is polished by the application style. If that cannot be guaranteed, manually polish the widget after setting the property.</li>
-<li><span class="tt"><a class="el" href="#aaed3a252218011473cf4ebcd71a45b1b" title="QColor - Makes a QPushButton display the specified color.">ButtonColorDisplay_</a></span> is the only property whose value is intended to change dynamically at runtime after initialization. </li>
+<li><span class="tt"><a class="el" href="#aaed3a252218011473cf4ebcd71a45b1b" title="QColor - Makes a QPushButton display the specified color.">ButtonColorDisplay_</a></span> supports runtime color changes with automatic repainting.</li>
+<li>The group-base properties may be changed at runtime. Manually polish the affected widget after changing <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span>, <span class="tt"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7" title="bool - Makes a widget a raised visual base for a group of child widgets.">RaisedBase_</a></span> or <span class="tt"><a class="el" href="#a58fdac61bd4c703ac43514a6871d610c" title="bool - Configures a shared visual base with exclusive button grouping.">ButtonGroupBase_</a></span>.</li>
+<li>Removing <span class="tt"><a class="el" href="#a58fdac61bd4c703ac43514a6871d610c" title="bool - Configures a shared visual base with exclusive button grouping.">ButtonGroupBase_</a></span> does not undo button grouping or checkability.</li>
+<li>Removing all group-base properties or <span class="tt"><a class="el" href="#a0c22187364aef3d7138155c4a01dd9dd" title="bool - Marks a widget intentionally installed as an item-view widget.">ItemViewWidget_</a></span> does not restore the original configuration of the widget or its descendants. Manual polish does not perform that restoration. </li>
 </ul>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00053">53</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00060">60</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for npi::gui::Props:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dff/structnpi_1_1gui_1_1_props__coll__graph.svg" width="216" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dff/structnpi_1_1gui_1_1_props__coll__graph.svg" width="216" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -159,7 +162,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:aaed3a252218011473cf4ebcd71a45b1b" id="r_aaed3a252218011473cf4ebcd71a45b1b"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaed3a252218011473cf4ebcd71a45b1b">ButtonColorDisplay_</a> {&quot;npi_ButtonColorDisplay&quot;}</td></tr>
 <tr class="memdesc:aaed3a252218011473cf4ebcd71a45b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>QColor</b> - Makes a QPushButton display the specified color.  <br /></td></tr>
 <tr class="memitem:a58fdac61bd4c703ac43514a6871d610c" id="r_a58fdac61bd4c703ac43514a6871d610c"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a58fdac61bd4c703ac43514a6871d610c">ButtonGroupBase_</a> {&quot;npi_ButtonGroupBase&quot;}</td></tr>
-<tr class="memdesc:a58fdac61bd4c703ac43514a6871d610c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Makes a widget the visual base for grouped exclusive buttons.  <br /></td></tr>
+<tr class="memdesc:a58fdac61bd4c703ac43514a6871d610c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Configures a shared visual base with exclusive button grouping.  <br /></td></tr>
 <tr class="memitem:a0e7093bd32af6d035a0102812a366bf7" id="r_a0e7093bd32af6d035a0102812a366bf7"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0e7093bd32af6d035a0102812a366bf7">ButtonRightIcon_</a> {&quot;npi_ButtonRightIcon&quot;}</td></tr>
 <tr class="memdesc:a0e7093bd32af6d035a0102812a366bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Places a QPushButton icon on the right side of the button.  <br /></td></tr>
 <tr class="memitem:a0712ecc9fc237caf3cfdab2790ab2391" id="r_a0712ecc9fc237caf3cfdab2790ab2391"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0712ecc9fc237caf3cfdab2790ab2391">ButtonTextNearIcon_</a> {&quot;npi_ButtonTextNearIcon&quot;}</td></tr>
@@ -172,10 +175,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="memdesc:a0c22187364aef3d7138155c4a01dd9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Marks a widget intentionally installed as an item-view widget.  <br /></td></tr>
 <tr class="memitem:a06577df6678e28b3c8da0f7c5a1525ca" id="r_a06577df6678e28b3c8da0f7c5a1525ca"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a06577df6678e28b3c8da0f7c5a1525ca">PasswordLineEdit_</a> {&quot;npi_PasswordLineEdit&quot;}</td></tr>
 <tr class="memdesc:a06577df6678e28b3c8da0f7c5a1525ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Configures a QLineEdit for password entry.  <br /></td></tr>
+<tr class="memitem:a90216d3fc19f8f2f968a24ab4f43fac7" id="r_a90216d3fc19f8f2f968a24ab4f43fac7"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7">RaisedBase_</a> {&quot;npi_RaisedBase&quot;}</td></tr>
+<tr class="memdesc:a90216d3fc19f8f2f968a24ab4f43fac7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Makes a widget a raised visual base for a group of child widgets.  <br /></td></tr>
+<tr class="memitem:a6c3f834575685ad4252262d4911a714f" id="r_a6c3f834575685ad4252262d4911a714f"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6c3f834575685ad4252262d4911a714f">SunkenBase_</a> {&quot;npi_SunkenBase&quot;}</td></tr>
+<tr class="memdesc:a6c3f834575685ad4252262d4911a714f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Makes a widget a sunken visual base for a group of child widgets.  <br /></td></tr>
 <tr class="memitem:ae8d24979d7432ed15ae93f63e563c5c4" id="r_ae8d24979d7432ed15ae93f63e563c5c4"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae8d24979d7432ed15ae93f63e563c5c4">WheelToParent_</a> {&quot;npi_WheelToParent&quot;}</td></tr>
 <tr class="memdesc:ae8d24979d7432ed15ae93f63e563c5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Forwards wheel events to the parent widget when present.  <br /></td></tr>
-<tr class="memitem:a5198c35bce828926a75bb68164e77763" id="r_a5198c35bce828926a75bb68164e77763"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5198c35bce828926a75bb68164e77763">WidgetGroupBase_</a> {&quot;npi_WidgetGroupBase&quot;}</td></tr>
-<tr class="memdesc:a5198c35bce828926a75bb68164e77763"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Makes a widget the visual base for a group of child widgets.  <br /></td></tr>
 <tr class="memitem:a4eeb469e86ca09fa08abc90f418a8a87" id="r_a4eeb469e86ca09fa08abc90f418a8a87"><td class="memItemLeft">static constexpr const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4eeb469e86ca09fa08abc90f418a8a87">WidthSameAsHeight_</a> {&quot;npi_WidthSameAsHeight&quot;}</td></tr>
 <tr class="memdesc:a4eeb469e86ca09fa08abc90f418a8a87"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>bool</b> - Requests a widget width equal to its calculated height.  <br /></td></tr>
 </table>
@@ -201,11 +206,11 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><b>QColor</b> - Makes a QPushButton display the specified color. </p>
-<p>The button is drawn as a color display rather than with normal button visuals: text, icon and pressed/focus/default visual states are not drawn. When disabled, the displayed color is converted to grayscale. </p><dl class="section note"><dt>Note</dt><dd>The property should be present before polish, but its QColor value may be changed dynamically afterward and the button will repaint automatically. </dd></dl>
+<p>The button is drawn as a color display rather than with normal button visuals: text, icon and pressed/focus/default visual states are not drawn. The supplied color is composited over a white and gray checkerboard to show transparency. When disabled, the color is converted to grayscale while preserving its alpha component before compositing. </p><dl class="section note"><dt>Note</dt><dd>The property should be present before polish, but its QColor value may be changed dynamically afterward and the button will repaint automatically. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The button's focus policy is changed to Qt::NoFocus. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00144">144</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>{<span class="stringliteral">&quot;npi_ButtonColorDisplay&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00176">176</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>{<span class="stringliteral">&quot;npi_ButtonColorDisplay&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -231,18 +236,20 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><b>bool</b> - Makes a widget the visual base for grouped exclusive buttons. </p>
-<p>The base is drawn as a single button-colored rounded surface. Direct button children have their own backgrounds suppressed, are made checkable and added to one exclusive QButtonGroup. An existing direct child QButtonGroup is reused; otherwise one is created automatically. </p><dl class="section note"><dt>Note</dt><dd>Buttons may be added and removed dynamically at runtime. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd><ul>
-<li>Buttons configured as part of this group are not intended to be removed, reparented and reused as ordinary widgets.</li>
-<li>Only QPushButton and QToolButton should be used as direct widget children. </li>
+<p><b>bool</b> - Configures a shared visual base with exclusive button grouping. </p>
+<p>Immediate <span class="tt">QPushButton</span> and <span class="tt">QToolButton</span> children are made checkable and added to one exclusive <span class="tt">QButtonGroup</span>. An existing direct-child group is reused; otherwise one is created automatically. Descendant backgrounds are suppressed except on widgets with <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> or <span class="tt"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7" title="bool - Makes a widget a raised visual base for a group of child widgets.">RaisedBase_</a></span> enabled. </p><dl class="section note"><dt>Note</dt><dd><ul>
+<li>The base uses a rounded <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a0a0fd1396ec2b0a4be1530be886f7709" title="Elevated surface color, e.g. buttons.">Surfaces::raised_</a></span> background unless overridden by <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> or <span class="tt"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7" title="bool - Makes a widget a raised visual base for a group of child widgets.">RaisedBase_</a></span> on the same widget.</li>
+<li>When nested inside another group base, its own background is suppressed unless <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> or <span class="tt"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7" title="bool - Makes a widget a raised visual base for a group of child widgets.">RaisedBase_</a></span> is enabled.</li>
+<li>Item-view configuration takes precedence over background drawing.</li>
+<li>Widgets may be added and removed dynamically at runtime. </li>
 </ul>
 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Widgets configured as part of this group are not intended to be removed, reparented and reused as ordinary widgets. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00126">126</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>{<span class="stringliteral">&quot;npi_ButtonGroupBase&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00156">156</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>{<span class="stringliteral">&quot;npi_ButtonGroupBase&quot;</span>};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a206c8ef16e0927eb9bbc07529f11fee1">anonymous_namespace{Gui.cpp}::item::initButtonGroupBase()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7">anonymous_namespace{Gui.cpp}::item::initMainBase()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a767b562fdd6fe188b63123a47719a5de">anonymous_namespace{Gui.cpp}::item::isInsideItemBase()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
 </div>
 </div>
@@ -269,8 +276,8 @@ Static Public Attributes</h2></td></tr>
 <p><b>bool</b> - Places a QPushButton icon on the right side of the button. </p>
 <dl class="section note"><dt>Note</dt><dd>Only affects buttons containing both text and an icon. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00130">130</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>{<span class="stringliteral">&quot;npi_ButtonRightIcon&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00160">160</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>{<span class="stringliteral">&quot;npi_ButtonRightIcon&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 
@@ -299,8 +306,8 @@ Static Public Attributes</h2></td></tr>
 <p><b>bool</b> - Aligns QPushButton text toward its icon instead of centering it. </p>
 <dl class="section note"><dt>Note</dt><dd>Only affects buttons containing both text and an icon and works with <span class="tt"><a class="el" href="#a0e7093bd32af6d035a0102812a366bf7" title="bool - Places a QPushButton icon on the right side of the button.">ButtonRightIcon_</a></span> for icons placed on either side. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00135">135</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>{<span class="stringliteral">&quot;npi_ButtonTextNearIcon&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00165">165</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>{<span class="stringliteral">&quot;npi_ButtonTextNearIcon&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>.</p>
 
@@ -333,8 +340,8 @@ Static Public Attributes</h2></td></tr>
 </ul>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00069">69</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>{<span class="stringliteral">&quot;npi_IconName&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00076">76</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{<span class="stringliteral">&quot;npi_IconName&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4b3ce8806a9c3a1bc5f3cbfddfb3d927">anonymous_namespace{Gui.cpp}::GuiStyle::registerDynamicAction_()</a>, <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab5ad1d329be0a1bc2362718e85487f8a">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon()</a>, <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon()</a>, and <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a557291b8beefba625196706b350f13cd">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon()</a>.</p>
 
@@ -363,8 +370,8 @@ Static Public Attributes</h2></td></tr>
 <p><b>QString</b> - Name of the theme-dependent ON-state icon without path or extension. </p>
 <p>Uses the same theme-specific and fallback resource lookup as IconName_. </p><dl class="section note"><dt>Note</dt><dd>Applies only to QAbstractButton and QAction. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00074">74</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>{<span class="stringliteral">&quot;npi_IconOnName&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00081">81</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>{<span class="stringliteral">&quot;npi_IconOnName&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4b3ce8806a9c3a1bc5f3cbfddfb3d927">anonymous_namespace{Gui.cpp}::GuiStyle::registerDynamicAction_()</a>, <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab5ad1d329be0a1bc2362718e85487f8a">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon()</a>, and <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon()</a>.</p>
 
@@ -394,8 +401,8 @@ Static Public Attributes</h2></td></tr>
 <p>The marked root widget and its descendants are configured for correct background handling, sizing and runtime child handling inside an item view. </p><dl class="section note"><dt>Note</dt><dd>Set this on the root widget before using setCellWidget(), setItemWidget() or setIndexWidget(), and before the widget is polished, preferably immediately after creating the widget. Descendants are handled automatically. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>A widget configured as an item-view widget, or one of its configured descendants, is not intended to be removed and reparented for reuse as an ordinary widget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00092">92</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>{<span class="stringliteral">&quot;npi_ItemViewWidget&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00097">97</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>{<span class="stringliteral">&quot;npi_ItemViewWidget&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a191f772a04c0ae7d990013fc5c8015dc">anonymous_namespace{Gui.cpp}::item::initItemView()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
@@ -422,12 +429,86 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><b>bool</b> - Configures a QLineEdit for password entry. </p>
-<p>Sets password echo mode, installs the application password validator, enables the clear button and adds a leading action to show/hide the password. Accepted characters are <span class="tt">A-Z</span>, <span class="tt">a-z</span>, <span class="tt">0-9</span>, <span class="tt">!</span>, <span class="tt">$</span>, <span class="tt">^</span>, <span class="tt">&amp;</span>, <span class="tt">*</span>, <span class="tt">#</span> and <span class="tt">_</span>, with a maximum accepted length of 32 characters. </p><dl class="section warning"><dt>Warning</dt><dd>Replaces the QLineEdit's existing validator and echo mode. </dd></dl>
+<p>Sets password echo mode, enables the clear button and adds a leading action to show/hide the password. </p><dl class="section warning"><dt>Warning</dt><dd>Replaces the QLineEdit's existing echo mode. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00082">82</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>{<span class="stringliteral">&quot;npi_PasswordLineEdit&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00087">87</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>{<span class="stringliteral">&quot;npi_PasswordLineEdit&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
+
+</div>
+</div>
+<a id="a90216d3fc19f8f2f968a24ab4f43fac7" name="a90216d3fc19f8f2f968a24ab4f43fac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90216d3fc19f8f2f968a24ab4f43fac7">&#9670;&#160;</a></span>RaisedBase_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>* npi::gui::Props::RaisedBase_ {&quot;npi_RaisedBase&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><b>bool</b> - Makes a widget a raised visual base for a group of child widgets. </p>
+<p>The base is drawn as a single rounded surface using <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a0a0fd1396ec2b0a4be1530be886f7709" title="Elevated surface color, e.g. buttons.">Surfaces::raised_</a></span>. Descendant widgets without <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> or <span class="tt"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7" title="bool - Makes a widget a raised visual base for a group of child widgets.">RaisedBase_</a></span> enabled are configured not to draw their own background so the group appears as one control. </p><dl class="section note"><dt>Note</dt><dd><ul>
+<li>Item-view configuration takes precedence over this property.</li>
+<li>If both <span class="tt"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7" title="bool - Makes a widget a raised visual base for a group of child widgets.">RaisedBase_</a></span> and <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> are enabled, <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> takes precedence.</li>
+<li>Widgets may be added and removed dynamically at runtime.</li>
+<li>This property does not configure button grouping. Enable <span class="tt"><a class="el" href="#a58fdac61bd4c703ac43514a6871d610c" title="bool - Configures a shared visual base with exclusive button grouping.">ButtonGroupBase_</a></span> on the same widget for automatic button grouping; this property overrides its default background color. </li>
+</ul>
+</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Widgets configured as part of this group are not intended to be removed, reparented and reused as ordinary widgets. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00139">139</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>{<span class="stringliteral">&quot;npi_RaisedBase&quot;</span>};</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2">anonymous_namespace{Gui.cpp}::item::applyBaseItem()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7">anonymous_namespace{Gui.cpp}::item::initMainBase()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a767b562fdd6fe188b63123a47719a5de">anonymous_namespace{Gui.cpp}::item::isInsideItemBase()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
+
+</div>
+</div>
+<a id="a6c3f834575685ad4252262d4911a714f" name="a6c3f834575685ad4252262d4911a714f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c3f834575685ad4252262d4911a714f">&#9670;&#160;</a></span>SunkenBase_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>* npi::gui::Props::SunkenBase_ {&quot;npi_SunkenBase&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><b>bool</b> - Makes a widget a sunken visual base for a group of child widgets. </p>
+<p>The base is drawn as a single rounded surface using <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#af802a14ed0526477d68605de91bb1b1d" title="Recessed/inset surface color, e.g. editors.">Surfaces::sunken_</a></span>. Descendant widgets without <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> or <span class="tt"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7" title="bool - Makes a widget a raised visual base for a group of child widgets.">RaisedBase_</a></span> enabled are configured not to draw their own background so the group appears as one control. </p><dl class="section note"><dt>Note</dt><dd><ul>
+<li>Item-view configuration takes precedence over this property.</li>
+<li>If both <span class="tt"><a class="el" href="#a90216d3fc19f8f2f968a24ab4f43fac7" title="bool - Makes a widget a raised visual base for a group of child widgets.">RaisedBase_</a></span> and <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> are enabled, <span class="tt"><a class="el" href="#a6c3f834575685ad4252262d4911a714f" title="bool - Makes a widget a sunken visual base for a group of child widgets.">SunkenBase_</a></span> takes precedence.</li>
+<li>Widgets may be added and removed dynamically at runtime.</li>
+<li>This property does not configure button grouping. Enable <span class="tt"><a class="el" href="#a58fdac61bd4c703ac43514a6871d610c" title="bool - Configures a shared visual base with exclusive button grouping.">ButtonGroupBase_</a></span> on the same widget for automatic button grouping; this property overrides its default background color. </li>
+</ul>
+</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Widgets configured as part of this group are not intended to be removed, reparented and reused as ordinary widgets. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00123">123</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>{<span class="stringliteral">&quot;npi_SunkenBase&quot;</span>};</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2">anonymous_namespace{Gui.cpp}::item::applyBaseItem()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7">anonymous_namespace{Gui.cpp}::item::initMainBase()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a767b562fdd6fe188b63123a47719a5de">anonymous_namespace{Gui.cpp}::item::isInsideItemBase()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
 </div>
 </div>
@@ -454,45 +535,10 @@ Static Public Attributes</h2></td></tr>
 <p><b>bool</b> - Forwards wheel events to the parent widget when present. </p>
 <dl class="section note"><dt>Note</dt><dd>If the widget has no parent, the event is processed normally by the widget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00057">57</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>{<span class="stringliteral">&quot;npi_WheelToParent&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00064">64</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>{<span class="stringliteral">&quot;npi_WheelToParent&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
-
-</div>
-</div>
-<a id="a5198c35bce828926a75bb68164e77763" name="a5198c35bce828926a75bb68164e77763"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5198c35bce828926a75bb68164e77763">&#9670;&#160;</a></span>WidgetGroupBase_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>* npi::gui::Props::WidgetGroupBase_ {&quot;npi_WidgetGroupBase&quot;}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><b>bool</b> - Makes a widget the visual base for a group of child widgets. </p>
-<p>The base is drawn as a single button-colored rounded surface. Descendant widgets are configured not to draw their own background so the group appears as one control. </p><dl class="section note"><dt>Note</dt><dd>Widgets may be added and removed dynamically at runtime. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd><ul>
-<li>Widgets configured as part of this group are not intended to be removed, reparented and reused as ordinary widgets.</li>
-<li>This property does not make button children exclusive or place them in a QButtonGroup. Use <span class="tt"><a class="el" href="#a58fdac61bd4c703ac43514a6871d610c" title="bool - Makes a widget the visual base for grouped exclusive buttons.">ButtonGroupBase_</a></span> for that functionality. </li>
-</ul>
-</dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00114">114</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>{<span class="stringliteral">&quot;npi_WidgetGroupBase&quot;</span>};</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65">anonymous_namespace{Gui.cpp}::GuiStyle::eventFilter()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a9f02593ded0fe2acfa83854255a0e461">anonymous_namespace{Gui.cpp}::item::initWidgetGroupBase()</a>, <a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8cf5e0b70affa5b109df93b6deb3a526">anonymous_namespace{Gui.cpp}::item::isInsideWidgetGroupBase()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>.</p>
 
 </div>
 </div>
@@ -524,8 +570,8 @@ Static Public Attributes</h2></td></tr>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Does not apply to widgets inside QAbstractItemView or to QLabel. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00102">102</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>{<span class="stringliteral">&quot;npi_WidthSameAsHeight&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00107">107</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>{<span class="stringliteral">&quot;npi_WidthSameAsHeight&quot;</span>};</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31">anonymous_namespace{Gui.cpp}::GuiStyle::sizeFromContents()</a>.</p>
 

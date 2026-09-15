@@ -1,0 +1,27 @@
+<map id="anonymous_namespace{Gui::cpp}::item::initMainBase" name="anonymous_namespace{Gui::cpp}::item::initMainBase">
+<area shape="rect" id="Node000001" title="Initializes a widget marked as a group base." alt="" coords="5,192,419,217"/>
+<area shape="poly" id="edge14_Node000001_Node000001" title=" " alt="" coords="152,192,140,183,146,173,171,167,212,165,250,167,274,171,285,180,278,190,274,186,279,181,272,176,249,172,212,170,171,172,149,177,145,183,158,191"/>
+<area shape="rect" id="Node000002" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2" title="Applies grouped&#45;widget configuration to one widget." alt="" coords="764,29,1033,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,190,327,131,394,98,466,72,539,57,614,47,758,43,753,44,615,52,540,62,467,78,397,103,330,135,233,194"/>
+<area shape="rect" id="Node000004" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec" title="Applies grouped&#45;widget configuration recursively to a widget hierarchy." alt="" coords="467,111,704,167"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="285,189,461,160,457,163,287,194"/>
+<area shape="rect" id="Node000005" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the application&#39;s GuiStyle, installing one if needed." alt="" coords="1157,176,1339,217"/>
+<area shape="poly" id="edge13_Node000001_Node000005" title=" " alt="" coords="315,214,458,229,641,240,842,244,945,241,1045,234,1154,219,1159,218,1046,239,945,246,843,249,640,246,458,234,315,220"/>
+<area shape="rect" id="Node000007" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba" title="Installs the GuiStyle hierarchy event filter on a widget." alt="" coords="752,168,1045,224"/>
+<area shape="poly" id="edge15_Node000001_Node000007" title=" " alt="" coords="418,199,747,197,742,200,419,205"/>
+<area shape="rect" id="Node000008" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a767b562fdd6fe188b63123a47719a5de" title="Returns whether a widget has a group&#45;base ancestor." alt="" coords="471,323,700,379"/>
+<area shape="poly" id="edge16_Node000001_Node000008" title=" " alt="" coords="246,214,508,319,504,322,245,220"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="842,29,837,20,846,11,867,5,899,3,944,8,956,14,960,24,955,22,952,18,943,13,899,8,868,10,849,15,843,21,847,31"/>
+<area shape="rect" id="Node000003" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8b3d5790edb95817ba0c80fc7e3df28e" title="Configures a widget so its Base role does not obscure the underlying background." alt="" coords="1093,29,1403,70"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="1033,47,1088,49,1083,50,1033,52"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="1194,28,1191,20,1199,11,1218,5,1248,3,1291,8,1302,14,1305,24,1301,22,1298,18,1289,13,1248,8,1219,10,1202,15,1196,21,1199,31"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="674,109,751,86,814,71,809,73,753,91,676,114"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="525,110,525,101,536,92,556,86,585,85,627,89,639,95,646,104,641,103,636,99,625,94,585,90,557,92,539,97,530,103,530,113"/>
+<area shape="poly" id="edge8_Node000004_Node000005" title=" " alt="" coords="703,124,866,117,957,120,1046,130,1122,147,1193,173,1187,173,1121,153,1045,135,956,126,866,123,704,129"/>
+<area shape="poly" id="edge10_Node000004_Node000007" title=" " alt="" coords="704,158,747,168,741,168,704,163"/>
+<area shape="rect" id="Node000006" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a244c57509e0b88781450e3957e7a3a22" title="Registers the bundled JetBrains Mono fonts and logs loading failures." alt="" coords="1451,176,1632,217"/>
+<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="1338,194,1446,196,1440,197,1339,199"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="1045,194,1152,196,1147,197,1045,199"/>
+<area shape="poly" id="edge12_Node000007_Node000007" title=" " alt="" coords="839,167,839,158,850,149,869,144,899,142,940,146,953,152,959,161,954,160,949,156,939,152,899,147,870,149,852,154,844,161,843,170"/>
+<area shape="poly" id="edge17_Node000008_Node000008" title=" " alt="" coords="526,322,525,313,536,304,556,298,585,297,627,301,639,307,646,316,641,314,636,311,625,306,585,302,557,304,539,309,530,315,530,325"/>
+</map>

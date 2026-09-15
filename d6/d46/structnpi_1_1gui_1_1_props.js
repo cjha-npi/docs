@@ -8,7 +8,8 @@ var structnpi_1_1gui_1_1_props =
     [ "IconOnName_", "d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc", null ],
     [ "ItemViewWidget_", "d6/d46/structnpi_1_1gui_1_1_props.html#a0c22187364aef3d7138155c4a01dd9dd", null ],
     [ "PasswordLineEdit_", "d6/d46/structnpi_1_1gui_1_1_props.html#a06577df6678e28b3c8da0f7c5a1525ca", null ],
+    [ "RaisedBase_", "d6/d46/structnpi_1_1gui_1_1_props.html#a90216d3fc19f8f2f968a24ab4f43fac7", null ],
+    [ "SunkenBase_", "d6/d46/structnpi_1_1gui_1_1_props.html#a6c3f834575685ad4252262d4911a714f", null ],
     [ "WheelToParent_", "d6/d46/structnpi_1_1gui_1_1_props.html#ae8d24979d7432ed15ae93f63e563c5c4", null ],
-    [ "WidgetGroupBase_", "d6/d46/structnpi_1_1gui_1_1_props.html#a5198c35bce828926a75bb68164e77763", null ],
     [ "WidthSameAsHeight_", "d6/d46/structnpi_1_1gui_1_1_props.html#a4eeb469e86ca09fa08abc90f418a8a87", null ]
 ];

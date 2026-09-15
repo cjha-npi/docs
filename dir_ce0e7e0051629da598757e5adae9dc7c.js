@@ -9,6 +9,7 @@ var dir_ce0e7e0051629da598757e5adae9dc7c =
     [ "Main.cpp", "d5/d12/_main_8cpp.html", "d5/d12/_main_8cpp" ],
     [ "MetaInfo.cpp", "d3/dac/_meta_info_8cpp.html", "d3/dac/_meta_info_8cpp" ],
     [ "MetaInfo.h", "db/d0d/_meta_info_8h.html", "db/d0d/_meta_info_8h" ],
+    [ "NamespacesDoc.hpp", "d9/db9/_namespaces_doc_8hpp.html", null ],
     [ "WinMsgBoxExe.cpp", "d9/d49/_win_msg_box_exe_8cpp.html", "d9/d49/_win_msg_box_exe_8cpp" ],
     [ "WinMsgBoxExe.h", "d4/d49/_win_msg_box_exe_8h.html", "d4/d49/_win_msg_box_exe_8h" ]
 ];
