@@ -266,8 +266,9 @@ VS Project Settings</h1>
 <div class="fragment"><div class="line">ISO C17 (2018) Standard (/std:c17)</div>
 </div><!-- fragment --><p class="startli">The same value is also found at <span class="tt">Project Properties &gt; Configuration Properties &gt; C/C++ &gt; Language &gt; C Language Standard</span>, changing one is sufficient, the change is reflected in other location as well. </p><div class="dp-markdown-list-gap"></div></li>
 <li><p class="startli"><b>C/C++ &gt; Preprocessor &gt; Preprocessor Definitions:</b></p>
-<div class="fragment"><div class="line">QT_MESSAGELOGCONTEXT;NPI_SOLUTION_NAME=&quot;$(SolutionName)&quot;;NPI_PROJECT_NAME=&quot;$(MSBuildProjectName)&quot;;%(PreprocessorDefinitions)</div>
+<div class="fragment"><div class="line">QT_NO_DEPRECATED_WARNINGS;QT_MESSAGELOGCONTEXT;NPI_SOLUTION_NAME=&quot;$(_SolName)&quot;;NPI_PROJECT_NAME=&quot;$(MSBuildProjectName)&quot;;%(PreprocessorDefinitions)</div>
 </div><!-- fragment --><ul>
+<li><span class="tt">QT_NO_DEPRECATED_WARNINGS</span>: Removes Qt deprecated warnings, in Qt 6.12.0 Qt's deprecated warnings appear as errors during build.</li>
 <li><span class="tt">QT_MESSAGELOGCONTEXT</span> : Enables <span class="tt">file</span>, <span class="tt">function</span> and <span class="tt">line</span> from Qt's log context fields in Release builds.</li>
 <li><span class="tt">NPI_SOLUTION_NAME</span> : Provides solution name for use in code.</li>
 <li><span class="tt">NPI_PROJECT_NAME</span> : Provides project name for use in code.</li>
@@ -385,7 +386,7 @@ VS Property Sheets</h1>
 <div class="line">    &lt;<span class="keywordtype">ClCompile</span>&gt;</div>
 <div class="line">      &lt;<span class="keywordtype">LanguageStandard</span>&gt;<span class="keyword">stdcpp20</span>&lt;/<span class="keywordtype">LanguageStandard</span>&gt;</div>
 <div class="line">      &lt;<span class="keywordtype">LanguageStandard_C</span>&gt;<span class="keyword">stdc17</span>&lt;/<span class="keywordtype">LanguageStandard_C</span>&gt;</div>
-<div class="line">      &lt;<span class="keywordtype">PreprocessorDefinitions</span>&gt;<span class="keyword">QT_MESSAGELOGCONTEXT</span>;<span class="keyword">NPI_SOLUTION_NAME</span>=<span class="stringliteral">&quot;$(_SolName)&quot;</span>;<span class="keyword">NPI_PROJECT_NAME</span>=<span class="stringliteral">&quot;$(MSBuildProjectName)&quot;</span>;%(<span class="keyword">PreprocessorDefinitions</span>)&lt;/<span class="keywordtype">PreprocessorDefinitions</span>&gt;</div>
+<div class="line">      &lt;<span class="keywordtype">PreprocessorDefinitions</span>&gt;<span class="keyword">QT_NO_DEPRECATED_WARNINGS</span>;<span class="keyword">QT_MESSAGELOGCONTEXT</span>;<span class="keyword">NPI_SOLUTION_NAME</span>=<span class="stringliteral">&quot;$(_SolName)&quot;</span>;<span class="keyword">NPI_PROJECT_NAME</span>=<span class="stringliteral">&quot;$(MSBuildProjectName)&quot;</span>;%(<span class="keyword">PreprocessorDefinitions</span>)&lt;/<span class="keywordtype">PreprocessorDefinitions</span>&gt;</div>
 <div class="line">      &lt;<span class="keywordtype">AdditionalIncludeDirectories</span> <span class="keyword">Condition</span>=<span class="stringliteral">&quot;&#39;$(SolutionDir)&#39; != &#39;&#39;&quot;</span>&gt;$(<span class="keyword">SolutionDir</span>);%(<span class="keyword">AdditionalIncludeDirectories</span>)&lt;/<span class="keywordtype">AdditionalIncludeDirectories</span>&gt;</div>
 <div class="line">    &lt;/<span class="keywordtype">ClCompile</span>&gt;</div>
 <div class="line">  &lt;/<span class="keywordtype">ItemDefinitionGroup</span>&gt;</div>
