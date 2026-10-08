@@ -1,0 +1,33 @@
+<map id="Main_Proj/ColorPicker.h" name="Main_Proj/ColorPicker.h">
+<area shape="rect" id="Node000001" title="Color selection widget and modal dialog." alt="" coords="452,5,657,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,83,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,31,285,53,95,82,92,82,89,77,94,76,284,47,455,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="107,79,176,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="470,32,339,54,189,82,185,82,183,77,187,76,338,49,475,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="200,79,293,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="502,32,301,81,300,75,507,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="317,79,403,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="526,30,400,79,398,74,521,32"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="427,79,496,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="542,30,484,77,481,72,537,32"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="520,79,589,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="556,29,557,73,552,70,553,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="613,79,723,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="574,28,646,75,640,75,572,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="747,79,848,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="594,28,753,77,748,77,593,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="872,79,981,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="615,28,867,78,862,79,615,34"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1005,79,1115,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="647,28,994,76,1000,80,995,80,993,82,646,34"/>
+<area shape="rect" id="Node000012" href="$dd/dd4/_slot_gate_8hpp.html" title="Provides scoped suppression of reentrant slot handling." alt="" coords="1139,79,1288,105"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="657,27,1127,76,1134,80,1128,79,1126,82,657,32"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1020,153,1097,178"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="1191,104,1092,152,1090,147,1186,105"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1121,153,1199,178"/>
+<area shape="poly" id="edge13_Node000012_Node000014" title=" " alt="" coords="1207,103,1175,149,1172,144,1203,105"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1223,153,1308,178"/>
+<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="1223,102,1255,148,1250,145,1220,107"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1332,153,1409,178"/>
+<area shape="poly" id="edge15_Node000012_Node000016" title=" " alt="" coords="1239,102,1341,150,1336,149,1238,107"/>
+</map>

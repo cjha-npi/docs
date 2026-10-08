@@ -1,0 +1,17 @@
+<map id="npi::wid::ColorPicker::applyWidLayout_" name="npi::wid::ColorPicker::applyWidLayout_">
+<area shape="rect" id="Node000001" title="Updates control visibility and arrangement." alt="" coords="488,176,813,201"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4e1a328e1c85ff8e5392a65386ff330b" title="Applies the presentation settings." alt="" coords="247,37,436,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="615,172,536,136,439,93,405,81,405,75,441,89,539,131,620,172"/>
+<area shape="rect" id="Node000005" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a0ff7216f66a510107818f731ba42ad5a" title="Selects horizontal or vertical input arrangement." alt="" coords="243,103,440,143"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="579,174,438,146,438,141,584,173"/>
+<area shape="rect" id="Node000006" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ad61aa9d48583906134d8b487cecb3724" title="Shows or hides the alpha editor." alt="" coords="247,168,436,209"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="478,189,436,191,436,186,483,188"/>
+<area shape="rect" id="Node000007" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a738b1931d84c7db7e79693f1aca3f0ed" title="Shows or hides channel limits." alt="" coords="247,233,436,274"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="579,203,437,236,435,231,584,202"/>
+<area shape="rect" id="Node000008" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4ca816eeee81f8531881e8efa479366a" title="Shows or hides the color&#45;model selector." alt="" coords="247,299,436,339"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="620,204,539,245,441,288,405,301,404,296,439,283,536,241,615,205"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a32998f970033c28d8450dcb46226afcf" title="Shared constructor for embedded and dialog pickers." alt="" coords="5,5,195,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,45,195,41,194,36,241,43"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a09efdb4c0dbae3d4db74c728f674c25c" title="Applies presentation settings." alt="" coords="5,71,195,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="236,73,196,80,193,76,241,70"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="npi::wid::ColorPicker::setChannelMin_" name="npi::wid::ColorPicker::setChannelMin_">
+<area shape="rect" id="Node000001" title="Sets the channel minimum; optionally signals color change." alt="" coords="5,78,323,104"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a6a6bd9ab0e4081613d080c48d9c77bd2" title="Applies a channel&#39;s settings and current value to its editor." alt="" coords="379,5,568,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,76,373,46,369,48,226,81"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ab7e3fd108de4a5253b779b03d8f7661f" title="Adjusts channel limits to a valid range." alt="" coords="371,71,576,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="322,88,365,91,360,91,323,94"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a33c98248f8c09263aca637adf371626b" title="Updates the color and preview from the editors; optionally signals color change." alt="" coords="379,136,568,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="226,101,374,134,369,136,225,106"/>
+<area shape="rect" id="Node000005" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a684fae671e5e04bbfb393debca35a620" title="Signal for color change." alt="" coords="624,136,813,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="568,154,618,156,613,156,568,159"/>
+</map>

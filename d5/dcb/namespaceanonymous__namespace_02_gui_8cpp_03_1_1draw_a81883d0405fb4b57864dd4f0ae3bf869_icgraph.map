@@ -1,0 +1,8 @@
+<map id="anonymous_namespace{Gui::cpp}::draw::roundedRect" name="anonymous_namespace{Gui::cpp}::draw::roundedRect">
+<area shape="rect" id="Node000001" title="Draws a filled rounded rectangle." alt="" coords="235,60,640,86"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="495,54,499,50,492,45,471,41,437,39,400,41,380,46,376,51,388,61,383,60,371,52,377,42,399,36,437,34,472,35,494,40,504,49,498,59"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="317,61,187,46,187,41,322,58"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws custom backgrounds, frames and indicators." alt="" coords="5,85,187,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="317,88,187,105,186,100,322,86"/>
+</map>

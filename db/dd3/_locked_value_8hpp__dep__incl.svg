@@ -31,7 +31,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d0/da7/_log_8cpp.html" target="_top" xlink:title="Implements the asynchronous application logging system.">
+<g id="a_Node000002"><a xlink:href="../../d0/da7/_log_8cpp.html" target="_top" xlink:title="Implements the application&#39;s logging system.">
 <polygon fill="white" stroke="none" points="124,-19.25 6,-19.25 6,0 124,0 124,-19.25"/>
 <text xml:space="preserve" text-anchor="middle" x="65" y="-4.8" font-family="Consolas" font-size="11.00">Main_Proj/Log.cpp</text>
 </a>

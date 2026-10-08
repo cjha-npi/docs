@@ -23,8 +23,15 @@ var dp_dh_dir_dev_hub =
         [ "Hide xrefitem Text at Source", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source", null ],
         [ "Add Line Gap When Needed", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__line_gap_when_needed", null ],
         [ "Big Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__big_non_heading_text", null ],
-        [ "Medium Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__mid_non_heading_text", null ]
+        [ "Medium Non-Heading Texts", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__mid_non_heading_text", null ],
+        [ "Special Text Section", "d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__special_text_section", null ],
+        [ "Expandable Details Section", "d3/df8/dp_dh_dev_hub_overview.html#autotoc_md8", null ]
       ] ]
+    ] ],
+    [ "Handbook", "d6/d00/dp_dh_handbook.html", [
+      [ "Deployment Check", "d6/d00/dp_dh_handbook.html#dp_dh_handbook__deployment_check", null ],
+      [ "Create ICO Icons Using ImageMagick", "d6/d00/dp_dh_handbook.html#dp_dh_handbook__create_icons_using_image_magick", null ],
+      [ "Create Files with Given Size", "d6/d00/dp_dh_handbook.html#dp_dh_handbook__create_files_with_given_size", null ]
     ] ],
     [ "Setups", "df/d27/dp_dh_dir_setups.html", "df/d27/dp_dh_dir_setups" ],
     [ "Doxygen", "d4/d7c/dp_dh_dir_doxygen.html", "d4/d7c/dp_dh_dir_doxygen" ],

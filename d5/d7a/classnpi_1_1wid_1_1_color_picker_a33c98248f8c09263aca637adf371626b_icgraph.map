@@ -1,0 +1,25 @@
+<map id="npi::wid::ColorPicker::updateColor_" name="npi::wid::ColorPicker::updateColor_">
+<area shape="rect" id="Node000001" title="Updates the color and preview from the editors; optionally signals color change." alt="" coords="520,242,821,268"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ac8f2c42a07ec230698c80ce66ffce7cf" title="Applies configuration and updates the color; optionally signals color change." alt="" coords="263,463,452,503"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="658,272,628,313,585,360,533,409,473,452,445,465,443,460,471,447,529,405,581,356,624,309,653,275"/>
+<area shape="rect" id="Node000005" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4a8bd209c974fa8a3066e7c241ab2ac7" title="Handles user changes to channel values." alt="" coords="243,5,472,46"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="653,236,624,200,582,153,529,104,471,61,445,49,444,43,473,57,533,100,585,149,628,197,658,237"/>
+<area shape="rect" id="Node000006" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a652094b229d7eb4cb85178293cb41204" title="Applies channel settings; optionally signals color change." alt="" coords="263,136,452,177"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="622,240,471,192,429,179,429,174,473,187,627,239"/>
+<area shape="rect" id="Node000007" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ad103a89e11e33517a68fcc60b28c4262" title="Sets the channel maximum; optionally signals color change." alt="" coords="263,201,452,242"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="539,242,452,234,451,229,545,241"/>
+<area shape="rect" id="Node000008" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ad717df1267a58124a58e2b7c6d2e46a4" title="Sets the channel minimum; optionally signals color change." alt="" coords="263,267,452,307"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="534,270,452,280,451,275,539,268"/>
+<area shape="rect" id="Node000009" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a17f0e28bbb07d0efdfeec1858a8b3b93" title="Applies a valid color within current limits; optionally signals color change." alt="" coords="263,332,452,373"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="621,271,473,322,430,335,428,329,471,316,626,269"/>
+<area shape="rect" id="Node000010" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ab882caf42bcff49842812be11e0acfd6" title="Changes the color model; optionally signals color change." alt="" coords="263,397,452,438"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="650,271,574,329,525,360,473,387,439,400,438,395,471,382,522,355,571,325,645,274"/>
+<area shape="rect" id="Node000011" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#afc04567d2ab8f9fe5a47657bdd1ff91c" title="Handles user selection of a color model." alt="" coords="251,71,464,111"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="645,238,571,185,522,154,471,127,439,114,438,109,473,122,525,149,574,180,651,238"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a32998f970033c28d8450dcb46226afcf" title="Shared constructor for embedded and dialog pickers." alt="" coords="5,71,195,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,459,241,452,205,412,175,366,152,318,134,268,111,177,103,114,104,108,116,176,139,266,157,315,180,364,209,409,244,448,259,460"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a877a601dd81bd63de54c4127aebafa49" title="Normalizes and applies configuration; optionally signals color change." alt="" coords="5,463,195,503"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="252,483,195,486,194,480,258,483"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="267,50,182,73,179,68,271,46"/>
+<area shape="poly" id="edge12_Node000011_Node000003" title=" " alt="" coords="241,93,196,93,193,89,245,89"/>
+</map>

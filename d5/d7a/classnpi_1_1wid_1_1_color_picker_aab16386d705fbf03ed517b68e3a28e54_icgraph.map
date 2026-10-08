@@ -1,0 +1,14 @@
+<map id="npi::wid::ColorPicker::applySpecValue_" name="npi::wid::ColorPicker::applySpecValue_">
+<area shape="rect" id="Node000001" title="Configures the editors for the selected color model." alt="" coords="504,78,829,104"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ac8f2c42a07ec230698c80ce66ffce7cf" title="Applies configuration and updates the color; optionally signals color change." alt="" coords="255,5,444,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="593,77,444,48,444,42,599,76"/>
+<area shape="rect" id="Node000005" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ab882caf42bcff49842812be11e0acfd6" title="Changes the color model; optionally signals color change." alt="" coords="255,71,444,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="493,91,444,94,444,88,499,91"/>
+<area shape="rect" id="Node000006" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#afc04567d2ab8f9fe5a47657bdd1ff91c" title="Handles user selection of a color model." alt="" coords="243,136,456,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="598,105,449,139,448,133,593,106"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a32998f970033c28d8450dcb46226afcf" title="Shared constructor for embedded and dialog pickers." alt="" coords="5,103,195,143"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="270,49,244,61,143,105,141,101,242,57,275,47"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a877a601dd81bd63de54c4127aebafa49" title="Normalizes and applies configuration; optionally signals color change." alt="" coords="5,5,195,46"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="244,27,195,28,194,23,249,25"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="232,141,195,138,195,133,237,141"/>
+</map>

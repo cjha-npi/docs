@@ -679,7 +679,7 @@
 <!-- Node23 -->
 <g id="Node000023" class="node">
 <title>Node23</title>
-<g id="a_Node000023"><a xlink:href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a00a4b756fe1aad5c9ea2f9b064d55f92" target="_top" xlink:title="Appends a local timestamp with millisecond precision and timezone text.">
+<g id="a_Node000023"><a xlink:href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a00a4b756fe1aad5c9ea2f9b064d55f92" target="_top" xlink:title="Appends a local timestamp with millisecond precision.">
 <polygon fill="white" stroke="none" points="1296,-2535.75 1160,-2535.75 1160,-2494 1296,-2494 1296,-2535.75"/>
 <text xml:space="preserve" text-anchor="start" x="1168" y="-2521.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1168" y="-2510.05" font-family="Consolas" font-size="11.00">{Log::cpp}::format::</text>
@@ -1717,7 +1717,7 @@
 <!-- Node56 -->
 <g id="Node000056" class="node">
 <title>Node56</title>
-<g id="a_Node000056"><a xlink:href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" target="_top" xlink:title="Writes a complete byte range to the current important&#45;log pipe.">
+<g id="a_Node000056"><a xlink:href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" target="_top" xlink:title="Writes data to the important&#45;log pipe.">
 <polygon fill="white" stroke="none" points="1296,-2113.75 1160,-2113.75 1160,-2072 1296,-2072 1296,-2113.75"/>
 <text xml:space="preserve" text-anchor="start" x="1168" y="-2099.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="1168" y="-2088.05" font-family="Consolas" font-size="11.00">{Log::cpp}::bridge::</text>

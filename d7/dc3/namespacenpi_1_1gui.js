@@ -10,9 +10,8 @@ var namespacenpi_1_1gui =
     [ "isDarkBackground", "d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4", null ],
     [ "palette", "d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55", null ],
     [ "palette", "d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47", null ],
-    [ "setTheme", "d7/dc3/namespacenpi_1_1gui.html#ad60fe158d1b485a98f71cf850c1de037", null ],
+    [ "setTheme", "d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051", null ],
     [ "surfaces", "d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a", null ],
     [ "surfaces", "d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc", null ],
-    [ "textColor", "d7/dc3/namespacenpi_1_1gui.html#a50c3e660741cb632b1be20d557698e68", null ],
     [ "theme", "d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea", null ]
 ];

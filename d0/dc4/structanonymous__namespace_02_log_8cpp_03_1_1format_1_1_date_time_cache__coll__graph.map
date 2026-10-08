@@ -1,5 +1,5 @@
 <map id="anonymous_namespace{Log.cpp}::format::DateTimeCache" name="anonymous_namespace{Log.cpp}::format::DateTimeCache">
-<area shape="rect" id="Node000001" title="Caches the formatted local date and timezone for repeated timestamps." alt="" coords="5,101,435,127"/>
+<area shape="rect" id="Node000001" title="Caches the formatted local date and time for repeated timestamps." alt="" coords="5,101,435,127"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="108,5,161,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,36,153,57,167,75,199,101,194,101,163,79,149,59,141,41"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="185,5,255,31"/>

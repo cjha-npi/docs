@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Calculates standardized widget and icon dimensions for a font.">
+<g id="a_Node000001"><a xlink:title="Calculates control and icon sizes from the font size and height limits.">
 <polygon fill="#999999" stroke="none" points="304,-30.5 0,-30.5 0,-11.25 304,-11.25 304,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-17.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::size::dataForFont</text>
 </a>
@@ -29,7 +29,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" target="_top" xlink:title="Returns the gap between an icon and the inner edge of its control.">
+<g id="a_Node000002"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" target="_top" xlink:title="Returns the icon&#39;s edge spacing for the control height.">
 <polygon fill="white" stroke="none" points="512,-41.75 340,-41.75 340,0 512,0 512,-41.75"/>
 <text xml:space="preserve" text-anchor="start" x="348" y="-27.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="348" y="-16.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::size::iconEdge</text>

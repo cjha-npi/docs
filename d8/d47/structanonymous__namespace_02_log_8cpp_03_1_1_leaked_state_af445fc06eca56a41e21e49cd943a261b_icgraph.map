@@ -1,33 +1,33 @@
 <map id="anonymous_namespace{Log::cpp}::LeakedState::GenAllFieldsText_" name="anonymous_namespace{Log::cpp}::LeakedState::GenAllFieldsText_">
-<area shape="rect" id="Node000001" title="Generates the space&#45;separated list of every supported output field." alt="" coords="560,327,1069,352"/>
-<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title="Private constructor so that only one instance of this class can be created using the static Inst_() f..." alt="" coords="307,312,512,367"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="549,340,513,342,511,337,554,339"/>
-<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#ac0dd546fc6a4f2a6452da15ee952369d" title="Adds the custom Qt logging category filter rule." alt="" coords="29,5,235,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="398,303,382,246,355,175,336,139,314,104,287,72,257,44,235,31,233,26,260,40,291,68,318,101,341,136,360,173,387,245,404,304"/>
-<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="25,55,239,80"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="395,304,376,256,347,198,308,141,284,116,257,94,238,83,237,78,260,89,287,112,312,138,352,196,381,254,400,305"/>
-<area shape="rect" id="Node000005" href="$d5/ddd/namespacenpi_1_1log.html#ae641f0801f76d9024013c1d201b7d4fa" title="Restores the default displayed log fields." alt="" coords="9,104,255,130"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="389,305,368,267,339,222,302,179,257,143,236,132,234,127,260,139,305,175,343,219,373,264,395,305"/>
-<area shape="rect" id="Node000006" href="$d5/ddd/namespacenpi_1_1log.html#a015e6cf2735c059ebad3d94c4f69d884" title="Restores the default normal log file fields." alt="" coords="21,153,243,179"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="381,306,329,247,295,217,257,193,232,181,230,176,260,188,298,213,333,244,387,305"/>
-<area shape="rect" id="Node000007" href="$d5/ddd/namespacenpi_1_1log.html#a4a5b29dcb269f47a4ef69ee7fe39bfb6" title="Removes all custom category filter rules." alt="" coords="17,203,247,228"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="366,307,317,273,258,242,225,231,223,226,260,237,320,269,372,306"/>
-<area shape="rect" id="Node000008" href="$d5/ddd/namespacenpi_1_1log.html#af093553629bec17031b18b4835c2fbb2" title="Enables or disables console colors based on log level." alt="" coords="13,252,251,278"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="322,310,258,291,210,280,208,275,259,286,327,308"/>
-<area shape="rect" id="Node000009" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="33,301,231,327"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="296,331,231,326,230,321,301,328"/>
-<area shape="rect" id="Node000010" href="$d5/ddd/namespacenpi_1_1log.html#a1c8be170c09e71630d3e61964c5681dc" title="Changes the fields included in displayed logs." alt="" coords="17,351,247,376"/>
-<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="297,350,247,356,245,351,301,348"/>
-<area shape="rect" id="Node000011" href="$d5/ddd/namespacenpi_1_1log.html#a314e1bbd60d0d23d037fdb863ad706fd" title="Changes the fields included in normal log files." alt="" coords="29,400,235,426"/>
-<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="321,371,259,391,210,402,207,398,258,386,325,368"/>
-<area shape="rect" id="Node000012" href="$d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc" title="Changes the custom Qt logging category filter rules." alt="" coords="25,449,239,475"/>
-<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="366,374,319,410,260,441,225,452,222,447,258,436,316,405,370,370"/>
-<area shape="rect" id="Node000013" href="$d5/ddd/namespacenpi_1_1log.html#a7cef00f1da1eed6bc0afca56fe9cfb0e" title="Enables or disables debug log display." alt="" coords="21,499,243,524"/>
-<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="386,371,333,435,298,465,260,490,232,501,230,496,257,485,295,461,329,431,382,375"/>
-<area shape="rect" id="Node000014" href="$d5/ddd/namespacenpi_1_1log.html#a462603ec8bccd8b4cb3abc387fd6cc33" title="Enables or disables information log display." alt="" coords="25,548,239,574"/>
-<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="394,372,373,414,343,459,305,503,260,539,236,551,234,546,257,535,301,499,339,456,368,412,390,376"/>
-<area shape="rect" id="Node000015" href="$d5/ddd/namespacenpi_1_1log.html#aa8f2d23ad1c757d005b28864d17b6ba7" title="Enables or disables warning log display." alt="" coords="25,597,239,623"/>
-<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="399,373,381,424,351,482,312,540,287,566,260,588,239,600,236,595,257,584,284,562,307,537,347,480,376,422,395,377"/>
-<area shape="rect" id="Node000016" href="$d5/ddd/namespacenpi_1_1log.html#a780d5155d9059b348224270ef35f1af1" title="Enables or disables important&#45;log forwarding for warning logs." alt="" coords="5,647,259,688"/>
-<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="402,373,386,434,358,504,317,576,290,609,260,638,241,650,239,645,257,633,287,605,312,573,353,502,381,432,399,377"/>
+<area shape="rect" id="Node000001" title="Generates the space&#45;separated list of every supported output field." alt="" coords="821,301,1331,327"/>
+<area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a7a843782348b647c13a98ef04223d7b2" title="Private constructor so that only one instance of this class can be created using the static Inst_() f..." alt="" coords="568,286,773,342"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="811,315,774,317,773,312,816,314"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#ac0dd546fc6a4f2a6452da15ee952369d" title="Adds the custom Qt logging category filter rule." alt="" coords="291,5,496,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="658,278,640,226,612,162,572,97,547,69,518,44,496,32,495,27,522,40,551,65,576,94,617,159,645,224,663,279"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#ae641f0801f76d9024013c1d201b7d4fa" title="Restores the default displayed log fields." alt="" coords="271,55,516,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="654,279,634,237,604,185,566,135,543,113,519,94,498,83,497,78,521,89,547,109,570,132,609,182,638,234,659,280"/>
+<area shape="rect" id="Node000005" href="$d5/ddd/namespacenpi_1_1log.html#a015e6cf2735c059ebad3d94c4f69d884" title="Restores the default normal log file fields." alt="" coords="283,104,504,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="647,280,625,248,596,210,560,173,519,143,495,132,494,127,521,139,563,169,600,206,630,245,653,281"/>
+<area shape="rect" id="Node000006" href="$d5/ddd/namespacenpi_1_1log.html#a4a5b29dcb269f47a4ef69ee7fe39bfb6" title="Removes all custom category filter rules." alt="" coords="279,153,508,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="636,281,585,235,553,212,519,193,490,182,489,176,521,188,556,207,588,231,642,281"/>
+<area shape="rect" id="Node000007" href="$d5/ddd/namespacenpi_1_1log.html#af093553629bec17031b18b4835c2fbb2" title="Enables or disables console colors based on log level." alt="" coords="275,203,512,228"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="612,283,568,262,519,242,479,231,478,226,521,237,571,257,618,282"/>
+<area shape="rect" id="Node000008" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="295,252,492,278"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="558,295,466,280,466,275,563,294"/>
+<area shape="rect" id="Node000010" href="$d5/ddd/namespacenpi_1_1log.html#a1c8be170c09e71630d3e61964c5681dc" title="Changes the fields included in displayed logs." alt="" coords="279,301,508,327"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="558,315,508,317,507,312,563,313"/>
+<area shape="rect" id="Node000011" href="$d5/ddd/namespacenpi_1_1log.html#a314e1bbd60d0d23d037fdb863ad706fd" title="Changes the fields included in normal log files." alt="" coords="291,351,496,376"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="558,335,467,353,465,348,563,333"/>
+<area shape="rect" id="Node000012" href="$d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc" title="Changes the custom Qt logging category filter rules." alt="" coords="287,400,500,426"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="618,345,571,371,521,391,480,403,478,398,519,386,568,366,613,347"/>
+<area shape="rect" id="Node000013" href="$d5/ddd/namespacenpi_1_1log.html#a7cef00f1da1eed6bc0afca56fe9cfb0e" title="Enables or disables debug log display." alt="" coords="283,449,504,475"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="641,346,588,397,556,421,521,441,490,452,488,447,519,436,553,416,585,393,637,349"/>
+<area shape="rect" id="Node000014" href="$d5/ddd/namespacenpi_1_1log.html#a462603ec8bccd8b4cb3abc387fd6cc33" title="Enables or disables information log display." alt="" coords="287,499,500,524"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="652,346,630,384,600,422,563,459,521,490,496,501,494,496,519,485,560,455,596,418,625,381,648,350"/>
+<area shape="rect" id="Node000015" href="$d5/ddd/namespacenpi_1_1log.html#aa8f2d23ad1c757d005b28864d17b6ba7" title="Enables or disables warning log display." alt="" coords="287,548,500,574"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="658,347,638,394,609,446,570,497,547,520,521,539,499,551,497,546,519,535,543,516,566,493,604,443,634,392,654,351"/>
+<area shape="rect" id="Node000016" href="$d5/ddd/namespacenpi_1_1log.html#a780d5155d9059b348224270ef35f1af1" title="Enables or disables important&#45;log forwarding for warning logs." alt="" coords="267,598,520,638"/>
+<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="662,348,644,404,616,468,575,533,550,563,522,588,502,600,500,595,518,584,546,559,571,530,611,465,639,402,658,351"/>
+<area shape="rect" id="Node000009" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="5,252,219,278"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="285,266,220,267,218,262,289,263"/>
 </map>

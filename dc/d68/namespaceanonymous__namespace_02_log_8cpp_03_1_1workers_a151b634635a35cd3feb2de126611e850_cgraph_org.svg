@@ -274,7 +274,7 @@
 <!-- Node11 -->
 <g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_Node000011"><a xlink:href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a00a4b756fe1aad5c9ea2f9b064d55f92" target="_top" xlink:title="Appends a local timestamp with millisecond precision and timezone text.">
+<g id="a_Node000011"><a xlink:href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a00a4b756fe1aad5c9ea2f9b064d55f92" target="_top" xlink:title="Appends a local timestamp with millisecond precision.">
 <polygon fill="white" stroke="none" points="708,-1142.75 572,-1142.75 572,-1101 708,-1101 708,-1142.75"/>
 <text xml:space="preserve" text-anchor="start" x="580" y="-1128.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="580" y="-1117.05" font-family="Consolas" font-size="11.00">{Log::cpp}::format::</text>

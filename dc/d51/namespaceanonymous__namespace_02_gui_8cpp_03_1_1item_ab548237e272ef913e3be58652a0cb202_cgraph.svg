@@ -58,7 +58,7 @@ var sectionId = 'dynsection-4';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Applies item&#45;view configuration to one widget.">
+<g id="a_Node000001"><a xlink:title="Applies item&#45;view background and sizing settings to a widget.">
 <polygon fill="#999999" stroke="none" points="316,-24.88 0,-24.88 0,-5.62 316,-5.62 316,-24.88"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-11.43" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::item::applyViewItem</text>
 </a>
@@ -76,7 +76,7 @@ var sectionId = 'dynsection-4';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8b3d5790edb95817ba0c80fc7e3df28e" target="_top" xlink:title="Configures a widget so its Base role does not obscure the underlying background.">
+<g id="a_Node000002"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8b3d5790edb95817ba0c80fc7e3df28e" target="_top" xlink:title="Makes the widget&#39;s background transparent.">
 <polygon fill="white" stroke="none" points="584,-30.5 352,-30.5 352,0 584,0 584,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="360" y="-16.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="468" y="-4.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::item::setTransparentBase</text>

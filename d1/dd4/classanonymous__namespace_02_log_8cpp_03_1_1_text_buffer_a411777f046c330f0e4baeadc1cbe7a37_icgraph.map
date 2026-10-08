@@ -1,18 +1,26 @@
 <map id="anonymous_namespace{Log::cpp}::TextBuffer::appendDec_" name="anonymous_namespace{Log::cpp}::TextBuffer::appendDec_">
-<area shape="rect" id="Node000001" title="Appends an unsigned decimal value." alt="" coords="829,140,1275,166"/>
-<area shape="rect" id="Node000002" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a37079754f4a9ab17ea9b87bcba12f9a7" title="Handles an invalid Microsoft CRT parameter as an unrecoverable failure." alt="" coords="528,29,757,85"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="986,139,757,87,757,81,991,138"/>
-<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="231,190,452,231"/>
-<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="950,167,782,188,608,200,452,209,452,203,608,195,781,183,944,167"/>
-<area shape="rect" id="Node000006" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ab9aade053d28c916bf856e1876e60778" title="Formats a supported C signal and terminates through the crash path." alt="" coords="504,133,781,174"/>
-<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="819,153,781,156,781,151,824,153"/>
-<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="696,21,691,17,681,12,643,8,616,10,598,15,590,21,589,31,585,28,585,19,595,10,615,5,643,3,683,7,695,13,701,22"/>
-<area shape="rect" id="Node000003" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="227,111,456,166"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="529,88,445,113,444,108,534,86"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="385,102,381,98,373,94,341,89,319,91,305,96,298,103,298,112,293,109,293,101,302,92,318,86,341,84,375,89,385,94,390,103"/>
-<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,154,179,195"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="216,157,179,165,178,159,221,155"/>
-<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="220,194,178,190,178,184,226,193"/>
-<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="494,146,456,147,456,141,499,146"/>
-<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="697,125,694,121,685,116,643,111,613,114,595,119,589,125,593,134,588,132,584,124,592,114,612,108,643,106,687,111,698,118,701,128"/>
+<area shape="rect" id="Node000001" title="Appends an unsigned decimal value." alt="" coords="853,174,1299,199"/>
+<area shape="rect" id="Node000002" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#a37079754f4a9ab17ea9b87bcba12f9a7" title="Handles an invalid Microsoft CRT parameter as an unrecoverable failure." alt="" coords="552,29,781,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1028,171,805,100,765,88,765,82,806,95,1033,171"/>
+<area shape="rect" id="Node000005" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="556,198,777,239"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="901,200,777,213,777,207,906,200"/>
+<area shape="rect" id="Node000007" href="$df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#ac20ee2bdc8dc34582c2679a82f5c8e45" title="Queues enabling or disabling message&#45;handler timing." alt="" coords="564,287,769,342"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="1029,201,757,289,756,284,1024,202"/>
+<area shape="rect" id="Node000009" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#ab9aade053d28c916bf856e1876e60778" title="Formats a supported C signal and terminates through the crash path." alt="" coords="528,133,805,174"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="908,173,805,167,805,162,913,173"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="722,21,717,17,707,12,667,8,638,10,620,15,612,21,611,31,607,28,607,19,618,10,637,5,667,3,708,7,721,13,727,22"/>
+<area shape="rect" id="Node000003" href="$d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html#adc07d589655d02a16cf3567703c87cb5" title="Installs Windows, C++, CRT, and signal&#45;level crash handlers." alt="" coords="239,48,468,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="542,65,468,72,467,66,547,64"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="399,40,395,36,386,31,353,27,330,29,315,34,308,40,308,49,303,47,303,38,312,29,329,23,353,21,388,26,399,32,404,40"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,89,179,130"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="229,93,180,101,177,96,233,90"/>
+<area shape="poly" id="edge9_Node000005_Node000004" title=" " alt="" coords="564,196,527,188,479,169,401,151,320,137,179,119,178,114,321,132,402,146,481,164,529,183,569,196"/>
+<area shape="rect" id="Node000006" href="$df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#acb14cb2b0d9b4692da78884e59e6b160" title="Processes a log message and records the handler&#39;s execution time." alt="" coords="239,203,468,258"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="545,223,468,229,467,223,551,223"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="399,194,395,190,386,186,353,181,330,183,315,188,308,195,308,204,303,201,303,193,312,184,329,178,353,176,388,181,399,186,404,195"/>
+<area shape="poly" id="edge11_Node000007_Node000007" title=" " alt="" coords="722,278,717,274,707,270,667,265,638,267,620,272,612,279,611,289,607,285,607,276,618,268,637,262,667,260,708,265,721,270,727,280"/>
+<area shape="rect" id="Node000008" href="$d5/ddd/namespacenpi_1_1log.html#ab98041e32af3097ca78301b8fdb0a9d4" title="Enables or disables message&#45;handler timing for testing." alt="" coords="227,294,480,335"/>
+<area shape="poly" id="edge12_Node000007_Node000008" title=" " alt="" coords="553,315,480,317,480,312,558,314"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="573,131,466,106,466,101,579,130"/>
+<area shape="poly" id="edge15_Node000009_Node000009" title=" " alt="" coords="723,125,720,121,711,116,667,111,636,114,617,119,611,125,615,134,610,132,605,124,614,114,635,108,667,106,712,111,724,118,728,127"/>
 </map>

@@ -138,31 +138,34 @@ $(function(){initNavTree('d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
-<div class="textblock"><p>Drawing helpers used by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>. </p>
-<p>Helpers may modify the painter's pen, brush, render hints or clipping state. Callers must preserve the painter state when it is needed afterward. </p>
+<div class="textblock"><p>Drawing helpers; callers should preserve the painter state when needed. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8bbe95a2f1005905e2f37e98cc30e28e" id="r_a8bbe95a2f1005905e2f37e98cc30e28e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText</a> (QPainter *painter, QRect rect, int flags, const QString &amp;text)</td></tr>
-<tr class="memdesc:a8bbe95a2f1005905e2f37e98cc30e28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text with the requested alignment and font-specific positioning.  <br /></td></tr>
-<tr class="memitem:ae5603f3ba33adb7a05f7f1816bd7a0f7" id="r_ae5603f3ba33adb7a05f7f1816bd7a0f7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae5603f3ba33adb7a05f7f1816bd7a0f7">baseRoundedRect</a> (const QColor &amp;color, const QStyleOption *option, QPainter *painter)</td></tr>
-<tr class="memdesc:ae5603f3ba33adb7a05f7f1816bd7a0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the option rectangle with the specified color and rounded corners.  <br /></td></tr>
+<tr class="memdesc:a8bbe95a2f1005905e2f37e98cc30e28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text with a small alignment adjustment for JetBrains Mono.  <br /></td></tr>
 <tr class="memitem:a21c4a9497b5a0d6b377ca8bcdf803fbf" id="r_a21c4a9497b5a0d6b377ca8bcdf803fbf"><td class="memItemLeft">QPixmap&#160;</td><td class="memItemRight"><a class="el" href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">coloredPixmap</a> (QPixmap pixmap, const QColor &amp;color)</td></tr>
-<tr class="memdesc:a21c4a9497b5a0d6b377ca8bcdf803fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recolors a pixmap using its alpha channel as a mask.  <br /></td></tr>
-<tr class="memitem:a7df9080cfeacd6612037190095cc8218" id="r_a7df9080cfeacd6612037190095cc8218"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7df9080cfeacd6612037190095cc8218">completerItem</a> (const QStyle *baseStyle, const QStyleOptionViewItem *option, QPainter *painter, const QWidget *widget)</td></tr>
-<tr class="memdesc:a7df9080cfeacd6612037190095cc8218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws completion-popup items with emphasis on the untyped suffix.  <br /></td></tr>
-<tr class="memitem:a12037930720aefc2c0753719a78c11e2" id="r_a12037930720aefc2c0753719a78c11e2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a12037930720aefc2c0753719a78c11e2">focusLine</a> (const QRect &amp;rect, const QPen &amp;pen, QPainter *painter, int adjustGap=0)</td></tr>
-<tr class="memdesc:a12037930720aefc2c0753719a78c11e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a focus indicator along the bottom of a rectangle.  <br /></td></tr>
-<tr class="memitem:a17874e85ad6e53b438db9754d89fd2cc" id="r_a17874e85ad6e53b438db9754d89fd2cc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a17874e85ad6e53b438db9754d89fd2cc">itemPressedButton</a> (const QPen &amp;pen, const QStyleOption *option, QPainter *painter)</td></tr>
-<tr class="memdesc:a17874e85ad6e53b438db9754d89fd2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the square pressed-state border for a button inside an item view.  <br /></td></tr>
+<tr class="memdesc:a21c4a9497b5a0d6b377ca8bcdf803fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recolors a pixmap while preserving its shape and transparency.  <br /></td></tr>
+<tr class="memitem:a15fd08e1989a0801a0d1272ec6bc1784" id="r_a15fd08e1989a0801a0d1272ec6bc1784"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a15fd08e1989a0801a0d1272ec6bc1784">completerItem</a> (QPainter *painter, const QStyleOptionViewItem *option, const QWidget *widget, const QStyle *baseStyle)</td></tr>
+<tr class="memdesc:a15fd08e1989a0801a0d1272ec6bc1784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a completion item with emphasis on untyped text; returns false if not handled.  <br /></td></tr>
+<tr class="memitem:a401c25f40419cae02ca301ba94ec1fd2" id="r_a401c25f40419cae02ca301ba94ec1fd2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a401c25f40419cae02ca301ba94ec1fd2">focusLine</a> (QPainter *painter, const QRect &amp;rect, const QPen &amp;pen)</td></tr>
+<tr class="memdesc:a401c25f40419cae02ca301ba94ec1fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a focus line along the bottom of a control.  <br /></td></tr>
+<tr class="memitem:af2773c648af05b5b821c4f5c5d636d99" id="r_af2773c648af05b5b821c4f5c5d636d99"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af2773c648af05b5b821c4f5c5d636d99">itemPressedButton</a> (QPainter *painter, const QStyleOption *option, const <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">ThemeData</a> &amp;themeData)</td></tr>
+<tr class="memdesc:af2773c648af05b5b821c4f5c5d636d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a pressed-button outline inside an item view.  <br /></td></tr>
 <tr class="memitem:acbfcb721bc6f25afe2f86f5b7c540da8" id="r_acbfcb721bc6f25afe2f86f5b7c540da8"><td class="memItemLeft">QIcon&#160;</td><td class="memItemRight"><a class="el" href="#acbfcb721bc6f25afe2f86f5b7c540da8">menuIcon</a> (const QIcon &amp;source, const QPalette &amp;palette, int <a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, qreal dpr)</td></tr>
-<tr class="memdesc:acbfcb721bc6f25afe2f86f5b7c540da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a monochrome menu icon using the palette's text colors.  <br /></td></tr>
-<tr class="memitem:a28022be21bc0970e5e85764652cdcb2c" id="r_a28022be21bc0970e5e85764652cdcb2c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a28022be21bc0970e5e85764652cdcb2c">pressedButtonRoundedRect</a> (const QStyleOption *option, QPainter *painter)</td></tr>
-<tr class="memdesc:a28022be21bc0970e5e85764652cdcb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the inset background used for a pressed button.  <br /></td></tr>
-<tr class="memitem:afcab152974cfc9cdc2bc2fb1f0e01610" id="r_afcab152974cfc9cdc2bc2fb1f0e01610"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afcab152974cfc9cdc2bc2fb1f0e01610">tableHorHeaderText</a> (const QStyleOptionHeader *opt, QPainter *painter, const QString &amp;text, const QRect &amp;viewRect, const QRect &amp;textRect)</td></tr>
-<tr class="memdesc:afcab152974cfc9cdc2bc2fb1f0e01610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text for one level of a multi-level horizontal table header.  <br /></td></tr>
-<tr class="memitem:ae3071b51484ebb8e5e9d6e5101568268" id="r_ae3071b51484ebb8e5e9d6e5101568268"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae3071b51484ebb8e5e9d6e5101568268">tableVerHeaderText</a> (const QStyleOptionHeader *opt, QPainter *painter, const QString &amp;text, const QRect &amp;viewRect, const QRect &amp;textRect)</td></tr>
-<tr class="memdesc:ae3071b51484ebb8e5e9d6e5101568268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text for one level of a multi-level vertical table header.  <br /></td></tr>
+<tr class="memdesc:acbfcb721bc6f25afe2f86f5b7c540da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recolors a menu icon using normal and disabled text colors.  <br /></td></tr>
+<tr class="memitem:aa3733033d741507567f612e133cc3214" id="r_aa3733033d741507567f612e133cc3214"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa3733033d741507567f612e133cc3214">pressedButtonInnerRoundedRect</a> (QPainter *painter, const QStyleOption *option)</td></tr>
+<tr class="memdesc:aa3733033d741507567f612e133cc3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the inset background of a pressed button.  <br /></td></tr>
+<tr class="memitem:a81883d0405fb4b57864dd4f0ae3bf869" id="r_a81883d0405fb4b57864dd4f0ae3bf869"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a81883d0405fb4b57864dd4f0ae3bf869">roundedRect</a> (QPainter *painter, const QRect &amp;rect, const QColor &amp;color, qreal radius)</td></tr>
+<tr class="memdesc:a81883d0405fb4b57864dd4f0ae3bf869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a filled rounded rectangle.  <br /></td></tr>
+<tr class="memitem:aaf774eb9e2875279c81810cd17d99b0b" id="r_aaf774eb9e2875279c81810cd17d99b0b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaf774eb9e2875279c81810cd17d99b0b">sepBorders</a> (QPainter *painter, const QStyleOption *option, const QWidget *widget, const QPen &amp;pen)</td></tr>
+<tr class="memdesc:aaf774eb9e2875279c81810cd17d99b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the separator borders requested by the widget.  <br /></td></tr>
+<tr class="memitem:ad309595fa81bb04aa0b3d7e4fb159164" id="r_ad309595fa81bb04aa0b3d7e4fb159164"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad309595fa81bb04aa0b3d7e4fb159164">tableHorHeaderText</a> (QPainter *painter, const QStyleOptionHeader *option, const QString &amp;text, const QRect &amp;viewRect, const QRect &amp;textRect)</td></tr>
+<tr class="memdesc:ad309595fa81bb04aa0b3d7e4fb159164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws horizontal header text, keeping it visible while scrolling.  <br /></td></tr>
+<tr class="memitem:a63bfb93ee8b1cae3c1ee4b499ea634bd" id="r_a63bfb93ee8b1cae3c1ee4b499ea634bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a63bfb93ee8b1cae3c1ee4b499ea634bd">tableVerHeaderText</a> (QPainter *painter, const QStyleOptionHeader *option, const QString &amp;text, const QRect &amp;viewRect, const QRect &amp;textRect)</td></tr>
+<tr class="memdesc:a63bfb93ee8b1cae3c1ee4b499ea634bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws vertical header text, keeping it visible while scrolling.  <br /></td></tr>
+<tr class="memitem:a2178e6384b38b4c1a1cd2f6e614cfc6f" id="r_a2178e6384b38b4c1a1cd2f6e614cfc6f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2178e6384b38b4c1a1cd2f6e614cfc6f">textEditBase</a> (QPainter *painter, const QStyleOption *option, const <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">ThemeData</a> &amp;themeData, bool darkBg)</td></tr>
+<tr class="memdesc:a2178e6384b38b4c1a1cd2f6e614cfc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the background for a text-entry control.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a8bbe95a2f1005905e2f37e98cc30e28e" name="a8bbe95a2f1005905e2f37e98cc30e28e"></a>
@@ -194,20 +197,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draws text with the requested alignment and font-specific positioning. </p>
-<p>Text drawn with JetBrains Mono is shifted down by one pixel to compensate for its visual vertical alignment. </p><dl class="section note"><dt>Note</dt><dd>Uses the painter's current font and pen without applying palette-based enabled/disabled text handling. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Uses QPainter::drawText function instead of QProxyStyle::drawItemText. </dd></dl>
+<p>Draws text with a small alignment adjustment for JetBrains Mono. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00484">484</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  485</span>    {</div>
-<div class="line"><span class="lineno">  486</span>      <span class="keywordflow">if</span>(painter-&gt;font().families().contains(<span class="stringliteral">&quot;JetBrains Mono&quot;</span>))</div>
-<div class="line"><span class="lineno">  487</span>        rect.translate(0, 1);</div>
-<div class="line"><span class="lineno">  488</span>      painter-&gt;drawText(rect, flags, text);</div>
-<div class="line"><span class="lineno">  489</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00532">532</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  533</span>    {</div>
+<div class="line"><span class="lineno">  534</span>      <span class="keywordflow">if</span>(!painter || !rect.isValid() || text.isEmpty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  535</span>      <span class="keywordflow">if</span>(painter-&gt;font().families().contains(<span class="stringliteral">&quot;JetBrains Mono&quot;</span>))</div>
+<div class="line"><span class="lineno">  536</span>        rect.translate(0, 1);</div>
+<div class="line"><span class="lineno">  537</span>      painter-&gt;drawText(rect, flags, text);</div>
+<div class="line"><span class="lineno">  538</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="#afcab152974cfc9cdc2bc2fb1f0e01610">tableHorHeaderText()</a>, and <a class="el" href="#ae3071b51484ebb8e5e9d6e5101568268">tableVerHeaderText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="#ad309595fa81bb04aa0b3d7e4fb159164">tableHorHeaderText()</a>, and <a class="el" href="#a63bfb93ee8b1cae3c1ee4b499ea634bd">tableVerHeaderText()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -217,59 +219,6 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a8bbe95a2f1005905e2f37e98cc30e28e_icgraph.svg" width="100%" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="ae5603f3ba33adb7a05f7f1816bd7a0f7" name="ae5603f3ba33adb7a05f7f1816bd7a0f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5603f3ba33adb7a05f7f1816bd7a0f7">&#9670;&#160;</a></span>baseRoundedRect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void anonymous_namespace{Gui.cpp}::draw::baseRoundedRect </td>
-          <td>(</td>
-          <td class="paramtype">const QColor &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QStyleOption *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Fills the option rectangle with the specified color and rounded corners. </p>
-<dl class="section note"><dt>Note</dt><dd>Does nothing if the color is invalid or either pointer is null. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00443">443</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  444</span>    {</div>
-<div class="line"><span class="lineno">  445</span>      <span class="keywordflow">if</span>(!color.isValid() || !option || !painter) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  446</span>      painter-&gt;setPen(Qt::NoPen);</div>
-<div class="line"><span class="lineno">  447</span>      painter-&gt;setBrush(color);</div>
-<div class="line"><span class="lineno">  448</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  449</span>      painter-&gt;drawRoundedRect(option-&gt;rect, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a>);</div>
-<div class="line"><span class="lineno">  450</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_aff5afbe0a76b10e27360d733d02d24d4"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">anonymous_namespace{Gui.cpp}::outerRadius</a></div><div class="ttdeci">constexpr qreal outerRadius</div><div class="ttdoc">Corner radius of rounded control backgrounds.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00181">Gui.cpp:181</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="#ae5603f3ba33adb7a05f7f1816bd7a0f7">baseRoundedRect()</a>, and <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">anonymous_namespace{Gui.cpp}::outerRadius</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="#ae5603f3ba33adb7a05f7f1816bd7a0f7">baseRoundedRect()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0">anonymous_namespace{Gui.cpp}::GuiStyle::drawComplexControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_ae5603f3ba33adb7a05f7f1816bd7a0f7_cgraph.svg" width="448" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_ae5603f3ba33adb7a05f7f1816bd7a0f7_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -293,17 +242,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Recolors a pixmap using its alpha channel as a mask. </p>
-<p>Preserves the silhouette and device pixel ratio without modifying the caller's original pixmap. </p><dl class="section note"><dt>Note</dt><dd>Returns a null pixmap unchanged. </dd></dl>
+<p>Recolors a pixmap while preserving its shape and transparency. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00722">722</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  723</span>    {</div>
-<div class="line"><span class="lineno">  724</span>      <span class="keywordflow">if</span>(pixmap.isNull()) <span class="keywordflow">return</span> pixmap;</div>
-<div class="line"><span class="lineno">  725</span>      QPainter painter{&amp;pixmap};</div>
-<div class="line"><span class="lineno">  726</span>      painter.setCompositionMode(QPainter::CompositionMode_SourceIn);</div>
-<div class="line"><span class="lineno">  727</span>      painter.fillRect(QRectF{QPointF{}, pixmap.deviceIndependentSize()}, color);</div>
-<div class="line"><span class="lineno">  728</span>      <span class="keywordflow">return</span> pixmap;</div>
-<div class="line"><span class="lineno">  729</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00731">731</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  732</span>    {</div>
+<div class="line"><span class="lineno">  733</span>      <span class="keywordflow">if</span>(pixmap.isNull()) <span class="keywordflow">return</span> pixmap;</div>
+<div class="line"><span class="lineno">  734</span>      QPainter painter{&amp;pixmap};</div>
+<div class="line"><span class="lineno">  735</span>      painter.setCompositionMode(QPainter::CompositionMode_SourceIn);</div>
+<div class="line"><span class="lineno">  736</span>      painter.fillRect(QRectF{QPointF{}, pixmap.deviceIndependentSize()}, color);</div>
+<div class="line"><span class="lineno">  737</span>      <span class="keywordflow">return</span> pixmap;</div>
+<div class="line"><span class="lineno">  738</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">coloredPixmap()</a>.</p>
 
@@ -321,8 +269,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a7df9080cfeacd6612037190095cc8218" name="a7df9080cfeacd6612037190095cc8218"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7df9080cfeacd6612037190095cc8218">&#9670;&#160;</a></span>completerItem()</h2>
+<a id="a15fd08e1989a0801a0d1272ec6bc1784" name="a15fd08e1989a0801a0d1272ec6bc1784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15fd08e1989a0801a0d1272ec6bc1784">&#9670;&#160;</a></span>completerItem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -330,7 +278,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool anonymous_namespace{Gui.cpp}::draw::completerItem </td>
           <td>(</td>
-          <td class="paramtype">const QStyle *</td>          <td class="paramname"><span class="paramname"><em>baseStyle</em></span>, </td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -340,190 +288,187 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+          <td class="paramtype">const QWidget *</td>          <td class="paramname"><span class="paramname"><em>widget</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const QWidget *</td>          <td class="paramname"><span class="paramname"><em>widget</em></span>&#160;)</td>
+          <td class="paramtype">const QStyle *</td>          <td class="paramname"><span class="paramname"><em>baseStyle</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draws completion-popup items with emphasis on the untyped suffix. </p>
-<p>Dims a matching prefix unless the item is selected or hovered. When space is limited, preserves the suffix where possible by shortening or omitting the prefix. Items without a visible matching prefix use normal text coloring. </p><dl class="section note"><dt>Note</dt><dd>Recognition assumes the completion model is owned by its QCompleter and the supplied widget is that completer's popup. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the item was drawn; false to allow normal item drawing. </dd></dl>
+<p>Draws a completion item with emphasis on untyped text; returns false if not handled. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00567">567</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  568</span>    {</div>
-<div class="line"><span class="lineno">  569</span>      <span class="keywordflow">if</span>(!option || !widget || !option-&gt;index.isValid())</div>
-<div class="line"><span class="lineno">  570</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  571</span> </div>
-<div class="line"><span class="lineno">  572</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* model = option-&gt;index.model();</div>
-<div class="line"><span class="lineno">  573</span>      <span class="keywordflow">if</span>(!model)</div>
-<div class="line"><span class="lineno">  574</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  575</span> </div>
-<div class="line"><span class="lineno">  576</span>      <span class="keyword">auto</span>* completer = qobject_cast&lt;QCompleter*&gt;(model-&gt;parent());</div>
-<div class="line"><span class="lineno">  577</span>      <span class="keywordflow">if</span>(!completer || completer-&gt;completionModel() != model || completer-&gt;popup() != widget)</div>
-<div class="line"><span class="lineno">  578</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  579</span> </div>
-<div class="line"><span class="lineno">  580</span>      <span class="keyword">const</span> QString prefix = completer-&gt;completionPrefix();</div>
-<div class="line"><span class="lineno">  581</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> hasVisiblePrefix{</div>
-<div class="line"><span class="lineno">  582</span>        !prefix.isEmpty() &amp;&amp;</div>
-<div class="line"><span class="lineno">  583</span>        option-&gt;text.startsWith(prefix, completer-&gt;caseSensitivity())</div>
-<div class="line"><span class="lineno">  584</span>      };</div>
-<div class="line"><span class="lineno">  585</span> </div>
-<div class="line"><span class="lineno">  586</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isEnabled = option-&gt;state &amp; QStyle::State_Enabled;</div>
-<div class="line"><span class="lineno">  587</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isSelected = isEnabled &amp;&amp; (option-&gt;state &amp; QStyle::State_Selected);</div>
-<div class="line"><span class="lineno">  588</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isHovered = isEnabled &amp;&amp; (option-&gt;state &amp; QStyle::State_MouseOver);</div>
-<div class="line"><span class="lineno">  589</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isHighlighted = isSelected || isHovered;</div>
-<div class="line"><span class="lineno">  590</span> </div>
-<div class="line"><span class="lineno">  591</span>      QStyleOptionViewItem opt{*option};</div>
-<div class="line"><span class="lineno">  592</span>      <span class="keywordflow">if</span>(isHovered) {</div>
-<div class="line"><span class="lineno">  593</span>        opt.state |= QStyle::State_Selected;</div>
-<div class="line"><span class="lineno">  594</span>        opt.state |= QStyle::State_HasFocus;</div>
-<div class="line"><span class="lineno">  595</span>      }</div>
-<div class="line"><span class="lineno">  596</span> </div>
-<div class="line"><span class="lineno">  597</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> group : {QPalette::Active, QPalette::Inactive, QPalette::Disabled}) {</div>
-<div class="line"><span class="lineno">  598</span>        opt.palette.setColor(group, QPalette::Text, Qt::transparent);</div>
-<div class="line"><span class="lineno">  599</span>        opt.palette.setColor(group, QPalette::HighlightedText, Qt::transparent);</div>
-<div class="line"><span class="lineno">  600</span> </div>
-<div class="line"><span class="lineno">  601</span>        <span class="comment">// Preserve the Highlight RGB values but make the color transparent.</span></div>
-<div class="line"><span class="lineno">  602</span>        <span class="comment">// Fusion still derives a subtle selection overlay from this color,</span></div>
-<div class="line"><span class="lineno">  603</span>        <span class="comment">// which provides the selected-row indication for the completer.</span></div>
-<div class="line"><span class="lineno">  604</span>        QColor color = opt.palette.color(group, QPalette::Highlight);</div>
-<div class="line"><span class="lineno">  605</span>        color.setAlpha(0);</div>
-<div class="line"><span class="lineno">  606</span>        opt.palette.setColor(group, QPalette::Highlight, color);</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00579">579</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  580</span>    {</div>
+<div class="line"><span class="lineno">  581</span>      <span class="keywordflow">if</span>(!option || !widget || !option-&gt;index.isValid())</div>
+<div class="line"><span class="lineno">  582</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  583</span> </div>
+<div class="line"><span class="lineno">  584</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* model = option-&gt;index.model();</div>
+<div class="line"><span class="lineno">  585</span>      <span class="keywordflow">if</span>(!model)</div>
+<div class="line"><span class="lineno">  586</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  587</span> </div>
+<div class="line"><span class="lineno">  588</span>      <span class="keyword">auto</span>* completer = qobject_cast&lt;QCompleter*&gt;(model-&gt;parent());</div>
+<div class="line"><span class="lineno">  589</span>      <span class="keywordflow">if</span>(!completer || completer-&gt;completionModel() != model || completer-&gt;popup() != widget)</div>
+<div class="line"><span class="lineno">  590</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  591</span> </div>
+<div class="line"><span class="lineno">  592</span>      <span class="keyword">const</span> QString prefix = completer-&gt;completionPrefix();</div>
+<div class="line"><span class="lineno">  593</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> hasVisiblePrefix{</div>
+<div class="line"><span class="lineno">  594</span>        !prefix.isEmpty() &amp;&amp;</div>
+<div class="line"><span class="lineno">  595</span>        option-&gt;text.startsWith(prefix, completer-&gt;caseSensitivity())</div>
+<div class="line"><span class="lineno">  596</span>      };</div>
+<div class="line"><span class="lineno">  597</span> </div>
+<div class="line"><span class="lineno">  598</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isEnabled = option-&gt;state &amp; QStyle::State_Enabled;</div>
+<div class="line"><span class="lineno">  599</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isSelected = isEnabled &amp;&amp; (option-&gt;state &amp; QStyle::State_Selected);</div>
+<div class="line"><span class="lineno">  600</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isHovered = isEnabled &amp;&amp; (option-&gt;state &amp; QStyle::State_MouseOver);</div>
+<div class="line"><span class="lineno">  601</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isHighlighted = isSelected || isHovered;</div>
+<div class="line"><span class="lineno">  602</span> </div>
+<div class="line"><span class="lineno">  603</span>      QStyleOptionViewItem opt{*option};</div>
+<div class="line"><span class="lineno">  604</span>      <span class="keywordflow">if</span>(isHovered) {</div>
+<div class="line"><span class="lineno">  605</span>        opt.state |= QStyle::State_Selected;</div>
+<div class="line"><span class="lineno">  606</span>        opt.state |= QStyle::State_HasFocus;</div>
 <div class="line"><span class="lineno">  607</span>      }</div>
 <div class="line"><span class="lineno">  608</span> </div>
-<div class="line"><span class="lineno">  609</span>      <span class="comment">// Let Qt draw the item except for its text, while retaining Fusion&#39;s</span></div>
-<div class="line"><span class="lineno">  610</span>      <span class="comment">// subtle selected-item overlay.</span></div>
-<div class="line"><span class="lineno">  611</span>      baseStyle-&gt;drawControl(QStyle::CE_ItemViewItem, &amp;opt, painter, widget);</div>
+<div class="line"><span class="lineno">  609</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> group : {QPalette::Active, QPalette::Inactive, QPalette::Disabled}) {</div>
+<div class="line"><span class="lineno">  610</span>        opt.palette.setColor(group, QPalette::Text, Qt::transparent);</div>
+<div class="line"><span class="lineno">  611</span>        opt.palette.setColor(group, QPalette::HighlightedText, Qt::transparent);</div>
 <div class="line"><span class="lineno">  612</span> </div>
-<div class="line"><span class="lineno">  613</span>      <span class="comment">// Draw only our customized text.</span></div>
-<div class="line"><span class="lineno">  614</span>      QRect textRect{widget-&gt;style()-&gt;subElementRect(QStyle::SE_ItemViewItemText, option, widget)};</div>
-<div class="line"><span class="lineno">  615</span>      textRect.adjust(2, 0, 0, 0);</div>
-<div class="line"><span class="lineno">  616</span> </div>
-<div class="line"><span class="lineno">  617</span>      QString displayPrefix{hasVisiblePrefix ? option-&gt;text.left(prefix.size()) : QString{}};</div>
-<div class="line"><span class="lineno">  618</span>      QString displaySuffix{hasVisiblePrefix ? option-&gt;text.mid(prefix.size()) : option-&gt;text};</div>
-<div class="line"><span class="lineno">  619</span> </div>
-<div class="line"><span class="lineno">  620</span>      <span class="keyword">const</span> QFontMetrics metrics{option-&gt;font};</div>
-<div class="line"><span class="lineno">  621</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> availableWidth = textRect.width();</div>
-<div class="line"><span class="lineno">  622</span> </div>
-<div class="line"><span class="lineno">  623</span>      <span class="keywordflow">if</span>(metrics.horizontalAdvance(displayPrefix + displaySuffix) &gt; availableWidth) {</div>
-<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">if</span>(displaySuffix.isEmpty()) {</div>
-<div class="line"><span class="lineno">  625</span>          <span class="comment">// Exact completion: there is no suffix to prioritize.</span></div>
-<div class="line"><span class="lineno">  626</span>          displayPrefix = metrics.elidedText(displayPrefix, Qt::ElideRight, availableWidth);</div>
-<div class="line"><span class="lineno">  627</span>        }</div>
-<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  629</span>          <span class="keyword">const</span> <span class="keywordtype">int</span> suffixWidth = metrics.horizontalAdvance(displaySuffix);</div>
-<div class="line"><span class="lineno">  630</span> </div>
-<div class="line"><span class="lineno">  631</span>          <span class="keywordflow">if</span>(suffixWidth &gt;= availableWidth) {</div>
-<div class="line"><span class="lineno">  632</span>            <span class="comment">// The suffix itself does not fit, so discard the prefix completely.</span></div>
-<div class="line"><span class="lineno">  633</span>            displayPrefix.clear();</div>
-<div class="line"><span class="lineno">  634</span>            displaySuffix = metrics.elidedText(displaySuffix, Qt::ElideRight, availableWidth);</div>
-<div class="line"><span class="lineno">  635</span>          }</div>
-<div class="line"><span class="lineno">  636</span>          <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  637</span>            <span class="comment">// Preserve the complete suffix and use whatever remains for the prefix.</span></div>
-<div class="line"><span class="lineno">  638</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> prefixWidth = availableWidth - suffixWidth;</div>
-<div class="line"><span class="lineno">  639</span>            displayPrefix = metrics.elidedText(displayPrefix, Qt::ElideRight, prefixWidth);</div>
-<div class="line"><span class="lineno">  640</span>          }</div>
-<div class="line"><span class="lineno">  641</span>        }</div>
-<div class="line"><span class="lineno">  642</span>      }</div>
-<div class="line"><span class="lineno">  643</span> </div>
-<div class="line"><span class="lineno">  644</span>      <span class="keyword">const</span> QString text{displayPrefix + displaySuffix};</div>
-<div class="line"><span class="lineno">  645</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> prefixSize = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(displayPrefix.size());</div>
-<div class="line"><span class="lineno">  646</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> textSize = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(text.size());</div>
-<div class="line"><span class="lineno">  647</span> </div>
-<div class="line"><span class="lineno">  648</span>      QPalette::ColorGroup group{isEnabled ? QPalette::Normal : QPalette::Disabled};</div>
-<div class="line"><span class="lineno">  649</span>      <span class="keywordflow">if</span>(group == QPalette::Normal &amp;&amp; !(option-&gt;state &amp; QStyle::State_Active))</div>
-<div class="line"><span class="lineno">  650</span>        group = QPalette::Inactive;</div>
-<div class="line"><span class="lineno">  651</span>      <span class="keyword">const</span> QColor <a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a50c3e660741cb632b1be20d557698e68">textColor</a>{option-&gt;palette.color(group, QPalette::Text)};</div>
-<div class="line"><span class="lineno">  652</span> </div>
-<div class="line"><span class="lineno">  653</span>      QColor prefixColor{<a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a50c3e660741cb632b1be20d557698e68">textColor</a>};</div>
-<div class="line"><span class="lineno">  654</span>      <span class="keywordflow">if</span>(!isHighlighted) prefixColor.setAlpha(128);</div>
+<div class="line"><span class="lineno">  613</span>        <span class="comment">// Preserve the Highlight RGB values but make the color transparent.</span></div>
+<div class="line"><span class="lineno">  614</span>        <span class="comment">// Fusion still derives a subtle selection overlay from this color,</span></div>
+<div class="line"><span class="lineno">  615</span>        <span class="comment">// which provides the selected-row indication for the completer.</span></div>
+<div class="line"><span class="lineno">  616</span>        QColor color = opt.palette.color(group, QPalette::Highlight);</div>
+<div class="line"><span class="lineno">  617</span>        color.setAlpha(0);</div>
+<div class="line"><span class="lineno">  618</span>        opt.palette.setColor(group, QPalette::Highlight, color);</div>
+<div class="line"><span class="lineno">  619</span>      }</div>
+<div class="line"><span class="lineno">  620</span> </div>
+<div class="line"><span class="lineno">  621</span>      <span class="comment">// Let Qt draw the item except for its text, while retaining Fusion&#39;s</span></div>
+<div class="line"><span class="lineno">  622</span>      <span class="comment">// subtle selected-item overlay.</span></div>
+<div class="line"><span class="lineno">  623</span>      baseStyle-&gt;drawControl(QStyle::CE_ItemViewItem, &amp;opt, painter, widget);</div>
+<div class="line"><span class="lineno">  624</span> </div>
+<div class="line"><span class="lineno">  625</span>      <span class="comment">// Draw only our customized text.</span></div>
+<div class="line"><span class="lineno">  626</span>      QRect textRect{widget-&gt;style()-&gt;subElementRect(QStyle::SE_ItemViewItemText, option, widget)};</div>
+<div class="line"><span class="lineno">  627</span>      textRect.adjust(2, 0, 0, 0);</div>
+<div class="line"><span class="lineno">  628</span> </div>
+<div class="line"><span class="lineno">  629</span>      QString displayPrefix{hasVisiblePrefix ? option-&gt;text.left(prefix.size()) : QString{}};</div>
+<div class="line"><span class="lineno">  630</span>      QString displaySuffix{hasVisiblePrefix ? option-&gt;text.mid(prefix.size()) : option-&gt;text};</div>
+<div class="line"><span class="lineno">  631</span> </div>
+<div class="line"><span class="lineno">  632</span>      <span class="keyword">const</span> QFontMetrics metrics{option-&gt;font};</div>
+<div class="line"><span class="lineno">  633</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> availableWidth = textRect.width();</div>
+<div class="line"><span class="lineno">  634</span> </div>
+<div class="line"><span class="lineno">  635</span>      <span class="keywordflow">if</span>(metrics.horizontalAdvance(displayPrefix + displaySuffix) &gt; availableWidth) {</div>
+<div class="line"><span class="lineno">  636</span>        <span class="keywordflow">if</span>(displaySuffix.isEmpty()) {</div>
+<div class="line"><span class="lineno">  637</span>          <span class="comment">// Exact completion: there is no suffix to prioritize.</span></div>
+<div class="line"><span class="lineno">  638</span>          displayPrefix = metrics.elidedText(displayPrefix, Qt::ElideRight, availableWidth);</div>
+<div class="line"><span class="lineno">  639</span>        }</div>
+<div class="line"><span class="lineno">  640</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  641</span>          <span class="keyword">const</span> <span class="keywordtype">int</span> suffixWidth = metrics.horizontalAdvance(displaySuffix);</div>
+<div class="line"><span class="lineno">  642</span> </div>
+<div class="line"><span class="lineno">  643</span>          <span class="keywordflow">if</span>(suffixWidth &gt;= availableWidth) {</div>
+<div class="line"><span class="lineno">  644</span>            <span class="comment">// The suffix itself does not fit, so discard the prefix completely.</span></div>
+<div class="line"><span class="lineno">  645</span>            displayPrefix.clear();</div>
+<div class="line"><span class="lineno">  646</span>            displaySuffix = metrics.elidedText(displaySuffix, Qt::ElideRight, availableWidth);</div>
+<div class="line"><span class="lineno">  647</span>          }</div>
+<div class="line"><span class="lineno">  648</span>          <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  649</span>            <span class="comment">// Preserve the complete suffix and use whatever remains for the prefix.</span></div>
+<div class="line"><span class="lineno">  650</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> prefixWidth = availableWidth - suffixWidth;</div>
+<div class="line"><span class="lineno">  651</span>            displayPrefix = metrics.elidedText(displayPrefix, Qt::ElideRight, prefixWidth);</div>
+<div class="line"><span class="lineno">  652</span>          }</div>
+<div class="line"><span class="lineno">  653</span>        }</div>
+<div class="line"><span class="lineno">  654</span>      }</div>
 <div class="line"><span class="lineno">  655</span> </div>
-<div class="line"><span class="lineno">  656</span>      QTextCharFormat prefixFormat;</div>
-<div class="line"><span class="lineno">  657</span>      prefixFormat.setForeground(prefixColor);</div>
-<div class="line"><span class="lineno">  658</span> </div>
-<div class="line"><span class="lineno">  659</span>      QTextCharFormat normalFormat;</div>
-<div class="line"><span class="lineno">  660</span>      normalFormat.setForeground(textColor);</div>
-<div class="line"><span class="lineno">  661</span> </div>
-<div class="line"><span class="lineno">  662</span>      QList&lt;QTextLayout::FormatRange&gt; formats;</div>
-<div class="line"><span class="lineno">  663</span> </div>
-<div class="line"><span class="lineno">  664</span>      <span class="keywordflow">if</span>(prefixSize &gt; 0) {</div>
-<div class="line"><span class="lineno">  665</span>        QTextLayout::FormatRange prefixRange;</div>
-<div class="line"><span class="lineno">  666</span>        prefixRange.start = 0;</div>
-<div class="line"><span class="lineno">  667</span>        prefixRange.length = prefixSize;</div>
-<div class="line"><span class="lineno">  668</span>        prefixRange.format = prefixFormat;</div>
-<div class="line"><span class="lineno">  669</span>        formats.append(prefixRange);</div>
-<div class="line"><span class="lineno">  670</span>      }</div>
-<div class="line"><span class="lineno">  671</span> </div>
-<div class="line"><span class="lineno">  672</span>      <span class="keywordflow">if</span>(prefixSize &lt; textSize) {</div>
-<div class="line"><span class="lineno">  673</span>        QTextLayout::FormatRange normalRange;</div>
-<div class="line"><span class="lineno">  674</span>        normalRange.start = prefixSize;</div>
-<div class="line"><span class="lineno">  675</span>        normalRange.length = textSize - prefixSize;</div>
-<div class="line"><span class="lineno">  676</span>        normalRange.format = normalFormat;</div>
-<div class="line"><span class="lineno">  677</span>        formats.append(normalRange);</div>
-<div class="line"><span class="lineno">  678</span>      }</div>
-<div class="line"><span class="lineno">  679</span> </div>
-<div class="line"><span class="lineno">  680</span>      QTextLayout layout{text, option-&gt;font};</div>
-<div class="line"><span class="lineno">  681</span>      layout.setFormats(formats);</div>
-<div class="line"><span class="lineno">  682</span> </div>
-<div class="line"><span class="lineno">  683</span>      QTextOption textOption;</div>
-<div class="line"><span class="lineno">  684</span>      textOption.setWrapMode(QTextOption::NoWrap);</div>
-<div class="line"><span class="lineno">  685</span>      textOption.setTextDirection(option-&gt;direction);</div>
-<div class="line"><span class="lineno">  686</span>      layout.setTextOption(textOption);</div>
-<div class="line"><span class="lineno">  687</span> </div>
-<div class="line"><span class="lineno">  688</span>      layout.beginLayout();</div>
-<div class="line"><span class="lineno">  689</span>      QTextLine line = layout.createLine();</div>
-<div class="line"><span class="lineno">  690</span>      line.setLineWidth(textRect.width());</div>
-<div class="line"><span class="lineno">  691</span>      layout.endLayout();</div>
-<div class="line"><span class="lineno">  692</span> </div>
-<div class="line"><span class="lineno">  693</span>      qreal x = textRect.left();</div>
-<div class="line"><span class="lineno">  694</span>      <span class="keywordflow">if</span>(option-&gt;displayAlignment &amp; Qt::AlignHCenter)</div>
-<div class="line"><span class="lineno">  695</span>        x += (textRect.width() - line.naturalTextWidth()) / 2.0;</div>
-<div class="line"><span class="lineno">  696</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(option-&gt;displayAlignment &amp; Qt::AlignRight)</div>
-<div class="line"><span class="lineno">  697</span>        x += textRect.width() - line.naturalTextWidth();</div>
-<div class="line"><span class="lineno">  698</span> </div>
-<div class="line"><span class="lineno">  699</span>      qreal y = textRect.top();</div>
-<div class="line"><span class="lineno">  700</span>      <span class="keywordflow">if</span>(option-&gt;displayAlignment &amp; Qt::AlignVCenter)</div>
-<div class="line"><span class="lineno">  701</span>        y += (textRect.height() - line.height()) / 2.0;</div>
-<div class="line"><span class="lineno">  702</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(option-&gt;displayAlignment &amp; Qt::AlignBottom)</div>
-<div class="line"><span class="lineno">  703</span>        y += textRect.height() - line.height();</div>
+<div class="line"><span class="lineno">  656</span>      <span class="keyword">const</span> QString text{displayPrefix + displaySuffix};</div>
+<div class="line"><span class="lineno">  657</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> prefixSize = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(displayPrefix.size());</div>
+<div class="line"><span class="lineno">  658</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> textSize = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(text.size());</div>
+<div class="line"><span class="lineno">  659</span> </div>
+<div class="line"><span class="lineno">  660</span>      QPalette::ColorGroup group{isEnabled ? QPalette::Normal : QPalette::Disabled};</div>
+<div class="line"><span class="lineno">  661</span>      <span class="keywordflow">if</span>(group == QPalette::Normal &amp;&amp; !(option-&gt;state &amp; QStyle::State_Active))</div>
+<div class="line"><span class="lineno">  662</span>        group = QPalette::Inactive;</div>
+<div class="line"><span class="lineno">  663</span>      <span class="keyword">const</span> QColor textColor{option-&gt;palette.color(group, QPalette::Text)};</div>
+<div class="line"><span class="lineno">  664</span> </div>
+<div class="line"><span class="lineno">  665</span>      QColor prefixColor{textColor};</div>
+<div class="line"><span class="lineno">  666</span>      <span class="keywordflow">if</span>(!isHighlighted) prefixColor.setAlpha(128);</div>
+<div class="line"><span class="lineno">  667</span> </div>
+<div class="line"><span class="lineno">  668</span>      QTextCharFormat prefixFormat;</div>
+<div class="line"><span class="lineno">  669</span>      prefixFormat.setForeground(prefixColor);</div>
+<div class="line"><span class="lineno">  670</span> </div>
+<div class="line"><span class="lineno">  671</span>      QTextCharFormat normalFormat;</div>
+<div class="line"><span class="lineno">  672</span>      normalFormat.setForeground(textColor);</div>
+<div class="line"><span class="lineno">  673</span> </div>
+<div class="line"><span class="lineno">  674</span>      QList&lt;QTextLayout::FormatRange&gt; formats;</div>
+<div class="line"><span class="lineno">  675</span> </div>
+<div class="line"><span class="lineno">  676</span>      <span class="keywordflow">if</span>(prefixSize &gt; 0) {</div>
+<div class="line"><span class="lineno">  677</span>        QTextLayout::FormatRange prefixRange;</div>
+<div class="line"><span class="lineno">  678</span>        prefixRange.start = 0;</div>
+<div class="line"><span class="lineno">  679</span>        prefixRange.length = prefixSize;</div>
+<div class="line"><span class="lineno">  680</span>        prefixRange.format = prefixFormat;</div>
+<div class="line"><span class="lineno">  681</span>        formats.append(prefixRange);</div>
+<div class="line"><span class="lineno">  682</span>      }</div>
+<div class="line"><span class="lineno">  683</span> </div>
+<div class="line"><span class="lineno">  684</span>      <span class="keywordflow">if</span>(prefixSize &lt; textSize) {</div>
+<div class="line"><span class="lineno">  685</span>        QTextLayout::FormatRange normalRange;</div>
+<div class="line"><span class="lineno">  686</span>        normalRange.start = prefixSize;</div>
+<div class="line"><span class="lineno">  687</span>        normalRange.length = textSize - prefixSize;</div>
+<div class="line"><span class="lineno">  688</span>        normalRange.format = normalFormat;</div>
+<div class="line"><span class="lineno">  689</span>        formats.append(normalRange);</div>
+<div class="line"><span class="lineno">  690</span>      }</div>
+<div class="line"><span class="lineno">  691</span> </div>
+<div class="line"><span class="lineno">  692</span>      QTextLayout layout{text, option-&gt;font};</div>
+<div class="line"><span class="lineno">  693</span>      layout.setFormats(formats);</div>
+<div class="line"><span class="lineno">  694</span> </div>
+<div class="line"><span class="lineno">  695</span>      QTextOption textOption;</div>
+<div class="line"><span class="lineno">  696</span>      textOption.setWrapMode(QTextOption::NoWrap);</div>
+<div class="line"><span class="lineno">  697</span>      textOption.setTextDirection(option-&gt;direction);</div>
+<div class="line"><span class="lineno">  698</span>      layout.setTextOption(textOption);</div>
+<div class="line"><span class="lineno">  699</span> </div>
+<div class="line"><span class="lineno">  700</span>      layout.beginLayout();</div>
+<div class="line"><span class="lineno">  701</span>      QTextLine line = layout.createLine();</div>
+<div class="line"><span class="lineno">  702</span>      line.setLineWidth(textRect.width());</div>
+<div class="line"><span class="lineno">  703</span>      layout.endLayout();</div>
 <div class="line"><span class="lineno">  704</span> </div>
-<div class="line"><span class="lineno">  705</span>      line.setPosition({x, y});</div>
-<div class="line"><span class="lineno">  706</span> </div>
-<div class="line"><span class="lineno">  707</span>      painter-&gt;save();</div>
-<div class="line"><span class="lineno">  708</span> </div>
-<div class="line"><span class="lineno">  709</span>      <span class="comment">// Draw only inside the overlap between textRect and the painter&#39;s existing clip.</span></div>
-<div class="line"><span class="lineno">  710</span>      painter-&gt;setClipRect(textRect, Qt::IntersectClip);</div>
-<div class="line"><span class="lineno">  711</span> </div>
-<div class="line"><span class="lineno">  712</span>      layout.draw(painter, {});</div>
-<div class="line"><span class="lineno">  713</span>      painter-&gt;restore();</div>
-<div class="line"><span class="lineno">  714</span> </div>
-<div class="line"><span class="lineno">  715</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  716</span>    }</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a50c3e660741cb632b1be20d557698e68"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a50c3e660741cb632b1be20d557698e68">npi::gui::textColor</a></div><div class="ttdeci">QColor textColor(const QColor &amp;background)</div><div class="ttdoc">Selects a black or white text color for the specified background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03778">Gui.cpp:3778</a></div></div>
+<div class="line"><span class="lineno">  705</span>      qreal x = textRect.left();</div>
+<div class="line"><span class="lineno">  706</span>      <span class="keywordflow">if</span>(option-&gt;displayAlignment &amp; Qt::AlignHCenter)</div>
+<div class="line"><span class="lineno">  707</span>        x += (textRect.width() - line.naturalTextWidth()) / 2.0;</div>
+<div class="line"><span class="lineno">  708</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(option-&gt;displayAlignment &amp; Qt::AlignRight)</div>
+<div class="line"><span class="lineno">  709</span>        x += textRect.width() - line.naturalTextWidth();</div>
+<div class="line"><span class="lineno">  710</span> </div>
+<div class="line"><span class="lineno">  711</span>      qreal y = textRect.top();</div>
+<div class="line"><span class="lineno">  712</span>      <span class="keywordflow">if</span>(option-&gt;displayAlignment &amp; Qt::AlignVCenter)</div>
+<div class="line"><span class="lineno">  713</span>        y += (textRect.height() - line.height()) / 2.0;</div>
+<div class="line"><span class="lineno">  714</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(option-&gt;displayAlignment &amp; Qt::AlignBottom)</div>
+<div class="line"><span class="lineno">  715</span>        y += textRect.height() - line.height();</div>
+<div class="line"><span class="lineno">  716</span> </div>
+<div class="line"><span class="lineno">  717</span>      line.setPosition({x, y});</div>
+<div class="line"><span class="lineno">  718</span> </div>
+<div class="line"><span class="lineno">  719</span>      painter-&gt;save();</div>
+<div class="line"><span class="lineno">  720</span> </div>
+<div class="line"><span class="lineno">  721</span>      <span class="comment">// Draw only inside the overlap between textRect and the painter&#39;s existing clip.</span></div>
+<div class="line"><span class="lineno">  722</span>      painter-&gt;setClipRect(textRect, Qt::IntersectClip);</div>
+<div class="line"><span class="lineno">  723</span> </div>
+<div class="line"><span class="lineno">  724</span>      layout.draw(painter, {});</div>
+<div class="line"><span class="lineno">  725</span>      painter-&gt;restore();</div>
+<div class="line"><span class="lineno">  726</span> </div>
+<div class="line"><span class="lineno">  727</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  728</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a7df9080cfeacd6612037190095cc8218">completerItem()</a>.</p>
+<p class="reference">References <a class="el" href="#a15fd08e1989a0801a0d1272ec6bc1784">completerItem()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a7df9080cfeacd6612037190095cc8218">completerItem()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a15fd08e1989a0801a0d1272ec6bc1784">completerItem()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a7df9080cfeacd6612037190095cc8218_cgraph.svg" width="432" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a15fd08e1989a0801a0d1272ec6bc1784_cgraph.svg" width="432" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a7df9080cfeacd6612037190095cc8218_icgraph.svg" width="662" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a15fd08e1989a0801a0d1272ec6bc1784_icgraph.svg" width="662" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a12037930720aefc2c0753719a78c11e2" name="a12037930720aefc2c0753719a78c11e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12037930720aefc2c0753719a78c11e2">&#9670;&#160;</a></span>focusLine()</h2>
+<a id="a401c25f40419cae02ca301ba94ec1fd2" name="a401c25f40419cae02ca301ba94ec1fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401c25f40419cae02ca301ba94ec1fd2">&#9670;&#160;</a></span>focusLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -531,72 +476,50 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void anonymous_namespace{Gui.cpp}::draw::focusLine </td>
           <td>(</td>
-          <td class="paramtype">const QRect &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QPen &amp;</td>          <td class="paramname"><span class="paramname"><em>pen</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>adjustGap</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype">const QRect &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPen &amp;</td>          <td class="paramname"><span class="paramname"><em>pen</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draws a focus indicator along the bottom of a rectangle. </p>
-<p>Uses the supplied pen and equal gaps at both sides. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rect</td><td>The widget rectangle to draw focus indicator on. </td></tr>
-    <tr><td class="paramname">pen</td><td>The QPen to draw the focus indicator. </td></tr>
-    <tr><td class="paramname">painter</td><td>Painter used for drawing the focus indicator. </td></tr>
-    <tr><td class="paramname">adjustGap</td><td>Adjustment added to the standard side gap. The resulting gap is clamped to zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Does nothing if the rectangle is invalid or too narrow for the side gaps. </dd></dl>
+<p>Draws a focus line along the bottom of a control. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00499">499</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  500</span>    {</div>
-<div class="line"><span class="lineno">  501</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> gap = qMax(0, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a> + adjustGap);</div>
-<div class="line"><span class="lineno">  502</span>      <span class="keywordflow">if</span>(!rect.isValid() || rect.width() &lt;= (2 * gap)) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  503</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> xBeg = rect.x() + gap;</div>
-<div class="line"><span class="lineno">  504</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> yBeg = rect.y() + rect.height() - <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>;</div>
-<div class="line"><span class="lineno">  505</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> xEnd = rect.x() + rect.width() - gap;</div>
-<div class="line"><span class="lineno">  506</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> yEnd = yBeg;</div>
-<div class="line"><span class="lineno">  507</span>      painter-&gt;setBrush(Qt::NoBrush);</div>
-<div class="line"><span class="lineno">  508</span>      painter-&gt;setPen(pen);</div>
-<div class="line"><span class="lineno">  509</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  510</span>      painter-&gt;drawLine(xBeg, yBeg, xEnd, yEnd);</div>
-<div class="line"><span class="lineno">  511</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a9d3110de4c18060309d68b2a0083c940"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">anonymous_namespace{Gui.cpp}::sideGap</a></div><div class="ttdeci">constexpr int sideGap</div><div class="ttdoc">Gap between a control edge and its focus indicator.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00177">Gui.cpp:177</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ad6dee4722ad5908655b0900be46c8bcb"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">anonymous_namespace{Gui.cpp}::borderHalfWidth</a></div><div class="ttdeci">constexpr int borderHalfWidth</div><div class="ttdoc">Offset used to center focus indicators on their target position.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00180">Gui.cpp:180</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00523">523</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  524</span>    {</div>
+<div class="line"><span class="lineno">  525</span>      <span class="keywordflow">if</span>(!painter || !rect.isValid() || rect.width() &lt;= (2 * <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  526</span>      painter-&gt;setPen(pen);</div>
+<div class="line"><span class="lineno">  527</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  528</span>      painter-&gt;drawLine(rect.left() + <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>, rect.bottom(), rect.right() - <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>, rect.bottom());</div>
+<div class="line"><span class="lineno">  529</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a9d3110de4c18060309d68b2a0083c940"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">anonymous_namespace{Gui.cpp}::sideGap</a></div><div class="ttdeci">constexpr int sideGap</div><div class="ttdoc">End spacing for focus lines and separators.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00188">Gui.cpp:188</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">anonymous_namespace{Gui.cpp}::borderHalfWidth</a>, <a class="el" href="#a12037930720aefc2c0753719a78c11e2">focusLine()</a>, and <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">anonymous_namespace{Gui.cpp}::sideGap</a>.</p>
+<p class="reference">References <a class="el" href="#a401c25f40419cae02ca301ba94ec1fd2">focusLine()</a>, and <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">anonymous_namespace{Gui.cpp}::sideGap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0">anonymous_namespace{Gui.cpp}::GuiStyle::drawComplexControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#a12037930720aefc2c0753719a78c11e2">focusLine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0">anonymous_namespace{Gui.cpp}::GuiStyle::drawComplexControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#a401c25f40419cae02ca301ba94ec1fd2">focusLine()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a12037930720aefc2c0753719a78c11e2_cgraph.svg" width="400" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a401c25f40419cae02ca301ba94ec1fd2_cgraph.svg" width="400" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a12037930720aefc2c0753719a78c11e2_icgraph.svg" width="630" height="227"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a401c25f40419cae02ca301ba94ec1fd2_icgraph.svg" width="630" height="227"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a17874e85ad6e53b438db9754d89fd2cc" name="a17874e85ad6e53b438db9754d89fd2cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17874e85ad6e53b438db9754d89fd2cc">&#9670;&#160;</a></span>itemPressedButton()</h2>
+<a id="af2773c648af05b5b821c4f5c5d636d99" name="af2773c648af05b5b821c4f5c5d636d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2773c648af05b5b821c4f5c5d636d99">&#9670;&#160;</a></span>itemPressedButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -604,7 +527,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void anonymous_namespace{Gui.cpp}::draw::itemPressedButton </td>
           <td>(</td>
-          <td class="paramtype">const QPen &amp;</td>          <td class="paramname"><span class="paramname"><em>pen</em></span>, </td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -614,35 +537,37 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">ThemeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>themeData</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draws the square pressed-state border for a button inside an item view. </p>
-<p>Uses the supplied pen and draws the border inside the option rectangle. </p><dl class="section note"><dt>Note</dt><dd>Does nothing if either pointer is null. </dd></dl>
+<p>Draws a pressed-button outline inside an item view. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00469">469</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  470</span>    {</div>
-<div class="line"><span class="lineno">  471</span>      <span class="keywordflow">if</span>(!option || !painter) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  472</span>      painter-&gt;setBrush(Qt::NoBrush);</div>
-<div class="line"><span class="lineno">  473</span>      painter-&gt;setPen(pen);</div>
-<div class="line"><span class="lineno">  474</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  475</span>      painter-&gt;drawRect(option-&gt;rect.adjusted(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>, -<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>, -<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>));</div>
-<div class="line"><span class="lineno">  476</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00478">478</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  479</span>    {</div>
+<div class="line"><span class="lineno">  480</span>      <span class="keywordflow">if</span>(!painter || !option) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  481</span>      painter-&gt;setBrush(Qt::NoBrush);</div>
+<div class="line"><span class="lineno">  482</span>      painter-&gt;setPen((option-&gt;state &amp; QStyle::State_Enabled) ? themeData.<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#af2e7f84837176e22598539054dfb6c61">viewBtnPressPen_</a> : themeData.<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ae93aca34a9712892ce3a40a76cd32257">viewDisBtnPressPen_</a>);</div>
+<div class="line"><span class="lineno">  483</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  484</span>      painter-&gt;drawRect(option-&gt;rect.adjusted(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>, -<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>, -<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">borderHalfWidth</a>));</div>
+<div class="line"><span class="lineno">  485</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ad6dee4722ad5908655b0900be46c8bcb"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">anonymous_namespace{Gui.cpp}::borderHalfWidth</a></div><div class="ttdeci">constexpr int borderHalfWidth</div><div class="ttdoc">Offset for centering border strokes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00192">Gui.cpp:192</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ae93aca34a9712892ce3a40a76cd32257"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ae93aca34a9712892ce3a40a76cd32257">anonymous_namespace{Gui.cpp}::ThemeData::viewDisBtnPressPen_</a></div><div class="ttdeci">QPen viewDisBtnPressPen_</div><div class="ttdoc">Disabled pressed-button outlines inside item views.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00249">Gui.cpp:249</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_af2e7f84837176e22598539054dfb6c61"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#af2e7f84837176e22598539054dfb6c61">anonymous_namespace{Gui.cpp}::ThemeData::viewBtnPressPen_</a></div><div class="ttdeci">QPen viewBtnPressPen_</div><div class="ttdoc">Pressed-button outlines inside item views.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00248">Gui.cpp:248</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">anonymous_namespace{Gui.cpp}::borderHalfWidth</a>, and <a class="el" href="#a17874e85ad6e53b438db9754d89fd2cc">itemPressedButton()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">anonymous_namespace{Gui.cpp}::borderHalfWidth</a>, <a class="el" href="#af2773c648af05b5b821c4f5c5d636d99">itemPressedButton()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#af2e7f84837176e22598539054dfb6c61">anonymous_namespace{Gui.cpp}::ThemeData::viewBtnPressPen_</a>, and <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ae93aca34a9712892ce3a40a76cd32257">anonymous_namespace{Gui.cpp}::ThemeData::viewDisBtnPressPen_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#a17874e85ad6e53b438db9754d89fd2cc">itemPressedButton()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#af2773c648af05b5b821c4f5c5d636d99">itemPressedButton()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a17874e85ad6e53b438db9754d89fd2cc_cgraph.svg" width="464" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_af2773c648af05b5b821c4f5c5d636d99_cgraph.svg" width="464" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a17874e85ad6e53b438db9754d89fd2cc_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_af2773c648af05b5b821c4f5c5d636d99_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -676,46 +601,36 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Builds a monochrome menu icon using the palette's text colors. </p>
-<p>Recolors both Off and On states, using the normal text color for Normal, Active and Selected modes and the disabled text color for Disabled. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">source</td><td>Source icon to be rendered in provided palette. </td></tr>
-    <tr><td class="paramname">palette</td><td>Palette to render source icon in. </td></tr>
-    <tr><td class="paramname"><a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html" title="Helpers for standardized widget heights and icon dimensions.">size</a></td><td>Requested logical icon size. </td></tr>
-    <tr><td class="paramname">dpr</td><td>Target device pixel ratio. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The recolored icon, or the source icon if no pixmaps are available. </dd></dl>
+<p>Recolors a menu icon using normal and disabled text colors. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00739">739</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  740</span>    {</div>
-<div class="line"><span class="lineno">  741</span>      <span class="keyword">constexpr</span> qreal renderScale{2.0}; <span class="comment">// Request extra resolution for smooth icon rendering.</span></div>
-<div class="line"><span class="lineno">  742</span> </div>
-<div class="line"><span class="lineno">  743</span>      <span class="keyword">const</span> QSize iconSize{<a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>};</div>
-<div class="line"><span class="lineno">  744</span>      <span class="keyword">const</span> QColor normalColor{palette.color(QPalette::Text)};</div>
-<div class="line"><span class="lineno">  745</span>      <span class="keyword">const</span> QColor disabledColor{<a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">palette</a>.color(QPalette::Disabled, QPalette::Text)};</div>
-<div class="line"><span class="lineno">  746</span> </div>
-<div class="line"><span class="lineno">  747</span>      QIcon icon;</div>
-<div class="line"><span class="lineno">  748</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QIcon::State state : {QIcon::Off, QIcon::On}) {</div>
-<div class="line"><span class="lineno">  749</span>        <span class="keyword">const</span> QPixmap pixmap{source.pixmap(iconSize, dpr * renderScale, QIcon::Normal, state)};</div>
-<div class="line"><span class="lineno">  750</span>        <span class="keywordflow">if</span>(pixmap.isNull())</div>
-<div class="line"><span class="lineno">  751</span>          <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  752</span> </div>
-<div class="line"><span class="lineno">  753</span>        <span class="keyword">const</span> QPixmap normalPixmap{<a class="code hl_function" href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">coloredPixmap</a>(pixmap, normalColor)};</div>
-<div class="line"><span class="lineno">  754</span>        <span class="keyword">const</span> QPixmap disabledPixmap{<a class="code hl_function" href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">coloredPixmap</a>(pixmap, disabledColor)};</div>
-<div class="line"><span class="lineno">  755</span> </div>
-<div class="line"><span class="lineno">  756</span>        icon.addPixmap(normalPixmap, QIcon::Normal, state);</div>
-<div class="line"><span class="lineno">  757</span>        icon.addPixmap(normalPixmap, QIcon::Active, state);</div>
-<div class="line"><span class="lineno">  758</span>        icon.addPixmap(normalPixmap, QIcon::Selected, state);</div>
-<div class="line"><span class="lineno">  759</span>        icon.addPixmap(disabledPixmap, QIcon::Disabled, state);</div>
-<div class="line"><span class="lineno">  760</span>      }</div>
-<div class="line"><span class="lineno">  761</span> </div>
-<div class="line"><span class="lineno">  762</span>      <span class="keywordflow">return</span> icon.isNull() ? source : icon;</div>
-<div class="line"><span class="lineno">  763</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_html_a21c4a9497b5a0d6b377ca8bcdf803fbf"><div class="ttname"><a href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">anonymous_namespace{Gui.cpp}::draw::coloredPixmap</a></div><div class="ttdeci">QPixmap coloredPixmap(QPixmap pixmap, const QColor &amp;color)</div><div class="ttdoc">Recolors a pixmap using its alpha channel as a mask.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00722">Gui.cpp:722</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html"><div class="ttname"><a href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">anonymous_namespace{Gui.cpp}::size</a></div><div class="ttdoc">Helpers for standardized widget heights and icon dimensions.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00885">Gui.cpp:886</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a4ccc0e83064b03b6b32774d31c9f8b55"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">npi::gui::palette</a></div><div class="ttdeci">QPalette palette()</div><div class="ttdoc">Returns the GUI system&#39;s application palette for the currently effective background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03774">Gui.cpp:3774</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00741">741</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  742</span>    {</div>
+<div class="line"><span class="lineno">  743</span>      <span class="keyword">constexpr</span> qreal renderScale{2.0}; <span class="comment">// Request extra resolution for smooth icon rendering.</span></div>
+<div class="line"><span class="lineno">  744</span> </div>
+<div class="line"><span class="lineno">  745</span>      <span class="keyword">const</span> QSize iconSize{<a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>};</div>
+<div class="line"><span class="lineno">  746</span>      <span class="keyword">const</span> QColor normalColor{palette.color(QPalette::Text)};</div>
+<div class="line"><span class="lineno">  747</span>      <span class="keyword">const</span> QColor disabledColor{<a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">palette</a>.color(QPalette::Disabled, QPalette::Text)};</div>
+<div class="line"><span class="lineno">  748</span> </div>
+<div class="line"><span class="lineno">  749</span>      QIcon icon;</div>
+<div class="line"><span class="lineno">  750</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QIcon::State state : {QIcon::Off, QIcon::On}) {</div>
+<div class="line"><span class="lineno">  751</span>        <span class="keyword">const</span> QPixmap pixmap{source.pixmap(iconSize, dpr * renderScale, QIcon::Normal, state)};</div>
+<div class="line"><span class="lineno">  752</span>        <span class="keywordflow">if</span>(pixmap.isNull())</div>
+<div class="line"><span class="lineno">  753</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  754</span> </div>
+<div class="line"><span class="lineno">  755</span>        <span class="keyword">const</span> QPixmap normalPixmap{<a class="code hl_function" href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">coloredPixmap</a>(pixmap, normalColor)};</div>
+<div class="line"><span class="lineno">  756</span>        <span class="keyword">const</span> QPixmap disabledPixmap{<a class="code hl_function" href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">coloredPixmap</a>(pixmap, disabledColor)};</div>
+<div class="line"><span class="lineno">  757</span> </div>
+<div class="line"><span class="lineno">  758</span>        icon.addPixmap(normalPixmap, QIcon::Normal, state);</div>
+<div class="line"><span class="lineno">  759</span>        icon.addPixmap(normalPixmap, QIcon::Active, state);</div>
+<div class="line"><span class="lineno">  760</span>        icon.addPixmap(normalPixmap, QIcon::Selected, state);</div>
+<div class="line"><span class="lineno">  761</span>        icon.addPixmap(disabledPixmap, QIcon::Disabled, state);</div>
+<div class="line"><span class="lineno">  762</span>      }</div>
+<div class="line"><span class="lineno">  763</span> </div>
+<div class="line"><span class="lineno">  764</span>      <span class="keywordflow">return</span> icon.isNull() ? source : icon;</div>
+<div class="line"><span class="lineno">  765</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_html_a21c4a9497b5a0d6b377ca8bcdf803fbf"><div class="ttname"><a href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">anonymous_namespace{Gui.cpp}::draw::coloredPixmap</a></div><div class="ttdeci">QPixmap coloredPixmap(QPixmap pixmap, const QColor &amp;color)</div><div class="ttdoc">Recolors a pixmap while preserving its shape and transparency.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00731">Gui.cpp:731</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html"><div class="ttname"><a href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">anonymous_namespace{Gui.cpp}::size</a></div><div class="ttdoc">Helpers for control heights, icon sizes and spacing.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00860">Gui.cpp:861</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a4ccc0e83064b03b6b32774d31c9f8b55"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">npi::gui::palette</a></div><div class="ttdeci">QPalette palette()</div><div class="ttdoc">Returns the GUI palette for the effective application background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03808">Gui.cpp:3808</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a21c4a9497b5a0d6b377ca8bcdf803fbf">coloredPixmap()</a>, and <a class="el" href="#acbfcb721bc6f25afe2f86f5b7c540da8">menuIcon()</a>.</p>
 
@@ -733,58 +648,184 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a28022be21bc0970e5e85764652cdcb2c" name="a28022be21bc0970e5e85764652cdcb2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28022be21bc0970e5e85764652cdcb2c">&#9670;&#160;</a></span>pressedButtonRoundedRect()</h2>
+<a id="aa3733033d741507567f612e133cc3214" name="aa3733033d741507567f612e133cc3214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3733033d741507567f612e133cc3214">&#9670;&#160;</a></span>pressedButtonInnerRoundedRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void anonymous_namespace{Gui.cpp}::draw::pressedButtonRoundedRect </td>
+          <td class="memname">void anonymous_namespace{Gui.cpp}::draw::pressedButtonInnerRoundedRect </td>
           <td>(</td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOption *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws the inset background of a pressed button. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00488">488</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  489</span>    {</div>
+<div class="line"><span class="lineno">  490</span>      <span class="keywordflow">if</span>(!painter || !option) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  491</span>      painter-&gt;setPen(Qt::NoPen);</div>
+<div class="line"><span class="lineno">  492</span>      painter-&gt;setBrush(option-&gt;palette.color(QPalette::Window));</div>
+<div class="line"><span class="lineno">  493</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  494</span>      painter-&gt;drawRoundedRect(option-&gt;rect.adjusted(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>, -<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>, -<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>), <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">innerRadius</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">innerRadius</a>);</div>
+<div class="line"><span class="lineno">  495</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab3fe4f49056ef475941d2c6fda65bee3"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">anonymous_namespace{Gui.cpp}::borderWidth</a></div><div class="ttdeci">constexpr int borderWidth</div><div class="ttdoc">Border thickness.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00191">Gui.cpp:191</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ad33153703faa5cd9b48e866af0032f76"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">anonymous_namespace{Gui.cpp}::innerRadius</a></div><div class="ttdeci">constexpr qreal innerRadius</div><div class="ttdoc">Inner corner radius.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00194">Gui.cpp:194</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">anonymous_namespace{Gui.cpp}::borderWidth</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">anonymous_namespace{Gui.cpp}::innerRadius</a>, and <a class="el" href="#aa3733033d741507567f612e133cc3214">pressedButtonInnerRoundedRect()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#aa3733033d741507567f612e133cc3214">pressedButtonInnerRoundedRect()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_aa3733033d741507567f612e133cc3214_cgraph.svg" width="560" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_aa3733033d741507567f612e133cc3214_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a81883d0405fb4b57864dd4f0ae3bf869" name="a81883d0405fb4b57864dd4f0ae3bf869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81883d0405fb4b57864dd4f0ae3bf869">&#9670;&#160;</a></span>roundedRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace{Gui.cpp}::draw::roundedRect </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QRect &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QColor &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qreal</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws a filled rounded rectangle. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00449">449</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  450</span>    {</div>
+<div class="line"><span class="lineno">  451</span>      <span class="keywordflow">if</span>(!painter || !rect.isValid() || !color.isValid() || radius &lt; 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  452</span>      painter-&gt;setPen(Qt::NoPen);</div>
+<div class="line"><span class="lineno">  453</span>      painter-&gt;setBrush(color);</div>
+<div class="line"><span class="lineno">  454</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  455</span>      painter-&gt;drawRoundedRect(rect, radius, radius);</div>
+<div class="line"><span class="lineno">  456</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a81883d0405fb4b57864dd4f0ae3bf869">roundedRect()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#a81883d0405fb4b57864dd4f0ae3bf869">roundedRect()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a81883d0405fb4b57864dd4f0ae3bf869_cgraph.svg" width="416" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a81883d0405fb4b57864dd4f0ae3bf869_icgraph.svg" width="646" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaf774eb9e2875279c81810cd17d99b0b" name="aaf774eb9e2875279c81810cd17d99b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf774eb9e2875279c81810cd17d99b0b">&#9670;&#160;</a></span>sepBorders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace{Gui.cpp}::draw::sepBorders </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const QStyleOption *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>&#160;)</td>
+          <td class="paramtype">const QWidget *</td>          <td class="paramname"><span class="paramname"><em>widget</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPen &amp;</td>          <td class="paramname"><span class="paramname"><em>pen</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draws the inset background used for a pressed button. </p>
-<p>Fills an inset rounded rectangle with the Window color from the option palette. </p><dl class="section note"><dt>Note</dt><dd>Does nothing if either pointer is null. </dd></dl>
+<p>Draws the separator borders requested by the widget. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00456">456</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  457</span>    {</div>
-<div class="line"><span class="lineno">  458</span>      <span class="keywordflow">if</span>(!option || !painter) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  459</span>      painter-&gt;setPen(Qt::NoPen);</div>
-<div class="line"><span class="lineno">  460</span>      painter-&gt;setBrush(option-&gt;palette.color(QPalette::Window));</div>
-<div class="line"><span class="lineno">  461</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  462</span>      <span class="keyword">const</span> QRect innerRect{option-&gt;rect.adjusted(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>, -<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>, -<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>)};</div>
-<div class="line"><span class="lineno">  463</span>      painter-&gt;drawRoundedRect(innerRect, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">innerRadius</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">innerRadius</a>);</div>
-<div class="line"><span class="lineno">  464</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab3fe4f49056ef475941d2c6fda65bee3"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">anonymous_namespace{Gui.cpp}::borderWidth</a></div><div class="ttdeci">constexpr int borderWidth</div><div class="ttdoc">Width of pressed borders and focus indicators.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00179">Gui.cpp:179</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ad33153703faa5cd9b48e866af0032f76"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">anonymous_namespace{Gui.cpp}::innerRadius</a></div><div class="ttdeci">constexpr qreal innerRadius</div><div class="ttdoc">Corner radius of the inner pressed-button background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00182">Gui.cpp:182</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00498">498</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  499</span>    {</div>
+<div class="line"><span class="lineno">  500</span>      <span class="keywordflow">if</span>(!painter || !option || !widget) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  501</span> </div>
+<div class="line"><span class="lineno">  502</span>      <span class="keyword">const</span> <span class="keyword">auto</span> sepProp = widget-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3750f63b86eb15ca202b8eb593dd9133">npi::gui::Props::SepBorders_</a>);</div>
+<div class="line"><span class="lineno">  503</span>      <span class="keywordflow">if</span>(!sepProp.isValid()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  504</span> </div>
+<div class="line"><span class="lineno">  505</span>      QList&lt;QLine&gt; lines;</div>
+<div class="line"><span class="lineno">  506</span>      <span class="keyword">const</span> QString borders = sepProp.toString().toUpper();</div>
+<div class="line"><span class="lineno">  507</span>      <span class="keywordflow">if</span>(borders.contains(QLatin1Char(<span class="charliteral">&#39;T&#39;</span>)))</div>
+<div class="line"><span class="lineno">  508</span>        lines &lt;&lt; QLine{option-&gt;rect.left() + <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>, option-&gt;rect.top(), option-&gt;rect.right() - <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>, option-&gt;rect.top()};</div>
+<div class="line"><span class="lineno">  509</span>      <span class="keywordflow">if</span>(borders.contains(QLatin1Char(<span class="charliteral">&#39;R&#39;</span>)))</div>
+<div class="line"><span class="lineno">  510</span>        lines &lt;&lt; QLine{option-&gt;rect.right(), option-&gt;rect.top() + <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>, option-&gt;rect.right(), option-&gt;rect.bottom() - <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>};</div>
+<div class="line"><span class="lineno">  511</span>      <span class="keywordflow">if</span>(borders.contains(QLatin1Char(<span class="charliteral">&#39;B&#39;</span>)))</div>
+<div class="line"><span class="lineno">  512</span>        lines &lt;&lt; QLine{option-&gt;rect.left() + <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>, option-&gt;rect.bottom(), option-&gt;rect.right() - <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>, option-&gt;rect.bottom()};</div>
+<div class="line"><span class="lineno">  513</span>      <span class="keywordflow">if</span>(borders.contains(QLatin1Char(<span class="charliteral">&#39;L&#39;</span>)))</div>
+<div class="line"><span class="lineno">  514</span>        lines &lt;&lt; QLine{option-&gt;rect.left(), option-&gt;rect.top() + <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>, option-&gt;rect.left(), option-&gt;rect.bottom() - <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">sideGap</a>};</div>
+<div class="line"><span class="lineno">  515</span>      <span class="keywordflow">if</span>(lines.isEmpty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  516</span> </div>
+<div class="line"><span class="lineno">  517</span>      painter-&gt;setPen(pen);</div>
+<div class="line"><span class="lineno">  518</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  519</span>      painter-&gt;drawLines(lines);</div>
+<div class="line"><span class="lineno">  520</span>    }</div>
+<div class="ttc" id="astructnpi_1_1gui_1_1_props_html_a3750f63b86eb15ca202b8eb593dd9133"><div class="ttname"><a href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3750f63b86eb15ca202b8eb593dd9133">npi::gui::Props::SepBorders_</a></div><div class="ttdeci">static constexpr const char * SepBorders_</div><div class="ttdoc">QString - Selects separator borders for backgroundless controls.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00081">Gui.h:81</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">anonymous_namespace{Gui.cpp}::borderWidth</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">anonymous_namespace{Gui.cpp}::innerRadius</a>, and <a class="el" href="#a28022be21bc0970e5e85764652cdcb2c">pressedButtonRoundedRect()</a>.</p>
+<p class="reference">References <a class="el" href="#aaf774eb9e2875279c81810cd17d99b0b">sepBorders()</a>, <a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3750f63b86eb15ca202b8eb593dd9133">npi::gui::Props::SepBorders_</a>, and <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">anonymous_namespace{Gui.cpp}::sideGap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#a28022be21bc0970e5e85764652cdcb2c">pressedButtonRoundedRect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0">anonymous_namespace{Gui.cpp}::GuiStyle::drawComplexControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#aaf774eb9e2875279c81810cd17d99b0b">sepBorders()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a28022be21bc0970e5e85764652cdcb2c_cgraph.svg" width="520" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_aaf774eb9e2875279c81810cd17d99b0b_cgraph.svg" width="408" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a28022be21bc0970e5e85764652cdcb2c_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_aaf774eb9e2875279c81810cd17d99b0b_icgraph.svg" width="638" height="227"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="afcab152974cfc9cdc2bc2fb1f0e01610" name="afcab152974cfc9cdc2bc2fb1f0e01610"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcab152974cfc9cdc2bc2fb1f0e01610">&#9670;&#160;</a></span>tableHorHeaderText()</h2>
+<a id="ad309595fa81bb04aa0b3d7e4fb159164" name="ad309595fa81bb04aa0b3d7e4fb159164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad309595fa81bb04aa0b3d7e4fb159164">&#9670;&#160;</a></span>tableHorHeaderText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -792,12 +833,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void anonymous_namespace{Gui.cpp}::draw::tableHorHeaderText </td>
           <td>(</td>
-          <td class="paramtype">const QStyleOptionHeader *</td>          <td class="paramname"><span class="paramname"><em>opt</em></span>, </td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+          <td class="paramtype">const QStyleOptionHeader *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -817,45 +858,45 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Draws text for one level of a multi-level horizontal table header. </p>
-<p>Centers the text in its section, adjusts its horizontal position against the visible header area and section bounds, and clips drawing to the section rectangle. </p><dl class="section note"><dt>Note</dt><dd>Disables painter clipping before returning; callers that require a preexisting clip must preserve the painter state. </dd></dl>
+<p>Draws horizontal header text, keeping it visible while scrolling. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00519">519</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  520</span>    {</div>
-<div class="line"><span class="lineno">  521</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> wTxt = opt-&gt;fontMetrics.horizontalAdvance(text);</div>
-<div class="line"><span class="lineno">  522</span>      <span class="keywordtype">int</span> xTxt{textRect.x() + textRect.width() / 2 - wTxt / 2};</div>
-<div class="line"><span class="lineno">  523</span>      <span class="keywordflow">if</span>((xTxt + wTxt) &gt; (viewRect.x() + viewRect.width()))</div>
-<div class="line"><span class="lineno">  524</span>        xTxt = viewRect.x() + viewRect.width() - wTxt;</div>
-<div class="line"><span class="lineno">  525</span>      <span class="keywordflow">if</span>(xTxt &lt; viewRect.x())</div>
-<div class="line"><span class="lineno">  526</span>        xTxt = viewRect.x();</div>
-<div class="line"><span class="lineno">  527</span>      <span class="keywordflow">if</span>((xTxt + wTxt) &gt; (textRect.x() + textRect.width()))</div>
-<div class="line"><span class="lineno">  528</span>        xTxt = textRect.x() + textRect.width() - wTxt;</div>
-<div class="line"><span class="lineno">  529</span>      <span class="keywordflow">if</span>(xTxt &lt; textRect.x())</div>
-<div class="line"><span class="lineno">  530</span>        xTxt = textRect.x();</div>
-<div class="line"><span class="lineno">  531</span>      painter-&gt;setClipRect(textRect);</div>
-<div class="line"><span class="lineno">  532</span>      <a class="code hl_function" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText</a>(painter, QRect{xTxt, textRect.y(), wTxt, textRect.height()}, Qt::AlignCenter, text);</div>
-<div class="line"><span class="lineno">  533</span>      painter-&gt;setClipping(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  534</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_html_a8bbe95a2f1005905e2f37e98cc30e28e"><div class="ttname"><a href="#a8bbe95a2f1005905e2f37e98cc30e28e">anonymous_namespace{Gui.cpp}::draw::adjustedText</a></div><div class="ttdeci">void adjustedText(QPainter *painter, QRect rect, int flags, const QString &amp;text)</div><div class="ttdoc">Draws text with the requested alignment and font-specific positioning.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00484">Gui.cpp:484</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00541">541</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  542</span>    {</div>
+<div class="line"><span class="lineno">  543</span>      <span class="keywordflow">if</span>(!painter || !option || text.isEmpty() || !viewRect.isValid() || !textRect.isValid()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  544</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> wTxt = option-&gt;fontMetrics.horizontalAdvance(text);</div>
+<div class="line"><span class="lineno">  545</span>      <span class="keywordtype">int</span> xTxt{textRect.x() + textRect.width() / 2 - wTxt / 2};</div>
+<div class="line"><span class="lineno">  546</span>      <span class="keywordflow">if</span>((xTxt + wTxt) &gt; (viewRect.x() + viewRect.width()))</div>
+<div class="line"><span class="lineno">  547</span>        xTxt = viewRect.x() + viewRect.width() - wTxt;</div>
+<div class="line"><span class="lineno">  548</span>      <span class="keywordflow">if</span>(xTxt &lt; viewRect.x())</div>
+<div class="line"><span class="lineno">  549</span>        xTxt = viewRect.x();</div>
+<div class="line"><span class="lineno">  550</span>      <span class="keywordflow">if</span>((xTxt + wTxt) &gt; (textRect.x() + textRect.width()))</div>
+<div class="line"><span class="lineno">  551</span>        xTxt = textRect.x() + textRect.width() - wTxt;</div>
+<div class="line"><span class="lineno">  552</span>      <span class="keywordflow">if</span>(xTxt &lt; textRect.x())</div>
+<div class="line"><span class="lineno">  553</span>        xTxt = textRect.x();</div>
+<div class="line"><span class="lineno">  554</span>      painter-&gt;setClipRect(textRect);</div>
+<div class="line"><span class="lineno">  555</span>      <a class="code hl_function" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText</a>(painter, QRect{xTxt, textRect.y(), wTxt, textRect.height()}, Qt::AlignCenter, text);</div>
+<div class="line"><span class="lineno">  556</span>      painter-&gt;setClipping(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  557</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_html_a8bbe95a2f1005905e2f37e98cc30e28e"><div class="ttname"><a href="#a8bbe95a2f1005905e2f37e98cc30e28e">anonymous_namespace{Gui.cpp}::draw::adjustedText</a></div><div class="ttdeci">void adjustedText(QPainter *painter, QRect rect, int flags, const QString &amp;text)</div><div class="ttdoc">Draws text with a small alignment adjustment for JetBrains Mono.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00532">Gui.cpp:532</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText()</a>, and <a class="el" href="#afcab152974cfc9cdc2bc2fb1f0e01610">tableHorHeaderText()</a>.</p>
+<p class="reference">References <a class="el" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText()</a>, and <a class="el" href="#ad309595fa81bb04aa0b3d7e4fb159164">tableHorHeaderText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="#afcab152974cfc9cdc2bc2fb1f0e01610">tableHorHeaderText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="#ad309595fa81bb04aa0b3d7e4fb159164">tableHorHeaderText()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_afcab152974cfc9cdc2bc2fb1f0e01610_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_ad309595fa81bb04aa0b3d7e4fb159164_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_afcab152974cfc9cdc2bc2fb1f0e01610_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_ad309595fa81bb04aa0b3d7e4fb159164_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="ae3071b51484ebb8e5e9d6e5101568268" name="ae3071b51484ebb8e5e9d6e5101568268"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3071b51484ebb8e5e9d6e5101568268">&#9670;&#160;</a></span>tableVerHeaderText()</h2>
+<a id="a63bfb93ee8b1cae3c1ee4b499ea634bd" name="a63bfb93ee8b1cae3c1ee4b499ea634bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63bfb93ee8b1cae3c1ee4b499ea634bd">&#9670;&#160;</a></span>tableVerHeaderText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -863,12 +904,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void anonymous_namespace{Gui.cpp}::draw::tableVerHeaderText </td>
           <td>(</td>
-          <td class="paramtype">const QStyleOptionHeader *</td>          <td class="paramname"><span class="paramname"><em>opt</em></span>, </td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+          <td class="paramtype">const QStyleOptionHeader *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -888,38 +929,108 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Draws text for one level of a multi-level vertical table header. </p>
-<p>Right-aligns the text in its section, adjusts its vertical position against the visible header area and section bounds, and clips drawing to the section rectangle. </p><dl class="section note"><dt>Note</dt><dd>Disables painter clipping before returning; callers that require a preexisting clip must preserve the painter state. </dd></dl>
+<p>Draws vertical header text, keeping it visible while scrolling. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00542">542</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  543</span>    {</div>
-<div class="line"><span class="lineno">  544</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> hTxt = opt-&gt;fontMetrics.boundingRect(text).height();</div>
-<div class="line"><span class="lineno">  545</span>      <span class="keywordtype">int</span> yTxt{textRect.y() + textRect.height() / 2 - hTxt / 2};</div>
-<div class="line"><span class="lineno">  546</span>      <span class="keywordflow">if</span>((yTxt + hTxt) &gt; (viewRect.y() + viewRect.height()))</div>
-<div class="line"><span class="lineno">  547</span>        yTxt = viewRect.y() + viewRect.height() - hTxt;</div>
-<div class="line"><span class="lineno">  548</span>      <span class="keywordflow">if</span>(yTxt &lt; viewRect.y())</div>
-<div class="line"><span class="lineno">  549</span>        yTxt = viewRect.y();</div>
-<div class="line"><span class="lineno">  550</span>      <span class="keywordflow">if</span>((yTxt + hTxt) &gt; (textRect.y() + textRect.height()))</div>
-<div class="line"><span class="lineno">  551</span>        yTxt = textRect.y() + textRect.height() - hTxt;</div>
-<div class="line"><span class="lineno">  552</span>      <span class="keywordflow">if</span>(yTxt &lt; textRect.y())</div>
-<div class="line"><span class="lineno">  553</span>        yTxt = textRect.y();</div>
-<div class="line"><span class="lineno">  554</span>      painter-&gt;setClipRect(textRect);</div>
-<div class="line"><span class="lineno">  555</span>      <a class="code hl_function" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText</a>(painter, QRect{textRect.x(), yTxt, textRect.width(), hTxt}, Qt::AlignVCenter | Qt::AlignRight, text);</div>
-<div class="line"><span class="lineno">  556</span>      painter-&gt;setClipping(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  557</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00560">560</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  561</span>    {</div>
+<div class="line"><span class="lineno">  562</span>      <span class="keywordflow">if</span>(!painter || !option || text.isEmpty() || !viewRect.isValid() || !textRect.isValid()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  563</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> hTxt = option-&gt;fontMetrics.boundingRect(text).height();</div>
+<div class="line"><span class="lineno">  564</span>      <span class="keywordtype">int</span> yTxt{textRect.y() + textRect.height() / 2 - hTxt / 2};</div>
+<div class="line"><span class="lineno">  565</span>      <span class="keywordflow">if</span>((yTxt + hTxt) &gt; (viewRect.y() + viewRect.height()))</div>
+<div class="line"><span class="lineno">  566</span>        yTxt = viewRect.y() + viewRect.height() - hTxt;</div>
+<div class="line"><span class="lineno">  567</span>      <span class="keywordflow">if</span>(yTxt &lt; viewRect.y())</div>
+<div class="line"><span class="lineno">  568</span>        yTxt = viewRect.y();</div>
+<div class="line"><span class="lineno">  569</span>      <span class="keywordflow">if</span>((yTxt + hTxt) &gt; (textRect.y() + textRect.height()))</div>
+<div class="line"><span class="lineno">  570</span>        yTxt = textRect.y() + textRect.height() - hTxt;</div>
+<div class="line"><span class="lineno">  571</span>      <span class="keywordflow">if</span>(yTxt &lt; textRect.y())</div>
+<div class="line"><span class="lineno">  572</span>        yTxt = textRect.y();</div>
+<div class="line"><span class="lineno">  573</span>      painter-&gt;setClipRect(textRect);</div>
+<div class="line"><span class="lineno">  574</span>      <a class="code hl_function" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText</a>(painter, QRect{textRect.x(), yTxt, textRect.width(), hTxt}, Qt::AlignVCenter | Qt::AlignRight, text);</div>
+<div class="line"><span class="lineno">  575</span>      painter-&gt;setClipping(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  576</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText()</a>, and <a class="el" href="#ae3071b51484ebb8e5e9d6e5101568268">tableVerHeaderText()</a>.</p>
+<p class="reference">References <a class="el" href="#a8bbe95a2f1005905e2f37e98cc30e28e">adjustedText()</a>, and <a class="el" href="#a63bfb93ee8b1cae3c1ee4b499ea634bd">tableVerHeaderText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="#ae3071b51484ebb8e5e9d6e5101568268">tableVerHeaderText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, and <a class="el" href="#a63bfb93ee8b1cae3c1ee4b499ea634bd">tableVerHeaderText()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_ae3071b51484ebb8e5e9d6e5101568268_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a63bfb93ee8b1cae3c1ee4b499ea634bd_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_ae3071b51484ebb8e5e9d6e5101568268_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a63bfb93ee8b1cae3c1ee4b499ea634bd_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a2178e6384b38b4c1a1cd2f6e614cfc6f" name="a2178e6384b38b4c1a1cd2f6e614cfc6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2178e6384b38b4c1a1cd2f6e614cfc6f">&#9670;&#160;</a></span>textEditBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace{Gui.cpp}::draw::textEditBase </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOption *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">ThemeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>themeData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>darkBg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws the background for a text-entry control. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00459">459</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  460</span>    {</div>
+<div class="line"><span class="lineno">  461</span>      <span class="keywordflow">if</span>(!painter || !option) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  462</span>      painter-&gt;setPen(Qt::NoPen);</div>
+<div class="line"><span class="lineno">  463</span>      painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  464</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> isEnabled = option-&gt;state &amp; QStyle::State_Enabled;</div>
+<div class="line"><span class="lineno">  465</span>      <span class="keywordflow">if</span>(darkBg) {</div>
+<div class="line"><span class="lineno">  466</span>        painter-&gt;setBrush(isEnabled ? themeData.<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">surfaces_</a>.<a class="code hl_variable" href="../../d7/dc3/namespacenpi_1_1gui.html#af802a14ed0526477d68605de91bb1b1d">sunken_</a> : themeData.<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a01e5f381d9c1002e8216d743195c12aa">disabledSunken_</a>);</div>
+<div class="line"><span class="lineno">  467</span>        painter-&gt;drawRoundedRect(option-&gt;rect, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a>);</div>
+<div class="line"><span class="lineno">  468</span>      }</div>
+<div class="line"><span class="lineno">  469</span>      <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  470</span>        painter-&gt;setBrush(themeData.<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">surfaces_</a>.<a class="code hl_variable" href="../../d7/dc3/namespacenpi_1_1gui.html#a0a0fd1396ec2b0a4be1530be886f7709">raised_</a>);</div>
+<div class="line"><span class="lineno">  471</span>        painter-&gt;drawRoundedRect(option-&gt;rect, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a>);</div>
+<div class="line"><span class="lineno">  472</span>        painter-&gt;setBrush(isEnabled ? themeData.<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">surfaces_</a>.<a class="code hl_variable" href="../../d7/dc3/namespacenpi_1_1gui.html#af802a14ed0526477d68605de91bb1b1d">sunken_</a> : themeData.<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a01e5f381d9c1002e8216d743195c12aa">disabledSunken_</a>);</div>
+<div class="line"><span class="lineno">  473</span>        painter-&gt;drawRoundedRect(option-&gt;rect.adjusted(1, 1, -1, -1), <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">innerRadius</a>, <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">innerRadius</a>);</div>
+<div class="line"><span class="lineno">  474</span>      }</div>
+<div class="line"><span class="lineno">  475</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a01e5f381d9c1002e8216d743195c12aa"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a01e5f381d9c1002e8216d743195c12aa">anonymous_namespace{Gui.cpp}::ThemeData::disabledSunken_</a></div><div class="ttdeci">QColor disabledSunken_</div><div class="ttdoc">Disabled sunken background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00223">Gui.cpp:223</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab963c28bba91ecfbc45c09c7fcc6a589"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">anonymous_namespace{Gui.cpp}::ThemeData::surfaces_</a></div><div class="ttdeci">npi::gui::Surfaces surfaces_</div><div class="ttdoc">Surface background colors.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00219">Gui.cpp:219</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_aff5afbe0a76b10e27360d733d02d24d4"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">anonymous_namespace{Gui.cpp}::outerRadius</a></div><div class="ttdeci">constexpr qreal outerRadius</div><div class="ttdoc">Outer corner radius.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00193">Gui.cpp:193</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a0a0fd1396ec2b0a4be1530be886f7709"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a0a0fd1396ec2b0a4be1530be886f7709">npi::gui::Surfaces::raised_</a></div><div class="ttdeci">QColor raised_</div><div class="ttdoc">Raised surface background.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00254">Gui.h:254</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_af802a14ed0526477d68605de91bb1b1d"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#af802a14ed0526477d68605de91bb1b1d">npi::gui::Surfaces::sunken_</a></div><div class="ttdeci">QColor sunken_</div><div class="ttdoc">Recessed surface background.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00252">Gui.h:252</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a01e5f381d9c1002e8216d743195c12aa">anonymous_namespace{Gui.cpp}::ThemeData::disabledSunken_</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">anonymous_namespace{Gui.cpp}::innerRadius</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">anonymous_namespace{Gui.cpp}::outerRadius</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a0a0fd1396ec2b0a4be1530be886f7709">npi::gui::Surfaces::raised_</a>, <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#af802a14ed0526477d68605de91bb1b1d">npi::gui::Surfaces::sunken_</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">anonymous_namespace{Gui.cpp}::ThemeData::surfaces_</a>, and <a class="el" href="#a2178e6384b38b4c1a1cd2f6e614cfc6f">textEditBase()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0">anonymous_namespace{Gui.cpp}::GuiStyle::drawComplexControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748">anonymous_namespace{Gui.cpp}::GuiStyle::drawPrimitive()</a>, and <a class="el" href="#a2178e6384b38b4c1a1cd2f6e614cfc6f">textEditBase()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a2178e6384b38b4c1a1cd2f6e614cfc6f_cgraph.svg" width="424" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw_a2178e6384b38b4c1a1cd2f6e614cfc6f_icgraph.svg" width="654" height="227"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

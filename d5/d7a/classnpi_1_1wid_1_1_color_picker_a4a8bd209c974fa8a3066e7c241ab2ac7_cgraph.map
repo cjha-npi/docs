@@ -1,0 +1,7 @@
+<map id="npi::wid::ColorPicker::channelSpinValueChanged_" name="npi::wid::ColorPicker::channelSpinValueChanged_">
+<area shape="rect" id="Node000001" title="Handles user changes to channel values." alt="" coords="5,13,403,38"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a33c98248f8c09263aca637adf371626b" title="Updates the color and preview from the editors; optionally signals color change." alt="" coords="451,5,640,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,23,445,26,440,26,402,28"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a684fae671e5e04bbfb393debca35a620" title="Signal for color change." alt="" coords="688,5,877,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="640,23,683,26,678,26,640,28"/>
+</map>

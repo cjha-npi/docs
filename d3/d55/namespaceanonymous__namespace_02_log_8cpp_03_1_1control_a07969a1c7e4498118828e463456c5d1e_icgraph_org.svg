@@ -100,30 +100,12 @@
 </a>
 </g>
 </g>
-<!-- Node10 -->
-<g id="Node000010" class="node">
-<title>Node10</title>
-<g id="a_Node000010"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a1c8be170c09e71630d3e61964c5681dc" target="_top" xlink:title="Changes the fields included in displayed logs.">
-<polygon fill="white" stroke="none" points="775,-252.88 603,-252.88 603,-233.62 775,-233.62 775,-252.88"/>
-<text xml:space="preserve" text-anchor="middle" x="689" y="-238.43" font-family="Consolas" font-size="11.00">npi::log::setDisplayFields</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node10 -->
-<g id="edge13_Node000001_Node000010" class="edge">
-<title>Node1&#45;&gt;Node10</title>
-<g id="a_edge13_Node000001_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M900.62,-216.65C858.41,-221.98 807.36,-228.43 766.09,-233.64"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="905.57,-216.03 900.9,-218.89 904.3,-216.19 900.61,-216.65 900.61,-216.65 900.61,-216.65 904.3,-216.19 900.33,-214.42 905.57,-216.03"/>
-</a>
-</g>
-</g>
 <!-- Node11 -->
 <g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_Node000011"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a314e1bbd60d0d23d037fdb863ad706fd" target="_top" xlink:title="Changes the fields included in normal log files.">
-<polygon fill="white" stroke="none" points="766,-215.88 612,-215.88 612,-196.62 766,-196.62 766,-215.88"/>
-<text xml:space="preserve" text-anchor="middle" x="689" y="-201.43" font-family="Consolas" font-size="11.00">npi::log::setFileFields</text>
+<g id="a_Node000011"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a1c8be170c09e71630d3e61964c5681dc" target="_top" xlink:title="Changes the fields included in displayed logs.">
+<polygon fill="white" stroke="none" points="775,-252.88 603,-252.88 603,-233.62 775,-233.62 775,-252.88"/>
+<text xml:space="preserve" text-anchor="middle" x="689" y="-238.43" font-family="Consolas" font-size="11.00">npi::log::setDisplayFields</text>
 </a>
 </g>
 </g>
@@ -131,17 +113,17 @@
 <g id="edge14_Node000001_Node000011" class="edge">
 <title>Node1&#45;&gt;Node11</title>
 <g id="a_edge14_Node000001_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M814.01,-206.25C797.2,-206.25 780.8,-206.25 765.72,-206.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="819,-206.25 814,-208.5 817.72,-206.25 814,-206.25 814,-206.25 814,-206.25 817.72,-206.25 814,-204 819,-206.25"/>
+<path fill="none" stroke="#63b8ff" d="M900.62,-216.65C858.41,-221.98 807.36,-228.43 766.09,-233.64"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="905.57,-216.03 900.9,-218.89 904.3,-216.19 900.61,-216.65 900.61,-216.65 900.61,-216.65 904.3,-216.19 900.33,-214.42 905.57,-216.03"/>
 </a>
 </g>
 </g>
 <!-- Node12 -->
 <g id="Node000012" class="node">
 <title>Node12</title>
-<g id="a_Node000012"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc" target="_top" xlink:title="Changes the custom Qt logging category filter rules.">
-<polygon fill="white" stroke="none" points="769,-178.88 609,-178.88 609,-159.62 769,-159.62 769,-178.88"/>
-<text xml:space="preserve" text-anchor="middle" x="689" y="-164.43" font-family="Consolas" font-size="11.00">npi::log::setFilterRules</text>
+<g id="a_Node000012"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a314e1bbd60d0d23d037fdb863ad706fd" target="_top" xlink:title="Changes the fields included in normal log files.">
+<polygon fill="white" stroke="none" points="766,-215.88 612,-215.88 612,-196.62 766,-196.62 766,-215.88"/>
+<text xml:space="preserve" text-anchor="middle" x="689" y="-201.43" font-family="Consolas" font-size="11.00">npi::log::setFileFields</text>
 </a>
 </g>
 </g>
@@ -149,17 +131,17 @@
 <g id="edge15_Node000001_Node000012" class="edge">
 <title>Node1&#45;&gt;Node12</title>
 <g id="a_edge15_Node000001_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M900.62,-195.85C858.41,-190.52 807.36,-184.07 766.09,-178.86"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="905.57,-196.47 900.33,-198.08 904.3,-196.31 900.61,-195.85 900.61,-195.85 900.61,-195.85 904.3,-196.31 900.9,-193.61 905.57,-196.47"/>
+<path fill="none" stroke="#63b8ff" d="M814.01,-206.25C797.2,-206.25 780.8,-206.25 765.72,-206.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="819,-206.25 814,-208.5 817.72,-206.25 814,-206.25 814,-206.25 814,-206.25 817.72,-206.25 814,-204 819,-206.25"/>
 </a>
 </g>
 </g>
 <!-- Node13 -->
 <g id="Node000013" class="node">
 <title>Node13</title>
-<g id="a_Node000013"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a7cef00f1da1eed6bc0afca56fe9cfb0e" target="_top" xlink:title="Enables or disables debug log display.">
-<polygon fill="white" stroke="none" points="772,-141.88 606,-141.88 606,-122.62 772,-122.62 772,-141.88"/>
-<text xml:space="preserve" text-anchor="middle" x="689" y="-127.42" font-family="Consolas" font-size="11.00">npi::log::setShowDebugLog</text>
+<g id="a_Node000013"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc" target="_top" xlink:title="Changes the custom Qt logging category filter rules.">
+<polygon fill="white" stroke="none" points="769,-178.88 609,-178.88 609,-159.62 769,-159.62 769,-178.88"/>
+<text xml:space="preserve" text-anchor="middle" x="689" y="-164.43" font-family="Consolas" font-size="11.00">npi::log::setFilterRules</text>
 </a>
 </g>
 </g>
@@ -167,17 +149,17 @@
 <g id="edge16_Node000001_Node000013" class="edge">
 <title>Node1&#45;&gt;Node13</title>
 <g id="a_edge16_Node000001_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M946.52,-194.98C906.79,-182.93 841.26,-163.76 784,-150.25 771.22,-147.23 757.38,-144.37 744.35,-141.84"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="951.02,-196.34 945.59,-197.04 949.8,-195.97 946.24,-194.89 946.24,-194.89 946.24,-194.89 949.8,-195.97 946.89,-192.74 951.02,-196.34"/>
+<path fill="none" stroke="#63b8ff" d="M900.62,-195.85C858.41,-190.52 807.36,-184.07 766.09,-178.86"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="905.57,-196.47 900.33,-198.08 904.3,-196.31 900.61,-195.85 900.61,-195.85 900.61,-195.85 904.3,-196.31 900.9,-193.61 905.57,-196.47"/>
 </a>
 </g>
 </g>
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a462603ec8bccd8b4cb3abc387fd6cc33" target="_top" xlink:title="Enables or disables information log display.">
-<polygon fill="white" stroke="none" points="769,-104.88 609,-104.88 609,-85.62 769,-85.62 769,-104.88"/>
-<text xml:space="preserve" text-anchor="middle" x="689" y="-90.42" font-family="Consolas" font-size="11.00">npi::log::setShowInfoLog</text>
+<g id="a_Node000014"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a7cef00f1da1eed6bc0afca56fe9cfb0e" target="_top" xlink:title="Enables or disables debug log display.">
+<polygon fill="white" stroke="none" points="772,-141.88 606,-141.88 606,-122.62 772,-122.62 772,-141.88"/>
+<text xml:space="preserve" text-anchor="middle" x="689" y="-127.42" font-family="Consolas" font-size="11.00">npi::log::setShowDebugLog</text>
 </a>
 </g>
 </g>
@@ -185,17 +167,17 @@
 <g id="edge17_Node000001_Node000014" class="edge">
 <title>Node1&#45;&gt;Node14</title>
 <g id="a_edge17_Node000001_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M961.28,-193.9C925.46,-174.04 851.26,-135.03 784,-113.25 773.8,-109.95 762.78,-107.17 751.99,-104.85"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="965.22,-196.09 959.75,-195.62 964.1,-195.47 960.85,-193.66 960.85,-193.66 960.85,-193.66 964.1,-195.47 961.94,-191.69 965.22,-196.09"/>
+<path fill="none" stroke="#63b8ff" d="M946.52,-194.98C906.79,-182.93 841.26,-163.76 784,-150.25 771.22,-147.23 757.38,-144.37 744.35,-141.84"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="951.02,-196.34 945.59,-197.04 949.8,-195.97 946.24,-194.89 946.24,-194.89 946.24,-194.89 949.8,-195.97 946.89,-192.74 951.02,-196.34"/>
 </a>
 </g>
 </g>
 <!-- Node15 -->
 <g id="Node000015" class="node">
 <title>Node15</title>
-<g id="a_Node000015"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#aa8f2d23ad1c757d005b28864d17b6ba7" target="_top" xlink:title="Enables or disables warning log display.">
-<polygon fill="white" stroke="none" points="769,-67.88 609,-67.88 609,-48.62 769,-48.62 769,-67.88"/>
-<text xml:space="preserve" text-anchor="middle" x="689" y="-53.42" font-family="Consolas" font-size="11.00">npi::log::setShowWarnLog</text>
+<g id="a_Node000015"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a462603ec8bccd8b4cb3abc387fd6cc33" target="_top" xlink:title="Enables or disables information log display.">
+<polygon fill="white" stroke="none" points="769,-104.88 609,-104.88 609,-85.62 769,-85.62 769,-104.88"/>
+<text xml:space="preserve" text-anchor="middle" x="689" y="-90.42" font-family="Consolas" font-size="11.00">npi::log::setShowInfoLog</text>
 </a>
 </g>
 </g>
@@ -203,18 +185,17 @@
 <g id="edge18_Node000001_Node000015" class="edge">
 <title>Node1&#45;&gt;Node15</title>
 <g id="a_edge18_Node000001_Node000015"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M967.46,-192.98C935.44,-166.37 858.82,-106.48 784,-76.25 775.6,-72.86 766.52,-70.09 757.43,-67.85"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="971.28,-196.17 966,-194.69 970.29,-195.35 967.44,-192.96 967.44,-192.96 967.44,-192.96 970.29,-195.35 968.89,-191.24 971.28,-196.17"/>
+<path fill="none" stroke="#63b8ff" d="M961.28,-193.9C925.46,-174.04 851.26,-135.03 784,-113.25 773.8,-109.95 762.78,-107.17 751.99,-104.85"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="965.22,-196.09 959.75,-195.62 964.1,-195.47 960.85,-193.66 960.85,-193.66 960.85,-193.66 964.1,-195.47 961.94,-191.69 965.22,-196.09"/>
 </a>
 </g>
 </g>
 <!-- Node16 -->
 <g id="Node000016" class="node">
 <title>Node16</title>
-<g id="a_Node000016"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a780d5155d9059b348224270ef35f1af1" target="_top" xlink:title="Enables or disables important&#45;log forwarding for warning logs.">
-<polygon fill="white" stroke="none" points="784,-30.5 594,-30.5 594,0 784,0 784,-30.5"/>
-<text xml:space="preserve" text-anchor="start" x="602" y="-16.05" font-family="Consolas" font-size="11.00">npi::log::setWarnLogImportant</text>
-<text xml:space="preserve" text-anchor="middle" x="689" y="-4.8" font-family="Consolas" font-size="11.00">State</text>
+<g id="a_Node000016"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#aa8f2d23ad1c757d005b28864d17b6ba7" target="_top" xlink:title="Enables or disables warning log display.">
+<polygon fill="white" stroke="none" points="769,-67.88 609,-67.88 609,-48.62 769,-48.62 769,-67.88"/>
+<text xml:space="preserve" text-anchor="middle" x="689" y="-53.42" font-family="Consolas" font-size="11.00">npi::log::setShowWarnLog</text>
 </a>
 </g>
 </g>
@@ -222,6 +203,25 @@
 <g id="edge19_Node000001_Node000016" class="edge">
 <title>Node1&#45;&gt;Node16</title>
 <g id="a_edge19_Node000001_Node000016"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M967.46,-192.98C935.44,-166.37 858.82,-106.48 784,-76.25 775.6,-72.86 766.52,-70.09 757.43,-67.85"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="971.28,-196.17 966,-194.69 970.29,-195.35 967.44,-192.96 967.44,-192.96 967.44,-192.96 970.29,-195.35 968.89,-191.24 971.28,-196.17"/>
+</a>
+</g>
+</g>
+<!-- Node17 -->
+<g id="Node000017" class="node">
+<title>Node17</title>
+<g id="a_Node000017"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#a780d5155d9059b348224270ef35f1af1" target="_top" xlink:title="Enables or disables important&#45;log forwarding for warning logs.">
+<polygon fill="white" stroke="none" points="784,-30.5 594,-30.5 594,0 784,0 784,-30.5"/>
+<text xml:space="preserve" text-anchor="start" x="602" y="-16.05" font-family="Consolas" font-size="11.00">npi::log::setWarnLogImportant</text>
+<text xml:space="preserve" text-anchor="middle" x="689" y="-4.8" font-family="Consolas" font-size="11.00">State</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node17 -->
+<g id="edge20_Node000001_Node000017" class="edge">
+<title>Node1&#45;&gt;Node17</title>
+<g id="a_edge20_Node000001_Node000017"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M971.02,-192.67C942.15,-160.82 865.08,-80.86 784,-39.25 777.41,-35.87 770.3,-32.94 763.06,-30.41"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="974.11,-196.11 969.09,-193.9 973.25,-195.16 970.76,-192.39 970.76,-192.39 970.76,-192.39 973.25,-195.16 972.44,-190.89 974.11,-196.11"/>
 </a>
@@ -328,6 +328,24 @@
 <g id="a_edge9_Node000005_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M220.25,-358.7C208.75,-357.45 196.69,-356.15 184.8,-354.86"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="225,-359.21 219.78,-360.91 223.72,-359.08 220.03,-358.68 220.03,-358.68 220.03,-358.68 223.72,-359.08 220.27,-356.44 225,-359.21"/>
+</a>
+</g>
+</g>
+<!-- Node10 -->
+<g id="Node000010" class="node">
+<title>Node10</title>
+<g id="a_Node000010"><a xlink:href="../../d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" target="_top" xlink:title="Restores the default log directory.">
+<polygon fill="white" stroke="none" points="555,-289.88 395,-289.88 395,-270.62 555,-270.62 555,-289.88"/>
+<text xml:space="preserve" text-anchor="middle" x="475" y="-275.43" font-family="Consolas" font-size="11.00">npi::log::resetDirectory</text>
+</a>
+</g>
+</g>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge13_Node000009_Node000010" class="edge">
+<title>Node9&#45;&gt;Node10</title>
+<g id="a_edge13_Node000009_Node000010"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M609.08,-280.25C591.38,-280.25 572.59,-280.25 554.89,-280.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="613.82,-280.25 608.82,-282.5 612.54,-280.25 608.82,-280.25 608.82,-280.25 608.82,-280.25 612.54,-280.25 608.82,-278 613.82,-280.25"/>
 </a>
 </g>
 </g>

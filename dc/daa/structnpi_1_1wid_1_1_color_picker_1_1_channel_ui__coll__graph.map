@@ -1,0 +1,11 @@
+<map id="npi::wid::ColorPicker::ChannelUi" name="npi::wid::ColorPicker::ChannelUi">
+<area shape="rect" id="Node000001" title="Controls for editing one channel." alt="" coords="115,101,392,127"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,99,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,32,173,75,229,101,224,101,171,79,82,37"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="123,5,248,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,35,248,101,242,101,197,40"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="272,5,373,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="312,36,264,103,260,99,307,38"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="397,5,483,31"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="417,34,337,79,283,104,281,98,335,75,411,35"/>
+</map>

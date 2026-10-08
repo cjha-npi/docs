@@ -1,11 +1,9 @@
 <map id="Main_Proj/Log.h" name="Main_Proj/Log.h">
-<area shape="rect" id="Node000001" title="Declares runtime configuration and console controls for the logging system." alt="" coords="133,5,275,31"/>
+<area shape="rect" id="Node000001" title="Configuration and control of the application&#39;s logging system." alt="" coords="75,5,216,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,83,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,33,78,78,76,73,177,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,32,68,77,65,73,127,30"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="107,79,184,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,30,161,75,158,71,192,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,29,148,72,143,70,143,32"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="208,79,317,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,28,251,74,246,73,212,33"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="341,79,427,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="233,28,350,76,345,77,232,34"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,28,239,74,234,75,163,33"/>
 </map>

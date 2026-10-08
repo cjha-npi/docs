@@ -1,0 +1,9 @@
+<map id="npi::wid::ColorPicker::applyDesign_" name="npi::wid::ColorPicker::applyDesign_">
+<area shape="rect" id="Node000001" title="Applies the presentation settings." alt="" coords="5,78,307,104"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#abe7e8c77b5c6ea8c2a513e8d28f83008" title="Applies the input background style." alt="" coords="355,5,544,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,76,352,46,348,49,215,81"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4a49eb8ae07c6b583fbc33cb52d248ba" title="Applies input fonts and adjusts control widths." alt="" coords="355,71,544,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,88,349,91,344,91,307,94"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a24751279f07b9f5e77bd2e83f2753f31" title="Updates control visibility and arrangement." alt="" coords="355,136,544,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,101,353,133,348,135,214,106"/>
+</map>

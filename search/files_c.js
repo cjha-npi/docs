@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['run_5fdoxy_5fcmd_2emd_0',['run_doxy_cmd.md',['../dc/d37/run__doxy__cmd_8md.html',1,'']]]
+  ['project_5fsetup_2emd_0',['project_setup.md',['../d8/d6b/project__setup_8md.html',1,'']]]
 ];

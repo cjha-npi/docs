@@ -58,7 +58,7 @@ var sectionId = 'dynsection-7';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Applies the specified theme variant to a QAction&#39;s dynamic icon.">
+<g id="a_Node000001"><a xlink:title="Updates an action&#39;s icon for the selected theme.">
 <polygon fill="#999999" stroke="none" points="340,-60.88 0,-60.88 0,-41.62 340,-41.62 340,-60.88"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-47.42" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::icon::updateDynamicIcon</text>
 </a>
@@ -76,7 +76,7 @@ var sectionId = 'dynsection-7';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" target="_top" xlink:title="Constructs an icon with theme&#45;dependent Off and On states.">
+<g id="a_Node000002"><a xlink:href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" target="_top" xlink:title="Creates a themed icon, using the original icon for missing states.">
 <polygon fill="white" stroke="none" points="566,-66.5 376,-66.5 376,-36 566,-36 566,-66.5"/>
 <text xml:space="preserve" text-anchor="start" x="384" y="-52.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="471" y="-40.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::icon::dynamicIcon</text>
@@ -104,7 +104,7 @@ var sectionId = 'dynsection-7';
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" target="_top" xlink:title="Copies all available Normal&#45;mode pixmaps for one icon state.">
+<g id="a_Node000003"><a xlink:href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" target="_top" xlink:title="Copies the normal&#45;mode pixmaps for one icon state.">
 <polygon fill="white" stroke="none" points="795,-108.12 623,-108.12 623,-66.38 795,-66.38 795,-108.12"/>
 <text xml:space="preserve" text-anchor="start" x="631" y="-93.67" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="631" y="-82.42" font-family="Consolas" font-size="11.00">{Gui::cpp}::icon::copyIcon</text>
@@ -124,7 +124,7 @@ var sectionId = 'dynsection-7';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c" target="_top" xlink:title="Finds the resource path for a theme&#45;dependent icon.">
+<g id="a_Node000004"><a xlink:href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c" target="_top" xlink:title="Finds a theme&#45;specific icon resource, falling back to the default resource.">
 <polygon fill="white" stroke="none" points="816,-30.5 602,-30.5 602,0 816,0 816,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="610" y="-16.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="709" y="-4.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::icon::dynamicIconPath</text>

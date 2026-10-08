@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="QObject dynamic properties providing special GUI functionality.">
+<g id="a_Node000001"><a xlink:title="Dynamic property names for specialized GUI behavior.">
 <polygon fill="#999999" stroke="none" points="106,-19.25 0,-19.25 0,0 106,0 106,-19.25"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-5.8" font-family="Consolas" font-weight="bold" font-size="11.00">npi::gui::Props</text>
 </a>
@@ -49,7 +49,7 @@
 <text xml:space="preserve" text-anchor="start" x="56" y="-101.25" font-family="Consolas" font-size="10.00" fill="grey">PasswordLineEdit</text>
 <text xml:space="preserve" text-anchor="start" x="56" y="-86.75" font-family="Consolas" font-size="10.00" fill="grey">  _</text>
 <text xml:space="preserve" text-anchor="start" x="56" y="-72.25" font-family="Consolas" font-size="10.00" fill="grey">RaisedBase_</text>
-<text xml:space="preserve" text-anchor="start" x="56" y="-57.75" font-family="Consolas" font-size="10.00" fill="grey">SunkenBase_</text>
+<text xml:space="preserve" text-anchor="start" x="56" y="-57.75" font-family="Consolas" font-size="10.00" fill="grey">SepBorders_</text>
 <text xml:space="preserve" text-anchor="start" x="56" y="-43.25" font-family="Consolas" font-size="10.00" fill="grey"> &#160;...</text>
 </g>
 </g>

@@ -405,7 +405,121 @@ Medium Non-Heading Texts</h2>
 <div class="line">  font-size: 1.15em;</div>
 <div class="line">  font-weight: 500;</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dp_dh_dev_hub_overview__markdown_tips_tweaks__special_text_section"></a>
+Special Text Section</h2>
+<p>Creates a section with left border line. Section can include multiple paragraphs and Doxygen tags.</p>
+<div class="fragment"><div class="line">\htmlonly[block]</div>
+<div class="line">&lt;div class=&quot;dp-markdown-section-text&quot;&gt;</div>
+<div class="line">\endhtmlonly</div>
+<div class="line"> </div>
+<div class="line">Existing Markdown content goes here.</div>
+<div class="line"> </div>
+<div class="line">Multiple paragraphs, lists, tables and Doxygen notes can remain unchanged.</div>
+<div class="line"> </div>
+<div class="line">\htmlonly[block]</div>
+<div class="line">&lt;/div&gt;</div>
+<div class="line">\endhtmlonly</div>
+</div><!-- fragment --><p>The section will look like this:</p>
+
+<div class="dp-markdown-section-text">
+<p>Existing Markdown content goes here.</p>
+<p>Multiple paragraphs, lists, tables and Doxygen notes can remain unchanged.</p>
+<dl class="section note"><dt>Note</dt><dd>This is a node</dd></dl>
+
+</div>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Expandable Details Section</h2>
+<p>Doxygen supports HTML <span class="tt">&lt;details&gt;</span> tag in Markdown pages. Inside this tag we can use the <span class="tt">&lt;summary&gt;</span> tag to show its heading.</p>
+<div class="fragment"><div class="line">&lt;details&gt;</div>
+<div class="line">&lt;summary&gt;Details Heading&lt;/summary&gt;</div>
+<div class="line"> </div>
+<div class="line">Place the explanation here.</div>
+<div class="line"> </div>
+<div class="line">- First point.</div>
+<div class="line">- Second point.</div>
+<div class="line"> </div>
+<div class="line">\note Additional information.</div>
+<div class="line"> </div>
+<div class="line">```</div>
+<div class="line">void some_code_Text();</div>
+<div class="line">```</div>
+<div class="line"> </div>
+<div class="line">&lt;/details&gt;</div>
+</div><!-- fragment --><p>It will appear like this:</p>
+<details >
+<summary >
+Details Heading</summary>
+<p></p>
+<p>Place the explanation here.</p>
+<ul>
+<li>First point.</li>
+<li>Second point.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Additional information.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> some_code_Text();</div>
+</div><!-- fragment --><p></p>
+</details>
+<p>To for a <span class="tt">summary</span> that ends with code, for example</p>
+<div class="fragment"><div class="line">&lt;details&gt;</div>
+<div class="line">&lt;summary&gt;`void someCode()`&lt;/summary&gt;</div>
+<div class="line"> </div>
+<div class="line">Place the explanation here.</div>
+<div class="line"> </div>
+<div class="line">- First point.</div>
+<div class="line">- Second point.</div>
+<div class="line"> </div>
+<div class="line">\note Additional information.</div>
+<div class="line"> </div>
+<div class="line">```</div>
+<div class="line">void some_code_Text();</div>
+<div class="line">```</div>
+<div class="line"> </div>
+<div class="line">&lt;/details&gt;</div>
+</div><!-- fragment --><p>We can add <span class="tt">class="ends-with-code"</span> to summary, this makes sure that the end of the summary looks nice. So for example without <span class="tt">class="ends-with-code"</span> it will look like this</p>
+<details >
+<summary >
+<span class="tt">void someCode()</span></summary>
+<p></p>
+<p>Place the explanation here.</p>
+<ul>
+<li>First point.</li>
+<li>Second point.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Additional information.</dd></dl>
+<div class="fragment"><div class="line">void some_code_Text();</div>
+</div><!-- fragment --><p></p>
+</details>
+<p>And with <span class="tt">class="ends-with-code"</span>, that is, with this code:</p>
+<div class="fragment"><div class="line">&lt;details&gt;</div>
+<div class="line">&lt;summary class=&quot;ends-with-code&quot;&gt;`void someCode()`&lt;/summary&gt;</div>
+<div class="line"> </div>
+<div class="line">Place the explanation here.</div>
+<div class="line"> </div>
+<div class="line">- First point.</div>
+<div class="line">- Second point.</div>
+<div class="line"> </div>
+<div class="line">\note Additional information.</div>
+<div class="line"> </div>
+<div class="line">```</div>
+<div class="line">void some_code_Text();</div>
+<div class="line">```</div>
+<div class="line"> </div>
+<div class="line">&lt;/details&gt;</div>
+</div><!-- fragment --><p>it will look like this:</p>
+<details >
+<summary  class="ends-with-code">
+<span class="tt">void someCode()</span></summary>
+<p></p>
+<p>Place the explanation here.</p>
+<ul>
+<li>First point.</li>
+<li>Second point.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Additional information.</dd></dl>
+<div class="fragment"><div class="line">void some_code_Text();</div>
+</div><!-- fragment --><p></p>
+</details>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

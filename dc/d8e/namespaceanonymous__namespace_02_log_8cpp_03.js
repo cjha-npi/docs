@@ -71,6 +71,16 @@ var namespaceanonymous__namespace_02_log_8cpp_03 =
       [ "maxPackedSlots", "de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a85a4fe9c4b2342b1b7947cdc979c1ae2", null ],
       [ "nullField", "de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a74792b6d352eb4ffd343c105504ce1ac", null ]
     ] ],
+    [ "testing", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html", [
+      [ "msgHdlrTiming_appendTimeDelta", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a42d5959c6c5c41621a5b0d51743de150", null ],
+      [ "msgHdlrTiming_control", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#ac20ee2bdc8dc34582c2679a82f5c8e45", null ],
+      [ "msgHdlrTiming_logMsgHdlr", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#acb14cb2b0d9b4692da78884e59e6b160", null ],
+      [ "msgHdlrTiming_count", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#aec8fa07b833669114b28399f8624e248", null ],
+      [ "msgHdlrTiming_lock", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a71fe7b9ac5c5410274b7d85542fdfd66", null ],
+      [ "msgHdlrTiming_state", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a7cdc7a649174c2e0de0795627b21c0f9", null ],
+      [ "msgHdlrTiming_timer", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#afd3c0ce383a5df1322733688fcea7e91", null ],
+      [ "msgHdlrTiming_totNs", "df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a0e7a1c52414f3eb6ec881aa7ed7ce3f4", null ]
+    ] ],
     [ "workers", "dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html", [
       [ "cleanup", "dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#acce06e15c0cb54f327204ed7f65005d0", null ],
       [ "directoryCleanup", "dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1d722dbe548810e26de6526339f7db0a", null ],

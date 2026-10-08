@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Provides application&#45;standard metrics for selected control elements.">
+<g id="a_Node000001"><a xlink:title="Provides custom control spacing, icon sizes and scrollbar dimensions.">
 <polygon fill="#999999" stroke="none" points="328,-57.88 0,-57.88 0,-38.62 328,-38.62 328,-57.88"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-44.42" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::GuiStyle::pixelMetric</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" target="_top" xlink:title="Returns sizing data based on the widget&#39;s font size and height limits.">
+<g id="a_Node000002"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" target="_top" xlink:title="Returns control sizes based on the widget&#39;s font and height limits.">
 <polygon fill="white" stroke="none" points="500,-69.12 364,-69.12 364,-27.38 500,-27.38 500,-69.12"/>
 <text xml:space="preserve" text-anchor="start" x="372" y="-54.67" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="372" y="-43.42" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
@@ -40,7 +40,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" target="_top" xlink:title="Calculates standardized widget and icon dimensions for a font.">
+<g id="a_Node000003"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" target="_top" xlink:title="Calculates control and icon sizes from the font size and height limits.">
 <polygon fill="white" stroke="none" points="729,-97.5 539,-97.5 539,-67 729,-67 729,-97.5"/>
 <text xml:space="preserve" text-anchor="start" x="547" y="-83.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="634" y="-71.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::size::dataForFont</text>
@@ -59,7 +59,7 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7" target="_top" xlink:title="Returns whether two fonts use the same configured size.">
+<g id="a_Node000005"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7" target="_top" xlink:title="Returns whether two fonts have the same configured size.">
 <polygon fill="white" stroke="none" points="732,-30.5 536,-30.5 536,0 732,0 732,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="544" y="-16.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="634" y="-4.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::size::sameFontSize</text>
@@ -87,7 +87,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" target="_top" xlink:title="Returns the gap between an icon and the inner edge of its control.">
+<g id="a_Node000004"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" target="_top" xlink:title="Returns the icon&#39;s edge spacing for the control height.">
 <polygon fill="white" stroke="none" points="940,-103.12 768,-103.12 768,-61.38 940,-61.38 940,-103.12"/>
 <text xml:space="preserve" text-anchor="start" x="776" y="-88.67" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="776" y="-77.42" font-family="Consolas" font-size="11.00">{Gui::cpp}::size::iconEdge</text>

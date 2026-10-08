@@ -1,6 +1,8 @@
 var dir_ce0e7e0051629da598757e5adae9dc7c =
 [
     [ "AppTypes.hpp", "dd/d34/_app_types_8hpp.html", "dd/d34/_app_types_8hpp" ],
+    [ "ColorPicker.cpp", "d9/da7/_color_picker_8cpp.html", null ],
+    [ "ColorPicker.h", "da/dd0/_color_picker_8h.html", "da/dd0/_color_picker_8h" ],
     [ "CrossProcessLocker.hpp", "d8/d25/_cross_process_locker_8hpp.html", "d8/d25/_cross_process_locker_8hpp" ],
     [ "Gui.cpp", "dd/d7f/_gui_8cpp.html", "dd/d7f/_gui_8cpp" ],
     [ "Gui.h", "d1/d67/_gui_8h.html", "d1/d67/_gui_8h" ],

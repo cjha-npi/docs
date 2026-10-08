@@ -34,6 +34,10 @@ var hierarchy =
     [ "npi::ind::LockedValue&lt; T &gt;::WriteAccess", "dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html", null ],
     [ "npi::ind::SlotGate", "d7/dbf/classnpi_1_1ind_1_1_slot_gate.html", null ],
     [ "npi::ind::SlotGate::Blocker", "d6/d53/classnpi_1_1ind_1_1_slot_gate_1_1_blocker.html", null ],
+    [ "npi::wid::ColorPicker::ChannelConfig", "d5/d7a/classnpi_1_1wid_1_1_color_picker.html#d7/dde/structnpi_1_1wid_1_1_color_picker_1_1_channel_config", null ],
+    [ "npi::wid::ColorPicker::ChannelUi", "d5/d7a/classnpi_1_1wid_1_1_color_picker.html#d4/d74/structnpi_1_1wid_1_1_color_picker_1_1_channel_ui", null ],
+    [ "npi::wid::ColorPicker::Config", "d5/d7a/classnpi_1_1wid_1_1_color_picker.html#d6/dc2/structnpi_1_1wid_1_1_color_picker_1_1_config", null ],
+    [ "npi::wid::ColorPicker::Design", "d5/d7a/classnpi_1_1wid_1_1_color_picker.html#de/d00/structnpi_1_1wid_1_1_color_picker_1_1_design", null ],
     [ "QAbstractNativeEventFilter", null, [
       [ "anonymous_namespace{Gui.cpp}::GuiStyle", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html", null ]
     ] ],
@@ -42,6 +46,9 @@ var hierarchy =
     ] ],
     [ "QProxyStyle", null, [
       [ "anonymous_namespace{Gui.cpp}::GuiStyle", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html", null ]
+    ] ],
+    [ "QWidget", null, [
+      [ "npi::wid::ColorPicker", "d5/d7a/classnpi_1_1wid_1_1_color_picker.html", null ]
     ] ],
     [ "char", "d0/deb/namespace_3global_scope_4.html#da/d7d/classchar", null ],
     [ "QReadWriteLock", "d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock", null ]

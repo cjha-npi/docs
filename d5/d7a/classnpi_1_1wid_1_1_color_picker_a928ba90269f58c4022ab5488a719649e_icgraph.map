@@ -1,0 +1,20 @@
+<map id="npi::wid::ColorPicker::ColorPicker" name="npi::wid::ColorPicker::ColorPicker">
+<area shape="rect" id="Node000001" title="Constructs with default settings; supports Qt Designer." alt="" coords="243,242,536,268"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="438,236,441,231,435,227,418,222,389,221,358,223,341,228,338,233,348,242,342,242,333,234,338,224,357,218,389,216,418,217,437,222,446,230,442,240"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aa7871054993cf2abe2fe689ba7eb7010" title="Constructs with config and design." alt="" coords="5,5,195,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="371,236,301,154,250,104,193,61,170,48,169,43,196,57,254,100,305,150,377,236"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a8e4aa6f82228a5282567cc9e9ad8306d" title="Constructs with config." alt="" coords="5,71,195,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="363,238,290,185,243,155,193,127,166,114,164,109,196,122,246,150,293,181,368,237"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ae0932504da7d17f785c0efb6a9826807" title="Constructs with design." alt="" coords="5,136,195,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="341,241,160,179,160,174,346,238"/>
+<area shape="rect" id="Node000005" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a5cf8c4a949af7778208db1c8083c7f3b" title="Constructs with the color, config and design." alt="" coords="5,201,195,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="268,243,195,235,194,230,272,240"/>
+<area shape="rect" id="Node000006" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a078fc70cba56118546364715ce80060a" title="Constructs with color and config." alt="" coords="5,267,195,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="263,270,195,279,193,274,267,267"/>
+<area shape="rect" id="Node000007" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aa9a8de83d1845dc0d84aa756fbb0702a" title="Constructs with color and design." alt="" coords="5,332,195,373"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="342,273,162,335,160,330,344,268"/>
+<area shape="rect" id="Node000008" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ae1538305c67f8a49c4cccac3d09663d6" title="Constructs with color." alt="" coords="5,397,195,438"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="368,271,293,328,246,359,196,387,166,400,163,395,193,382,243,354,290,324,364,274"/>
+<area shape="rect" id="Node000009" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a14aef5ae6b7d01d3778312f9432b0e7d" title="Opens a modal dialog for selecting a color." alt="" coords="5,463,195,503"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="376,272,305,359,254,409,196,452,170,465,168,460,193,447,250,404,301,356,372,275"/>
+</map>

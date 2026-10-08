@@ -116,7 +116,7 @@ var sectionId = 'dynsection-30';
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a00a4b756fe1aad5c9ea2f9b064d55f92" target="_top" xlink:title="Appends a local timestamp with millisecond precision and timezone text.">
+<g id="a_Node000008"><a xlink:href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a00a4b756fe1aad5c9ea2f9b064d55f92" target="_top" xlink:title="Appends a local timestamp with millisecond precision.">
 <polygon fill="white" stroke="none" points="476,-431.75 340,-431.75 340,-390 476,-390 476,-431.75"/>
 <text xml:space="preserve" text-anchor="start" x="348" y="-417.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="348" y="-406.05" font-family="Consolas" font-size="11.00">{Log::cpp}::format::</text>

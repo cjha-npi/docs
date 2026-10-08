@@ -1,25 +1,29 @@
 <map id="anonymous_namespace{Gui::cpp}::GuiStyle::sizeFromContents" name="anonymous_namespace{Gui::cpp}::GuiStyle::sizeFromContents">
-<area shape="rect" id="Node000001" title="Calculates customized content sizes for supported controls." alt="" coords="5,182,483,207"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0" title="Returns whether a button qualifies for automatic width&#45;equals&#45;height sizing." alt="" coords="555,35,768,90"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,179,530,100,565,92,560,94,531,105,285,184"/>
-<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" title="Returns sizing data based on the widget&#39;s font size and height limits." alt="" coords="571,115,752,170"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="347,179,565,153,560,156,348,184"/>
-<area shape="rect" id="Node000007" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a5635509f7562cd9c4828e4a6290a777c" title="Returns whether a widget has an item&#45;view viewport among its ancestors." alt="" coords="547,219,776,274"/>
-<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="347,205,541,230,536,232,347,210"/>
-<area shape="rect" id="Node000009" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aebe26ff25d1dc2674278ccd056afdeb9" title="Returns whether a contents type uses the standardized control height." alt="" coords="531,323,792,378"/>
-<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="280,205,581,318,577,322,279,210"/>
-<area shape="rect" id="Node000004" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" title="Calculates standardized widget and icon dimensions for a font." alt="" coords="844,37,1097,78"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="751,113,839,88,883,79,878,80,841,93,753,118"/>
-<area shape="rect" id="Node000006" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7" title="Returns whether two fonts use the same configured size." alt="" coords="840,126,1101,167"/>
-<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="751,141,835,144,829,145,752,146"/>
-<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="917,36,913,28,922,18,941,12,971,10,1014,15,1025,22,1028,31,1023,29,1021,25,1012,20,971,15,942,18,924,23,918,29,922,38"/>
-<area shape="rect" id="Node000005" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" title="Returns the gap between an icon and the inner edge of its control." alt="" coords="1149,29,1379,85"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="1097,55,1144,57,1139,58,1097,60"/>
-<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="1208,28,1208,19,1218,10,1237,5,1264,3,1303,7,1315,13,1321,22,1316,21,1311,17,1301,12,1264,8,1238,10,1220,15,1213,21,1212,31"/>
-<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="917,125,913,117,922,107,941,102,971,100,1014,105,1025,111,1028,121,1023,118,1021,115,1012,110,971,105,942,107,924,112,918,118,922,128"/>
-<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="602,217,602,208,613,200,633,194,661,192,702,197,715,202,721,211,716,210,711,206,701,202,661,197,633,199,615,204,607,211,607,220"/>
-<area shape="rect" id="Node000008" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a07860869e541a5f987d893214c377ad3" title="Returns whether a widget is the viewport of its parent item view." alt="" coords="848,219,1093,274"/>
-<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="776,244,843,246,838,247,776,249"/>
-<area shape="poly" id="edge12_Node000008_Node000008" title=" " alt="" coords="915,217,914,208,925,200,943,194,971,192,1009,197,1021,202,1028,212,1023,210,1018,206,1008,202,971,197,944,199,927,204,919,211,919,220"/>
-<area shape="poly" id="edge14_Node000009_Node000009" title=" " alt="" coords="602,321,602,312,613,304,633,298,661,296,702,301,715,306,721,316,716,314,711,310,701,306,661,301,633,303,615,308,607,315,606,325"/>
+<area shape="rect" id="Node000001" title="Adjusts control sizes for consistent heights, spacing and square buttons." alt="" coords="5,214,483,239"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0" title="Returns whether a button should automatically request square sizing." alt="" coords="555,36,768,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,211,583,92,580,97,279,216"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" title="Returns control sizes based on the widget&#39;s font and height limits." alt="" coords="571,147,752,202"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="347,211,565,185,560,188,348,216"/>
+<area shape="rect" id="Node000009" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a5635509f7562cd9c4828e4a6290a777c" title="Returns whether the widget is inside an item view." alt="" coords="547,251,776,306"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="347,237,541,262,536,264,347,242"/>
+<area shape="rect" id="Node000011" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aebe26ff25d1dc2674278ccd056afdeb9" title="Returns whether a control uses the standard height." alt="" coords="531,355,792,410"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="280,237,581,350,577,354,279,242"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aba99add909d785d46d3584564b9026ae" title="Uses the theme&#39;s table grid color and default hints for everything else." alt="" coords="880,7,1061,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="767,51,875,43,870,45,768,56"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a38093419df669cf69b181757e5c3a649" title="Returns the current theme&#39;s colors and drawing resources." alt="" coords="1173,5,1355,61"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1061,31,1168,33,1163,34,1062,37"/>
+<area shape="rect" id="Node000006" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" title="Calculates control and icon sizes from the font size and height limits." alt="" coords="844,114,1097,155"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="751,160,839,151,833,153,752,165"/>
+<area shape="rect" id="Node000008" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7" title="Returns whether two fonts have the same configured size." alt="" coords="840,204,1101,244"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="752,186,838,202,833,203,752,192"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="917,113,913,105,922,95,941,90,971,88,1014,93,1025,99,1028,109,1023,106,1021,103,1012,98,971,93,942,95,924,100,918,106,922,116"/>
+<area shape="rect" id="Node000007" href="$d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" title="Returns the icon&#39;s edge spacing for the control height." alt="" coords="1149,109,1379,165"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1097,133,1144,136,1139,136,1097,138"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="1208,108,1208,99,1218,90,1237,85,1264,83,1303,87,1315,93,1321,102,1316,101,1311,97,1301,92,1264,88,1238,90,1220,95,1213,101,1212,111"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="917,203,913,194,922,185,941,179,971,177,1014,182,1025,188,1028,198,1023,196,1021,192,1012,187,971,182,942,184,924,189,918,195,922,205"/>
+<area shape="poly" id="edge12_Node000009_Node000009" title=" " alt="" coords="602,249,602,240,613,232,633,226,661,224,702,229,715,234,721,243,716,242,711,238,701,234,661,229,633,231,615,236,607,243,607,252"/>
+<area shape="rect" id="Node000010" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a07860869e541a5f987d893214c377ad3" title="Returns whether the widget is an item&#45;view viewport." alt="" coords="848,292,1093,348"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="776,291,843,302,838,303,776,296"/>
+<area shape="poly" id="edge14_Node000010_Node000010" title=" " alt="" coords="915,290,914,282,925,273,943,267,971,265,1009,270,1021,276,1028,285,1023,283,1018,280,1008,275,971,271,944,273,927,278,919,284,919,294"/>
+<area shape="poly" id="edge16_Node000011_Node000011" title=" " alt="" coords="602,353,602,344,613,336,633,330,661,328,702,333,715,338,721,348,716,346,711,342,701,338,661,333,633,335,615,340,607,347,606,357"/>
 </map>

@@ -1,0 +1,12 @@
+<map id="npi::wid::ColorPicker::Config" name="npi::wid::ColorPicker::Config">
+<area shape="rect" id="Node000001" title="Color model, channel limits and editing locks." alt="" coords="5,424,259,450"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="31,128,84,154"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,164,47,207,42,269,49,336,58,369,73,399,85,412,102,424,96,425,81,416,68,402,53,371,43,337,37,269,42,206,53,158"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="135,5,188,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,36,147,121,136,301,135,425,129,424,131,301,142,120,157,41"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#d7/dde/structnpi_1_1wid_1_1_color_picker_1_1_channel_config" title="Value limits and editing lock for one channel." alt="" coords="241,120,431,161"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="185,33,311,120,306,122,184,38"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="321,168,142,426,138,423,316,166"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="313,5,359,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="337,37,339,121,333,120,335,42"/>
+</map>

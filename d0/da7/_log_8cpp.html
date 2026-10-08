@@ -147,7 +147,6 @@ $(function(){initNavTree('d0/da7/_log_8cpp.html','../../',''); });
 <code>#include &lt;atomic&gt;</code><br />
 <code>#include &lt;bit&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
-<code>#include &lt;condition_variable&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
@@ -155,36 +154,37 @@ $(function(){initNavTree('d0/da7/_log_8cpp.html','../../',''); });
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;ctime&gt;</code><br />
-<code>#include &lt;cwchar&gt;</code><br />
 <code>#include &lt;exception&gt;</code><br />
-<code>#include &lt;format&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;ranges&gt;</code><br />
-<code>#include &lt;semaphore&gt;</code><br />
 <code>#include &lt;stop_token&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;system_error&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;QApplication&gt;</code><br />
 <code>#include &lt;QByteArray&gt;</code><br />
 <code>#include &lt;QChar&gt;</code><br />
 <code>#include &lt;QCoreApplication&gt;</code><br />
 <code>#include &lt;QDateTime&gt;</code><br />
+<code>#include &lt;QDebug&gt;</code><br />
 <code>#include &lt;QDir&gt;</code><br />
 <code>#include &lt;QFile&gt;</code><br />
 <code>#include &lt;QFileInfo&gt;</code><br />
 <code>#include &lt;QHash&gt;</code><br />
+<code>#include &lt;QIODevice&gt;</code><br />
+<code>#include &lt;QLatin1StringView&gt;</code><br />
 <code>#include &lt;QList&gt;</code><br />
 <code>#include &lt;QLoggingCategory&gt;</code><br />
-<code>#include &lt;QMessageBox&gt;</code><br />
 <code>#include &lt;QMessageLogContext&gt;</code><br />
 <code>#include &lt;QMetaObject&gt;</code><br />
+<code>#include &lt;QObject&gt;</code><br />
+<code>#include &lt;QPointer&gt;</code><br />
 <code>#include &lt;QReadLocker&gt;</code><br />
 <code>#include &lt;QReadWriteLock&gt;</code><br />
 <code>#include &lt;QRegularExpression&gt;</code><br />
@@ -192,6 +192,7 @@ $(function(){initNavTree('d0/da7/_log_8cpp.html','../../',''); });
 <code>#include &lt;QString&gt;</code><br />
 <code>#include &lt;QStringBuilder&gt;</code><br />
 <code>#include &lt;QStringList&gt;</code><br />
+<code>#include &lt;QStringLiteral&gt;</code><br />
 <code>#include &lt;QStringView&gt;</code><br />
 <code>#include &lt;QTemporaryFile&gt;</code><br />
 <code>#include &lt;QThread&gt;</code><br />
@@ -201,19 +202,21 @@ $(function(){initNavTree('d0/da7/_log_8cpp.html','../../',''); });
 <code>#include &lt;QtLogging&gt;</code><br />
 <code>#include &lt;QVariant&gt;</code><br />
 <code>#include &lt;QWriteLocker&gt;</code><br />
+<code>#include &lt;QApplication&gt;</code><br />
+<code>#include &lt;QMessageBox&gt;</code><br />
 <code>#include &quot;ext/concurrentqueue.h&quot;</code><br />
 <code>#include &quot;ext/magic_enum.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/dd8/_locked_value_8hpp_source.html">ind/LockedValue.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/d43/_win_error_text_8hpp_source.html">ind/WinErrorText.hpp</a>&quot;</code><br />
-<code>#include &quot;src/MetaInfo.h&quot;</code><br />
 <code>#include &quot;src/CrossProcessLocker.hpp&quot;</code><br />
+<code>#include &quot;src/MetaInfo.h&quot;</code><br />
 <code>#include &quot;src/WinMsgBoxExe.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/df4/_log_8h_source.html">Log.h</a>&quot;</code><br />
 </div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
-<div class="textblock"><p>Implements the asynchronous application logging system. </p>
-<p>This translation unit installs the Qt message handler, captures and normalizes message context, formats normal and important log records, manages file and display worker threads, controls permanent and temporary consoles, persists runtime configuration, performs log-directory cleanup, and installs fatal and crash handlers. Important records are forwarded to the external npiImpLog helper process so that critical information can still be written during fatal failures and abnormal termination.</p>
-<p>The implementation is Windows-specific and intentionally keeps its central state alive until process termination so that logging remains available during static destruction and emergency handling.</p>
-<dl class="section note"><dt>Note</dt><dd>This implementation is intentionally documented selectively. Because the file is large, comments focus on architecture, ownership, synchronization, invariants, failure handling, and other non-obvious design decisions. Straightforward code is generally left uncommented to avoid obscuring the implementation with comments that merely repeat what the code already expresses. </dd></dl>
+<div class="textblock"><p>Implements the application's logging system. </p>
+<p>Installs Qt message and category handlers, formats log records, and manages file and display workers. Also handles configuration storage, console controls, log-directory cleanup and message-handler timing.</p>
+<p>Important logs are forwarded to the <span class="tt">npiImpLog</span> helper process. Fatal and crash handling use a separate emergency logging path.</p>
+<p>The implementation is Windows-specific. Its central state remains alive until process termination to support logging during shutdown and static destruction. </p>
 
 <p class="definition">Definition in file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 </div><div class="textblock"><div class="dynheader">
@@ -243,7 +246,7 @@ Classes</h2></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache_3A_3ATextHash_5Fdf_2Fdc8_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffile_5Fline_5Fcache_5F1_5F1_5Ftext_5Fhash" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFileLineCache_3A_3ATextHash_5Fdf_2Fdc8_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1_5Ffile_5Fline_5Fcache_5F1_5F1_5Ftext_5Fhash"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">anonymous_namespace{Log.cpp}::FileLineCache::TextHash</a></td></tr>
 <tr class="memdesc:df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash content of text.  <a href="../../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#df/dc8/structanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache_1_1_text_hash">More...</a><br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat_3A_3ADateTimeCache_5Fd0_2Fd1c_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1format_5F1_5F1_5Fdate_5Ftime_5Fcache" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat_3A_3ADateTimeCache_5Fd0_2Fd1c_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1format_5F1_5F1_5Fdate_5Ftime_5Fcache"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">anonymous_namespace{Log.cpp}::format::DateTimeCache</a></td></tr>
-<tr class="memdesc:d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches the formatted local date and timezone for repeated timestamps.  <a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">More...</a><br /></td></tr>
+<tr class="memdesc:d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches the formatted local date and time for repeated timestamps.  <a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">More...</a><br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat_3A_3AUnitInfo_5Fd4_2Fdaa_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1format_5F1_5F1_5Funit_5Finfo" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aformat_3A_3AUnitInfo_5Fd4_2Fdaa_2Fstructanonymous_5F_5Fnamespace_5F02_5Flog_5F8cpp_5F03_5F1_5F1format_5F1_5F1_5Funit_5Finfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">anonymous_namespace{Log.cpp}::format::UnitInfo</a></td></tr>
 <tr class="memdesc:d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes one elapsed-time unit during fixed-width formatting of time delta.  <a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">More...</a><br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3AFunctionCache"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html">anonymous_namespace{Log.cpp}::FunctionCache</a></td></tr>
@@ -291,6 +294,8 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts captured records into sanitized normal and important log lines. <br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Alayout" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Alayout"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html">anonymous_namespace{Log.cpp}::layout</a></td></tr>
 <tr class="memdesc:de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes field lists and packs field order into atomic values. <br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Atesting" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Atesting"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html">anonymous_namespace{Log.cpp}::testing</a></td></tr>
+<tr class="memdesc:df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides optional logging tests and diagnostics. <br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aworkers" id="r_anonymous_5Fnamespace_7BLog_2Ecpp_7D_3A_3Aworkers"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html">anonymous_namespace{Log.cpp}::workers</a></td></tr>
 <tr class="memdesc:dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owns asynchronous file and display processing and directory cleanup. <br /></td></tr>
 </table><table class="memberdecls">
@@ -300,9 +305,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a489b218ba63dc7f5434988420437df4f" id="r_a489b218ba63dc7f5434988420437df4f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a489b218ba63dc7f5434988420437df4f">npiCrit</a>&#160;&#160;&#160;qCCritical(npi_log).noquote()</td></tr>
 <tr class="memdesc:a489b218ba63dc7f5434988420437df4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal critical diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:aba900325c5211dc8d74fe8653bfd7a05" id="r_aba900325c5211dc8d74fe8653bfd7a05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aba900325c5211dc8d74fe8653bfd7a05">npiDbug</a>&#160;&#160;&#160;qCDebug(npi_log).noquote()</td></tr>
-<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal debug diagnostic through the logging-system category.  <br /></td></tr>
+<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces debug messages in this file regardless of category filter rules.  <br /></td></tr>
 <tr class="memitem:acfd217143f12c58fa5be9bd51908a231" id="r_acfd217143f12c58fa5be9bd51908a231"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acfd217143f12c58fa5be9bd51908a231">npiFatl</a>&#160;&#160;&#160;qCFatal(npi_log).noquote()</td></tr>
-<tr class="memdesc:acfd217143f12c58fa5be9bd51908a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal fatal diagnostic through the logging-system category.  <br /></td></tr>
+<tr class="memdesc:acfd217143f12c58fa5be9bd51908a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the translation-unit-local category used for logging-system diagnostics.  <br /></td></tr>
 <tr class="memitem:ae7f5f25fa0583792bf1a5f409b3ea9ab" id="r_ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae7f5f25fa0583792bf1a5f409b3ea9ab">npiInfo</a>&#160;&#160;&#160;qCInfo(npi_log).noquote()</td></tr>
 <tr class="memdesc:ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal informational diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:a29523bd69971206d80a3109b7bba0eea" id="r_a29523bd69971206d80a3109b7bba0eea"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>&#160;&#160;&#160;qCWarning(npi_log).noquote()</td></tr>
@@ -345,7 +350,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:adf8d080876ce9a9fa7a073d24747340c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends cached logging-category text.  <br /></td></tr>
 <tr class="memitem:a00a4b756fe1aad5c9ea2f9b064d55f92" id="r_a00a4b756fe1aad5c9ea2f9b064d55f92"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
 <tr class="memitem:a00a4b756fe1aad5c9ea2f9b064d55f92 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a00a4b756fe1aad5c9ea2f9b064d55f92">anonymous_namespace{Log.cpp}::format::appendDateTime</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, const <a class="el" href="../../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html">OneLog</a> &amp;log, bool pipeSep, <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d0/d1c/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_date_time_cache">DateTimeCache</a> *cache=nullptr) noexcept</td></tr>
-<tr class="memdesc:a00a4b756fe1aad5c9ea2f9b064d55f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a local timestamp with millisecond precision and timezone text.  <br /></td></tr>
+<tr class="memdesc:a00a4b756fe1aad5c9ea2f9b064d55f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a local timestamp with millisecond precision.  <br /></td></tr>
 <tr class="memitem:a48f5e179365e3fde46caca3fdfec8b1b" id="r_a48f5e179365e3fde46caca3fdfec8b1b"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
 <tr class="memitem:a48f5e179365e3fde46caca3fdfec8b1b template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a48f5e179365e3fde46caca3fdfec8b1b">anonymous_namespace{Log.cpp}::format::appendElapsedTime</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, std::uint32_t timeMs) noexcept</td></tr>
 <tr class="memdesc:a48f5e179365e3fde46caca3fdfec8b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a saturated fixed-width elapsed-time value in format <span class="tt">hhh:mm:ss.zzz</span>, where <span class="tt">zzz</span> is milliseconds.  <br /></td></tr>
@@ -417,6 +422,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:a5da8171f010665732253b33284e2c28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records encountered categories and forwards filtering to the previous handler.  <br /></td></tr>
 <tr class="memitem:ae42f26a3b2327af9cd201c13e96c0349" id="r_ae42f26a3b2327af9cd201c13e96c0349"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler</a> (QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</td></tr>
 <tr class="memdesc:ae42f26a3b2327af9cd201c13e96c0349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures and routes one message delivered by Qt.  <br /></td></tr>
+<tr class="memitem:a42d5959c6c5c41621a5b0d51743de150" id="r_a42d5959c6c5c41621a5b0d51743de150"><td class="memTemplParams" colspan="2">template&lt;size_t LineSize, size_t NumLines&gt; </td></tr>
+<tr class="memitem:a42d5959c6c5c41621a5b0d51743de150 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a42d5959c6c5c41621a5b0d51743de150">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_appendTimeDelta</a> (<a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html">TextBuffer</a>&lt; LineSize, NumLines &gt; &amp;buf, std::int64_t ns) noexcept</td></tr>
+<tr class="memdesc:a42d5959c6c5c41621a5b0d51743de150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a timing value using a suitable time unit.  <br /></td></tr>
+<tr class="memitem:ac20ee2bdc8dc34582c2679a82f5c8e45" id="r_ac20ee2bdc8dc34582c2679a82f5c8e45"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#ac20ee2bdc8dc34582c2679a82f5c8e45">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_control</a> (bool state)</td></tr>
+<tr class="memdesc:ac20ee2bdc8dc34582c2679a82f5c8e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues enabling or disabling message-handler timing.  <br /></td></tr>
+<tr class="memitem:acb14cb2b0d9b4692da78884e59e6b160" id="r_acb14cb2b0d9b4692da78884e59e6b160"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#acb14cb2b0d9b4692da78884e59e6b160">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_logMsgHdlr</a> (QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</td></tr>
+<tr class="memdesc:acb14cb2b0d9b4692da78884e59e6b160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes a log message and records the handler's execution time.  <br /></td></tr>
 <tr class="memitem:af2d29190b5876ecfbe9deefb3bf878d4" id="r_af2d29190b5876ecfbe9deefb3bf878d4"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#af2d29190b5876ecfbe9deefb3bf878d4">anonymous_namespace{Log.cpp}::control::nextThreadIndex</a> (std::atomic_uint16_t &amp;generator) noexcept</td></tr>
 <tr class="memdesc:af2d29190b5876ecfbe9deefb3bf878d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates the next compact thread index with saturation.  <br /></td></tr>
 <tr class="memitem:a2f8305be7a08f7bd6252a3d9cc9a074c" id="r_a2f8305be7a08f7bd6252a3d9cc9a074c"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a2f8305be7a08f7bd6252a3d9cc9a074c">anonymous_namespace{Log.cpp}::layout::normalizeAndPackFields</a> (const QString &amp;source, const QList&lt; <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d">Field</a> &gt; &amp;defFields, std::atomic_uint64_t *destination=nullptr)</td></tr>
@@ -443,7 +455,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a996434c89cac4d2843386149824314dc" id="r_a996434c89cac4d2843386149824314dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc">anonymous_namespace{Log.cpp}::control::scheduleMaxFolderMbSave</a> (std::uint32_t maxFolderMb)</td></tr>
 <tr class="memdesc:a996434c89cac4d2843386149824314dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debounces persistence of a non-temporary maximum-folder-size change.  <br /></td></tr>
 <tr class="memitem:a7d1aecaff8b806303e9f2166caeec8ba" id="r_a7d1aecaff8b806303e9f2166caeec8ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba">anonymous_namespace{Log.cpp}::bridge::sendData</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *data, size_t len, bool <a class="el" href="../../d1/d27/namespaceanonymous__namespace_02_log_8cpp_03_1_1crash.html">crash</a>) noexcept</td></tr>
-<tr class="memdesc:a7d1aecaff8b806303e9f2166caeec8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a complete byte range to the current important-log pipe.  <br /></td></tr>
+<tr class="memdesc:a7d1aecaff8b806303e9f2166caeec8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes data to the important-log pipe.  <br /></td></tr>
 <tr class="memitem:a0ad3876154f2b818add3875e77f95303" id="r_a0ad3876154f2b818add3875e77f95303"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a0ad3876154f2b818add3875e77f95303">anonymous_namespace{Log.cpp}::bridge::sendDataLocked</a> (const <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a> *data, size_t len, bool fatal) noexcept</td></tr>
 <tr class="memdesc:a0ad3876154f2b818add3875e77f95303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes important-log data while coordinating normal, fatal, and crash senders.  <br /></td></tr>
 <tr class="memitem:a4b266529f52b5d050ba76fbd66ed3b02" id="r_a4b266529f52b5d050ba76fbd66ed3b02"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a4b266529f52b5d050ba76fbd66ed3b02">anonymous_namespace{Log.cpp}::control::setFilterRules</a> (const QStringList &amp;cleanedFilterRules={})</td></tr>
@@ -535,6 +547,16 @@ Variables</h2></td></tr>
 <tr class="memdesc:a85a4fe9c4b2342b1b7947cdc979c1ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum slots for a packed 64-bit value (16 slots).  <br /></td></tr>
 <tr class="memitem:aee9856ced7cc9fbf87590eba0fba808f" id="r_aee9856ced7cc9fbf87590eba0fba808f"><td class="memItemLeft">constexpr std::chrono::milliseconds&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#aee9856ced7cc9fbf87590eba0fba808f">anonymous_namespace{Log.cpp}::workers::minSyncInterval</a> {500}</td></tr>
 <tr class="memdesc:aee9856ced7cc9fbf87590eba0fba808f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum interval for syncing data with <a class="el" href="../../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html" title="Owns all process-lifetime logging state.">LeakedState</a>.  <br /></td></tr>
+<tr class="memitem:aec8fa07b833669114b28399f8624e248" id="r_aec8fa07b833669114b28399f8624e248"><td class="memItemLeft">std::atomic_int64_t&#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#aec8fa07b833669114b28399f8624e248">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_count</a> {0}</td></tr>
+<tr class="memdesc:aec8fa07b833669114b28399f8624e248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of timed logs since the last report.  <br /></td></tr>
+<tr class="memitem:a71fe7b9ac5c5410274b7d85542fdfd66" id="r_a71fe7b9ac5c5410274b7d85542fdfd66"><td class="memItemLeft"><a class="el" href="../../d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock">QReadWriteLock</a> *&#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a71fe7b9ac5c5410274b7d85542fdfd66">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_lock</a> {nullptr}</td></tr>
+<tr class="memdesc:a71fe7b9ac5c5410274b7d85542fdfd66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process-lifetime lock for timing updates and snapshots.  <br /></td></tr>
+<tr class="memitem:a7cdc7a649174c2e0de0795627b21c0f9" id="r_a7cdc7a649174c2e0de0795627b21c0f9"><td class="memItemLeft">std::atomic_bool&#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a7cdc7a649174c2e0de0795627b21c0f9">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_state</a> {false}</td></tr>
+<tr class="memdesc:a7cdc7a649174c2e0de0795627b21c0f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether message-handler timing is enabled.  <br /></td></tr>
+<tr class="memitem:afd3c0ce383a5df1322733688fcea7e91" id="r_afd3c0ce383a5df1322733688fcea7e91"><td class="memItemLeft">QPointer&lt; QTimer &gt;&#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#afd3c0ce383a5df1322733688fcea7e91">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_timer</a> {nullptr}</td></tr>
+<tr class="memdesc:afd3c0ce383a5df1322733688fcea7e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application-owned timer for timing reports.  <br /></td></tr>
+<tr class="memitem:a0e7a1c52414f3eb6ec881aa7ed7ce3f4" id="r_a0e7a1c52414f3eb6ec881aa7ed7ce3f4"><td class="memItemLeft">std::atomic_int64_t&#160;</td><td class="memItemRight"><a class="el" href="../../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_totNs</a> {0}</td></tr>
+<tr class="memdesc:a0e7a1c52414f3eb6ec881aa7ed7ce3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total handler time in nanoseconds since the last report.  <br /></td></tr>
 <tr class="memitem:ae16c37f54346449f63ae45e384e8f1d4" id="r_ae16c37f54346449f63ae45e384e8f1d4"><td class="memItemLeft">constexpr std::chrono::milliseconds&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ae16c37f54346449f63ae45e384e8f1d4">anonymous_namespace{Log.cpp}::workers::normalIdleLoopSleep</a> {10}</td></tr>
 <tr class="memdesc:ae16c37f54346449f63ae45e384e8f1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep time between idle loops.  <br /></td></tr>
 <tr class="memitem:a1bf2c1ea887602eced8886ac52bb279f" id="r_a1bf2c1ea887602eced8886ac52bb279f"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1bf2c1ea887602eced8886ac52bb279f">anonymous_namespace{Log.cpp}::workers::normalMaxIdleLoopCount</a> = 3u</td></tr>
@@ -1436,7 +1458,7 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1454,7 +1476,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal critical diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00143">143</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1470,9 +1492,10 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p>Emits an internal debug diagnostic through the logging-system category. </p>
+<p>Forces debug messages in this file regardless of category filter rules. </p>
+<p>Creates a debug message according to category filter rules. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00134">134</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00146">146</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1488,9 +1511,10 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
+<p>Defines the translation-unit-local category used for logging-system diagnostics. </p>
 <p>Emits an internal fatal diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00146">146</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00125">125</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1508,7 +1532,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal informational diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00137">137</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00134">134</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1526,7 +1550,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal warning diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00140">140</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00131">131</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1542,7 +1566,7 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1558,7 +1582,7 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00023">23</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>

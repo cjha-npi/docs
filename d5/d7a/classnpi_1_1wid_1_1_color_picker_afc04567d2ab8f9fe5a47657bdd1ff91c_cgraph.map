@@ -1,0 +1,11 @@
+<map id="npi::wid::ColorPicker::specComboIndexChanged_" name="npi::wid::ColorPicker::specComboIndexChanged_">
+<area shape="rect" id="Node000001" title="Handles user selection of a color model." alt="" coords="5,46,387,72"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aab16386d705fbf03ed517b68e3a28e54" title="Configures the editors for the selected color model." alt="" coords="435,5,624,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,44,429,35,424,36,325,49"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a33c98248f8c09263aca637adf371626b" title="Updates the color and preview from the editors; optionally signals color change." alt="" coords="435,71,624,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="330,69,430,81,424,81,330,74"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a6a6bd9ab0e4081613d080c48d9c77bd2" title="Applies a channel&#39;s settings and current value to its editor." alt="" coords="672,5,861,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="624,23,667,25,662,26,624,28"/>
+<area shape="rect" id="Node000005" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a684fae671e5e04bbfb393debca35a620" title="Signal for color change." alt="" coords="672,71,861,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="624,88,667,91,662,91,624,94"/>
+</map>

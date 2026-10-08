@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['field_0',['Field',['../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0d',1,'anonymous_namespace{Log.cpp}']]]
+  ['channel_0',['Channel',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a35cf8ed013b10248c2a0e73e2b861112',1,'npi::wid::ColorPicker']]]
 ];

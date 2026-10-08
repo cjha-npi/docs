@@ -1,0 +1,10 @@
+<map id="anonymous_namespace{Gui::cpp}::draw::sepBorders" name="anonymous_namespace{Gui::cpp}::draw::sepBorders">
+<area shape="rect" id="Node000001" title="Draws the separator borders requested by the widget." alt="" coords="235,100,632,126"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="490,95,494,90,487,85,467,81,433,79,397,81,377,86,373,91,384,101,379,100,368,92,374,82,396,76,433,74,468,75,489,80,499,89,493,99"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Customizes spin boxes, scrollbars and tool buttons." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="369,100,186,57,187,52,373,97"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="5,85,187,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,114,187,116,186,111,229,112"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws custom backgrounds, frames and indicators." alt="" coords="5,165,187,221"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="370,130,187,174,186,169,372,125"/>
+</map>

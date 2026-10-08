@@ -1,11 +1,13 @@
 <map id="anonymous_namespace{Log::cpp}::control::checkAndValidateDir" name="anonymous_namespace{Log::cpp}::control::checkAndValidateDir">
-<area shape="rect" id="Node000001" title="Normalizes, validates, creates, and write&#45;tests a log directory." alt="" coords="472,78,965,103"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="785,72,790,67,782,63,758,58,719,56,676,58,652,64,648,66,648,68,661,78,656,77,643,70,643,64,650,59,675,53,719,51,759,53,784,58,795,67,787,77"/>
-<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="239,29,412,85"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="557,77,412,67,412,62,562,77"/>
-<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="227,110,424,135"/>
-<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="555,104,424,117,424,112,550,104"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="366,21,355,12,325,8,305,10,291,15,285,21,285,31,280,28,280,19,288,10,303,5,325,3,357,7,371,22"/>
-<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,37,179,78"/>
-<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="228,58,179,60,178,55,233,56"/>
+<area shape="rect" id="Node000001" title="Normalizes, validates, creates, and write&#45;tests a log directory." alt="" coords="512,78,1005,103"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="825,72,830,67,822,63,798,58,759,56,716,58,692,64,688,66,688,68,701,78,696,77,683,70,683,64,690,59,715,53,759,51,799,53,824,58,835,67,827,77"/>
+<area shape="rect" id="Node000002" href="$d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794" title="Loads and validates the complete persisted logging configuration." alt="" coords="279,29,452,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="597,77,452,67,452,62,602,77"/>
+<area shape="rect" id="Node000004" href="$d5/ddd/namespacenpi_1_1log.html#ac894ac9b7f01f578c3b8696c765fb3aa" title="Changes the directory used for log files." alt="" coords="267,110,464,135"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="595,104,464,117,464,112,590,104"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="410,21,406,17,397,12,365,8,343,10,328,15,321,21,321,31,317,28,316,19,325,10,342,5,365,3,399,7,409,13,415,22"/>
+<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="25,37,199,78"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="268,58,199,60,198,55,273,56"/>
+<area shape="rect" id="Node000005" href="$d5/ddd/namespacenpi_1_1log.html#ab26e1ac5aef4345c9676101f3cd9877f" title="Restores the default log directory." alt="" coords="5,110,219,135"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="256,123,219,125,218,120,261,122"/>
 </map>

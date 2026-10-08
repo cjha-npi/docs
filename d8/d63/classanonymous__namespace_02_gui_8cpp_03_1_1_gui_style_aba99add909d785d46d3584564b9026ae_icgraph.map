@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::styleHint" name="anonymous_namespace{Gui::cpp}::GuiStyle::styleHint">
+<area shape="rect" id="Node000001" title="Uses the theme&#39;s table grid color and default hints for everything else." alt="" coords="496,60,917,86"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0" title="Returns whether a button should automatically request square sizing." alt="" coords="235,5,448,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="578,60,448,47,448,42,584,59"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="251,85,432,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="584,87,432,106,432,101,579,87"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Adjusts control sizes for consistent heights, spacing and square buttons." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,34,187,36,186,31,230,32"/>
+</map>

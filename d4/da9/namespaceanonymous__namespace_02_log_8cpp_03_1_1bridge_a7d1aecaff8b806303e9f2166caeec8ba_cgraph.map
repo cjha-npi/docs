@@ -1,5 +1,5 @@
 <map id="anonymous_namespace{Log::cpp}::bridge::sendData" name="anonymous_namespace{Log::cpp}::bridge::sendData">
-<area shape="rect" id="Node000001" title="Writes a complete byte range to the current important&#45;log pipe." alt="" coords="5,187,403,213"/>
+<area shape="rect" id="Node000001" title="Writes data to the important&#45;log pipe." alt="" coords="5,187,403,213"/>
 <area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="148,188,136,179,142,169,165,163,204,160,239,162,262,167,272,175,267,185,262,182,267,176,260,172,239,167,204,166,166,168,145,173,141,178,153,186"/>
 <area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="451,32,656,88"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,185,477,88,474,93,238,189"/>

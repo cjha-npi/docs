@@ -18,123 +18,6 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 /* ============================================================
- * Atkinson Hyperlegible Next
- * ============================================================ */
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-ExtraLight.woff2") format("woff2");
-  font-weight: 200;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-ExtraLightItalic.woff2") format("woff2");
-  font-weight: 200;
-  font-style: italic;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-LightItalic.woff2") format("woff2");
-  font-weight: 300;
-  font-style: italic;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-RegularItalic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-MediumItalic.woff2") format("woff2");
-  font-weight: 500;
-  font-style: italic;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-SemiBoldItalic.woff2") format("woff2");
-  font-weight: 600;
-  font-style: italic;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Atkinson";
-  src: url("AtkinsonHyperlegibleNext-ExtraBoldItalic.woff2") format("woff2");
-  font-weight: 800;
-  font-style: italic;
-  font-display: block;
-}
-
-
-/* ============================================================
  * JetBrains Mono
  * ============================================================ */
 
@@ -250,44 +133,11 @@
   font-display: block;
 }
 
-/*
-@font-face {
-  font-family: "JB-Mono";
-  src: url("JetBrainsMono-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "JB-Mono";
-  src: url("JetBrainsMono-ExtraBoldItalic.woff2") format("woff2");
-  font-weight: 800;
-  font-style: italic;
-  font-display: block;
-}
-*/
-
-
 /* ============================================================
  * Doxygen Awesome font configuration
  * ============================================================ */
 
 :root {
-  --font-family:
-      "Atkinson",
-      -apple-system,
-      BlinkMacSystemFont,
-      Segoe UI,
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      Fira Sans,
-      Droid Sans,
-      Helvetica Neue,
-      sans-serif;
-
   --font-family-monospace:
       "JB-Mono",
       ui-monospace,
@@ -311,9 +161,9 @@ html {
 
 /* Font sizes and line height for desktop view */
 html {
-  --page-font-size: 14px !important;
-  --navigation-font-size: 14px !important;
-  --toc-font-size: 14px !important;
+  --page-font-size: 13.5px !important;
+  --navigation-font-size: 13.5px !important;
+  --toc-font-size: 13.5px !important;
   --code-font-size: 11.5px !important;
   --title-font-size: 18px !important;
   --memtitle-font-size: 16px !important;
@@ -398,6 +248,8 @@ html {
   --dp-scrollbar-color: rgb(160, 175, 190); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-footer-link-separation-color: var(--dp-scrollbar-color); /* separator of links in footer */
+  --dp-details-background-color: rgb(0, 0, 0, 0.15); /* Background of details when expanded */
+  --dp-table-header-color: rgb(210, 230, 250); /* Table header background */
 
   /* Doxy-Plus Text Colors */
   --dp-disabled-text-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
@@ -437,6 +289,8 @@ html.dark-mode {
   --dp-scrollbar-color: rgb(40, 80, 100); /* scrollbar button and handle color */
   --dp-seach-clear-icon-color: rgb(255, 0, 0); /* color of the clear icon in search bar */
   --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
+  --dp-details-background-color: rgb(20, 30, 40); /* Background of details when expanded */
+  --dp-table-header-color: rgb(20, 40, 60); /* Table header background */
 
   /* Doxy-Plus Text Colors */
   --dp-disabled-text-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
@@ -1239,6 +1093,58 @@ body .header > .headertitle > .title {
   border-bottom-left-radius: var(--dp-border-radius-l);
 }
 
+#doc-content p {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important
+}
+
+#doc-content ul:not(ul ul, ol ul, dl ul),
+#doc-content ol:not(ul ol, ol ol, dl ol),
+#doc-content dl:not(ul dl, ol dl, dl dl){
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+#doc-content ul,
+#doc-content ol{
+  padding-left: 20px !important;
+}
+
+#doc-content table{
+  margin-block: 0; /* Top and bottom */
+  margin-inline: 0; /* Left and right */
+}
+
+#doc-content table > caption {
+  margin-bottom: 5px;
+}
+
+#doc-content table > caption:not(.dp-markdown-big-text, .dp-markdown-mid-text):not(:has(.dp-markdown-big-text, .dp-markdown-mid-text)) {
+  font-size: 120%;
+  font-weight: 500;
+}
+
+#doc-content table > tbody{
+  margin: 0px !important;
+}
+
+#doc-content table th:not(:has(h2)),
+#doc-content table td:not(:has(h2)) {
+  padding: 0px 5px;
+}
+
+#doc-content th:not(:has(ul, ol, dl, table, details, pre, .fragment, h2)) {
+  padding: 2px 5px;
+}
+
+#doc-content td:not(:has(ul, ol, dl, table, details, pre, .fragment, h2)) {
+  padding: 5px 10px;
+}
+
+#doc-content table th{
+  background: var(--dp-table-header-color);
+}
+
 /*
   The h* is the headings inside the doc-content. For some reason the top margin
   for all these are different, although, it all looks the same. That's why we
@@ -1250,6 +1156,47 @@ h3,
 h4,
 h5 {
   margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+#doc-content h2.memtitle{
+  margin-bottom: 0px !important;
+  margin-right: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#doc-content h2.memtitle > span.permalink > a {
+  margin-top: 0;
+}
+
+#doc-content h2.memtitle > span.overload{
+  padding-left: 10px;
+  font-size: 75%;
+  align-self: flex-end;
+}
+
+#doc-content h2.memtitle::after{
+  height: 0px;
+}
+
+#doc-content .memproto table.memname {
+  border-spacing: 0;
+}
+
+#doc-content .memproto table.memname td {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding: 0 !important;
+}
+
+#doc-content .memproto table.mlabels td.mlabels-right{
+  margin-top: 0px;
+}
+
+#doc-content .memproto td.mlabels-left {
+  align-self: center;
 }
 
 /*
@@ -1783,18 +1730,6 @@ dl.test{
 /* MARKDOWN FILE CUSTOMIZATION */
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
-/* Big non-heading text */
-#doc-content > div > div.contents > div.textblock .dp-markdown-big-text {
-  font-size: 1.3em;
-  font-weight: 500;
-}
-
-/* Medium non-heading text */
-#doc-content > div > div.contents > div.textblock .dp-markdown-mid-text {
-  font-size: 1.15em;
-  font-weight: 500;
-}
-
 /* Changing indentation of lists */
 #doc-content > div > div.contents > div.textblock ul,
 #doc-content > div > div.contents > div.textblock ol{
@@ -1841,6 +1776,8 @@ dl.test{
 /* Change the look of the Markdown separator */
 #doc-content > div > div.contents > div.textblock hr {
   background-color: var(--separator-color);
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-right: 0px;
   box-shadow: none;
   height: 2px;
@@ -1886,6 +1823,131 @@ html.dark-mode{
   border-top-left-radius: var(--dp-border-radius-l);
   border-left: 2px solid var(--dp-mark-color);
   border-top: 2px solid var(--dp-mark-color);
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* BIG TEXT, MID TEXT, EXPAND/COLLAPSE DETAILS */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/* Big non-heading text */
+#doc-content > div > div.contents > div.textblock .dp-markdown-big-text,
+details > summary:has(> span.dp-markdown-big-text)::before,
+details[open] > summary:has(> span.dp-markdown-big-text)::before {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+/* This is value is set with !important in doxygen-awesome.css, so we change its
+value for just this span here. */
+#doc-content > div > div.contents > div.textblock .dp-markdown-big-text > span.tt {
+  --code-font-size: 0.9em;
+  font-weight: 700 !important;
+}
+
+/* Medium non-heading text */
+#doc-content > div > div.contents > div.textblock .dp-markdown-mid-text,
+details > summary:has(> span.dp-markdown-mid-text)::before,
+details[open] > summary:has(> span.dp-markdown-mid-text)::before {
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+/* This is value is set with !important in doxygen-awesome.css, so we change its
+value for just this span here. */
+#doc-content > div > div.contents > div.textblock .dp-markdown-mid-text > span.tt {
+  --code-font-size: 0.9em;
+  font-weight: 600 !important;
+}
+
+details {
+  margin-left: 2px;
+  margin-top: 4px;
+}
+
+details > summary,
+details > summary > span:is(.dp-markdown-big-text, .dp-markdown-mid-text) {
+  margin-top: 0;
+}
+
+details[open]::details-content {
+  margin-top: 0px;
+  padding: 2px 7px;
+  background: var(--dp-details-background-color);
+  border-top-right-radius: var(--dp-border-radius-l);
+  border-bottom-left-radius: var(--dp-border-radius-l);
+  border-bottom-right-radius: var(--dp-border-radius-l);
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 6px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: var(--dp-details-background-color);
+  border-radius: var(--dp-border-radius-s);
+}
+
+details > summary:has(span.dp-markdown-big-text){
+  padding-top: 4px;
+  padding-bottom: 5px;
+}
+
+details > summary:has(span.dp-markdown-mid-text){
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
+#doc-content details > summary:not(.dp-markdown-big-text,.dp-markdown-mid-text):not(:has(.dp-markdown-big-text,.dp-markdown-mid-text)) {
+  font-size: 1.05em;
+}
+
+details > summary.ends-with-code{
+  padding-right: 3px;
+}
+
+details[open] > summary{
+  border-top-left-radius: var(--dp-border-radius-s);
+  border-top-right-radius: var(--dp-border-radius-s);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: "\2192";
+  font-family: var(--font-family-monospace);
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+details[open] > summary::before {
+  content: "\2193";
+  font-family: var(--font-family-monospace);
+  font-size: 1.1em;
+  line-height: 1;
+  font-weight: 500;
+}
+
+details table{
+  margin: 0 !important;
+}
+
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+/* MARKDOWN SPECIAL TEXT SECTION */
+/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+div.dp-markdown-section-text {
+  background: var(--dp-details-background-color);
+  padding: 2px 10px;
+  border-radius: var(--dp-border-radius-l);
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/

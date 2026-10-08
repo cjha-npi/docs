@@ -58,7 +58,7 @@ var sectionId = 'dynsection-1';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Applies grouped&#45;widget configuration to one widget.">
+<g id="a_Node000001"><a xlink:title="Suppresses a grouped widget&#39;s background unless it has its own base.">
 <polygon fill="#999999" stroke="none" points="934,-54.5 618,-54.5 618,-35.25 934,-35.25 934,-54.5"/>
 <text xml:space="preserve" text-anchor="start" x="626" y="-41.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::item::applyBaseItem</text>
 </a>
@@ -76,7 +76,7 @@ var sectionId = 'dynsection-1';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec" target="_top" xlink:title="Applies grouped&#45;widget configuration recursively to a widget hierarchy.">
+<g id="a_Node000002"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec" target="_top" xlink:title="Configures a widget and its descendants for a shared group background.">
 <polygon fill="white" stroke="none" points="582,-90.75 404,-90.75 404,-49 582,-49 582,-90.75"/>
 <text xml:space="preserve" text-anchor="start" x="412" y="-76.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="412" y="-65.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::item::applyBase</text>
@@ -96,7 +96,7 @@ var sectionId = 'dynsection-1';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7" target="_top" xlink:title="Initializes a widget marked as a group base.">
+<g id="a_Node000004"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7" target="_top" xlink:title="Sets up a group background and optional exclusive button grouping.">
 <polygon fill="white" stroke="none" points="368,-36.12 172,-36.12 172,-5.63 368,-5.63 368,-36.12"/>
 <text xml:space="preserve" text-anchor="start" x="180" y="-21.68" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="270" y="-10.43" font-family="Consolas" font-size="11.00">{Gui::cpp}::item::initMainBase</text>
@@ -124,7 +124,7 @@ var sectionId = 'dynsection-1';
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" target="_top" xlink:title="Applies event&#45;driven style updates and property&#45;controlled behavior.">
+<g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" target="_top" xlink:title="Handles widget updates, wheel forwarding and newly added actions and children.">
 <polygon fill="white" stroke="none" points="338,-113.75 202,-113.75 202,-72 338,-72 338,-113.75"/>
 <text xml:space="preserve" text-anchor="start" x="210" y="-99.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="210" y="-88.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
@@ -162,7 +162,7 @@ var sectionId = 'dynsection-1';
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" target="_top" xlink:title="Applies base&#45;style initialization and GuiStyle widget customizations.">
+<g id="a_Node000005"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" target="_top" xlink:title="Applies widget customizations, dynamic icons and event filters.">
 <polygon fill="white" stroke="none" points="136,-41.75 0,-41.75 0,0 136,0 136,-41.75"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-27.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="8" y="-16.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>

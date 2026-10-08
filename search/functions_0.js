@@ -31,9 +31,17 @@ var searchData=
   ['appendthreadtime_28',['appendThreadTime',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a6fdc84681e63fd618969b01f9565ff4c',1,'anonymous_namespace{Log.cpp}::format']]],
   ['applybaseitem_29',['applyBaseItem',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2',1,'anonymous_namespace{Gui.cpp}::item']]],
   ['applybaseitemtree_30',['applyBaseItemTree',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec',1,'anonymous_namespace{Gui.cpp}::item']]],
-  ['applyviewitem_31',['applyViewItem',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202',1,'anonymous_namespace{Gui.cpp}::item']]],
-  ['applyviewitemtree_32',['applyViewItemTree',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13',1,'anonymous_namespace{Gui.cpp}::item']]],
-  ['appprogramdatadir_33',['appProgramDataDir',['../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544',1,'npi::app']]],
-  ['apppublicdocumentsdir_34',['appPublicDocumentsDir',['../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542',1,'npi::app']]],
-  ['autowidthsameasheight_5f_35',['autoWidthSameAsHeight_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]]
+  ['applybasestyle_5f_31',['applyBaseStyle_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#abe7e8c77b5c6ea8c2a513e8d28f83008',1,'npi::wid::ColorPicker']]],
+  ['applychannelvalue_5f_32',['applyChannelValue_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a6a6bd9ab0e4081613d080c48d9c77bd2',1,'npi::wid::ColorPicker']]],
+  ['applyconfig_5f_33',['applyConfig_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ac8f2c42a07ec230698c80ce66ffce7cf',1,'npi::wid::ColorPicker']]],
+  ['applydesign_5f_34',['applyDesign_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4e1a328e1c85ff8e5392a65386ff330b',1,'npi::wid::ColorPicker']]],
+  ['applyfontstyle_5f_35',['applyFontStyle_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4a49eb8ae07c6b583fbc33cb52d248ba',1,'npi::wid::ColorPicker']]],
+  ['applyspecvalue_5f_36',['applySpecValue_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aab16386d705fbf03ed517b68e3a28e54',1,'npi::wid::ColorPicker']]],
+  ['applytheme_5f_37',['applyTheme_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
+  ['applyviewitem_38',['applyViewItem',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202',1,'anonymous_namespace{Gui.cpp}::item']]],
+  ['applyviewitemtree_39',['applyViewItemTree',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13',1,'anonymous_namespace{Gui.cpp}::item']]],
+  ['applywidlayout_5f_40',['applyWidLayout_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a24751279f07b9f5e77bd2e83f2753f31',1,'npi::wid::ColorPicker']]],
+  ['appprogramdatadir_41',['appProgramDataDir',['../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544',1,'npi::app']]],
+  ['apppublicdocumentsdir_42',['appPublicDocumentsDir',['../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542',1,'npi::app']]],
+  ['autowidthsameasheight_5f_43',['autoWidthSameAsHeight_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]]
 ];

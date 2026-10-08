@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['iconname_5f_0',['IconName_',['../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1',1,'npi::gui::Props']]],
-  ['icononname_5f_1',['IconOnName_',['../d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc',1,'npi::gui::Props']]],
-  ['iconseparation_5f_2',['iconSeparation_',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a7f67fe6e94fa7a841b58c9c9ee1e6fa5',1,'anonymous_namespace{Gui.cpp}::SizeData']]],
-  ['iconsize_5f_3',['iconSize_',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a25a75c0db9931fb4c6bcc961beb00243',1,'anonymous_namespace{Gui.cpp}::SizeData']]],
-  ['icontextgap_4',['iconTextGap',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a34a8fbbb12085f5510aebde27350e9f0',1,'anonymous_namespace{Gui.cpp}']]],
-  ['innerradius_5',['innerRadius',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76',1,'anonymous_namespace{Gui.cpp}']]],
-  ['insignal_5f_6',['inSignal_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a0e545b41d039c742e05b0a70436928f2',1,'anonymous_namespace{Log.cpp}::LeakedState::CrashState']]],
-  ['invaliddatetime_7',['invalidDateTime',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a1f7083adbe3229b2f6fa4295150f8f18',1,'anonymous_namespace{Log.cpp}::format']]],
-  ['invalidtimedelta_8',['invalidTimeDelta',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#abc875262bc94ebb4526e882a65a2cfa4',1,'anonymous_namespace{Log.cpp}::format']]],
-  ['itemviewwidget_5f_9',['ItemViewWidget_',['../d6/d46/structnpi_1_1gui_1_1_props.html#a0c22187364aef3d7138155c4a01dd9dd',1,'npi::gui::Props']]]
+  ['handle_5f_0',['handle_',['../dc/d71/classnpi_1_1app_1_1_cross_process_locker.html#ae0d20424385615fc2cd5cd78a5c7e798',1,'npi::app::CrossProcessLocker']]],
+  ['hash_5f_1',['hash_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#ada445903c60517fc0302fb0e757a1fb9',1,'anonymous_namespace{Log.cpp}::CategoryCache::TextHash::hash_'],['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#ae0654e9b8b9646771a8881d24b3e1525',1,'anonymous_namespace{Log.cpp}::CategoryCache::Key::hash_'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a77bd26fd2088a1b038c666a7b5284ac7',1,'anonymous_namespace{Log.cpp}::FileLineCache::TextHash::hash_'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a01bdea81a976f4b7b6ece3ff5f90e9ae',1,'anonymous_namespace{Log.cpp}::FunctionCache::TextHash::hash_'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#a7640731d2d668f8f95851f3ab4d6534d',1,'anonymous_namespace{Log.cpp}::FunctionCache::Key::hash_']]],
+  ['hashmask_5f_2',['HashMask_',['../d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#ab663a06bb8586cbfda8ff0d78c4f4366',1,'anonymous_namespace{Log.cpp}::CategoryCache::HashMask_'],['../d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a14aa38a4544902aadd5836003fe0ac4a',1,'anonymous_namespace{Log.cpp}::FileLineCache::HashMask_'],['../da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#acd0fa280673768eb5d446ed190291a91',1,'anonymous_namespace{Log.cpp}::FunctionCache::HashMask_']]],
+  ['height_5f_3',['height_',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9715ca59b73721ebb21796b6e15f3f64',1,'anonymous_namespace{Gui.cpp}::SizeData']]],
+  ['heightquantum_4',['heightQuantum',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae',1,'anonymous_namespace{Gui.cpp}']]],
+  ['hexdigits_5f_5',['HexDigits_',['../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ad165af7fa18c0032db92d69ae2af41f5',1,'anonymous_namespace{Log.cpp}::TextBuffer']]],
+  ['hlogpipe_5f_6',['hLogPipe_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ab0c62c5920ad435ef7e06f520daf5480',1,'anonymous_namespace{Log.cpp}::LeakedState::BridgeState']]],
+  ['hold_5f_7',['hold_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9',1,'anonymous_namespace{Log.cpp}::LeakedState::BridgeState']]],
+  ['horizontallayout_5f_8',['horizontalLayout_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a54911b637a285c38673c06a019d7b9c1',1,'npi::wid::ColorPicker::Design']]],
+  ['hprocess_5f_9',['hProcess_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa2af451e37148badf7713b39f4109f31',1,'anonymous_namespace{Log.cpp}::LeakedState::BridgeState']]],
+  ['hslhue_5f_10',['hslHue_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a3a6b7cf1abf301768d4354837382624c',1,'npi::wid::ColorPicker::Config']]],
+  ['hsllight_5f_11',['hslLight_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a70cadb122bba8707d84b49f46d3c55ef',1,'npi::wid::ColorPicker::Config']]],
+  ['hslsat_5f_12',['hslSat_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a6be7f08791af917976092a6a6b0aaca9',1,'npi::wid::ColorPicker::Config']]],
+  ['hsvhue_5f_13',['hsvHue_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a45cacee487718d52d70a0c42dbbf0a18',1,'npi::wid::ColorPicker::Config']]],
+  ['hsvsat_5f_14',['hsvSat_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a2c4354dafe55bdf2979a397d06f31c88',1,'npi::wid::ColorPicker::Config']]],
+  ['hsvvalue_5f_15',['hsvValue_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a6cdaca2d693221b280960f23bee2707d',1,'npi::wid::ColorPicker::Config']]]
 ];

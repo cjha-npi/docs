@@ -19,7 +19,7 @@
 <area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="276,501,532,608,611,642,606,644,530,613,276,506"/>
 <area shape="rect" id="Node000014" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="848,681,1053,737"/>
 <area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="256,500,299,542,363,597,442,653,486,677,531,696,610,715,691,724,769,725,843,723,838,725,769,731,691,729,609,721,530,701,484,682,440,658,359,602,296,546,257,506"/>
-<area shape="rect" id="Node000016" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" title="Writes a complete byte range to the current important&#45;log pipe." alt="" coords="575,785,756,841"/>
+<area shape="rect" id="Node000016" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" title="Writes data to the important&#45;log pipe." alt="" coords="575,785,756,841"/>
 <area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="257,501,367,606,446,675,532,740,600,781,595,782,529,745,443,679,363,610,258,506"/>
 <area shape="rect" id="Node000030" href="$d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ab7bba778ac4a5104350c8dd82a117cc9" title="Returns the number of accumulated bytes." alt="" coords="567,865,764,921"/>
 <area shape="poly" id="edge38_Node000001_Node000030" title=" " alt="" coords="251,500,288,564,348,659,387,710,431,762,479,810,532,851,562,869,557,869,529,855,476,814,427,765,383,714,344,662,283,567,251,506"/>

@@ -3,7 +3,7 @@
 <area shape="poly" id="edge21_Node000001_Node000001" title=" " alt="" coords="170,111,158,102,164,91,188,85,228,83,265,85,288,90,298,98,292,108,288,105,293,99,286,94,264,90,228,88,189,90,167,96,163,101,175,109"/>
 <area shape="rect" id="Node000002" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae28ae1e0989c84468f1c7dd17981e5e4" title="Returns the intentionally leaked process&#45;wide logging state." alt="" coords="728,35,933,90"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="357,107,722,71,719,75,358,112"/>
-<area shape="rect" id="Node000004" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" title="Writes a complete byte range to the current important&#45;log pipe." alt="" coords="499,139,680,194"/>
+<area shape="rect" id="Node000004" href="$d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba" title="Writes data to the important&#45;log pipe." alt="" coords="499,139,680,194"/>
 <area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="333,133,493,153,489,156,334,138"/>
 <area shape="rect" id="Node000003" href="$d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa17c6f240dd55f157216265327935ac5" title="Deleted copy constructor." alt="" coords="981,29,1187,85"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="933,58,976,59,971,60,934,63"/>

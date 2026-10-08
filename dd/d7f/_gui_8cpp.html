@@ -138,41 +138,97 @@ $(function(){initNavTree('dd/d7f/_gui_8cpp.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;Windows.h&gt;</code><br />
-<code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;utility&gt;</code><br />
-<code>#include &lt;numbers&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;QApplication&gt;</code><br />
-<code>#include &lt;QTimer&gt;</code><br />
-<code>#include &lt;QString&gt;</code><br />
-<code>#include &lt;QPainter&gt;</code><br />
-<code>#include &lt;QPaintEvent&gt;</code><br />
-<code>#include &lt;QProxyStyle&gt;</code><br />
-<code>#include &lt;QStyleFactory&gt;</code><br />
-<code>#include &lt;QSettings&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;numbers&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;QAbstractItemModel&gt;</code><br />
+<code>#include &lt;QAbstractNativeEventFilter&gt;</code><br />
+<code>#include &lt;QByteArray&gt;</code><br />
+<code>#include &lt;QChar&gt;</code><br />
+<code>#include &lt;QChildEvent&gt;</code><br />
+<code>#include &lt;QCoreApplication&gt;</code><br />
+<code>#include &lt;QDynamicPropertyChangeEvent&gt;</code><br />
+<code>#include &lt;QEvent&gt;</code><br />
+<code>#include &lt;QFile&gt;</code><br />
+<code>#include &lt;QItemSelectionModel&gt;</code><br />
+<code>#include &lt;QLine&gt;</code><br />
+<code>#include &lt;QList&gt;</code><br />
+<code>#include &lt;QLoggingCategory&gt;</code><br />
+<code>#include &lt;QMessageLogger&gt;</code><br />
+<code>#include &lt;QModelIndex&gt;</code><br />
+<code>#include &lt;QObject&gt;</code><br />
+<code>#include &lt;QPair&gt;</code><br />
+<code>#include &lt;QPointF&gt;</code><br />
 <code>#include &lt;QPointer&gt;</code><br />
+<code>#include &lt;QRect&gt;</code><br />
+<code>#include &lt;QRectF&gt;</code><br />
+<code>#include &lt;QScopedValueRollback&gt;</code><br />
+<code>#include &lt;QSet&gt;</code><br />
+<code>#include &lt;QSettings&gt;</code><br />
+<code>#include &lt;QSize&gt;</code><br />
+<code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;QStringList&gt;</code><br />
+<code>#include &lt;QStringLiteral&gt;</code><br />
+<code>#include &lt;QTimer&gt;</code><br />
 <code>#include &lt;QVariant&gt;</code><br />
-<code>#include &lt;QSizePolicy&gt;</code><br />
+<code>#include &lt;QAction&gt;</code><br />
+<code>#include &lt;QActionEvent&gt;</code><br />
+<code>#include &lt;QBrush&gt;</code><br />
+<code>#include &lt;QColor&gt;</code><br />
+<code>#include &lt;QFont&gt;</code><br />
 <code>#include &lt;QFontDatabase&gt;</code><br />
 <code>#include &lt;QFontMetrics&gt;</code><br />
-<code>#include &lt;QPolygonF&gt;</code><br />
+<code>#include &lt;QIcon&gt;</code><br />
+<code>#include &lt;QPaintEvent&gt;</code><br />
+<code>#include &lt;QPainter&gt;</code><br />
 <code>#include &lt;QPainterPath&gt;</code><br />
-<code>#include &lt;QAbstractNativeEventFilter&gt;</code><br />
-<code>#include &lt;QButtonGroup&gt;</code><br />
-<code>#include &lt;QAction&gt;</code><br />
-<code>#include &lt;QMenu&gt;</code><br />
-<code>#include &lt;QLayout&gt;</code><br />
-<code>#include &lt;QSet&gt;</code><br />
-<code>#include &lt;QStringLiteral&gt;</code><br />
-<code>#include &lt;QEvent&gt;</code><br />
-<code>#include &lt;QDynamicPropertyChangeEvent&gt;</code><br />
-<code>#include &lt;QActionEvent&gt;</code><br />
-<code>#include &lt;QChildEvent&gt;</code><br />
-<code>#include &lt;QWheelEvent&gt;</code><br />
-<code>#include &lt;QCompleter&gt;</code><br />
-<code>#include &lt;QTextLayout&gt;</code><br />
+<code>#include &lt;QPalette&gt;</code><br />
+<code>#include &lt;QPen&gt;</code><br />
+<code>#include &lt;QPixmap&gt;</code><br />
+<code>#include &lt;QPolygonF&gt;</code><br />
+<code>#include &lt;QStyleHints&gt;</code><br />
 <code>#include &lt;QTextCharFormat&gt;</code><br />
-<code>#include &lt;QList&gt;</code><br />
+<code>#include &lt;QTextLayout&gt;</code><br />
+<code>#include &lt;QTextLine&gt;</code><br />
+<code>#include &lt;QTextOption&gt;</code><br />
+<code>#include &lt;QWheelEvent&gt;</code><br />
+<code>#include &lt;QWindow&gt;</code><br />
+<code>#include &lt;QAbstractButton&gt;</code><br />
+<code>#include &lt;QAbstractItemView&gt;</code><br />
+<code>#include &lt;QAbstractSpinBox&gt;</code><br />
+<code>#include &lt;QApplication&gt;</code><br />
+<code>#include &lt;QButtonGroup&gt;</code><br />
+<code>#include &lt;QCheckBox&gt;</code><br />
+<code>#include &lt;QComboBox&gt;</code><br />
+<code>#include &lt;QCompleter&gt;</code><br />
+<code>#include &lt;QFrame&gt;</code><br />
+<code>#include &lt;QGroupBox&gt;</code><br />
+<code>#include &lt;QHeaderView&gt;</code><br />
+<code>#include &lt;QLabel&gt;</code><br />
+<code>#include &lt;QLineEdit&gt;</code><br />
+<code>#include &lt;QMenu&gt;</code><br />
+<code>#include &lt;QMenuBar&gt;</code><br />
+<code>#include &lt;QPlainTextEdit&gt;</code><br />
+<code>#include &lt;QProgressBar&gt;</code><br />
+<code>#include &lt;QProxyStyle&gt;</code><br />
+<code>#include &lt;QPushButton&gt;</code><br />
+<code>#include &lt;QRadioButton&gt;</code><br />
+<code>#include &lt;QScrollBar&gt;</code><br />
+<code>#include &lt;QSizePolicy&gt;</code><br />
+<code>#include &lt;QSplitterHandle&gt;</code><br />
+<code>#include &lt;QStyle&gt;</code><br />
+<code>#include &lt;QStyleFactory&gt;</code><br />
+<code>#include &lt;QTabBar&gt;</code><br />
+<code>#include &lt;QTableWidget&gt;</code><br />
+<code>#include &lt;QTextEdit&gt;</code><br />
+<code>#include &lt;QToolBar&gt;</code><br />
+<code>#include &lt;QToolButton&gt;</code><br />
+<code>#include &lt;QToolTip&gt;</code><br />
+<code>#include &lt;QTreeWidget&gt;</code><br />
+<code>#include &lt;QTreeWidgetItem&gt;</code><br />
+<code>#include &lt;QWidget&gt;</code><br />
+<code>#include &lt;QStyleHintReturn&gt;</code><br />
 <code>#include &lt;QStyleOption&gt;</code><br />
 <code>#include &lt;QStyleOptionButton&gt;</code><br />
 <code>#include &lt;QStyleOptionComboBox&gt;</code><br />
@@ -193,43 +249,11 @@ $(function(){initNavTree('dd/d7f/_gui_8cpp.html','../../',''); });
 <code>#include &lt;QStyleOptionTab&gt;</code><br />
 <code>#include &lt;QStyleOptionTabBarBase&gt;</code><br />
 <code>#include &lt;QStyleOptionToolButton&gt;</code><br />
-<code>#include &lt;QPen&gt;</code><br />
-<code>#include &lt;QColor&gt;</code><br />
-<code>#include &lt;QPalette&gt;</code><br />
-<code>#include &lt;QFile&gt;</code><br />
-<code>#include &lt;QIcon&gt;</code><br />
-<code>#include &lt;QPixmap&gt;</code><br />
-<code>#include &lt;QWidget&gt;</code><br />
-<code>#include &lt;QPushButton&gt;</code><br />
-<code>#include &lt;QLabel&gt;</code><br />
-<code>#include &lt;QLineEdit&gt;</code><br />
-<code>#include &lt;QHeaderView&gt;</code><br />
-<code>#include &lt;QToolButton&gt;</code><br />
-<code>#include &lt;QCheckBox&gt;</code><br />
-<code>#include &lt;QRadioButton&gt;</code><br />
-<code>#include &lt;QAbstractSpinBox&gt;</code><br />
-<code>#include &lt;QComboBox&gt;</code><br />
-<code>#include &lt;QSplitterHandle&gt;</code><br />
-<code>#include &lt;QTreeWidget&gt;</code><br />
-<code>#include &lt;QTreeWidgetItem&gt;</code><br />
-<code>#include &lt;QTableWidget&gt;</code><br />
-<code>#include &lt;QScrollBar&gt;</code><br />
-<code>#include &lt;QAbstractButton&gt;</code><br />
-<code>#include &lt;QToolBar&gt;</code><br />
-<code>#include &lt;QMenuBar&gt;</code><br />
-<code>#include &lt;QGroupBox&gt;</code><br />
-<code>#include &lt;QFrame&gt;</code><br />
-<code>#include &lt;QLoggingCategory&gt;</code><br />
-<code>#include &lt;dwmapi.h&gt;</code><br />
+<code>#include &lt;QStyleOptionViewItem&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>&quot;</code><br />
 </div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
-<div class="textblock"><p>Implements the application GUI style, theme handling and widget customization. </p>
-<p><a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a> extends Qt's Fusion style through QProxyStyle, providing custom widget initialization, font-based sizing, control drawing and event handling. It implements the dynamic-property behavior declared in <a class="el" href="../../d1/d67/_gui_8h.html" title="Declares runtime configuration and public controls for the graphical user interface.">Gui.h</a>, including theme-dependent icons, grouped controls and embedded item-view widgets.</p>
-<p>Custom drawing includes control backgrounds and indicators, completion-popup text and multi-level QTableWidget headers. Cases not customized or explicitly suppressed are delegated to the base style.</p>
-<p>The implementation maintains dark and light theme resources, applies the selected theme and observes Windows application-theme changes when following the system setting. Native Windows title-bar colors are updated separately from each window's palette.</p>
-<p>Internal helpers construct drawing resources, render specialized content, resolve dynamic icons, calculate control dimensions and configure widget hierarchies. Bundled fonts are registered before <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a> is constructed.</p>
-<p>Application-style initialization is scheduled through Qt's startup hook and deferred until events are processed. Public theme-query and configuration functions can also initialize the style on demand after QApplication construction. The standalone text-color helper does not initialize the style.</p>
-<p>Public API contracts and property usage requirements are documented in <a class="el" href="../../d1/d67/_gui_8h.html" title="Declares runtime configuration and public controls for the graphical user interface.">Gui.h</a>. </p>
+<div class="textblock"><p>Application GUI style and theme support. </p>
+<p>Implements theme switching, widget drawing and sizing, dynamic properties and automatic GUI initialization. </p>
 
 <p class="definition">Definition in file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 </div><div class="textblock"><div class="dynheader">
@@ -243,178 +267,184 @@ Include dependency graph for Gui.cpp:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3AGuiStyle" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3AGuiStyle"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">anonymous_namespace{Gui.cpp}::GuiStyle</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application style implementing the GUI system.  <a href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application style for themes, widget appearance and custom behavior.  <a href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#details">More...</a><br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3ASizeData_5Fd0_2Fd6c_2Fstructanonymous_5F_5Fnamespace_5F02_5Fgui_5F8cpp_5F03_5F1_5F1_5Fsize_5Fdata" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3ASizeData_5Fd0_2Fd6c_2Fstructanonymous_5F_5Fnamespace_5F02_5Fgui_5F8cpp_5F03_5F1_5F1_5Fsize_5Fdata"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data">anonymous_namespace{Gui.cpp}::SizeData</a></td></tr>
-<tr class="memdesc:d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains dimensions calculated for a fixed-height widget.  <a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data">More...</a><br /></td></tr>
+<tr class="memdesc:d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font-based UI dimensions.  <a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data">More...</a><br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3AThemeData_5Fdf_2Fde5_2Fstructanonymous_5F_5Fnamespace_5F02_5Fgui_5F8cpp_5F03_5F1_5F1_5Ftheme_5Fdata" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3AThemeData_5Fdf_2Fde5_2Fstructanonymous_5F_5Fnamespace_5F02_5Fgui_5F8cpp_5F03_5F1_5F1_5Ftheme_5Fdata"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">anonymous_namespace{Gui.cpp}::ThemeData</a></td></tr>
-<tr class="memdesc:df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the palette and drawing resources for one theme variant.  <a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">More...</a><br /></td></tr>
+<tr class="memdesc:df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colors, palette and pens for one theme.  <a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html">anonymous_namespace{Gui.cpp}</a></td></tr>
-<tr class="memdesc:db/d17/namespaceanonymous__namespace_02_gui_8cpp_03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the private implementation of the GUI system. <br /></td></tr>
+<tr class="memdesc:db/d17/namespaceanonymous__namespace_02_gui_8cpp_03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal GUI styling helpers and implementation. <br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Adraw" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Adraw"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html">anonymous_namespace{Gui.cpp}::draw</a></td></tr>
-<tr class="memdesc:d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing helpers used by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>. <br /></td></tr>
+<tr class="memdesc:d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing helpers; callers should preserve the painter state when needed. <br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Aicon" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Aicon"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html">anonymous_namespace{Gui.cpp}::icon</a></td></tr>
 <tr class="memdesc:df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers for theme-dependent icons and pixmaps. <br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Aitem" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Aitem"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html">anonymous_namespace{Gui.cpp}::item</a></td></tr>
-<tr class="memdesc:dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers for item-view widgets and grouped-widget hierarchies. <br /></td></tr>
+<tr class="memdesc:dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers for item-view widgets and grouped backgrounds. <br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Amake" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Amake"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html">anonymous_namespace{Gui.cpp}::make</a></td></tr>
-<tr class="memdesc:d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs theme and drawing resources used by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>. <br /></td></tr>
+<tr class="memdesc:d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers for creating theme colors and drawing resources. <br /></td></tr>
 <tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Asize" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Asize"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">anonymous_namespace{Gui.cpp}::size</a></td></tr>
-<tr class="memdesc:d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers for standardized widget heights and icon dimensions. <br /></td></tr>
+<tr class="memdesc:d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers for control heights, icon sizes and spacing. <br /></td></tr>
+<tr class="memitem:anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Autil" id="r_anonymous_5Fnamespace_7BGui_2Ecpp_7D_3A_3Autil"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html">anonymous_namespace{Gui.cpp}::util</a></td></tr>
+<tr class="memdesc:d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util"><td class="mdescLeft">&#160;</td><td class="mdescRight">General GUI setup and system-theme helpers. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a9f918755b601cf4bffca775992e6fb90" id="r_a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9f918755b601cf4bffca775992e6fb90">NOMINMAX</a></td></tr>
 <tr class="memitem:a489b218ba63dc7f5434988420437df4f" id="r_a489b218ba63dc7f5434988420437df4f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a489b218ba63dc7f5434988420437df4f">npiCrit</a>&#160;&#160;&#160;qCCritical(npi_gui).noquote()</td></tr>
-<tr class="memdesc:a489b218ba63dc7f5434988420437df4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a critical message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category.  <br /></td></tr>
+<tr class="memdesc:a489b218ba63dc7f5434988420437df4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a critical message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Configuration and control of application&#39;s graphical user interface.">npi.gui</a></span> category.  <br /></td></tr>
 <tr class="memitem:aba900325c5211dc8d74fe8653bfd7a05" id="r_aba900325c5211dc8d74fe8653bfd7a05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aba900325c5211dc8d74fe8653bfd7a05">npiDbug</a>&#160;&#160;&#160;qCDebug(npi_gui).noquote()</td></tr>
-<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a debug message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category.  <br /></td></tr>
+<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces debug messages in this file regardless of category filter rules.  <br /></td></tr>
 <tr class="memitem:acfd217143f12c58fa5be9bd51908a231" id="r_acfd217143f12c58fa5be9bd51908a231"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acfd217143f12c58fa5be9bd51908a231">npiFatl</a>&#160;&#160;&#160;qCFatal(npi_gui).noquote()</td></tr>
-<tr class="memdesc:acfd217143f12c58fa5be9bd51908a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a fatal message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category.  <br /></td></tr>
+<tr class="memdesc:acfd217143f12c58fa5be9bd51908a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the translation-unit-local category used for GUI diagnostics.  <br /></td></tr>
 <tr class="memitem:ae7f5f25fa0583792bf1a5f409b3ea9ab" id="r_ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae7f5f25fa0583792bf1a5f409b3ea9ab">npiInfo</a>&#160;&#160;&#160;qCInfo(npi_gui).noquote()</td></tr>
-<tr class="memdesc:ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an informational message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category.  <br /></td></tr>
+<tr class="memdesc:ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an informational message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Configuration and control of application&#39;s graphical user interface.">npi.gui</a></span> category.  <br /></td></tr>
 <tr class="memitem:a29523bd69971206d80a3109b7bba0eea" id="r_a29523bd69971206d80a3109b7bba0eea"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>&#160;&#160;&#160;qCWarning(npi_gui).noquote()</td></tr>
-<tr class="memdesc:a29523bd69971206d80a3109b7bba0eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a warning message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category.  <br /></td></tr>
+<tr class="memdesc:a29523bd69971206d80a3109b7bba0eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a warning message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Configuration and control of application&#39;s graphical user interface.">npi.gui</a></span> category.  <br /></td></tr>
 <tr class="memitem:a8a7c30a576d5706b6c0821834d01cbbc" id="r_a8a7c30a576d5706b6c0821834d01cbbc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8a7c30a576d5706b6c0821834d01cbbc">STRICT</a></td></tr>
 <tr class="memitem:ac7bef5d85e3dcd73eef56ad39ffc84a9" id="r_ac7bef5d85e3dcd73eef56ad39ffc84a9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac7bef5d85e3dcd73eef56ad39ffc84a9">WIN32_LEAN_AND_MEAN</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8bbe95a2f1005905e2f37e98cc30e28e" id="r_a8bbe95a2f1005905e2f37e98cc30e28e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a8bbe95a2f1005905e2f37e98cc30e28e">anonymous_namespace{Gui.cpp}::draw::adjustedText</a> (QPainter *painter, QRect rect, int flags, const QString &amp;text)</td></tr>
-<tr class="memdesc:a8bbe95a2f1005905e2f37e98cc30e28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text with the requested alignment and font-specific positioning.  <br /></td></tr>
+<tr class="memdesc:a8bbe95a2f1005905e2f37e98cc30e28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text with a small alignment adjustment for JetBrains Mono.  <br /></td></tr>
 <tr class="memitem:a2d9464e72d4d9439db5bdf8cf0b635b2" id="r_a2d9464e72d4d9439db5bdf8cf0b635b2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2">anonymous_namespace{Gui.cpp}::item::applyBaseItem</a> (QWidget *wid)</td></tr>
-<tr class="memdesc:a2d9464e72d4d9439db5bdf8cf0b635b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies grouped-widget configuration to one widget.  <br /></td></tr>
+<tr class="memdesc:a2d9464e72d4d9439db5bdf8cf0b635b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppresses a grouped widget's background unless it has its own base.  <br /></td></tr>
 <tr class="memitem:aa7caff541db4041d0432fe8c16b3d2ec" id="r_aa7caff541db4041d0432fe8c16b3d2ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec">anonymous_namespace{Gui.cpp}::item::applyBaseItemTree</a> (QWidget *wid, QObject *<a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>)</td></tr>
-<tr class="memdesc:aa7caff541db4041d0432fe8c16b3d2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies grouped-widget configuration recursively to a widget hierarchy.  <br /></td></tr>
+<tr class="memdesc:aa7caff541db4041d0432fe8c16b3d2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures a widget and its descendants for a shared group background.  <br /></td></tr>
 <tr class="memitem:ab548237e272ef913e3be58652a0cb202" id="r_ab548237e272ef913e3be58652a0cb202"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202">anonymous_namespace{Gui.cpp}::item::applyViewItem</a> (QWidget *wid)</td></tr>
-<tr class="memdesc:ab548237e272ef913e3be58652a0cb202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies item-view configuration to one widget.  <br /></td></tr>
+<tr class="memdesc:ab548237e272ef913e3be58652a0cb202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies item-view background and sizing settings to a widget.  <br /></td></tr>
 <tr class="memitem:afe1c223ba11330b3f9ee830b8a28df13" id="r_afe1c223ba11330b3f9ee830b8a28df13"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13">anonymous_namespace{Gui.cpp}::item::applyViewItemTree</a> (QWidget *wid, QObject *<a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>)</td></tr>
-<tr class="memdesc:afe1c223ba11330b3f9ee830b8a28df13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies item-view configuration recursively to a widget hierarchy.  <br /></td></tr>
-<tr class="memitem:ae5603f3ba33adb7a05f7f1816bd7a0f7" id="r_ae5603f3ba33adb7a05f7f1816bd7a0f7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ae5603f3ba33adb7a05f7f1816bd7a0f7">anonymous_namespace{Gui.cpp}::draw::baseRoundedRect</a> (const QColor &amp;color, const QStyleOption *option, QPainter *painter)</td></tr>
-<tr class="memdesc:ae5603f3ba33adb7a05f7f1816bd7a0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the option rectangle with the specified color and rounded corners.  <br /></td></tr>
+<tr class="memdesc:afe1c223ba11330b3f9ee830b8a28df13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures a widget and its descendants for use inside an item view.  <br /></td></tr>
 <tr class="memitem:a3319a4d9d55045f0932132acc4c06e5b" id="r_a3319a4d9d55045f0932132acc4c06e5b"><td class="memItemLeft">QBrush&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a3319a4d9d55045f0932132acc4c06e5b">anonymous_namespace{Gui.cpp}::make::checkerBrush</a> (const QColor &amp;color)</td></tr>
-<tr class="memdesc:a3319a4d9d55045f0932132acc4c06e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a checkerboard brush with the supplied color blended over it.  <br /></td></tr>
+<tr class="memdesc:a3319a4d9d55045f0932132acc4c06e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color-filled checkerboard brush to show transparency.  <br /></td></tr>
 <tr class="memitem:a21c4a9497b5a0d6b377ca8bcdf803fbf" id="r_a21c4a9497b5a0d6b377ca8bcdf803fbf"><td class="memItemLeft">QPixmap&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a21c4a9497b5a0d6b377ca8bcdf803fbf">anonymous_namespace{Gui.cpp}::draw::coloredPixmap</a> (QPixmap pixmap, const QColor &amp;color)</td></tr>
-<tr class="memdesc:a21c4a9497b5a0d6b377ca8bcdf803fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recolors a pixmap using its alpha channel as a mask.  <br /></td></tr>
-<tr class="memitem:a7df9080cfeacd6612037190095cc8218" id="r_a7df9080cfeacd6612037190095cc8218"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a7df9080cfeacd6612037190095cc8218">anonymous_namespace{Gui.cpp}::draw::completerItem</a> (const QStyle *baseStyle, const QStyleOptionViewItem *option, QPainter *painter, const QWidget *widget)</td></tr>
-<tr class="memdesc:a7df9080cfeacd6612037190095cc8218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws completion-popup items with emphasis on the untyped suffix.  <br /></td></tr>
+<tr class="memdesc:a21c4a9497b5a0d6b377ca8bcdf803fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recolors a pixmap while preserving its shape and transparency.  <br /></td></tr>
+<tr class="memitem:a15fd08e1989a0801a0d1272ec6bc1784" id="r_a15fd08e1989a0801a0d1272ec6bc1784"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a15fd08e1989a0801a0d1272ec6bc1784">anonymous_namespace{Gui.cpp}::draw::completerItem</a> (QPainter *painter, const QStyleOptionViewItem *option, const QWidget *widget, const QStyle *baseStyle)</td></tr>
+<tr class="memdesc:a15fd08e1989a0801a0d1272ec6bc1784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a completion item with emphasis on untyped text; returns false if not handled.  <br /></td></tr>
 <tr class="memitem:ab045516bfe911dbcb58313d007668b28" id="r_ab045516bfe911dbcb58313d007668b28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28">anonymous_namespace{Gui.cpp}::icon::copyIconState</a> (QIcon *dest, const QIcon &amp;source, QIcon::State state)</td></tr>
-<tr class="memdesc:ab045516bfe911dbcb58313d007668b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies all available Normal-mode pixmaps for one icon state.  <br /></td></tr>
+<tr class="memdesc:ab045516bfe911dbcb58313d007668b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the normal-mode pixmaps for one icon state.  <br /></td></tr>
 <tr class="memitem:aeced12fa2765cf33c60624ac469cf102" id="r_aeced12fa2765cf33c60624ac469cf102"><td class="memItemLeft"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data">SizeData</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102">anonymous_namespace{Gui.cpp}::size::dataForFont</a> (const QFont &amp;widFont, int minHeight=0, int maxHeight=QWIDGETSIZE_MAX)</td></tr>
-<tr class="memdesc:aeced12fa2765cf33c60624ac469cf102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates standardized widget and icon dimensions for a font.  <br /></td></tr>
+<tr class="memdesc:aeced12fa2765cf33c60624ac469cf102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates control and icon sizes from the font size and height limits.  <br /></td></tr>
 <tr class="memitem:acb3f85109e62ceb8dca43bd11d2274e8" id="r_acb3f85109e62ceb8dca43bd11d2274e8"><td class="memItemLeft">QIcon&#160;</td><td class="memItemRight"><a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8">anonymous_namespace{Gui.cpp}::icon::dynamicIcon</a> (const QIcon &amp;originalIcon, const QString &amp;iconName, const QString &amp;iconOnName, bool dark)</td></tr>
-<tr class="memdesc:acb3f85109e62ceb8dca43bd11d2274e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an icon with theme-dependent Off and On states.  <br /></td></tr>
+<tr class="memdesc:acb3f85109e62ceb8dca43bd11d2274e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a themed icon, using the original icon for missing states.  <br /></td></tr>
 <tr class="memitem:a6ccf463e65a358a2e6f54e73769bae0c" id="r_a6ccf463e65a358a2e6f54e73769bae0c"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c">anonymous_namespace{Gui.cpp}::icon::dynamicIconPath</a> (const QString &amp;iconName, bool dark)</td></tr>
-<tr class="memdesc:a6ccf463e65a358a2e6f54e73769bae0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the resource path for a theme-dependent icon.  <br /></td></tr>
-<tr class="memitem:a12037930720aefc2c0753719a78c11e2" id="r_a12037930720aefc2c0753719a78c11e2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a12037930720aefc2c0753719a78c11e2">anonymous_namespace{Gui.cpp}::draw::focusLine</a> (const QRect &amp;rect, const QPen &amp;pen, QPainter *painter, int adjustGap=0)</td></tr>
-<tr class="memdesc:a12037930720aefc2c0753719a78c11e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a focus indicator along the bottom of a rectangle.  <br /></td></tr>
+<tr class="memdesc:a6ccf463e65a358a2e6f54e73769bae0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a theme-specific icon resource, falling back to the default resource.  <br /></td></tr>
+<tr class="memitem:a401c25f40419cae02ca301ba94ec1fd2" id="r_a401c25f40419cae02ca301ba94ec1fd2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a401c25f40419cae02ca301ba94ec1fd2">anonymous_namespace{Gui.cpp}::draw::focusLine</a> (QPainter *painter, const QRect &amp;rect, const QPen &amp;pen)</td></tr>
+<tr class="memdesc:a401c25f40419cae02ca301ba94ec1fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a focus line along the bottom of a control.  <br /></td></tr>
 <tr class="memitem:ac38bf26de3b0963dbcc0f8ecfd14dc3d" id="r_ac38bf26de3b0963dbcc0f8ecfd14dc3d"><td class="memItemLeft"><a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a> *&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle</a> ()</td></tr>
-<tr class="memdesc:ac38bf26de3b0963dbcc0f8ecfd14dc3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the application's <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a>, installing one if needed.  <br /></td></tr>
+<tr class="memdesc:ac38bf26de3b0963dbcc0f8ecfd14dc3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shared style, creating it when application lifetime permits.  <br /></td></tr>
 <tr class="memitem:adabe13fa5e07f5dfe19a290fd78fc94e" id="r_adabe13fa5e07f5dfe19a290fd78fc94e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e">anonymous_namespace{Gui.cpp}::size::iconEdgeSeparation</a> (int widgetHeight)</td></tr>
-<tr class="memdesc:adabe13fa5e07f5dfe19a290fd78fc94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the gap between an icon and the inner edge of its control.  <br /></td></tr>
-<tr class="memitem:a244c57509e0b88781450e3957e7a3a22" id="r_a244c57509e0b88781450e3957e7a3a22"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a244c57509e0b88781450e3957e7a3a22">anonymous_namespace{Gui.cpp}::initFont</a> ()</td></tr>
-<tr class="memdesc:a244c57509e0b88781450e3957e7a3a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the bundled JetBrains Mono fonts and logs loading failures.  <br /></td></tr>
+<tr class="memdesc:adabe13fa5e07f5dfe19a290fd78fc94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the icon's edge spacing for the control height.  <br /></td></tr>
+<tr class="memitem:ab683b79bf2e2ea36a70f70f415c2ec35" id="r_ab683b79bf2e2ea36a70f70f415c2ec35"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35">anonymous_namespace{Gui.cpp}::util::initFont</a> ()</td></tr>
+<tr class="memdesc:ab683b79bf2e2ea36a70f70f415c2ec35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the bundled JetBrains Mono fonts once.  <br /></td></tr>
 <tr class="memitem:a191f772a04c0ae7d990013fc5c8015dc" id="r_a191f772a04c0ae7d990013fc5c8015dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a191f772a04c0ae7d990013fc5c8015dc">anonymous_namespace{Gui.cpp}::item::initItemView</a> (QAbstractItemView *view, QObject *<a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>)</td></tr>
-<tr class="memdesc:a191f772a04c0ae7d990013fc5c8015dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes item-view handling for explicitly marked viewport widgets.  <br /></td></tr>
+<tr class="memdesc:a191f772a04c0ae7d990013fc5c8015dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up marked item-view widgets and handling for children added later.  <br /></td></tr>
 <tr class="memitem:a6a4da07a096dc20b7bf0b9de4983f8e7" id="r_a6a4da07a096dc20b7bf0b9de4983f8e7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7">anonymous_namespace{Gui.cpp}::item::initMainBase</a> (QWidget *wid, QObject *<a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>)</td></tr>
-<tr class="memdesc:a6a4da07a096dc20b7bf0b9de4983f8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a widget marked as a group base.  <br /></td></tr>
+<tr class="memdesc:a6a4da07a096dc20b7bf0b9de4983f8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up a group background and optional exclusive button grouping.  <br /></td></tr>
 <tr class="memitem:a4d44e3cb5b6decad09c239d53485f8ba" id="r_a4d44e3cb5b6decad09c239d53485f8ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba">anonymous_namespace{Gui.cpp}::item::installHierarchyFilter</a> (QWidget *wid, QObject *<a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">guiStyle</a>)</td></tr>
-<tr class="memdesc:a4d44e3cb5b6decad09c239d53485f8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs the <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a> hierarchy event filter on a widget.  <br /></td></tr>
-<tr class="memitem:a68ac735f44edde8a92a47fd8977e2b3f" id="r_a68ac735f44edde8a92a47fd8977e2b3f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a68ac735f44edde8a92a47fd8977e2b3f">anonymous_namespace{Gui.cpp}::isDarkSystemBackground</a> ()</td></tr>
-<tr class="memdesc:a68ac735f44edde8a92a47fd8977e2b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether Windows is configured to use a dark application theme.  <br /></td></tr>
+<tr class="memdesc:a4d44e3cb5b6decad09c239d53485f8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs a filter to configure children added later.  <br /></td></tr>
+<tr class="memitem:a21a700efc0bcd2eeb14cb41c77fa3237" id="r_a21a700efc0bcd2eeb14cb41c77fa3237"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">anonymous_namespace{Gui.cpp}::util::isDarkSystemBackground</a> ()</td></tr>
+<tr class="memdesc:a21a700efc0bcd2eeb14cb41c77fa3237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether Windows uses a dark application theme.  <br /></td></tr>
 <tr class="memitem:a767b562fdd6fe188b63123a47719a5de" id="r_a767b562fdd6fe188b63123a47719a5de"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a767b562fdd6fe188b63123a47719a5de">anonymous_namespace{Gui.cpp}::item::isInsideItemBase</a> (const QWidget *wid)</td></tr>
-<tr class="memdesc:a767b562fdd6fe188b63123a47719a5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a widget has a group-base ancestor.  <br /></td></tr>
+<tr class="memdesc:a767b562fdd6fe188b63123a47719a5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the widget is inside a group base.  <br /></td></tr>
 <tr class="memitem:a5635509f7562cd9c4828e4a6290a777c" id="r_a5635509f7562cd9c4828e4a6290a777c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a5635509f7562cd9c4828e4a6290a777c">anonymous_namespace{Gui.cpp}::item::isInsideItemView</a> (const QWidget *wid)</td></tr>
-<tr class="memdesc:a5635509f7562cd9c4828e4a6290a777c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a widget has an item-view viewport among its ancestors.  <br /></td></tr>
+<tr class="memdesc:a5635509f7562cd9c4828e4a6290a777c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the widget is inside an item view.  <br /></td></tr>
 <tr class="memitem:a07860869e541a5f987d893214c377ad3" id="r_a07860869e541a5f987d893214c377ad3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a07860869e541a5f987d893214c377ad3">anonymous_namespace{Gui.cpp}::item::isItemViewViewport</a> (const QWidget *wid)</td></tr>
-<tr class="memdesc:a07860869e541a5f987d893214c377ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a widget is the viewport of its parent item view.  <br /></td></tr>
-<tr class="memitem:a17874e85ad6e53b438db9754d89fd2cc" id="r_a17874e85ad6e53b438db9754d89fd2cc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a17874e85ad6e53b438db9754d89fd2cc">anonymous_namespace{Gui.cpp}::draw::itemPressedButton</a> (const QPen &amp;pen, const QStyleOption *option, QPainter *painter)</td></tr>
-<tr class="memdesc:a17874e85ad6e53b438db9754d89fd2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the square pressed-state border for a button inside an item view.  <br /></td></tr>
+<tr class="memdesc:a07860869e541a5f987d893214c377ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the widget is an item-view viewport.  <br /></td></tr>
+<tr class="memitem:af2773c648af05b5b821c4f5c5d636d99" id="r_af2773c648af05b5b821c4f5c5d636d99"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#af2773c648af05b5b821c4f5c5d636d99">anonymous_namespace{Gui.cpp}::draw::itemPressedButton</a> (QPainter *painter, const QStyleOption *option, const <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">ThemeData</a> &amp;themeData)</td></tr>
+<tr class="memdesc:af2773c648af05b5b821c4f5c5d636d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a pressed-button outline inside an item view.  <br /></td></tr>
 <tr class="memitem:acbfcb721bc6f25afe2f86f5b7c540da8" id="r_acbfcb721bc6f25afe2f86f5b7c540da8"><td class="memItemLeft">QIcon&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#acbfcb721bc6f25afe2f86f5b7c540da8">anonymous_namespace{Gui.cpp}::draw::menuIcon</a> (const QIcon &amp;source, const QPalette &amp;palette, int <a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, qreal dpr)</td></tr>
-<tr class="memdesc:acbfcb721bc6f25afe2f86f5b7c540da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a monochrome menu icon using the palette's text colors.  <br /></td></tr>
-<tr class="memitem:a28022be21bc0970e5e85764652cdcb2c" id="r_a28022be21bc0970e5e85764652cdcb2c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a28022be21bc0970e5e85764652cdcb2c">anonymous_namespace{Gui.cpp}::draw::pressedButtonRoundedRect</a> (const QStyleOption *option, QPainter *painter)</td></tr>
-<tr class="memdesc:a28022be21bc0970e5e85764652cdcb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the inset background used for a pressed button.  <br /></td></tr>
+<tr class="memdesc:acbfcb721bc6f25afe2f86f5b7c540da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recolors a menu icon using normal and disabled text colors.  <br /></td></tr>
+<tr class="memitem:aa3733033d741507567f612e133cc3214" id="r_aa3733033d741507567f612e133cc3214"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#aa3733033d741507567f612e133cc3214">anonymous_namespace{Gui.cpp}::draw::pressedButtonInnerRoundedRect</a> (QPainter *painter, const QStyleOption *option)</td></tr>
+<tr class="memdesc:aa3733033d741507567f612e133cc3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the inset background of a pressed button.  <br /></td></tr>
 <tr class="memitem:a2fb61e5fe2181331b97fea11127600fe" id="r_a2fb61e5fe2181331b97fea11127600fe"><td class="memItemLeft">QPainterPath&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe">anonymous_namespace{Gui.cpp}::make::roundedArrow</a> (const QPointF &amp;p1, const QPointF &amp;p2, const QPointF &amp;p3)</td></tr>
-<tr class="memdesc:a2fb61e5fe2181331b97fea11127600fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a closed triangular path with rounded corners.  <br /></td></tr>
+<tr class="memdesc:a2fb61e5fe2181331b97fea11127600fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a triangular arrow with rounded corners.  <br /></td></tr>
+<tr class="memitem:a81883d0405fb4b57864dd4f0ae3bf869" id="r_a81883d0405fb4b57864dd4f0ae3bf869"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a81883d0405fb4b57864dd4f0ae3bf869">anonymous_namespace{Gui.cpp}::draw::roundedRect</a> (QPainter *painter, const QRect &amp;rect, const QColor &amp;color, qreal radius)</td></tr>
+<tr class="memdesc:a81883d0405fb4b57864dd4f0ae3bf869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a filled rounded rectangle.  <br /></td></tr>
 <tr class="memitem:af76d38d032f81e47be62ac715f61d3c7" id="r_af76d38d032f81e47be62ac715f61d3c7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7">anonymous_namespace{Gui.cpp}::size::sameFontSize</a> (const QFont &amp;font1, const QFont &amp;font2)</td></tr>
-<tr class="memdesc:af76d38d032f81e47be62ac715f61d3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether two fonts use the same configured size.  <br /></td></tr>
+<tr class="memdesc:af76d38d032f81e47be62ac715f61d3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether two fonts have the same configured size.  <br /></td></tr>
 <tr class="memitem:a664bb963e5feb5ce782b689e9dd5fc85" id="r_a664bb963e5feb5ce782b689e9dd5fc85"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#a664bb963e5feb5ce782b689e9dd5fc85">anonymous_namespace{Gui.cpp}::size::scrollBarWidth</a> ()</td></tr>
-<tr class="memdesc:a664bb963e5feb5ce782b689e9dd5fc85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed width for the scrollbar based on application font size.  <br /></td></tr>
+<tr class="memdesc:a664bb963e5feb5ce782b689e9dd5fc85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the scrollbar width from the application font size.  <br /></td></tr>
+<tr class="memitem:aaf774eb9e2875279c81810cd17d99b0b" id="r_aaf774eb9e2875279c81810cd17d99b0b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#aaf774eb9e2875279c81810cd17d99b0b">anonymous_namespace{Gui.cpp}::draw::sepBorders</a> (QPainter *painter, const QStyleOption *option, const QWidget *widget, const QPen &amp;pen)</td></tr>
+<tr class="memdesc:aaf774eb9e2875279c81810cd17d99b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the separator borders requested by the widget.  <br /></td></tr>
 <tr class="memitem:a8b3d5790edb95817ba0c80fc7e3df28e" id="r_a8b3d5790edb95817ba0c80fc7e3df28e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8b3d5790edb95817ba0c80fc7e3df28e">anonymous_namespace{Gui.cpp}::item::setTransparentBase</a> (QWidget *wid, bool itemViewWidget)</td></tr>
-<tr class="memdesc:a8b3d5790edb95817ba0c80fc7e3df28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures a widget so its Base role does not obscure the underlying background.  <br /></td></tr>
+<tr class="memdesc:a8b3d5790edb95817ba0c80fc7e3df28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the widget's background transparent.  <br /></td></tr>
 <tr class="memitem:add5eb10e73705fb784eb977a325385fb" id="r_add5eb10e73705fb784eb977a325385fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#add5eb10e73705fb784eb977a325385fb">anonymous_namespace{Gui.cpp}::startup</a> ()</td></tr>
-<tr class="memdesc:add5eb10e73705fb784eb977a325385fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedules application-style initialization through Qt's startup hook.  <br /></td></tr>
-<tr class="memitem:afcab152974cfc9cdc2bc2fb1f0e01610" id="r_afcab152974cfc9cdc2bc2fb1f0e01610"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#afcab152974cfc9cdc2bc2fb1f0e01610">anonymous_namespace{Gui.cpp}::draw::tableHorHeaderText</a> (const QStyleOptionHeader *opt, QPainter *painter, const QString &amp;text, const QRect &amp;viewRect, const QRect &amp;textRect)</td></tr>
-<tr class="memdesc:afcab152974cfc9cdc2bc2fb1f0e01610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text for one level of a multi-level horizontal table header.  <br /></td></tr>
-<tr class="memitem:ae3071b51484ebb8e5e9d6e5101568268" id="r_ae3071b51484ebb8e5e9d6e5101568268"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ae3071b51484ebb8e5e9d6e5101568268">anonymous_namespace{Gui.cpp}::draw::tableVerHeaderText</a> (const QStyleOptionHeader *opt, QPainter *painter, const QString &amp;text, const QRect &amp;viewRect, const QRect &amp;textRect)</td></tr>
-<tr class="memdesc:ae3071b51484ebb8e5e9d6e5101568268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text for one level of a multi-level vertical table header.  <br /></td></tr>
+<tr class="memdesc:add5eb10e73705fb784eb977a325385fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedules GUI initialization after QApplication construction.  <br /></td></tr>
+<tr class="memitem:ad309595fa81bb04aa0b3d7e4fb159164" id="r_ad309595fa81bb04aa0b3d7e4fb159164"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ad309595fa81bb04aa0b3d7e4fb159164">anonymous_namespace{Gui.cpp}::draw::tableHorHeaderText</a> (QPainter *painter, const QStyleOptionHeader *option, const QString &amp;text, const QRect &amp;viewRect, const QRect &amp;textRect)</td></tr>
+<tr class="memdesc:ad309595fa81bb04aa0b3d7e4fb159164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws horizontal header text, keeping it visible while scrolling.  <br /></td></tr>
+<tr class="memitem:a63bfb93ee8b1cae3c1ee4b499ea634bd" id="r_a63bfb93ee8b1cae3c1ee4b499ea634bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a63bfb93ee8b1cae3c1ee4b499ea634bd">anonymous_namespace{Gui.cpp}::draw::tableVerHeaderText</a> (QPainter *painter, const QStyleOptionHeader *option, const QString &amp;text, const QRect &amp;viewRect, const QRect &amp;textRect)</td></tr>
+<tr class="memdesc:a63bfb93ee8b1cae3c1ee4b499ea634bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws vertical header text, keeping it visible while scrolling.  <br /></td></tr>
+<tr class="memitem:a2178e6384b38b4c1a1cd2f6e614cfc6f" id="r_a2178e6384b38b4c1a1cd2f6e614cfc6f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a2178e6384b38b4c1a1cd2f6e614cfc6f">anonymous_namespace{Gui.cpp}::draw::textEditBase</a> (QPainter *painter, const QStyleOption *option, const <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">ThemeData</a> &amp;themeData, bool darkBg)</td></tr>
+<tr class="memdesc:a2178e6384b38b4c1a1cd2f6e614cfc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the background for a text-entry control.  <br /></td></tr>
 <tr class="memitem:a250906c4c6bd7ae06482b3e9c60e4882" id="r_a250906c4c6bd7ae06482b3e9c60e4882"><td class="memItemLeft"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data">ThemeData</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">anonymous_namespace{Gui.cpp}::make::theme</a> (bool dark)</td></tr>
-<tr class="memdesc:a250906c4c6bd7ae06482b3e9c60e4882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the drawing resources for one theme variant.  <br /></td></tr>
+<tr class="memdesc:a250906c4c6bd7ae06482b3e9c60e4882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the colors, palette and pens for a dark or light theme.  <br /></td></tr>
 <tr class="memitem:a9a2245a7803c151568e1ba62908b916f" id="r_a9a2245a7803c151568e1ba62908b916f"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f">anonymous_namespace{Gui.cpp}::make::themeText</a> (<a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3e">npi::gui::Theme</a> <a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">theme</a>)</td></tr>
-<tr class="memdesc:a9a2245a7803c151568e1ba62908b916f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts Theme enum value to text.  <br /></td></tr>
+<tr class="memdesc:a9a2245a7803c151568e1ba62908b916f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the theme name for logging.  <br /></td></tr>
 <tr class="memitem:ab5ad1d329be0a1bc2362718e85487f8a" id="r_ab5ad1d329be0a1bc2362718e85487f8a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab5ad1d329be0a1bc2362718e85487f8a">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon</a> (QAbstractButton *button, bool dark)</td></tr>
-<tr class="memdesc:ab5ad1d329be0a1bc2362718e85487f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the specified theme variant to a QAbstractButton's dynamic icon.  <br /></td></tr>
+<tr class="memdesc:ab5ad1d329be0a1bc2362718e85487f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates a button's icon for the selected theme.  <br /></td></tr>
 <tr class="memitem:a2e96e3d71c1a39270063255dcbebb6b0" id="r_a2e96e3d71c1a39270063255dcbebb6b0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon</a> (QAction *action, bool dark)</td></tr>
-<tr class="memdesc:a2e96e3d71c1a39270063255dcbebb6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the specified theme variant to a QAction's dynamic icon.  <br /></td></tr>
+<tr class="memdesc:a2e96e3d71c1a39270063255dcbebb6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates an action's icon for the selected theme.  <br /></td></tr>
 <tr class="memitem:a557291b8beefba625196706b350f13cd" id="r_a557291b8beefba625196706b350f13cd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a557291b8beefba625196706b350f13cd">anonymous_namespace{Gui.cpp}::icon::updateDynamicIcon</a> (QLabel *label, bool dark)</td></tr>
-<tr class="memdesc:a557291b8beefba625196706b350f13cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the specified theme variant to a QLabel's dynamic pixmap.  <br /></td></tr>
-<tr class="memitem:a90aa4aebdb3fa18e9c34af0448692bc0" id="r_a90aa4aebdb3fa18e9c34af0448692bc0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a90aa4aebdb3fa18e9c34af0448692bc0">anonymous_namespace{Gui.cpp}::updateWindowTitleColor</a> (QWidget *widget)</td></tr>
-<tr class="memdesc:a90aa4aebdb3fa18e9c34af0448692bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a native window's title-bar background to its palette Window color.  <br /></td></tr>
+<tr class="memdesc:a557291b8beefba625196706b350f13cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates a label's pixmap when a matching icon resource is found.  <br /></td></tr>
 <tr class="memitem:aebe26ff25d1dc2674278ccd056afdeb9" id="r_aebe26ff25d1dc2674278ccd056afdeb9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aebe26ff25d1dc2674278ccd056afdeb9">anonymous_namespace{Gui.cpp}::size::usesStandardHeight</a> (QStyle::ContentsType type)</td></tr>
-<tr class="memdesc:aebe26ff25d1dc2674278ccd056afdeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a contents type uses the standardized control height.  <br /></td></tr>
+<tr class="memdesc:aebe26ff25d1dc2674278ccd056afdeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether a control uses the standard height.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ad6dee4722ad5908655b0900be46c8bcb" id="r_ad6dee4722ad5908655b0900be46c8bcb"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad6dee4722ad5908655b0900be46c8bcb">anonymous_namespace{Gui.cpp}::borderHalfWidth</a> {<a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a> / 2}</td></tr>
-<tr class="memdesc:ad6dee4722ad5908655b0900be46c8bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset used to center focus indicators on their target position.  <br /></td></tr>
+<tr class="memdesc:ad6dee4722ad5908655b0900be46c8bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset for centering border strokes.  <br /></td></tr>
 <tr class="memitem:ab3fe4f49056ef475941d2c6fda65bee3" id="r_ab3fe4f49056ef475941d2c6fda65bee3"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">anonymous_namespace{Gui.cpp}::borderWidth</a> {2}</td></tr>
-<tr class="memdesc:ab3fe4f49056ef475941d2c6fda65bee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of pressed borders and focus indicators.  <br /></td></tr>
+<tr class="memdesc:ab3fe4f49056ef475941d2c6fda65bee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Border thickness.  <br /></td></tr>
+<tr class="memitem:a3ffc1e5b4ccb60723e34117e2dfc5817" id="r_a3ffc1e5b4ccb60723e34117e2dfc5817"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a3ffc1e5b4ccb60723e34117e2dfc5817">anonymous_namespace{Gui.cpp}::btnHorTextPad</a> {8}</td></tr>
+<tr class="memdesc:a3ffc1e5b4ccb60723e34117e2dfc5817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal padding around button text.  <br /></td></tr>
+<tr class="memitem:a8524c38ba80c3208905b8c7010bd8f66" id="r_a8524c38ba80c3208905b8c7010bd8f66"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a8524c38ba80c3208905b8c7010bd8f66">anonymous_namespace{Gui.cpp}::chkRbHeightAdd</a> {4}</td></tr>
+<tr class="memdesc:a8524c38ba80c3208905b8c7010bd8f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extra height for checkboxes and radio buttons.  <br /></td></tr>
 <tr class="memitem:a0224445215a7eeb19dd93a1e226051fa" id="r_a0224445215a7eeb19dd93a1e226051fa"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a0224445215a7eeb19dd93a1e226051fa">anonymous_namespace{Gui.cpp}::downArrowHeight</a> {8}</td></tr>
-<tr class="memdesc:a0224445215a7eeb19dd93a1e226051fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of a drop-down arrow.  <br /></td></tr>
+<tr class="memdesc:a0224445215a7eeb19dd93a1e226051fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop-down arrow height.  <br /></td></tr>
 <tr class="memitem:a2746ceea0b06808bf8dd8788ba057079" id="r_a2746ceea0b06808bf8dd8788ba057079"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a2746ceea0b06808bf8dd8788ba057079">anonymous_namespace{Gui.cpp}::downArrowPad</a> {6}</td></tr>
-<tr class="memdesc:a2746ceea0b06808bf8dd8788ba057079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal padding around a drop-down arrow.  <br /></td></tr>
+<tr class="memdesc:a2746ceea0b06808bf8dd8788ba057079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal padding around drop-down arrows.  <br /></td></tr>
 <tr class="memitem:ad697393219cfe568989824d800453690" id="r_ad697393219cfe568989824d800453690"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad697393219cfe568989824d800453690">anonymous_namespace{Gui.cpp}::downArrowWidth</a> {10}</td></tr>
-<tr class="memdesc:ad697393219cfe568989824d800453690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of a drop-down arrow.  <br /></td></tr>
+<tr class="memdesc:ad697393219cfe568989824d800453690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop-down arrow width.  <br /></td></tr>
+<tr class="memitem:a71f8376952b8374a57dac86d87e7ac81" id="r_a71f8376952b8374a57dac86d87e7ac81"><td class="memItemLeft">QPointer&lt; <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html">GuiStyle</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a71f8376952b8374a57dac86d87e7ac81">anonymous_namespace{Gui.cpp}::guiStylePtr</a> {nullptr}</td></tr>
+<tr class="memdesc:a71f8376952b8374a57dac86d87e7ac81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the application-owned style, even when a stylesheet wraps it.  <br /></td></tr>
 <tr class="memitem:a89e69b9a45dd54f6af78da1125f8ebae" id="r_a89e69b9a45dd54f6af78da1125f8ebae"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae">anonymous_namespace{Gui.cpp}::heightQuantum</a> {4}</td></tr>
-<tr class="memdesc:a89e69b9a45dd54f6af78da1125f8ebae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height increment used for fixed-height widgets.  <br /></td></tr>
-<tr class="memitem:a5c87d3c73f0908283c2731fdd31fc973" id="r_a5c87d3c73f0908283c2731fdd31fc973"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a5c87d3c73f0908283c2731fdd31fc973">anonymous_namespace{Gui.cpp}::horTextPad</a> {8}</td></tr>
-<tr class="memdesc:a5c87d3c73f0908283c2731fdd31fc973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal padding around control text.  <br /></td></tr>
+<tr class="memdesc:a89e69b9a45dd54f6af78da1125f8ebae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Step used when rounding control heights.  <br /></td></tr>
 <tr class="memitem:a34a8fbbb12085f5510aebde27350e9f0" id="r_a34a8fbbb12085f5510aebde27350e9f0"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a34a8fbbb12085f5510aebde27350e9f0">anonymous_namespace{Gui.cpp}::iconTextGap</a> {4}</td></tr>
-<tr class="memdesc:a34a8fbbb12085f5510aebde27350e9f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gap between an icon and adjacent text.  <br /></td></tr>
+<tr class="memdesc:a34a8fbbb12085f5510aebde27350e9f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gap between icon and text.  <br /></td></tr>
 <tr class="memitem:ad33153703faa5cd9b48e866af0032f76" id="r_ad33153703faa5cd9b48e866af0032f76"><td class="memItemLeft">constexpr qreal&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ad33153703faa5cd9b48e866af0032f76">anonymous_namespace{Gui.cpp}::innerRadius</a> {<a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">outerRadius</a> * 0.7}</td></tr>
-<tr class="memdesc:ad33153703faa5cd9b48e866af0032f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corner radius of the inner pressed-button background.  <br /></td></tr>
+<tr class="memdesc:ad33153703faa5cd9b48e866af0032f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inner corner radius.  <br /></td></tr>
 <tr class="memitem:aff5afbe0a76b10e27360d733d02d24d4" id="r_aff5afbe0a76b10e27360d733d02d24d4"><td class="memItemLeft">constexpr qreal&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aff5afbe0a76b10e27360d733d02d24d4">anonymous_namespace{Gui.cpp}::outerRadius</a> {<a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a> * 2.0}</td></tr>
-<tr class="memdesc:aff5afbe0a76b10e27360d733d02d24d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corner radius of rounded control backgrounds.  <br /></td></tr>
+<tr class="memdesc:aff5afbe0a76b10e27360d733d02d24d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outer corner radius.  <br /></td></tr>
 <tr class="memitem:a063bf20cce5758ff5aa95d14fa5e35db" id="r_a063bf20cce5758ff5aa95d14fa5e35db"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a063bf20cce5758ff5aa95d14fa5e35db">anonymous_namespace{Gui.cpp}::prop_hierarchyFilterInstalled</a> [] {&quot;npi_gui_private_hierarchyFilterInstalled&quot;}</td></tr>
-<tr class="memdesc:a063bf20cce5758ff5aa95d14fa5e35db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the child-hierarchy event filter has been installed.  <br /></td></tr>
+<tr class="memdesc:a063bf20cce5758ff5aa95d14fa5e35db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks an installed child-widget filter.  <br /></td></tr>
 <tr class="memitem:ac58ff3e168e6898ff9edde574d37e6eb" id="r_ac58ff3e168e6898ff9edde574d37e6eb"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac58ff3e168e6898ff9edde574d37e6eb">anonymous_namespace{Gui.cpp}::prop_lineEditClearButtonChanged</a> [] {&quot;npi_gui_private_lineEditClearButtonChanged&quot;}</td></tr>
-<tr class="memdesc:ac58ff3e168e6898ff9edde574d37e6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether clear-action customization has been attempted.  <br /></td></tr>
+<tr class="memdesc:ac58ff3e168e6898ff9edde574d37e6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks clear-button customization.  <br /></td></tr>
 <tr class="memitem:a80e04cedfd158a74846375537e841426" id="r_a80e04cedfd158a74846375537e841426"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a80e04cedfd158a74846375537e841426">anonymous_namespace{Gui.cpp}::prop_lineEditComplex</a> [] {&quot;npi_gui_private_lineEditComplex&quot;}</td></tr>
-<tr class="memdesc:a80e04cedfd158a74846375537e841426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a QLineEdit owned by a complex control.  <br /></td></tr>
+<tr class="memdesc:a80e04cedfd158a74846375537e841426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a line edit inside a combo box or spin box.  <br /></td></tr>
 <tr class="memitem:a6306664757b796dcf7a3fa0353557ac0" id="r_a6306664757b796dcf7a3fa0353557ac0"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a6306664757b796dcf7a3fa0353557ac0">anonymous_namespace{Gui.cpp}::prop_lineEditDefault</a> [] {&quot;npi_gui_private_lineEditDefault&quot;}</td></tr>
-<tr class="memdesc:a6306664757b796dcf7a3fa0353557ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks an internal default QLineEdit, such as an item-view editor.  <br /></td></tr>
+<tr class="memdesc:a6306664757b796dcf7a3fa0353557ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keeps default styling for an internal line edit.  <br /></td></tr>
 <tr class="memitem:a508a51fb71e45bf048d9c87a41402005" id="r_a508a51fb71e45bf048d9c87a41402005"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a508a51fb71e45bf048d9c87a41402005">anonymous_namespace{Gui.cpp}::prop_lineEditPasswordInitialized</a> [] {&quot;npi_gui_private_lineEditPasswordInitialized&quot;}</td></tr>
-<tr class="memdesc:a508a51fb71e45bf048d9c87a41402005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether password-line-edit initialization has been completed.  <br /></td></tr>
+<tr class="memdesc:a508a51fb71e45bf048d9c87a41402005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevents repeated password setup.  <br /></td></tr>
 <tr class="memitem:a36881a04b5ecbafb4ebac04a1ec47da5" id="r_a36881a04b5ecbafb4ebac04a1ec47da5"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a36881a04b5ecbafb4ebac04a1ec47da5">anonymous_namespace{Gui.cpp}::prop_lineEditTogglePasswordAction</a> [] {&quot;npi_gui_private_lineEditTogglePasswordAction&quot;}</td></tr>
-<tr class="memdesc:a36881a04b5ecbafb4ebac04a1ec47da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the QAction that toggles password visibility.  <br /></td></tr>
+<tr class="memdesc:a36881a04b5ecbafb4ebac04a1ec47da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the password visibility action.  <br /></td></tr>
 <tr class="memitem:aa17764fc281fe5da09450e9ca22c6133" id="r_aa17764fc281fe5da09450e9ca22c6133"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#aa17764fc281fe5da09450e9ca22c6133">anonymous_namespace{Gui.cpp}::prop_noBackground</a> [] {&quot;npi_gui_private_noBackground&quot;}</td></tr>
-<tr class="memdesc:aa17764fc281fe5da09450e9ca22c6133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppresses drawing of the widget's own background.  <br /></td></tr>
+<tr class="memdesc:aa17764fc281fe5da09450e9ca22c6133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppresses the widget's own background.  <br /></td></tr>
 <tr class="memitem:ab1f7a726f28840baa431eddaa7431f2b" id="r_ab1f7a726f28840baa431eddaa7431f2b"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">anonymous_namespace{Gui.cpp}::prop_storedOriginalIcon</a> [] {&quot;npi_gui_private_storedOriginalIcon&quot;}</td></tr>
-<tr class="memdesc:ab1f7a726f28840baa431eddaa7431f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the original icon for dynamic-icon fallback.  <br /></td></tr>
-<tr class="memitem:afe152ce2b339fea7c026edf4dfb82786" id="r_afe152ce2b339fea7c026edf4dfb82786"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#afe152ce2b339fea7c026edf4dfb82786">anonymous_namespace{Gui.cpp}::prop_titleBarFilterInstalled</a> [] {&quot;npi_gui_private_titleBarFilterInstalled&quot;}</td></tr>
-<tr class="memdesc:afe152ce2b339fea7c026edf4dfb82786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the window title-bar event filter has been installed.  <br /></td></tr>
+<tr class="memdesc:ab1f7a726f28840baa431eddaa7431f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the fallback icon.  <br /></td></tr>
 <tr class="memitem:a992bd764fbc7af77e3bbcaa060077de4" id="r_a992bd764fbc7af77e3bbcaa060077de4"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a992bd764fbc7af77e3bbcaa060077de4">anonymous_namespace{Gui.cpp}::prop_viewItem</a> [] {&quot;npi_gui_private_viewItem&quot;}</td></tr>
-<tr class="memdesc:a992bd764fbc7af77e3bbcaa060077de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a widget configured for use inside an item view.  <br /></td></tr>
+<tr class="memdesc:a992bd764fbc7af77e3bbcaa060077de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a widget configured for an item view.  <br /></td></tr>
 <tr class="memitem:ae55a891b3f1f246933a59b11fcfcf6b4" id="r_ae55a891b3f1f246933a59b11fcfcf6b4"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ae55a891b3f1f246933a59b11fcfcf6b4">anonymous_namespace{Gui.cpp}::prop_viewportFilterInstalled</a> [] {&quot;npi_gui_private_viewportFilterInstalled&quot;}</td></tr>
-<tr class="memdesc:ae55a891b3f1f246933a59b11fcfcf6b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the table-header viewport event filter has been installed.  <br /></td></tr>
+<tr class="memdesc:ae55a891b3f1f246933a59b11fcfcf6b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks an installed header viewport filter.  <br /></td></tr>
 <tr class="memitem:abdf136b5b990f2bf8729963c1f7f4c07" id="r_abdf136b5b990f2bf8729963c1f7f4c07"><td class="memItemLeft">constexpr <a class="el" href="../../d0/deb/namespace_3global_scope_4.html#da/d7d/classchar">char</a>&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#abdf136b5b990f2bf8729963c1f7f4c07">anonymous_namespace{Gui.cpp}::prop_viewportUpdate</a> [] {&quot;npi_gui_private_viewportUpdate&quot;}</td></tr>
-<tr class="memdesc:abdf136b5b990f2bf8729963c1f7f4c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests repainting of the complete table header.  <br /></td></tr>
+<tr class="memdesc:abdf136b5b990f2bf8729963c1f7f4c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks full-header repainting.  <br /></td></tr>
 <tr class="memitem:a28d34b6dddd9bcebafece59dc4bf9bef" id="r_a28d34b6dddd9bcebafece59dc4bf9bef"><td class="memItemLeft">constexpr qreal&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a28d34b6dddd9bcebafece59dc4bf9bef">anonymous_namespace{Gui.cpp}::roundedArrowRadius</a> {1.1}</td></tr>
-<tr class="memdesc:a28d34b6dddd9bcebafece59dc4bf9bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corner radius used for custom arrow paths.  <br /></td></tr>
-<tr class="memitem:a9d3110de4c18060309d68b2a0083c940" id="r_a9d3110de4c18060309d68b2a0083c940"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">anonymous_namespace{Gui.cpp}::sideGap</a> {6}</td></tr>
-<tr class="memdesc:a9d3110de4c18060309d68b2a0083c940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gap between a control edge and its focus indicator.  <br /></td></tr>
+<tr class="memdesc:a28d34b6dddd9bcebafece59dc4bf9bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corner radius for rounded arrows.  <br /></td></tr>
+<tr class="memitem:a9d3110de4c18060309d68b2a0083c940" id="r_a9d3110de4c18060309d68b2a0083c940"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a9d3110de4c18060309d68b2a0083c940">anonymous_namespace{Gui.cpp}::sideGap</a> {5}</td></tr>
+<tr class="memdesc:a9d3110de4c18060309d68b2a0083c940"><td class="mdescLeft">&#160;</td><td class="mdescRight">End spacing for focus lines and separators.  <br /></td></tr>
 </table>
 <hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
 <a name="d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data" id="d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data"></a>
@@ -440,19 +470,19 @@ Collaboration diagram for anonymous_namespace{Gui.cpp}::SizeData:</div>
 <td class="fieldname">
 fontHeight_</td>
 <td class="fielddoc">
-Height of the associated font metrics. </td></tr>
+Font height. </td></tr>
 <tr><td class="fieldtype">
 <a id="a9715ca59b73721ebb21796b6e15f3f64" name="a9715ca59b73721ebb21796b6e15f3f64"></a>int</td>
 <td class="fieldname">
 height_</td>
 <td class="fielddoc">
-Widget height. </td></tr>
+UI height. </td></tr>
 <tr><td class="fieldtype">
 <a id="a7f67fe6e94fa7a841b58c9c9ee1e6fa5" name="a7f67fe6e94fa7a841b58c9c9ee1e6fa5"></a>int</td>
 <td class="fieldname">
 iconSeparation_</td>
 <td class="fielddoc">
-Gap between the control border and icon. </td></tr>
+Space between the icon and border. </td></tr>
 <tr><td class="fieldtype">
 <a id="a25a75c0db9931fb4c6bcc961beb00243" name="a25a75c0db9931fb4c6bcc961beb00243"></a>int</td>
 <td class="fieldname">
@@ -486,111 +516,139 @@ Collaboration diagram for anonymous_namespace{Gui.cpp}::ThemeData:</div>
 <td class="fieldname">
 arrowDisabled_</td>
 <td class="fielddoc">
-Disabled spin-box and drop-down arrow color. </td></tr>
+Disabled arrow color. </td></tr>
 <tr><td class="fieldtype">
 <a id="af41f7ab853e7d90c1b8865cdaa1f34a2" name="af41f7ab853e7d90c1b8865cdaa1f34a2"></a>QColor</td>
 <td class="fieldname">
 arrowHover_</td>
 <td class="fielddoc">
-Spin-box and drop-down arrow color on hover. </td></tr>
+Hovered arrow color. </td></tr>
 <tr><td class="fieldtype">
 <a id="a3b1a65e71fcf97f853c2f71d45260d86" name="a3b1a65e71fcf97f853c2f71d45260d86"></a>QColor</td>
 <td class="fieldname">
 arrowNormal_</td>
 <td class="fielddoc">
-Normal spin-box and drop-down arrow color. </td></tr>
+Normal arrow color. </td></tr>
 <tr><td class="fieldtype">
 <a id="a46bceae80ab64b659d0baa6b9eaadc55" name="a46bceae80ab64b659d0baa6b9eaadc55"></a>QColor</td>
 <td class="fieldname">
 arrowSunken_</td>
 <td class="fielddoc">
-Spin-box arrow color when pressed. </td></tr>
+Pressed arrow color. </td></tr>
+<tr><td class="fieldtype">
+<a id="a03cfa6f56c2c4ed4cc721f7deb7eb27c" name="a03cfa6f56c2c4ed4cc721f7deb7eb27c"></a>QColor</td>
+<td class="fieldname">
+btnHoveredOverlay_</td>
+<td class="fielddoc">
+Button hover overlay. </td></tr>
+<tr><td class="fieldtype">
+<a id="a5fe0afcbee33250b27aa41cd73b97b87" name="a5fe0afcbee33250b27aa41cd73b97b87"></a>QColor</td>
+<td class="fieldname">
+defBtnHoveredOverlay_</td>
+<td class="fielddoc">
+Default-button hover overlay. </td></tr>
+<tr><td class="fieldtype">
+<a id="af68701a095fc731000fe8699aaa39145" name="af68701a095fc731000fe8699aaa39145"></a>QColor</td>
+<td class="fieldname">
+defBtnOverlay_</td>
+<td class="fielddoc">
+Default-button overlay. </td></tr>
+<tr><td class="fieldtype">
+<a id="a01e5f381d9c1002e8216d743195c12aa" name="a01e5f381d9c1002e8216d743195c12aa"></a>QColor</td>
+<td class="fieldname">
+disabledSunken_</td>
+<td class="fielddoc">
+Disabled sunken background. </td></tr>
 <tr><td class="fieldtype">
 <a id="aa99aff5355aacdaa337aa2d151353ab6" name="aa99aff5355aacdaa337aa2d151353ab6"></a>QPen</td>
 <td class="fieldname">
 focusPen_</td>
 <td class="fielddoc">
-Pen used for the focus indicator below a control. </td></tr>
+Focus indicators. </td></tr>
 <tr><td class="fieldtype">
 <a id="ae6630a62de2a41db5f3e3319ad32e499" name="ae6630a62de2a41db5f3e3319ad32e499"></a>QPen</td>
 <td class="fieldname">
 framePen_</td>
 <td class="fielddoc">
-Pen used for QFrame outlines. </td></tr>
-<tr><td class="fieldtype">
-<a id="a1c014e61b6842cfb76691fc6e0186b24" name="a1c014e61b6842cfb76691fc6e0186b24"></a>QPen</td>
-<td class="fieldname">
-highlightPen_</td>
-<td class="fielddoc">
-Pen using the theme highlight color. </td></tr>
+Frame outlines. </td></tr>
 <tr><td class="fieldtype">
 <a id="aaa1e139c26f0cf95996d6f3b79203a14" name="aaa1e139c26f0cf95996d6f3b79203a14"></a>int</td>
 <td class="fieldname">
 overlayAlpha_</td>
 <td class="fielddoc">
-Alpha component used for translucent overlays. </td></tr>
+Overlay opacity. </td></tr>
 <tr><td class="fieldtype">
 <a id="a85d388d43c3c4772aec034237f113e4e" name="a85d388d43c3c4772aec034237f113e4e"></a>QPalette</td>
 <td class="fieldname">
 palette_</td>
 <td class="fielddoc">
-Application palette for this theme variant. <p>The <span class="tt">QPalette::Button</span> and <span class="tt">QPalette::Base</span> roles intentionally use the <span class="tt">QPalette::Window</span> color because Qt also uses these roles beyond button and text-entry backgrounds. <span class="tt"><a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html" title="Application style implementing the GUI system.">GuiStyle</a></span> draws those backgrounds using <span class="tt">surfaces_.raised_</span> and <span class="tt">surfaces_.sunken_</span>, respectively. </p>
-</td></tr>
+Theme palette; separate surface colors are used for custom backgrounds. </td></tr>
 <tr><td class="fieldtype">
 <a id="a5b1b4f53f549d5bc6cbd2882759b1420" name="a5b1b4f53f549d5bc6cbd2882759b1420"></a>QColor</td>
 <td class="fieldname">
 scrollButton_</td>
 <td class="fielddoc">
-QScrollBar arrow color. </td></tr>
+Scrollbar arrow color. </td></tr>
 <tr><td class="fieldtype">
 <a id="ac68c79d28ccdd0b912c9b84ced8c3b29" name="ac68c79d28ccdd0b912c9b84ced8c3b29"></a>QColor</td>
 <td class="fieldname">
 scrollDisabled_</td>
 <td class="fielddoc">
-QScrollBar arrow and slider color when disabled. </td></tr>
+Disabled scrollbar color. </td></tr>
 <tr><td class="fieldtype">
 <a id="aa1e072c53b80addf9a579f244bf26c47" name="aa1e072c53b80addf9a579f244bf26c47"></a>QColor</td>
 <td class="fieldname">
 scrollHover_</td>
 <td class="fielddoc">
-QScrollBar arrow and slider color on hover or press. </td></tr>
+Hovered or pressed scrollbar color. </td></tr>
 <tr><td class="fieldtype">
 <a id="a5a2fb3f8d0d5025230caf7e828c11dff" name="a5a2fb3f8d0d5025230caf7e828c11dff"></a>QColor</td>
 <td class="fieldname">
 scrollSlider_</td>
 <td class="fielddoc">
-QScrollBar slider color. </td></tr>
+Scrollbar slider color. </td></tr>
 <tr><td class="fieldtype">
 <a id="a7da374364bab717b25ce64cf8b47d0f6" name="a7da374364bab717b25ce64cf8b47d0f6"></a>QPen</td>
 <td class="fieldname">
 sepPen_</td>
 <td class="fielddoc">
-Pen used for drawing horizontal/vertical separators. </td></tr>
+Separator lines. </td></tr>
 <tr><td class="fieldtype">
 <a id="ab963c28bba91ecfbc45c09c7fcc6a589" name="ab963c28bba91ecfbc45c09c7fcc6a589"></a>Surfaces</td>
 <td class="fieldname">
 surfaces_</td>
 <td class="fielddoc">
-Background colors for this theme variant's surface levels. <p>The <span class="tt">normal_</span> color provides the main palette background. Additional drawing colors may be derived from these surface colors. </p>
-</td></tr>
+Surface background colors. </td></tr>
 <tr><td class="fieldtype">
-<a id="ace47ff246e9ab8cb6abbf30f8c0fff00" name="ace47ff246e9ab8cb6abbf30f8c0fff00"></a>QPen</td>
+<a id="acb663ecbe2c6966ea7b227642155293f" name="acb663ecbe2c6966ea7b227642155293f"></a>QPen</td>
 <td class="fieldname">
-tableHeaderPen_</td>
+tableGrid_</td>
 <td class="fielddoc">
-Pen used for table-header section borders. </td></tr>
+Table grid lines. </td></tr>
+<tr><td class="fieldtype">
+<a id="a06930853a654b11bb21b73ec77c48966" name="a06930853a654b11bb21b73ec77c48966"></a>QPen</td>
+<td class="fieldname">
+tableSection_</td>
+<td class="fielddoc">
+Table header section lines. </td></tr>
+<tr><td class="fieldtype">
+<a id="a8dc9d5f85e174a7f636cdf260b3de97a" name="a8dc9d5f85e174a7f636cdf260b3de97a"></a>QPen</td>
+<td class="fieldname">
+tableSectionDis_</td>
+<td class="fielddoc">
+Disabled table header section lines. </td></tr>
 <tr><td class="fieldtype">
 <a id="af2e7f84837176e22598539054dfb6c61" name="af2e7f84837176e22598539054dfb6c61"></a>QPen</td>
 <td class="fieldname">
 viewBtnPressPen_</td>
 <td class="fielddoc">
-Pen used for a pressed button inside an item view. </td></tr>
+Pressed-button outlines inside item views. </td></tr>
 <tr><td class="fieldtype">
 <a id="ae93aca34a9712892ce3a40a76cd32257" name="ae93aca34a9712892ce3a40a76cd32257"></a>QPen</td>
 <td class="fieldname">
 viewDisBtnPressPen_</td>
 <td class="fielddoc">
-Pen used for a disabled pressed button inside an item view. </td></tr>
+Disabled pressed-button outlines inside item views. </td></tr>
 </table>
 
 </div>
@@ -608,7 +666,7 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 </div>
 </div>
@@ -624,9 +682,9 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a critical message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
+<p>Creates a critical message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Configuration and control of application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00162">162</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00159">159</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a1d722dbe548810e26de6526339f7db0a">anonymous_namespace{Log.cpp}::workers::directoryCleanup()</a>, <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a151b634635a35cd3feb2de126611e850">anonymous_namespace{Log.cpp}::workers::dispWorkerStart()</a>, and <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a">anonymous_namespace{Log.cpp}::startup()</a>.</p>
 
@@ -644,9 +702,10 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a debug message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
+<p>Forces debug messages in this file regardless of category filter rules. </p>
+<p>Creates a debug message according to category filter rules. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00153">153</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00177">177</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 </div>
 </div>
@@ -662,11 +721,12 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a fatal message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
+<p>Defines the translation-unit-local category used for GUI diagnostics. </p>
+<p>Creates a fatal message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Configuration and control of application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00165">165</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00156">156</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920">anonymous_namespace{Log.cpp}::workers::fileWorkerStart()</a>, and <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#ad9a9c0c17f8f330fc36da938d8494920">anonymous_namespace{Log.cpp}::workers::fileWorkerStart()</a>.</p>
 
 </div>
 </div>
@@ -682,11 +742,11 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an informational message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
+<p>Creates an informational message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Configuration and control of application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00156">156</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00165">165</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662">anonymous_namespace{Gui.cpp}::GuiStyle::GuiStyle()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aa503d15e866087e0e91b5befec335cad">anonymous_namespace{Gui.cpp}::GuiStyle::~GuiStyle()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad">anonymous_namespace{Gui.cpp}::GuiStyle::nativeEventFilter()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882">anonymous_namespace{Gui.cpp}::GuiStyle::setTheme_()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662">anonymous_namespace{Gui.cpp}::GuiStyle::GuiStyle()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aa503d15e866087e0e91b5befec335cad">anonymous_namespace{Gui.cpp}::GuiStyle::~GuiStyle()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8">anonymous_namespace{Gui.cpp}::GuiStyle::applyTheme_()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf">anonymous_namespace{Gui.cpp}::GuiStyle::init_()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882">anonymous_namespace{Gui.cpp}::GuiStyle::setTheme_()</a>.</p>
 
 </div>
 </div>
@@ -702,11 +762,11 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a warning message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Runtime configuration and control of the application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
+<p>Creates a warning message in the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html" title="Configuration and control of application&#39;s graphical user interface.">npi.gui</a></span> category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00159">159</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00162">162</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c">anonymous_namespace{Gui.cpp}::icon::dynamicIconPath()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a244c57509e0b88781450e3957e7a3a22">anonymous_namespace{Gui.cpp}::initFont()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc">anonymous_namespace{Log.cpp}::control::scheduleMaxFolderMbSave()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287">anonymous_namespace{Log.cpp}::control::setMaxFolderMb()</a>, and <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a90aa4aebdb3fa18e9c34af0448692bc0">anonymous_namespace{Gui.cpp}::updateWindowTitleColor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a6ccf463e65a358a2e6f54e73769bae0c">anonymous_namespace{Gui.cpp}::icon::dynamicIconPath()</a>, <a class="el" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35">anonymous_namespace{Gui.cpp}::util::initFont()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a49f23e2414522446fe0dffc4154b6794">anonymous_namespace{Log.cpp}::control::loadAllSettings()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#a996434c89cac4d2843386149824314dc">anonymous_namespace{Log.cpp}::control::scheduleMaxFolderMbSave()</a>, and <a class="el" href="../../d3/d55/namespaceanonymous__namespace_02_log_8cpp_03_1_1control.html#adfc01277f4204633f077a8035629f287">anonymous_namespace{Log.cpp}::control::setMaxFolderMb()</a>.</p>
 
 </div>
 </div>
@@ -722,7 +782,7 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 </div>
 </div>
@@ -738,7 +798,7 @@ Pen used for a disabled pressed button inside an item view. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 </div>
 </div>

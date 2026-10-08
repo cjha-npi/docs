@@ -48,9 +48,10 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -69,11 +70,12 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html",
-"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a3ac557daa4bd8051c8687f362f6d789d",
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a00d8b5fce58842fa89e1ef00dc64cbb9",
-"d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3",
-"db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae",
-"functions_n.html"
+"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a307e2c83a2d4ef7c35f8563d955d4723",
+"d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a9cb23705448f22ebaae1b612298414b4",
+"d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a4af6f8f6c4383deac6c809f4be7d6972",
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker",
+"db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html",
+"df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a71fe7b9ac5c5410274b7d85542fdfd66"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

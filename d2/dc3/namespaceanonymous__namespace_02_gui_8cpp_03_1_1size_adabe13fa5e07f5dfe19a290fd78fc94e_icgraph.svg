@@ -58,7 +58,7 @@ var sectionId = 'dynsection-3';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Returns the gap between an icon and the inner edge of its control.">
+<g id="a_Node000001"><a xlink:title="Returns the icon&#39;s edge spacing for the control height.">
 <polygon fill="#999999" stroke="none" points="1088,-35.15 742,-35.15 742,-15.9 1088,-15.9 1088,-35.15"/>
 <text xml:space="preserve" text-anchor="start" x="750" y="-21.7" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::size::iconEdgeSeparation</text>
 </a>
@@ -76,7 +76,7 @@ var sectionId = 'dynsection-3';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" target="_top" xlink:title="Calculates standardized widget and icon dimensions for a font.">
+<g id="a_Node000002"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" target="_top" xlink:title="Calculates control and icon sizes from the font size and height limits.">
 <polygon fill="white" stroke="none" points="706,-65.78 516,-65.78 516,-35.28 706,-35.28 706,-65.78"/>
 <text xml:space="preserve" text-anchor="start" x="524" y="-51.33" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="611" y="-40.08" font-family="Consolas" font-size="11.00">{Gui::cpp}::size::dataForFont</text>
@@ -95,7 +95,7 @@ var sectionId = 'dynsection-3';
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" target="_top" xlink:title="Draws supported controls using application&#45;specific layouts and visuals.">
+<g id="a_Node000005"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" target="_top" xlink:title="Draws controls using the application&#39;s styling.">
 <polygon fill="white" stroke="none" points="136,-79.4 0,-79.4 0,-37.65 136,-37.65 136,-79.4"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-64.95" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="8" y="-53.7" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
@@ -124,7 +124,7 @@ var sectionId = 'dynsection-3';
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" target="_top" xlink:title="Returns sizing data based on the widget&#39;s font size and height limits.">
+<g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" target="_top" xlink:title="Returns control sizes based on the widget&#39;s font and height limits.">
 <polygon fill="white" stroke="none" points="480,-74.4 344,-74.4 344,-32.65 480,-32.65 480,-74.4"/>
 <text xml:space="preserve" text-anchor="start" x="352" y="-59.95" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="352" y="-48.7" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
@@ -144,7 +144,7 @@ var sectionId = 'dynsection-3';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3" target="_top" xlink:title="Provides application&#45;standard metrics for selected control elements.">
+<g id="a_Node000004"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3" target="_top" xlink:title="Provides custom control spacing, icon sizes and scrollbar dimensions.">
 <polygon fill="white" stroke="none" points="308,-134.4 172,-134.4 172,-92.65 308,-92.65 308,-134.4"/>
 <text xml:space="preserve" text-anchor="start" x="180" y="-119.95" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="180" y="-108.7" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
@@ -164,7 +164,7 @@ var sectionId = 'dynsection-3';
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" target="_top" xlink:title="Calculates customized content sizes for supported controls.">
+<g id="a_Node000006"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" target="_top" xlink:title="Adjusts control sizes for consistent heights, spacing and square buttons.">
 <polygon fill="white" stroke="none" points="308,-74.4 172,-74.4 172,-32.65 308,-32.65 308,-74.4"/>
 <text xml:space="preserve" text-anchor="start" x="180" y="-59.95" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="180" y="-48.7" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>

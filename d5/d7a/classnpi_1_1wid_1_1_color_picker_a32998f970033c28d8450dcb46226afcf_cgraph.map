@@ -1,0 +1,33 @@
+<map id="npi::wid::ColorPicker::ColorPicker" name="npi::wid::ColorPicker::ColorPicker">
+<area shape="rect" id="Node000001" title="Shared constructor for embedded and dialog pickers." alt="" coords="5,230,299,256"/>
+<area shape="rect" id="Node000002" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ac8f2c42a07ec230698c80ce66ffce7cf" title="Applies configuration and updates the color; optionally signals color change." alt="" coords="367,92,556,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,228,249,188,346,143,379,134,374,136,348,148,251,192,177,232"/>
+<area shape="rect" id="Node000008" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4e1a328e1c85ff8e5392a65386ff330b" title="Applies the presentation settings." alt="" coords="367,288,556,329"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="214,253,361,285,357,288,214,258"/>
+<area shape="rect" id="Node000012" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4a8bd209c974fa8a3066e7c241ab2ac7" title="Handles user changes to channel values." alt="" coords="347,223,576,263"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="298,240,341,242,336,244,299,246"/>
+<area shape="rect" id="Node000013" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a5a9e90c702505edca2a83a1c39034c99" title="Creates the controls for one channel." alt="" coords="367,353,556,394"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="176,253,251,294,348,338,379,351,374,351,346,343,249,298,175,258"/>
+<area shape="rect" id="Node000014" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#afc04567d2ab8f9fe5a47657bdd1ff91c" title="Handles user selection of a color model." alt="" coords="355,157,568,198"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="213,228,359,198,355,201,214,233"/>
+<area shape="rect" id="Node000003" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a6a6bd9ab0e4081613d080c48d9c77bd2" title="Applies a channel&#39;s settings and current value to its editor." alt="" coords="877,92,1067,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="555,107,624,106,829,106,872,109,867,110,829,111,624,111,556,112"/>
+<area shape="rect" id="Node000004" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aab16386d705fbf03ed517b68e3a28e54" title="Configures the editors for the selected color model." alt="" coords="632,120,821,161"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="555,120,626,129,621,130,556,125"/>
+<area shape="rect" id="Node000005" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ab7e3fd108de4a5253b779b03d8f7661f" title="Adjusts channel limits to a valid range." alt="" coords="624,5,829,46"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="523,90,659,47,654,50,525,94"/>
+<area shape="rect" id="Node000006" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a33c98248f8c09263aca637adf371626b" title="Updates the color and preview from the editors; optionally signals color change." alt="" coords="632,185,821,226"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="540,130,577,143,601,157,625,170,653,183,647,183,623,175,599,161,575,148,540,135"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="821,127,872,123,867,125,822,132"/>
+<area shape="rect" id="Node000007" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a684fae671e5e04bbfb393debca35a620" title="Signal for color change." alt="" coords="877,185,1067,226"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="821,203,872,205,866,206,821,208"/>
+<area shape="rect" id="Node000009" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#abe7e8c77b5c6ea8c2a513e8d28f83008" title="Applies the input background style." alt="" coords="632,251,821,291"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="555,292,626,285,621,286,556,298"/>
+<area shape="rect" id="Node000010" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4a49eb8ae07c6b583fbc33cb52d248ba" title="Applies input fonts and adjusts control widths." alt="" coords="632,316,821,357"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="556,316,626,325,621,326,556,321"/>
+<area shape="rect" id="Node000011" href="$d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a24751279f07b9f5e77bd2e83f2753f31" title="Updates control visibility and arrangement." alt="" coords="632,381,821,422"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="540,326,577,339,601,353,625,366,653,379,647,378,623,371,599,357,575,344,539,331"/>
+<area shape="poly" id="edge13_Node000012_Node000006" title=" " alt="" coords="575,224,627,219,621,221,577,229"/>
+<area shape="poly" id="edge16_Node000014_Node000004" title=" " alt="" coords="567,160,627,154,622,155,569,165"/>
+<area shape="poly" id="edge17_Node000014_Node000006" title=" " alt="" coords="568,186,627,194,622,195,568,192"/>
+</map>

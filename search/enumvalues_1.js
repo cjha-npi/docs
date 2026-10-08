@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['category_0',['Category',['../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#afe9aa0cf855e48e873f1abd6020f7c0da3adbdb3ac060038aa0e6e6c138ef9873',1,'anonymous_namespace{Log.cpp}']]]
+  ['blue_0',['Blue',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a35cf8ed013b10248c2a0e73e2b861112a9594eec95be70e7b1710f730fdda33d9',1,'npi::wid::ColorPicker']]]
 ];

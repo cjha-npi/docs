@@ -1,0 +1,9 @@
+<map id="anonymous_namespace{Log::cpp}::testing::msgHdlrTiming_appendTimeDelta" name="anonymous_namespace{Log::cpp}::testing::msgHdlrTiming_appendTimeDelta">
+<area shape="rect" id="Node000001" title="Appends a timing value using a suitable time unit." alt="" coords="560,44,1133,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="920,39,926,34,918,29,891,25,847,23,799,25,772,31,768,33,767,35,782,45,777,44,763,37,763,30,770,26,798,20,847,18,892,19,920,24,931,33,922,44"/>
+<area shape="rect" id="Node000002" href="$df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#ac20ee2bdc8dc34582c2679a82f5c8e45" title="Queues enabling or disabling message&#45;handler timing." alt="" coords="307,29,512,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="550,57,512,60,512,55,555,57"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="458,20,454,17,445,12,409,8,384,10,368,15,361,21,360,31,356,28,356,19,366,10,383,5,409,3,446,7,457,13,463,22"/>
+<area shape="rect" id="Node000003" href="$d5/ddd/namespacenpi_1_1log.html#ab98041e32af3097ca78301b8fdb0a9d4" title="Enables or disables message&#45;handler timing for testing." alt="" coords="5,37,259,78"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="296,57,259,60,258,55,301,57"/>
+</map>

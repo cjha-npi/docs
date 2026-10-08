@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Builds a monochrome menu icon using the palette&#39;s text colors.">
+<g id="a_Node000001"><a xlink:title="Recolors a menu icon using normal and disabled text colors.">
 <polygon fill="#999999" stroke="none" points="458,-30.5 172,-30.5 172,-11.25 458,-11.25 458,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="180" y="-17.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::draw::menuIcon</text>
 </a>
@@ -40,7 +40,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" target="_top" xlink:title="Draws supported controls using application&#45;specific layouts and visuals.">
+<g id="a_Node000002"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" target="_top" xlink:title="Draws controls using the application&#39;s styling.">
 <polygon fill="white" stroke="none" points="136,-41.75 0,-41.75 0,0 136,0 136,-41.75"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-27.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="8" y="-16.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>

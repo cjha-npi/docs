@@ -140,18 +140,18 @@ $(function(){initNavTree('da/df4/_log_8h.html','../../',''); });
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;QString&gt;</code><br />
 <code>#include &lt;QStringList&gt;</code><br />
-<code>#include &lt;QtGlobal&gt;</code><br />
 </div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
-<div class="textblock"><p>Declares runtime configuration and console controls for the logging system. </p>
-<p>The logging system installs a Qt message handler during application startup and processes non-fatal messages using dedicated file and display workers. Non-fatal records are written to <span class="tt">*.log</span> files. Configured warnings and all critical records are additionally forwarded to an <span class="tt">*.imp.log</span> file through a helper process. Fatal records bypass the asynchronous normal-file queue and use the synchronous important-log path.</p>
-<p>This file provides functions for querying and changing the log directory, folder size limit, output fields, category filter rules, display-level settings, warning importance, console colors, display muting, and temporary console state.</p>
-<p>Runtime configuration changes are persisted unless temporary mode is enabled. Display muting and temporary console state are always runtime-only. </p>
+<div class="textblock"><p>Configuration and control of the application's logging system. </p>
+<p>Provides the public interface for selecting the log directory, configuring folder cleanup, output fields, category filters, display settings and important-log handling.</p>
+<p>The logging system writes normal logs to <span class="tt">.log</span> files and important logs to <span class="tt">.imp.log</span> files. Display output uses the console or debugger.</p>
+<p>This file also provides console controls, temporary configuration mode, display muting and optional message-handler timing for testing.</p>
+<p>Configuration changes are saved unless temporary mode is enabled. Console attachment, display muting and message-handler timing are runtime-only. </p>
 
 <p class="definition">Definition in file <a class="el" href="../../da/df4/_log_8h_source.html">Log.h</a>.</p>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Log.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d81/_log_8h__incl.svg" width="432" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d81/_log_8h__incl.svg" width="323" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -166,7 +166,7 @@ Namespaces</h2></td></tr>
 <tr class="memitem:npi" id="r_npi"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d57/namespacenpi.html">npi</a></td></tr>
 <tr class="memdesc:d6/d57/namespacenpi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root namespace for npi electronic GmbH code. <br /></td></tr>
 <tr class="memitem:npi_3A_3Alog" id="r_npi_3A_3Alog"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html">npi::log</a></td></tr>
-<tr class="memdesc:d5/ddd/namespacenpi_1_1log"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime configuration and control API for the application logging system. <br /></td></tr>
+<tr class="memdesc:d5/ddd/namespacenpi_1_1log"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration and control of the application's logging system. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -204,6 +204,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2029add9e80a962b68bb147f9fd47f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether warning logs are treated as important logs.  <br /></td></tr>
 <tr class="memitem:abba1ff20c6dcb414b50c5546af517c73" id="r_abba1ff20c6dcb414b50c5546af517c73"><td class="memItemLeft">std::uint32_t&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#abba1ff20c6dcb414b50c5546af517c73">npi::log::maxFolderSizeMib</a> ()</td></tr>
 <tr class="memdesc:abba1ff20c6dcb414b50c5546af517c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the configured normal-log cleanup target.  <br /></td></tr>
+<tr class="memitem:ab4926696faa7a7ccf951b38335ecae0d" id="r_ab4926696faa7a7ccf951b38335ecae0d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ab4926696faa7a7ccf951b38335ecae0d">npi::log::msgHandlerTimingEnabled</a> ()</td></tr>
+<tr class="memdesc:ab4926696faa7a7ccf951b38335ecae0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether message-handler timing is currently enabled.  <br /></td></tr>
 <tr class="memitem:af28603358fca7f71c4be70cda3557b9f" id="r_af28603358fca7f71c4be70cda3557b9f"><td class="memItemLeft">QStringList&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#af28603358fca7f71c4be70cda3557b9f">npi::log::nonQtCategories</a> ()</td></tr>
 <tr class="memdesc:af28603358fca7f71c4be70cda3557b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all encountered non-Qt logging categories.  <br /></td></tr>
 <tr class="memitem:a35a969078b211913c70a3289d579181f" id="r_a35a969078b211913c70a3289d579181f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a35a969078b211913c70a3289d579181f">npi::log::openConsole</a> ()</td></tr>
@@ -232,6 +234,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a204797419f5e1681a159d1eef6f401bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the custom Qt logging category filter rules.  <br /></td></tr>
 <tr class="memitem:a44c3ab1ead08f699085787d44d37ae11" id="r_a44c3ab1ead08f699085787d44d37ae11"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a44c3ab1ead08f699085787d44d37ae11">npi::log::setMaxFolderSizeMib</a> (std::uint32_t size)</td></tr>
 <tr class="memdesc:a44c3ab1ead08f699085787d44d37ae11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the normal-log cleanup target.  <br /></td></tr>
+<tr class="memitem:ab98041e32af3097ca78301b8fdb0a9d4" id="r_ab98041e32af3097ca78301b8fdb0a9d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ab98041e32af3097ca78301b8fdb0a9d4">npi::log::setMsgHandlerTimingEnabled</a> (bool state)</td></tr>
+<tr class="memdesc:ab98041e32af3097ca78301b8fdb0a9d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables message-handler timing for testing.  <br /></td></tr>
 <tr class="memitem:aa75c518a9a8f60e6ac8b5fc04ccf63a9" id="r_aa75c518a9a8f60e6ac8b5fc04ccf63a9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#aa75c518a9a8f60e6ac8b5fc04ccf63a9">npi::log::setMutedDisplay</a> (bool state)</td></tr>
 <tr class="memdesc:aa75c518a9a8f60e6ac8b5fc04ccf63a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporarily mutes or unmutes all log display output.  <br /></td></tr>
 <tr class="memitem:a7cef00f1da1eed6bc0afca56fe9cfb0e" id="r_a7cef00f1da1eed6bc0afca56fe9cfb0e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#a7cef00f1da1eed6bc0afca56fe9cfb0e">npi::log::setShowDebugLog</a> (bool state)</td></tr>

@@ -13,5 +13,6 @@ var searchData=
   ['resetfilefields_10',['resetFileFields',['../d5/ddd/namespacenpi_1_1log.html#a015e6cf2735c059ebad3d94c4f69d884',1,'npi::log']]],
   ['resetfilterrules_11',['resetFilterRules',['../d5/ddd/namespacenpi_1_1log.html#a4a5b29dcb269f47a4ef69ee7fe39bfb6',1,'npi::log']]],
   ['resetmaxfoldersizemib_12',['resetMaxFolderSizeMib',['../d5/ddd/namespacenpi_1_1log.html#a82c9393d9e86743df96071dd5dda1fb6',1,'npi::log']]],
-  ['roundedarrow_13',['roundedArrow',['../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe',1,'anonymous_namespace{Gui.cpp}::make']]]
+  ['roundedarrow_13',['roundedArrow',['../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe',1,'anonymous_namespace{Gui.cpp}::make']]],
+  ['roundedrect_14',['roundedRect',['../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a81883d0405fb4b57864dd4f0ae3bf869',1,'anonymous_namespace{Gui.cpp}::draw']]]
 ];

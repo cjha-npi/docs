@@ -1,8 +1,11 @@
 <map id="anonymous_namespace{Log::cpp}::crash::claimFatalOwnership" name="anonymous_namespace{Log::cpp}::crash::claimFatalOwnership">
-<area shape="rect" id="Node000001" title="Claims fatal ownership or gives the existing owner a brief reporting period." alt="" coords="496,29,973,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="801,24,806,19,799,14,775,10,735,8,691,10,667,15,663,18,663,20,677,30,671,29,658,22,659,15,665,11,691,5,735,3,775,4,801,9,812,18,804,29"/>
-<area shape="rect" id="Node000002" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="227,22,448,62"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="486,42,448,45,448,40,491,42"/>
-<area shape="rect" id="Node000003" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="5,22,179,62"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="216,42,178,45,178,40,221,42"/>
+<area shape="rect" id="Node000001" title="Claims fatal ownership or gives the existing owner a brief reporting period." alt="" coords="552,80,1029,106"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="857,75,862,70,855,65,831,61,791,59,747,61,723,66,719,69,719,71,733,81,727,80,714,73,715,66,721,62,747,56,791,54,831,55,857,60,868,69,860,80"/>
+<area shape="rect" id="Node000002" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349" title="Captures and routes one message delivered by Qt." alt="" coords="283,73,504,114"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="542,93,504,96,504,91,547,93"/>
+<area shape="rect" id="Node000003" href="$df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#acb14cb2b0d9b4692da78884e59e6b160" title="Processes a log message and records the handler&#39;s execution time." alt="" coords="5,29,235,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="272,78,235,75,234,70,277,77"/>
+<area shape="rect" id="Node000004" href="$dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a" title="Initializes the logging system during process startup." alt="" coords="33,109,207,150"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="272,109,207,120,206,115,278,108"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="168,21,164,17,155,12,120,8,95,10,80,15,72,21,72,30,67,29,67,19,77,10,94,5,120,3,156,7,167,13,173,22"/>
 </map>

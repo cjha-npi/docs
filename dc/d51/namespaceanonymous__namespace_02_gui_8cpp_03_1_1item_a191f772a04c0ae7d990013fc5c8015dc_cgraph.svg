@@ -47,7 +47,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 1228;
+var viewWidth = 1264;
 var viewHeight = 189;
 var sectionId = 'dynsection-8';
 </script>
@@ -58,16 +58,16 @@ var sectionId = 'dynsection-8';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Initializes item&#45;view handling for explicitly marked viewport widgets.">
+<g id="a_Node000001"><a xlink:title="Sets up marked item&#45;view widgets and handling for children added later.">
 <polygon fill="#999999" stroke="none" points="310,-47.13 0,-47.13 0,-27.88 310,-27.88 310,-47.13"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-33.68" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::item::initItemView</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node1 -->
-<g id="edge13_Node000001_Node000001" class="edge">
+<g id="edge14_Node000001_Node000001" class="edge">
 <title>Node1&#45;&gt;Node1</title>
-<g id="a_edge13_Node000001_Node000001"><a xlink:title=" ">
+<g id="a_edge14_Node000001_Node000001"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M112.19,-46.99C90.69,-55.72 104.96,-65.13 155,-65.13 199.96,-65.13 216.04,-57.53 203.25,-49.66"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="198.9,-47.52 204.38,-47.71 200.05,-48.09 203.39,-49.73 203.39,-49.73 203.39,-49.73 200.05,-48.09 202.4,-51.75 198.9,-47.52"/>
 </a>
@@ -76,7 +76,7 @@ var sectionId = 'dynsection-8';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13" target="_top" xlink:title="Applies item&#45;view configuration recursively to a widget hierarchy.">
+<g id="a_Node000002"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13" target="_top" xlink:title="Configures a widget and its descendants for use inside an item view.">
 <polygon fill="white" stroke="none" points="524,-116.38 346,-116.38 346,-74.63 524,-74.63 524,-116.38"/>
 <text xml:space="preserve" text-anchor="start" x="354" y="-101.93" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="354" y="-90.68" font-family="Consolas" font-size="11.00">{Gui::cpp}::item::applyView</text>
@@ -96,7 +96,7 @@ var sectionId = 'dynsection-8';
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" target="_top" xlink:title="Returns the application&#39;s GuiStyle, installing one if needed.">
+<g id="a_Node000005"><a xlink:href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" target="_top" xlink:title="Returns the shared style, creating it when application lifetime permits.">
 <polygon fill="white" stroke="none" points="1000,-52.75 864,-52.75 864,-22.25 1000,-22.25 1000,-52.75"/>
 <text xml:space="preserve" text-anchor="start" x="872" y="-38.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="932" y="-27.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::guiStyle</text>
@@ -104,9 +104,9 @@ var sectionId = 'dynsection-8';
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
-<g id="edge12_Node000001_Node000005" class="edge">
+<g id="edge13_Node000001_Node000005" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<g id="a_edge12_Node000001_Node000005"><a xlink:title=" ">
+<g id="a_edge13_Node000001_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M222.65,-27.93C336.95,-12.94 577.62,12.41 780,-7.5 807.45,-10.2 837.31,-15.6 863.17,-21.09"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="867.77,-22.07 862.41,-23.22 866.52,-21.8 862.88,-21.02 862.88,-21.02 862.88,-21.02 866.52,-21.8 863.36,-18.82 867.77,-22.07"/>
 </a>
@@ -115,7 +115,7 @@ var sectionId = 'dynsection-8';
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba" target="_top" xlink:title="Installs the GuiStyle hierarchy event filter on a widget.">
+<g id="a_Node000007"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba" target="_top" xlink:title="Installs a filter to configure children added later.">
 <polygon fill="white" stroke="none" points="780,-58.38 560,-58.38 560,-16.63 780,-16.63 780,-58.38"/>
 <text xml:space="preserve" text-anchor="start" x="568" y="-43.93" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="568" y="-32.68" font-family="Consolas" font-size="11.00">{Gui::cpp}::item::installHierarchy</text>
@@ -124,9 +124,9 @@ var sectionId = 'dynsection-8';
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
-<g id="edge14_Node000001_Node000007" class="edge">
+<g id="edge15_Node000001_Node000007" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<g id="a_edge14_Node000001_Node000007"><a xlink:title=" ">
+<g id="a_edge15_Node000001_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M309.92,-37.5C388.43,-37.5 482.29,-37.5 554.36,-37.5"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="559.17,-37.5 554.17,-39.75 557.88,-37.5 554.17,-37.5 554.17,-37.5 554.17,-37.5 557.88,-37.5 554.17,-35.25 559.17,-37.5"/>
 </a>
@@ -144,7 +144,7 @@ var sectionId = 'dynsection-8';
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202" target="_top" xlink:title="Applies item&#45;view configuration to one widget.">
+<g id="a_Node000003"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202" target="_top" xlink:title="Applies item&#45;view background and sizing settings to a widget.">
 <polygon fill="white" stroke="none" points="771,-162.75 569,-162.75 569,-132.25 771,-132.25 771,-162.75"/>
 <text xml:space="preserve" text-anchor="start" x="577" y="-148.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="670" y="-137.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::item::applyViewItem</text>
@@ -170,9 +170,9 @@ var sectionId = 'dynsection-8';
 </g>
 </g>
 <!-- Node2&#45;&gt;Node7 -->
-<g id="edge9_Node000002_Node000007" class="edge">
+<g id="edge10_Node000002_Node000007" class="edge">
 <title>Node2&#45;&gt;Node7</title>
-<g id="a_edge9_Node000002_Node000007"><a xlink:title=" ">
+<g id="a_edge10_Node000002_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M519.79,-74.65C539.06,-69.85 559.63,-64.73 579.15,-59.87"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="583.99,-58.67 579.68,-62.06 582.75,-58.98 579.14,-59.87 579.14,-59.87 579.14,-59.87 582.75,-58.98 578.59,-57.69 583.99,-58.67"/>
 </a>
@@ -190,7 +190,7 @@ var sectionId = 'dynsection-8';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8b3d5790edb95817ba0c80fc7e3df28e" target="_top" xlink:title="Configures a widget so its Base role does not obscure the underlying background.">
+<g id="a_Node000004"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a8b3d5790edb95817ba0c80fc7e3df28e" target="_top" xlink:title="Makes the widget&#39;s background transparent.">
 <polygon fill="white" stroke="none" points="1048,-162.75 816,-162.75 816,-132.25 1048,-132.25 1048,-162.75"/>
 <text xml:space="preserve" text-anchor="start" x="824" y="-148.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="932" y="-137.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::item::setTransparentBase</text>
@@ -210,18 +210,18 @@ var sectionId = 'dynsection-8';
 <g id="edge5_Node000004_Node000004" class="edge">
 <title>Node4&#45;&gt;Node4</title>
 <g id="a_edge5_Node000004_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M893.66,-162.55C884.42,-171.88 897.2,-180.75 932,-180.75 960.28,-180.75 974.02,-174.89 973.22,-167.69"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="970.93,-163.61 975.34,-166.88 971.56,-164.73 973.38,-167.98 973.38,-167.98 973.38,-167.98 971.56,-164.73 971.41,-169.08 970.93,-163.61"/>
+<path fill="none" stroke="#63b8ff" d="M890.52,-162.55C880.52,-171.88 894.35,-180.75 932,-180.75 962.59,-180.75 977.46,-174.89 976.59,-167.69"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="974.11,-163.59 978.62,-166.71 974.77,-164.69 976.7,-167.87 976.7,-167.87 976.7,-167.87 974.77,-164.69 974.77,-169.04 974.11,-163.59"/>
 </a>
 </g>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a244c57509e0b88781450e3957e7a3a22" target="_top" xlink:title="Registers the bundled JetBrains Mono fonts and logs loading failures.">
-<polygon fill="white" stroke="none" points="1220,-52.75 1084,-52.75 1084,-22.25 1220,-22.25 1220,-52.75"/>
+<g id="a_Node000006"><a xlink:href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35" target="_top" xlink:title="Loads the bundled JetBrains Mono fonts once.">
+<polygon fill="white" stroke="none" points="1256,-52.75 1084,-52.75 1084,-22.25 1256,-22.25 1256,-52.75"/>
 <text xml:space="preserve" text-anchor="start" x="1092" y="-38.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="middle" x="1152" y="-27.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::initFont</text>
+<text xml:space="preserve" text-anchor="middle" x="1170" y="-27.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::util::initFont</text>
 </a>
 </g>
 </g>
@@ -229,24 +229,33 @@ var sectionId = 'dynsection-8';
 <g id="edge8_Node000005_Node000006" class="edge">
 <title>Node5&#45;&gt;Node6</title>
 <g id="a_edge8_Node000005_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M999.89,-37.5C1024.69,-37.5 1052.92,-37.5 1078.21,-37.5"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1083.02,-37.5 1078.02,-39.75 1081.74,-37.5 1078.02,-37.5 1078.02,-37.5 1078.02,-37.5 1081.74,-37.5 1078.02,-35.25 1083.02,-37.5"/>
+<path fill="none" stroke="#63b8ff" d="M1000,-37.5C1024.22,-37.5 1051.99,-37.5 1077.93,-37.5"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1082.91,-37.5 1077.91,-39.75 1081.63,-37.5 1077.91,-37.5 1077.91,-37.5 1077.91,-37.5 1081.63,-37.5 1077.91,-35.25 1082.91,-37.5"/>
+</a>
+</g>
+</g>
+<!-- Node6&#45;&gt;Node6 -->
+<g id="edge9_Node000006_Node000006" class="edge">
+<title>Node6&#45;&gt;Node6</title>
+<g id="a_edge9_Node000006_Node000006"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1128.52,-52.55C1118.52,-61.88 1132.35,-70.75 1170,-70.75 1200.59,-70.75 1215.46,-64.89 1214.59,-57.69"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1212.11,-53.59 1216.62,-56.71 1212.77,-54.69 1214.7,-57.87 1214.7,-57.87 1214.7,-57.87 1212.77,-54.69 1212.77,-59.04 1212.11,-53.59"/>
 </a>
 </g>
 </g>
 <!-- Node7&#45;&gt;Node5 -->
-<g id="edge10_Node000007_Node000005" class="edge">
+<g id="edge11_Node000007_Node000005" class="edge">
 <title>Node7&#45;&gt;Node5</title>
-<g id="a_edge10_Node000007_Node000005"><a xlink:title=" ">
+<g id="a_edge11_Node000007_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M779.76,-37.5C806.18,-37.5 833.81,-37.5 858.12,-37.5"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="863,-37.5 858,-39.75 861.72,-37.5 858,-37.5 858,-37.5 858,-37.5 861.72,-37.5 858,-35.25 863,-37.5"/>
 </a>
 </g>
 </g>
 <!-- Node7&#45;&gt;Node7 -->
-<g id="edge11_Node000007_Node000007" class="edge">
+<g id="edge12_Node000007_Node000007" class="edge">
 <title>Node7&#45;&gt;Node7</title>
-<g id="a_edge11_Node000007_Node000007"><a xlink:title=" ">
+<g id="a_edge12_Node000007_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M626.81,-58.3C622.1,-67.95 636.49,-76.38 670,-76.38 696.18,-76.38 710.69,-71.23 713.54,-64.38"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="713.26,-59.52 715.79,-64.38 713.33,-60.8 713.55,-64.51 713.55,-64.51 713.55,-64.51 713.33,-60.8 711.3,-64.64 713.26,-59.52"/>
 </a>

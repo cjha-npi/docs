@@ -29,6 +29,9 @@ var annotated_dup =
         [ "EmptyCompleter", "df/d43/classnpi_1_1ind_1_1_empty_completer.html", "df/d43/classnpi_1_1ind_1_1_empty_completer" ],
         [ "LockedValue", "d4/d0d/classnpi_1_1ind_1_1_locked_value.html", "d4/d0d/classnpi_1_1ind_1_1_locked_value" ],
         [ "SlotGate", "d7/dbf/classnpi_1_1ind_1_1_slot_gate.html", "d7/dbf/classnpi_1_1ind_1_1_slot_gate" ]
+      ] ],
+      [ "wid", "d9/d8e/namespacenpi_1_1wid.html", [
+        [ "ColorPicker", "d5/d7a/classnpi_1_1wid_1_1_color_picker.html", "d5/d7a/classnpi_1_1wid_1_1_color_picker" ]
       ] ]
     ] ]
 ];

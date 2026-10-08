@@ -1,5 +1,6 @@
 <map id="anonymous_namespace{Gui::cpp}::guiStyle" name="anonymous_namespace{Gui::cpp}::guiStyle">
-<area shape="rect" id="Node000001" title="Returns the application&#39;s GuiStyle, installing one if needed." alt="" coords="5,13,339,38"/>
-<area shape="rect" id="Node000002" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a244c57509e0b88781450e3957e7a3a22" title="Registers the bundled JetBrains Mono fonts and logs loading failures." alt="" coords="387,5,568,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="338,23,381,26,376,26,338,28"/>
+<area shape="rect" id="Node000001" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="5,37,339,62"/>
+<area shape="rect" id="Node000002" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35" title="Loads the bundled JetBrains Mono fonts once." alt="" coords="387,29,616,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="339,47,381,50,376,50,339,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="442,28,437,20,447,10,468,5,501,3,549,8,562,14,565,24,561,21,558,18,548,13,501,8,469,10,449,15,442,21,446,31"/>
 </map>

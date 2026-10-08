@@ -21,6 +21,7 @@ var namespacenpi =
       [ "isPermanentConsole", "d5/ddd/namespacenpi_1_1log.html#ad54369e851cae6d6b5e146ee35fbcc35", null ],
       [ "isWarnLogImportant", "d5/ddd/namespacenpi_1_1log.html#a2029add9e80a962b68bb147f9fd47f35", null ],
       [ "maxFolderSizeMib", "d5/ddd/namespacenpi_1_1log.html#abba1ff20c6dcb414b50c5546af517c73", null ],
+      [ "msgHandlerTimingEnabled", "d5/ddd/namespacenpi_1_1log.html#ab4926696faa7a7ccf951b38335ecae0d", null ],
       [ "nonQtCategories", "d5/ddd/namespacenpi_1_1log.html#af28603358fca7f71c4be70cda3557b9f", null ],
       [ "openConsole", "d5/ddd/namespacenpi_1_1log.html#a35a969078b211913c70a3289d579181f", null ],
       [ "qtCategories", "d5/ddd/namespacenpi_1_1log.html#aecacbd05b8c19542926b9d07b16435ba", null ],
@@ -35,6 +36,7 @@ var namespacenpi =
       [ "setFileFields", "d5/ddd/namespacenpi_1_1log.html#a314e1bbd60d0d23d037fdb863ad706fd", null ],
       [ "setFilterRules", "d5/ddd/namespacenpi_1_1log.html#a204797419f5e1681a159d1eef6f401bc", null ],
       [ "setMaxFolderSizeMib", "d5/ddd/namespacenpi_1_1log.html#a44c3ab1ead08f699085787d44d37ae11", null ],
+      [ "setMsgHandlerTimingEnabled", "d5/ddd/namespacenpi_1_1log.html#ab98041e32af3097ca78301b8fdb0a9d4", null ],
       [ "setMutedDisplay", "d5/ddd/namespacenpi_1_1log.html#aa75c518a9a8f60e6ac8b5fc04ccf63a9", null ],
       [ "setShowDebugLog", "d5/ddd/namespacenpi_1_1log.html#a7cef00f1da1eed6bc0afca56fe9cfb0e", null ],
       [ "setShowInfoLog", "d5/ddd/namespacenpi_1_1log.html#a462603ec8bccd8b4cb3abc387fd6cc33", null ],
@@ -45,5 +47,6 @@ var namespacenpi =
       [ "showInfoLog", "d5/ddd/namespacenpi_1_1log.html#a77f60d80e451122614983a4dcd42597d", null ],
       [ "showWarnLog", "d5/ddd/namespacenpi_1_1log.html#a95f11cd009de5a42cff56b7812649fc6", null ],
       [ "tempMode", "d5/ddd/namespacenpi_1_1log.html#a8f436e718db364f62c2ee32f8e7d3409", null ]
-    ] ]
+    ] ],
+    [ "wid", "d9/d8e/namespacenpi_1_1wid.html", "d9/d8e/namespacenpi_1_1wid" ]
 ];

@@ -1,0 +1,18 @@
+<map id="anonymous_namespace{Gui::cpp}::util::isDarkSystemBackground" name="anonymous_namespace{Gui::cpp}::util::isDarkSystemBackground">
+<area shape="rect" id="Node000001" title="Returns whether Windows uses a dark application theme." alt="" coords="512,191,1005,217"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="827,186,833,180,825,176,800,171,759,170,714,172,689,177,685,180,685,181,699,192,693,191,680,184,681,177,687,172,713,166,759,164,801,166,827,171,838,180,830,190"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8" title="Applies the selected theme and refreshes palettes and dynamic icons." alt="" coords="259,85,440,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="690,190,440,136,440,130,695,188"/>
+<area shape="rect" id="Node000006" href="$d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4" title="Returns whether the effective application background is dark." alt="" coords="235,166,464,191"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="541,191,464,188,463,183,546,190"/>
+<area shape="rect" id="Node000007" href="$d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55" title="Returns the GUI palette for the effective application background." alt="" coords="271,215,428,241"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="530,217,428,226,428,221,535,217"/>
+<area shape="rect" id="Node000008" href="$d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" title="Returns the surface colors for the effective application background." alt="" coords="267,264,432,290"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="681,218,422,267,421,262,676,218"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf" title="Applies the initial theme and sets up the application icon and native event filter." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="251,84,184,64,184,58,256,82"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" title="Updates the application theme when Windows changes and System mode is selected." alt="" coords="5,85,187,141"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="249,114,187,116,186,111,253,112"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Sets the requested application theme." alt="" coords="5,165,187,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="251,145,185,168,183,163,256,142"/>
+</map>

@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Contains dimensions calculated for a fixed&#45;height widget.">
+<g id="a_Node000001"><a xlink:title="Font&#45;based UI dimensions.">
 <polygon fill="#999999" stroke="none" points="244,-19.25 0,-19.25 0,0 244,0 244,-19.25"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-5.8" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui.cpp}::SizeData</text>
 </a>

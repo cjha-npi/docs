@@ -49,7 +49,7 @@
 <script type="application/ecmascript">
 var viewWidth = 782;
 var viewHeight = 129;
-var sectionId = 'dynsection-12';
+var sectionId = 'dynsection-11';
 </script>
 <script type="application/ecmascript" xlink:href="../../svg.min.js"/>
 <svg id="graph" class="graph">
@@ -58,7 +58,7 @@ var sectionId = 'dynsection-12';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Returns sizing data based on the widget&#39;s font size and height limits.">
+<g id="a_Node000001"><a xlink:title="Returns control sizes based on the widget&#39;s font and height limits.">
 <polygon fill="#999999" stroke="none" points="334,-57.88 0,-57.88 0,-38.62 334,-38.62 334,-57.88"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-44.42" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::GuiStyle::getSizeData_</text>
 </a>
@@ -67,7 +67,7 @@ var sectionId = 'dynsection-12';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" target="_top" xlink:title="Calculates standardized widget and icon dimensions for a font.">
+<g id="a_Node000002"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#aeced12fa2765cf33c60624ac469cf102" target="_top" xlink:title="Calculates control and icon sizes from the font size and height limits.">
 <polygon fill="white" stroke="none" points="563,-97.5 373,-97.5 373,-67 563,-67 563,-97.5"/>
 <text xml:space="preserve" text-anchor="start" x="381" y="-83.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="468" y="-71.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::size::dataForFont</text>
@@ -86,7 +86,7 @@ var sectionId = 'dynsection-12';
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7" target="_top" xlink:title="Returns whether two fonts use the same configured size.">
+<g id="a_Node000004"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#af76d38d032f81e47be62ac715f61d3c7" target="_top" xlink:title="Returns whether two fonts have the same configured size.">
 <polygon fill="white" stroke="none" points="566,-30.5 370,-30.5 370,0 566,0 566,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="378" y="-16.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="468" y="-4.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::size::sameFontSize</text>
@@ -114,7 +114,7 @@ var sectionId = 'dynsection-12';
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" target="_top" xlink:title="Returns the gap between an icon and the inner edge of its control.">
+<g id="a_Node000003"><a xlink:href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#adabe13fa5e07f5dfe19a290fd78fc94e" target="_top" xlink:title="Returns the icon&#39;s edge spacing for the control height.">
 <polygon fill="white" stroke="none" points="774,-103.12 602,-103.12 602,-61.38 774,-61.38 774,-103.12"/>
 <text xml:space="preserve" text-anchor="start" x="610" y="-88.67" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="610" y="-77.42" font-family="Consolas" font-size="11.00">{Gui::cpp}::size::iconEdge</text>
