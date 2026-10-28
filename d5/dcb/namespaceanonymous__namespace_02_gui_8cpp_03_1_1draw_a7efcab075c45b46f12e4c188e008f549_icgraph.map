@@ -1,0 +1,16 @@
+<map id="anonymous_namespace{Gui::cpp}::draw::tabButtonInset" name="anonymous_namespace{Gui::cpp}::draw::tabButtonInset">
+<area shape="rect" id="Node000001" title="Returns the internal padding of Qt&#39;s built&#45;in tab close button, or zero for other widgets." alt="" coords="971,44,1400,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1249,39,1253,34,1246,29,1223,25,1185,23,1144,25,1122,30,1118,35,1130,45,1125,44,1112,36,1119,26,1143,20,1185,18,1224,19,1248,24,1259,33,1252,43"/>
+<area shape="rect" id="Node000002" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a522da5cd5fcb8339e70f3846e7688333" title="Calculates tab label and button rectangles and the corresponding size&#45;hint adjustment." alt="" coords="693,29,923,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="960,57,923,60,922,55,965,57"/>
+<area shape="poly" id="edge8_Node000002_Node000002" title=" " alt="" coords="852,20,849,17,840,12,808,8,785,10,771,15,764,21,763,31,759,28,759,19,768,10,784,5,808,3,842,7,852,13,857,22"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,37,416,93"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="701,28,645,20,554,11,515,13,465,20,393,40,391,35,463,15,514,7,555,6,646,15,706,28"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Adjusts control sizes for consistent heights, spacing and square buttons." alt="" coords="464,29,645,85"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="683,57,645,60,645,55,688,57"/>
+<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2" title="Adjusts widget layout areas to match the custom drawing." alt="" coords="464,109,645,165"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="715,87,643,112,642,107,709,88"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,37,187,93"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="225,66,187,68,186,63,230,64"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="456,107,414,96,414,90,461,107"/>
+</map>

@@ -25,5 +25,6 @@ var searchData=
   ['countref_5f_22',['countRef_',['../d6/d53/classnpi_1_1ind_1_1_slot_gate_1_1_blocker.html#a23602dc8e83ba53d952426a57dc880fe',1,'npi::ind::SlotGate::Blocker']]],
   ['crash_5f_23',['crash_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a21dc7146586a77102d0e4da75f3191e6',1,'anonymous_namespace{Log.cpp}::LeakedState']]],
   ['crashbuf_5f_24',['crashBuf_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#a8adbbf5f18976a3e411f87360ab0d2a0',1,'anonymous_namespace{Log.cpp}::LeakedState::CrashState']]],
-  ['crashing_5f_25',['crashing_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa86ec3715622a7a47c91d45641cc65ef',1,'anonymous_namespace{Log.cpp}::LeakedState::CrashState']]]
+  ['crashing_5f_25',['crashing_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#aa86ec3715622a7a47c91d45641cc65ef',1,'anonymous_namespace{Log.cpp}::LeakedState::CrashState']]],
+  ['currentconnection_5f_26',['currentConnection_',['../de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection.html#ae79d88eb084374f5882b1b4e7244caf3',1,'anonymous_namespace{Gui.cpp}::TreeBranchSelection']]]
 ];

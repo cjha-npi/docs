@@ -8,7 +8,7 @@ var searchData=
   ['scrollbarwidth_5',['scrollBarWidth',['../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html#a664bb963e5feb5ce782b689e9dd5fc85',1,'anonymous_namespace{Gui.cpp}::size']]],
   ['senddata_6',['sendData',['../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a7d1aecaff8b806303e9f2166caeec8ba',1,'anonymous_namespace{Log.cpp}::bridge']]],
   ['senddatalocked_7',['sendDataLocked',['../d4/da9/namespaceanonymous__namespace_02_log_8cpp_03_1_1bridge.html#a0ad3876154f2b818add3875e77f95303',1,'anonymous_namespace{Log.cpp}::bridge']]],
-  ['sepborders_8',['sepBorders',['../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#aaf774eb9e2875279c81810cd17d99b0b',1,'anonymous_namespace{Gui.cpp}::draw']]],
+  ['sepborders_8',['sepBorders',['../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a627e73528d018c755d0007a72496e63b',1,'anonymous_namespace{Gui.cpp}::draw']]],
   ['setchannelconfig_5f_9',['setChannelConfig_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a652094b229d7eb4cb85178293cb41204',1,'npi::wid::ColorPicker']]],
   ['setchannellocked_5f_10',['setChannelLocked_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aebf464985f09b7f82f5fd26fd45f4ed6',1,'npi::wid::ColorPicker']]],
   ['setchannelmax_5f_11',['setChannelMax_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ad103a89e11e33517a68fcc60b28c4262',1,'npi::wid::ColorPicker']]],
@@ -65,8 +65,9 @@ var searchData=
   ['startup_62',['startup',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#add5eb10e73705fb784eb977a325385fb',1,'anonymous_namespace{Gui.cpp}::startup()'],['../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#a9dbdeefab4ed0fe490efd90425689d7a',1,'anonymous_namespace{Log.cpp}::startup()']]],
   ['stylehint_63',['styleHint',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aba99add909d785d46d3584564b9026ae',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
   ['subelementrect_64',['subElementRect',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
-  ['sunkenbase_5f_65',['sunkenBase_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#af51b97e398ce36db46d24519087736d4',1,'npi::wid::ColorPicker']]],
-  ['surfaces_66',['surfaces',['../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a',1,'npi::gui::surfaces()'],['../d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc',1,'npi::gui::surfaces(bool darkBackground)']]],
-  ['surfaces_5f_67',['surfaces_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aeed4bac894458e065e60749347901058',1,'anonymous_namespace{Gui.cpp}::GuiStyle::surfaces_() const'],['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aa3280c421c992b7d2da5eec93e2ce160',1,'anonymous_namespace{Gui.cpp}::GuiStyle::surfaces_(bool dark) const']]],
-  ['syntheticlog_68',['syntheticLog',['../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a926d3f4c96d81c126df53add6ff3e041',1,'anonymous_namespace{Log.cpp}::workers']]]
+  ['sunkenbase_65',['sunkenBase',['../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a62409ec63c5f39396f28e65029509db0',1,'anonymous_namespace{Gui.cpp}::draw']]],
+  ['sunkenbase_5f_66',['sunkenBase_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#af51b97e398ce36db46d24519087736d4',1,'npi::wid::ColorPicker']]],
+  ['surfaces_67',['surfaces',['../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a',1,'npi::gui::surfaces()'],['../d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc',1,'npi::gui::surfaces(bool darkBackground)']]],
+  ['surfaces_5f_68',['surfaces_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aeed4bac894458e065e60749347901058',1,'anonymous_namespace{Gui.cpp}::GuiStyle::surfaces_() const'],['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aa3280c421c992b7d2da5eec93e2ce160',1,'anonymous_namespace{Gui.cpp}::GuiStyle::surfaces_(bool dark) const']]],
+  ['syntheticlog_69',['syntheticLog',['../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#a926d3f4c96d81c126df53add6ff3e041',1,'anonymous_namespace{Log.cpp}::workers']]]
 ];

@@ -1,6 +1,9 @@
 <map id="anonymous_namespace{Gui::cpp}::make::checkerBrush" name="anonymous_namespace{Gui::cpp}::make::checkerBrush">
-<area shape="rect" id="Node000001" title="Creates a color&#45;filled checkerboard brush to show transparency." alt="" coords="235,29,648,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="500,23,503,19,496,14,476,10,441,8,404,10,383,15,380,20,391,30,386,29,374,21,380,11,403,5,441,3,476,4,499,9,509,18,503,28"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="5,14,187,70"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="224,42,186,45,186,40,229,42"/>
+<area shape="rect" id="Node000001" title="Creates a color&#45;filled checkerboard brush to show transparency." alt="" coords="464,29,877,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="729,23,733,19,726,14,705,10,671,8,633,10,613,15,609,20,620,30,615,29,604,21,610,11,632,5,671,3,706,4,728,9,738,18,732,28"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,14,187,70"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="454,36,235,37,187,39,186,34,235,32,458,32"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,46,416,102"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="527,55,416,68,416,63,521,56"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="224,61,186,57,186,52,230,60"/>
 </map>

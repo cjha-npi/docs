@@ -1,7 +1,7 @@
 <map id="anonymous_namespace{Gui::cpp}::item::isInsideItemBase" name="anonymous_namespace{Gui::cpp}::item::isInsideItemBase">
 <area shape="rect" id="Node000001" title="Returns whether the widget is inside a group base." alt="" coords="544,68,989,94"/>
 <area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="834,63,839,58,832,53,807,49,767,47,723,49,699,55,695,57,694,59,708,69,703,68,689,61,690,54,696,50,722,44,767,42,808,43,834,48,845,57,837,68"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and newly added actions and children." alt="" coords="275,5,456,61"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and changes to actions and children." alt="" coords="275,5,456,61"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="649,68,456,47,456,41,654,67"/>
 <area shape="rect" id="Node000003" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7" title="Sets up a group background and optional exclusive button grouping." alt="" coords="235,109,496,150"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="654,95,496,116,495,111,649,95"/>

@@ -1,0 +1,17 @@
+<map id="anonymous_namespace{Gui::cpp}::draw::verticalTab" name="anonymous_namespace{Gui::cpp}::draw::verticalTab">
+<area shape="rect" id="Node000001" title="Returns whether the tab shape uses a left or right tab bar." alt="" coords="971,29,1376,55"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="1235,24,1239,19,1232,14,1210,10,1173,8,1134,10,1112,15,1108,20,1120,30,1115,29,1103,21,1109,11,1133,5,1173,3,1211,4,1234,9,1244,18,1238,28"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,6,416,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1026,29,923,25,784,22,645,23,416,32,415,26,645,18,784,17,923,20,1032,28"/>
+<area shape="rect" id="Node000004" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a522da5cd5fcb8339e70f3846e7688333" title="Calculates tab label and button rectangles and the corresponding size&#45;hint adjustment." alt="" coords="693,58,923,114"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1056,56,923,75,922,70,1061,56"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,6,187,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,35,187,37,186,32,230,33"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="683,65,645,62,416,42,416,37,646,57,688,65"/>
+<area shape="poly" id="edge8_Node000004_Node000004" title=" " alt="" coords="852,49,849,46,840,41,808,37,785,39,771,44,764,50,764,60,759,57,759,48,768,39,784,34,808,32,842,36,852,42,857,51"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Adjusts control sizes for consistent heights, spacing and square buttons." alt="" coords="464,72,645,127"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="683,93,645,97,645,92,688,92"/>
+<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2" title="Adjusts widget layout areas to match the custom drawing." alt="" coords="464,152,645,207"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="727,116,631,154,630,149,722,117"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="477,148,463,142,405,103,358,65,359,59,408,98,465,137,482,148"/>
+</map>

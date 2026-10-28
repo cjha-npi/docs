@@ -1,17 +1,19 @@
 <map id="anonymous_namespace{Gui::cpp}::make::theme" name="anonymous_namespace{Gui::cpp}::make::theme">
-<area shape="rect" id="Node000001" title="Creates the colors, palette and pens for a dark or light theme." alt="" coords="520,104,877,130"/>
-<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="757,98,761,93,754,89,733,84,699,83,661,85,641,90,637,95,648,105,643,104,632,96,638,86,660,80,699,77,734,79,756,84,766,92,760,103"/>
-<area shape="rect" id="Node000002" href="$d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55" title="Returns the GUI palette for the effective application background." alt="" coords="275,5,432,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="653,101,570,75,471,45,424,34,424,28,473,40,572,70,658,101"/>
-<area shape="rect" id="Node000003" href="$d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47" title="Returns the GUI palette for an explicitly selected dark/light background." alt="" coords="275,55,432,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="598,104,432,81,432,76,603,102"/>
-<area shape="rect" id="Node000004" href="$d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" title="Returns the surface colors for the effective application background." alt="" coords="271,104,436,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="510,117,436,119,435,114,515,116"/>
-<area shape="rect" id="Node000005" href="$d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc" title="Returns surface colors for an explicitly selected dark/light background." alt="" coords="271,153,436,179"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="598,131,436,157,435,152,603,130"/>
-<area shape="rect" id="Node000006" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f" title="Returns the theme name for logging." alt="" coords="235,227,472,268"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="659,132,409,230,407,225,654,133"/>
-<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="399,219,397,215,389,211,353,206,328,208,313,213,308,219,311,229,306,226,303,218,310,208,327,203,353,201,391,206,401,212,404,221"/>
-<area shape="rect" id="Node000007" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Sets the requested application theme." alt="" coords="5,220,187,275"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="224,248,187,250,186,245,229,247"/>
+<area shape="rect" id="Node000001" title="Creates the colors, palette and pens for a dark or light theme." alt="" coords="749,104,1107,130"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="986,98,990,93,983,89,962,84,928,83,890,85,870,90,866,95,878,105,873,104,861,96,867,86,890,80,928,77,963,79,985,84,995,92,989,103"/>
+<area shape="rect" id="Node000002" href="$d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55" title="Returns a copy of the effective GUI theme palette." alt="" coords="504,5,661,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="882,101,800,75,701,45,653,34,653,28,702,40,801,70,887,101"/>
+<area shape="rect" id="Node000003" href="$d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47" title="Returns the GUI palette for an explicit background without selecting a theme." alt="" coords="504,55,661,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="827,103,661,81,661,76,832,103"/>
+<area shape="rect" id="Node000004" href="$d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" title="Returns a copy of the effective background&#39;s surface colors." alt="" coords="500,104,665,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="739,117,665,119,665,114,744,116"/>
+<area shape="rect" id="Node000005" href="$d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc" title="Returns surface colors for an explicit background without selecting a theme." alt="" coords="500,153,665,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="827,131,665,157,665,152,833,130"/>
+<area shape="rect" id="Node000006" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f" title="Returns the theme name for logging." alt="" coords="464,227,701,268"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="888,132,638,230,636,225,883,133"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="629,219,626,215,618,211,583,206,558,208,542,213,537,219,540,229,536,226,532,218,539,208,556,203,583,201,620,206,630,212,633,221"/>
+<area shape="rect" id="Node000007" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Changes the application theme and updates the shared actions." alt="" coords="235,220,416,275"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="453,248,416,250,416,245,459,247"/>
+<area shape="rect" id="Node000008" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662" title="Sets up the style, theme resources and shared theme actions." alt="" coords="5,220,187,275"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="224,248,187,250,186,245,230,247"/>
 </map>

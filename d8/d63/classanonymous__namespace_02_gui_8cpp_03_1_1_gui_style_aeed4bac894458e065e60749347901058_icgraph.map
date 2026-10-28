@@ -1,7 +1,10 @@
 <map id="anonymous_namespace{Gui::cpp}::GuiStyle::surfaces_" name="anonymous_namespace{Gui::cpp}::GuiStyle::surfaces_">
-<area shape="rect" id="Node000001" title="Returns the current surface colors." alt="" coords="235,60,656,86"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="5,5,187,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,61,186,46,186,41,327,58"/>
-<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws custom backgrounds, frames and indicators." alt="" coords="5,85,187,141"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="323,88,187,106,186,100,328,86"/>
+<area shape="rect" id="Node000001" title="Returns the current surface colors." alt="" coords="693,20,1115,46"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,5,416,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="683,26,464,28,416,30,415,25,464,23,688,25"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws custom backgrounds, frames and indicators." alt="" coords="464,37,645,93"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="758,47,645,60,645,54,753,47"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,34,187,36,186,31,230,33"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="454,51,416,48,416,43,459,51"/>
 </map>

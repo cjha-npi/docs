@@ -1,5 +1,5 @@
 <map id="npi::gui::palette" name="npi::gui::palette">
-<area shape="rect" id="Node000001" title="Returns the GUI palette for an explicitly selected dark/light background." alt="" coords="5,82,163,108"/>
+<area shape="rect" id="Node000001" title="Returns the GUI palette for an explicit background without selecting a theme." alt="" coords="5,82,163,108"/>
 <area shape="rect" id="Node000002" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="223,29,404,70"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,80,218,68,213,70,150,85"/>
 <area shape="rect" id="Node000004" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882" title="Creates the colors, palette and pens for a dark or light theme." alt="" coords="211,119,416,159"/>

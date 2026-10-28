@@ -305,9 +305,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a489b218ba63dc7f5434988420437df4f" id="r_a489b218ba63dc7f5434988420437df4f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a489b218ba63dc7f5434988420437df4f">npiCrit</a>&#160;&#160;&#160;qCCritical(npi_log).noquote()</td></tr>
 <tr class="memdesc:a489b218ba63dc7f5434988420437df4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal critical diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:aba900325c5211dc8d74fe8653bfd7a05" id="r_aba900325c5211dc8d74fe8653bfd7a05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aba900325c5211dc8d74fe8653bfd7a05">npiDbug</a>&#160;&#160;&#160;qCDebug(npi_log).noquote()</td></tr>
-<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces debug messages in this file regardless of category filter rules.  <br /></td></tr>
+<tr class="memdesc:aba900325c5211dc8d74fe8653bfd7a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the translation-unit-local category used for logging-system diagnostics.  <br /></td></tr>
 <tr class="memitem:acfd217143f12c58fa5be9bd51908a231" id="r_acfd217143f12c58fa5be9bd51908a231"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acfd217143f12c58fa5be9bd51908a231">npiFatl</a>&#160;&#160;&#160;qCFatal(npi_log).noquote()</td></tr>
-<tr class="memdesc:acfd217143f12c58fa5be9bd51908a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the translation-unit-local category used for logging-system diagnostics.  <br /></td></tr>
+<tr class="memdesc:acfd217143f12c58fa5be9bd51908a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal fatal diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:ae7f5f25fa0583792bf1a5f409b3ea9ab" id="r_ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae7f5f25fa0583792bf1a5f409b3ea9ab">npiInfo</a>&#160;&#160;&#160;qCInfo(npi_log).noquote()</td></tr>
 <tr class="memdesc:ae7f5f25fa0583792bf1a5f409b3ea9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an internal informational diagnostic through the logging-system category.  <br /></td></tr>
 <tr class="memitem:a29523bd69971206d80a3109b7bba0eea" id="r_a29523bd69971206d80a3109b7bba0eea"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>&#160;&#160;&#160;qCWarning(npi_log).noquote()</td></tr>
@@ -1458,7 +1458,7 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00018">18</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1476,7 +1476,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal critical diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00133">133</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1492,10 +1492,10 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p>Forces debug messages in this file regardless of category filter rules. </p>
-<p>Creates a debug message according to category filter rules. </p>
+<p>Defines the translation-unit-local category used for logging-system diagnostics. </p>
+<p>Emits an internal debug diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00146">146</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00124">124</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1511,10 +1511,9 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p>Defines the translation-unit-local category used for logging-system diagnostics. </p>
 <p>Emits an internal fatal diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00125">125</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00136">136</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1532,7 +1531,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal informational diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00134">134</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00127">127</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1550,7 +1549,7 @@ wakeup_ {false}</td>
 
 <p>Emits an internal warning diagnostic through the logging-system category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00131">131</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00130">130</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1566,7 +1565,7 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1582,7 +1581,7 @@ wakeup_ {false}</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00023">23</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
 
 </div>
 </div>

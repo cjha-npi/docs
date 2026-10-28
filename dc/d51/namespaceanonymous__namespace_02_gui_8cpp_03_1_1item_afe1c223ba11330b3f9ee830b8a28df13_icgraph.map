@@ -1,7 +1,7 @@
 <map id="anonymous_namespace{Gui::cpp}::item::applyViewItemTree" name="anonymous_namespace{Gui::cpp}::item::applyViewItemTree">
 <area shape="rect" id="Node000001" title="Configures a widget and its descendants for use inside an item view." alt="" coords="544,68,997,94"/>
 <area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="839,63,844,58,836,53,812,49,771,47,726,49,702,55,698,57,697,59,711,69,706,68,693,61,693,54,700,50,726,44,771,42,812,43,838,48,849,57,841,68"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and newly added actions and children." alt="" coords="275,5,456,61"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and changes to actions and children." alt="" coords="275,5,456,61"/>
 <area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="651,68,455,46,455,41,657,67"/>
 <area shape="rect" id="Node000003" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a191f772a04c0ae7d990013fc5c8015dc" title="Sets up marked item&#45;view widgets and handling for children added later." alt="" coords="235,109,496,150"/>
 <area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="657,95,496,116,496,111,651,95"/>

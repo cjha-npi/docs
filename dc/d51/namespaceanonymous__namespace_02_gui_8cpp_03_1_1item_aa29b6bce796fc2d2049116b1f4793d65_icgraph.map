@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Gui::cpp}::item::initBaseButton" name="anonymous_namespace{Gui::cpp}::item::initBaseButton">
+<area shape="rect" id="Node000001" title="Makes an eligible push or tool button checkable and adds it to the supplied group." alt="" coords="544,68,973,94"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="825,63,830,58,822,53,798,49,759,47,716,49,692,54,688,57,688,59,701,69,696,68,683,61,683,54,690,50,715,44,759,42,799,43,824,48,835,57,827,68"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and changes to actions and children." alt="" coords="275,5,456,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="643,68,456,47,456,41,648,67"/>
+<area shape="rect" id="Node000003" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7" title="Sets up a group background and optional exclusive button grouping." alt="" coords="235,109,496,150"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="648,95,496,116,495,111,642,95"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="413,100,411,97,403,92,365,87,339,89,323,95,318,101,321,110,316,108,312,100,320,90,338,84,365,82,404,87,415,93,418,103"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies widget customizations, dynamic icons and event filters." alt="" coords="5,101,187,157"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="224,129,187,132,186,127,230,129"/>
+</map>

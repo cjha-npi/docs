@@ -1,47 +1,55 @@
 <map id="anonymous_namespace{Gui::cpp}::guiStyle" name="anonymous_namespace{Gui::cpp}::guiStyle">
-<area shape="rect" id="Node000001" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="1171,466,1504,492"/>
-<area shape="rect" id="Node000002" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec" title="Configures a widget and its descendants for a shared group background." alt="" coords="544,290,781,345"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1310,461,1230,412,1178,384,1122,363,1035,341,945,328,858,320,782,318,781,313,859,315,945,322,1036,336,1123,358,1180,379,1233,407,1316,462"/>
-<area shape="rect" id="Node000004" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7" title="Sets up a group background and optional exclusive button grouping." alt="" coords="235,278,496,319"/>
-<area shape="poly" id="edge14_Node000001_Node000004" title=" " alt="" coords="1297,463,1219,435,1122,407,1035,391,961,384,833,383,705,381,631,375,543,360,476,342,417,322,417,316,478,337,545,355,631,369,706,376,834,377,961,379,1036,386,1123,402,1221,429,1303,463"/>
-<area shape="rect" id="Node000006" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13" title="Configures a widget and its descendants for use inside an item view." alt="" coords="544,84,781,140"/>
-<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="1327,457,1302,399,1260,318,1232,275,1200,234,1163,197,1121,166,1081,146,1039,130,949,109,861,101,782,102,780,97,861,96,950,104,1040,124,1083,141,1124,162,1166,193,1204,230,1237,272,1265,315,1307,397,1332,459"/>
-<area shape="rect" id="Node000007" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a191f772a04c0ae7d990013fc5c8015dc" title="Sets up marked item&#45;view widgets and handling for children added later." alt="" coords="235,97,496,138"/>
-<area shape="poly" id="edge13_Node000001_Node000007" title=" " alt="" coords="1328,457,1306,391,1266,297,1238,246,1205,197,1166,152,1121,114,1046,67,978,35,913,16,849,9,783,11,712,20,545,51,470,72,408,99,404,95,469,67,543,46,712,14,783,5,850,4,914,11,980,30,1049,62,1124,110,1169,148,1209,194,1242,243,1270,294,1311,389,1333,460"/>
-<area shape="rect" id="Node000008" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba" title="Installs a filter to configure children added later." alt="" coords="829,200,1123,256"/>
-<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="1314,460,1234,390,1179,346,1121,305,1038,258,1039,253,1124,301,1182,342,1237,386,1320,461"/>
-<area shape="rect" id="Node000009" href="$d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4" title="Returns whether the effective application background is dark." alt="" coords="861,417,1091,442"/>
-<area shape="poly" id="edge21_Node000001_Node000009" title=" " alt="" coords="1232,465,1070,445,1070,440,1237,464"/>
-<area shape="rect" id="Node000010" href="$d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55" title="Returns the GUI palette for the effective application background." alt="" coords="897,466,1055,492"/>
-<area shape="poly" id="edge22_Node000001_Node000010" title=" " alt="" coords="1160,479,1055,481,1054,476,1165,478"/>
-<area shape="rect" id="Node000011" href="$d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47" title="Returns the GUI palette for an explicitly selected dark/light background." alt="" coords="897,515,1055,541"/>
-<area shape="poly" id="edge23_Node000001_Node000011" title=" " alt="" coords="1232,493,1055,520,1054,515,1237,492"/>
-<area shape="rect" id="Node000012" href="$d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051" title="Selects the application theme." alt="" coords="580,671,745,697"/>
-<area shape="poly" id="edge24_Node000001_Node000012" title=" " alt="" coords="1331,497,1306,557,1263,633,1235,673,1203,710,1165,743,1124,769,1083,787,1046,798,1012,803,980,803,912,790,829,769,785,755,744,736,682,699,683,694,746,732,787,750,830,764,913,785,980,797,1012,798,1045,793,1081,782,1121,764,1162,739,1199,706,1231,669,1259,630,1301,555,1326,501"/>
-<area shape="rect" id="Node000013" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#add5eb10e73705fb784eb977a325385fb" title="Schedules GUI initialization after QApplication construction." alt="" coords="889,614,1063,655"/>
-<area shape="poly" id="edge25_Node000001_Node000013" title=" " alt="" coords="1315,495,1232,551,1179,580,1124,605,1063,623,1062,618,1122,600,1177,575,1229,546,1310,497"/>
-<area shape="rect" id="Node000014" href="$d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" title="Returns the surface colors for the effective application background." alt="" coords="893,679,1059,705"/>
-<area shape="poly" id="edge26_Node000001_Node000014" title=" " alt="" coords="1323,496,1291,536,1244,583,1188,630,1124,669,1092,681,1059,689,1058,683,1091,676,1121,664,1185,626,1241,579,1287,533,1319,499"/>
-<area shape="rect" id="Node000015" href="$d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc" title="Returns surface colors for an explicitly selected dark/light background." alt="" coords="893,729,1059,754"/>
-<area shape="poly" id="edge27_Node000001_Node000015" title=" " alt="" coords="1327,497,1298,546,1253,607,1194,669,1160,696,1124,720,1092,733,1059,740,1058,735,1091,728,1121,715,1157,692,1190,665,1249,603,1294,543,1323,500"/>
-<area shape="rect" id="Node000016" href="$d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea" title="Returns the configured application theme." alt="" coords="905,565,1047,590"/>
-<area shape="poly" id="edge28_Node000001_Node000016" title=" " alt="" coords="1300,494,1219,527,1123,556,1047,571,1046,566,1122,551,1217,522,1295,495"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="715,281,711,277,701,273,663,268,636,270,618,275,610,282,610,291,606,289,606,279,616,270,635,265,663,263,702,268,714,273,720,282"/>
-<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and newly added actions and children." alt="" coords="275,166,456,221"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="592,287,495,245,442,224,441,219,497,240,597,285"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="533,310,497,309,495,304,538,308"/>
-<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="413,271,411,267,403,262,365,257,339,259,323,264,318,270,321,279,316,279,312,269,320,260,338,254,365,252,404,257,415,263,418,272"/>
-<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies widget customizations, dynamic icons and event filters." alt="" coords="5,187,187,243"/>
-<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="290,278,186,245,185,240,294,275"/>
-<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="551,144,457,171,455,167,555,140"/>
-<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="715,76,711,72,701,67,663,63,636,65,618,70,610,76,611,85,606,83,606,74,616,65,635,60,663,58,702,62,714,68,720,76"/>
-<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="533,116,497,118,495,113,538,113"/>
-<area shape="poly" id="edge12_Node000007_Node000005" title=" " alt="" coords="274,142,236,156,156,189,152,185,234,151,278,138"/>
-<area shape="poly" id="edge11_Node000007_Node000007" title=" " alt="" coords="413,90,411,85,403,81,365,76,339,78,323,83,318,89,321,97,316,97,312,88,320,78,338,73,365,70,404,75,415,82,418,90"/>
-<area shape="poly" id="edge16_Node000008_Node000002" title=" " alt="" coords="868,259,762,292,759,287,872,257"/>
-<area shape="poly" id="edge19_Node000008_Node000004" title=" " alt="" coords="819,231,686,240,544,256,435,281,432,276,544,251,686,235,824,229"/>
-<area shape="poly" id="edge17_Node000008_Node000006" title=" " alt="" coords="890,198,739,143,738,137,895,197"/>
-<area shape="poly" id="edge18_Node000008_Node000007" title=" " alt="" coords="819,203,544,155,470,140,468,135,544,149,824,200"/>
-<area shape="poly" id="edge20_Node000008_Node000008" title=" " alt="" coords="1031,192,1027,188,1016,183,976,179,948,181,929,186,921,192,921,202,916,199,916,190,927,181,947,176,976,174,1017,178,1030,184,1037,193"/>
-<area shape="poly" id="edge29_Node000016_Node000012" title=" " alt="" coords="895,587,830,605,749,640,686,674,684,669,747,635,829,600,900,586"/>
+<area shape="rect" id="Node000001" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="1171,570,1504,595"/>
+<area shape="rect" id="Node000002" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa7caff541db4041d0432fe8c16b3d2ec" title="Configures a widget and its descendants for a shared group background." alt="" coords="544,300,781,356"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1315,564,1235,499,1180,461,1122,429,1035,396,946,372,859,354,782,342,781,337,860,349,947,367,1037,391,1124,424,1183,456,1238,494,1320,565"/>
+<area shape="rect" id="Node000004" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7" title="Sets up a group background and optional exclusive button grouping." alt="" coords="235,370,496,411"/>
+<area shape="poly" id="edge18_Node000001_Node000004" title=" " alt="" coords="1298,567,1219,538,1122,510,1035,497,961,492,832,497,770,500,704,499,630,492,543,474,503,462,464,446,401,413,400,408,467,441,505,457,545,469,631,487,704,494,770,495,832,492,961,487,1036,492,1123,505,1221,533,1303,567"/>
+<area shape="rect" id="Node000006" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13" title="Configures a widget and its descendants for use inside an item view." alt="" coords="544,95,781,150"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="1330,561,1311,487,1295,436,1273,380,1245,323,1211,268,1170,218,1121,177,1082,154,1040,137,996,124,951,115,862,108,782,110,780,105,863,102,952,110,998,119,1042,132,1085,149,1124,172,1174,214,1215,265,1250,320,1278,378,1300,434,1316,485,1335,563"/>
+<area shape="rect" id="Node000007" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a191f772a04c0ae7d990013fc5c8015dc" title="Sets up marked item&#45;view widgets and handling for children added later." alt="" coords="235,136,496,176"/>
+<area shape="poly" id="edge17_Node000001_Node000007" title=" " alt="" coords="1331,561,1314,479,1299,422,1278,359,1251,294,1216,231,1173,173,1121,123,1048,73,980,38,915,17,851,9,784,11,712,22,545,61,502,76,460,96,395,138,391,134,458,91,500,71,543,56,711,16,783,6,851,4,916,12,982,33,1051,68,1124,119,1177,169,1220,228,1255,292,1283,357,1304,421,1320,478,1336,563"/>
+<area shape="rect" id="Node000008" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#aa29b6bce796fc2d2049116b1f4793d65" title="Makes an eligible push or tool button checkable and adds it to the supplied group." alt="" coords="548,404,777,460"/>
+<area shape="poly" id="edge13_Node000001_Node000008" title=" " alt="" coords="1310,565,1230,515,1178,488,1122,466,1033,446,942,434,855,429,778,429,776,424,855,424,943,429,1034,441,1123,461,1180,483,1233,510,1316,565"/>
+<area shape="rect" id="Node000009" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a4d44e3cb5b6decad09c239d53485f8ba" title="Installs a filter to configure children added later." alt="" coords="829,211,1123,266"/>
+<area shape="poly" id="edge19_Node000001_Node000009" title=" " alt="" coords="1320,563,1241,464,1184,399,1121,338,1072,300,1025,269,1026,264,1075,296,1124,334,1187,395,1245,460,1325,564"/>
+<area shape="rect" id="Node000010" href="$d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4" title="Returns true for the effective dark background, resolving System as needed." alt="" coords="861,520,1091,546"/>
+<area shape="poly" id="edge25_Node000001_Node000010" title=" " alt="" coords="1232,569,1070,549,1070,543,1237,568"/>
+<area shape="rect" id="Node000011" href="$d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55" title="Returns a copy of the effective GUI theme palette." alt="" coords="897,570,1055,595"/>
+<area shape="poly" id="edge26_Node000001_Node000011" title=" " alt="" coords="1160,583,1055,585,1054,580,1165,582"/>
+<area shape="rect" id="Node000012" href="$d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47" title="Returns the GUI palette for an explicit background without selecting a theme." alt="" coords="897,619,1055,645"/>
+<area shape="poly" id="edge27_Node000001_Node000012" title=" " alt="" coords="1232,597,1055,624,1054,619,1237,596"/>
+<area shape="rect" id="Node000013" href="$d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051" title="Sets Dark, Light or System and synchronizes the shared theme actions." alt="" coords="580,859,745,885"/>
+<area shape="poly" id="edge28_Node000001_Node000013" title=" " alt="" coords="1300,597,1218,630,1123,660,1079,669,1040,673,972,675,907,682,871,692,831,710,778,745,733,788,698,830,674,862,671,857,694,826,729,784,775,741,828,706,870,687,906,676,972,670,1039,668,1078,664,1122,655,1217,625,1295,599"/>
+<area shape="rect" id="Node000014" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#add5eb10e73705fb784eb977a325385fb" title="Schedules GUI initialization after QApplication construction." alt="" coords="889,720,1063,760"/>
+<area shape="poly" id="edge29_Node000001_Node000014" title=" " alt="" coords="1312,599,1230,652,1178,679,1124,704,1063,723,1062,718,1122,699,1175,674,1227,647,1307,601"/>
+<area shape="rect" id="Node000015" href="$d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" title="Returns a copy of the effective background&#39;s surface colors." alt="" coords="893,784,1059,810"/>
+<area shape="poly" id="edge30_Node000001_Node000015" title=" " alt="" coords="1323,600,1291,640,1245,687,1188,735,1124,774,1092,786,1059,794,1058,788,1091,781,1121,769,1185,731,1241,683,1287,637,1319,603"/>
+<area shape="rect" id="Node000016" href="$d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc" title="Returns surface colors for an explicit background without selecting a theme." alt="" coords="893,834,1059,859"/>
+<area shape="poly" id="edge31_Node000001_Node000016" title=" " alt="" coords="1327,600,1298,650,1253,711,1194,774,1160,801,1124,825,1092,838,1059,846,1058,840,1091,833,1121,820,1157,797,1190,770,1249,708,1294,647,1323,604"/>
+<area shape="rect" id="Node000017" href="$d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea" title="Returns the configured theme; System remains System regardless of background." alt="" coords="905,883,1047,909"/>
+<area shape="poly" id="edge32_Node000001_Node000017" title=" " alt="" coords="1330,601,1304,659,1260,733,1232,773,1200,811,1164,845,1124,874,1086,890,1047,898,1046,893,1085,885,1121,870,1161,841,1196,807,1228,769,1256,731,1299,657,1326,604"/>
+<area shape="rect" id="Node000018" href="$d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495" title="Returns the shared checkable action for selecting a theme." alt="" coords="568,908,757,934"/>
+<area shape="poly" id="edge35_Node000001_Node000018" title=" " alt="" coords="1333,601,1311,670,1271,760,1243,807,1209,852,1170,892,1124,924,1070,947,1013,961,954,967,895,967,788,955,706,937,707,931,789,950,896,962,954,962,1012,955,1068,942,1121,919,1166,888,1205,849,1238,804,1266,758,1306,668,1329,605"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="715,292,711,288,701,283,663,279,636,281,618,286,610,292,611,301,606,299,606,290,616,281,635,275,663,273,702,278,714,284,720,292"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and changes to actions and children." alt="" coords="275,267,456,322"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="534,315,457,307,455,302,538,312"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="534,356,463,373,461,368,539,353"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="413,363,411,358,403,354,365,349,339,351,323,356,318,362,321,371,316,370,312,361,320,351,338,346,365,344,404,349,415,355,418,363"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies widget customizations, dynamic icons and event filters." alt="" coords="5,245,187,301"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="308,369,234,337,160,303,158,298,236,332,313,366"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="605,156,416,269,412,265,609,152"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="715,87,711,82,701,78,663,73,636,75,618,80,610,87,611,96,605,94,606,84,616,76,635,70,663,68,702,73,714,78,720,87"/>
+<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="534,138,497,144,494,139,538,135"/>
+<area shape="poly" id="edge12_Node000007_Node000005" title=" " alt="" coords="309,181,162,247,159,243,312,177"/>
+<area shape="poly" id="edge11_Node000007_Node000007" title=" " alt="" coords="413,128,411,124,403,119,365,114,339,116,323,121,318,127,321,136,316,136,312,126,320,117,338,111,365,109,404,114,415,120,418,128"/>
+<area shape="poly" id="edge14_Node000008_Node000003" title=" " alt="" coords="598,401,543,370,519,353,495,337,456,321,455,315,497,332,522,348,545,366,603,400"/>
+<area shape="poly" id="edge16_Node000008_Node000004" title=" " alt="" coords="538,416,496,411,495,406,543,414"/>
+<area shape="poly" id="edge15_Node000008_Node000008" title=" " alt="" coords="715,396,711,392,701,387,663,383,636,385,618,390,610,396,610,405,606,403,606,394,616,385,635,379,663,377,702,382,714,388,720,396"/>
+<area shape="poly" id="edge20_Node000009_Node000002" title=" " alt="" coords="868,270,762,302,759,298,872,267"/>
+<area shape="poly" id="edge23_Node000009_Node000004" title=" " alt="" coords="819,235,741,237,661,241,593,251,545,266,529,281,521,298,513,317,498,336,467,357,434,372,431,368,464,353,494,333,509,315,516,296,525,278,543,262,592,245,661,236,741,232,824,232"/>
+<area shape="poly" id="edge21_Node000009_Node000006" title=" " alt="" coords="890,209,739,153,738,148,895,207"/>
+<area shape="poly" id="edge22_Node000009_Node000007" title=" " alt="" coords="819,219,496,176,495,171,824,216"/>
+<area shape="poly" id="edge24_Node000009_Node000009" title=" " alt="" coords="1031,202,1027,198,1016,194,976,189,948,191,929,196,921,203,921,212,916,210,916,200,927,192,947,186,976,184,1017,189,1030,194,1037,203"/>
+<area shape="poly" id="edge33_Node000017_Node000013" title=" " alt="" coords="895,890,745,881,745,875,900,890"/>
+<area shape="poly" id="edge34_Node000017_Node000018" title=" " alt="" coords="900,902,757,916,757,911,895,902"/>
 </map>

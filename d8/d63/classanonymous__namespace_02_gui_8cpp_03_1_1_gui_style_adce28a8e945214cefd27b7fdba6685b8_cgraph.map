@@ -6,7 +6,7 @@
 <area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="336,115,486,134,480,136,336,121"/>
 <area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="579,28,579,19,590,10,611,5,641,3,684,7,697,13,704,22,699,21,694,17,683,12,641,8,612,10,593,15,584,21,584,31"/>
 <area shape="poly" id="edge10_Node000003_Node000003" title=" " alt="" coords="582,132,578,124,587,114,608,108,641,106,689,111,701,118,705,128,700,125,697,121,687,116,641,111,609,114,590,119,583,125,587,134"/>
-<area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, using the original icon for missing states." alt="" coords="840,133,1093,174"/>
+<area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, falling back to original normal&#45;mode pixmaps for missing resources." alt="" coords="840,133,1093,174"/>
 <area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="792,151,835,153,829,153,792,156"/>
 <area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="909,132,905,124,914,114,935,108,967,106,1013,111,1025,118,1028,128,1024,125,1021,121,1011,116,967,111,935,114,917,119,910,125,914,134"/>
 <area shape="rect" id="Node000005" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" title="Copies the normal&#45;mode pixmaps for one icon state." alt="" coords="1169,77,1399,133"/>

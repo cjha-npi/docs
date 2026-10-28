@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "anonymous_namespace{Gui.cpp}::SizeData", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data", null ],
+    [ "anonymous_namespace{Gui.cpp}::TabLabelRects", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d5/dd0/structanonymous__namespace_02_gui_8cpp_03_1_1_tab_label_rects", null ],
     [ "anonymous_namespace{Gui.cpp}::ThemeData", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data", null ],
     [ "anonymous_namespace{Log.cpp}::CategoryCache", "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html", null ],
     [ "anonymous_namespace{Log.cpp}::CategoryCache::Entry", "d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html#df/d07/structanonymous__namespace_02_log_8cpp_03_1_1_category_cache_1_1_entry", null ],
@@ -43,6 +44,9 @@ var hierarchy =
     ] ],
     [ "QCompleter", null, [
       [ "npi::ind::EmptyCompleter", "df/d43/classnpi_1_1ind_1_1_empty_completer.html", null ]
+    ] ],
+    [ "QObject", null, [
+      [ "anonymous_namespace{Gui.cpp}::TreeBranchSelection", "de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection.html", null ]
     ] ],
     [ "QProxyStyle", null, [
       [ "anonymous_namespace{Gui.cpp}::GuiStyle", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html", null ]

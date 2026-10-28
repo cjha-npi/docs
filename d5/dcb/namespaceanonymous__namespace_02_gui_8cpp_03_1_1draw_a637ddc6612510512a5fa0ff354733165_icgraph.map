@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Gui::cpp}::draw::horHeaderText" name="anonymous_namespace{Gui::cpp}::draw::horHeaderText">
+<area shape="rect" id="Node000001" title="Draws text in a horizontal header, adjusting its position as the section scrolls." alt="" coords="757,44,1179,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1032,39,1037,34,1029,29,1006,25,968,23,926,25,904,30,899,35,912,45,907,44,894,36,901,26,926,20,968,18,1007,19,1031,24,1042,33,1035,43"/>
+<area shape="rect" id="Node000002" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ab8e1c41bb5e4dc9cbf49f2c576e51742" title="Draws the complete multi&#45;level horizontal header for tables and trees." alt="" coords="464,29,709,85"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="747,57,709,60,709,55,752,57"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="633,20,629,17,620,12,587,8,563,10,548,15,541,21,541,31,537,28,536,19,545,10,562,5,587,3,621,7,632,13,638,22"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,29,416,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="454,57,416,60,416,55,459,57"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,29,187,85"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="224,57,187,60,186,55,230,57"/>
+</map>

@@ -47,9 +47,9 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 704;
+var viewWidth = 876;
 var viewHeight = 62;
-var sectionId = 'dynsection-3';
+var sectionId = 'dynsection-5';
 </script>
 <script type="application/ecmascript" xlink:href="../../svg.min.js"/>
 <svg id="graph" class="graph">
@@ -58,9 +58,9 @@ var sectionId = 'dynsection-3';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Recolors a pixmap while preserving its shape and transparency.">
-<polygon fill="#999999" stroke="none" points="696,-30.5 380,-30.5 380,-11.25 696,-11.25 696,-30.5"/>
-<text xml:space="preserve" text-anchor="start" x="388" y="-17.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::draw::coloredPixmap</text>
+<g id="a_Node000001"><a xlink:title="Recolors a pixmap using its existing alpha as a mask.">
+<polygon fill="#999999" stroke="none" points="868,-30.5 552,-30.5 552,-11.25 868,-11.25 868,-30.5"/>
+<text xml:space="preserve" text-anchor="start" x="560" y="-17.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::draw::coloredPixmap</text>
 </a>
 </g>
 </g>
@@ -68,8 +68,8 @@ var sectionId = 'dynsection-3';
 <g id="edge1_Node000001_Node000001" class="edge">
 <title>Node1&#45;&gt;Node1</title>
 <g id="a_edge1_Node000001_Node000001"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M586.25,-33.03C599.04,-40.9 582.96,-48.5 538,-48.5 487.96,-48.5 473.69,-39.09 495.19,-30.36"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="581.9,-30.89 587.38,-31.08 583.05,-31.46 586.39,-33.1 586.39,-33.1 586.39,-33.1 583.05,-31.46 585.4,-35.12 581.9,-30.89"/>
+<path fill="none" stroke="#63b8ff" d="M758.25,-33.03C771.04,-40.9 754.96,-48.5 710,-48.5 659.96,-48.5 645.69,-39.09 667.19,-30.36"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="753.9,-30.89 759.38,-31.08 755.05,-31.46 758.39,-33.1 758.39,-33.1 758.39,-33.1 755.05,-31.46 757.4,-35.12 753.9,-30.89"/>
 </a>
 </g>
 </g>
@@ -77,9 +77,9 @@ var sectionId = 'dynsection-3';
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="../../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#acbfcb721bc6f25afe2f86f5b7c540da8" target="_top" xlink:title="Recolors a menu icon using normal and disabled text colors.">
-<polygon fill="white" stroke="none" points="344,-36.12 172,-36.12 172,-5.63 344,-5.63 344,-36.12"/>
-<text xml:space="preserve" text-anchor="start" x="180" y="-21.68" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="middle" x="258" y="-10.43" font-family="Consolas" font-size="11.00">{Gui::cpp}::draw::menuIcon</text>
+<polygon fill="white" stroke="none" points="516,-36.12 344,-36.12 344,-5.63 516,-5.63 516,-36.12"/>
+<text xml:space="preserve" text-anchor="start" x="352" y="-21.68" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
+<text xml:space="preserve" text-anchor="middle" x="430" y="-10.43" font-family="Consolas" font-size="11.00">{Gui::cpp}::draw::menuIcon</text>
 </a>
 </g>
 </g>
@@ -87,17 +87,17 @@ var sectionId = 'dynsection-3';
 <g id="edge2_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge2_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M374.02,-20.88C363.69,-20.88 353.53,-20.88 343.8,-20.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="378.91,-20.88 373.91,-23.13 377.63,-20.88 373.91,-20.88 373.91,-20.88 373.91,-20.88 377.63,-20.88 373.91,-18.63 378.91,-20.88"/>
+<path fill="none" stroke="#63b8ff" d="M546.02,-20.88C535.69,-20.88 525.53,-20.88 515.8,-20.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="550.91,-20.88 545.91,-23.13 549.63,-20.88 545.91,-20.88 545.91,-20.88 545.91,-20.88 549.63,-20.88 545.91,-18.63 550.91,-20.88"/>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node2 -->
-<g id="edge4_Node000002_Node000002" class="edge">
+<g id="edge5_Node000002_Node000002" class="edge">
 <title>Node2&#45;&gt;Node2</title>
-<g id="a_edge4_Node000002_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M293.62,-41.48C293.83,-48.49 281.95,-54.12 258,-54.12 227.94,-54.12 216.9,-45.25 224.89,-35.92"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="291.61,-37.03 295.72,-40.66 292.14,-38.2 293.67,-41.59 293.67,-41.59 293.67,-41.59 292.14,-38.2 291.62,-42.51 291.61,-37.03"/>
+<g id="a_edge5_Node000002_Node000002"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M465.62,-41.48C465.83,-48.49 453.95,-54.12 430,-54.12 399.94,-54.12 388.9,-45.25 396.89,-35.92"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="463.61,-37.03 467.72,-40.66 464.14,-38.2 465.67,-41.59 465.67,-41.59 465.67,-41.59 464.14,-38.2 463.62,-42.51 463.61,-37.03"/>
 </a>
 </g>
 </g>
@@ -105,10 +105,10 @@ var sectionId = 'dynsection-3';
 <g id="Node000003" class="node">
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" target="_top" xlink:title="Draws controls using the application&#39;s styling.">
-<polygon fill="white" stroke="none" points="136,-41.75 0,-41.75 0,0 136,0 136,-41.75"/>
-<text xml:space="preserve" text-anchor="start" x="8" y="-27.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="start" x="8" y="-16.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
-<text xml:space="preserve" text-anchor="middle" x="68" y="-4.8" font-family="Consolas" font-size="11.00">::drawControl</text>
+<polygon fill="white" stroke="none" points="308,-41.75 172,-41.75 172,0 308,0 308,-41.75"/>
+<text xml:space="preserve" text-anchor="start" x="180" y="-27.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
+<text xml:space="preserve" text-anchor="start" x="180" y="-16.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
+<text xml:space="preserve" text-anchor="middle" x="240" y="-4.8" font-family="Consolas" font-size="11.00">::drawControl</text>
 </a>
 </g>
 </g>
@@ -116,8 +116,28 @@ var sectionId = 'dynsection-3';
 <g id="edge3_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge3_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M166.08,-20.88C155.87,-20.88 145.62,-20.88 135.8,-20.88"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="170.86,-20.88 165.86,-23.13 169.58,-20.88 165.86,-20.88 165.86,-20.88 165.86,-20.88 169.58,-20.88 165.86,-18.63 170.86,-20.88"/>
+<path fill="none" stroke="#63b8ff" d="M338.08,-20.88C327.87,-20.88 317.62,-20.88 307.8,-20.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="342.86,-20.88 337.86,-23.13 341.58,-20.88 337.86,-20.88 337.86,-20.88 337.86,-20.88 341.58,-20.88 337.86,-18.63 342.86,-20.88"/>
+</a>
+</g>
+</g>
+<!-- Node4 -->
+<g id="Node000004" class="node">
+<title>Node4</title>
+<g id="a_Node000004"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" target="_top" xlink:title="Draws custom backgrounds and controls for compound widgets.">
+<polygon fill="white" stroke="none" points="136,-41.75 0,-41.75 0,0 136,0 136,-41.75"/>
+<text xml:space="preserve" text-anchor="start" x="8" y="-27.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
+<text xml:space="preserve" text-anchor="start" x="8" y="-16.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
+<text xml:space="preserve" text-anchor="middle" x="68" y="-4.8" font-family="Consolas" font-size="11.00">::drawComplexControl</text>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node4 -->
+<g id="edge4_Node000003_Node000004" class="edge">
+<title>Node3&#45;&gt;Node4</title>
+<g id="a_edge4_Node000003_Node000004"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M166.36,-20.88C156.21,-20.88 145.82,-20.88 135.79,-20.88"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="171.08,-20.88 166.08,-23.13 169.8,-20.88 166.08,-20.88 166.08,-20.88 166.08,-20.88 169.8,-20.88 166.08,-18.63 171.08,-20.88"/>
 </a>
 </g>
 </g>

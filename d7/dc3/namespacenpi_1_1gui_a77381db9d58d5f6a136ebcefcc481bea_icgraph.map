@@ -1,5 +1,7 @@
 <map id="npi::gui::theme" name="npi::gui::theme">
-<area shape="rect" id="Node000001" title="Returns the configured application theme." alt="" coords="219,5,360,31"/>
-<area shape="rect" id="Node000002" href="$d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051" title="Selects the application theme." alt="" coords="5,5,171,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,18,170,21,170,16,214,18"/>
+<area shape="rect" id="Node000001" title="Returns the configured theme; System remains System regardless of background." alt="" coords="243,31,384,56"/>
+<area shape="rect" id="Node000002" href="$d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051" title="Sets Dark, Light or System and synchronizes the shared theme actions." alt="" coords="17,5,183,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,35,183,31,183,25,238,34"/>
+<area shape="rect" id="Node000003" href="$d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495" title="Returns the shared checkable action for selecting a theme." alt="" coords="5,55,195,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,53,195,60,194,54,238,52"/>
 </map>

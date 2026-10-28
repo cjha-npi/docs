@@ -3,7 +3,7 @@
 <area shape="rect" id="Node000002" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0" title="Updates an action&#39;s icon for the selected theme." alt="" coords="579,85,880,126"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="530,103,573,105,568,105,530,108"/>
 <area shape="poly" id="edge8_Node000002_Node000002" title=" " alt="" coords="670,84,666,76,675,66,696,60,729,58,777,63,789,70,793,80,788,77,785,73,775,68,729,63,697,66,678,71,671,77,675,86"/>
-<area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, using the original icon for missing states." alt="" coords="928,85,1181,126"/>
+<area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, falling back to original normal&#45;mode pixmaps for missing resources." alt="" coords="928,85,1181,126"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="880,103,923,105,917,105,880,108"/>
 <area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="997,84,993,76,1002,66,1023,60,1055,58,1101,63,1113,70,1116,80,1112,77,1109,73,1099,68,1055,63,1023,66,1005,71,998,77,1002,86"/>
 <area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" title="Copies the normal&#45;mode pixmaps for one icon state." alt="" coords="1257,29,1487,85"/>

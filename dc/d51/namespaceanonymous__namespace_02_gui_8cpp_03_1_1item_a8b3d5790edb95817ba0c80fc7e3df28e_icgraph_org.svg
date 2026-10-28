@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Makes the widget&#39;s background transparent.">
+<g id="a_Node000001"><a xlink:title="Disables automatic background filling and makes the Base palette brush transparent.">
 <polygon fill="#999999" stroke="none" points="1202,-69.5 856,-69.5 856,-50.25 1202,-50.25 1202,-69.5"/>
 <text xml:space="preserve" text-anchor="start" x="864" y="-56.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::item::setTransparentBase</text>
 </a>
@@ -29,7 +29,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2" target="_top" xlink:title="Suppresses a grouped widget&#39;s background unless it has its own base.">
+<g id="a_Node000002"><a xlink:href="../../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2" target="_top" xlink:title="Suppresses a grouped widget&#39;s background unless it declares a sunken or raised base.">
 <polygon fill="white" stroke="none" points="820,-114.12 618,-114.12 618,-83.62 820,-83.62 820,-114.12"/>
 <text xml:space="preserve" text-anchor="start" x="626" y="-99.67" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="middle" x="719" y="-88.42" font-family="Consolas" font-size="11.00">{Gui::cpp}::item::applyBaseItem</text>
@@ -124,7 +124,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" target="_top" xlink:title="Handles widget updates, wheel forwarding and newly added actions and children.">
+<g id="a_Node000004"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" target="_top" xlink:title="Handles widget updates, wheel forwarding and changes to actions and children.">
 <polygon fill="white" stroke="none" points="338,-113.75 202,-113.75 202,-72 338,-72 338,-113.75"/>
 <text xml:space="preserve" text-anchor="start" x="210" y="-99.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="210" y="-88.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>

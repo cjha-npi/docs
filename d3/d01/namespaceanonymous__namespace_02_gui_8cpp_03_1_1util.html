@@ -144,6 +144,8 @@ $(function(){initNavTree('d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_
 Functions</h2></td></tr>
 <tr class="memitem:ab683b79bf2e2ea36a70f70f415c2ec35" id="r_ab683b79bf2e2ea36a70f70f415c2ec35"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab683b79bf2e2ea36a70f70f415c2ec35">initFont</a> ()</td></tr>
 <tr class="memdesc:ab683b79bf2e2ea36a70f70f415c2ec35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the bundled JetBrains Mono fonts once.  <br /></td></tr>
+<tr class="memitem:ae97b6d07ceae7614045f627d3ee135bd" id="r_ae97b6d07ceae7614045f627d3ee135bd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae97b6d07ceae7614045f627d3ee135bd">isCompleterPopup</a> (const QWidget *widget)</td></tr>
+<tr class="memdesc:ae97b6d07ceae7614045f627d3ee135bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the widget is a completer popup.  <br /></td></tr>
 <tr class="memitem:a21a700efc0bcd2eeb14cb41c77fa3237" id="r_a21a700efc0bcd2eeb14cb41c77fa3237"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a21a700efc0bcd2eeb14cb41c77fa3237">isDarkSystemBackground</a> ()</td></tr>
 <tr class="memdesc:a21a700efc0bcd2eeb14cb41c77fa3237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether Windows uses a dark application theme.  <br /></td></tr>
 </table>
@@ -165,30 +167,30 @@ Functions</h2></td></tr>
 
 <p>Loads the bundled JetBrains Mono fonts once. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01123">1123</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1124</span>    {</div>
-<div class="line"><span class="lineno"> 1125</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span> loaded{<span class="keyword">false</span>}; <span class="comment">// Whether the font-loading pass has already completed.</span></div>
-<div class="line"><span class="lineno"> 1126</span>      <span class="keywordflow">if</span>(loaded) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1127</span> </div>
-<div class="line"><span class="lineno"> 1128</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idRegular = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Regular.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1129</span>      <span class="keywordflow">if</span>(idRegular == -1)</div>
-<div class="line"><span class="lineno"> 1130</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Regular font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1131</span> </div>
-<div class="line"><span class="lineno"> 1132</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idBold = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Bold.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1133</span>      <span class="keywordflow">if</span>(idBold == -1)</div>
-<div class="line"><span class="lineno"> 1134</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1135</span> </div>
-<div class="line"><span class="lineno"> 1136</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Italic.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1137</span>      <span class="keywordflow">if</span>(idItalic == -1)</div>
-<div class="line"><span class="lineno"> 1138</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Italic font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1139</span> </div>
-<div class="line"><span class="lineno"> 1140</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idBoldItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-BoldItalic.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1141</span>      <span class="keywordflow">if</span>(idBoldItalic == -1)</div>
-<div class="line"><span class="lineno"> 1142</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold-Italic font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1143</span> </div>
-<div class="line"><span class="lineno"> 1144</span>      loaded = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1145</span>    }</div>
-<div class="ttc" id="a_gui_8cpp_html_a29523bd69971206d80a3109b7bba0eea"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a></div><div class="ttdeci">#define npiWarn</div><div class="ttdoc">Creates a warning message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00162">Gui.cpp:162</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01786">1786</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1787</span>    {</div>
+<div class="line"><span class="lineno"> 1788</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span> loaded{<span class="keyword">false</span>}; <span class="comment">// Avoid loading the fonts again.</span></div>
+<div class="line"><span class="lineno"> 1789</span>      <span class="keywordflow">if</span>(loaded) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1790</span> </div>
+<div class="line"><span class="lineno"> 1791</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idRegular = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Regular.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1792</span>      <span class="keywordflow">if</span>(idRegular == -1)</div>
+<div class="line"><span class="lineno"> 1793</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Regular font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1794</span> </div>
+<div class="line"><span class="lineno"> 1795</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idBold = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Bold.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1796</span>      <span class="keywordflow">if</span>(idBold == -1)</div>
+<div class="line"><span class="lineno"> 1797</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1798</span> </div>
+<div class="line"><span class="lineno"> 1799</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Italic.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1800</span>      <span class="keywordflow">if</span>(idItalic == -1)</div>
+<div class="line"><span class="lineno"> 1801</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Italic font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1802</span> </div>
+<div class="line"><span class="lineno"> 1803</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idBoldItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-BoldItalic.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1804</span>      <span class="keywordflow">if</span>(idBoldItalic == -1)</div>
+<div class="line"><span class="lineno"> 1805</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold-Italic font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1806</span> </div>
+<div class="line"><span class="lineno"> 1807</span>      loaded = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1808</span>    }</div>
+<div class="ttc" id="a_gui_8cpp_html_a29523bd69971206d80a3109b7bba0eea"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a></div><div class="ttdeci">#define npiWarn</div><div class="ttdoc">Creates a warning message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00172">Gui.cpp:172</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ab683b79bf2e2ea36a70f70f415c2ec35">initFont()</a>, and <a class="el" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>.</p>
 
@@ -202,6 +204,50 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util_ab683b79bf2e2ea36a70f70f415c2ec35_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ae97b6d07ceae7614045f627d3ee135bd" name="ae97b6d07ceae7614045f627d3ee135bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97b6d07ceae7614045f627d3ee135bd">&#9670;&#160;</a></span>isCompleterPopup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool anonymous_namespace{Gui.cpp}::util::isCompleterPopup </td>
+          <td>(</td>
+          <td class="paramtype">const QWidget *</td>          <td class="paramname"><span class="paramname"><em>widget</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether the widget is a completer popup. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01818">1818</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1819</span>    {</div>
+<div class="line"><span class="lineno"> 1820</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* view = qobject_cast&lt;const QAbstractItemView*&gt;(widget);</div>
+<div class="line"><span class="lineno"> 1821</span>      <span class="keywordflow">if</span>(!view || view-&gt;windowType() != Qt::Popup || !view-&gt;model())</div>
+<div class="line"><span class="lineno"> 1822</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1823</span> </div>
+<div class="line"><span class="lineno"> 1824</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* model = view-&gt;model();</div>
+<div class="line"><span class="lineno"> 1825</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* completer = qobject_cast&lt;const QCompleter*&gt;(model-&gt;parent());</div>
+<div class="line"><span class="lineno"> 1826</span>      <span class="keywordflow">return</span> completer &amp;&amp; completer-&gt;completionModel() == model &amp;&amp; completer-&gt;popup() == view;</div>
+<div class="line"><span class="lineno"> 1827</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#ae97b6d07ceae7614045f627d3ee135bd">isCompleterPopup()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836">anonymous_namespace{Gui.cpp}::GuiStyle::drawControl()</a>, <a class="el" href="#ae97b6d07ceae7614045f627d3ee135bd">isCompleterPopup()</a>, <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903">anonymous_namespace{Gui.cpp}::GuiStyle::polish()</a>, and <a class="el" href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2">anonymous_namespace{Gui.cpp}::GuiStyle::subElementRect()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util_ae97b6d07ceae7614045f627d3ee135bd_cgraph.svg" width="456" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util_ae97b6d07ceae7614045f627d3ee135bd_icgraph.svg" width="100%" height="426"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -223,11 +269,11 @@ Here is the caller graph for this function:</div>
 
 <p>Returns whether Windows uses a dark application theme. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01148">1148</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1149</span>    {</div>
-<div class="line"><span class="lineno"> 1150</span>      QSettings settings{<span class="stringliteral">&quot;HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize&quot;</span>, QSettings::NativeFormat};</div>
-<div class="line"><span class="lineno"> 1151</span>      <span class="keywordflow">return</span> settings.value(<span class="stringliteral">&quot;AppsUseLightTheme&quot;</span>, 1).toInt() == 0;</div>
-<div class="line"><span class="lineno"> 1152</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01811">1811</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1812</span>    {</div>
+<div class="line"><span class="lineno"> 1813</span>      QSettings settings{<span class="stringliteral">&quot;HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize&quot;</span>, QSettings::NativeFormat};</div>
+<div class="line"><span class="lineno"> 1814</span>      <span class="keywordflow">return</span> settings.value(<span class="stringliteral">&quot;AppsUseLightTheme&quot;</span>, 1).toInt() == 0;</div>
+<div class="line"><span class="lineno"> 1815</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a21a700efc0bcd2eeb14cb41c77fa3237">isDarkSystemBackground()</a>.</p>
 

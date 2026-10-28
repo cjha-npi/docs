@@ -1,5 +1,5 @@
 <map id="npi::gui::isDarkBackground" name="npi::gui::isDarkBackground">
-<area shape="rect" id="Node000001" title="Returns whether the effective application background is dark." alt="" coords="5,85,235,110"/>
+<area shape="rect" id="Node000001" title="Returns true for the effective dark background, resolving System as needed." alt="" coords="5,85,235,110"/>
 <area shape="rect" id="Node000002" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="323,29,504,70"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,82,317,65,312,67,199,87"/>
 <area shape="rect" id="Node000004" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237" title="Returns whether Windows uses a dark application theme." alt="" coords="283,118,544,174"/>

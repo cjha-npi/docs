@@ -5,7 +5,7 @@ var searchData=
   ['examples_2',['Examples',['../d6/d8f/dp_dh_doxy_examples.html',1,'Doxygen Examples'],['../da/d86/dp_arch_gui_system.html#dp_arch_gui_system__usage_examples',1,'Usage Examples'],['../d6/d75/dp_arch_log_system.html#dp_arch_log_system__usage_examples',1,'Usage Examples']]],
   ['executable_3',['Executable',['../d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__exe',1,'']]],
   ['exit_20codes_4',['Exit Codes',['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__exit_codes',1,'']]],
-  ['expandable_20details_20section_5',['Expandable Details Section',['../d3/df8/dp_dh_dev_hub_overview.html#autotoc_md8',1,'']]],
+  ['expandable_20details_20section_5',['Expandable Details Section',['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__expandable_details_section',1,'']]],
   ['explorer_20font_6',['Change File Explorer Font',['../d3/d4c/dp_dh_system_setup.html#dp_dh_system_setup__change_file_explorer_font',1,'']]],
   ['extension_20setup_7',['Dox Extension Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'']]],
   ['extensions_8',['Extensions',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__extensions',1,'']]],

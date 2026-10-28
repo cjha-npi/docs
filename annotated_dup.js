@@ -3,7 +3,9 @@ var annotated_dup =
     [ "anonymous_namespace{Gui.cpp}", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html", [
       [ "GuiStyle", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style" ],
       [ "SizeData", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03_d0/d6c/structanonymous__namespace_02_gui_8cpp_03_1_1_size_data_dup" ],
-      [ "ThemeData", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03_df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data_dup" ]
+      [ "TabLabelRects", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#d5/dd0/structanonymous__namespace_02_gui_8cpp_03_1_1_tab_label_rects", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03_d5/dd0/structanonymous__namespace_02_gui_8cpp_03_1_1_tab_label_rects_dup" ],
+      [ "ThemeData", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data", "db/d17/namespaceanonymous__namespace_02_gui_8cpp_03_df/de5/structanonymous__namespace_02_gui_8cpp_03_1_1_theme_data_dup" ],
+      [ "TreeBranchSelection", "de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection.html", "de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection" ]
     ] ],
     [ "anonymous_namespace{Log.cpp}", "dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html", [
       [ "format", "d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html", [

@@ -1,0 +1,15 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::subElementRect" name="anonymous_namespace{Gui::cpp}::GuiStyle::subElementRect">
+<area shape="rect" id="Node000001" title="Adjusts widget layout areas to match the custom drawing." alt="" coords="5,96,467,122"/>
+<area shape="rect" id="Node000002" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ae97b6d07ceae7614045f627d3ee135bd" title="Checks whether the widget is a completer popup." alt="" coords="515,29,768,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="336,94,509,73,504,75,337,99"/>
+<area shape="rect" id="Node000003" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a522da5cd5fcb8339e70f3846e7688333" title="Calculates tab label and button rectangles and the corresponding size&#45;hint adjustment." alt="" coords="527,133,756,189"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="336,119,521,145,516,146,336,125"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="584,28,584,19,594,10,613,5,641,3,681,7,693,13,700,22,695,21,690,17,680,12,641,8,614,10,597,15,588,21,588,31"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="584,132,584,123,594,114,613,109,641,107,681,111,693,117,700,126,695,124,690,121,680,116,641,112,614,114,597,119,588,125,588,135"/>
+<area shape="rect" id="Node000004" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a7efcab075c45b46f12e4c188e008f549" title="Returns the internal padding of Qt&#39;s built&#45;in tab close button, or zero for other widgets." alt="" coords="824,85,1061,141"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="755,140,814,134,819,133,756,146"/>
+<area shape="rect" id="Node000005" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#acd9854c4eed57c2311b5630e024ab0de" title="Returns whether the tab shape uses a left or right tab bar." alt="" coords="816,189,1069,230"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="756,177,811,188,806,188,755,182"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="885,84,885,75,895,66,915,61,943,59,983,63,995,69,1001,78,996,76,991,73,981,68,943,64,916,66,898,71,890,77,889,87"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="888,188,884,180,892,170,912,164,943,162,987,167,998,174,1001,184,997,181,994,177,985,172,943,167,913,170,895,175,889,181,892,191"/>
+</map>

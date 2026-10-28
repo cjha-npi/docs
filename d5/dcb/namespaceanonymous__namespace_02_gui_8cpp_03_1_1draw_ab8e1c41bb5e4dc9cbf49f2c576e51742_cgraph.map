@@ -1,0 +1,19 @@
+<map id="anonymous_namespace{Gui::cpp}::draw::horizontalHeader" name="anonymous_namespace{Gui::cpp}::draw::horizontalHeader">
+<area shape="rect" id="Node000001" title="Draws the complete multi&#45;level horizontal header for tables and trees." alt="" coords="5,186,451,211"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="163,186,150,178,151,172,157,167,183,161,228,159,270,161,296,166,307,175,299,185,296,181,301,175,294,171,269,166,228,164,184,166,159,172,155,174,155,176,169,185"/>
+<area shape="rect" id="Node000002" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a2c9e5102a6510a9da2ce711c0b4271b4" title="Sets grouped&#45;header selection and current&#45;item flags from contained cell ranges." alt="" coords="507,29,760,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,183,365,142,498,95,531,86,526,88,500,100,367,147,262,188"/>
+<area shape="rect" id="Node000003" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ae4e1a27a5d92795f14c96ce014c3d440" title="Uses the current pen to draw the page&#45;facing border across visible header sections." alt="" coords="503,133,764,174"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="343,183,497,168,493,170,344,188"/>
+<area shape="rect" id="Node000004" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a637ddc6612510512a5fa0ff354733165" title="Draws text in a horizontal header, adjusting its position as the section scrolls." alt="" coords="499,222,768,263"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="346,209,493,226,488,228,346,214"/>
+<area shape="rect" id="Node000006" href="$d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a2fb61e5fe2181331b97fea11127600fe" title="Creates a triangular arrow, rounding corners unless its bounds are too small." alt="" coords="503,312,764,352"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="268,209,565,307,561,311,267,214"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="573,28,573,19,584,10,604,5,633,3,675,7,687,13,694,22,689,21,684,17,673,12,633,8,605,10,587,15,578,21,578,31"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="576,132,572,124,581,114,602,108,633,106,679,111,691,118,694,127,690,125,687,121,677,116,633,111,602,114,584,119,577,125,581,134"/>
+<area shape="poly" id="edge8_Node000004_Node000004" title=" " alt="" coords="576,221,572,213,581,203,602,198,633,196,679,201,691,207,694,217,690,214,687,211,677,206,633,201,602,203,584,208,577,214,581,224"/>
+<area shape="rect" id="Node000005" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a8bbe95a2f1005905e2f37e98cc30e28e" title="Draws text with a one&#45;pixel downward adjustment for JetBrains Mono." alt="" coords="816,222,1077,263"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="768,240,811,242,806,243,768,245"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="890,221,885,213,894,203,915,198,947,196,992,201,1004,207,1008,217,1003,214,1000,211,991,206,947,201,916,203,897,208,891,214,894,224"/>
+<area shape="poly" id="edge11_Node000006_Node000006" title=" " alt="" coords="576,310,572,302,581,293,602,287,633,285,679,290,691,296,694,306,690,304,687,300,677,295,633,290,602,292,584,297,577,303,581,313"/>
+</map>

@@ -36,7 +36,7 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", "namespacemembers_dup" ],
-        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Functions", "namespacemembers_func.html", "namespacemembers_func" ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ]
@@ -69,13 +69,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d92/classanonymous__namespace_02_log_8cpp_03_1_1_category_cache.html",
-"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a307e2c83a2d4ef7c35f8563d955d4723",
-"d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a9cb23705448f22ebaae1b612298414b4",
-"d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a4af6f8f6c4383deac6c809f4be7d6972",
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d2/def/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_file_worker",
-"db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html",
-"df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a71fe7b9ac5c5410274b7d85542fdfd66"
+"d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f",
+"d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a57d6b24dc1a39d73983a73fd8afbd2b6",
+"d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aa7871054993cf2abe2fe689ba7eb7010",
+"d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a1f992a65588c1657e2594f1862c730b6",
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config",
+"da/d86/dp_arch_gui_system.html#dp_arch_gui_system__bug_font_CacheOverflowException",
+"dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#ae204827857b644ff1eab9815324d71dc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

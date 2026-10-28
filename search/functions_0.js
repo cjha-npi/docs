@@ -36,12 +36,12 @@ var searchData=
   ['applyconfig_5f_33',['applyConfig_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ac8f2c42a07ec230698c80ce66ffce7cf',1,'npi::wid::ColorPicker']]],
   ['applydesign_5f_34',['applyDesign_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4e1a328e1c85ff8e5392a65386ff330b',1,'npi::wid::ColorPicker']]],
   ['applyfontstyle_5f_35',['applyFontStyle_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a4a49eb8ae07c6b583fbc33cb52d248ba',1,'npi::wid::ColorPicker']]],
-  ['applyspecvalue_5f_36',['applySpecValue_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aab16386d705fbf03ed517b68e3a28e54',1,'npi::wid::ColorPicker']]],
-  ['applytheme_5f_37',['applyTheme_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
-  ['applyviewitem_38',['applyViewItem',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202',1,'anonymous_namespace{Gui.cpp}::item']]],
-  ['applyviewitemtree_39',['applyViewItemTree',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13',1,'anonymous_namespace{Gui.cpp}::item']]],
-  ['applywidlayout_5f_40',['applyWidLayout_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a24751279f07b9f5e77bd2e83f2753f31',1,'npi::wid::ColorPicker']]],
-  ['appprogramdatadir_41',['appProgramDataDir',['../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544',1,'npi::app']]],
-  ['apppublicdocumentsdir_42',['appPublicDocumentsDir',['../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542',1,'npi::app']]],
-  ['autowidthsameasheight_5f_43',['autoWidthSameAsHeight_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]]
+  ['applyheaderstate_36',['applyHeaderState',['../d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#a2c9e5102a6510a9da2ce711c0b4271b4',1,'anonymous_namespace{Gui.cpp}::draw']]],
+  ['applyspecvalue_5f_37',['applySpecValue_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aab16386d705fbf03ed517b68e3a28e54',1,'npi::wid::ColorPicker']]],
+  ['applytheme_5f_38',['applyTheme_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
+  ['applyviewitem_39',['applyViewItem',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202',1,'anonymous_namespace{Gui.cpp}::item']]],
+  ['applyviewitemtree_40',['applyViewItemTree',['../dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#afe1c223ba11330b3f9ee830b8a28df13',1,'anonymous_namespace{Gui.cpp}::item']]],
+  ['applywidlayout_5f_41',['applyWidLayout_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#a24751279f07b9f5e77bd2e83f2753f31',1,'npi::wid::ColorPicker']]],
+  ['appprogramdatadir_42',['appProgramDataDir',['../dc/dba/namespacenpi_1_1app.html#a40a2a28831f2f410c995f0657baf6544',1,'npi::app']]],
+  ['apppublicdocumentsdir_43',['appPublicDocumentsDir',['../dc/dba/namespacenpi_1_1app.html#aff4c7482e4417f59ede04e359548a542',1,'npi::app']]]
 ];

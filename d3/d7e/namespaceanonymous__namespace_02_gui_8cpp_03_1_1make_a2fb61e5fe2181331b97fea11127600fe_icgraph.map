@@ -1,8 +1,13 @@
 <map id="anonymous_namespace{Gui::cpp}::make::roundedArrow" name="anonymous_namespace{Gui::cpp}::make::roundedArrow">
-<area shape="rect" id="Node000001" title="Creates a triangular arrow with rounded corners." alt="" coords="235,60,648,86"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="500,54,503,50,496,45,476,41,441,39,404,41,383,46,380,51,391,61,386,60,374,52,380,42,403,36,441,34,476,35,499,40,509,49,503,59"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Customizes spin boxes, scrollbars and tool buttons." alt="" coords="5,5,187,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,61,187,46,186,41,324,58"/>
-<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="5,85,187,141"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="319,88,187,105,186,100,324,86"/>
+<area shape="rect" id="Node000001" title="Creates a triangular arrow, rounding corners unless its bounds are too small." alt="" coords="757,38,1171,63"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="1028,32,1032,27,1025,22,1002,18,964,16,923,18,901,24,896,29,909,38,904,37,891,30,897,19,922,13,964,11,1002,13,1027,18,1037,26,1030,37"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="769,38,516,29,375,26,235,28,187,30,186,25,235,23,375,21,516,23,774,37"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,37,416,93"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="747,57,416,66,415,60,752,54"/>
+<area shape="rect" id="Node000004" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#ab8e1c41bb5e4dc9cbf49f2c576e51742" title="Draws the complete multi&#45;level horizontal header for tables and trees." alt="" coords="464,112,709,168"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="904,65,705,115,704,109,899,65"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="225,52,187,48,186,43,230,51"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="478,110,416,94,416,88,484,110"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="633,103,629,100,620,95,587,91,563,93,548,98,541,104,541,114,537,110,536,102,545,93,562,87,587,85,621,90,632,96,638,105"/>
 </map>

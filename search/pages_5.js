@@ -12,6 +12,6 @@ var searchData=
   ['font_20cacheoverflowexception_9',['Font CacheOverflowException',['../da/d86/dp_arch_gui_system.html#dp_arch_gui_system__bug_font_CacheOverflowException',1,'Bug: Font CacheOverflowException'],['../de/da5/bug.html#_bug000001',1,'Bug: Font CacheOverflowException']]],
   ['fonts_10',['Application Fonts',['../da/d86/dp_arch_gui_system.html#dp_arch_gui_system__app_fonts',1,'']]],
   ['footer_20html_11',['Footer HTML',['../df/da8/dp_dh_doxy_html_files.html#dp_dh_doxy_html_files__foot',1,'']]],
-  ['force_20new_20line_12',['Force New Line',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_new_line',1,'']]],
-  ['force_20visual_20indent_13',['Force Visual Indent',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__force_visual_indent',1,'']]]
+  ['force_20new_20line_12',['Force New Line',['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__force_new_line',1,'']]],
+  ['force_20visual_20indent_13',['Force Visual Indent',['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__force_visual_indent',1,'']]]
 ];

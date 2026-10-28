@@ -47,9 +47,9 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 758;
+var viewWidth = 930;
 var viewHeight = 222;
-var sectionId = 'dynsection-3';
+var sectionId = 'dynsection-5';
 </script>
 <script type="application/ecmascript" xlink:href="../../svg.min.js"/>
 <svg id="graph" class="graph">
@@ -59,17 +59,17 @@ var sectionId = 'dynsection-3';
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="Returns whether Windows uses a dark application theme.">
-<polygon fill="#999999" stroke="none" points="750,-74.25 380,-74.25 380,-55 750,-55 750,-74.25"/>
-<text xml:space="preserve" text-anchor="start" x="388" y="-60.8" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::util::isDarkSystemBackground</text>
+<polygon fill="#999999" stroke="none" points="922,-74.25 552,-74.25 552,-55 922,-55 922,-74.25"/>
+<text xml:space="preserve" text-anchor="start" x="560" y="-60.8" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::util::isDarkSystemBackground</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node1 -->
-<g id="edge6_Node000001_Node000001" class="edge">
+<g id="edge7_Node000001_Node000001" class="edge">
 <title>Node1&#45;&gt;Node1</title>
-<g id="a_edge6_Node000001_Node000001"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M617.53,-76.57C632.23,-84.52 614.72,-92.25 565,-92.25 510.14,-92.25 494.49,-82.84 518.07,-74.11"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="613.05,-74.6 618.53,-74.56 614.22,-75.12 617.63,-76.62 617.63,-76.62 617.63,-76.62 614.22,-75.12 616.72,-78.67 613.05,-74.6"/>
+<g id="a_edge7_Node000001_Node000001"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M789.53,-76.57C804.23,-84.52 786.72,-92.25 737,-92.25 682.14,-92.25 666.49,-82.84 690.07,-74.11"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="785.05,-74.6 790.53,-74.56 786.22,-75.12 789.63,-76.62 789.63,-76.62 789.63,-76.62 786.22,-75.12 788.72,-78.67 785.05,-74.6"/>
 </a>
 </g>
 </g>
@@ -77,10 +77,10 @@ var sectionId = 'dynsection-3';
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8" target="_top" xlink:title="Applies the selected theme and refreshes palettes and dynamic icons.">
-<polygon fill="white" stroke="none" points="326,-153.5 190,-153.5 190,-111.75 326,-111.75 326,-153.5"/>
-<text xml:space="preserve" text-anchor="start" x="198" y="-139.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="start" x="198" y="-127.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
-<text xml:space="preserve" text-anchor="middle" x="258" y="-116.55" font-family="Consolas" font-size="11.00">::applyTheme_</text>
+<polygon fill="white" stroke="none" points="498,-153.5 362,-153.5 362,-111.75 498,-111.75 498,-153.5"/>
+<text xml:space="preserve" text-anchor="start" x="370" y="-139.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
+<text xml:space="preserve" text-anchor="start" x="370" y="-127.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
+<text xml:space="preserve" text-anchor="middle" x="430" y="-116.55" font-family="Consolas" font-size="11.00">::applyTheme_</text>
 </a>
 </g>
 </g>
@@ -88,53 +88,35 @@ var sectionId = 'dynsection-3';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M515.16,-75.51C463.94,-86.93 383.1,-104.96 325.95,-117.7"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="519.76,-74.49 515.37,-77.77 518.51,-74.77 514.88,-75.58 514.88,-75.58 514.88,-75.58 518.51,-74.77 514.39,-73.38 519.76,-74.49"/>
-</a>
-</g>
-</g>
-<!-- Node6 -->
-<g id="Node000006" class="node">
-<title>Node6</title>
-<g id="a_Node000006"><a xlink:href="../../d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4" target="_top" xlink:title="Returns whether the effective application background is dark.">
-<polygon fill="white" stroke="none" points="344,-93.25 172,-93.25 172,-74 344,-74 344,-93.25"/>
-<text xml:space="preserve" text-anchor="middle" x="258" y="-78.8" font-family="Consolas" font-size="11.00">npi::gui::isDarkBackground</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node6 -->
-<g id="edge5_Node000001_Node000006" class="edge">
-<title>Node1&#45;&gt;Node6</title>
-<g id="a_edge5_Node000001_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M403.58,-74.62C382.9,-75.91 362.41,-77.18 343.64,-78.35"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="408.5,-74.31 403.65,-76.87 407.22,-74.39 403.51,-74.62 403.51,-74.62 403.51,-74.62 407.22,-74.39 403.37,-72.38 408.5,-74.31"/>
+<path fill="none" stroke="#63b8ff" d="M687.16,-75.51C635.94,-86.93 555.1,-104.96 497.95,-117.7"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="691.76,-74.49 687.37,-77.77 690.51,-74.77 686.88,-75.58 686.88,-75.58 686.88,-75.58 690.51,-74.77 686.39,-73.38 691.76,-74.49"/>
 </a>
 </g>
 </g>
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55" target="_top" xlink:title="Returns the GUI palette for the effective application background.">
-<polygon fill="white" stroke="none" points="317,-56.25 199,-56.25 199,-37 317,-37 317,-56.25"/>
-<text xml:space="preserve" text-anchor="middle" x="258" y="-41.8" font-family="Consolas" font-size="11.00">npi::gui::palette</text>
+<g id="a_Node000007"><a xlink:href="../../d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4" target="_top" xlink:title="Returns true for the effective dark background, resolving System as needed.">
+<polygon fill="white" stroke="none" points="516,-93.25 344,-93.25 344,-74 516,-74 516,-93.25"/>
+<text xml:space="preserve" text-anchor="middle" x="430" y="-78.8" font-family="Consolas" font-size="11.00">npi::gui::isDarkBackground</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
-<g id="edge7_Node000001_Node000007" class="edge">
+<g id="edge6_Node000001_Node000007" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<g id="a_edge7_Node000001_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M395.22,-54.66C367.08,-53 339.68,-51.39 316.93,-50.04"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="400.01,-54.95 394.89,-56.9 398.74,-54.87 395.02,-54.65 395.02,-54.65 395.02,-54.65 398.74,-54.87 395.16,-52.41 400.01,-54.95"/>
+<g id="a_edge6_Node000001_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M575.58,-74.62C554.9,-75.91 534.41,-77.18 515.64,-78.35"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="580.5,-74.31 575.65,-76.87 579.22,-74.39 575.51,-74.62 575.51,-74.62 575.51,-74.62 579.22,-74.39 575.37,-72.38 580.5,-74.31"/>
 </a>
 </g>
 </g>
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="../../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" target="_top" xlink:title="Returns the surface colors for the effective application background.">
-<polygon fill="white" stroke="none" points="320,-19.25 196,-19.25 196,0 320,0 320,-19.25"/>
-<text xml:space="preserve" text-anchor="middle" x="258" y="-4.8" font-family="Consolas" font-size="11.00">npi::gui::surfaces</text>
+<g id="a_Node000008"><a xlink:href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55" target="_top" xlink:title="Returns a copy of the effective GUI theme palette.">
+<polygon fill="white" stroke="none" points="489,-56.25 371,-56.25 371,-37 489,-37 489,-56.25"/>
+<text xml:space="preserve" text-anchor="middle" x="430" y="-41.8" font-family="Consolas" font-size="11.00">npi::gui::palette</text>
 </a>
 </g>
 </g>
@@ -142,19 +124,37 @@ var sectionId = 'dynsection-3';
 <g id="edge8_Node000001_Node000008" class="edge">
 <title>Node1&#45;&gt;Node8</title>
 <g id="a_edge8_Node000001_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M504.88,-53.96C449.06,-43.9 366.11,-28.94 312.28,-19.23"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="509.67,-54.83 504.35,-56.16 508.41,-54.6 504.75,-53.94 504.75,-53.94 504.75,-53.94 508.41,-54.6 505.15,-51.73 509.67,-54.83"/>
+<path fill="none" stroke="#63b8ff" d="M567.22,-54.66C539.08,-53 511.68,-51.39 488.93,-50.04"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="572.01,-54.95 566.89,-56.9 570.74,-54.87 567.02,-54.65 567.02,-54.65 567.02,-54.65 570.74,-54.87 567.16,-52.41 572.01,-54.95"/>
+</a>
+</g>
+</g>
+<!-- Node9 -->
+<g id="Node000009" class="node">
+<title>Node9</title>
+<g id="a_Node000009"><a xlink:href="../../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" target="_top" xlink:title="Returns a copy of the effective background&#39;s surface colors.">
+<polygon fill="white" stroke="none" points="492,-19.25 368,-19.25 368,0 492,0 492,-19.25"/>
+<text xml:space="preserve" text-anchor="middle" x="430" y="-4.8" font-family="Consolas" font-size="11.00">npi::gui::surfaces</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node9 -->
+<g id="edge9_Node000001_Node000009" class="edge">
+<title>Node1&#45;&gt;Node9</title>
+<g id="a_edge9_Node000001_Node000009"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M676.88,-53.96C621.06,-43.9 538.11,-28.94 484.28,-19.23"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="681.67,-54.83 676.35,-56.16 680.41,-54.6 676.75,-53.94 676.75,-53.94 676.75,-53.94 680.41,-54.6 677.15,-51.73 681.67,-54.83"/>
 </a>
 </g>
 </g>
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf" target="_top" xlink:title="Applies the initial theme and sets up the application icon and native event filter.">
-<polygon fill="white" stroke="none" points="136,-213.5 0,-213.5 0,-171.75 136,-171.75 136,-213.5"/>
-<text xml:space="preserve" text-anchor="start" x="8" y="-199.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="start" x="8" y="-187.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
-<text xml:space="preserve" text-anchor="middle" x="68" y="-176.55" font-family="Consolas" font-size="11.00">::init_</text>
+<g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf" target="_top" xlink:title="Applies the initial theme, sets the application icon and starts watching system changes.">
+<polygon fill="white" stroke="none" points="308,-213.5 172,-213.5 172,-171.75 308,-171.75 308,-213.5"/>
+<text xml:space="preserve" text-anchor="start" x="180" y="-199.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
+<text xml:space="preserve" text-anchor="start" x="180" y="-187.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
+<text xml:space="preserve" text-anchor="middle" x="240" y="-176.55" font-family="Consolas" font-size="11.00">::init_</text>
 </a>
 </g>
 </g>
@@ -162,19 +162,19 @@ var sectionId = 'dynsection-3';
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M186.04,-155.27C168.99,-160.71 150.87,-166.5 134.11,-171.85"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="190.61,-153.81 186.53,-157.48 189.39,-154.2 185.85,-155.33 185.85,-155.33 185.85,-155.33 189.39,-154.2 185.17,-153.19 190.61,-153.81"/>
+<path fill="none" stroke="#63b8ff" d="M358.04,-155.27C340.99,-160.71 322.87,-166.5 306.11,-171.85"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="362.61,-153.81 358.53,-157.48 361.39,-154.2 357.85,-155.33 357.85,-155.33 357.85,-155.33 361.39,-154.2 357.17,-153.19 362.61,-153.81"/>
 </a>
 </g>
 </g>
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" target="_top" xlink:title="Updates the application theme when Windows changes and System mode is selected.">
-<polygon fill="white" stroke="none" points="136,-153.5 0,-153.5 0,-111.75 136,-111.75 136,-153.5"/>
-<text xml:space="preserve" text-anchor="start" x="8" y="-139.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="start" x="8" y="-127.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
-<text xml:space="preserve" text-anchor="middle" x="68" y="-116.55" font-family="Consolas" font-size="11.00">::nativeEventFilter</text>
+<g id="a_Node000004"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" target="_top" xlink:title="Refreshes the application theme when Windows theme settings change in System mode.">
+<polygon fill="white" stroke="none" points="308,-153.5 172,-153.5 172,-111.75 308,-111.75 308,-153.5"/>
+<text xml:space="preserve" text-anchor="start" x="180" y="-139.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
+<text xml:space="preserve" text-anchor="start" x="180" y="-127.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
+<text xml:space="preserve" text-anchor="middle" x="240" y="-116.55" font-family="Consolas" font-size="11.00">::nativeEventFilter</text>
 </a>
 </g>
 </g>
@@ -182,19 +182,19 @@ var sectionId = 'dynsection-3';
 <g id="edge3_Node000002_Node000004" class="edge">
 <title>Node2&#45;&gt;Node4</title>
 <g id="a_edge3_Node000002_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M184.36,-132.62C168.42,-132.62 151.61,-132.62 135.91,-132.62"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="188.97,-132.63 183.97,-134.88 187.69,-132.63 183.97,-132.63 183.97,-132.63 183.97,-132.63 187.69,-132.63 183.97,-130.38 188.97,-132.63"/>
+<path fill="none" stroke="#63b8ff" d="M356.36,-132.62C340.42,-132.62 323.61,-132.62 307.91,-132.62"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="360.97,-132.63 355.97,-134.88 359.69,-132.63 355.97,-132.63 355.97,-132.63 355.97,-132.63 359.69,-132.63 355.97,-130.38 360.97,-132.63"/>
 </a>
 </g>
 </g>
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" target="_top" xlink:title="Sets the requested application theme.">
-<polygon fill="white" stroke="none" points="136,-93.5 0,-93.5 0,-51.75 136,-51.75 136,-93.5"/>
-<text xml:space="preserve" text-anchor="start" x="8" y="-79.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
-<text xml:space="preserve" text-anchor="start" x="8" y="-67.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
-<text xml:space="preserve" text-anchor="middle" x="68" y="-56.55" font-family="Consolas" font-size="11.00">::setTheme_</text>
+<g id="a_Node000005"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" target="_top" xlink:title="Changes the application theme and updates the shared actions.">
+<polygon fill="white" stroke="none" points="308,-93.5 172,-93.5 172,-51.75 308,-51.75 308,-93.5"/>
+<text xml:space="preserve" text-anchor="start" x="180" y="-79.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
+<text xml:space="preserve" text-anchor="start" x="180" y="-67.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
+<text xml:space="preserve" text-anchor="middle" x="240" y="-56.55" font-family="Consolas" font-size="11.00">::setTheme_</text>
 </a>
 </g>
 </g>
@@ -202,8 +202,28 @@ var sectionId = 'dynsection-3';
 <g id="edge4_Node000002_Node000005" class="edge">
 <title>Node2&#45;&gt;Node5</title>
 <g id="a_edge4_Node000002_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M186.04,-109.98C168.99,-104.54 150.87,-98.75 134.11,-93.4"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="190.61,-111.44 185.17,-112.06 189.39,-111.05 185.85,-109.92 185.85,-109.92 185.85,-109.92 189.39,-111.05 186.53,-107.77 190.61,-111.44"/>
+<path fill="none" stroke="#63b8ff" d="M358.04,-109.98C340.99,-104.54 322.87,-98.75 306.11,-93.4"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="362.61,-111.44 357.17,-112.06 361.39,-111.05 357.85,-109.92 357.85,-109.92 357.85,-109.92 361.39,-111.05 358.53,-107.77 362.61,-111.44"/>
+</a>
+</g>
+</g>
+<!-- Node6 -->
+<g id="Node000006" class="node">
+<title>Node6</title>
+<g id="a_Node000006"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662" target="_top" xlink:title="Sets up the style, theme resources and shared theme actions.">
+<polygon fill="white" stroke="none" points="136,-93.5 0,-93.5 0,-51.75 136,-51.75 136,-93.5"/>
+<text xml:space="preserve" text-anchor="start" x="8" y="-79.05" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
+<text xml:space="preserve" text-anchor="start" x="8" y="-67.8" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
+<text xml:space="preserve" text-anchor="middle" x="68" y="-56.55" font-family="Consolas" font-size="11.00">::GuiStyle</text>
+</a>
+</g>
+</g>
+<!-- Node5&#45;&gt;Node6 -->
+<g id="edge5_Node000005_Node000006" class="edge">
+<title>Node5&#45;&gt;Node6</title>
+<g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M166.36,-72.62C156.21,-72.62 145.82,-72.62 135.79,-72.62"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="171.08,-72.63 166.08,-74.88 169.8,-72.63 166.08,-72.63 166.08,-72.63 166.08,-72.63 169.8,-72.63 166.08,-70.38 171.08,-72.63"/>
 </a>
 </g>
 </g>

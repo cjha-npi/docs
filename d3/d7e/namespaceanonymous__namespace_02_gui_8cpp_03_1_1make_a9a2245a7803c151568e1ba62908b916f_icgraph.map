@@ -1,6 +1,8 @@
 <map id="anonymous_namespace{Gui::cpp}::make::themeText" name="anonymous_namespace{Gui::cpp}::make::themeText">
-<area shape="rect" id="Node000001" title="Returns the theme name for logging." alt="" coords="235,29,624,55"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="486,23,489,19,482,14,462,10,429,8,393,10,374,15,370,20,381,30,376,29,365,21,370,11,392,5,429,3,463,4,485,9,494,18,489,28"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Sets the requested application theme." alt="" coords="5,14,187,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,42,187,45,186,40,229,42"/>
+<area shape="rect" id="Node000001" title="Returns the theme name for logging." alt="" coords="464,29,853,55"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="715,23,718,19,712,14,692,10,659,8,622,10,603,15,599,20,610,30,605,29,594,21,600,11,622,5,659,3,692,4,714,9,724,18,718,28"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Changes the application theme and updates the shared actions." alt="" coords="235,14,416,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="453,42,416,45,416,40,459,42"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662" title="Sets up the style, theme resources and shared theme actions." alt="" coords="5,14,187,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,42,187,45,186,40,230,42"/>
 </map>

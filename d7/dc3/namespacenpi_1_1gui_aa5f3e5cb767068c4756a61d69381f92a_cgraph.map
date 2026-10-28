@@ -1,5 +1,5 @@
 <map id="npi::gui::surfaces" name="npi::gui::surfaces">
-<area shape="rect" id="Node000001" title="Returns the surface colors for the effective application background." alt="" coords="5,133,171,158"/>
+<area shape="rect" id="Node000001" title="Returns a copy of the effective background&#39;s surface colors." alt="" coords="5,133,171,158"/>
 <area shape="rect" id="Node000002" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="259,29,440,70"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,131,158,105,218,79,254,70,249,73,220,84,161,110,113,135"/>
 <area shape="rect" id="Node000004" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237" title="Returns whether Windows uses a dark application theme." alt="" coords="219,118,480,174"/>

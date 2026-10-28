@@ -138,21 +138,21 @@ $(function(){initNavTree('d7/dc3/namespacenpi_1_1gui.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
-<div class="textblock"><p>Configuration and control of application's graphical user interface. </p>
+<div class="textblock"><p>Configuration and control of the application's graphical user interface. </p>
 <p>Provides the public interface for querying and controlling the application GUI, including theme selection, theme colors and special widget dynamic properties.</p>
-<dl class="section user"><dt>Initialization</dt><dd>The GUI structure is initialized automatically through either <span class="tt">QApplication::exec()</span> or a call to any of the functions inside this namespace, whichever happens earlier, provided that the <span class="tt">QApplication</span> object exists and shutdown has not begun.</dd></dl>
-<p>The preferred approach is to call <span class="tt">QCoreApplication::processEvents();</span> immediately after <span class="tt">QApplication</span> object construction in <span class="tt"><a class="el" href="../../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></span>, before creating any widgets. This processes deferred initialization for the GUI and other application structures. This way GUI is initialized before any widgets are created.</p>
+<dl class="section user"><dt>Initialization</dt><dd>GUI initialization is scheduled during application startup and runs when events are first processed, through <span class="tt">QApplication::exec()</span> or an explicit <span class="tt">QCoreApplication::processEvents()</span> call. Calling any function declared in this namespace also initializes the GUI if initialization is permitted. Initialization requires a fully constructed <span class="tt">QApplication</span> and does not occur after application shutdown has begun.</dd></dl>
+<p>The preferred application startup sequence is to call <span class="tt">QCoreApplication::processEvents()</span> immediately after constructing <span class="tt">QApplication</span> in <span class="tt"><a class="el" href="../../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></span>, before creating widgets. This processes the deferred GUI initialization and any other pending startup events.</p>
 <dl class="section note"><dt>Note</dt><dd><ul>
-<li>Do not extend this namespace beyond this <span class="tt"><a class="el" href="../../d1/d67/_gui_8h.html" title="Configuration and control of application&#39;s graphical user interface.">Gui.h</a></span> file.</li>
-<li>Usage of this namespace should be only through GUI thread.</li>
-<li>This namespace requires <span class="tt">QApplication</span> instance to exist. </li>
+<li>Use this interface from the GUI thread.</li>
+<li>Normal use requires a <span class="tt">QApplication</span>. Individual functions document their fallback behavior when no application exists or shutdown has begun.</li>
 </ul>
 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Do not extend this namespace beyond <span class="tt"><a class="el" href="../../d1/d67/_gui_8h.html" title="Configuration and control of the application&#39;s graphical user interface.">Gui.h</a></span> file. </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Props" id="r_Props"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html">Props</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic property names for specialized GUI behavior.  <a href="../../d6/d46/structnpi_1_1gui_1_1_props.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic property names for specialized widget behavior.  <a href="../../d6/d46/structnpi_1_1gui_1_1_props.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Surfaces_5Fd0_2Fdae_2Fstructnpi_5F1_5F1gui_5F1_5F1_5Fsurfaces" id="r_Surfaces_5Fd0_2Fdae_2Fstructnpi_5F1_5F1gui_5F1_5F1_5Fsurfaces"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="#d0/dae/structnpi_1_1gui_1_1_surfaces">Surfaces</a></td></tr>
 <tr class="memdesc:d0/dae/structnpi_1_1gui_1_1_surfaces"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background colors for the GUI's three surface levels.  <a href="#d0/dae/structnpi_1_1gui_1_1_surfaces">More...</a><br /></td></tr>
 </table><table class="memberdecls">
@@ -167,19 +167,21 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab0432af80db64f065a922a7dde8adfe4" id="r_ab0432af80db64f065a922a7dde8adfe4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab0432af80db64f065a922a7dde8adfe4">isDarkBackground</a> ()</td></tr>
-<tr class="memdesc:ab0432af80db64f065a922a7dde8adfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the effective application background is dark.  <br /></td></tr>
+<tr class="memdesc:ab0432af80db64f065a922a7dde8adfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true for the effective dark background, resolving System as needed.  <br /></td></tr>
 <tr class="memitem:a4ccc0e83064b03b6b32774d31c9f8b55" id="r_a4ccc0e83064b03b6b32774d31c9f8b55"><td class="memItemLeft">QPalette&#160;</td><td class="memItemRight"><a class="el" href="#a4ccc0e83064b03b6b32774d31c9f8b55">palette</a> ()</td></tr>
-<tr class="memdesc:a4ccc0e83064b03b6b32774d31c9f8b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the GUI palette for the effective application background.  <br /></td></tr>
+<tr class="memdesc:a4ccc0e83064b03b6b32774d31c9f8b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the effective GUI theme palette.  <br /></td></tr>
 <tr class="memitem:aecb45b4cd90ee26df188918de86b3f47" id="r_aecb45b4cd90ee26df188918de86b3f47"><td class="memItemLeft">QPalette&#160;</td><td class="memItemRight"><a class="el" href="#aecb45b4cd90ee26df188918de86b3f47">palette</a> (bool darkBackground)</td></tr>
-<tr class="memdesc:aecb45b4cd90ee26df188918de86b3f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the GUI palette for an explicitly selected dark/light background.  <br /></td></tr>
+<tr class="memdesc:aecb45b4cd90ee26df188918de86b3f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the GUI palette for an explicit background without selecting a theme.  <br /></td></tr>
 <tr class="memitem:a02b9d4b0a58267b196aecdda9ef45051" id="r_a02b9d4b0a58267b196aecdda9ef45051"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02b9d4b0a58267b196aecdda9ef45051">setTheme</a> (<a class="el" href="#ad3129346e88e3d6a398365cb0671ce3e">Theme</a> <a class="el" href="#a77381db9d58d5f6a136ebcefcc481bea">theme</a>)</td></tr>
-<tr class="memdesc:a02b9d4b0a58267b196aecdda9ef45051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the application theme.  <br /></td></tr>
+<tr class="memdesc:a02b9d4b0a58267b196aecdda9ef45051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets Dark, Light or System and synchronizes the shared theme actions.  <br /></td></tr>
 <tr class="memitem:aa5f3e5cb767068c4756a61d69381f92a" id="r_aa5f3e5cb767068c4756a61d69381f92a"><td class="memItemLeft"><a class="el" href="#d0/dae/structnpi_1_1gui_1_1_surfaces">Surfaces</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa5f3e5cb767068c4756a61d69381f92a">surfaces</a> ()</td></tr>
-<tr class="memdesc:aa5f3e5cb767068c4756a61d69381f92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the surface colors for the effective application background.  <br /></td></tr>
+<tr class="memdesc:aa5f3e5cb767068c4756a61d69381f92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the effective background's surface colors.  <br /></td></tr>
 <tr class="memitem:a2f06c690ee254cb3bccc0476f670a8dc" id="r_a2f06c690ee254cb3bccc0476f670a8dc"><td class="memItemLeft"><a class="el" href="#d0/dae/structnpi_1_1gui_1_1_surfaces">Surfaces</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2f06c690ee254cb3bccc0476f670a8dc">surfaces</a> (bool darkBackground)</td></tr>
-<tr class="memdesc:a2f06c690ee254cb3bccc0476f670a8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns surface colors for an explicitly selected dark/light background.  <br /></td></tr>
+<tr class="memdesc:a2f06c690ee254cb3bccc0476f670a8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns surface colors for an explicit background without selecting a theme.  <br /></td></tr>
 <tr class="memitem:a77381db9d58d5f6a136ebcefcc481bea" id="r_a77381db9d58d5f6a136ebcefcc481bea"><td class="memItemLeft"><a class="el" href="#ad3129346e88e3d6a398365cb0671ce3e">Theme</a>&#160;</td><td class="memItemRight"><a class="el" href="#a77381db9d58d5f6a136ebcefcc481bea">theme</a> ()</td></tr>
-<tr class="memdesc:a77381db9d58d5f6a136ebcefcc481bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the configured application theme.  <br /></td></tr>
+<tr class="memdesc:a77381db9d58d5f6a136ebcefcc481bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the configured theme; System remains System regardless of background.  <br /></td></tr>
+<tr class="memitem:a64de26ba60a343fcf6c9cf785a45f495" id="r_a64de26ba60a343fcf6c9cf785a45f495"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#a64de26ba60a343fcf6c9cf785a45f495">themeAction</a> (<a class="el" href="#ad3129346e88e3d6a398365cb0671ce3e">Theme</a> <a class="el" href="#a77381db9d58d5f6a136ebcefcc481bea">theme</a>)</td></tr>
+<tr class="memdesc:a64de26ba60a343fcf6c9cf785a45f495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shared checkable action for selecting a theme.  <br /></td></tr>
 </table>
 <hr/><h2 id="header-inline_5Fclasses" class="groupheader">Class Documentation</h2>
 <a name="d0/dae/structnpi_1_1gui_1_1_surfaces" id="d0/dae/structnpi_1_1gui_1_1_surfaces"></a>
@@ -253,15 +255,15 @@ Recessed surface background. </td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00244">244</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  244</span>                   : std::uint8_t {</div>
-<div class="line"><span class="lineno">  245</span>    <a class="code hl_enumvalue" href="#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2">Dark</a>,  <span class="comment">///&lt; Always use the dark theme.</span></div>
-<div class="line"><span class="lineno">  246</span>    <a class="code hl_enumvalue" href="#ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82">Light</a>, <span class="comment">///&lt; Always use the light theme.</span></div>
-<div class="line"><span class="lineno">  247</span>    <a class="code hl_enumvalue" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a> <span class="comment">///&lt; Follow the Windows application theme.</span></div>
-<div class="line"><span class="lineno">  248</span>  };</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82"><div class="ttname"><a href="#ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82">npi::gui::Theme::Light</a></div><div class="ttdeci">@ Light</div><div class="ttdoc">Always use the light theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00246">Gui.h:246</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2"><div class="ttname"><a href="#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2">npi::gui::Theme::Dark</a></div><div class="ttdeci">@ Dark</div><div class="ttdoc">Always use the dark theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00245">Gui.h:245</a></div></div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a"><div class="ttname"><a href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">npi::gui::Theme::System</a></div><div class="ttdeci">@ System</div><div class="ttdoc">Follow the Windows application theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00247">Gui.h:247</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d67/_gui_8h_source.html#l00190">190</a> of file <a class="el" href="../../d1/d67/_gui_8h_source.html">Gui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>                   : std::uint8_t {</div>
+<div class="line"><span class="lineno">  191</span>    <a class="code hl_enumvalue" href="#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2">Dark</a>, <span class="comment">///&lt; Always use the dark theme.</span></div>
+<div class="line"><span class="lineno">  192</span>    <a class="code hl_enumvalue" href="#ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82">Light</a>, <span class="comment">///&lt; Always use the light theme.</span></div>
+<div class="line"><span class="lineno">  193</span>    <a class="code hl_enumvalue" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a> <span class="comment">///&lt; Follow the Windows application theme.</span></div>
+<div class="line"><span class="lineno">  194</span>  };</div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82"><div class="ttname"><a href="#ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82">npi::gui::Theme::Light</a></div><div class="ttdeci">@ Light</div><div class="ttdoc">Always use the light theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00192">Gui.h:192</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2"><div class="ttname"><a href="#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2">npi::gui::Theme::Dark</a></div><div class="ttdeci">@ Dark</div><div class="ttdoc">Always use the dark theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00191">Gui.h:191</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a"><div class="ttname"><a href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">npi::gui::Theme::System</a></div><div class="ttdeci">@ System</div><div class="ttdoc">Follow the Windows application theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00193">Gui.h:193</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,17 +283,16 @@ Recessed surface background. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns whether the effective application background is dark. </p>
-<p>Resolves <a class="el" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a" title="Follow the Windows application theme.">Theme::System</a> to the current Windows application theme. </p><dl class="section return"><dt>Returns</dt><dd>true for a dark background; false for a light background.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If QApplication does not exist or shutdown has begun, queries the Windows application theme instead. </dd></dl>
+<p>Returns true for the effective dark background, resolving System as needed. </p>
+<dl class="section note"><dt>Note</dt><dd>Without <span class="tt">QApplication</span> or during shutdown, queries the Windows setting. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03787">3787</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3788</span>{</div>
-<div class="line"><span class="lineno"> 3789</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
-<div class="line"><span class="lineno"> 3790</span>    <span class="keywordflow">return</span> gStyle-&gt;isDarkBackground_();</div>
-<div class="line"><span class="lineno"> 3791</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">util::isDarkSystemBackground</a>();</div>
-<div class="line"><span class="lineno"> 3792</span>}</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1util_html_a21a700efc0bcd2eeb14cb41c77fa3237"><div class="ttname"><a href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">anonymous_namespace{Gui.cpp}::util::isDarkSystemBackground</a></div><div class="ttdeci">bool isDarkSystemBackground()</div><div class="ttdoc">Returns whether Windows uses a dark application theme.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01148">Gui.cpp:1148</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l05878">5878</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5879</span>{</div>
+<div class="line"><span class="lineno"> 5880</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
+<div class="line"><span class="lineno"> 5881</span>    <span class="keywordflow">return</span> gStyle-&gt;isDarkBackground_();</div>
+<div class="line"><span class="lineno"> 5882</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">util::isDarkSystemBackground</a>();</div>
+<div class="line"><span class="lineno"> 5883</span>}</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1util_html_a21a700efc0bcd2eeb14cb41c77fa3237"><div class="ttname"><a href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">anonymous_namespace{Gui.cpp}::util::isDarkSystemBackground</a></div><div class="ttdeci">bool isDarkSystemBackground()</div><div class="ttdoc">Returns whether Windows uses a dark application theme.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01811">Gui.cpp:1811</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, and <a class="el" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">anonymous_namespace{Gui.cpp}::util::isDarkSystemBackground()</a>.</p>
 <div class="dynheader">
@@ -317,23 +318,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the GUI palette for the effective application background. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the current GUI theme palette.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd><ul>
-<li><span class="tt">QPalette::Base</span> and <span class="tt">QPalette::Button</span> use the same colors as <span class="tt">QPalette::Window</span>. Use <span class="tt"><a class="el" href="#aa5f3e5cb767068c4756a61d69381f92a" title="Returns the surface colors for the effective application background.">surfaces()</a></span> to obtain the separate sunken and raised background colors.</li>
-<li>Returns the GUI's theme palette, not any independently modified <span class="tt">QApplication</span> palette.</li>
-<li>If <span class="tt">QApplication</span> does not exist or shutdown has begun, returns the GUI palette matching the Windows application theme. </li>
-</ul>
-</dd></dl>
+<p>Returns a copy of the effective GUI theme palette. </p>
+<p>Returns the GUI palette, not an independently modified QApplication palette. </p><dl class="section note"><dt>Note</dt><dd>Without <span class="tt">QApplication</span> or during shutdown, uses the Windows setting. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><span class="tt">QPalette::Base</span> and <span class="tt">QPalette::Button</span> match <span class="tt">QPalette::Window</span>. Use <span class="tt"><a class="el" href="#af802a14ed0526477d68605de91bb1b1d" title="Recessed surface background.">npi::gui::Surfaces::sunken_</a></span> and <span class="tt"><a class="el" href="#a0a0fd1396ec2b0a4be1530be886f7709" title="Raised surface background.">npi::gui::Surfaces::raised_</a></span> returned by <span class="tt"><a class="el" href="#aa5f3e5cb767068c4756a61d69381f92a" title="Returns a copy of the effective background&#39;s surface colors.">surfaces()</a></span> for the corresponding colors used by the GUI system. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03808">3808</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3809</span>{</div>
-<div class="line"><span class="lineno"> 3810</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
-<div class="line"><span class="lineno"> 3811</span>    <span class="keywordflow">return</span> gStyle-&gt;palette_();</div>
-<div class="line"><span class="lineno"> 3812</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">make::theme</a>(<a class="code hl_function" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">util::isDarkSystemBackground</a>()).<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a85d388d43c3c4772aec034237f113e4e">palette_</a>;</div>
-<div class="line"><span class="lineno"> 3813</span>}</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1make_html_a250906c4c6bd7ae06482b3e9c60e4882"><div class="ttname"><a href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">anonymous_namespace{Gui.cpp}::make::theme</a></div><div class="ttdeci">ThemeData theme(bool dark)</div><div class="ttdoc">Creates the colors, palette and pens for a dark or light theme.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00256">Gui.cpp:256</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a85d388d43c3c4772aec034237f113e4e"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a85d388d43c3c4772aec034237f113e4e">anonymous_namespace{Gui.cpp}::ThemeData::palette_</a></div><div class="ttdeci">QPalette palette_</div><div class="ttdoc">Theme palette; separate surface colors are used for custom backgrounds.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00228">Gui.cpp:228</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l05899">5899</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5900</span>{</div>
+<div class="line"><span class="lineno"> 5901</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
+<div class="line"><span class="lineno"> 5902</span>    <span class="keywordflow">return</span> gStyle-&gt;palette_();</div>
+<div class="line"><span class="lineno"> 5903</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">make::theme</a>(<a class="code hl_function" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">util::isDarkSystemBackground</a>()).<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a85d388d43c3c4772aec034237f113e4e">palette_</a>;</div>
+<div class="line"><span class="lineno"> 5904</span>}</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1make_html_a250906c4c6bd7ae06482b3e9c60e4882"><div class="ttname"><a href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">anonymous_namespace{Gui.cpp}::make::theme</a></div><div class="ttdeci">ThemeData theme(bool dark)</div><div class="ttdoc">Creates the colors, palette and pens for a dark or light theme.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00297">Gui.cpp:297</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a85d388d43c3c4772aec034237f113e4e"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a85d388d43c3c4772aec034237f113e4e">anonymous_namespace{Gui.cpp}::ThemeData::palette_</a></div><div class="ttdeci">QPalette palette_</div><div class="ttdoc">Theme palette; custom backgrounds use surfaces_.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00252">Gui.cpp:252</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, <a class="el" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">anonymous_namespace{Gui.cpp}::util::isDarkSystemBackground()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a85d388d43c3c4772aec034237f113e4e">anonymous_namespace{Gui.cpp}::ThemeData::palette_</a>, and <a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">anonymous_namespace{Gui.cpp}::make::theme()</a>.</p>
 <div class="dynheader">
@@ -359,26 +355,21 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the GUI palette for an explicitly selected dark/light background. </p>
+<p>Returns the GUI palette for an explicit background without selecting a theme. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">darkBackground</td><td>true for the dark palette; false for the light palette. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the selected GUI theme palette.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd><ul>
-<li><span class="tt">QPalette::Base</span> and <span class="tt">QPalette::Button</span> use the same colors as <span class="tt">QPalette::Window</span>. Use <span class="tt"><a class="el" href="#a2f06c690ee254cb3bccc0476f670a8dc" title="Returns surface colors for an explicitly selected dark/light background.">surfaces(bool)</a></span> to obtain the separate sunken and raised background colors.</li>
-<li>Does not change the configured application theme. Normal GUI initialization still occurs if needed and permitted. </li>
-</ul>
-</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><span class="tt">QPalette::Base</span> and <span class="tt">QPalette::Button</span> match <span class="tt">QPalette::Window</span>. Use <span class="tt"><a class="el" href="#af802a14ed0526477d68605de91bb1b1d" title="Recessed surface background.">npi::gui::Surfaces::sunken_</a></span> and <span class="tt"><a class="el" href="#a0a0fd1396ec2b0a4be1530be886f7709" title="Raised surface background.">npi::gui::Surfaces::raised_</a></span> returned by <span class="tt"><a class="el" href="#a2f06c690ee254cb3bccc0476f670a8dc" title="Returns surface colors for an explicit background without selecting a theme.">surfaces(bool)</a></span> for the corresponding colors used by the GUI system. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03815">3815</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3816</span>{</div>
-<div class="line"><span class="lineno"> 3817</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
-<div class="line"><span class="lineno"> 3818</span>    <span class="keywordflow">return</span> gStyle-&gt;palette_(darkBackground);</div>
-<div class="line"><span class="lineno"> 3819</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">make::theme</a>(darkBackground).<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a85d388d43c3c4772aec034237f113e4e">palette_</a>;</div>
-<div class="line"><span class="lineno"> 3820</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l05906">5906</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5907</span>{</div>
+<div class="line"><span class="lineno"> 5908</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
+<div class="line"><span class="lineno"> 5909</span>    <span class="keywordflow">return</span> gStyle-&gt;palette_(darkBackground);</div>
+<div class="line"><span class="lineno"> 5910</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">make::theme</a>(darkBackground).<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a85d388d43c3c4772aec034237f113e4e">palette_</a>;</div>
+<div class="line"><span class="lineno"> 5911</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a85d388d43c3c4772aec034237f113e4e">anonymous_namespace{Gui.cpp}::ThemeData::palette_</a>, and <a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">anonymous_namespace{Gui.cpp}::make::theme()</a>.</p>
 <div class="dynheader">
@@ -404,22 +395,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Selects the application theme. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"><a class="el" href="#a77381db9d58d5f6a136ebcefcc481bea" title="Returns the configured application theme.">theme</a></td><td>Dark, Light or System. System follows the Windows application theme.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Updates the application appearance when the effective dark/light background changes, including palettes and registered theme-dependent icons.</p>
-<dl class="section note"><dt>Note</dt><dd>Does nothing if QApplication does not exist or shutdown has begun. Such requests are not retained for later initialization. </dd></dl>
+<p>Sets Dark, Light or System and synchronizes the shared theme actions. </p>
+<p>Refreshes palettes and themed icons when the effective background changes. </p><dl class="section note"><dt>Note</dt><dd>Current-theme and invalid-value requests do nothing. Requests without <span class="tt">QApplication</span> or during shutdown are ignored and are not retained. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03781">3781</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3782</span>{</div>
-<div class="line"><span class="lineno"> 3783</span>  <span class="keywordflow">if</span>(<span class="keyword">auto</span>* gStyle = guiStyle())</div>
-<div class="line"><span class="lineno"> 3784</span>    gStyle-&gt;setTheme_(<a class="code hl_function" href="#a77381db9d58d5f6a136ebcefcc481bea">theme</a>);</div>
-<div class="line"><span class="lineno"> 3785</span>}</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a77381db9d58d5f6a136ebcefcc481bea"><div class="ttname"><a href="#a77381db9d58d5f6a136ebcefcc481bea">npi::gui::theme</a></div><div class="ttdeci">Theme theme()</div><div class="ttdoc">Returns the configured application theme.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l03774">Gui.cpp:3774</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l05865">5865</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5866</span>{</div>
+<div class="line"><span class="lineno"> 5867</span>  <span class="keywordflow">if</span>(<span class="keyword">auto</span>* gStyle = guiStyle())</div>
+<div class="line"><span class="lineno"> 5868</span>    gStyle-&gt;setTheme_(<a class="code hl_function" href="#a77381db9d58d5f6a136ebcefcc481bea">theme</a>);</div>
+<div class="line"><span class="lineno"> 5869</span>}</div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a77381db9d58d5f6a136ebcefcc481bea"><div class="ttname"><a href="#a77381db9d58d5f6a136ebcefcc481bea">npi::gui::theme</a></div><div class="ttdeci">Theme theme()</div><div class="ttdoc">Returns the configured theme; System remains System regardless of background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05858">Gui.cpp:5858</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, and <a class="el" href="#a77381db9d58d5f6a136ebcefcc481bea">theme()</a>.</p>
 <div class="dynheader">
@@ -445,17 +429,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the surface colors for the effective application background. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the current sunken, normal and raised background colors.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If QApplication does not exist or shutdown has begun, returns surface colors matching the Windows application theme. </dd></dl>
+<p>Returns a copy of the effective background's surface colors. </p>
+<dl class="section note"><dt>Note</dt><dd>Without <span class="tt">QApplication</span> or during shutdown, uses the Windows setting. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03794">3794</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3795</span>{</div>
-<div class="line"><span class="lineno"> 3796</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
-<div class="line"><span class="lineno"> 3797</span>    <span class="keywordflow">return</span> gStyle-&gt;surfaces_();</div>
-<div class="line"><span class="lineno"> 3798</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">make::theme</a>(<a class="code hl_function" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">util::isDarkSystemBackground</a>()).<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">surfaces_</a>;</div>
-<div class="line"><span class="lineno"> 3799</span>}</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab963c28bba91ecfbc45c09c7fcc6a589"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">anonymous_namespace{Gui.cpp}::ThemeData::surfaces_</a></div><div class="ttdeci">npi::gui::Surfaces surfaces_</div><div class="ttdoc">Surface background colors.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00219">Gui.cpp:219</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l05885">5885</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5886</span>{</div>
+<div class="line"><span class="lineno"> 5887</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
+<div class="line"><span class="lineno"> 5888</span>    <span class="keywordflow">return</span> gStyle-&gt;surfaces_();</div>
+<div class="line"><span class="lineno"> 5889</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">make::theme</a>(<a class="code hl_function" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">util::isDarkSystemBackground</a>()).<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">surfaces_</a>;</div>
+<div class="line"><span class="lineno"> 5890</span>}</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab963c28bba91ecfbc45c09c7fcc6a589"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">anonymous_namespace{Gui.cpp}::ThemeData::surfaces_</a></div><div class="ttdeci">npi::gui::Surfaces surfaces_</div><div class="ttdoc">Sunken, normal and raised background colors.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00242">Gui.cpp:242</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, <a class="el" href="../../d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237">anonymous_namespace{Gui.cpp}::util::isDarkSystemBackground()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">anonymous_namespace{Gui.cpp}::ThemeData::surfaces_</a>, and <a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">anonymous_namespace{Gui.cpp}::make::theme()</a>.</p>
 <div class="dynheader">
@@ -481,22 +464,20 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns surface colors for an explicitly selected dark/light background. </p>
+<p>Returns surface colors for an explicit background without selecting a theme. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">darkBackground</td><td>true for dark colors; false for light colors. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the selected sunken, normal and raised background colors.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Does not change the configured application theme. If GUI initialization is needed and permitted, the normal initialization still occurs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03801">3801</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3802</span>{</div>
-<div class="line"><span class="lineno"> 3803</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
-<div class="line"><span class="lineno"> 3804</span>    <span class="keywordflow">return</span> gStyle-&gt;surfaces_(darkBackground);</div>
-<div class="line"><span class="lineno"> 3805</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">make::theme</a>(darkBackground).<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">surfaces_</a>;</div>
-<div class="line"><span class="lineno"> 3806</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l05892">5892</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5893</span>{</div>
+<div class="line"><span class="lineno"> 5894</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
+<div class="line"><span class="lineno"> 5895</span>    <span class="keywordflow">return</span> gStyle-&gt;surfaces_(darkBackground);</div>
+<div class="line"><span class="lineno"> 5896</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">make::theme</a>(darkBackground).<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">surfaces_</a>;</div>
+<div class="line"><span class="lineno"> 5897</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab963c28bba91ecfbc45c09c7fcc6a589">anonymous_namespace{Gui.cpp}::ThemeData::surfaces_</a>, and <a class="el" href="../../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882">anonymous_namespace{Gui.cpp}::make::theme()</a>.</p>
 <div class="dynheader">
@@ -522,20 +503,19 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the configured application theme. </p>
-<p>Returns <a class="el" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a" title="Follow the Windows application theme.">Theme::System</a> when following Windows, rather than the resolved dark/light theme. Use <a class="el" href="#ab0432af80db64f065a922a7dde8adfe4" title="Returns whether the effective application background is dark.">isDarkBackground()</a> for the effective background. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2" title="Always use the dark theme.">Theme::Dark</a>, <a class="el" href="#ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82" title="Always use the light theme.">Theme::Light</a> or <a class="el" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a" title="Follow the Windows application theme.">Theme::System</a>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Returns <a class="el" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a" title="Follow the Windows application theme.">Theme::System</a> if QApplication does not exist or shutdown has begun. </dd></dl>
+<p>Returns the configured theme; System remains System regardless of background. </p>
+<dl class="section note"><dt>Note</dt><dd>Use <span class="tt"><a class="el" href="#ab0432af80db64f065a922a7dde8adfe4" title="Returns true for the effective dark background, resolving System as needed.">isDarkBackground()</a></span> for the effective background. Returns System without <span class="tt">QApplication</span> or during shutdown. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l03774">3774</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3775</span>{</div>
-<div class="line"><span class="lineno"> 3776</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
-<div class="line"><span class="lineno"> 3777</span>    <span class="keywordflow">return</span> gStyle-&gt;getCurrentTheme_();</div>
-<div class="line"><span class="lineno"> 3778</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">Theme::System</a>;</div>
-<div class="line"><span class="lineno"> 3779</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l05858">5858</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5859</span>{</div>
+<div class="line"><span class="lineno"> 5860</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
+<div class="line"><span class="lineno"> 5861</span>    <span class="keywordflow">return</span> gStyle-&gt;getCurrentTheme_();</div>
+<div class="line"><span class="lineno"> 5862</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">Theme::System</a>;</div>
+<div class="line"><span class="lineno"> 5863</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, and <a class="el" href="#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">System</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="#a02b9d4b0a58267b196aecdda9ef45051">setTheme()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a02b9d4b0a58267b196aecdda9ef45051">setTheme()</a>, and <a class="el" href="#a64de26ba60a343fcf6c9cf785a45f495">themeAction()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -544,7 +524,42 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/dc3/namespacenpi_1_1gui_a77381db9d58d5f6a136ebcefcc481bea_icgraph.svg" width="366" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/dc3/namespacenpi_1_1gui_a77381db9d58d5f6a136ebcefcc481bea_icgraph.svg" width="390" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a64de26ba60a343fcf6c9cf785a45f495" name="a64de26ba60a343fcf6c9cf785a45f495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64de26ba60a343fcf6c9cf785a45f495">&#9670;&#160;</a></span>themeAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction * npi::gui::themeAction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad3129346e88e3d6a398365cb0671ce3e">Theme</a></td>          <td class="paramname"><span class="paramname"><em>theme</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the shared checkable action for selecting a theme. </p>
+<p>Its exclusive checked state follows <span class="tt"><a class="el" href="#a77381db9d58d5f6a136ebcefcc481bea" title="Returns the configured theme; System remains System regardless of background.">theme()</a></span>, not the effective background. Use <span class="tt">QToolButton::setDefaultAction()</span> or add to menus/toolbars; no extra theme-setting connection is needed. All users share the action's properties. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="#ad3129346e88e3d6a398365cb0671ce3e" title="Application theme selection.">Theme</a> <span class="tt">QAction</span> pointer; nullptr for an invalid theme, absent <span class="tt">QApplication</span> or during shutdown. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The returned <span class="tt">QAction*</span> is owned by the GUI style. Do not delete, reparent, regroup or change checkability/checked state. Select themes through <span class="tt"><a class="el" href="#a02b9d4b0a58267b196aecdda9ef45051" title="Sets Dark, Light or System and synchronizes the shared theme actions.">setTheme()</a></span> or <span class="tt">QAction::trigger()</span>. See GUI Systems documentation for use inside <span class="tt"><a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a58fdac61bd4c703ac43514a6871d610c" title="bool - Provides a shared background with exclusive button grouping.">npi::gui::Props::ButtonGroupBase_</a></span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l05871">5871</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5872</span>{</div>
+<div class="line"><span class="lineno"> 5873</span>  <span class="keywordflow">if</span>(<span class="keyword">const</span> <span class="keyword">auto</span>* gStyle = guiStyle())</div>
+<div class="line"><span class="lineno"> 5874</span>    <span class="keywordflow">return</span> gStyle-&gt;themeAction_(<a class="code hl_function" href="#a77381db9d58d5f6a136ebcefcc481bea">theme</a>);</div>
+<div class="line"><span class="lineno"> 5875</span>  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 5876</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d">anonymous_namespace{Gui.cpp}::guiStyle()</a>, and <a class="el" href="#a77381db9d58d5f6a136ebcefcc481bea">theme()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/dc3/namespacenpi_1_1gui_a64de26ba60a343fcf6c9cf785a45f495_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

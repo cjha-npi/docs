@@ -16,11 +16,12 @@ var searchData=
   ['message_5f_13',['message_',['../d3/d0b/structanonymous__namespace_02_log_8cpp_03_1_1_one_log.html#a26cabd1cc058e032450f9a84497135dd',1,'anonymous_namespace{Log.cpp}::OneLog']]],
   ['min_5f_14',['min_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ac9e750526b6cbe7ae541b66b65044e41',1,'npi::wid::ColorPicker::ChannelConfig']]],
   ['minsyncinterval_15',['minSyncInterval',['../dc/d68/namespaceanonymous__namespace_02_log_8cpp_03_1_1workers.html#aee9856ced7cc9fbf87590eba0fba808f',1,'anonymous_namespace{Log.cpp}::workers']]],
-  ['msgboxexename_16',['msgBoxExeName',['../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a73b2276f031cca6c27b5a9c027a6c517',1,'anonymous_namespace{WinMsgBoxExe.cpp}']]],
-  ['msghdlrtiming_5fcount_17',['msgHdlrTiming_count',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#aec8fa07b833669114b28399f8624e248',1,'anonymous_namespace{Log.cpp}::testing']]],
-  ['msghdlrtiming_5flock_18',['msgHdlrTiming_lock',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a71fe7b9ac5c5410274b7d85542fdfd66',1,'anonymous_namespace{Log.cpp}::testing']]],
-  ['msghdlrtiming_5fstate_19',['msgHdlrTiming_state',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a7cdc7a649174c2e0de0795627b21c0f9',1,'anonymous_namespace{Log.cpp}::testing']]],
-  ['msghdlrtiming_5ftimer_20',['msgHdlrTiming_timer',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#afd3c0ce383a5df1322733688fcea7e91',1,'anonymous_namespace{Log.cpp}::testing']]],
-  ['msghdlrtiming_5ftotns_21',['msgHdlrTiming_totNs',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a0e7a1c52414f3eb6ec881aa7ed7ce3f4',1,'anonymous_namespace{Log.cpp}::testing']]],
-  ['mute_5f_22',['mute_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afe218675193d24f1b731895c18a13dcb',1,'anonymous_namespace{Log.cpp}::LeakedState::DispWorker']]]
+  ['model_5f_16',['model_',['../de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection.html#aacb816c491a2e3f84237d7128acb5490',1,'anonymous_namespace{Gui.cpp}::TreeBranchSelection']]],
+  ['msgboxexename_17',['msgBoxExeName',['../d4/dbe/namespaceanonymous__namespace_02_win_msg_box_exe_8cpp_03.html#a73b2276f031cca6c27b5a9c027a6c517',1,'anonymous_namespace{WinMsgBoxExe.cpp}']]],
+  ['msghdlrtiming_5fcount_18',['msgHdlrTiming_count',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#aec8fa07b833669114b28399f8624e248',1,'anonymous_namespace{Log.cpp}::testing']]],
+  ['msghdlrtiming_5flock_19',['msgHdlrTiming_lock',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a71fe7b9ac5c5410274b7d85542fdfd66',1,'anonymous_namespace{Log.cpp}::testing']]],
+  ['msghdlrtiming_5fstate_20',['msgHdlrTiming_state',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a7cdc7a649174c2e0de0795627b21c0f9',1,'anonymous_namespace{Log.cpp}::testing']]],
+  ['msghdlrtiming_5ftimer_21',['msgHdlrTiming_timer',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#afd3c0ce383a5df1322733688fcea7e91',1,'anonymous_namespace{Log.cpp}::testing']]],
+  ['msghdlrtiming_5ftotns_22',['msgHdlrTiming_totNs',['../df/dce/namespaceanonymous__namespace_02_log_8cpp_03_1_1testing.html#a0e7a1c52414f3eb6ec881aa7ed7ce3f4',1,'anonymous_namespace{Log.cpp}::testing']]],
+  ['mute_5f_23',['mute_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afe218675193d24f1b731895c18a13dcb',1,'anonymous_namespace{Log.cpp}::LeakedState::DispWorker']]]
 ];

@@ -195,50 +195,50 @@ template&lt;size_t LineSize, size_t NumLines&gt; </div>
 
 <p>Appends a timing value using a suitable time unit. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05370">5370</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 5371</span>    {</div>
-<div class="line"><span class="lineno"> 5372</span>      <span class="keywordflow">if</span>(!buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(6))</div>
-<div class="line"><span class="lineno"> 5373</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 5374</span>      <span class="keywordflow">if</span>(ns &lt; 0)</div>
-<div class="line"><span class="lineno"> 5375</span>        <span class="keywordflow">return</span> buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a9de64045520458e033a5531e9d945949">appendRawText_</a>(<a class="code hl_variable" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#abc875262bc94ebb4526e882a65a2cfa4">format::invalidTimeDelta</a>);</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05359">5359</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5360</span>    {</div>
+<div class="line"><span class="lineno"> 5361</span>      <span class="keywordflow">if</span>(!buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40">canAppend_</a>(6))</div>
+<div class="line"><span class="lineno"> 5362</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 5363</span>      <span class="keywordflow">if</span>(ns &lt; 0)</div>
+<div class="line"><span class="lineno"> 5364</span>        <span class="keywordflow">return</span> buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a9de64045520458e033a5531e9d945949">appendRawText_</a>(<a class="code hl_variable" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#abc875262bc94ebb4526e882a65a2cfa4">format::invalidTimeDelta</a>);</div>
+<div class="line"><span class="lineno"> 5365</span> </div>
+<div class="line"><span class="lineno"> 5366</span>      std::int64_t val = 0;</div>
+<div class="line"><span class="lineno"> 5367</span>      <span class="keywordtype">char</span> suffix = <span class="charliteral">&#39;h&#39;</span>;</div>
+<div class="line"><span class="lineno"> 5368</span> </div>
+<div class="line"><span class="lineno"> 5369</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">format::UnitInfo</a>&amp; unit : <a class="code hl_variable" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a25d73999d17ece5b691e3cbb6ba8013e">format::deltaUnits</a>) {</div>
+<div class="line"><span class="lineno"> 5370</span>        <span class="keyword">const</span> std::int64_t half = unit.scaleNs_ / 2;</div>
+<div class="line"><span class="lineno"> 5371</span>        <span class="keyword">const</span> std::int64_t rounded = (ns &gt; std::numeric_limits&lt;std::int64_t&gt;::max() - half)</div>
+<div class="line"><span class="lineno"> 5372</span>                                       ? std::numeric_limits&lt;std::int64_t&gt;::max()</div>
+<div class="line"><span class="lineno"> 5373</span>                                       : ns + half;</div>
+<div class="line"><span class="lineno"> 5374</span>        val = rounded / unit.scaleNs_;</div>
+<div class="line"><span class="lineno"> 5375</span>        suffix = unit.suffix_;</div>
 <div class="line"><span class="lineno"> 5376</span> </div>
-<div class="line"><span class="lineno"> 5377</span>      std::int64_t val = 0;</div>
-<div class="line"><span class="lineno"> 5378</span>      <span class="keywordtype">char</span> suffix = <span class="charliteral">&#39;h&#39;</span>;</div>
-<div class="line"><span class="lineno"> 5379</span> </div>
-<div class="line"><span class="lineno"> 5380</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">format::UnitInfo</a>&amp; unit : <a class="code hl_variable" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a25d73999d17ece5b691e3cbb6ba8013e">format::deltaUnits</a>) {</div>
-<div class="line"><span class="lineno"> 5381</span>        <span class="keyword">const</span> std::int64_t half = unit.scaleNs_ / 2;</div>
-<div class="line"><span class="lineno"> 5382</span>        <span class="keyword">const</span> std::int64_t rounded = (ns &gt; std::numeric_limits&lt;std::int64_t&gt;::max() - half)</div>
-<div class="line"><span class="lineno"> 5383</span>                                       ? std::numeric_limits&lt;std::int64_t&gt;::max()</div>
-<div class="line"><span class="lineno"> 5384</span>                                       : ns + half;</div>
-<div class="line"><span class="lineno"> 5385</span>        val = rounded / unit.scaleNs_;</div>
-<div class="line"><span class="lineno"> 5386</span>        suffix = unit.suffix_;</div>
-<div class="line"><span class="lineno"> 5387</span> </div>
-<div class="line"><span class="lineno"> 5388</span>        <span class="keywordflow">if</span>(val &lt; 10000) {</div>
-<div class="line"><span class="lineno"> 5389</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 5390</span>        }</div>
-<div class="line"><span class="lineno"> 5391</span>      }</div>
-<div class="line"><span class="lineno"> 5392</span> </div>
-<div class="line"><span class="lineno"> 5393</span>      <span class="comment">// Ensures we never exceed &quot;999.9&quot; even for huge hours, preventing garbage chars.</span></div>
-<div class="line"><span class="lineno"> 5394</span>      <span class="keywordflow">if</span>(val &gt; 9999)</div>
-<div class="line"><span class="lineno"> 5395</span>        val = 9999;</div>
-<div class="line"><span class="lineno"> 5396</span> </div>
-<div class="line"><span class="lineno"> 5397</span>      <span class="keyword">const</span> std::int64_t iPart = val / 10;</div>
-<div class="line"><span class="lineno"> 5398</span>      <span class="keyword">const</span> std::int64_t fPart = val % 10;</div>
-<div class="line"><span class="lineno"> 5399</span> </div>
-<div class="line"><span class="lineno"> 5400</span>      <span class="keywordtype">bool</span> ok = buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + ((iPart / 100) % 10)));</div>
-<div class="line"><span class="lineno"> 5401</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + ((iPart / 10) % 10)));</div>
-<div class="line"><span class="lineno"> 5402</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + (iPart % 10)));</div>
-<div class="line"><span class="lineno"> 5403</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="charliteral">&#39;.&#39;</span>);</div>
-<div class="line"><span class="lineno"> 5404</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + fPart));</div>
-<div class="line"><span class="lineno"> 5405</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(suffix);</div>
-<div class="line"><span class="lineno"> 5406</span>      <span class="keywordflow">return</span> ok;</div>
-<div class="line"><span class="lineno"> 5407</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a55bcfada4f8f9e501746cff658700e40"><div class="ttname"><a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40">anonymous_namespace{Log.cpp}::TextBuffer::canAppend_</a></div><div class="ttdeci">bool canAppend_(size_t len) const noexcept</div><div class="ttdoc">Checks whether the current line has room for the requested bytes and its terminator.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00315">Log.cpp:315</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a9de64045520458e033a5531e9d945949"><div class="ttname"><a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a9de64045520458e033a5531e9d945949">anonymous_namespace{Log.cpp}::TextBuffer::appendRawText_</a></div><div class="ttdeci">bool appendRawText_(const char *txt, size_t len) noexcept</div><div class="ttdoc">Appends a bounded byte sequence without sanitization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00387">Log.cpp:387</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_ac3a56861f1ee6397d83a5598a17e632b"><div class="ttname"><a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">anonymous_namespace{Log.cpp}::TextBuffer::appendRawChar_</a></div><div class="ttdeci">bool appendRawChar_(char chr) noexcept</div><div class="ttdoc">Appends one byte without sanitization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00321">Log.cpp:321</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1format_html_a25d73999d17ece5b691e3cbb6ba8013e"><div class="ttname"><a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a25d73999d17ece5b691e3cbb6ba8013e">anonymous_namespace{Log.cpp}::format::deltaUnits</a></div><div class="ttdeci">constexpr std::array&lt; UnitInfo, 5 &gt; deltaUnits</div><div class="ttdoc">All available time-delta units and their scales.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02880">Log.cpp:2880</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1format_html_abc875262bc94ebb4526e882a65a2cfa4"><div class="ttname"><a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#abc875262bc94ebb4526e882a65a2cfa4">anonymous_namespace{Log.cpp}::format::invalidTimeDelta</a></div><div class="ttdeci">constexpr char invalidTimeDelta[]</div><div class="ttdoc">Text for invalid time delta value.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02867">Log.cpp:2867</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1format_html_d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info"><div class="ttname"><a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">anonymous_namespace{Log.cpp}::format::UnitInfo</a></div><div class="ttdoc">Describes one elapsed-time unit during fixed-width formatting of time delta.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02874">Log.cpp:2874</a></div></div>
+<div class="line"><span class="lineno"> 5377</span>        <span class="keywordflow">if</span>(val &lt; 10000) {</div>
+<div class="line"><span class="lineno"> 5378</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 5379</span>        }</div>
+<div class="line"><span class="lineno"> 5380</span>      }</div>
+<div class="line"><span class="lineno"> 5381</span> </div>
+<div class="line"><span class="lineno"> 5382</span>      <span class="comment">// Ensures we never exceed &quot;999.9&quot; even for huge hours, preventing garbage chars.</span></div>
+<div class="line"><span class="lineno"> 5383</span>      <span class="keywordflow">if</span>(val &gt; 9999)</div>
+<div class="line"><span class="lineno"> 5384</span>        val = 9999;</div>
+<div class="line"><span class="lineno"> 5385</span> </div>
+<div class="line"><span class="lineno"> 5386</span>      <span class="keyword">const</span> std::int64_t iPart = val / 10;</div>
+<div class="line"><span class="lineno"> 5387</span>      <span class="keyword">const</span> std::int64_t fPart = val % 10;</div>
+<div class="line"><span class="lineno"> 5388</span> </div>
+<div class="line"><span class="lineno"> 5389</span>      <span class="keywordtype">bool</span> ok = buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + ((iPart / 100) % 10)));</div>
+<div class="line"><span class="lineno"> 5390</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + ((iPart / 10) % 10)));</div>
+<div class="line"><span class="lineno"> 5391</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + (iPart % 10)));</div>
+<div class="line"><span class="lineno"> 5392</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><span class="lineno"> 5393</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(<span class="charliteral">&#39;0&#39;</span> + fPart));</div>
+<div class="line"><span class="lineno"> 5394</span>      ok = ok &amp;&amp; buf.<a class="code hl_function" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">appendRawChar_</a>(suffix);</div>
+<div class="line"><span class="lineno"> 5395</span>      <span class="keywordflow">return</span> ok;</div>
+<div class="line"><span class="lineno"> 5396</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a55bcfada4f8f9e501746cff658700e40"><div class="ttname"><a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a55bcfada4f8f9e501746cff658700e40">anonymous_namespace{Log.cpp}::TextBuffer::canAppend_</a></div><div class="ttdeci">bool canAppend_(size_t len) const noexcept</div><div class="ttdoc">Checks whether the current line has room for the requested bytes and its terminator.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00304">Log.cpp:304</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_a9de64045520458e033a5531e9d945949"><div class="ttname"><a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a9de64045520458e033a5531e9d945949">anonymous_namespace{Log.cpp}::TextBuffer::appendRawText_</a></div><div class="ttdeci">bool appendRawText_(const char *txt, size_t len) noexcept</div><div class="ttdoc">Appends a bounded byte sequence without sanitization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00376">Log.cpp:376</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_log_8cpp_03_1_1_text_buffer_html_ac3a56861f1ee6397d83a5598a17e632b"><div class="ttname"><a href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ac3a56861f1ee6397d83a5598a17e632b">anonymous_namespace{Log.cpp}::TextBuffer::appendRawChar_</a></div><div class="ttdeci">bool appendRawChar_(char chr) noexcept</div><div class="ttdoc">Appends one byte without sanitization.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l00310">Log.cpp:310</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1format_html_a25d73999d17ece5b691e3cbb6ba8013e"><div class="ttname"><a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a25d73999d17ece5b691e3cbb6ba8013e">anonymous_namespace{Log.cpp}::format::deltaUnits</a></div><div class="ttdeci">constexpr std::array&lt; UnitInfo, 5 &gt; deltaUnits</div><div class="ttdoc">All available time-delta units and their scales.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02869">Log.cpp:2869</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1format_html_abc875262bc94ebb4526e882a65a2cfa4"><div class="ttname"><a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#abc875262bc94ebb4526e882a65a2cfa4">anonymous_namespace{Log.cpp}::format::invalidTimeDelta</a></div><div class="ttdeci">constexpr char invalidTimeDelta[]</div><div class="ttdoc">Text for invalid time delta value.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02856">Log.cpp:2856</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1format_html_d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info"><div class="ttname"><a href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#d4/daa/structanonymous__namespace_02_log_8cpp_03_1_1format_1_1_unit_info">anonymous_namespace{Log.cpp}::format::UnitInfo</a></div><div class="ttdoc">Describes one elapsed-time unit during fixed-width formatting of time delta.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l02863">Log.cpp:2863</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a25d73999d17ece5b691e3cbb6ba8013e">anonymous_namespace{Log.cpp}::format::deltaUnits</a>, <a class="el" href="../../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#abc875262bc94ebb4526e882a65a2cfa4">anonymous_namespace{Log.cpp}::format::invalidTimeDelta</a>, and <a class="el" href="#a42d5959c6c5c41621a5b0d51743de150">msgHdlrTiming_appendTimeDelta()</a>.</p>
 
@@ -273,114 +273,114 @@ Here is the caller graph for this function:</div>
 
 <p>Queues enabling or disabling message-handler timing. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05410">5410</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 5411</span>    {</div>
-<div class="line"><span class="lineno"> 5412</span>      QCoreApplication* app = QCoreApplication::instance();</div>
-<div class="line"><span class="lineno"> 5413</span>      <span class="keywordflow">if</span>(app == <span class="keyword">nullptr</span> || QCoreApplication::closingDown()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 5414</span> </div>
-<div class="line"><span class="lineno"> 5415</span>      <span class="keyword">auto</span> startTimer = []{</div>
-<div class="line"><span class="lineno"> 5416</span>        <span class="keywordflow">if</span>(QCoreApplication::closingDown() || <a class="code hl_variable" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>.load(std::memory_order_acquire))</div>
-<div class="line"><span class="lineno"> 5417</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 5418</span> </div>
-<div class="line"><span class="lineno"> 5419</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno"> 5420</span>          <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a>)</div>
-<div class="line"><span class="lineno"> 5421</span>            <a class="code hl_variable" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock">QReadWriteLock</a>;</div>
-<div class="line"><span class="lineno"> 5422</span>        }</div>
-<div class="line"><span class="lineno"> 5423</span>        <span class="keywordflow">catch</span>(...) {</div>
-<div class="line"><span class="lineno"> 5424</span>          <span class="keywordflow">return</span>; <span class="comment">// Leave timing disabled if lock creation fails.</span></div>
-<div class="line"><span class="lineno"> 5425</span>        }</div>
-<div class="line"><span class="lineno"> 5426</span> </div>
-<div class="line"><span class="lineno"> 5427</span>        <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>) {</div>
-<div class="line"><span class="lineno"> 5428</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a> = <span class="keyword">new</span> QTimer{QCoreApplication::instance()};</div>
-<div class="line"><span class="lineno"> 5429</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;setTimerType(Qt::PreciseTimer);</div>
-<div class="line"><span class="lineno"> 5430</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;setSingleShot(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 5431</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;setInterval(1000);</div>
-<div class="line"><span class="lineno"> 5432</span> </div>
-<div class="line"><span class="lineno"> 5433</span>          QObject::connect(<a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>.get(), &amp;QTimer::timeout, <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>.get(), []{</div>
-<div class="line"><span class="lineno"> 5434</span>            <span class="comment">// ReSharper disable once CppInitializedValueIsAlwaysRewritten</span></div>
-<div class="line"><span class="lineno"> 5435</span>            std::int64_t tTime{0};</div>
-<div class="line"><span class="lineno"> 5436</span> </div>
-<div class="line"><span class="lineno"> 5437</span>            <span class="comment">// ReSharper disable once CppInitializedValueIsAlwaysRewritten</span></div>
-<div class="line"><span class="lineno"> 5438</span>            std::int64_t count{0};</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05399">5399</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5400</span>    {</div>
+<div class="line"><span class="lineno"> 5401</span>      QCoreApplication* app = QCoreApplication::instance();</div>
+<div class="line"><span class="lineno"> 5402</span>      <span class="keywordflow">if</span>(app == <span class="keyword">nullptr</span> || QCoreApplication::closingDown()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 5403</span> </div>
+<div class="line"><span class="lineno"> 5404</span>      <span class="keyword">auto</span> startTimer = []{</div>
+<div class="line"><span class="lineno"> 5405</span>        <span class="keywordflow">if</span>(QCoreApplication::closingDown() || <a class="code hl_variable" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>.load(std::memory_order_acquire))</div>
+<div class="line"><span class="lineno"> 5406</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 5407</span> </div>
+<div class="line"><span class="lineno"> 5408</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno"> 5409</span>          <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a>)</div>
+<div class="line"><span class="lineno"> 5410</span>            <a class="code hl_variable" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock">QReadWriteLock</a>;</div>
+<div class="line"><span class="lineno"> 5411</span>        }</div>
+<div class="line"><span class="lineno"> 5412</span>        <span class="keywordflow">catch</span>(...) {</div>
+<div class="line"><span class="lineno"> 5413</span>          <span class="keywordflow">return</span>; <span class="comment">// Leave timing disabled if lock creation fails.</span></div>
+<div class="line"><span class="lineno"> 5414</span>        }</div>
+<div class="line"><span class="lineno"> 5415</span> </div>
+<div class="line"><span class="lineno"> 5416</span>        <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>) {</div>
+<div class="line"><span class="lineno"> 5417</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a> = <span class="keyword">new</span> QTimer{QCoreApplication::instance()};</div>
+<div class="line"><span class="lineno"> 5418</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;setTimerType(Qt::PreciseTimer);</div>
+<div class="line"><span class="lineno"> 5419</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;setSingleShot(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 5420</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;setInterval(1000);</div>
+<div class="line"><span class="lineno"> 5421</span> </div>
+<div class="line"><span class="lineno"> 5422</span>          QObject::connect(<a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>.get(), &amp;QTimer::timeout, <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>.get(), []{</div>
+<div class="line"><span class="lineno"> 5423</span>            <span class="comment">// ReSharper disable once CppInitializedValueIsAlwaysRewritten</span></div>
+<div class="line"><span class="lineno"> 5424</span>            std::int64_t tTime{0};</div>
+<div class="line"><span class="lineno"> 5425</span> </div>
+<div class="line"><span class="lineno"> 5426</span>            <span class="comment">// ReSharper disable once CppInitializedValueIsAlwaysRewritten</span></div>
+<div class="line"><span class="lineno"> 5427</span>            std::int64_t count{0};</div>
+<div class="line"><span class="lineno"> 5428</span> </div>
+<div class="line"><span class="lineno"> 5429</span>            {</div>
+<div class="line"><span class="lineno"> 5430</span>              <span class="comment">// Read and reset both totals together so they cover the same logs.</span></div>
+<div class="line"><span class="lineno"> 5431</span>              const QWriteLocker locker{msgHdlrTiming_lock};</div>
+<div class="line"><span class="lineno"> 5432</span>              tTime = <a class="code hl_variable" href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">msgHdlrTiming_totNs</a>.exchange(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno"> 5433</span>              count = <a class="code hl_variable" href="#aec8fa07b833669114b28399f8624e248">msgHdlrTiming_count</a>.exchange(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno"> 5434</span>            }</div>
+<div class="line"><span class="lineno"> 5435</span> </div>
+<div class="line"><span class="lineno"> 5436</span>            <span class="keywordflow">if</span>(count &lt;= 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 5437</span> </div>
+<div class="line"><span class="lineno"> 5438</span>            <span class="keyword">const</span> std::int64_t avg = tTime &gt; 0 ? tTime / count : 0;</div>
 <div class="line"><span class="lineno"> 5439</span> </div>
-<div class="line"><span class="lineno"> 5440</span>            {</div>
-<div class="line"><span class="lineno"> 5441</span>              <span class="comment">// Read and reset both totals together so they cover the same logs.</span></div>
-<div class="line"><span class="lineno"> 5442</span>              const QWriteLocker locker{msgHdlrTiming_lock};</div>
-<div class="line"><span class="lineno"> 5443</span>              tTime = <a class="code hl_variable" href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">msgHdlrTiming_totNs</a>.exchange(0, std::memory_order_relaxed);</div>
-<div class="line"><span class="lineno"> 5444</span>              count = <a class="code hl_variable" href="#aec8fa07b833669114b28399f8624e248">msgHdlrTiming_count</a>.exchange(0, std::memory_order_relaxed);</div>
-<div class="line"><span class="lineno"> 5445</span>            }</div>
-<div class="line"><span class="lineno"> 5446</span> </div>
-<div class="line"><span class="lineno"> 5447</span>            <span class="keywordflow">if</span>(count &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 5448</span> </div>
-<div class="line"><span class="lineno"> 5449</span>            <span class="keyword">const</span> std::int64_t avg = tTime &gt; 0 ? tTime / count : 0;</div>
-<div class="line"><span class="lineno"> 5450</span> </div>
-<div class="line"><span class="lineno"> 5451</span>            TextBuffer&lt;128&gt; buf;</div>
-<div class="line"><span class="lineno"> 5452</span>            buf.appendRawText_(<span class="stringliteral">&quot;Log Handler Timing (Last 1s): &quot;</span>);</div>
-<div class="line"><span class="lineno"> 5453</span>            buf.appendDec_(<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(count));</div>
-<div class="line"><span class="lineno"> 5454</span>            buf.appendRawText_(<span class="stringliteral">&quot; Logs -&gt; &quot;</span>);</div>
-<div class="line"><span class="lineno"> 5455</span>            <span class="keywordflow">if</span>(avg &gt; 0) {</div>
-<div class="line"><span class="lineno"> 5456</span>              <a class="code hl_function" href="#a42d5959c6c5c41621a5b0d51743de150">msgHdlrTiming_appendTimeDelta</a>(buf, avg);</div>
-<div class="line"><span class="lineno"> 5457</span>              buf.appendRawText_(<span class="stringliteral">&quot; Avg&quot;</span>);</div>
-<div class="line"><span class="lineno"> 5458</span>            }</div>
-<div class="line"><span class="lineno"> 5459</span>            <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno"> 5460</span>              buf.appendRawText_(<span class="stringliteral">&quot;- Avg&quot;</span>);</div>
-<div class="line"><span class="lineno"> 5461</span>            }</div>
-<div class="line"><span class="lineno"> 5462</span>            buf.finalizeAsNewLine_();</div>
-<div class="line"><span class="lineno"> 5463</span> </div>
-<div class="line"><span class="lineno"> 5464</span>            <span class="comment">// Bypass Qt logging so the timing report does not measure itself.</span></div>
-<div class="line"><span class="lineno"> 5465</span>            <span class="keywordflow">if</span>(<span class="keyword">auto</span> hConsole = <a class="code hl_function" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">console::handle</a>(); hConsole != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno"> 5466</span>              DWORD written = 0;</div>
-<div class="line"><span class="lineno"> 5467</span>              ::WriteConsoleA(hConsole, buf.data_(), <span class="keyword">static_cast&lt;</span>DWORD<span class="keyword">&gt;</span>(buf.size_()), &amp;written, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno"> 5468</span>            }</div>
-<div class="line"><span class="lineno"> 5469</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(::IsDebuggerPresent()) {</div>
-<div class="line"><span class="lineno"> 5470</span>              ::OutputDebugStringA(buf.data_());</div>
-<div class="line"><span class="lineno"> 5471</span>            }</div>
-<div class="line"><span class="lineno"> 5472</span>          });</div>
-<div class="line"><span class="lineno"> 5473</span> </div>
-<div class="line"><span class="lineno"> 5474</span>          QObject::connect(QCoreApplication::instance(), &amp;QCoreApplication::aboutToQuit, <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>.get(), []{</div>
-<div class="line"><span class="lineno"> 5475</span>            msgHdlrTiming_timer-&gt;stop();</div>
-<div class="line"><span class="lineno"> 5476</span>            qInstallMessageHandler(logMsgHandler);</div>
-<div class="line"><span class="lineno"> 5477</span>            msgHdlrTiming_state.store(false, std::memory_order_release);</div>
-<div class="line"><span class="lineno"> 5478</span>          });</div>
-<div class="line"><span class="lineno"> 5479</span>        }</div>
-<div class="line"><span class="lineno"> 5480</span> </div>
-<div class="line"><span class="lineno"> 5481</span>        {</div>
-<div class="line"><span class="lineno"> 5482</span>          <span class="keyword">const</span> QWriteLocker locker{<a class="code hl_variable" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a>};</div>
-<div class="line"><span class="lineno"> 5483</span>          <a class="code hl_variable" href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">msgHdlrTiming_totNs</a>.store(0, std::memory_order_relaxed);</div>
-<div class="line"><span class="lineno"> 5484</span>          <a class="code hl_variable" href="#aec8fa07b833669114b28399f8624e248">msgHdlrTiming_count</a>.store(0, std::memory_order_relaxed);</div>
-<div class="line"><span class="lineno"> 5485</span>        }</div>
-<div class="line"><span class="lineno"> 5486</span> </div>
-<div class="line"><span class="lineno"> 5487</span>        qInstallMessageHandler(<a class="code hl_function" href="#acb14cb2b0d9b4692da78884e59e6b160">msgHdlrTiming_logMsgHdlr</a>);</div>
-<div class="line"><span class="lineno"> 5488</span>        <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;start();</div>
-<div class="line"><span class="lineno"> 5489</span> </div>
-<div class="line"><span class="lineno"> 5490</span>        <a class="code hl_variable" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>.store(<span class="keyword">true</span>, std::memory_order_release);</div>
-<div class="line"><span class="lineno"> 5491</span>      };</div>
-<div class="line"><span class="lineno"> 5492</span> </div>
-<div class="line"><span class="lineno"> 5493</span>      <span class="keyword">auto</span> stopTimer = []{</div>
-<div class="line"><span class="lineno"> 5494</span>        <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>.load(std::memory_order_acquire))</div>
-<div class="line"><span class="lineno"> 5495</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 5496</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>)</div>
-<div class="line"><span class="lineno"> 5497</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;stop();</div>
-<div class="line"><span class="lineno"> 5498</span>        qInstallMessageHandler(<a class="code hl_function" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">logMsgHandler</a>);</div>
-<div class="line"><span class="lineno"> 5499</span>        <a class="code hl_variable" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
-<div class="line"><span class="lineno"> 5500</span>      };</div>
-<div class="line"><span class="lineno"> 5501</span> </div>
-<div class="line"><span class="lineno"> 5502</span>      <span class="comment">// Queue both operations so start and stop requests are applied in order.</span></div>
-<div class="line"><span class="lineno"> 5503</span>      <span class="keywordflow">if</span>(state)</div>
-<div class="line"><span class="lineno"> 5504</span>        QMetaObject::invokeMethod(app, std::move(startTimer), Qt::QueuedConnection);</div>
-<div class="line"><span class="lineno"> 5505</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 5506</span>        QMetaObject::invokeMethod(app, std::move(stopTimer), Qt::QueuedConnection);</div>
-<div class="line"><span class="lineno"> 5507</span>    }</div>
+<div class="line"><span class="lineno"> 5440</span>            TextBuffer&lt;128&gt; buf;</div>
+<div class="line"><span class="lineno"> 5441</span>            buf.appendRawText_(<span class="stringliteral">&quot;Log Handler Timing (Last 1s): &quot;</span>);</div>
+<div class="line"><span class="lineno"> 5442</span>            buf.appendDec_(<span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(count));</div>
+<div class="line"><span class="lineno"> 5443</span>            buf.appendRawText_(<span class="stringliteral">&quot; Logs -&gt; &quot;</span>);</div>
+<div class="line"><span class="lineno"> 5444</span>            <span class="keywordflow">if</span>(avg &gt; 0) {</div>
+<div class="line"><span class="lineno"> 5445</span>              <a class="code hl_function" href="#a42d5959c6c5c41621a5b0d51743de150">msgHdlrTiming_appendTimeDelta</a>(buf, avg);</div>
+<div class="line"><span class="lineno"> 5446</span>              buf.appendRawText_(<span class="stringliteral">&quot; Avg&quot;</span>);</div>
+<div class="line"><span class="lineno"> 5447</span>            }</div>
+<div class="line"><span class="lineno"> 5448</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 5449</span>              buf.appendRawText_(<span class="stringliteral">&quot;- Avg&quot;</span>);</div>
+<div class="line"><span class="lineno"> 5450</span>            }</div>
+<div class="line"><span class="lineno"> 5451</span>            buf.finalizeAsNewLine_();</div>
+<div class="line"><span class="lineno"> 5452</span> </div>
+<div class="line"><span class="lineno"> 5453</span>            <span class="comment">// Bypass Qt logging so the timing report does not measure itself.</span></div>
+<div class="line"><span class="lineno"> 5454</span>            <span class="keywordflow">if</span>(<span class="keyword">auto</span> hConsole = <a class="code hl_function" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">console::handle</a>(); hConsole != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno"> 5455</span>              DWORD written = 0;</div>
+<div class="line"><span class="lineno"> 5456</span>              ::WriteConsoleA(hConsole, buf.data_(), <span class="keyword">static_cast&lt;</span>DWORD<span class="keyword">&gt;</span>(buf.size_()), &amp;written, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno"> 5457</span>            }</div>
+<div class="line"><span class="lineno"> 5458</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(::IsDebuggerPresent()) {</div>
+<div class="line"><span class="lineno"> 5459</span>              ::OutputDebugStringA(buf.data_());</div>
+<div class="line"><span class="lineno"> 5460</span>            }</div>
+<div class="line"><span class="lineno"> 5461</span>          });</div>
+<div class="line"><span class="lineno"> 5462</span> </div>
+<div class="line"><span class="lineno"> 5463</span>          QObject::connect(QCoreApplication::instance(), &amp;QCoreApplication::aboutToQuit, <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>.get(), []{</div>
+<div class="line"><span class="lineno"> 5464</span>            msgHdlrTiming_timer-&gt;stop();</div>
+<div class="line"><span class="lineno"> 5465</span>            qInstallMessageHandler(logMsgHandler);</div>
+<div class="line"><span class="lineno"> 5466</span>            msgHdlrTiming_state.store(false, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 5467</span>          });</div>
+<div class="line"><span class="lineno"> 5468</span>        }</div>
+<div class="line"><span class="lineno"> 5469</span> </div>
+<div class="line"><span class="lineno"> 5470</span>        {</div>
+<div class="line"><span class="lineno"> 5471</span>          <span class="keyword">const</span> QWriteLocker locker{<a class="code hl_variable" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a>};</div>
+<div class="line"><span class="lineno"> 5472</span>          <a class="code hl_variable" href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">msgHdlrTiming_totNs</a>.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno"> 5473</span>          <a class="code hl_variable" href="#aec8fa07b833669114b28399f8624e248">msgHdlrTiming_count</a>.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno"> 5474</span>        }</div>
+<div class="line"><span class="lineno"> 5475</span> </div>
+<div class="line"><span class="lineno"> 5476</span>        qInstallMessageHandler(<a class="code hl_function" href="#acb14cb2b0d9b4692da78884e59e6b160">msgHdlrTiming_logMsgHdlr</a>);</div>
+<div class="line"><span class="lineno"> 5477</span>        <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;start();</div>
+<div class="line"><span class="lineno"> 5478</span> </div>
+<div class="line"><span class="lineno"> 5479</span>        <a class="code hl_variable" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>.store(<span class="keyword">true</span>, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 5480</span>      };</div>
+<div class="line"><span class="lineno"> 5481</span> </div>
+<div class="line"><span class="lineno"> 5482</span>      <span class="keyword">auto</span> stopTimer = []{</div>
+<div class="line"><span class="lineno"> 5483</span>        <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>.load(std::memory_order_acquire))</div>
+<div class="line"><span class="lineno"> 5484</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 5485</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>)</div>
+<div class="line"><span class="lineno"> 5486</span>          <a class="code hl_variable" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>-&gt;stop();</div>
+<div class="line"><span class="lineno"> 5487</span>        qInstallMessageHandler(<a class="code hl_function" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">logMsgHandler</a>);</div>
+<div class="line"><span class="lineno"> 5488</span>        <a class="code hl_variable" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>.store(<span class="keyword">false</span>, std::memory_order_release);</div>
+<div class="line"><span class="lineno"> 5489</span>      };</div>
+<div class="line"><span class="lineno"> 5490</span> </div>
+<div class="line"><span class="lineno"> 5491</span>      <span class="comment">// Queue both operations so start and stop requests are applied in order.</span></div>
+<div class="line"><span class="lineno"> 5492</span>      <span class="keywordflow">if</span>(state)</div>
+<div class="line"><span class="lineno"> 5493</span>        QMetaObject::invokeMethod(app, std::move(startTimer), Qt::QueuedConnection);</div>
+<div class="line"><span class="lineno"> 5494</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 5495</span>        QMetaObject::invokeMethod(app, std::move(stopTimer), Qt::QueuedConnection);</div>
+<div class="line"><span class="lineno"> 5496</span>    }</div>
 <div class="ttc" id="anamespace_3global_scope_4_html_d7/dcd/class_q_read_write_lock"><div class="ttname"><a href="../../d0/deb/namespace_3global_scope_4.html#d7/dcd/class_q_read_write_lock">QReadWriteLock</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1console_html_a78d365c25a1a6a3fad98d83106f859ce"><div class="ttname"><a href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">anonymous_namespace{Log.cpp}::console::handle</a></div><div class="ttdeci">HANDLE handle()</div><div class="ttdoc">Returns the active console output handle when one is available.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l03292">Log.cpp:3292</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_a0e7a1c52414f3eb6ec881aa7ed7ce3f4"><div class="ttname"><a href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_totNs</a></div><div class="ttdeci">std::atomic_int64_t msgHdlrTiming_totNs</div><div class="ttdoc">Total handler time in nanoseconds since the last report.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05348">Log.cpp:5348</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_a42d5959c6c5c41621a5b0d51743de150"><div class="ttname"><a href="#a42d5959c6c5c41621a5b0d51743de150">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_appendTimeDelta</a></div><div class="ttdeci">bool msgHdlrTiming_appendTimeDelta(TextBuffer&lt; LineSize, NumLines &gt; &amp;buf, std::int64_t ns) noexcept</div><div class="ttdoc">Appends a timing value using a suitable time unit.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05370">Log.cpp:5370</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_a71fe7b9ac5c5410274b7d85542fdfd66"><div class="ttname"><a href="#a71fe7b9ac5c5410274b7d85542fdfd66">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_lock</a></div><div class="ttdeci">QReadWriteLock * msgHdlrTiming_lock</div><div class="ttdoc">Process-lifetime lock for timing updates and snapshots.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05347">Log.cpp:5347</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_a7cdc7a649174c2e0de0795627b21c0f9"><div class="ttname"><a href="#a7cdc7a649174c2e0de0795627b21c0f9">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_state</a></div><div class="ttdeci">std::atomic_bool msgHdlrTiming_state</div><div class="ttdoc">Whether message-handler timing is enabled.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05345">Log.cpp:5345</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_acb14cb2b0d9b4692da78884e59e6b160"><div class="ttname"><a href="#acb14cb2b0d9b4692da78884e59e6b160">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_logMsgHdlr</a></div><div class="ttdeci">void msgHdlrTiming_logMsgHdlr(QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</div><div class="ttdoc">Processes a log message and records the handler&#39;s execution time.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05352">Log.cpp:5352</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_aec8fa07b833669114b28399f8624e248"><div class="ttname"><a href="#aec8fa07b833669114b28399f8624e248">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_count</a></div><div class="ttdeci">std::atomic_int64_t msgHdlrTiming_count</div><div class="ttdoc">Number of timed logs since the last report.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05349">Log.cpp:5349</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_afd3c0ce383a5df1322733688fcea7e91"><div class="ttname"><a href="#afd3c0ce383a5df1322733688fcea7e91">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_timer</a></div><div class="ttdeci">QPointer&lt; QTimer &gt; msgHdlrTiming_timer</div><div class="ttdoc">Application-owned timer for timing reports.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05346">Log.cpp:5346</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_ae42f26a3b2327af9cd201c13e96c0349"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler</a></div><div class="ttdeci">void logMsgHandler(QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</div><div class="ttdoc">Captures and routes one message delivered by Qt.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05191">Log.cpp:5191</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1console_html_a78d365c25a1a6a3fad98d83106f859ce"><div class="ttname"><a href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">anonymous_namespace{Log.cpp}::console::handle</a></div><div class="ttdeci">HANDLE handle()</div><div class="ttdoc">Returns the active console output handle when one is available.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l03281">Log.cpp:3281</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_a0e7a1c52414f3eb6ec881aa7ed7ce3f4"><div class="ttname"><a href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_totNs</a></div><div class="ttdeci">std::atomic_int64_t msgHdlrTiming_totNs</div><div class="ttdoc">Total handler time in nanoseconds since the last report.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05337">Log.cpp:5337</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_a42d5959c6c5c41621a5b0d51743de150"><div class="ttname"><a href="#a42d5959c6c5c41621a5b0d51743de150">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_appendTimeDelta</a></div><div class="ttdeci">bool msgHdlrTiming_appendTimeDelta(TextBuffer&lt; LineSize, NumLines &gt; &amp;buf, std::int64_t ns) noexcept</div><div class="ttdoc">Appends a timing value using a suitable time unit.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05359">Log.cpp:5359</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_a71fe7b9ac5c5410274b7d85542fdfd66"><div class="ttname"><a href="#a71fe7b9ac5c5410274b7d85542fdfd66">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_lock</a></div><div class="ttdeci">QReadWriteLock * msgHdlrTiming_lock</div><div class="ttdoc">Process-lifetime lock for timing updates and snapshots.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05336">Log.cpp:5336</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_a7cdc7a649174c2e0de0795627b21c0f9"><div class="ttname"><a href="#a7cdc7a649174c2e0de0795627b21c0f9">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_state</a></div><div class="ttdeci">std::atomic_bool msgHdlrTiming_state</div><div class="ttdoc">Whether message-handler timing is enabled.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05334">Log.cpp:5334</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_acb14cb2b0d9b4692da78884e59e6b160"><div class="ttname"><a href="#acb14cb2b0d9b4692da78884e59e6b160">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_logMsgHdlr</a></div><div class="ttdeci">void msgHdlrTiming_logMsgHdlr(QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</div><div class="ttdoc">Processes a log message and records the handler&#39;s execution time.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05341">Log.cpp:5341</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_aec8fa07b833669114b28399f8624e248"><div class="ttname"><a href="#aec8fa07b833669114b28399f8624e248">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_count</a></div><div class="ttdeci">std::atomic_int64_t msgHdlrTiming_count</div><div class="ttdoc">Number of timed logs since the last report.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05338">Log.cpp:5338</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_1_1testing_html_afd3c0ce383a5df1322733688fcea7e91"><div class="ttname"><a href="#afd3c0ce383a5df1322733688fcea7e91">anonymous_namespace{Log.cpp}::testing::msgHdlrTiming_timer</a></div><div class="ttdeci">QPointer&lt; QTimer &gt; msgHdlrTiming_timer</div><div class="ttdoc">Application-owned timer for timing reports.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05335">Log.cpp:5335</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_log_8cpp_03_html_ae42f26a3b2327af9cd201c13e96c0349"><div class="ttname"><a href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler</a></div><div class="ttdeci">void logMsgHandler(QtMsgType typ, const QMessageLogContext &amp;ctx, const QString &amp;msg) noexcept</div><div class="ttdoc">Captures and routes one message delivered by Qt.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_log_8cpp_source.html#l05180">Log.cpp:5180</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a411777f046c330f0e4baeadc1cbe7a37">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::appendDec_()</a>, <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a9de64045520458e033a5531e9d945949">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::appendRawText_()</a>, <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ae25159be3ca4845a11faf9b51e5fe88f">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::data_()</a>, <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#a46b52e95f4db87245237769af7192a77">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::finalizeAsNewLine_()</a>, <a class="el" href="../../d1/d38/namespaceanonymous__namespace_02_log_8cpp_03_1_1console.html#a78d365c25a1a6a3fad98d83106f859ce">anonymous_namespace{Log.cpp}::console::handle()</a>, <a class="el" href="#a42d5959c6c5c41621a5b0d51743de150">msgHdlrTiming_appendTimeDelta()</a>, <a class="el" href="#ac20ee2bdc8dc34582c2679a82f5c8e45">msgHdlrTiming_control()</a>, <a class="el" href="#aec8fa07b833669114b28399f8624e248">msgHdlrTiming_count</a>, <a class="el" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a>, <a class="el" href="#a7cdc7a649174c2e0de0795627b21c0f9">msgHdlrTiming_state</a>, <a class="el" href="#afd3c0ce383a5df1322733688fcea7e91">msgHdlrTiming_timer</a>, <a class="el" href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">msgHdlrTiming_totNs</a>, and <a class="el" href="../../d1/dd4/classanonymous__namespace_02_log_8cpp_03_1_1_text_buffer.html#ab7bba778ac4a5104350c8dd82a117cc9">anonymous_namespace{Log.cpp}::TextBuffer&lt; LineSize, LineCount &gt;::size_()</a>.</p>
 
@@ -432,21 +432,21 @@ Here is the caller graph for this function:</div>
 
 <p>Processes a log message and records the handler's execution time. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05352">5352</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 5353</span>    {</div>
-<div class="line"><span class="lineno"> 5354</span>      <span class="keyword">const</span> <span class="keyword">auto</span> t1 = std::chrono::steady_clock::now();</div>
-<div class="line"><span class="lineno"> 5355</span> </div>
-<div class="line"><span class="lineno"> 5356</span>      <a class="code hl_function" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">logMsgHandler</a>(typ, ctx, msg);</div>
-<div class="line"><span class="lineno"> 5357</span> </div>
-<div class="line"><span class="lineno"> 5358</span>      <span class="keyword">const</span> qint64 ns =</div>
-<div class="line"><span class="lineno"> 5359</span>        std::chrono::duration_cast&lt;std::chrono::nanoseconds&gt;(</div>
-<div class="line"><span class="lineno"> 5360</span>          std::chrono::steady_clock::now() - t1).count();</div>
-<div class="line"><span class="lineno"> 5361</span> </div>
-<div class="line"><span class="lineno"> 5362</span>      <span class="comment">// Allow concurrent logging, but prevent a report from splitting this time/count update.</span></div>
-<div class="line"><span class="lineno"> 5363</span>      <span class="keyword">const</span> QReadLocker locker{<a class="code hl_variable" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a>};</div>
-<div class="line"><span class="lineno"> 5364</span>      <a class="code hl_variable" href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">msgHdlrTiming_totNs</a>.fetch_add(ns, std::memory_order_relaxed);</div>
-<div class="line"><span class="lineno"> 5365</span>      <a class="code hl_variable" href="#aec8fa07b833669114b28399f8624e248">msgHdlrTiming_count</a>.fetch_add(1, std::memory_order_relaxed);</div>
-<div class="line"><span class="lineno"> 5366</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05341">5341</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5342</span>    {</div>
+<div class="line"><span class="lineno"> 5343</span>      <span class="keyword">const</span> <span class="keyword">auto</span> t1 = std::chrono::steady_clock::now();</div>
+<div class="line"><span class="lineno"> 5344</span> </div>
+<div class="line"><span class="lineno"> 5345</span>      <a class="code hl_function" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">logMsgHandler</a>(typ, ctx, msg);</div>
+<div class="line"><span class="lineno"> 5346</span> </div>
+<div class="line"><span class="lineno"> 5347</span>      <span class="keyword">const</span> qint64 ns =</div>
+<div class="line"><span class="lineno"> 5348</span>        std::chrono::duration_cast&lt;std::chrono::nanoseconds&gt;(</div>
+<div class="line"><span class="lineno"> 5349</span>          std::chrono::steady_clock::now() - t1).count();</div>
+<div class="line"><span class="lineno"> 5350</span> </div>
+<div class="line"><span class="lineno"> 5351</span>      <span class="comment">// Allow concurrent logging, but prevent a report from splitting this time/count update.</span></div>
+<div class="line"><span class="lineno"> 5352</span>      <span class="keyword">const</span> QReadLocker locker{<a class="code hl_variable" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a>};</div>
+<div class="line"><span class="lineno"> 5353</span>      <a class="code hl_variable" href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">msgHdlrTiming_totNs</a>.fetch_add(ns, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno"> 5354</span>      <a class="code hl_variable" href="#aec8fa07b833669114b28399f8624e248">msgHdlrTiming_count</a>.fetch_add(1, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno"> 5355</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dc/d8e/namespaceanonymous__namespace_02_log_8cpp_03.html#ae42f26a3b2327af9cd201c13e96c0349">anonymous_namespace{Log.cpp}::logMsgHandler()</a>, <a class="el" href="#aec8fa07b833669114b28399f8624e248">msgHdlrTiming_count</a>, <a class="el" href="#a71fe7b9ac5c5410274b7d85542fdfd66">msgHdlrTiming_lock</a>, <a class="el" href="#acb14cb2b0d9b4692da78884e59e6b160">msgHdlrTiming_logMsgHdlr()</a>, and <a class="el" href="#a0e7a1c52414f3eb6ec881aa7ed7ce3f4">msgHdlrTiming_totNs</a>.</p>
 
@@ -479,8 +479,8 @@ Here is the caller graph for this function:</div>
 
 <p>Number of timed logs since the last report. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05349">5349</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 5349</span>{0}; <span class="comment">///&lt; Number of timed logs since the last report.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05338">5338</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5338</span>{0}; <span class="comment">///&lt; Number of timed logs since the last report.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ac20ee2bdc8dc34582c2679a82f5c8e45">msgHdlrTiming_control()</a>, and <a class="el" href="#acb14cb2b0d9b4692da78884e59e6b160">msgHdlrTiming_logMsgHdlr()</a>.</p>
 
@@ -500,8 +500,8 @@ Here is the caller graph for this function:</div>
 
 <p>Process-lifetime lock for timing updates and snapshots. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05347">5347</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 5347</span>{<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Process-lifetime lock for timing updates and snapshots.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05336">5336</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5336</span>{<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Process-lifetime lock for timing updates and snapshots.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ac20ee2bdc8dc34582c2679a82f5c8e45">msgHdlrTiming_control()</a>, and <a class="el" href="#acb14cb2b0d9b4692da78884e59e6b160">msgHdlrTiming_logMsgHdlr()</a>.</p>
 
@@ -521,8 +521,8 @@ Here is the caller graph for this function:</div>
 
 <p>Whether message-handler timing is enabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05345">5345</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 5345</span>{<span class="keyword">false</span>}; <span class="comment">///&lt; Whether message-handler timing is enabled.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05334">5334</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5334</span>{<span class="keyword">false</span>}; <span class="comment">///&lt; Whether message-handler timing is enabled.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d5/ddd/namespacenpi_1_1log.html#ab4926696faa7a7ccf951b38335ecae0d">npi::log::msgHandlerTimingEnabled()</a>, and <a class="el" href="#ac20ee2bdc8dc34582c2679a82f5c8e45">msgHdlrTiming_control()</a>.</p>
 
@@ -542,8 +542,8 @@ Here is the caller graph for this function:</div>
 
 <p>Application-owned timer for timing reports. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05346">5346</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 5346</span>{<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Application-owned timer for timing reports.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05335">5335</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5335</span>{<span class="keyword">nullptr</span>}; <span class="comment">///&lt; Application-owned timer for timing reports.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ac20ee2bdc8dc34582c2679a82f5c8e45">msgHdlrTiming_control()</a>.</p>
 
@@ -563,8 +563,8 @@ Here is the caller graph for this function:</div>
 
 <p>Total handler time in nanoseconds since the last report. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05348">5348</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 5348</span>{0}; <span class="comment">///&lt; Total handler time in nanoseconds since the last report.</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da7/_log_8cpp_source.html#l05337">5337</a> of file <a class="el" href="../../d0/da7/_log_8cpp_source.html">Log.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 5337</span>{0}; <span class="comment">///&lt; Total handler time in nanoseconds since the last report.</span></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#ac20ee2bdc8dc34582c2679a82f5c8e45">msgHdlrTiming_control()</a>, and <a class="el" href="#acb14cb2b0d9b4692da78884e59e6b160">msgHdlrTiming_logMsgHdlr()</a>.</p>
 

@@ -1,0 +1,13 @@
+<map id="anonymous_namespace{Gui::cpp}::TreeBranchSelection::TreeBranchSelection" name="anonymous_namespace{Gui::cpp}::TreeBranchSelection::TreeBranchSelection">
+<area shape="rect" id="Node000001" title="Starts tracking the tree&#39;s selected paths." alt="" coords="1011,60,1600,86"/>
+<area shape="rect" id="Node000002" href="$de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection.html#a44e32e458672404e5f84f5f7ae704676" title="Finds the selection&#45;path helper attached to the tree." alt="" coords="693,45,963,101"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1000,73,962,76,962,71,1005,73"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws custom backgrounds, frames and indicators." alt="" coords="464,5,645,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="683,52,645,49,645,44,688,52"/>
+<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies widget customizations, dynamic icons and event filters." alt="" coords="464,85,645,141"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="688,94,646,103,645,97,683,94"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,5,416,61"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="454,34,416,36,415,31,459,33"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,5,187,61"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="225,34,187,36,186,31,230,32"/>
+</map>

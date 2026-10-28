@@ -49,7 +49,7 @@
 <script type="application/ecmascript">
 var viewWidth = 514;
 var viewHeight = 57;
-var sectionId = 'dynsection-17';
+var sectionId = 'dynsection-21';
 </script>
 <script type="application/ecmascript" xlink:href="../../svg.min.js"/>
 <svg id="graph" class="graph">
@@ -58,7 +58,7 @@ var sectionId = 'dynsection-17';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Returns whether the widget is inside an item view.">
+<g id="a_Node000001"><a xlink:title="Returns whether the widget has an item&#45;view viewport ancestor within its window.">
 <polygon fill="#999999" stroke="none" points="506,-30.5 172,-30.5 172,-11.25 506,-11.25 506,-30.5"/>
 <text xml:space="preserve" text-anchor="start" x="180" y="-17.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::item::isInsideItemView</text>
 </a>

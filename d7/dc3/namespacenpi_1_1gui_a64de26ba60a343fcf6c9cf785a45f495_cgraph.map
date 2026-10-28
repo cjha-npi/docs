@@ -1,0 +1,11 @@
+<map id="npi::gui::themeAction" name="npi::gui::themeAction">
+<area shape="rect" id="Node000001" title="Returns the shared checkable action for selecting a theme." alt="" coords="5,37,195,62"/>
+<area shape="rect" id="Node000002" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="432,29,613,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,47,425,47,423,52,195,52"/>
+<area shape="rect" id="Node000004" href="$d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea" title="Returns the configured theme; System remains System regardless of background." alt="" coords="243,62,384,88"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="194,58,237,66,232,66,194,64"/>
+<area shape="rect" id="Node000003" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35" title="Loads the bundled JetBrains Mono fonts once." alt="" coords="661,29,891,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="613,47,656,50,651,50,613,52"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="730,28,726,20,733,11,750,5,776,3,813,8,823,14,826,24,821,21,819,17,811,13,776,8,751,10,736,15,731,21,734,31"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="383,64,422,62,427,61,384,69"/>
+</map>

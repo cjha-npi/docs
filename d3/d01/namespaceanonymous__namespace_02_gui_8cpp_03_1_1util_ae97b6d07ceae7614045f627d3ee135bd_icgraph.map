@@ -1,0 +1,13 @@
+<map id="anonymous_namespace{Gui::cpp}::util::isCompleterPopup" name="anonymous_namespace{Gui::cpp}::util::isCompleterPopup">
+<area shape="rect" id="Node000001" title="Checks whether the widget is a completer popup." alt="" coords="693,42,1139,67"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="977,36,981,31,974,26,952,22,916,20,877,22,855,27,851,33,863,42,858,41,846,34,852,23,876,17,916,15,953,17,976,21,986,30,980,40"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,35,416,90"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="854,40,778,27,680,14,572,8,518,11,465,17,393,37,391,32,463,12,517,5,572,3,681,8,779,22,859,40"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies widget customizations, dynamic icons and event filters." alt="" coords="464,27,645,82"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="683,55,645,57,645,52,688,54"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2" title="Adjusts widget layout areas to match the custom drawing." alt="" coords="464,107,645,162"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="852,69,646,117,645,112,847,69"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,35,187,90"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,63,187,65,186,60,230,62"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="456,104,414,93,414,88,461,104"/>
+</map>

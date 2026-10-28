@@ -1,22 +1,27 @@
 <map id="anonymous_namespace{Gui::cpp}::GuiStyle::themeData_" name="anonymous_namespace{Gui::cpp}::GuiStyle::themeData_">
-<area shape="rect" id="Node000001" title="Returns the current theme&#39;s colors and drawing resources." alt="" coords="725,191,1155,217"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Customizes spin boxes, scrollbars and tool buttons." alt="" coords="496,5,677,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="902,188,644,63,645,58,908,187"/>
-<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="251,273,432,329"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="902,219,800,256,740,273,678,286,549,301,432,305,431,300,549,296,677,281,738,268,799,251,897,220"/>
-<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws custom backgrounds, frames and indicators." alt="" coords="251,104,432,160"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="898,188,800,156,739,139,677,126,627,121,587,121,496,126,433,129,431,124,496,121,587,116,627,116,678,121,740,134,802,151,903,188"/>
-<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4888d2aea9865b338bffa49c0eae7541" title="Returns the current theme palette." alt="" coords="496,216,677,272"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="816,218,677,236,677,231,821,217"/>
-<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aba99add909d785d46d3584564b9026ae" title="Uses the theme&#39;s table grid color and default hints for everything else." alt="" coords="496,347,677,402"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="908,220,646,349,644,344,902,221"/>
-<area shape="rect" id="Node000009" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aeed4bac894458e065e60749347901058" title="Returns the current surface colors." alt="" coords="496,136,677,192"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="816,191,677,177,677,171,821,190"/>
-<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="485,345,432,331,432,325,491,345"/>
-<area shape="rect" id="Node000007" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a5455de9152e1844327a77374755f92c0" title="Returns whether a button should automatically request square sizing." alt="" coords="235,353,448,409"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="485,377,448,381,448,376,491,377"/>
-<area shape="rect" id="Node000008" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Adjusts control sizes for consistent heights, spacing and square buttons." alt="" coords="5,353,187,409"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="224,381,187,384,186,379,230,381"/>
-<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="515,194,497,206,384,276,381,271,495,202,511,196"/>
-<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="486,152,432,146,431,141,491,150"/>
+<area shape="rect" id="Node000001" title="Returns the current theme&#39;s colors and drawing resources." alt="" coords="923,206,1352,231"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,27,187,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1106,201,1006,146,941,112,874,82,782,49,702,26,630,13,562,8,492,10,417,17,235,38,188,44,185,40,234,33,417,11,492,5,562,3,631,8,704,21,784,44,876,77,943,108,1009,141,1111,202"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,164,416,220"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1117,235,1074,270,1017,309,949,346,875,373,759,401,710,407,664,409,618,403,571,392,520,372,463,345,423,318,389,285,362,251,342,222,344,217,366,248,393,282,427,314,465,340,522,367,573,386,619,398,664,403,710,402,758,395,874,368,946,341,1014,304,1071,266,1112,237"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a81bd6a43b047e4cdb25f09dbc6eb6748" title="Draws custom backgrounds, frames and indicators." alt="" coords="464,237,645,293"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="1031,205,959,201,873,199,783,202,694,213,620,240,618,235,693,208,782,196,873,193,959,196,1037,205"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4888d2aea9865b338bffa49c0eae7541" title="Returns the current theme palette." alt="" coords="693,223,875,278"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="985,232,875,245,874,240,990,232"/>
+<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aba99add909d785d46d3584564b9026ae" title="Uses the theme&#39;s table grid color and default hints for everything else." alt="" coords="693,92,875,148"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="1080,204,874,148,875,142,1085,203"/>
+<area shape="rect" id="Node000009" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aeed4bac894458e065e60749347901058" title="Returns the current surface colors." alt="" coords="693,303,875,358"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="1091,233,873,305,872,300,1086,234"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="269,161,143,85,143,80,273,158"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="457,235,412,222,412,217,463,235"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="683,122,579,131,465,148,398,167,396,162,463,143,578,126,688,121"/>
+<area shape="poly" id="edge9_Node000006_Node000004" title=" " alt="" coords="717,150,695,169,681,183,672,198,663,212,647,227,628,240,625,235,644,223,658,209,667,195,676,180,692,164,712,153"/>
+<area shape="rect" id="Node000007" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3" title="Provides custom control spacing, icon sizes and scrollbar dimensions." alt="" coords="464,27,645,82"/>
+<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="683,92,645,83,645,78,688,92"/>
+<area shape="rect" id="Node000008" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Adjusts control sizes for consistent heights, spacing and square buttons." alt="" coords="464,157,645,213"/>
+<area shape="poly" id="edge13_Node000006_Node000008" title=" " alt="" coords="683,149,646,162,644,157,688,147"/>
+<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="455,57,187,57,186,52,458,52"/>
+<area shape="poly" id="edge12_Node000007_Node000003" title=" " alt="" coords="489,87,465,103,368,166,365,162,463,99,493,85"/>
+<area shape="poly" id="edge15_Node000009_Node000003" title=" " alt="" coords="683,338,633,340,576,335,518,325,463,308,429,290,398,268,350,222,351,217,401,263,432,285,465,303,520,320,577,330,633,334,688,338"/>
+<area shape="poly" id="edge16_Node000009_Node000004" title=" " alt="" coords="683,303,645,294,645,288,688,303"/>
 </map>

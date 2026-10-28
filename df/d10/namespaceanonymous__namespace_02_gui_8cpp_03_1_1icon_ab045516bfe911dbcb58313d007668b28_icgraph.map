@@ -1,30 +1,32 @@
 <map id="anonymous_namespace{Gui::cpp}::icon::copyIconState" name="anonymous_namespace{Gui::cpp}::icon::copyIconState">
-<area shape="rect" id="Node000001" title="Copies the normal&#45;mode pixmaps for one icon state." alt="" coords="1235,152,1656,178"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1510,147,1515,142,1508,137,1484,133,1445,131,1403,133,1380,138,1376,141,1376,143,1389,153,1384,152,1371,145,1372,138,1378,134,1403,128,1445,126,1485,127,1510,132,1520,141,1513,152"/>
-<area shape="rect" id="Node000002" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, using the original icon for missing states." alt="" coords="933,145,1187,186"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="1224,165,1187,168,1186,163,1229,165"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="1119,137,1116,133,1106,128,1060,123,1028,126,1009,131,1002,137,1006,146,1001,144,997,136,1006,126,1027,120,1060,118,1107,123,1120,130,1123,139"/>
-<area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab5ad1d329be0a1bc2362718e85487f8a" title="Updates a button&#39;s icon for the selected theme." alt="" coords="235,76,536,116"/>
-<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="923,153,536,114,536,109,928,150"/>
-<area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0" title="Updates an action&#39;s icon for the selected theme." alt="" coords="584,185,885,226"/>
-<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="923,182,885,189,884,184,928,181"/>
-<area shape="poly" id="edge14_Node000004_Node000003" title=" " alt="" coords="678,182,611,157,535,130,492,119,491,113,537,125,613,152,683,182"/>
-<area shape="poly" id="edge15_Node000004_Node000004" title=" " alt="" coords="793,177,791,173,781,168,735,163,703,166,683,171,676,177,680,186,676,184,671,176,681,166,702,160,735,158,782,163,794,170,798,179"/>
-<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8" title="Applies the selected theme and refreshes palettes and dynamic icons." alt="" coords="295,140,476,196"/>
-<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="574,189,476,180,475,175,579,188"/>
-<area shape="rect" id="Node000009" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies widget customizations, dynamic icons and event filters." alt="" coords="5,245,187,301"/>
-<area shape="poly" id="edge10_Node000004_Node000009" title=" " alt="" coords="576,225,187,266,186,261,577,219"/>
-<area shape="rect" id="Node000010" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4b3ce8806a9c3a1bc5f3cbfddfb3d927" title="Updates an action&#39;s icon and tracks it for future theme changes." alt="" coords="279,271,492,326"/>
-<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="653,227,491,273,489,268,648,228"/>
-<area shape="rect" id="Node000012" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a557291b8beefba625196706b350f13cd" title="Updates a label&#39;s pixmap when a matching icon resource is found." alt="" coords="235,350,536,391"/>
-<area shape="poly" id="edge16_Node000004_Node000012" title=" " alt="" coords="707,229,632,288,586,316,537,341,504,353,502,348,535,336,583,312,629,283,702,231"/>
-<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf" title="Applies the initial theme and sets up the application icon and native event filter." alt="" coords="5,5,187,61"/>
-<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="284,152,233,130,217,117,208,103,199,89,185,75,168,64,167,58,188,71,203,86,212,100,221,113,236,126,290,150"/>
-<area shape="rect" id="Node000007" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" title="Updates the application theme when Windows changes and System mode is selected." alt="" coords="5,85,187,141"/>
-<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="285,151,187,133,186,128,289,148"/>
-<area shape="rect" id="Node000008" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Sets the requested application theme." alt="" coords="5,165,187,221"/>
-<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="285,178,187,188,186,183,289,175"/>
-<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="268,290,187,284,186,278,273,287"/>
-<area shape="rect" id="Node000011" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and newly added actions and children." alt="" coords="5,325,187,381"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="268,321,187,339,186,334,274,319"/>
+<area shape="rect" id="Node000001" title="Copies the normal&#45;mode pixmaps for one icon state." alt="" coords="1464,152,1885,178"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1739,147,1744,142,1737,137,1714,133,1675,131,1633,133,1609,138,1606,141,1605,143,1618,153,1613,152,1600,145,1601,138,1607,134,1632,128,1675,126,1714,127,1739,132,1750,141,1742,152"/>
+<area shape="rect" id="Node000002" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, falling back to original normal&#45;mode pixmaps for missing resources." alt="" coords="1163,145,1416,186"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="1453,165,1416,168,1416,163,1459,165"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="1348,137,1345,133,1335,128,1289,123,1257,126,1238,131,1231,137,1235,146,1230,144,1226,136,1235,126,1256,120,1289,118,1337,123,1349,130,1353,139"/>
+<area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab5ad1d329be0a1bc2362718e85487f8a" title="Updates a button&#39;s icon for the selected theme." alt="" coords="464,76,765,116"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="1152,152,765,114,765,109,1157,151"/>
+<area shape="rect" id="Node000004" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a2e96e3d71c1a39270063255dcbebb6b0" title="Updates an action&#39;s icon for the selected theme." alt="" coords="813,185,1115,226"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="1152,182,1115,189,1114,184,1158,181"/>
+<area shape="poly" id="edge15_Node000004_Node000003" title=" " alt="" coords="907,182,841,157,765,130,721,119,721,113,766,125,843,152,913,182"/>
+<area shape="poly" id="edge16_Node000004_Node000004" title=" " alt="" coords="1023,177,1020,173,1010,168,964,163,932,166,913,171,906,177,910,186,905,184,901,176,910,166,931,160,964,158,1011,163,1024,170,1027,179"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8" title="Applies the selected theme and refreshes palettes and dynamic icons." alt="" coords="524,140,705,196"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="803,189,705,180,705,175,808,188"/>
+<area shape="rect" id="Node000010" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4916bfb866e50b48c34f31cc931fd903" title="Applies widget customizations, dynamic icons and event filters." alt="" coords="235,245,416,301"/>
+<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="804,224,416,266,416,261,808,220"/>
+<area shape="rect" id="Node000011" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4b3ce8806a9c3a1bc5f3cbfddfb3d927" title="Updates an action&#39;s icon and tracks it for future theme changes." alt="" coords="508,271,721,326"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="882,227,720,273,719,268,877,228"/>
+<area shape="rect" id="Node000013" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#a557291b8beefba625196706b350f13cd" title="Updates a label&#39;s pixmap when a matching icon resource is found." alt="" coords="464,350,765,391"/>
+<area shape="poly" id="edge17_Node000004_Node000013" title=" " alt="" coords="936,229,862,288,815,316,766,341,733,353,732,348,764,336,813,312,858,283,931,231"/>
+<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf" title="Applies the initial theme, sets the application icon and starts watching system changes." alt="" coords="235,5,416,61"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="514,151,463,130,447,117,437,103,429,89,414,75,397,64,397,58,418,71,433,86,442,100,451,113,465,126,519,151"/>
+<area shape="rect" id="Node000007" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" title="Refreshes the application theme when Windows theme settings change in System mode." alt="" coords="235,85,416,141"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="514,150,416,133,416,127,519,149"/>
+<area shape="rect" id="Node000008" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Changes the application theme and updates the shared actions." alt="" coords="235,165,416,221"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="514,177,416,188,415,183,519,176"/>
+<area shape="rect" id="Node000009" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662" title="Sets up the style, theme resources and shared theme actions." alt="" coords="5,165,187,221"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="225,194,187,196,186,191,230,192"/>
+<area shape="poly" id="edge14_Node000011_Node000010" title=" " alt="" coords="497,289,416,284,416,278,503,288"/>
+<area shape="rect" id="Node000012" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and changes to actions and children." alt="" coords="235,325,416,381"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="503,320,416,339,415,334,498,320"/>
 </map>

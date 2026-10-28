@@ -1,12 +1,15 @@
 <map id="anonymous_namespace{Gui::cpp}::size::dataForFont" name="anonymous_namespace{Gui::cpp}::size::dataForFont">
-<area shape="rect" id="Node000001" title="Calculates control and icon sizes from the font size and height limits." alt="" coords="693,60,1099,86"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="954,54,957,50,950,45,930,41,896,39,859,41,839,46,835,51,846,61,841,60,830,52,836,42,858,36,896,34,931,35,953,40,962,49,957,59"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" title="Returns control sizes based on the widget&#39;s font and height limits." alt="" coords="464,45,645,101"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="683,73,645,76,645,71,688,73"/>
-<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3" title="Provides custom control spacing, icon sizes and scrollbar dimensions." alt="" coords="235,5,416,61"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="454,56,416,52,416,46,459,56"/>
-<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Adjusts control sizes for consistent heights, spacing and square buttons." alt="" coords="235,85,416,141"/>
-<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="459,90,416,100,415,95,454,91"/>
-<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="5,5,187,61"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="225,34,187,36,186,31,230,32"/>
+<area shape="rect" id="Node000001" title="Calculates control and icon sizes from the font size and height limits." alt="" coords="923,60,1328,86"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1183,54,1187,50,1180,45,1159,41,1125,39,1088,41,1068,46,1064,51,1076,61,1071,60,1059,52,1065,42,1087,36,1125,34,1160,35,1182,40,1192,49,1186,59"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c9745ba8ac266d59d3385bf28f05daf" title="Returns control sizes based on the widget&#39;s font and height limits." alt="" coords="693,45,875,101"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="912,73,875,76,875,71,918,73"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3" title="Provides custom control spacing, icon sizes and scrollbar dimensions." alt="" coords="464,5,645,61"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="683,56,645,52,645,46,688,56"/>
+<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31" title="Adjusts control sizes for consistent heights, spacing and square buttons." alt="" coords="464,85,645,141"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="688,90,645,100,645,95,683,91"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,7,187,62"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="454,28,416,29,235,29,187,31,186,26,235,24,416,24,459,28"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,39,416,94"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="454,48,416,56,415,51,459,47"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="225,53,187,50,186,44,230,52"/>
 </map>

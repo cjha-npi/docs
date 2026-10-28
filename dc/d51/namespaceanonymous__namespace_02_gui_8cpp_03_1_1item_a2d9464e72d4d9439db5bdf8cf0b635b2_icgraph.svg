@@ -58,7 +58,7 @@ var sectionId = 'dynsection-1';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Suppresses a grouped widget&#39;s background unless it has its own base.">
+<g id="a_Node000001"><a xlink:title="Suppresses a grouped widget&#39;s background unless it declares a sunken or raised base.">
 <polygon fill="#999999" stroke="none" points="934,-54.5 618,-54.5 618,-35.25 934,-35.25 934,-54.5"/>
 <text xml:space="preserve" text-anchor="start" x="626" y="-41.05" font-family="Consolas" font-weight="bold" font-size="11.00">anonymous_namespace{Gui::cpp}::item::applyBaseItem</text>
 </a>
@@ -124,7 +124,7 @@ var sectionId = 'dynsection-1';
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" target="_top" xlink:title="Handles widget updates, wheel forwarding and newly added actions and children.">
+<g id="a_Node000003"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" target="_top" xlink:title="Handles widget updates, wheel forwarding and changes to actions and children.">
 <polygon fill="white" stroke="none" points="338,-113.75 202,-113.75 202,-72 338,-72 338,-113.75"/>
 <text xml:space="preserve" text-anchor="start" x="210" y="-99.3" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="210" y="-88.05" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>

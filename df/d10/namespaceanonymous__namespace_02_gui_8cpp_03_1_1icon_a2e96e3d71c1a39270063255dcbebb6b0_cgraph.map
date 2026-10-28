@@ -1,7 +1,7 @@
 <map id="anonymous_namespace{Gui::cpp}::icon::updateDynamicIcon" name="anonymous_namespace{Gui::cpp}::icon::updateDynamicIcon">
 <area shape="rect" id="Node000001" title="Updates an action&#39;s icon for the selected theme." alt="" coords="5,92,459,118"/>
 <area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="168,93,155,85,155,78,162,74,187,68,232,66,273,67,299,72,310,81,302,91,299,87,305,82,297,77,273,73,232,71,188,73,164,79,160,81,160,83,173,92"/>
-<area shape="rect" id="Node000002" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, using the original icon for missing states." alt="" coords="507,85,760,126"/>
+<area shape="rect" id="Node000002" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, falling back to original normal&#45;mode pixmaps for missing resources." alt="" coords="507,85,760,126"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,103,501,105,496,105,458,108"/>
 <area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="576,84,571,76,581,66,601,60,633,58,680,63,692,70,695,80,690,77,688,73,678,68,633,63,602,66,583,71,577,77,580,86"/>
 <area shape="rect" id="Node000003" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" title="Copies the normal&#45;mode pixmaps for one icon state." alt="" coords="836,29,1065,85"/>

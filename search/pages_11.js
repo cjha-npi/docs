@@ -1,7 +1,7 @@
 var searchData=
 [
   ['save_0',['Backup Solution Code on Save',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__backup_sol_code_on_save',1,'']]],
-  ['section_1',['Section',['../d3/df8/dp_dh_dev_hub_overview.html#autotoc_md8',1,'Expandable Details Section'],['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__special_text_section',1,'Special Text Section']]],
+  ['section_1',['Section',['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__expandable_details_section',1,'Expandable Details Section'],['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__special_text_section',1,'Special Text Section']]],
   ['settings_2',['Settings',['../d4/d14/dp_dh_rm_sys_graphs_overview.html#dp_dh_rm_sys_graphs_overview__rainmeter_settings',1,'Rainmeter Settings'],['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__vs_proj_settings',1,'VS Project Settings']]],
   ['setup_3',['Setup',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__tips_tweaks__dox_ext_setup',1,'Dox Extension Setup'],['../d4/d3b/dp_dh_project_setup.html',1,'Project Setup'],['../de/d99/dp_dep_imp_log_process.html#dp_dep_imp_log_process__setup',1,'Setup'],['../d7/d32/dp_dh_git_pre_push_hook.html#dp_dh_git_pre_push_hook__setup',1,'Setup'],['../d3/d4c/dp_dh_system_setup.html',1,'System Setup'],['../d7/d3c/dp_dh_vs_setup.html',1,'Visual Studio Setup'],['../d3/dba/dp_dh_vs_code_setup.html',1,'VS Code Setup']]],
   ['setups_4',['Setups',['../df/d27/dp_dh_dir_setups.html',1,'dp_dh_dir_dev_hub']]],
@@ -15,8 +15,8 @@ var searchData=
   ['skin_20file_12',['Rainmeter Skin File',['../d5/da9/dp_dh_rm_sys_graphs_skin_file.html',1,'dp_dh_dir_rm_sys_graphs']]],
   ['solution_20code_20on_20save_13',['Backup Solution Code on Save',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__backup_sol_code_on_save',1,'']]],
   ['sophos_20dll_14',['Sophos DLL',['../d7/d3c/dp_dh_vs_setup.html#dp_dh_vs_setup__bug_sophos_dll',1,'BUG: Sophos DLL'],['../dc/d96/dp_dh_bugs.html#_dp_dh_bugs000003',1,'BUG: Sophos DLL']]],
-  ['source_15',['Source',['../d2/d5a/dp_dh_rm_sys_graphs_dll_plugin_source.html',1,'DLL Plugin Source'],['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__hide_xrefitem_at_source',1,'Hide xrefitem Text at Source'],['../d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_source',1,'Parent Side Source']]],
-  ['special_20text_20section_16',['Special Text Section',['../d3/df8/dp_dh_dev_hub_overview.html#dp_dh_dev_hub_overview__markdown_tips_tweaks__special_text_section',1,'']]],
+  ['source_15',['Source',['../d2/d5a/dp_dh_rm_sys_graphs_dll_plugin_source.html',1,'DLL Plugin Source'],['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__hide_xrefitem_at_source',1,'Hide xrefitem Text at Source'],['../d1/da3/dp_dep_msg_box_process.html#dp_dep_msg_box_process__par_side_source',1,'Parent Side Source']]],
+  ['special_20text_20section_16',['Special Text Section',['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__special_text_section',1,'']]],
   ['storage_17',['Storage',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__browser_storage',1,'Browser Storage'],['../d6/d75/dp_arch_log_system.html#dp_arch_log_system__configuration_and_storage',1,'Configuration and Storage']]],
   ['structure_18',['Structure',['../d4/d3b/dp_dh_project_setup.html#dp_dh_project_setup__example_structure',1,'Example Structure'],['../d3/d4c/dp_dh_system_setup.html#dp_dh_system_setup__structure',1,'Structure']]],
   ['studio_20setup_19',['Visual Studio Setup',['../d7/d3c/dp_dh_vs_setup.html',1,'dp_dh_dir_setups']]],

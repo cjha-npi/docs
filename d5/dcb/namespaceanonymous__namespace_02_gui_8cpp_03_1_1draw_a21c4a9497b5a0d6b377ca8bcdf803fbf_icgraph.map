@@ -1,9 +1,11 @@
 <map id="anonymous_namespace{Gui::cpp}::draw::coloredPixmap" name="anonymous_namespace{Gui::cpp}::draw::coloredPixmap">
-<area shape="rect" id="Node000001" title="Recolors a pixmap while preserving its shape and transparency." alt="" coords="512,37,933,62"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="786,31,790,26,783,22,760,17,723,15,682,18,660,23,656,28,668,38,663,36,650,29,657,18,681,12,723,10,761,12,785,17,795,25,788,36"/>
-<area shape="rect" id="Node000002" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#acbfcb721bc6f25afe2f86f5b7c540da8" title="Recolors a menu icon using normal and disabled text colors." alt="" coords="235,29,464,70"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="501,50,464,52,464,47,507,50"/>
-<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="394,21,392,17,384,13,349,8,325,10,310,15,305,21,308,31,303,28,299,20,307,11,323,5,349,3,386,8,396,14,399,23"/>
-<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="5,22,187,78"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="224,50,187,52,186,47,229,49"/>
+<area shape="rect" id="Node000001" title="Recolors a pixmap using its existing alpha as a mask." alt="" coords="741,37,1163,62"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1015,31,1019,26,1012,22,989,17,952,15,911,18,889,23,885,28,897,38,892,36,880,29,886,18,911,12,952,10,990,12,1014,17,1025,25,1018,36"/>
+<area shape="rect" id="Node000002" href="$d5/dcb/namespaceanonymous__namespace_02_gui_8cpp_03_1_1draw.html#acbfcb721bc6f25afe2f86f5b7c540da8" title="Recolors a menu icon using normal and disabled text colors." alt="" coords="464,29,693,70"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="731,50,693,52,693,47,736,50"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="624,21,621,17,614,13,579,8,554,10,539,15,534,21,537,31,532,28,529,20,536,11,553,5,579,3,615,8,625,14,628,24"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836" title="Draws controls using the application&#39;s styling." alt="" coords="235,22,416,78"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="453,50,416,52,416,47,459,50"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0" title="Draws custom backgrounds and controls for compound widgets." alt="" coords="5,22,187,78"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="224,50,187,52,186,47,230,49"/>
 </map>

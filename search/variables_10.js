@@ -4,6 +4,7 @@ var searchData=
   ['raised_5f_1',['raised_',['../d7/dc3/namespacenpi_1_1gui.html#a0a0fd1396ec2b0a4be1530be886f7709',1,'npi::gui::Surfaces']]],
   ['raisedbase_5f_2',['RaisedBase_',['../d6/d46/structnpi_1_1gui_1_1_props.html#a90216d3fc19f8f2f968a24ab4f43fac7',1,'npi::gui::Props']]],
   ['red_5f_3',['red_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#af3de79c8deeafb390436cf03304eb85a',1,'npi::wid::ColorPicker::Config']]],
-  ['roundedarrowradius_4',['roundedArrowRadius',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a28d34b6dddd9bcebafece59dc4bf9bef',1,'anonymous_namespace{Gui.cpp}']]],
-  ['run_5f_5',['run_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae915790053bf47e35da3d097f61e22eb',1,'anonymous_namespace{Log.cpp}::LeakedState']]]
+  ['rightbutton_5f_4',['rightButton_',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a4d65a68af93d6f145a40b7403e088491',1,'anonymous_namespace{Gui.cpp}::TabLabelRects']]],
+  ['roundedarrowradius_5',['roundedArrowRadius',['../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a28d34b6dddd9bcebafece59dc4bf9bef',1,'anonymous_namespace{Gui.cpp}']]],
+  ['run_5f_6',['run_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#ae915790053bf47e35da3d097f61e22eb',1,'anonymous_namespace{Log.cpp}::LeakedState']]]
 ];

@@ -250,6 +250,8 @@ html {
   --dp-footer-link-separation-color: var(--dp-scrollbar-color); /* separator of links in footer */
   --dp-details-background-color: rgb(0, 0, 0, 0.15); /* Background of details when expanded */
   --dp-table-header-color: rgb(210, 230, 250); /* Table header background */
+  --dp-table-warning-header-color: #dd820a31; /* Table header background for warnings */
+  --dp-table-danger-header-color: #dd0a0a31; /* Table header background for stop/restrictions */
 
   /* Doxy-Plus Text Colors */
   --dp-disabled-text-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
@@ -291,6 +293,8 @@ html.dark-mode {
   --dp-footer-link-separation-color: var(--separator-color); /* separator of links in footer */
   --dp-details-background-color: rgb(20, 30, 40); /* Background of details when expanded */
   --dp-table-header-color: rgb(20, 40, 60); /* Table header background */
+  --dp-table-warning-header-color: #dd820a31; /* Table header background for warnings */
+  --dp-table-danger-header-color: #dd0a0a31; /* Table header background for stop/restrictions */
 
   /* Doxy-Plus Text Colors */
   --dp-disabled-text-color: rgb(120, 120, 120); /* disabled entries in root and leaf panes */
@@ -1128,6 +1132,12 @@ body .header > .headertitle > .title {
   margin: 0px !important;
 }
 
+/* Keep cell contents non-rounded */
+#doc-content table tr > th,
+#doc-content table tr > td {
+  border-radius: 0 !important;
+}
+
 #doc-content table th:not(:has(h2)),
 #doc-content table td:not(:has(h2)) {
   padding: 0px 5px;
@@ -1143,6 +1153,25 @@ body .header > .headertitle > .title {
 
 #doc-content table th{
   background: var(--dp-table-header-color);
+}
+
+#doc-content table th.dp-table-warning {
+  background-color: var(--dp-table-warning-header-color);
+}
+
+#doc-content table th.dp-table-danger {
+  background-color: var(--dp-table-danger-header-color);
+}
+
+/* Vertical labels spanning a group of rows. */
+#doc-content table th.dp-table-vertical {
+  width: 32px;
+  font-size: 120%;
+  writing-mode: sideways-lr;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-bottom: none;
 }
 
 /*
@@ -1529,7 +1558,7 @@ span.tt{
   border: none;
   border-radius: var(--dp-border-radius-l);
   padding: 4px 6px; /* top and bottom | left and right */
-  margin: 8px 0; /* top and bottom | left and right */
+  margin: 5px 0; /* top and bottom | left and right */
   /* Transparent border because otherwise the scrollbar
   is at the edge. Since we use the 4px border, I have
   reduced all padding above by 4px. */
@@ -1862,6 +1891,10 @@ value for just this span here. */
 details {
   margin-left: 2px;
   margin-top: 4px;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
 }
 
 details > summary,
@@ -1922,6 +1955,8 @@ details > summary::-webkit-details-marker {
 }
 
 details > summary::before {
+  position: relative;
+  top: 1px;
   content: "\2192";
   font-family: var(--font-family-monospace);
   font-size: 1.1em;
@@ -1929,6 +1964,8 @@ details > summary::before {
 }
 
 details[open] > summary::before {
+  position: relative;
+  top: 1px;
   content: "\2193";
   font-family: var(--font-family-monospace);
   font-size: 1.1em;

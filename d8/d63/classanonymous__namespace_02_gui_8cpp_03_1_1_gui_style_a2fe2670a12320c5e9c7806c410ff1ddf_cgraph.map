@@ -1,5 +1,5 @@
 <map id="anonymous_namespace{Gui::cpp}::GuiStyle::init_" name="anonymous_namespace{Gui::cpp}::GuiStyle::init_">
-<area shape="rect" id="Node000001" title="Applies the initial theme and sets up the application icon and native event filter." alt="" coords="5,92,395,118"/>
+<area shape="rect" id="Node000001" title="Applies the initial theme, sets the application icon and starts watching system changes." alt="" coords="5,92,395,118"/>
 <area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8" title="Applies the selected theme and refreshes palettes and dynamic icons." alt="" coords="443,77,624,133"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="394,103,437,105,432,106,395,108"/>
 <area shape="rect" id="Node000003" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#a21a700efc0bcd2eeb14cb41c77fa3237" title="Returns whether Windows uses a dark application theme." alt="" coords="692,29,953,85"/>
@@ -8,7 +8,7 @@
 <area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="624,117,695,132,690,132,624,123"/>
 <area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="767,28,767,19,777,10,796,5,823,3,861,7,873,13,879,22,874,21,869,17,859,12,823,8,797,10,780,15,772,21,772,31"/>
 <area shape="poly" id="edge11_Node000004_Node000004" title=" " alt="" coords="770,132,766,124,774,114,793,108,823,106,865,111,876,118,879,128,875,125,872,121,863,116,823,111,794,113,777,119,771,125,775,134"/>
-<area shape="rect" id="Node000005" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, using the original icon for missing states." alt="" coords="1021,133,1275,174"/>
+<area shape="rect" id="Node000005" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#acb3f85109e62ceb8dca43bd11d2274e8" title="Creates a themed icon, falling back to original normal&#45;mode pixmaps for missing resources." alt="" coords="1021,133,1275,174"/>
 <area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="973,151,1016,153,1011,153,973,156"/>
 <area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="1090,132,1086,124,1095,114,1116,108,1148,106,1194,111,1206,118,1210,128,1205,125,1202,121,1193,116,1148,111,1117,114,1098,119,1091,125,1095,134"/>
 <area shape="rect" id="Node000006" href="$df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html#ab045516bfe911dbcb58313d007668b28" title="Copies the normal&#45;mode pixmaps for one icon state." alt="" coords="1351,77,1580,133"/>

@@ -1,0 +1,12 @@
+<map id="anonymous_namespace{Gui::cpp}::item::initBaseButton" name="anonymous_namespace{Gui::cpp}::item::initBaseButton">
+<area shape="rect" id="Node000001" title="Makes an eligible push or tool button checkable and adds it to the supplied group." alt="" coords="5,80,435,106"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="157,81,143,73,144,66,150,62,176,56,220,54,261,55,286,60,297,69,289,79,287,75,292,70,284,65,260,61,220,59,177,61,153,66,149,69,148,71,162,80"/>
+<area shape="rect" id="Node000002" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a585739100f25b0aa1b1ab4b2bedde70b" title="Excludes action&#45;managed tool buttons from automatic button grouping." alt="" coords="483,29,752,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="361,78,478,70,472,70,362,83"/>
+<area shape="rect" id="Node000003" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="527,109,708,150"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="362,103,522,120,516,121,361,109"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="561,28,560,19,571,10,590,5,617,3,657,7,669,13,675,22,670,20,665,17,655,12,617,8,591,10,573,15,565,21,565,31"/>
+<area shape="rect" id="Node000004" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35" title="Loads the bundled JetBrains Mono fonts once." alt="" coords="800,109,1029,150"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="708,127,795,129,790,129,708,132"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="861,108,856,100,865,90,884,84,915,82,958,87,969,94,973,104,968,101,966,97,956,92,915,87,885,90,868,95,862,101,865,111"/>
+</map>

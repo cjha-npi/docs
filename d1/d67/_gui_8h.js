@@ -17,5 +17,6 @@ var _gui_8h =
     [ "npi::gui::setTheme", "d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051", null ],
     [ "npi::gui::surfaces", "d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a", null ],
     [ "npi::gui::surfaces", "d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc", null ],
-    [ "npi::gui::theme", "d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea", null ]
+    [ "npi::gui::theme", "d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea", null ],
+    [ "npi::gui::themeAction", "d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495", null ]
 ];

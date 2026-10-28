@@ -1,8 +1,7 @@
 var structnpi_1_1gui_1_1_props =
 [
-    [ "ButtonColorDisplay_", "d6/d46/structnpi_1_1gui_1_1_props.html#aaed3a252218011473cf4ebcd71a45b1b", null ],
+    [ "ButtonDisplay_", "d6/d46/structnpi_1_1gui_1_1_props.html#a0ac4d858440c7a270f97a786b86f827e", null ],
     [ "ButtonGroupBase_", "d6/d46/structnpi_1_1gui_1_1_props.html#a58fdac61bd4c703ac43514a6871d610c", null ],
-    [ "ButtonRightIcon_", "d6/d46/structnpi_1_1gui_1_1_props.html#a0e7093bd32af6d035a0102812a366bf7", null ],
     [ "ButtonTextNearIcon_", "d6/d46/structnpi_1_1gui_1_1_props.html#a0712ecc9fc237caf3cfdab2790ab2391", null ],
     [ "IconName_", "d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1", null ],
     [ "IconOnName_", "d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc", null ],

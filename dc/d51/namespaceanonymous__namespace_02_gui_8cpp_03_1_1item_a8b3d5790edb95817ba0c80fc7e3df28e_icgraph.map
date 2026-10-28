@@ -1,7 +1,7 @@
 <map id="anonymous_namespace{Gui::cpp}::item::setTransparentBase" name="anonymous_namespace{Gui::cpp}::item::setTransparentBase">
-<area shape="rect" id="Node000001" title="Makes the widget&#39;s background transparent." alt="" coords="1147,153,1608,178"/>
+<area shape="rect" id="Node000001" title="Disables automatic background filling and makes the Base palette brush transparent." alt="" coords="1147,153,1608,178"/>
 <area shape="poly" id="edge18_Node000001_Node000001" title=" " alt="" coords="1447,147,1452,142,1444,138,1419,133,1377,131,1332,134,1307,139,1303,142,1303,143,1317,154,1312,152,1298,145,1298,139,1305,134,1331,128,1377,126,1420,128,1446,133,1457,142,1449,152"/>
-<area shape="rect" id="Node000002" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2" title="Suppresses a grouped widget&#39;s background unless it has its own base." alt="" coords="829,93,1099,134"/>
+<area shape="rect" id="Node000002" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a2d9464e72d4d9439db5bdf8cf0b635b2" title="Suppresses a grouped widget&#39;s background unless it declares a sunken or raised base." alt="" coords="829,93,1099,134"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1264,152,1098,133,1099,128,1269,152"/>
 <area shape="rect" id="Node000007" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#ab548237e272ef913e3be58652a0cb202" title="Applies item&#45;view background and sizing settings to a widget." alt="" coords="829,189,1099,230"/>
 <area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="1251,179,1099,198,1098,193,1246,180"/>
@@ -11,7 +11,7 @@
 <area shape="rect" id="Node000005" href="$dc/d51/namespaceanonymous__namespace_02_gui_8cpp_03_1_1item.html#a6a4da07a096dc20b7bf0b9de4983f8e7" title="Sets up a group background and optional exclusive button grouping." alt="" coords="235,29,496,70"/>
 <area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="909,90,849,70,781,52,708,43,634,39,496,41,495,36,634,34,709,38,782,47,851,65,914,90"/>
 <area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="715,77,711,74,701,69,663,64,636,66,618,71,610,78,610,88,606,84,606,76,616,67,635,61,663,59,702,64,714,69,720,79"/>
-<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and newly added actions and children." alt="" coords="275,94,456,150"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ac306e3256a2eb3c33d57af6c944c4b65" title="Handles widget updates, wheel forwarding and changes to actions and children." alt="" coords="275,94,456,150"/>
 <area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="533,118,456,122,456,117,539,117"/>
 <area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="533,87,460,73,460,67,539,86"/>
 <area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="413,21,411,17,403,13,365,8,339,10,323,15,318,21,321,30,316,29,312,20,320,11,338,5,365,3,404,8,415,14,418,23"/>
