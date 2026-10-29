@@ -8,6 +8,10 @@ var namespacenpi_1_1gui =
       [ "System", "d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a", null ]
     ] ],
     [ "isDarkBackground", "d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4", null ],
+    [ "onBackgroundChanged", "d7/dc3/namespacenpi_1_1gui.html#a970ca85f9973fd65cd4b01cc68046640", null ],
+    [ "onBackgroundChanged", "d7/dc3/namespacenpi_1_1gui.html#ad072375bedd64a6b43afd7a0f0b94e3a", null ],
+    [ "onThemeChanged", "d7/dc3/namespacenpi_1_1gui.html#a9ea3a279a21b980f5c090427d1a82ef4", null ],
+    [ "onThemeChanged", "d7/dc3/namespacenpi_1_1gui.html#a1f2394a2285dbb72c534fd91cdd97dc8", null ],
     [ "palette", "d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55", null ],
     [ "palette", "d7/dc3/namespacenpi_1_1gui.html#aecb45b4cd90ee26df188918de86b3f47", null ],
     [ "setTheme", "d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051", null ],

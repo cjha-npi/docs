@@ -27,14 +27,16 @@ var dp_dh_dir_dev_hub =
       [ "Force New Line", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__force_new_line", null ],
       [ "Force Visual Indent", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__force_visual_indent", null ],
       [ "Hide xrefitem Text at Source", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__hide_xrefitem_at_source", null ],
-      [ "Add Line Gap", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__line_gap", null ],
+      [ "Add List Gap", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__list_gap", null ],
       [ "Big Non-Heading Texts", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__big_non_heading_text", null ],
       [ "Mid Non-Heading Texts", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__mid_non_heading_text", null ],
       [ "Special Text Section", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__special_text_section", null ],
       [ "Expandable Details Section", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__expandable_details_section", null ],
       [ "Table Header Vertical Text", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__table_header_vertical_text", null ],
       [ "Table Header Warning Background", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__table_header_warning_background", null ],
-      [ "Table Header Danger Background", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__table_header_danger_background", null ]
+      [ "Table Header Danger Background", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__table_header_danger_background", null ],
+      [ "Add Big Text Gap", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__big_text_gap", null ],
+      [ "Add Mid Text Gap", "d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__mid_text_gap", null ]
     ] ],
     [ "Setups", "df/d27/dp_dh_dir_setups.html", "df/d27/dp_dh_dir_setups" ],
     [ "Doxygen", "d4/d7c/dp_dh_dir_doxygen.html", "d4/d7c/dp_dh_dir_doxygen" ],

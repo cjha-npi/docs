@@ -179,11 +179,11 @@ var sectionId = 'dynsection-5';
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8" target="_top" xlink:title="Applies the selected theme and refreshes palettes and dynamic icons.">
+<g id="a_Node000005"><a xlink:href="../../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a8ae684ca313b38c990685c3fb66084d4" target="_top" xlink:title="Applies the selected theme&#39;s effective background and refreshes palettes and dynamic icons.">
 <polygon fill="white" stroke="none" points="525,-188.12 389,-188.12 389,-146.38 525,-146.38 525,-188.12"/>
 <text xml:space="preserve" text-anchor="start" x="397" y="-173.68" font-family="Consolas" font-size="11.00">anonymous_namespace</text>
 <text xml:space="preserve" text-anchor="start" x="397" y="-162.43" font-family="Consolas" font-size="11.00">{Gui::cpp}::GuiStyle</text>
-<text xml:space="preserve" text-anchor="middle" x="457" y="-151.18" font-family="Consolas" font-size="11.00">::applyTheme_</text>
+<text xml:space="preserve" text-anchor="middle" x="457" y="-151.18" font-family="Consolas" font-size="11.00">::applyBackground_</text>
 </a>
 </g>
 </g>

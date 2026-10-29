@@ -19,7 +19,7 @@ var dp_arch_dir_architecture =
       [ "Required", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__required", null ],
       [ "Initialization", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__initialization", null ],
       [ "Theme Control", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__theme_control", null ],
-      [ "Notification", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__notifications", null ],
+      [ "Notifications", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__notifications", null ],
       [ "Public Interface", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__public_interface", null ],
       [ "Usage Examples", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__usage_examples", null ],
       [ "Customizations", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__customizations", null ],
@@ -27,6 +27,6 @@ var dp_arch_dir_architecture =
       [ "Maintenance", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__maintenance", null ],
       [ "Testing", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__testing", null ],
       [ "Deferred", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__deferred", null ],
-      [ "Bug: Font CacheOverflowException", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__bug_font_CacheOverflowException", null ]
+      [ "Bugs", "da/d86/dp_arch_gui_system.html#dp_arch_gui_system__bugs", null ]
     ] ]
 ];

@@ -1102,6 +1102,14 @@ body .header > .headertitle > .title {
   margin-bottom: 5px !important
 }
 
+#doc-content div.dp-text-big-gap {
+  height: 1em;
+}
+
+#doc-content div.dp-text-mid-gap {
+  height: 0.5em;
+}
+
 #doc-content ul:not(ul ul, ol ul, dl ul),
 #doc-content ol:not(ul ol, ol ol, dl ol),
 #doc-content dl:not(ul dl, ol dl, dl dl){
@@ -1982,9 +1990,9 @@ details table{
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
 
 div.dp-markdown-section-text {
-  background: var(--dp-details-background-color);
-  padding: 2px 10px;
-  border-radius: var(--dp-border-radius-l);
+  border-left: 2px solid var(--dp-disabled-text-color);
+  margin-left: 1px;
+  padding-left: 10px;
 }
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/

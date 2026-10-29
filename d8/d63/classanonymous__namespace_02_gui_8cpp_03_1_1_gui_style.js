@@ -2,7 +2,8 @@ var classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style =
 [
     [ "GuiStyle", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662", null ],
     [ "~GuiStyle", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aa503d15e866087e0e91b5befec335cad", null ],
-    [ "applyTheme_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8", null ],
+    [ "applyBackground_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a8ae684ca313b38c990685c3fb66084d4", null ],
+    [ "backgroundChanged_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a50b19ecb70be648f554a9d7fc014731d", null ],
     [ "drawComplexControl", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a792ab797d0f2c3d1b4bf15fda74540b0", null ],
     [ "drawControl", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a96876525131abf125f8625510cafe836", null ],
     [ "drawItemText", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a1ff7504afa8cd93c46eb17be4271697c", null ],
@@ -13,6 +14,7 @@ var classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style =
     [ "init_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf", null ],
     [ "isDarkBackground_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ab3145cc5d7ade951b1380c89d933e07b", null ],
     [ "nativeEventFilter", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad", null ],
+    [ "notifyPendingTheme_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a1863a5fbfb07bfa8299c280837a18f33", null ],
     [ "palette_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4888d2aea9865b338bffa49c0eae7541", null ],
     [ "palette_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a361880269891460a018340a223f650e0", null ],
     [ "pixelMetric", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a520a3ace8c0925743b49139354f430b3", null ],
@@ -25,6 +27,7 @@ var classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style =
     [ "surfaces_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aeed4bac894458e065e60749347901058", null ],
     [ "surfaces_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aa3280c421c992b7d2da5eec93e2ce160", null ],
     [ "themeAction_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c0486e169ceb0cfa74429efee1b52d7", null ],
+    [ "themeChanged_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ad604e3d850e894f45b5d07796e7ec43b", null ],
     [ "themeData_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a38093419df669cf69b181757e5c3a649", null ],
     [ "appFont_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aaff243c5fd2452c5d2d44ae6281da95c", null ],
     [ "appSizeData_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0a1aac213f61c9e2945dfc970ba164e2", null ],
@@ -49,5 +52,7 @@ var classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style =
     [ "scrollBarWidth_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2ce53791240fadb0d2738585f92cfa8b", null ],
     [ "systemThemeAction_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a8496f1c5af57f48f01d3699967df9509", null ],
     [ "tabCloseIcon_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a3c186df4674954b54bd678e305c57f5c", null ],
-    [ "theme_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ab0c4715c66c8acb5106dc2819c46800d", null ]
+    [ "theme_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ab0c4715c66c8acb5106dc2819c46800d", null ],
+    [ "themeNotificationPending_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#abdd9b875990e34e71b9f9e9169f02f52", null ],
+    [ "themeUpdateDepth_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a7885aef512efc1bdcb1e8435e1c90912", null ]
 ];

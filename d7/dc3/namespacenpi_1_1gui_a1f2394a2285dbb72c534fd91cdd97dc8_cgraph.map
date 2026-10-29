@@ -1,0 +1,15 @@
+<map id="npi::gui::onThemeChanged" name="npi::gui::onThemeChanged">
+<area shape="rect" id="Node000001" title="Connects a member function to selected&#45;theme changes." alt="" coords="5,62,219,88"/>
+<area shape="rect" id="Node000002" href="$d7/dc3/namespacenpi_1_1gui.html#a9ea3a279a21b980f5c090427d1a82ef4" title="Connects a callback to selected&#45;theme changes." alt="" coords="267,86,480,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,82,262,88,256,89,219,87"/>
+<area shape="rect" id="Node000006" href="$d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea" title="Returns the configured theme; System remains System regardless of background." alt="" coords="303,37,444,62"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="218,62,297,56,292,58,219,67"/>
+<area shape="rect" id="Node000003" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="528,29,709,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="437,84,518,70,523,69,438,89"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ad604e3d850e894f45b5d07796e7ec43b" title="Notifies listeners when the selected theme changes." alt="" coords="528,94,709,150"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="480,106,523,113,517,113,480,111"/>
+<area shape="rect" id="Node000004" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35" title="Loads the bundled JetBrains Mono fonts once." alt="" coords="757,29,987,70"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="709,47,752,49,747,50,709,52"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="826,28,822,20,829,11,846,5,872,3,909,8,919,14,922,23,917,21,915,17,907,13,872,8,847,10,832,15,827,21,830,31"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="443,47,523,49,518,50,444,52"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="npi::gui::onBackgroundChanged" name="npi::gui::onBackgroundChanged">
+<area shape="rect" id="Node000001" title="Connects a callback to effective background changes." alt="" coords="5,56,259,82"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a50b19ecb70be648f554a9d7fc014731d" title="Notifies listeners when the effective background changes." alt="" coords="307,5,488,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,54,302,46,296,47,227,59"/>
+<area shape="rect" id="Node000003" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="307,85,488,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,79,302,92,296,92,227,85"/>
+<area shape="rect" id="Node000004" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35" title="Loads the bundled JetBrains Mono fonts once." alt="" coords="536,85,765,126"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="488,103,531,105,526,105,488,108"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="604,84,601,76,608,66,625,60,651,58,687,63,697,69,700,79,696,76,693,73,686,68,651,63,626,65,611,70,606,77,609,87"/>
+</map>

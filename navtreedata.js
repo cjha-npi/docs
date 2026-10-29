@@ -72,10 +72,10 @@ var NAVTREEINDEX =
 "d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f",
 "d5/d06/classanonymous__namespace_02_log_8cpp_03_1_1_file_line_cache.html#a57d6b24dc1a39d73983a73fd8afbd2b6",
 "d5/d7a/classnpi_1_1wid_1_1_color_picker.html#aa7871054993cf2abe2fe689ba7eb7010",
-"d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#a1f992a65588c1657e2594f1862c730b6",
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d1/dbc/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_config",
-"da/d86/dp_arch_gui_system.html#dp_arch_gui_system__bug_font_CacheOverflowException",
-"dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#ae204827857b644ff1eab9815324d71dc"
+"d7/dbf/classnpi_1_1ind_1_1_slot_gate.html",
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker",
+"da/d3d/classanonymous__namespace_02_log_8cpp_03_1_1_function_cache.html#d9/dc2/structanonymous__namespace_02_log_8cpp_03_1_1_function_cache_1_1_entry",
+"dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a31fad3f92d48c86c82741c3ef556c0d8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

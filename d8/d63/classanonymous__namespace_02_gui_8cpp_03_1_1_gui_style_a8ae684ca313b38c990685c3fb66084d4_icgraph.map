@@ -1,0 +1,11 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::applyBackground_" name="anonymous_namespace{Gui::cpp}::GuiStyle::applyBackground_">
+<area shape="rect" id="Node000001" title="Applies the selected theme&#39;s effective background and refreshes palettes and dynamic icons." alt="" coords="464,100,941,126"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf" title="Applies the initial theme, sets the application icon and starts watching system changes." alt="" coords="235,5,416,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="631,100,416,55,416,50,636,98"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" title="Refreshes the application theme when Windows theme settings change in System mode." alt="" coords="235,85,416,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="453,114,416,116,416,111,458,113"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Changes the application theme and updates the shared actions." alt="" coords="235,165,416,221"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="636,127,416,177,415,171,631,128"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662" title="Sets up the style, theme resources and shared theme actions." alt="" coords="5,165,187,221"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="224,193,187,196,186,191,230,193"/>
+</map>

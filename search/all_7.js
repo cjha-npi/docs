@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gap_0',['Add Line Gap',['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__line_gap',1,'']]],
+  ['gap_0',['Gap',['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__big_text_gap',1,'Add Big Text Gap'],['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__list_gap',1,'Add List Gap'],['../d6/d22/dp_dh_doc_tips.html#dp_dh_doc_tips__mid_text_gap',1,'Add Mid Text Gap']]],
   ['genallfieldstext_5f_1',['GenAllFieldsText_',['../d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#af445fc06eca56a41e21e49cd943a261b',1,'anonymous_namespace{Log.cpp}::LeakedState']]],
   ['generation_20flow_2',['Generation Flow',['../d6/d59/dp_dh_doxy_overview.html#dp_dh_doxy_overview__gen_flow',1,'']]],
   ['generator_3',['CPU Bar Generator',['../dc/df4/dp_dh_rm_sys_graphs_cpu_bar_generator.html',1,'dp_dh_dir_rm_sys_graphs']]],

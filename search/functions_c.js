@@ -7,5 +7,6 @@ var searchData=
   ['normalizeandpackfields_4',['normalizeAndPackFields',['../de/d73/namespaceanonymous__namespace_02_log_8cpp_03_1_1layout.html#a2f8305be7a08f7bd6252a3d9cc9a074c',1,'anonymous_namespace{Log.cpp}::layout']]],
   ['normalizechanneldata_5f_5',['normalizeChannelData_',['../d5/d7a/classnpi_1_1wid_1_1_color_picker.html#ab7e3fd108de4a5253b779b03d8f7661f',1,'npi::wid::ColorPicker']]],
   ['normalizedpath_6',['normalizedPath',['../da/d40/namespaceanonymous__namespace_02npi_imp_log_8cpp_03.html#a27a39bd2311366bcf368e287b4694da4',1,'anonymous_namespace{npiImpLog.cpp}']]],
-  ['normallog_7',['normalLog',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a7fc03e94650e6022574acfcd5d3bf5dc',1,'anonymous_namespace{Log.cpp}::format']]]
+  ['normallog_7',['normalLog',['../d0/dd9/namespaceanonymous__namespace_02_log_8cpp_03_1_1format.html#a7fc03e94650e6022574acfcd5d3bf5dc',1,'anonymous_namespace{Log.cpp}::format']]],
+  ['notifypendingtheme_5f_8',['notifyPendingTheme_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a1863a5fbfb07bfa8299c280837a18f33',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]]
 ];

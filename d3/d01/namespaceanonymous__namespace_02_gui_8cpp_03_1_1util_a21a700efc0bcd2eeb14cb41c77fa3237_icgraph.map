@@ -1,7 +1,7 @@
 <map id="anonymous_namespace{Gui::cpp}::util::isDarkSystemBackground" name="anonymous_namespace{Gui::cpp}::util::isDarkSystemBackground">
 <area shape="rect" id="Node000001" title="Returns whether Windows uses a dark application theme." alt="" coords="741,191,1235,217"/>
 <area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="1057,186,1062,180,1054,176,1029,171,988,170,943,172,919,177,914,180,914,181,928,192,923,191,909,184,910,177,916,172,943,166,988,164,1030,166,1056,171,1067,180,1059,190"/>
-<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#adce28a8e945214cefd27b7fdba6685b8" title="Applies the selected theme and refreshes palettes and dynamic icons." alt="" coords="488,85,669,141"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a8ae684ca313b38c990685c3fb66084d4" title="Applies the selected theme&#39;s effective background and refreshes palettes and dynamic icons." alt="" coords="488,85,669,141"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="919,190,669,136,670,130,924,189"/>
 <area shape="rect" id="Node000007" href="$d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4" title="Returns true for the effective dark background, resolving System as needed." alt="" coords="464,166,693,191"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="770,191,693,188,693,183,775,190"/>

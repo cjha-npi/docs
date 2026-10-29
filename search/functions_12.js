@@ -9,8 +9,9 @@ var searchData=
   ['theme_6',['theme',['../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a250906c4c6bd7ae06482b3e9c60e4882',1,'anonymous_namespace{Gui.cpp}::make::theme()'],['../d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea',1,'npi::gui::theme()']]],
   ['themeaction_7',['themeAction',['../d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495',1,'npi::gui']]],
   ['themeaction_5f_8',['themeAction_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a0c0486e169ceb0cfa74429efee1b52d7',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
-  ['themedata_5f_9',['themeData_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a38093419df669cf69b181757e5c3a649',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
-  ['themetext_10',['themeText',['../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f',1,'anonymous_namespace{Gui.cpp}::make']]],
-  ['treebranchselection_11',['TreeBranchSelection',['../de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection.html#a920047a05e57977d397aaf3b7a45b437',1,'anonymous_namespace{Gui.cpp}::TreeBranchSelection']]],
-  ['tryenter_5f_12',['tryEnter_',['../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#adc585f7a807c773ae087ff5f1d9eb243',1,'npi::ind::SlotGate']]]
+  ['themechanged_5f_9',['themeChanged_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#ad604e3d850e894f45b5d07796e7ec43b',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
+  ['themedata_5f_10',['themeData_',['../d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a38093419df669cf69b181757e5c3a649',1,'anonymous_namespace{Gui.cpp}::GuiStyle']]],
+  ['themetext_11',['themeText',['../d3/d7e/namespaceanonymous__namespace_02_gui_8cpp_03_1_1make.html#a9a2245a7803c151568e1ba62908b916f',1,'anonymous_namespace{Gui.cpp}::make']]],
+  ['treebranchselection_12',['TreeBranchSelection',['../de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection.html#a920047a05e57977d397aaf3b7a45b437',1,'anonymous_namespace{Gui.cpp}::TreeBranchSelection']]],
+  ['tryenter_5f_13',['tryEnter_',['../d7/dbf/classnpi_1_1ind_1_1_slot_gate.html#adc585f7a807c773ae087ff5f1d9eb243',1,'npi::ind::SlotGate']]]
 ];

@@ -1,0 +1,17 @@
+<map id="anonymous_namespace{Gui::cpp}::GuiStyle::backgroundChanged_" name="anonymous_namespace{Gui::cpp}::GuiStyle::backgroundChanged_">
+<area shape="rect" id="Node000001" title="Notifies listeners when the effective background changes." alt="" coords="837,174,1331,199"/>
+<area shape="rect" id="Node000002" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a8ae684ca313b38c990685c3fb66084d4" title="Applies the selected theme&#39;s effective background and refreshes palettes and dynamic icons." alt="" coords="572,125,753,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="911,173,753,163,753,158,917,173"/>
+<area shape="rect" id="Node000007" href="$d7/dc3/namespacenpi_1_1gui.html#a970ca85f9973fd65cd4b01cc68046640" title="Connects a callback to effective background changes." alt="" coords="536,206,789,231"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="904,200,789,212,789,206,910,200"/>
+<area shape="rect" id="Node000003" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a2fe2670a12320c5e9c7806c410ff1ddf" title="Applies the initial theme, sets the application icon and starts watching system changes." alt="" coords="271,5,452,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="596,122,487,76,452,63,452,57,489,71,601,122"/>
+<area shape="rect" id="Node000004" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a998e9c221f10c33aa9ce69fa35d0c1ad" title="Refreshes the application theme when Windows theme settings change in System mode." alt="" coords="271,85,452,141"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="561,141,452,128,452,122,567,140"/>
+<area shape="rect" id="Node000005" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882" title="Changes the application theme and updates the shared actions." alt="" coords="271,165,452,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="561,167,452,184,452,179,567,166"/>
+<area shape="rect" id="Node000006" href="$d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a05edda371910ca21a0754f9f8011b662" title="Sets up the style, theme resources and shared theme actions." alt="" coords="5,165,187,221"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="260,194,187,196,186,191,266,192"/>
+<area shape="rect" id="Node000008" href="$d7/dc3/namespacenpi_1_1gui.html#ad072375bedd64a6b43afd7a0f0b94e3a" title="Connects a member function to effective background changes." alt="" coords="235,246,488,271"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="560,232,459,248,458,243,555,233"/>
+</map>
