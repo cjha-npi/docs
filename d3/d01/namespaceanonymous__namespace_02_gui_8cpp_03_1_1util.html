@@ -167,29 +167,29 @@ Functions</h2></td></tr>
 
 <p>Loads the bundled JetBrains Mono fonts once. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01786">1786</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1787</span>    {</div>
-<div class="line"><span class="lineno"> 1788</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span> loaded{<span class="keyword">false</span>}; <span class="comment">// Avoid loading the fonts again.</span></div>
-<div class="line"><span class="lineno"> 1789</span>      <span class="keywordflow">if</span>(loaded) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1790</span> </div>
-<div class="line"><span class="lineno"> 1791</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idRegular = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Regular.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1792</span>      <span class="keywordflow">if</span>(idRegular == -1)</div>
-<div class="line"><span class="lineno"> 1793</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Regular font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1794</span> </div>
-<div class="line"><span class="lineno"> 1795</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idBold = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Bold.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1796</span>      <span class="keywordflow">if</span>(idBold == -1)</div>
-<div class="line"><span class="lineno"> 1797</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1798</span> </div>
-<div class="line"><span class="lineno"> 1799</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Italic.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1800</span>      <span class="keywordflow">if</span>(idItalic == -1)</div>
-<div class="line"><span class="lineno"> 1801</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Italic font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1802</span> </div>
-<div class="line"><span class="lineno"> 1803</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idBoldItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-BoldItalic.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1804</span>      <span class="keywordflow">if</span>(idBoldItalic == -1)</div>
-<div class="line"><span class="lineno"> 1805</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold-Italic font&quot;</span>;</div>
-<div class="line"><span class="lineno"> 1806</span> </div>
-<div class="line"><span class="lineno"> 1807</span>      loaded = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1808</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01776">1776</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1777</span>    {</div>
+<div class="line"><span class="lineno"> 1778</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span> loaded{<span class="keyword">false</span>}; <span class="comment">// Avoid loading the fonts again.</span></div>
+<div class="line"><span class="lineno"> 1779</span>      <span class="keywordflow">if</span>(loaded) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1780</span> </div>
+<div class="line"><span class="lineno"> 1781</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idRegular = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Regular.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1782</span>      <span class="keywordflow">if</span>(idRegular == -1)</div>
+<div class="line"><span class="lineno"> 1783</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Regular font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1784</span> </div>
+<div class="line"><span class="lineno"> 1785</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idBold = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Bold.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1786</span>      <span class="keywordflow">if</span>(idBold == -1)</div>
+<div class="line"><span class="lineno"> 1787</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1788</span> </div>
+<div class="line"><span class="lineno"> 1789</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-Italic.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1790</span>      <span class="keywordflow">if</span>(idItalic == -1)</div>
+<div class="line"><span class="lineno"> 1791</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Italic font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1792</span> </div>
+<div class="line"><span class="lineno"> 1793</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> idBoldItalic = QFontDatabase::addApplicationFont(<span class="stringliteral">&quot;:/fonts/JetBrainsMono-BoldItalic.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1794</span>      <span class="keywordflow">if</span>(idBoldItalic == -1)</div>
+<div class="line"><span class="lineno"> 1795</span>        <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Failed to load JetBrains Mono Bold-Italic font&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1796</span> </div>
+<div class="line"><span class="lineno"> 1797</span>      loaded = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1798</span>    }</div>
 <div class="ttc" id="a_gui_8cpp_html_a29523bd69971206d80a3109b7bba0eea"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a></div><div class="ttdeci">#define npiWarn</div><div class="ttdoc">Creates a warning message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00172">Gui.cpp:172</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ab683b79bf2e2ea36a70f70f415c2ec35">initFont()</a>, and <a class="el" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>.</p>
@@ -225,16 +225,16 @@ Here is the caller graph for this function:</div>
 
 <p>Checks whether the widget is a completer popup. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01818">1818</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1819</span>    {</div>
-<div class="line"><span class="lineno"> 1820</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* view = qobject_cast&lt;const QAbstractItemView*&gt;(widget);</div>
-<div class="line"><span class="lineno"> 1821</span>      <span class="keywordflow">if</span>(!view || view-&gt;windowType() != Qt::Popup || !view-&gt;model())</div>
-<div class="line"><span class="lineno"> 1822</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1823</span> </div>
-<div class="line"><span class="lineno"> 1824</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* model = view-&gt;model();</div>
-<div class="line"><span class="lineno"> 1825</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* completer = qobject_cast&lt;const QCompleter*&gt;(model-&gt;parent());</div>
-<div class="line"><span class="lineno"> 1826</span>      <span class="keywordflow">return</span> completer &amp;&amp; completer-&gt;completionModel() == model &amp;&amp; completer-&gt;popup() == view;</div>
-<div class="line"><span class="lineno"> 1827</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01808">1808</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1809</span>    {</div>
+<div class="line"><span class="lineno"> 1810</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* view = qobject_cast&lt;const QAbstractItemView*&gt;(widget);</div>
+<div class="line"><span class="lineno"> 1811</span>      <span class="keywordflow">if</span>(!view || view-&gt;windowType() != Qt::Popup || !view-&gt;model())</div>
+<div class="line"><span class="lineno"> 1812</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1813</span> </div>
+<div class="line"><span class="lineno"> 1814</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* model = view-&gt;model();</div>
+<div class="line"><span class="lineno"> 1815</span>      <span class="keyword">const</span> <span class="keyword">auto</span>* completer = qobject_cast&lt;const QCompleter*&gt;(model-&gt;parent());</div>
+<div class="line"><span class="lineno"> 1816</span>      <span class="keywordflow">return</span> completer &amp;&amp; completer-&gt;completionModel() == model &amp;&amp; completer-&gt;popup() == view;</div>
+<div class="line"><span class="lineno"> 1817</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ae97b6d07ceae7614045f627d3ee135bd">isCompleterPopup()</a>.</p>
 
@@ -269,11 +269,11 @@ Here is the caller graph for this function:</div>
 
 <p>Returns whether Windows uses a dark application theme. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01811">1811</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1812</span>    {</div>
-<div class="line"><span class="lineno"> 1813</span>      QSettings settings{<span class="stringliteral">&quot;HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize&quot;</span>, QSettings::NativeFormat};</div>
-<div class="line"><span class="lineno"> 1814</span>      <span class="keywordflow">return</span> settings.value(<span class="stringliteral">&quot;AppsUseLightTheme&quot;</span>, 1).toInt() == 0;</div>
-<div class="line"><span class="lineno"> 1815</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01801">1801</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1802</span>    {</div>
+<div class="line"><span class="lineno"> 1803</span>      QSettings settings{<span class="stringliteral">&quot;HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize&quot;</span>, QSettings::NativeFormat};</div>
+<div class="line"><span class="lineno"> 1804</span>      <span class="keywordflow">return</span> settings.value(<span class="stringliteral">&quot;AppsUseLightTheme&quot;</span>, 1).toInt() == 0;</div>
+<div class="line"><span class="lineno"> 1805</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a21a700efc0bcd2eeb14cb41c77fa3237">isDarkSystemBackground()</a>.</p>
 

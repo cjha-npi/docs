@@ -201,40 +201,47 @@ Important</h1>
 </table>
 <h1 class="doxsection"><a class="anchor" id="dp_arch_gui_system__required"></a>
 Required</h1>
-<p>The GUI system requires <span class="tt"><a class="el" href="../../d1/d67/_gui_8h.html" title="Configuration and control of the application&#39;s graphical user interface.">Gui.h</a></span>, <span class="tt"><a class="el" href="../../dd/d7f/_gui_8cpp.html" title="Application GUI style, theme handling and widget customization.">Gui.cpp</a></span>, Qt Core/Gui/Widgets, and a C++20-capable compiler. The current implementation targets Windows and uses the Fusion style.</p>
-<dl class="section note"><dt>Note</dt><dd><span class="tt"><a class="el" href="../../dd/d7f/_gui_8cpp.html" title="Application GUI style, theme handling and widget customization.">Gui.cpp</a></span> contains a <span class="tt">Q_OBJECT</span> class and includes <span class="tt">Gui.moc</span>. Visual Studio should automatically do it, if not then configure the Qt build integration to process <span class="tt"><a class="el" href="../../dd/d7f/_gui_8cpp.html" title="Application GUI style, theme handling and widget customization.">Gui.cpp</a></span> with <span class="tt">moc</span>.</dd></dl>
+<p>The GUI system requires:</p><ul>
+<li>GUI files: <span class="tt"><a class="el" href="../../d1/d67/_gui_8h.html" title="Configuration and control of the application&#39;s graphical user interface.">Gui.h</a></span> and <span class="tt"><a class="el" href="../../dd/d7f/_gui_8cpp.html" title="Application GUI style, theme handling and widget customization.">Gui.cpp</a></span>.</li>
+<li>Qt 6.12.0 Core/Gui/Widgets.</li>
+<li>C++20-capable compiler.</li>
+</ul>
+<p>The resources needed by GUI system is located in the following 2 folders relative to the resource <span class="tt">.qrc</span> file:</p><ul>
+<li><span class="tt">/icons/gui/</span> : Icons needed by GUI system.</li>
+<li><span class="tt">/fonts/</span> : Fonts loaded by GUI system.</li>
+</ul>
 <p>Include the following files in the application's Qt resources using these exact resource paths. Resource aliases may be used if the files are stored elsewhere.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadRight">Purpose  </th><th class="markdownTableHeadLeft">Resource paths  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyRight">Application icon  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/npi_logo.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Application icon  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/npi_logo.png</span>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyRight">Checkboxes  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/checkbox_off.png</span><br  />
-<span class="tt">:/icons/checkbox_mid.png</span><br  />
-<span class="tt">:/icons/checkbox_on.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Checkboxes  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/checkbox_off.png</span><br  />
+<span class="tt">:/icons/gui/checkbox_mid.png</span><br  />
+<span class="tt">:/icons/gui/checkbox_on.png</span>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyRight">Radio buttons  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/radio_off.png</span><br  />
-<span class="tt">:/icons/radio_on.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Radio buttons  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/radio_off.png</span><br  />
+<span class="tt">:/icons/gui/radio_on.png</span>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyRight">Tab close button  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/tab_close.png</span><br  />
-<span class="tt">:/icons/tab_close_hover.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Tab close button  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/tab_close.png</span><br  />
+<span class="tt">:/icons/gui/tab_close_hover.png</span>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyRight">Dock close button  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/dock_close.png</span><br  />
-<span class="tt">:/icons/dock_close_hover.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Dock close button  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/dock_close.png</span><br  />
+<span class="tt">:/icons/gui/dock_close_hover.png</span>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyRight">Dock float button, dark background  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/dark/dock_popup.png</span><br  />
-<span class="tt">:/icons/dark/dock_popup_hover.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Dock float button, dark background  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/dock_popup_dark_bg.png</span><br  />
+<span class="tt">:/icons/gui/dock_popup_hover_dark_bg.png</span>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyRight">Dock float button, light background  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/light/dock_popup.png</span><br  />
-<span class="tt">:/icons/light/dock_popup_hover.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Dock float button, light background  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/dock_popup_light_bg.png</span><br  />
+<span class="tt">:/icons/gui/dock_popup_hover_light_bg.png</span>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyRight">Password visibility action  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/lineEdit_echo_hide.png</span><br  />
-<span class="tt">:/icons/lineEdit_echo_show.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Password visibility action  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/lineEdit_echo_hide.png</span><br  />
+<span class="tt">:/icons/gui/lineEdit_echo_show.png</span>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyRight">Theme actions  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/theme_dark.png</span><br  />
-<span class="tt">:/icons/theme_light.png</span><br  />
-<span class="tt">:/icons/theme_system.png</span>  </td></tr>
+<td class="markdownTableBodyRight">Theme actions  </td><td class="markdownTableBodyLeft"><span class="tt">:/icons/gui/theme_dark.png</span><br  />
+<span class="tt">:/icons/gui/theme_light.png</span><br  />
+<span class="tt">:/icons/gui/theme_system.png</span>  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyRight">JetBrains Mono fonts  </td><td class="markdownTableBodyLeft"><span class="tt">:/fonts/JetBrainsMono-Regular.ttf</span><br  />
 <span class="tt">:/fonts/JetBrainsMono-Bold.ttf</span><br  />
@@ -299,7 +306,7 @@ Theme Control</h1>
 <div class="fragment"><div class="line">darkToolButton-&gt;setDefaultAction(<a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495">npi::gui::themeAction</a>(<a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2">npi::gui::Theme::Dark</a>));</div>
 <div class="line">lightToolButton-&gt;setDefaultAction(<a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495">npi::gui::themeAction</a>(<a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82">npi::gui::Theme::Light</a>));</div>
 <div class="line">systemToolButton-&gt;setDefaultAction(<a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495">npi::gui::themeAction</a>(<a class="code hl_enumvalue" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">npi::gui::Theme::System</a>));</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a64de26ba60a343fcf6c9cf785a45f495"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495">npi::gui::themeAction</a></div><div class="ttdeci">QAction * themeAction(Theme theme)</div><div class="ttdoc">Returns the shared checkable action for selecting a theme.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05938">Gui.cpp:5938</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a64de26ba60a343fcf6c9cf785a45f495"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495">npi::gui::themeAction</a></div><div class="ttdeci">QAction * themeAction(Theme theme)</div><div class="ttdoc">Returns the shared checkable action for selecting a theme.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l06009">Gui.cpp:6009</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3ea9914a0ce04a7b7b6a8e39bec55064b82">npi::gui::Theme::Light</a></div><div class="ttdeci">@ Light</div><div class="ttdoc">Always use the light theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00198">Gui.h:198</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2">npi::gui::Theme::Dark</a></div><div class="ttdeci">@ Dark</div><div class="ttdoc">Always use the dark theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00197">Gui.h:197</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a">npi::gui::Theme::System</a></div><div class="ttdeci">@ System</div><div class="ttdoc">Follow the Windows application theme.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00199">Gui.h:199</a></div></div>
@@ -324,7 +331,7 @@ Notifications</h1>
 <div class="fragment"><div class="line"><a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a9ea3a279a21b980f5c090427d1a82ef4">npi::gui::onThemeChanged</a>(<span class="keyword">this</span>, [<span class="keyword">this</span>](<a class="code hl_enumeration" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3e">npi::gui::Theme</a> theme) {</div>
 <div class="line">    <span class="comment">// desired code</span></div>
 <div class="line">});</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a9ea3a279a21b980f5c090427d1a82ef4"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a9ea3a279a21b980f5c090427d1a82ef4">npi::gui::onThemeChanged</a></div><div class="ttdeci">QMetaObject::Connection onThemeChanged(QObject *context, std::function&lt; void(Theme)&gt; callback)</div><div class="ttdoc">Connects a callback to selected-theme changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05897">Gui.cpp:5897</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a9ea3a279a21b980f5c090427d1a82ef4"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a9ea3a279a21b980f5c090427d1a82ef4">npi::gui::onThemeChanged</a></div><div class="ttdeci">QMetaObject::Connection onThemeChanged(QObject *context, std::function&lt; void(Theme)&gt; callback)</div><div class="ttdoc">Connects a callback to selected-theme changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05968">Gui.cpp:5968</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1gui_html_ad3129346e88e3d6a398365cb0671ce3e"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3e">npi::gui::Theme</a></div><div class="ttdeci">Theme</div><div class="ttdoc">Application theme selection.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00196">Gui.h:196</a></div></div>
 </div><!-- fragment --><p>Or for a member function (it can be private) <span class="tt">void SomeWidget::onThemeChanged_(npi::gui::Theme theme)</span>: </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a9ea3a279a21b980f5c090427d1a82ef4">npi::gui::onThemeChanged</a>(<span class="keyword">this</span>, &amp;SomeWidget::onThemeChanged_);</div>
 </div><!-- fragment -->
@@ -337,7 +344,7 @@ Notifications</h1>
 <div class="fragment"><div class="line"><a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a970ca85f9973fd65cd4b01cc68046640">npi::gui::onBackgroundChanged</a>(<span class="keyword">this</span>, [<span class="keyword">this</span>](<span class="keywordtype">bool</span> dark) {</div>
 <div class="line">    <span class="comment">// desired code</span></div>
 <div class="line">});</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a970ca85f9973fd65cd4b01cc68046640"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a970ca85f9973fd65cd4b01cc68046640">npi::gui::onBackgroundChanged</a></div><div class="ttdeci">QMetaObject::Connection onBackgroundChanged(QObject *context, std::function&lt; void(bool)&gt; callback)</div><div class="ttdoc">Connects a callback to effective background changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05911">Gui.cpp:5911</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a970ca85f9973fd65cd4b01cc68046640"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a970ca85f9973fd65cd4b01cc68046640">npi::gui::onBackgroundChanged</a></div><div class="ttdeci">QMetaObject::Connection onBackgroundChanged(QObject *context, std::function&lt; void(bool)&gt; callback)</div><div class="ttdoc">Connects a callback to effective background changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05982">Gui.cpp:5982</a></div></div>
 </div><!-- fragment --><p>Or for a member function (it can be private) <span class="tt">void SomeWidget::onBackgroundChanged_(bool dark)</span>: </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a970ca85f9973fd65cd4b01cc68046640">npi::gui::onBackgroundChanged</a>(<span class="keyword">this</span>, &amp;SomeWidget::onBackgroundChanged_);</div>
 </div><!-- fragment -->
 </div>
@@ -826,7 +833,7 @@ Public Interface</h1>
 <span class="tt">theme()</span></summary>
 <p></p>
 <div class="fragment"><div class="line"><a class="code hl_enumeration" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3e">npi::gui::Theme</a> <a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea">npi::gui::theme</a>()</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a77381db9d58d5f6a136ebcefcc481bea"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea">npi::gui::theme</a></div><div class="ttdeci">Theme theme()</div><div class="ttdoc">Returns the configured theme; System remains System regardless of background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05925">Gui.cpp:5925</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a77381db9d58d5f6a136ebcefcc481bea"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea">npi::gui::theme</a></div><div class="ttdeci">Theme theme()</div><div class="ttdoc">Returns the configured theme; System remains System regardless of background.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05996">Gui.cpp:5996</a></div></div>
 </div><!-- fragment --><ul>
 <li>Returns the configured theme:<ul>
 <li><span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2" title="Always use the dark theme.">npi::gui::Theme::Dark</a></span></li>
@@ -843,7 +850,7 @@ Public Interface</h1>
 <span class="tt">setTheme(theme)</span></summary>
 <p></p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051">npi::gui::setTheme</a>(<a class="code hl_enumeration" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3e">npi::gui::Theme</a> theme)</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a02b9d4b0a58267b196aecdda9ef45051"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051">npi::gui::setTheme</a></div><div class="ttdeci">void setTheme(Theme theme)</div><div class="ttdoc">Sets Dark, Light or System and synchronizes the shared theme actions.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05932">Gui.cpp:5932</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a02b9d4b0a58267b196aecdda9ef45051"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051">npi::gui::setTheme</a></div><div class="ttdeci">void setTheme(Theme theme)</div><div class="ttdoc">Sets Dark, Light or System and synchronizes the shared theme actions.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l06003">Gui.cpp:6003</a></div></div>
 </div><!-- fragment --><ul>
 <li>Selects application theme, possible choices are:<ul>
 <li><span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa18366b217ebf811ad1886e4f4f865b2" title="Always use the dark theme.">npi::gui::Theme::Dark</a></span></li>
@@ -876,7 +883,7 @@ Public Interface</h1>
 <span class="tt">isDarkBackground()</span></summary>
 <p></p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> <a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4">npi::gui::isDarkBackground</a>()</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_ab0432af80db64f065a922a7dde8adfe4"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4">npi::gui::isDarkBackground</a></div><div class="ttdeci">bool isDarkBackground()</div><div class="ttdoc">Returns true for the effective dark background, resolving System as needed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05945">Gui.cpp:5945</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_ab0432af80db64f065a922a7dde8adfe4"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4">npi::gui::isDarkBackground</a></div><div class="ttdeci">bool isDarkBackground()</div><div class="ttdoc">Returns true for the effective dark background, resolving System as needed.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l06016">Gui.cpp:6016</a></div></div>
 </div><!-- fragment --><ul>
 <li><span class="tt">true</span> = Effective background is dark including when following <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a" title="Follow the Windows application theme.">npi::gui::Theme::System</a></span>.</li>
 <li><span class="tt">false</span> = Effective background is light including when following <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3eaa45da96d0bf6575970f2d27af22be28a" title="Follow the Windows application theme.">npi::gui::Theme::System</a></span>.</li>
@@ -888,7 +895,7 @@ Public Interface</h1>
 <span class="tt">surfaces()</span></summary>
 <p></p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="../../d7/dc3/namespacenpi_1_1gui.html#d0/dae/structnpi_1_1gui_1_1_surfaces">npi::gui::Surfaces</a> <a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a">npi::gui::surfaces</a>()</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_aa5f3e5cb767068c4756a61d69381f92a"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a">npi::gui::surfaces</a></div><div class="ttdeci">Surfaces surfaces()</div><div class="ttdoc">Returns a copy of the effective background&#39;s surface colors.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05952">Gui.cpp:5952</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_aa5f3e5cb767068c4756a61d69381f92a"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a">npi::gui::surfaces</a></div><div class="ttdeci">Surfaces surfaces()</div><div class="ttdoc">Returns a copy of the effective background&#39;s surface colors.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l06023">Gui.cpp:6023</a></div></div>
 <div class="ttc" id="anamespacenpi_1_1gui_html_d0/dae/structnpi_1_1gui_1_1_surfaces"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#d0/dae/structnpi_1_1gui_1_1_surfaces">npi::gui::Surfaces</a></div><div class="ttdoc">Background colors for the GUI&#39;s three surface levels.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00203">Gui.h:203</a></div></div>
 </div><!-- fragment --><p>Returns a copy of the <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#d0/dae/structnpi_1_1gui_1_1_surfaces" title="Background colors for the GUI&#39;s three surface levels.">npi::gui::Surfaces</a></span> struct for the current effective application background.</p>
 <p><b>Fallback:</b> Return a newly generated <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#d0/dae/structnpi_1_1gui_1_1_surfaces" title="Background colors for the GUI&#39;s three surface levels.">npi::gui::Surfaces</a></span> struct matching with Windows application theme.</p>
@@ -915,7 +922,7 @@ Public Interface</h1>
 <span class="tt">palette()</span></summary>
 <p></p>
 <div class="fragment"><div class="line">QPalette <a class="code hl_function" href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">npi::gui::palette</a>()</div>
-<div class="ttc" id="anamespacenpi_1_1gui_html_a4ccc0e83064b03b6b32774d31c9f8b55"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">npi::gui::palette</a></div><div class="ttdeci">QPalette palette()</div><div class="ttdoc">Returns a copy of the effective GUI theme palette.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l05966">Gui.cpp:5966</a></div></div>
+<div class="ttc" id="anamespacenpi_1_1gui_html_a4ccc0e83064b03b6b32774d31c9f8b55"><div class="ttname"><a href="../../d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55">npi::gui::palette</a></div><div class="ttdeci">QPalette palette()</div><div class="ttdoc">Returns a copy of the effective GUI theme palette.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l06037">Gui.cpp:6037</a></div></div>
 </div><!-- fragment --><p>Returns a copy of the GUI theme <span class="tt">QPalette</span> corresponding to the current effective application background. This <span class="tt">QPalette</span> is used as the <span class="tt">QApplication</span> palette.</p>
 <p><b>Fallback:</b> Return a newly generated <span class="tt">QPalette</span> matching with Windows application theme.</p>
 <dl class="section warning"><dt>Warning</dt><dd><span class="tt">QPalette::Base</span> and <span class="tt">QPalette::Button</span> use the same background colors as <span class="tt">QPalette::Window</span>. Use <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#d0/dae/structnpi_1_1gui_1_1_surfaces" title="Background colors for the GUI&#39;s three surface levels.">npi::gui::Surfaces</a> <a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a" title="Returns a copy of the effective background&#39;s surface colors.">npi::gui::surfaces()</a></span> for the separate <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#af802a14ed0526477d68605de91bb1b1d" title="Recessed surface background.">npi::gui::Surfaces::sunken_</a></span> and <span class="tt"><a class="el" href="../../d7/dc3/namespacenpi_1_1gui.html#a0a0fd1396ec2b0a4be1530be886f7709" title="Raised surface background.">npi::gui::Surfaces::raised_</a></span> colors used in place of <span class="tt">QPalette::Base</span> and <span class="tt">QPalette::Button</span> respectively while drawing most controls through <span class="tt">GuiStyle</span>. </dd></dl>

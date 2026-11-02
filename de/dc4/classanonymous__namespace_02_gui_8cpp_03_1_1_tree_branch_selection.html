@@ -140,7 +140,7 @@ $(function(){initNavTree('de/dc4/classanonymous__namespace_02_gui_8cpp_03_1_1_tr
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description</h2>
 <div class="textblock"><p>Tracks paths to selected tree items for branch highlighting. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01831">1831</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01821">1821</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 </div><div class="dynheader">
 Inheritance diagram for anonymous_namespace{Gui.cpp}::TreeBranchSelection:</div>
 <div class="dyncontent">
@@ -221,14 +221,14 @@ Private Attributes</h2></td></tr>
 
 <p>Starts tracking the tree's selected paths. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01834">1834</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1834</span>                                                  : QObject{tree}, <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>{tree}</div>
-<div class="line"><span class="lineno"> 1835</span>    {</div>
-<div class="line"><span class="lineno"> 1836</span>      <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;viewport()-&gt;installEventFilter(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno"> 1837</span>      <a class="code hl_function" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_</a>();</div>
-<div class="line"><span class="lineno"> 1838</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_a279cc1a53369d4034984497096615fc9"><div class="ttname"><a href="#a279cc1a53369d4034984497096615fc9">anonymous_namespace{Gui.cpp}::TreeBranchSelection::tree_</a></div><div class="ttdeci">QTreeView * tree_</div><div class="ttdoc">Tree view that owns this helper.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01866">Gui.cpp:1866</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_afeaf3be16883c6f8b3091d36ebfe3238"><div class="ttname"><a href="#afeaf3be16883c6f8b3091d36ebfe3238">anonymous_namespace{Gui.cpp}::TreeBranchSelection::rebuild_</a></div><div class="ttdeci">void rebuild_()</div><div class="ttdoc">Updates model connections and rebuilds the selected paths.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01876">Gui.cpp:1876</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01824">1824</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1824</span>                                                  : QObject{tree}, <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>{tree}</div>
+<div class="line"><span class="lineno"> 1825</span>    {</div>
+<div class="line"><span class="lineno"> 1826</span>      <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;viewport()-&gt;installEventFilter(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 1827</span>      <a class="code hl_function" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_</a>();</div>
+<div class="line"><span class="lineno"> 1828</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_a279cc1a53369d4034984497096615fc9"><div class="ttname"><a href="#a279cc1a53369d4034984497096615fc9">anonymous_namespace{Gui.cpp}::TreeBranchSelection::tree_</a></div><div class="ttdeci">QTreeView * tree_</div><div class="ttdoc">Tree view that owns this helper.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01856">Gui.cpp:1856</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_afeaf3be16883c6f8b3091d36ebfe3238"><div class="ttname"><a href="#afeaf3be16883c6f8b3091d36ebfe3238">anonymous_namespace{Gui.cpp}::TreeBranchSelection::rebuild_</a></div><div class="ttdeci">void rebuild_()</div><div class="ttdoc">Updates model connections and rebuilds the selected paths.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01866">Gui.cpp:1866</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>, and <a class="el" href="#a279cc1a53369d4034984497096615fc9">tree_</a>.</p>
 
@@ -272,9 +272,9 @@ Here is the caller graph for this function:</div>
 
 <p>Checks whether an item belongs to a selected path. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01851">1851</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1851</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.contains(index); }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_ac66fc3d6df8448364d81a3434367140c"><div class="ttname"><a href="#ac66fc3d6df8448364d81a3434367140c">anonymous_namespace{Gui.cpp}::TreeBranchSelection::path_</a></div><div class="ttdeci">QSet&lt; QModelIndex &gt; path_</div><div class="ttdoc">Selected rows and their ancestors, stored using column zero.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01872">Gui.cpp:1872</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01841">1841</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1841</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.contains(index); }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_ac66fc3d6df8448364d81a3434367140c"><div class="ttname"><a href="#ac66fc3d6df8448364d81a3434367140c">anonymous_namespace{Gui.cpp}::TreeBranchSelection::path_</a></div><div class="ttdeci">QSet&lt; QModelIndex &gt; path_</div><div class="ttdoc">Selected rows and their ancestors, stored using column zero.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01862">Gui.cpp:1862</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.</p>
 
@@ -309,12 +309,12 @@ Here is the caller graph for this function:</div>
 
 <p>Refreshes selected paths before the tree is painted. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01858">1858</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1859</span>    {</div>
-<div class="line"><span class="lineno"> 1860</span>      <span class="keywordflow">if</span>(<span class="keywordtype">object</span> == <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;viewport() &amp;&amp; event-&gt;type() == QEvent::Paint)</div>
-<div class="line"><span class="lineno"> 1861</span>        <a class="code hl_function" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_</a>();</div>
-<div class="line"><span class="lineno"> 1862</span>      <span class="keywordflow">return</span> QObject::eventFilter(<span class="keywordtype">object</span>, event);</div>
-<div class="line"><span class="lineno"> 1863</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01848">1848</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1849</span>    {</div>
+<div class="line"><span class="lineno"> 1850</span>      <span class="keywordflow">if</span>(<span class="keywordtype">object</span> == <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;viewport() &amp;&amp; event-&gt;type() == QEvent::Paint)</div>
+<div class="line"><span class="lineno"> 1851</span>        <a class="code hl_function" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_</a>();</div>
+<div class="line"><span class="lineno"> 1852</span>      <span class="keywordflow">return</span> QObject::eventFilter(<span class="keywordtype">object</span>, event);</div>
+<div class="line"><span class="lineno"> 1853</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>, and <a class="el" href="#a279cc1a53369d4034984497096615fc9">tree_</a>.</p>
 <div class="dynheader">
@@ -350,15 +350,15 @@ Here is the call graph for this function:</div>
 
 <p>Finds the selection-path helper attached to the tree. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01841">1841</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1842</span>    {</div>
-<div class="line"><span class="lineno"> 1843</span>      <span class="keywordflow">for</span>(QObject* child : tree-&gt;children()) {</div>
-<div class="line"><span class="lineno"> 1844</span>        <span class="keywordflow">if</span>(<span class="keyword">auto</span>* data = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_function" href="#a920047a05e57977d397aaf3b7a45b437">TreeBranchSelection</a>*<span class="keyword">&gt;</span>(child))</div>
-<div class="line"><span class="lineno"> 1845</span>          <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno"> 1846</span>      }</div>
-<div class="line"><span class="lineno"> 1847</span>      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno"> 1848</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_a920047a05e57977d397aaf3b7a45b437"><div class="ttname"><a href="#a920047a05e57977d397aaf3b7a45b437">anonymous_namespace{Gui.cpp}::TreeBranchSelection::TreeBranchSelection</a></div><div class="ttdeci">TreeBranchSelection(QTreeView *tree)</div><div class="ttdoc">Starts tracking the tree&#39;s selected paths.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01834">Gui.cpp:1834</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01831">1831</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1832</span>    {</div>
+<div class="line"><span class="lineno"> 1833</span>      <span class="keywordflow">for</span>(QObject* child : tree-&gt;children()) {</div>
+<div class="line"><span class="lineno"> 1834</span>        <span class="keywordflow">if</span>(<span class="keyword">auto</span>* data = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_function" href="#a920047a05e57977d397aaf3b7a45b437">TreeBranchSelection</a>*<span class="keyword">&gt;</span>(child))</div>
+<div class="line"><span class="lineno"> 1835</span>          <span class="keywordflow">return</span> data;</div>
+<div class="line"><span class="lineno"> 1836</span>      }</div>
+<div class="line"><span class="lineno"> 1837</span>      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 1838</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_a920047a05e57977d397aaf3b7a45b437"><div class="ttname"><a href="#a920047a05e57977d397aaf3b7a45b437">anonymous_namespace{Gui.cpp}::TreeBranchSelection::TreeBranchSelection</a></div><div class="ttdeci">TreeBranchSelection(QTreeView *tree)</div><div class="ttdoc">Starts tracking the tree&#39;s selected paths.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01824">Gui.cpp:1824</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a920047a05e57977d397aaf3b7a45b437">TreeBranchSelection()</a>.</p>
 
@@ -401,9 +401,9 @@ Here is the caller graph for this function:</div>
 
 <p>Returns the last child row reached by a selected path, or -1 if none. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01854">1854</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1854</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>.value(parent, -1); }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_aea9cbf3007f82b601f1e316a76667e0d"><div class="ttname"><a href="#aea9cbf3007f82b601f1e316a76667e0d">anonymous_namespace{Gui.cpp}::TreeBranchSelection::lastChildRow_</a></div><div class="ttdeci">QHash&lt; QModelIndex, int &gt; lastChildRow_</div><div class="ttdoc">Last child row reached by a selected path under each parent.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01873">Gui.cpp:1873</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01844">1844</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1844</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>.value(parent, -1); }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_aea9cbf3007f82b601f1e316a76667e0d"><div class="ttname"><a href="#aea9cbf3007f82b601f1e316a76667e0d">anonymous_namespace{Gui.cpp}::TreeBranchSelection::lastChildRow_</a></div><div class="ttdeci">QHash&lt; QModelIndex, int &gt; lastChildRow_</div><div class="ttdoc">Last child row reached by a selected path under each parent.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01863">Gui.cpp:1863</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>.</p>
 
@@ -434,91 +434,91 @@ Here is the caller graph for this function:</div>
 
 <p>Updates model connections and rebuilds the selected paths. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01876">1876</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1877</span>    {</div>
-<div class="line"><span class="lineno"> 1878</span>      <span class="comment">// Follow model changes so item appearance stays up to date.</span></div>
-<div class="line"><span class="lineno"> 1879</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aacb816c491a2e3f84237d7128acb5490">model_</a>.data() != <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;model()) {</div>
-<div class="line"><span class="lineno"> 1880</span>        QObject::disconnect(<a class="code hl_variable" href="#a5e09feeba2c57d229aeed24014a87a0b">dataConnection_</a>);</div>
-<div class="line"><span class="lineno"> 1881</span>        <a class="code hl_variable" href="#aacb816c491a2e3f84237d7128acb5490">model_</a> = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;model();</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01866">1866</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1867</span>    {</div>
+<div class="line"><span class="lineno"> 1868</span>      <span class="comment">// Follow model changes so item appearance stays up to date.</span></div>
+<div class="line"><span class="lineno"> 1869</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aacb816c491a2e3f84237d7128acb5490">model_</a>.data() != <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;model()) {</div>
+<div class="line"><span class="lineno"> 1870</span>        QObject::disconnect(<a class="code hl_variable" href="#a5e09feeba2c57d229aeed24014a87a0b">dataConnection_</a>);</div>
+<div class="line"><span class="lineno"> 1871</span>        <a class="code hl_variable" href="#aacb816c491a2e3f84237d7128acb5490">model_</a> = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;model();</div>
+<div class="line"><span class="lineno"> 1872</span> </div>
+<div class="line"><span class="lineno"> 1873</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aacb816c491a2e3f84237d7128acb5490">model_</a>) {</div>
+<div class="line"><span class="lineno"> 1874</span>          <a class="code hl_variable" href="#a5e09feeba2c57d229aeed24014a87a0b">dataConnection_</a> = QObject::connect(</div>
+<div class="line"><span class="lineno"> 1875</span>            <a class="code hl_variable" href="#aacb816c491a2e3f84237d7128acb5490">model_</a>.data(),</div>
+<div class="line"><span class="lineno"> 1876</span>            &amp;QAbstractItemModel::dataChanged, <span class="keyword">this</span>, [<span class="keyword">this</span>]{</div>
+<div class="line"><span class="lineno"> 1877</span>              tree_-&gt;viewport()-&gt;update();</div>
+<div class="line"><span class="lineno"> 1878</span>              if(auto* header = tree_-&gt;header())</div>
+<div class="line"><span class="lineno"> 1879</span>                header-&gt;viewport()-&gt;update();</div>
+<div class="line"><span class="lineno"> 1880</span>            });</div>
+<div class="line"><span class="lineno"> 1881</span>        }</div>
 <div class="line"><span class="lineno"> 1882</span> </div>
-<div class="line"><span class="lineno"> 1883</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aacb816c491a2e3f84237d7128acb5490">model_</a>) {</div>
-<div class="line"><span class="lineno"> 1884</span>          <a class="code hl_variable" href="#a5e09feeba2c57d229aeed24014a87a0b">dataConnection_</a> = QObject::connect(</div>
-<div class="line"><span class="lineno"> 1885</span>            <a class="code hl_variable" href="#aacb816c491a2e3f84237d7128acb5490">model_</a>.data(),</div>
-<div class="line"><span class="lineno"> 1886</span>            &amp;QAbstractItemModel::dataChanged, <span class="keyword">this</span>, [<span class="keyword">this</span>]{</div>
-<div class="line"><span class="lineno"> 1887</span>              tree_-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1888</span>              if(auto* header = tree_-&gt;header())</div>
-<div class="line"><span class="lineno"> 1889</span>                header-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1890</span>            });</div>
-<div class="line"><span class="lineno"> 1891</span>        }</div>
-<div class="line"><span class="lineno"> 1892</span> </div>
-<div class="line"><span class="lineno"> 1893</span>        <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1894</span> </div>
-<div class="line"><span class="lineno"> 1895</span>        <span class="keywordflow">if</span>(<span class="keyword">auto</span>* header = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;header())</div>
-<div class="line"><span class="lineno"> 1896</span>          header-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1897</span>      }</div>
-<div class="line"><span class="lineno"> 1898</span> </div>
-<div class="line"><span class="lineno"> 1899</span>      <span class="comment">// Reconnect when the tree receives a different selection model.</span></div>
-<div class="line"><span class="lineno"> 1900</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>.data() != <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;selectionModel()) {</div>
-<div class="line"><span class="lineno"> 1901</span>        QObject::disconnect(<a class="code hl_variable" href="#adb564adaccbd42ec0aa42a29a409ff25">selectionConnection_</a>);</div>
-<div class="line"><span class="lineno"> 1902</span>        QObject::disconnect(<a class="code hl_variable" href="#ae79d88eb084374f5882b1b4e7244caf3">currentConnection_</a>);</div>
-<div class="line"><span class="lineno"> 1903</span> </div>
-<div class="line"><span class="lineno"> 1904</span>        <a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a> = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;selectionModel();</div>
+<div class="line"><span class="lineno"> 1883</span>        <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;viewport()-&gt;update();</div>
+<div class="line"><span class="lineno"> 1884</span> </div>
+<div class="line"><span class="lineno"> 1885</span>        <span class="keywordflow">if</span>(<span class="keyword">auto</span>* header = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;header())</div>
+<div class="line"><span class="lineno"> 1886</span>          header-&gt;viewport()-&gt;update();</div>
+<div class="line"><span class="lineno"> 1887</span>      }</div>
+<div class="line"><span class="lineno"> 1888</span> </div>
+<div class="line"><span class="lineno"> 1889</span>      <span class="comment">// Reconnect when the tree receives a different selection model.</span></div>
+<div class="line"><span class="lineno"> 1890</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>.data() != <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;selectionModel()) {</div>
+<div class="line"><span class="lineno"> 1891</span>        QObject::disconnect(<a class="code hl_variable" href="#adb564adaccbd42ec0aa42a29a409ff25">selectionConnection_</a>);</div>
+<div class="line"><span class="lineno"> 1892</span>        QObject::disconnect(<a class="code hl_variable" href="#ae79d88eb084374f5882b1b4e7244caf3">currentConnection_</a>);</div>
+<div class="line"><span class="lineno"> 1893</span> </div>
+<div class="line"><span class="lineno"> 1894</span>        <a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a> = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;selectionModel();</div>
+<div class="line"><span class="lineno"> 1895</span> </div>
+<div class="line"><span class="lineno"> 1896</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>) {</div>
+<div class="line"><span class="lineno"> 1897</span>          <a class="code hl_variable" href="#adb564adaccbd42ec0aa42a29a409ff25">selectionConnection_</a> = QObject::connect(</div>
+<div class="line"><span class="lineno"> 1898</span>            <a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>.data(), &amp;QItemSelectionModel::selectionChanged,</div>
+<div class="line"><span class="lineno"> 1899</span>            <span class="keyword">this</span>, [<span class="keyword">this</span>]{</div>
+<div class="line"><span class="lineno"> 1900</span>              tree_-&gt;viewport()-&gt;update();</div>
+<div class="line"><span class="lineno"> 1901</span> </div>
+<div class="line"><span class="lineno"> 1902</span>              if(auto* header = tree_-&gt;header())</div>
+<div class="line"><span class="lineno"> 1903</span>                header-&gt;viewport()-&gt;update();</div>
+<div class="line"><span class="lineno"> 1904</span>            });</div>
 <div class="line"><span class="lineno"> 1905</span> </div>
-<div class="line"><span class="lineno"> 1906</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>) {</div>
-<div class="line"><span class="lineno"> 1907</span>          <a class="code hl_variable" href="#adb564adaccbd42ec0aa42a29a409ff25">selectionConnection_</a> = QObject::connect(</div>
-<div class="line"><span class="lineno"> 1908</span>            <a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>.data(), &amp;QItemSelectionModel::selectionChanged,</div>
-<div class="line"><span class="lineno"> 1909</span>            <span class="keyword">this</span>, [<span class="keyword">this</span>]{</div>
-<div class="line"><span class="lineno"> 1910</span>              tree_-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1911</span> </div>
-<div class="line"><span class="lineno"> 1912</span>              if(auto* header = tree_-&gt;header())</div>
-<div class="line"><span class="lineno"> 1913</span>                header-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1914</span>            });</div>
+<div class="line"><span class="lineno"> 1906</span>          <a class="code hl_variable" href="#ae79d88eb084374f5882b1b4e7244caf3">currentConnection_</a> = QObject::connect(</div>
+<div class="line"><span class="lineno"> 1907</span>            <a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>.data(), &amp;QItemSelectionModel::currentChanged,</div>
+<div class="line"><span class="lineno"> 1908</span>            <span class="keyword">this</span>, [<span class="keyword">this</span>]{</div>
+<div class="line"><span class="lineno"> 1909</span>              if(auto* header = tree_-&gt;header())</div>
+<div class="line"><span class="lineno"> 1910</span>                header-&gt;viewport()-&gt;update();</div>
+<div class="line"><span class="lineno"> 1911</span>            });</div>
+<div class="line"><span class="lineno"> 1912</span>        }</div>
+<div class="line"><span class="lineno"> 1913</span> </div>
+<div class="line"><span class="lineno"> 1914</span>        <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;viewport()-&gt;update();</div>
 <div class="line"><span class="lineno"> 1915</span> </div>
-<div class="line"><span class="lineno"> 1916</span>          <a class="code hl_variable" href="#ae79d88eb084374f5882b1b4e7244caf3">currentConnection_</a> = QObject::connect(</div>
-<div class="line"><span class="lineno"> 1917</span>            <a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>.data(), &amp;QItemSelectionModel::currentChanged,</div>
-<div class="line"><span class="lineno"> 1918</span>            <span class="keyword">this</span>, [<span class="keyword">this</span>]{</div>
-<div class="line"><span class="lineno"> 1919</span>              if(auto* header = tree_-&gt;header())</div>
-<div class="line"><span class="lineno"> 1920</span>                header-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1921</span>            });</div>
-<div class="line"><span class="lineno"> 1922</span>        }</div>
-<div class="line"><span class="lineno"> 1923</span> </div>
-<div class="line"><span class="lineno"> 1924</span>        <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1925</span> </div>
-<div class="line"><span class="lineno"> 1926</span>        <span class="keywordflow">if</span>(<span class="keyword">auto</span>* header = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;header())</div>
-<div class="line"><span class="lineno"> 1927</span>          header-&gt;viewport()-&gt;update();</div>
-<div class="line"><span class="lineno"> 1928</span>      }</div>
-<div class="line"><span class="lineno"> 1929</span> </div>
-<div class="line"><span class="lineno"> 1930</span>      <a class="code hl_variable" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.clear();</div>
-<div class="line"><span class="lineno"> 1931</span>      <a class="code hl_variable" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>.clear();</div>
-<div class="line"><span class="lineno"> 1932</span>      <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>)</div>
-<div class="line"><span class="lineno"> 1933</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1934</span> </div>
-<div class="line"><span class="lineno"> 1935</span>      <span class="comment">// Trace selected rows back to the displayed root, using column zero for each row.</span></div>
-<div class="line"><span class="lineno"> 1936</span>      <span class="keyword">const</span> QModelIndex root = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;rootIndex().siblingAtColumn(0);</div>
-<div class="line"><span class="lineno"> 1937</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QModelIndex&amp; selected : <a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>-&gt;selectedIndexes()) {</div>
-<div class="line"><span class="lineno"> 1938</span>        QList&lt;QModelIndex&gt; chain;</div>
-<div class="line"><span class="lineno"> 1939</span>        QModelIndex index = selected.siblingAtColumn(0);</div>
-<div class="line"><span class="lineno"> 1940</span>        <span class="keywordflow">while</span>(index.isValid() &amp;&amp; index != root) {</div>
-<div class="line"><span class="lineno"> 1941</span>          chain.append(index);</div>
-<div class="line"><span class="lineno"> 1942</span>          index = index.parent();</div>
+<div class="line"><span class="lineno"> 1916</span>        <span class="keywordflow">if</span>(<span class="keyword">auto</span>* header = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;header())</div>
+<div class="line"><span class="lineno"> 1917</span>          header-&gt;viewport()-&gt;update();</div>
+<div class="line"><span class="lineno"> 1918</span>      }</div>
+<div class="line"><span class="lineno"> 1919</span> </div>
+<div class="line"><span class="lineno"> 1920</span>      <a class="code hl_variable" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.clear();</div>
+<div class="line"><span class="lineno"> 1921</span>      <a class="code hl_variable" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>.clear();</div>
+<div class="line"><span class="lineno"> 1922</span>      <span class="keywordflow">if</span>(!<a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>)</div>
+<div class="line"><span class="lineno"> 1923</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1924</span> </div>
+<div class="line"><span class="lineno"> 1925</span>      <span class="comment">// Trace selected rows back to the displayed root, using column zero for each row.</span></div>
+<div class="line"><span class="lineno"> 1926</span>      <span class="keyword">const</span> QModelIndex root = <a class="code hl_variable" href="#a279cc1a53369d4034984497096615fc9">tree_</a>-&gt;rootIndex().siblingAtColumn(0);</div>
+<div class="line"><span class="lineno"> 1927</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QModelIndex&amp; selected : <a class="code hl_variable" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>-&gt;selectedIndexes()) {</div>
+<div class="line"><span class="lineno"> 1928</span>        QList&lt;QModelIndex&gt; chain;</div>
+<div class="line"><span class="lineno"> 1929</span>        QModelIndex index = selected.siblingAtColumn(0);</div>
+<div class="line"><span class="lineno"> 1930</span>        <span class="keywordflow">while</span>(index.isValid() &amp;&amp; index != root) {</div>
+<div class="line"><span class="lineno"> 1931</span>          chain.append(index);</div>
+<div class="line"><span class="lineno"> 1932</span>          index = index.parent();</div>
+<div class="line"><span class="lineno"> 1933</span>        }</div>
+<div class="line"><span class="lineno"> 1934</span>        <span class="keywordflow">if</span>(index != root)</div>
+<div class="line"><span class="lineno"> 1935</span>          <span class="keywordflow">continue</span>; <span class="comment">// The selection lies outside the displayed root.</span></div>
+<div class="line"><span class="lineno"> 1936</span> </div>
+<div class="line"><span class="lineno"> 1937</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> QModelIndex&amp; node : chain) {</div>
+<div class="line"><span class="lineno"> 1938</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.contains(node))</div>
+<div class="line"><span class="lineno"> 1939</span>            <span class="keywordflow">break</span>; <span class="comment">// This node and its ancestors were already included.</span></div>
+<div class="line"><span class="lineno"> 1940</span>          <a class="code hl_variable" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.insert(node);</div>
+<div class="line"><span class="lineno"> 1941</span>          <span class="keyword">const</span> QModelIndex parent = node.parent();</div>
+<div class="line"><span class="lineno"> 1942</span>          <a class="code hl_variable" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>[parent] = qMax(<a class="code hl_variable" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>.value(parent, -1), node.row());</div>
 <div class="line"><span class="lineno"> 1943</span>        }</div>
-<div class="line"><span class="lineno"> 1944</span>        <span class="keywordflow">if</span>(index != root)</div>
-<div class="line"><span class="lineno"> 1945</span>          <span class="keywordflow">continue</span>; <span class="comment">// The selection lies outside the displayed root.</span></div>
-<div class="line"><span class="lineno"> 1946</span> </div>
-<div class="line"><span class="lineno"> 1947</span>        <span class="keywordflow">for</span>(<span class="keyword">const</span> QModelIndex&amp; node : chain) {</div>
-<div class="line"><span class="lineno"> 1948</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.contains(node))</div>
-<div class="line"><span class="lineno"> 1949</span>            <span class="keywordflow">break</span>; <span class="comment">// This node and its ancestors were already included.</span></div>
-<div class="line"><span class="lineno"> 1950</span>          <a class="code hl_variable" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>.insert(node);</div>
-<div class="line"><span class="lineno"> 1951</span>          <span class="keyword">const</span> QModelIndex parent = node.parent();</div>
-<div class="line"><span class="lineno"> 1952</span>          <a class="code hl_variable" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>[parent] = qMax(<a class="code hl_variable" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>.value(parent, -1), node.row());</div>
-<div class="line"><span class="lineno"> 1953</span>        }</div>
-<div class="line"><span class="lineno"> 1954</span>      }</div>
-<div class="line"><span class="lineno"> 1955</span>    }</div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_a5e09feeba2c57d229aeed24014a87a0b"><div class="ttname"><a href="#a5e09feeba2c57d229aeed24014a87a0b">anonymous_namespace{Gui.cpp}::TreeBranchSelection::dataConnection_</a></div><div class="ttdeci">QMetaObject::Connection dataConnection_</div><div class="ttdoc">Refreshes branches and headers when item data changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01869">Gui.cpp:1869</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_aacb816c491a2e3f84237d7128acb5490"><div class="ttname"><a href="#aacb816c491a2e3f84237d7128acb5490">anonymous_namespace{Gui.cpp}::TreeBranchSelection::model_</a></div><div class="ttdeci">QPointer&lt; QAbstractItemModel &gt; model_</div><div class="ttdoc">Tree model being tracked.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01868">Gui.cpp:1868</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_ac80d2ce476e5ca2298f77d3518493899"><div class="ttname"><a href="#ac80d2ce476e5ca2298f77d3518493899">anonymous_namespace{Gui.cpp}::TreeBranchSelection::selectionModel_</a></div><div class="ttdeci">QPointer&lt; QItemSelectionModel &gt; selectionModel_</div><div class="ttdoc">Selection model being tracked.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01867">Gui.cpp:1867</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_adb564adaccbd42ec0aa42a29a409ff25"><div class="ttname"><a href="#adb564adaccbd42ec0aa42a29a409ff25">anonymous_namespace{Gui.cpp}::TreeBranchSelection::selectionConnection_</a></div><div class="ttdeci">QMetaObject::Connection selectionConnection_</div><div class="ttdoc">Refreshes branches and headers when selection changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01870">Gui.cpp:1870</a></div></div>
-<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_ae79d88eb084374f5882b1b4e7244caf3"><div class="ttname"><a href="#ae79d88eb084374f5882b1b4e7244caf3">anonymous_namespace{Gui.cpp}::TreeBranchSelection::currentConnection_</a></div><div class="ttdeci">QMetaObject::Connection currentConnection_</div><div class="ttdoc">Refreshes headers when the current item changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01871">Gui.cpp:1871</a></div></div>
+<div class="line"><span class="lineno"> 1944</span>      }</div>
+<div class="line"><span class="lineno"> 1945</span>    }</div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_a5e09feeba2c57d229aeed24014a87a0b"><div class="ttname"><a href="#a5e09feeba2c57d229aeed24014a87a0b">anonymous_namespace{Gui.cpp}::TreeBranchSelection::dataConnection_</a></div><div class="ttdeci">QMetaObject::Connection dataConnection_</div><div class="ttdoc">Refreshes branches and headers when item data changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01859">Gui.cpp:1859</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_aacb816c491a2e3f84237d7128acb5490"><div class="ttname"><a href="#aacb816c491a2e3f84237d7128acb5490">anonymous_namespace{Gui.cpp}::TreeBranchSelection::model_</a></div><div class="ttdeci">QPointer&lt; QAbstractItemModel &gt; model_</div><div class="ttdoc">Tree model being tracked.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01858">Gui.cpp:1858</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_ac80d2ce476e5ca2298f77d3518493899"><div class="ttname"><a href="#ac80d2ce476e5ca2298f77d3518493899">anonymous_namespace{Gui.cpp}::TreeBranchSelection::selectionModel_</a></div><div class="ttdeci">QPointer&lt; QItemSelectionModel &gt; selectionModel_</div><div class="ttdoc">Selection model being tracked.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01857">Gui.cpp:1857</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_adb564adaccbd42ec0aa42a29a409ff25"><div class="ttname"><a href="#adb564adaccbd42ec0aa42a29a409ff25">anonymous_namespace{Gui.cpp}::TreeBranchSelection::selectionConnection_</a></div><div class="ttdeci">QMetaObject::Connection selectionConnection_</div><div class="ttdoc">Refreshes branches and headers when selection changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01860">Gui.cpp:1860</a></div></div>
+<div class="ttc" id="aclassanonymous__namespace_02_gui_8cpp_03_1_1_tree_branch_selection_html_ae79d88eb084374f5882b1b4e7244caf3"><div class="ttname"><a href="#ae79d88eb084374f5882b1b4e7244caf3">anonymous_namespace{Gui.cpp}::TreeBranchSelection::currentConnection_</a></div><div class="ttdeci">QMetaObject::Connection currentConnection_</div><div class="ttdoc">Refreshes headers when the current item changes.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01861">Gui.cpp:1861</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ae79d88eb084374f5882b1b4e7244caf3">currentConnection_</a>, <a class="el" href="#a5e09feeba2c57d229aeed24014a87a0b">dataConnection_</a>, <a class="el" href="#aea9cbf3007f82b601f1e316a76667e0d">lastChildRow_</a>, <a class="el" href="#aacb816c491a2e3f84237d7128acb5490">model_</a>, <a class="el" href="#ac66fc3d6df8448364d81a3434367140c">path_</a>, <a class="el" href="#adb564adaccbd42ec0aa42a29a409ff25">selectionConnection_</a>, <a class="el" href="#ac80d2ce476e5ca2298f77d3518493899">selectionModel_</a>, and <a class="el" href="#a279cc1a53369d4034984497096615fc9">tree_</a>.</p>
 
@@ -554,7 +554,7 @@ Here is the caller graph for this function:</div>
 
 <p>Refreshes headers when the current item changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01871">1871</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01861">1861</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>.</p>
 
@@ -582,7 +582,7 @@ Here is the caller graph for this function:</div>
 
 <p>Refreshes branches and headers when item data changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01869">1869</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01859">1859</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>.</p>
 
@@ -610,7 +610,7 @@ Here is the caller graph for this function:</div>
 
 <p>Last child row reached by a selected path under each parent. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01873">1873</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01863">1863</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#adfe6b4accbfc0d1acd198575d8dd2107">lastChild_()</a>, and <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>.</p>
 
@@ -638,7 +638,7 @@ Here is the caller graph for this function:</div>
 
 <p>Tree model being tracked. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01868">1868</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01858">1858</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>.</p>
 
@@ -666,7 +666,7 @@ Here is the caller graph for this function:</div>
 
 <p>Selected rows and their ancestors, stored using column zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01872">1872</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01862">1862</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a1cdff1bfbd90253ed6d5c3e0ca8c13fa">contains_()</a>, and <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>.</p>
 
@@ -694,7 +694,7 @@ Here is the caller graph for this function:</div>
 
 <p>Refreshes branches and headers when selection changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01870">1870</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01860">1860</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>.</p>
 
@@ -722,7 +722,7 @@ Here is the caller graph for this function:</div>
 
 <p>Selection model being tracked. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01867">1867</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01857">1857</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>.</p>
 
@@ -750,7 +750,7 @@ Here is the caller graph for this function:</div>
 
 <p>Tree view that owns this helper. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01866">1866</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01856">1856</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#a920047a05e57977d397aaf3b7a45b437">TreeBranchSelection()</a>, <a class="el" href="#a6efaac6e53c5162d5a1c569dbe69176d">eventFilter()</a>, and <a class="el" href="#afeaf3be16883c6f8b3091d36ebfe3238">rebuild_()</a>.</p>
 

@@ -182,13 +182,13 @@ Functions</h2></td></tr>
 
 <p>Copies the normal-mode pixmaps for one icon state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01389">1389</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1390</span>    {</div>
-<div class="line"><span class="lineno"> 1391</span>      <span class="keywordflow">if</span>(!dest) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1392</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QSize&amp; <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a> : source.availableSizes(QIcon::Normal, state))</div>
-<div class="line"><span class="lineno"> 1393</span>        dest-&gt;addPixmap(source.pixmap(<a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, QIcon::Normal, state), QIcon::Normal, state);</div>
-<div class="line"><span class="lineno"> 1394</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html"><div class="ttname"><a href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">anonymous_namespace{Gui.cpp}::size</a></div><div class="ttdoc">Helpers for control heights, icon sizes and spacing.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01479">Gui.cpp:1480</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01379">1379</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1380</span>    {</div>
+<div class="line"><span class="lineno"> 1381</span>      <span class="keywordflow">if</span>(!dest) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1382</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> QSize&amp; <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a> : source.availableSizes(QIcon::Normal, state))</div>
+<div class="line"><span class="lineno"> 1383</span>        dest-&gt;addPixmap(source.pixmap(<a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, QIcon::Normal, state), QIcon::Normal, state);</div>
+<div class="line"><span class="lineno"> 1384</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html"><div class="ttname"><a href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">anonymous_namespace{Gui.cpp}::size</a></div><div class="ttdoc">Helpers for control heights, icon sizes and spacing.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01469">Gui.cpp:1470</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ab045516bfe911dbcb58313d007668b28">copyIconState()</a>.</p>
 
@@ -237,27 +237,27 @@ Here is the caller graph for this function:</div>
 
 <p>Creates a themed icon, falling back to original normal-mode pixmaps for missing resources. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01415">1415</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1416</span>    {</div>
-<div class="line"><span class="lineno"> 1417</span>      QIcon <a class="code hl_namespace" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html">icon</a>;</div>
-<div class="line"><span class="lineno"> 1418</span> </div>
-<div class="line"><span class="lineno"> 1419</span>      <span class="keyword">const</span> QString offPath{<a class="code hl_function" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath</a>(iconName, dark)};</div>
-<div class="line"><span class="lineno"> 1420</span>      <span class="keywordflow">if</span>(!offPath.isEmpty())</div>
-<div class="line"><span class="lineno"> 1421</span>        <a class="code hl_namespace" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html">icon</a>.addFile(offPath, QSize{}, QIcon::Normal, QIcon::Off);</div>
-<div class="line"><span class="lineno"> 1422</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1423</span>        <a class="code hl_function" href="#ab045516bfe911dbcb58313d007668b28">copyIconState</a>(&amp;icon, originalIcon, QIcon::Off);</div>
-<div class="line"><span class="lineno"> 1424</span> </div>
-<div class="line"><span class="lineno"> 1425</span>      <span class="keyword">const</span> QString onPath{<a class="code hl_function" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath</a>(iconOnName, dark)};</div>
-<div class="line"><span class="lineno"> 1426</span>      <span class="keywordflow">if</span>(!onPath.isEmpty())</div>
-<div class="line"><span class="lineno"> 1427</span>        icon.addFile(onPath, QSize{}, QIcon::Normal, QIcon::On);</div>
-<div class="line"><span class="lineno"> 1428</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1429</span>        <a class="code hl_function" href="#ab045516bfe911dbcb58313d007668b28">copyIconState</a>(&amp;icon, originalIcon, QIcon::On);</div>
-<div class="line"><span class="lineno"> 1430</span> </div>
-<div class="line"><span class="lineno"> 1431</span>      <span class="keywordflow">return</span> icon;</div>
-<div class="line"><span class="lineno"> 1432</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1icon_html"><div class="ttname"><a href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html">anonymous_namespace{Gui.cpp}::icon</a></div><div class="ttdoc">Helpers for theme-dependent icons and pixmaps.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01386">Gui.cpp:1387</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1icon_html_a6ccf463e65a358a2e6f54e73769bae0c"><div class="ttname"><a href="#a6ccf463e65a358a2e6f54e73769bae0c">anonymous_namespace{Gui.cpp}::icon::dynamicIconPath</a></div><div class="ttdeci">QString dynamicIconPath(const QString &amp;iconName, bool dark)</div><div class="ttdoc">Finds a theme-specific icon resource, falling back to the default resource.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01397">Gui.cpp:1397</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1icon_html_ab045516bfe911dbcb58313d007668b28"><div class="ttname"><a href="#ab045516bfe911dbcb58313d007668b28">anonymous_namespace{Gui.cpp}::icon::copyIconState</a></div><div class="ttdeci">void copyIconState(QIcon *dest, const QIcon &amp;source, QIcon::State state)</div><div class="ttdoc">Copies the normal-mode pixmaps for one icon state.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01389">Gui.cpp:1389</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01405">1405</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1406</span>    {</div>
+<div class="line"><span class="lineno"> 1407</span>      QIcon <a class="code hl_namespace" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html">icon</a>;</div>
+<div class="line"><span class="lineno"> 1408</span> </div>
+<div class="line"><span class="lineno"> 1409</span>      <span class="keyword">const</span> QString offPath{<a class="code hl_function" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath</a>(iconName, dark)};</div>
+<div class="line"><span class="lineno"> 1410</span>      <span class="keywordflow">if</span>(!offPath.isEmpty())</div>
+<div class="line"><span class="lineno"> 1411</span>        <a class="code hl_namespace" href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html">icon</a>.addFile(offPath, QSize{}, QIcon::Normal, QIcon::Off);</div>
+<div class="line"><span class="lineno"> 1412</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1413</span>        <a class="code hl_function" href="#ab045516bfe911dbcb58313d007668b28">copyIconState</a>(&amp;icon, originalIcon, QIcon::Off);</div>
+<div class="line"><span class="lineno"> 1414</span> </div>
+<div class="line"><span class="lineno"> 1415</span>      <span class="keyword">const</span> QString onPath{<a class="code hl_function" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath</a>(iconOnName, dark)};</div>
+<div class="line"><span class="lineno"> 1416</span>      <span class="keywordflow">if</span>(!onPath.isEmpty())</div>
+<div class="line"><span class="lineno"> 1417</span>        icon.addFile(onPath, QSize{}, QIcon::Normal, QIcon::On);</div>
+<div class="line"><span class="lineno"> 1418</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1419</span>        <a class="code hl_function" href="#ab045516bfe911dbcb58313d007668b28">copyIconState</a>(&amp;icon, originalIcon, QIcon::On);</div>
+<div class="line"><span class="lineno"> 1420</span> </div>
+<div class="line"><span class="lineno"> 1421</span>      <span class="keywordflow">return</span> icon;</div>
+<div class="line"><span class="lineno"> 1422</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1icon_html"><div class="ttname"><a href="../../df/d10/namespaceanonymous__namespace_02_gui_8cpp_03_1_1icon.html">anonymous_namespace{Gui.cpp}::icon</a></div><div class="ttdoc">Helpers for theme-dependent icons and pixmaps.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01376">Gui.cpp:1377</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1icon_html_a6ccf463e65a358a2e6f54e73769bae0c"><div class="ttname"><a href="#a6ccf463e65a358a2e6f54e73769bae0c">anonymous_namespace{Gui.cpp}::icon::dynamicIconPath</a></div><div class="ttdeci">QString dynamicIconPath(const QString &amp;iconName, bool dark)</div><div class="ttdoc">Finds a theme-specific icon resource, falling back to the default resource.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01387">Gui.cpp:1387</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1icon_html_ab045516bfe911dbcb58313d007668b28"><div class="ttname"><a href="#ab045516bfe911dbcb58313d007668b28">anonymous_namespace{Gui.cpp}::icon::copyIconState</a></div><div class="ttdeci">void copyIconState(QIcon *dest, const QIcon &amp;source, QIcon::State state)</div><div class="ttdoc">Copies the normal-mode pixmaps for one icon state.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01379">Gui.cpp:1379</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#ab045516bfe911dbcb58313d007668b28">copyIconState()</a>, <a class="el" href="#acb3f85109e62ceb8dca43bd11d2274e8">dynamicIcon()</a>, and <a class="el" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath()</a>.</p>
 
@@ -296,22 +296,22 @@ Here is the caller graph for this function:</div>
 
 <p>Finds a theme-specific icon resource, falling back to the default resource. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01397">1397</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1398</span>    {</div>
-<div class="line"><span class="lineno"> 1399</span>      QString path;</div>
-<div class="line"><span class="lineno"> 1400</span>      <span class="keywordflow">if</span>(iconName.isEmpty()) <span class="keywordflow">return</span> path; <span class="comment">// NOLINT(clang-diagnostic-nrvo)</span></div>
-<div class="line"><span class="lineno"> 1401</span> </div>
-<div class="line"><span class="lineno"> 1402</span>      <span class="comment">// Theme-specific resource.</span></div>
-<div class="line"><span class="lineno"> 1403</span>      path = QStringLiteral(<span class="stringliteral">&quot;:/icons/%1/%2.png&quot;</span>).arg(dark ? <span class="stringliteral">&quot;dark&quot;</span> : <span class="stringliteral">&quot;light&quot;</span>, iconName);</div>
-<div class="line"><span class="lineno"> 1404</span>      <span class="keywordflow">if</span>(QFile::exists(path)) <span class="keywordflow">return</span> path; <span class="comment">// NOLINT(clang-diagnostic-nrvo)</span></div>
-<div class="line"><span class="lineno"> 1405</span> </div>
-<div class="line"><span class="lineno"> 1406</span>      <span class="comment">// Default resource.</span></div>
-<div class="line"><span class="lineno"> 1407</span>      path = QStringLiteral(<span class="stringliteral">&quot;:/icons/%1.png&quot;</span>).arg(iconName);</div>
-<div class="line"><span class="lineno"> 1408</span>      <span class="keywordflow">if</span>(QFile::exists(path)) <span class="keywordflow">return</span> path; <span class="comment">// NOLINT(clang-diagnostic-nrvo)</span></div>
-<div class="line"><span class="lineno"> 1409</span> </div>
-<div class="line"><span class="lineno"> 1410</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Dynamic icon resource not found:&quot;</span> &lt;&lt; iconName;</div>
-<div class="line"><span class="lineno"> 1411</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno"> 1412</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01387">1387</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1388</span>    {</div>
+<div class="line"><span class="lineno"> 1389</span>      QString path;</div>
+<div class="line"><span class="lineno"> 1390</span>      <span class="keywordflow">if</span>(iconName.isEmpty()) <span class="keywordflow">return</span> path; <span class="comment">// NOLINT(clang-diagnostic-nrvo)</span></div>
+<div class="line"><span class="lineno"> 1391</span> </div>
+<div class="line"><span class="lineno"> 1392</span>      <span class="comment">// Theme-specific resource.</span></div>
+<div class="line"><span class="lineno"> 1393</span>      path = QStringLiteral(<span class="stringliteral">&quot;:/icons/%1/%2.png&quot;</span>).arg(dark ? <span class="stringliteral">&quot;dark&quot;</span> : <span class="stringliteral">&quot;light&quot;</span>, iconName);</div>
+<div class="line"><span class="lineno"> 1394</span>      <span class="keywordflow">if</span>(QFile::exists(path)) <span class="keywordflow">return</span> path; <span class="comment">// NOLINT(clang-diagnostic-nrvo)</span></div>
+<div class="line"><span class="lineno"> 1395</span> </div>
+<div class="line"><span class="lineno"> 1396</span>      <span class="comment">// Default resource.</span></div>
+<div class="line"><span class="lineno"> 1397</span>      path = QStringLiteral(<span class="stringliteral">&quot;:/icons/%1.png&quot;</span>).arg(iconName);</div>
+<div class="line"><span class="lineno"> 1398</span>      <span class="keywordflow">if</span>(QFile::exists(path)) <span class="keywordflow">return</span> path; <span class="comment">// NOLINT(clang-diagnostic-nrvo)</span></div>
+<div class="line"><span class="lineno"> 1399</span> </div>
+<div class="line"><span class="lineno"> 1400</span>      <a class="code hl_define" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a> &lt;&lt; <span class="stringliteral">&quot;Dynamic icon resource not found:&quot;</span> &lt;&lt; iconName;</div>
+<div class="line"><span class="lineno"> 1401</span>      <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno"> 1402</span>    }</div>
 <div class="ttc" id="a_gui_8cpp_html_a29523bd69971206d80a3109b7bba0eea"><div class="ttname"><a href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a></div><div class="ttdeci">#define npiWarn</div><div class="ttdoc">Creates a warning message in the npi.gui category.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00172">Gui.cpp:172</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath()</a>, and <a class="el" href="../../dd/d7f/_gui_8cpp.html#a29523bd69971206d80a3109b7bba0eea">npiWarn</a>.</p>
@@ -351,22 +351,22 @@ Here is the caller graph for this function:</div>
 
 <p>Updates a button's icon for the selected theme. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01452">1452</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1453</span>    {</div>
-<div class="line"><span class="lineno"> 1454</span>      <span class="keywordflow">if</span>(!button) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1455</span> </div>
-<div class="line"><span class="lineno"> 1456</span>      <span class="keyword">const</span> <span class="keyword">auto</span> iconName = button-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a>).toString();</div>
-<div class="line"><span class="lineno"> 1457</span>      <span class="keyword">const</span> <span class="keyword">auto</span> iconOnName = button-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc">npi::gui::Props::IconOnName_</a>).toString();</div>
-<div class="line"><span class="lineno"> 1458</span>      <span class="keywordflow">if</span>(iconName.isEmpty() &amp;&amp; iconOnName.isEmpty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1459</span> </div>
-<div class="line"><span class="lineno"> 1460</span>      <span class="comment">// Capture the original icon once so theme changes retain a stable fallback.</span></div>
-<div class="line"><span class="lineno"> 1461</span>      <span class="keywordflow">if</span>(!button-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>).isValid())</div>
-<div class="line"><span class="lineno"> 1462</span>        button-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>, button-&gt;icon());</div>
-<div class="line"><span class="lineno"> 1463</span> </div>
-<div class="line"><span class="lineno"> 1464</span>      <span class="keyword">const</span> QIcon originalIcon{button-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>).value&lt;QIcon&gt;()};</div>
-<div class="line"><span class="lineno"> 1465</span>      button-&gt;setIcon(<a class="code hl_function" href="#acb3f85109e62ceb8dca43bd11d2274e8">dynamicIcon</a>(originalIcon, iconName, iconOnName, dark));</div>
-<div class="line"><span class="lineno"> 1466</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1icon_html_acb3f85109e62ceb8dca43bd11d2274e8"><div class="ttname"><a href="#acb3f85109e62ceb8dca43bd11d2274e8">anonymous_namespace{Gui.cpp}::icon::dynamicIcon</a></div><div class="ttdeci">QIcon dynamicIcon(const QIcon &amp;originalIcon, const QString &amp;iconName, const QString &amp;iconOnName, bool dark)</div><div class="ttdoc">Creates a themed icon, falling back to original normal-mode pixmaps for missing resources.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01415">Gui.cpp:1415</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01442">1442</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1443</span>    {</div>
+<div class="line"><span class="lineno"> 1444</span>      <span class="keywordflow">if</span>(!button) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1445</span> </div>
+<div class="line"><span class="lineno"> 1446</span>      <span class="keyword">const</span> <span class="keyword">auto</span> iconName = button-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a>).toString();</div>
+<div class="line"><span class="lineno"> 1447</span>      <span class="keyword">const</span> <span class="keyword">auto</span> iconOnName = button-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc">npi::gui::Props::IconOnName_</a>).toString();</div>
+<div class="line"><span class="lineno"> 1448</span>      <span class="keywordflow">if</span>(iconName.isEmpty() &amp;&amp; iconOnName.isEmpty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1449</span> </div>
+<div class="line"><span class="lineno"> 1450</span>      <span class="comment">// Capture the original icon once so theme changes retain a stable fallback.</span></div>
+<div class="line"><span class="lineno"> 1451</span>      <span class="keywordflow">if</span>(!button-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>).isValid())</div>
+<div class="line"><span class="lineno"> 1452</span>        button-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>, button-&gt;icon());</div>
+<div class="line"><span class="lineno"> 1453</span> </div>
+<div class="line"><span class="lineno"> 1454</span>      <span class="keyword">const</span> QIcon originalIcon{button-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>).value&lt;QIcon&gt;()};</div>
+<div class="line"><span class="lineno"> 1455</span>      button-&gt;setIcon(<a class="code hl_function" href="#acb3f85109e62ceb8dca43bd11d2274e8">dynamicIcon</a>(originalIcon, iconName, iconOnName, dark));</div>
+<div class="line"><span class="lineno"> 1456</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1icon_html_acb3f85109e62ceb8dca43bd11d2274e8"><div class="ttname"><a href="#acb3f85109e62ceb8dca43bd11d2274e8">anonymous_namespace{Gui.cpp}::icon::dynamicIcon</a></div><div class="ttdeci">QIcon dynamicIcon(const QIcon &amp;originalIcon, const QString &amp;iconName, const QString &amp;iconOnName, bool dark)</div><div class="ttdoc">Creates a themed icon, falling back to original normal-mode pixmaps for missing resources.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01405">Gui.cpp:1405</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab1f7a726f28840baa431eddaa7431f2b"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">anonymous_namespace{Gui.cpp}::prop_storedOriginalIcon</a></div><div class="ttdeci">constexpr char prop_storedOriginalIcon[]</div><div class="ttdoc">Stores the fallback icon.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00217">Gui.cpp:217</a></div></div>
 <div class="ttc" id="astructnpi_1_1gui_1_1_props_html_a3fbc15d73917fbf18db073bb80d306b1"><div class="ttname"><a href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a></div><div class="ttdeci">static constexpr const char * IconName_</div><div class="ttdoc">QString - Resource name for a themed icon or label pixmap.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00102">Gui.h:102</a></div></div>
 <div class="ttc" id="astructnpi_1_1gui_1_1_props_html_aea34ab03e58d6c905592e25e991692bc"><div class="ttname"><a href="../../d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc">npi::gui::Props::IconOnName_</a></div><div class="ttdeci">static constexpr const char * IconOnName_</div><div class="ttdoc">QString - Resource name for a themed QIcon::On state.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d67/_gui_8h_source.html#l00109">Gui.h:109</a></div></div>
@@ -401,21 +401,21 @@ Here is the call graph for this function:</div>
 
 <p>Updates an action's icon for the selected theme. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01435">1435</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1436</span>    {</div>
-<div class="line"><span class="lineno"> 1437</span>      <span class="keywordflow">if</span>(!action) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1438</span> </div>
-<div class="line"><span class="lineno"> 1439</span>      <span class="keyword">const</span> <span class="keyword">auto</span> iconName = action-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a>).toString();</div>
-<div class="line"><span class="lineno"> 1440</span>      <span class="keyword">const</span> <span class="keyword">auto</span> iconOnName = action-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc">npi::gui::Props::IconOnName_</a>).toString();</div>
-<div class="line"><span class="lineno"> 1441</span>      <span class="keywordflow">if</span>(iconName.isEmpty() &amp;&amp; iconOnName.isEmpty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1442</span> </div>
-<div class="line"><span class="lineno"> 1443</span>      <span class="comment">// Capture the original icon once so theme changes retain a stable fallback.</span></div>
-<div class="line"><span class="lineno"> 1444</span>      <span class="keywordflow">if</span>(!action-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>).isValid())</div>
-<div class="line"><span class="lineno"> 1445</span>        action-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>, action-&gt;icon());</div>
-<div class="line"><span class="lineno"> 1446</span> </div>
-<div class="line"><span class="lineno"> 1447</span>      <span class="keyword">const</span> QIcon originalIcon{action-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>).value&lt;QIcon&gt;()};</div>
-<div class="line"><span class="lineno"> 1448</span>      action-&gt;setIcon(<a class="code hl_function" href="#acb3f85109e62ceb8dca43bd11d2274e8">dynamicIcon</a>(originalIcon, iconName, iconOnName, dark));</div>
-<div class="line"><span class="lineno"> 1449</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01425">1425</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1426</span>    {</div>
+<div class="line"><span class="lineno"> 1427</span>      <span class="keywordflow">if</span>(!action) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1428</span> </div>
+<div class="line"><span class="lineno"> 1429</span>      <span class="keyword">const</span> <span class="keyword">auto</span> iconName = action-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a>).toString();</div>
+<div class="line"><span class="lineno"> 1430</span>      <span class="keyword">const</span> <span class="keyword">auto</span> iconOnName = action-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc">npi::gui::Props::IconOnName_</a>).toString();</div>
+<div class="line"><span class="lineno"> 1431</span>      <span class="keywordflow">if</span>(iconName.isEmpty() &amp;&amp; iconOnName.isEmpty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1432</span> </div>
+<div class="line"><span class="lineno"> 1433</span>      <span class="comment">// Capture the original icon once so theme changes retain a stable fallback.</span></div>
+<div class="line"><span class="lineno"> 1434</span>      <span class="keywordflow">if</span>(!action-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>).isValid())</div>
+<div class="line"><span class="lineno"> 1435</span>        action-&gt;setProperty(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>, action-&gt;icon());</div>
+<div class="line"><span class="lineno"> 1436</span> </div>
+<div class="line"><span class="lineno"> 1437</span>      <span class="keyword">const</span> QIcon originalIcon{action-&gt;property(<a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">prop_storedOriginalIcon</a>).value&lt;QIcon&gt;()};</div>
+<div class="line"><span class="lineno"> 1438</span>      action-&gt;setIcon(<a class="code hl_function" href="#acb3f85109e62ceb8dca43bd11d2274e8">dynamicIcon</a>(originalIcon, iconName, iconOnName, dark));</div>
+<div class="line"><span class="lineno"> 1439</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#acb3f85109e62ceb8dca43bd11d2274e8">dynamicIcon()</a>, <a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a>, <a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#aea34ab03e58d6c905592e25e991692bc">npi::gui::Props::IconOnName_</a>, <a class="el" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab1f7a726f28840baa431eddaa7431f2b">anonymous_namespace{Gui.cpp}::prop_storedOriginalIcon</a>, and <a class="el" href="#a2e96e3d71c1a39270063255dcbebb6b0">updateDynamicIcon()</a>.</p>
 
@@ -454,13 +454,13 @@ Here is the caller graph for this function:</div>
 
 <p>Updates a label's pixmap when a matching icon resource is found. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01469">1469</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1470</span>    {</div>
-<div class="line"><span class="lineno"> 1471</span>      <span class="keywordflow">if</span>(!label) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1472</span>      <span class="keyword">const</span> QString path{<a class="code hl_function" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath</a>(label-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a>).toString(), dark)};</div>
-<div class="line"><span class="lineno"> 1473</span>      <span class="keywordflow">if</span>(!path.isEmpty())</div>
-<div class="line"><span class="lineno"> 1474</span>        label-&gt;setPixmap(QPixmap{path});</div>
-<div class="line"><span class="lineno"> 1475</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01459">1459</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1460</span>    {</div>
+<div class="line"><span class="lineno"> 1461</span>      <span class="keywordflow">if</span>(!label) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1462</span>      <span class="keyword">const</span> QString path{<a class="code hl_function" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath</a>(label-&gt;property(<a class="code hl_variable" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a>).toString(), dark)};</div>
+<div class="line"><span class="lineno"> 1463</span>      <span class="keywordflow">if</span>(!path.isEmpty())</div>
+<div class="line"><span class="lineno"> 1464</span>        label-&gt;setPixmap(QPixmap{path});</div>
+<div class="line"><span class="lineno"> 1465</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a6ccf463e65a358a2e6f54e73769bae0c">dynamicIconPath()</a>, <a class="el" href="../../d6/d46/structnpi_1_1gui_1_1_props.html#a3fbc15d73917fbf18db073bb80d306b1">npi::gui::Props::IconName_</a>, and <a class="el" href="#a2e96e3d71c1a39270063255dcbebb6b0">updateDynamicIcon()</a>.</p>
 <div class="dynheader">

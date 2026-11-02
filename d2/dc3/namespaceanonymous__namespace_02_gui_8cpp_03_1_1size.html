@@ -180,35 +180,35 @@ Functions</h2></td></tr>
 
 <p>Calculates control and icon sizes from the font size and height limits. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01509">1509</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1510</span>    {</div>
-<div class="line"><span class="lineno"> 1511</span>      minHeight = qMax(minHeight, 12);</div>
-<div class="line"><span class="lineno"> 1512</span>      maxHeight = qMax(maxHeight, minHeight);</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01499">1499</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1500</span>    {</div>
+<div class="line"><span class="lineno"> 1501</span>      minHeight = qMax(minHeight, 12);</div>
+<div class="line"><span class="lineno"> 1502</span>      maxHeight = qMax(maxHeight, minHeight);</div>
+<div class="line"><span class="lineno"> 1503</span> </div>
+<div class="line"><span class="lineno"> 1504</span>      <span class="comment">// Apply the widget&#39;s font size to the application font for consistent height metrics.</span></div>
+<div class="line"><span class="lineno"> 1505</span>      QFont appFont{qApp-&gt;font()};</div>
+<div class="line"><span class="lineno"> 1506</span>      <span class="keywordflow">if</span>(widFont.pixelSize() &gt; 0)</div>
+<div class="line"><span class="lineno"> 1507</span>        appFont.setPixelSize(widFont.pixelSize());</div>
+<div class="line"><span class="lineno"> 1508</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(widFont.pointSizeF() &gt; 0.0)</div>
+<div class="line"><span class="lineno"> 1509</span>        appFont.setPointSizeF(widFont.pointSizeF());</div>
+<div class="line"><span class="lineno"> 1510</span> </div>
+<div class="line"><span class="lineno"> 1511</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> fontHeight = QFontMetrics{appFont}.height();</div>
+<div class="line"><span class="lineno"> 1512</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> requiredHeight = qMax(fontHeight + 8, minHeight); <span class="comment">// +8 for borders and minimum icon-edge gaps.</span></div>
 <div class="line"><span class="lineno"> 1513</span> </div>
-<div class="line"><span class="lineno"> 1514</span>      <span class="comment">// Apply the widget&#39;s font size to the application font for consistent height metrics.</span></div>
-<div class="line"><span class="lineno"> 1515</span>      QFont appFont{qApp-&gt;font()};</div>
-<div class="line"><span class="lineno"> 1516</span>      <span class="keywordflow">if</span>(widFont.pixelSize() &gt; 0)</div>
-<div class="line"><span class="lineno"> 1517</span>        appFont.setPixelSize(widFont.pixelSize());</div>
-<div class="line"><span class="lineno"> 1518</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(widFont.pointSizeF() &gt; 0.0)</div>
-<div class="line"><span class="lineno"> 1519</span>        appFont.setPointSizeF(widFont.pointSizeF());</div>
-<div class="line"><span class="lineno"> 1520</span> </div>
-<div class="line"><span class="lineno"> 1521</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> fontHeight = QFontMetrics{appFont}.height();</div>
-<div class="line"><span class="lineno"> 1522</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> requiredHeight = qMax(fontHeight + 8, minHeight); <span class="comment">// +8 for borders and minimum icon-edge gaps.</span></div>
-<div class="line"><span class="lineno"> 1523</span> </div>
-<div class="line"><span class="lineno"> 1524</span>      <span class="comment">// Round up to a height step, then enforce the maximum even if it breaks that alignment.</span></div>
-<div class="line"><span class="lineno"> 1525</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> height = qMin(((requiredHeight + <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae">heightQuantum</a> - 1) / <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae">heightQuantum</a>) * <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae">heightQuantum</a>, maxHeight);</div>
-<div class="line"><span class="lineno"> 1526</span> </div>
-<div class="line"><span class="lineno"> 1527</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> sep = <a class="code hl_function" href="#adabe13fa5e07f5dfe19a290fd78fc94e">iconEdgeSeparation</a>(height);</div>
-<div class="line"><span class="lineno"> 1528</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> iconSize = height - (2 * <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>) - (2 * sep);</div>
-<div class="line"><span class="lineno"> 1529</span> </div>
-<div class="line"><span class="lineno"> 1530</span>      <span class="keywordflow">return</span> {</div>
-<div class="line"><span class="lineno"> 1531</span>        .height_ = height,</div>
-<div class="line"><span class="lineno"> 1532</span>        .iconSize_ = iconSize,</div>
-<div class="line"><span class="lineno"> 1533</span>        .iconSeparation_ = sep,</div>
-<div class="line"><span class="lineno"> 1534</span>        .fontHeight_ = fontHeight</div>
-<div class="line"><span class="lineno"> 1535</span>      };</div>
-<div class="line"><span class="lineno"> 1536</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html_adabe13fa5e07f5dfe19a290fd78fc94e"><div class="ttname"><a href="#adabe13fa5e07f5dfe19a290fd78fc94e">anonymous_namespace{Gui.cpp}::size::iconEdgeSeparation</a></div><div class="ttdeci">int iconEdgeSeparation(int widgetHeight)</div><div class="ttdoc">Returns the icon&#39;s edge spacing for the control height.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01503">Gui.cpp:1503</a></div></div>
+<div class="line"><span class="lineno"> 1514</span>      <span class="comment">// Round up to a height step, then enforce the maximum even if it breaks that alignment.</span></div>
+<div class="line"><span class="lineno"> 1515</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> height = qMin(((requiredHeight + <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae">heightQuantum</a> - 1) / <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae">heightQuantum</a>) * <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae">heightQuantum</a>, maxHeight);</div>
+<div class="line"><span class="lineno"> 1516</span> </div>
+<div class="line"><span class="lineno"> 1517</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> sep = <a class="code hl_function" href="#adabe13fa5e07f5dfe19a290fd78fc94e">iconEdgeSeparation</a>(height);</div>
+<div class="line"><span class="lineno"> 1518</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> iconSize = height - (2 * <a class="code hl_variable" href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">borderWidth</a>) - (2 * sep);</div>
+<div class="line"><span class="lineno"> 1519</span> </div>
+<div class="line"><span class="lineno"> 1520</span>      <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno"> 1521</span>        .height_ = height,</div>
+<div class="line"><span class="lineno"> 1522</span>        .iconSize_ = iconSize,</div>
+<div class="line"><span class="lineno"> 1523</span>        .iconSeparation_ = sep,</div>
+<div class="line"><span class="lineno"> 1524</span>        .fontHeight_ = fontHeight</div>
+<div class="line"><span class="lineno"> 1525</span>      };</div>
+<div class="line"><span class="lineno"> 1526</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html_adabe13fa5e07f5dfe19a290fd78fc94e"><div class="ttname"><a href="#adabe13fa5e07f5dfe19a290fd78fc94e">anonymous_namespace{Gui.cpp}::size::iconEdgeSeparation</a></div><div class="ttdeci">int iconEdgeSeparation(int widgetHeight)</div><div class="ttdoc">Returns the icon&#39;s edge spacing for the control height.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01493">Gui.cpp:1493</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_a89e69b9a45dd54f6af78da1125f8ebae"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#a89e69b9a45dd54f6af78da1125f8ebae">anonymous_namespace{Gui.cpp}::heightQuantum</a></div><div class="ttdeci">constexpr int heightQuantum</div><div class="ttdoc">Step used when rounding control heights.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00199">Gui.cpp:199</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_html_ab3fe4f49056ef475941d2c6fda65bee3"><div class="ttname"><a href="../../db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ab3fe4f49056ef475941d2c6fda65bee3">anonymous_namespace{Gui.cpp}::borderWidth</a></div><div class="ttdeci">constexpr int borderWidth</div><div class="ttdoc">Border thickness.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l00203">Gui.cpp:203</a></div></div>
 </div><!-- fragment -->
@@ -245,10 +245,10 @@ Here is the caller graph for this function:</div>
 
 <p>Returns the icon's edge spacing for the control height. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01503">1503</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1504</span>    {</div>
-<div class="line"><span class="lineno"> 1505</span>      <span class="keywordflow">return</span> widgetHeight &lt;= 24 ? 2 : widgetHeight &lt;= 40 ? 3 : 4;</div>
-<div class="line"><span class="lineno"> 1506</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01493">1493</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1494</span>    {</div>
+<div class="line"><span class="lineno"> 1495</span>      <span class="keywordflow">return</span> widgetHeight &lt;= 24 ? 2 : widgetHeight &lt;= 40 ? 3 : 4;</div>
+<div class="line"><span class="lineno"> 1496</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#adabe13fa5e07f5dfe19a290fd78fc94e">iconEdgeSeparation()</a>.</p>
 
@@ -287,16 +287,16 @@ Here is the caller graph for this function:</div>
 
 <p>Compares configured pixel sizes or integer point sizes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01491">1491</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1492</span>    {</div>
-<div class="line"><span class="lineno"> 1493</span>      <span class="comment">// A pixel - sized font and a point - sized font can not be compared directly.</span></div>
-<div class="line"><span class="lineno"> 1494</span>      <span class="comment">// For pixel-sized fonts, pointSize() and pointSizeF() return -1.</span></div>
-<div class="line"><span class="lineno"> 1495</span>      <span class="comment">// For point-sized fonts, pixelSize() returns -1.</span></div>
-<div class="line"><span class="lineno"> 1496</span>      <span class="comment">// That&#39;s why we compare pixel and point size separately.</span></div>
-<div class="line"><span class="lineno"> 1497</span>      <span class="keywordflow">if</span>(font1.pixelSize() &gt; 0 || font2.pixelSize() &gt; 0)</div>
-<div class="line"><span class="lineno"> 1498</span>        <span class="keywordflow">return</span> font1.pixelSize() == font2.pixelSize();</div>
-<div class="line"><span class="lineno"> 1499</span>      <span class="keywordflow">return</span> font1.pointSize() == font2.pointSize();</div>
-<div class="line"><span class="lineno"> 1500</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01481">1481</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1482</span>    {</div>
+<div class="line"><span class="lineno"> 1483</span>      <span class="comment">// A pixel - sized font and a point - sized font can not be compared directly.</span></div>
+<div class="line"><span class="lineno"> 1484</span>      <span class="comment">// For pixel-sized fonts, pointSize() and pointSizeF() return -1.</span></div>
+<div class="line"><span class="lineno"> 1485</span>      <span class="comment">// For point-sized fonts, pixelSize() returns -1.</span></div>
+<div class="line"><span class="lineno"> 1486</span>      <span class="comment">// That&#39;s why we compare pixel and point size separately.</span></div>
+<div class="line"><span class="lineno"> 1487</span>      <span class="keywordflow">if</span>(font1.pixelSize() &gt; 0 || font2.pixelSize() &gt; 0)</div>
+<div class="line"><span class="lineno"> 1488</span>        <span class="keywordflow">return</span> font1.pixelSize() == font2.pixelSize();</div>
+<div class="line"><span class="lineno"> 1489</span>      <span class="keywordflow">return</span> font1.pointSize() == font2.pointSize();</div>
+<div class="line"><span class="lineno"> 1490</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#af76d38d032f81e47be62ac715f61d3c7">sameFontSize()</a>.</p>
 
@@ -331,13 +331,13 @@ Here is the caller graph for this function:</div>
 
 <p>Calculates a bounded scrollbar width from the application's point size, using a fallback for pixel-sized fonts. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01539">1539</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1540</span>    {</div>
-<div class="line"><span class="lineno"> 1541</span>      <span class="keyword">const</span> QFont appFont = qApp-&gt;font();</div>
-<div class="line"><span class="lineno"> 1542</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a> = appFont.pointSize() &gt; 0 ? qRound(appFont.pointSize() * 1.1) : 10;</div>
-<div class="line"><span class="lineno"> 1543</span>      <span class="keywordflow">return</span> qBound(10, <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, 32);</div>
-<div class="line"><span class="lineno"> 1544</span>    }</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html"><div class="ttname"><a href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">anonymous_namespace{Gui.cpp}::size</a></div><div class="ttdoc">Helpers for control heights, icon sizes and spacing.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01479">Gui.cpp:1480</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01529">1529</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1530</span>    {</div>
+<div class="line"><span class="lineno"> 1531</span>      <span class="keyword">const</span> QFont appFont = qApp-&gt;font();</div>
+<div class="line"><span class="lineno"> 1532</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a> = appFont.pointSize() &gt; 0 ? qRound(appFont.pointSize() * 1.1) : 10;</div>
+<div class="line"><span class="lineno"> 1533</span>      <span class="keywordflow">return</span> qBound(10, <a class="code hl_namespace" href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">size</a>, 32);</div>
+<div class="line"><span class="lineno"> 1534</span>    }</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02_gui_8cpp_03_1_1size_html"><div class="ttname"><a href="../../d2/dc3/namespaceanonymous__namespace_02_gui_8cpp_03_1_1size.html">anonymous_namespace{Gui.cpp}::size</a></div><div class="ttdoc">Helpers for control heights, icon sizes and spacing.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d7f/_gui_8cpp_source.html#l01469">Gui.cpp:1470</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a664bb963e5feb5ce782b689e9dd5fc85">scrollBarWidth()</a>.</p>
 
@@ -372,13 +372,13 @@ Here is the caller graph for this function:</div>
 
 <p>Returns whether a control uses the standard height. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01482">1482</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1483</span>    {</div>
-<div class="line"><span class="lineno"> 1484</span>      <span class="keywordflow">return</span> type == QStyle::CT_PushButton ||</div>
-<div class="line"><span class="lineno"> 1485</span>             type == QStyle::CT_LineEdit ||</div>
-<div class="line"><span class="lineno"> 1486</span>             type == QStyle::CT_ComboBox ||</div>
-<div class="line"><span class="lineno"> 1487</span>             type == QStyle::CT_SpinBox;</div>
-<div class="line"><span class="lineno"> 1488</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d7f/_gui_8cpp_source.html#l01472">1472</a> of file <a class="el" href="../../dd/d7f/_gui_8cpp_source.html">Gui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1473</span>    {</div>
+<div class="line"><span class="lineno"> 1474</span>      <span class="keywordflow">return</span> type == QStyle::CT_PushButton ||</div>
+<div class="line"><span class="lineno"> 1475</span>             type == QStyle::CT_LineEdit ||</div>
+<div class="line"><span class="lineno"> 1476</span>             type == QStyle::CT_ComboBox ||</div>
+<div class="line"><span class="lineno"> 1477</span>             type == QStyle::CT_SpinBox;</div>
+<div class="line"><span class="lineno"> 1478</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#aebe26ff25d1dc2674278ccd056afdeb9">usesStandardHeight()</a>.</p>
 
