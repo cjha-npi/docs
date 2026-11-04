@@ -1,5 +1,8 @@
 var NAVTREEINDEX7 =
 {
+"dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a58a26e1969506c277b6b7adcfbe132d4":[7,0,5,2,1,1,7],
+"dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a58a26e1969506c277b6b7adcfbe132d4":[8,0,2,2,1,1,7],
+"dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a63b28a05f6016c1760c4321b93f67edc":[7,0,5,2,1,1,6],
 "dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a63b28a05f6016c1760c4321b93f67edc":[8,0,2,2,1,1,6],
 "dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a7bc80e34eb24b836e7b76041dc3f22e8":[7,0,5,2,1,1,8],
 "dd/dd2/classnpi_1_1ind_1_1_locked_value_1_1_write_access.html#a7bc80e34eb24b836e7b76041dc3f22e8":[8,0,2,2,1,1,8],

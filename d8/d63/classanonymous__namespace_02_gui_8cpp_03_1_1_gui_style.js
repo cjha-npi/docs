@@ -22,6 +22,7 @@ var classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style =
     [ "registerDynamicAction_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a4b3ce8806a9c3a1bc5f3cbfddfb3d927", null ],
     [ "setTheme_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a42875cf4d3574246a8353282905a4882", null ],
     [ "sizeFromContents", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a95e7a2d6fcc12a6fa0b71e6ae28ddc31", null ],
+    [ "standardHeight_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a690f5c99768e91a09a7fe0de5a7085ff", null ],
     [ "styleHint", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aba99add909d785d46d3584564b9026ae", null ],
     [ "subElementRect", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#a6a27e1caaa9943b04d6540d57d06a0a2", null ],
     [ "surfaces_", "d8/d63/classanonymous__namespace_02_gui_8cpp_03_1_1_gui_style.html#aeed4bac894458e065e60749347901058", null ],

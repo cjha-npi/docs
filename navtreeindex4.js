@@ -25,14 +25,15 @@ var NAVTREEINDEX4 =
 "d7/dc3/namespacenpi_1_1gui.html#a02b9d4b0a58267b196aecdda9ef45051":[7,0,5,1,10],
 "d7/dc3/namespacenpi_1_1gui.html#a0a0fd1396ec2b0a4be1530be886f7709":[9,0,4,5,1,1],
 "d7/dc3/namespacenpi_1_1gui.html#a1f2394a2285dbb72c534fd91cdd97dc8":[7,0,5,1,7],
-"d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc":[7,0,5,1,12],
+"d7/dc3/namespacenpi_1_1gui.html#a2f06c690ee254cb3bccc0476f670a8dc":[7,0,5,1,13],
+"d7/dc3/namespacenpi_1_1gui.html#a4cc7cab3a419b184b8734f9e7941436a":[7,0,5,1,11],
 "d7/dc3/namespacenpi_1_1gui.html#a4ccc0e83064b03b6b32774d31c9f8b55":[7,0,5,1,8],
-"d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495":[7,0,5,1,14],
-"d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea":[7,0,5,1,13],
+"d7/dc3/namespacenpi_1_1gui.html#a64de26ba60a343fcf6c9cf785a45f495":[7,0,5,1,15],
+"d7/dc3/namespacenpi_1_1gui.html#a77381db9d58d5f6a136ebcefcc481bea":[7,0,5,1,14],
 "d7/dc3/namespacenpi_1_1gui.html#a8b9b363d54310fbe05fbc28f93dcd709":[9,0,4,5,1,0],
 "d7/dc3/namespacenpi_1_1gui.html#a970ca85f9973fd65cd4b01cc68046640":[7,0,5,1,4],
 "d7/dc3/namespacenpi_1_1gui.html#a9ea3a279a21b980f5c090427d1a82ef4":[7,0,5,1,6],
-"d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a":[7,0,5,1,11],
+"d7/dc3/namespacenpi_1_1gui.html#aa5f3e5cb767068c4756a61d69381f92a":[7,0,5,1,12],
 "d7/dc3/namespacenpi_1_1gui.html#ab0432af80db64f065a922a7dde8adfe4":[7,0,5,1,3],
 "d7/dc3/namespacenpi_1_1gui.html#ad072375bedd64a6b43afd7a0f0b94e3a":[7,0,5,1,5],
 "d7/dc3/namespacenpi_1_1gui.html#ad3129346e88e3d6a398365cb0671ce3e":[7,0,5,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afb40025cdcf0a86206b916fef24680fa":[9,0,4,6,19,3],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afe218675193d24f1b731895c18a13dcb":[7,0,1,11,3,1],
 "d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afe218675193d24f1b731895c18a13dcb":[8,0,1,4,3,1],
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afe218675193d24f1b731895c18a13dcb":[9,0,4,6,18,1],
-"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#d0/ded/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state_1_1_worker":[7,0,1,11,6]
+"d8/d47/structanonymous__namespace_02_log_8cpp_03_1_1_leaked_state.html#afe218675193d24f1b731895c18a13dcb":[9,0,4,6,18,1]
 };

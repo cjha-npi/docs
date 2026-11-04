@@ -1,0 +1,8 @@
+<map id="npi::gui::standardHeight" name="npi::gui::standardHeight">
+<area shape="rect" id="Node000001" title="Returns the standard application control height." alt="" coords="5,37,219,62"/>
+<area shape="rect" id="Node000002" href="$db/d17/namespaceanonymous__namespace_02_gui_8cpp_03.html#ac38bf26de3b0963dbcc0f8ecfd14dc3d" title="Returns the shared style, creating it when application lifetime permits." alt="" coords="267,29,448,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,47,261,50,256,50,218,52"/>
+<area shape="rect" id="Node000003" href="$d3/d01/namespaceanonymous__namespace_02_gui_8cpp_03_1_1util.html#ab683b79bf2e2ea36a70f70f415c2ec35" title="Loads the bundled JetBrains Mono fonts once." alt="" coords="496,29,725,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="448,47,491,50,486,50,448,52"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="564,28,561,20,568,11,585,5,611,3,647,8,657,14,660,24,656,21,653,17,646,13,611,8,586,10,571,15,566,21,569,31"/>
+</map>
